@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coding e tools on Coding e Paduli</title>
+    <link>http://codingepaduli.github.io/coding/</link>
+    <description>Recent content in Coding e tools on Coding e Paduli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it</language>
+    <lastBuildDate>Mon, 15 Jul 2019 09:43:11 +0200</lastBuildDate>
+    
+	<atom:link href="http://codingepaduli.github.io/coding/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Coding e tools</title>
+      <link>http://codingepaduli.github.io/coding/intro/</link>
+      <pubDate>Mon, 15 Jul 2019 16:10:46 +0200</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/intro/</guid>
+      <description>Coding e tools </description>
+    </item>
+    
+  </channel>
+</rss>

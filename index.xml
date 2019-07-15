@@ -12,12 +12,21 @@
     
     
     <item>
-      <title>Coding e Paduli</title>
-      <link>http://codingepaduli.github.io/index.html</link>
-      <pubDate>Mon, 15 Jul 2019 09:41:11 +0200</pubDate>
+      <title>Coding e tools</title>
+      <link>http://codingepaduli.github.io/coding/intro/</link>
+      <pubDate>Mon, 15 Jul 2019 16:10:46 +0200</pubDate>
       
-      <guid>http://codingepaduli.github.io/index.html</guid>
-      <description>Coding e Paduli Homepage </description>
+      <guid>http://codingepaduli.github.io/coding/intro/</guid>
+      <description>Coding e tools </description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>http://codingepaduli.github.io/coding/web/html/</link>
+      <pubDate>Mon, 15 Jul 2019 09:44:11 +0200</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/</guid>
+      <description>HTML</description>
     </item>
     
   </channel>
