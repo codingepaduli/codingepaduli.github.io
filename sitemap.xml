@@ -3,7 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://codingepaduli.github.org/</loc>
+    <loc>http://codingepaduli.github.org/index.html</loc>
+    <priority>0</priority>
   </url>
   
   <url>
