@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Coding e Paduli Homepage on Coding e Paduli</title>
-    <link>http://codingepaduli.github.io/</link>
-    <description>Recent content in Coding e Paduli Homepage on Coding e Paduli</description>
+    <title>Linguaggio HTML on Coding e Paduli</title>
+    <link>http://codingepaduli.github.io/coding/web/html/</link>
+    <description>Recent content in Linguaggio HTML on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Mon, 15 Jul 2019 09:41:11 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://codingepaduli.github.io/coding/web/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -36,15 +36,6 @@ This text is bold</description>
 L&#39;ipertesto e&#39; un testo contenente immagini, collegamenti, video, ecc..
 I marcatori sono semplicemente delle etichette, chiamate TAG, che indicano inizio e fine dei vari elementi della pagina HTML: inizio e fine del titolo, di un immagine, di un video, di una tabella...
 Per esempio l&#39;etichetta h1 è l&#39;etichetta del &#34;titolo&#34;, ed ha il simbolo di apertura &amp;lt;h1&amp;gt; che indica l&#39;inizio ed il simbolo di chiusura &amp;lt;/h1&amp;gt; che indica la fine del titolo.</description>
-    </item>
-    
-    <item>
-      <title>Coding e tools</title>
-      <link>http://codingepaduli.github.io/coding/intro/</link>
-      <pubDate>Mon, 15 Jul 2019 16:10:46 +0200</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/intro/</guid>
-      <description>Intro to Coding e tools </description>
     </item>
     
   </channel>

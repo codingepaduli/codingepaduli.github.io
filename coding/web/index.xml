@@ -11,32 +11,5 @@
 	<atom:link href="http://codingepaduli.github.io/coding/web/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Tag principali dell&#39;HTML</title>
-      <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
-      <pubDate>Tue, 16 Jul 2019 17:10:46 +0200</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
-      <description>Tag principali I tag principali dell&amp;rsquo;HTML, tutti da inserire all&amp;rsquo;interno del tag body sono:
- Tag di testo Tag di liste Tag con attributi  Tag di testo il titolo, come visto nell&#39;esempio precedente, generato dal TAG &#34;h1&#34; &amp;lt;h1&amp;gt; &amp;lt;/h1&amp;gt;.
-il paragrafo, generato dal TAG &#34;p&#34; &amp;lt;p&amp;gt; &amp;lt;/p&amp;gt;.
-The WHO abbreviation.
-ASAP -- Style of text for my favorite color is blue red!
-This is subscript and superscript
-This text is bold</description>
-    </item>
-    
-    <item>
-      <title>HTML</title>
-      <link>http://codingepaduli.github.io/coding/web/html/html/</link>
-      <pubDate>Mon, 15 Jul 2019 17:10:46 +0200</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/html/</guid>
-      <description>Introduzione all&#39; HTML HTML e&#39; un Linguaggio a Marcatori che serve a definire la struttura di un Ipertesto (HyperText).
-L&#39;ipertesto e&#39; un testo contenente immagini, collegamenti, video, ecc..
-I marcatori sono semplicemente delle etichette, chiamate TAG, che indicano inizio e fine dei vari elementi della pagina HTML: inizio e fine del titolo, di un immagine, di un video, di una tabella...
-Per esempio l&#39;etichetta h1 è l&#39;etichetta del &#34;titolo&#34;, ed ha il simbolo di apertura &amp;lt;h1&amp;gt; che indica l&#39;inizio ed il simbolo di chiusura &amp;lt;/h1&amp;gt; che indica la fine del titolo.</description>
-    </item>
-    
   </channel>
 </rss>
