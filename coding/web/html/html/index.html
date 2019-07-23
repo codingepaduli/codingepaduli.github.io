@@ -62,49 +62,23 @@
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<h2>Introduzione all' HTML</h2>
+			<p>Il linguaggio <abbr title="HyperText Markup Language">HTML</abbr> e' un Linguaggio di etichettatura (in inglese Markup) degli Ipertesti (in inglese HyperText).</p>
 
-<p>HTML e' un Linguaggio a Marcatori che serve a definire la <b>struttura</b> di un Ipertesto (HyperText).</p>
+<p>L'<strong>ipertesto</strong> e' un testo contenente immagini, collegamenti, video, ecc... quindi l'ipertesto rappresenta i contenuti di una pagina web (oltre ai contenuti, abbiamo gli effetti grafici, le animazioni, le azioni, che sono comunque parte della pagina web, ma sono scritte in altri linguaggi). Le <strong>etichette</strong> (in inglese Markup o TAG) indicano un elemento della pagina web ed hanno un simbolo di inizio elemento ed uno di fine elemento: inizio e fine del titolo, di un immagine, di un video, di una tabella...</p>
 
-<p>L'ipertesto e' un testo contenente immagini, collegamenti, video, ecc..</p>
-<p>I marcatori sono semplicemente delle etichette, chiamate <b>TAG</b>, che indicano inizio e fine dei vari elementi della pagina HTML: inizio e fine del titolo, di un immagine, di un video, di una tabella...</p>
+<p>Per esempio l'etichetta <code>h1</code> è l'etichetta del "titolo", ed ha il simbolo di apertura <code>&lt;h1&gt;</code> che indica l'inizio del titolo ed il simbolo di chiusura <code>&lt;/h1&gt;</code> che indica la fine del titolo, quindi il titolo in HTML sarà scritto cosi: <code>&lt;h1&gt;Titolo&lt;/h1&gt;</code></p>
 
-<p>Per esempio l'etichetta <code>h1</code> è l'etichetta del "titolo", ed ha il simbolo di apertura <code>&lt;h1&gt;</code> che indica l'inizio ed il simbolo di chiusura <code>&lt;/h1&gt;</code> che indica la fine del titolo.
+<p>Da sottolineare che il linguaggio HTML non definisce lo stile grafico del documento, ma solo la <strong>struttura</strong> di un ipertesto. Imparare il linguaggio HTML corrisponde ad imparare tutte le etichette.</p>
 
-<p>Da sottolineare nuovamente che il linguaggio HTML non definisce lo stile grafico del documento, ma solo la <b>struttura</b>.</p>
+<p>Per creare una pagina HTML serve un semplice editor di testi, tra quelli consigliati spunta <a href="https://atom.io/">Atom</a> estremamente configurabile, mentre tra quelli da evitare assolutamente si elenca l'editor Word di Office, e l'editor Notepad di Windows. Creata la pagina web, si deve <strong>validarla</strong> per verificare che non contenga errori, utilizzando un validatore HTML come quello della <a href="https://validator.w3.org/">W3C Validator</a> e si deve controllare sia <strong>accessibile</strong> a chiunque, anche a chi ha difficoltà visive o motorie, attraverso strumenti specifici. <!-- TODO add tools--> Inoltre, è consigliabile che sia <strong>"responsive"</strong>, cioè che sia fruibile su differenti risoluzioni e formati, da quelli piccoli come cellulari e palmari, a quelli classici di computer e tablet, a quelli extra-large di smart-TV. <!-- TODO add tools--></p>
 
-<p>La struttura base di un documento html e' la seguente:</p>
-<pre>
-  &lt;html&gt;
-    &lt;head&gt;
-      &lt;meta name="author" content="John Doe"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-      &lt;h1&gt;Titolo pagina web&lt;/h1&gt;
-    &lt;/body&gt;
-  &lt;/html&gt;
-</pre>
+<p>La creazione di pagine web può avvenire anche attraverso strumenti di sviluppo visuale, che permettono di disegnarle e configurarle, piuttosto che scriverle. Esistono software che, pur avendo poche conoscenze tecniche, permettono di amministrare anche l'intero sito e sono chiamati genericamente <a href="https://it.wikipedia.org/wiki/Content_management_system">CMS</a>. Tra i CMS più noti troviamo <a href="https://wordpress.org/">WordPress</a> e <a href="https://www.joomla.org/">Joomla</a>, ma la scelta è ampia.</p>
 
-<p>In questa struttura sono presenti i 3 tag principali che devono sempre essere presenti: </p>
-<ol>
-    <li>Il tag <code>html</code> che viene aperto ad inizio documento (con il simbolo <code>&lt;html&gt;</code>) e chiuso (con il simbolo <code>&lt;/html&gt;</code>) alla fine del documento;</li>
-    <li>Il tag di informazioni <code>head</code> (non indirizzate all'utente, ma al browser o ai motori di ricerca) che viene aperto (con il simbolo <code>&lt;head&gt;</code>) e chiuso (con il simbolo <code>&lt;/head&gt;</code>);</li>
-    <li>Il tag di contenuti <code>body</code> che viene aperto (con il simbolo <code>&lt;body&gt;</code>) e poi chiuso (con il simbolo <code>&lt;/body&gt;</code>) appena prima della fine del documento.</li>
-</ol>
-
- <p>Si fa notare nuovamente che tutti i tag nell'esempio sono prima aperti e poi chiusi.</p>
-
-<p><h2>Strumenti di sviluppo per HTML</h2>
-<p>Per scrivere pagine web in HTML, serve semplicemente un editor di testi, da evitare però sia l&rsquo;editor Word di Office, sia Notepad di Windows.</p>
-<p>Di editor HTML ce ne sono moltissimi, si consigliano <a href="https://notepad-plus-plus.org/">Notepad++</a> o <a href="https://atom.io/">Atom</a> perchè sono estremamente configurabili.</p></p>
-
-<p>Scritta una pagina HTML, si deve verificare che non contenga errori, utilizzando un validatore HTML come quello della <a href="https://validator.w3.org/">W3C Validator</a></p>
-
-<p>Inoltre si deve verificare l'accessibilità della pagina web, in modo che siano accessibili a chiunque, anche chi ha difficoltà visive o motorie</p>
-
-<p>Esistono strumenti di sviluppo visuale, che permettono di disegnare le pagine HTML, piuttosto che scriverle, ed esistono i <a href="https://it.wikipedia.org/wiki/Content_management_system">CMS</a>, ovvero software che permettono di amministrare l'intero sito, anche con poche conoscenze tecniche. Tra i CMS più noti troviamo <a href="https://wordpress.org/">WordPress</a> e <a href="https://www.joomla.org/">Joomla</a>, ma ve ne sono miriadi.</p>
-
-<p>In qualsiasi modo vengano create le pagine web, la conoscenza dell'HTML è sempre utile a chi intende gestire un sito, che sia un blog, un e-commerce o qualsiasi altra tipologia.</p>
+<p>Tra i mille siti che parlano di HTML, degni di nota sono:
+    <a href="https://www.html.it/guide/guida-html/">html.it</a> (in italiano),
+    <a href="https://www.w3schools.com/html/">w3schools.com</a> (in inglese)
+    <a href="https://developer.mozilla.org/it/docs/Web/HTML">developer.mozilla.org</a>, sito della Mozilla dedicato agli sviluppatori (in corso di traduzione) ed infine
+    <a href="https://guide.freecodecamp.org/html/">freecodecamp.org</a>, organizzazione no-profit per aiutare le persone ad apprendere l'arte della programmazioni, con corsi e certificazioni disponibili gratuitamente (in inglese).</p>
 
 		</div>
 		
