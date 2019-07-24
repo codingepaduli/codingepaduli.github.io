@@ -17,8 +17,7 @@
       <pubDate>Tue, 16 Jul 2019 17:10:46 +0200</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
-      <description>La struttura base di un documento html e&#39; la seguente:
- &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta name=&#34;author&#34; content=&#34;John Doe&#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;Titolo pagina web&amp;lt;/h1&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  In questa struttura sono presenti i 3 tag principali che devono sempre essere presenti:  Il tag html che viene aperto ad inizio documento (con il simbolo &amp;lt;html&amp;gt;) e chiuso (con il simbolo &amp;lt;/html&amp;gt;) alla fine del documento; Il tag di informazioni head (non indirizzate all&#39;utente, ma al browser o ai motori di ricerca) che viene aperto (con il simbolo &amp;lt;head&amp;gt;) e chiuso (con il simbolo &amp;lt;/head&amp;gt;); Il tag di contenuti body che viene aperto (con il simbolo &amp;lt;body&amp;gt;) e poi chiuso (con il simbolo &amp;lt;/body&amp;gt;) appena prima della fine del documento.</description>
+      <description>Tag principali dell&amp;rsquo;HTML</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Mon, 15 Jul 2019 17:10:46 +0200</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/html/</guid>
-      <description>Il linguaggio HTML e&#39; un Linguaggio di etichettatura (in inglese Markup) degli Ipertesti (in inglese HyperText).
-L&#39;ipertesto e&#39; un testo contenente immagini, collegamenti, video, ecc... quindi l&#39;ipertesto rappresenta i contenuti di una pagina web (oltre ai contenuti, abbiamo gli effetti grafici, le animazioni, le azioni, che sono comunque parte della pagina web, ma sono scritte in altri linguaggi). Le etichette (in inglese Markup o TAG) indicano un elemento della pagina web ed hanno un simbolo di inizio elemento ed uno di fine elemento: inizio e fine del titolo, di un immagine, di un video, di una tabella.</description>
+      <description>Introduzione al linguaggio HTML e allo sviluppo di pagine web.</description>
     </item>
     
     <item>

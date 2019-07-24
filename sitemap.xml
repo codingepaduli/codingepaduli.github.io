@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://codingepaduli.github.io/coding/web/html/intro/</loc>
+    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/html/html/</loc>
+    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingepaduli.github.io/coding/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url>
@@ -23,24 +33,20 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/web/html/intro/</loc>
-    <lastmod>2019-07-16T17:10:46+02:00</lastmod>
+    <loc>http://codingepaduli.github.io/categories/</loc>
+    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/web/html/html/</loc>
-    <lastmod>2019-07-15T17:10:46+02:00</lastmod>
+    <loc>http://codingepaduli.github.io/categories/html/</loc>
+    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/coding/intro/</loc>
     <lastmod>2019-07-15T16:10:46+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -57,12 +63,6 @@
   
   <url>
     <loc>http://codingepaduli.github.io/categories/home/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/categories/html/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
