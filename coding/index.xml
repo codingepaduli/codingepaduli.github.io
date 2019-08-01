@@ -17,7 +17,8 @@
       <pubDate>Mon, 15 Jul 2019 16:10:46 +0200</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/intro/</guid>
-      <description>Intro to Coding e tools </description>
+      <description>menu identifier and text to show menu: &amp;ldquo;main&amp;rdquo; linktitle: &amp;ldquo;Intro&amp;rdquo;
+menu: docs: name: &amp;ldquo;liste&amp;rdquo; identifier: &amp;ldquo;liste&amp;rdquo; parent: &amp;ldquo;main&amp;rdquo; weight: 01 linktitle: &amp;ldquo;Coding e tools&amp;rdquo;</description>
     </item>
     
   </channel>

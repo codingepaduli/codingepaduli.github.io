@@ -19,7 +19,15 @@
 </head>
 <body class="body">
 	<div class="container container--outer">
-		<header class="header">
+		
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/styles/default.min.css">
+<script src="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+<header class="header">
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
@@ -34,13 +42,17 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">Home</a>
+			<a class="menu__link" href="/">Coding e Paduli</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/intro/">Coding e tools</a>
 		</li>
 	</ul>
 </nav>
 
 	</div>
 </header>
+
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -63,6 +75,7 @@
 		</header><div class="content post__content clearfix">
 			<p>Un documento HTML è composto da un insieme di etichette, chiamate TAG (in inglese), che indicano l'inizio e la fine dei vari contenuti del documento. La struttura base di un documento HTML e' la seguente:</p>
 <pre>
+  <code class="html">
   &lt;!doctype html&gt;
   &lt;html&gt;
     &lt;head&gt;
@@ -74,6 +87,7 @@
       &lt;!-- commento in html--&gt;
     &lt;/body&gt;
   &lt;/html&gt;
+  </code>
 </pre>
 
 <p>In questa struttura si evidenziano i 4 elementi principali che devono sempre essere presenti: </p>
@@ -103,18 +117,17 @@
 
 <p>Di seguito si riporta un esempio dei primi tre livelli:</p>
 <pre>
+  <code class="html">
     &lt;h1&gt; Titolo primo livello &lt;/h1&gt;
     &lt;h2&gt; Titolo secondo livello &lt;h2&gt;
     &lt;h3&gt; Titolo terzo livello &lt;h2&gt;
+  </code>
 </pre>
 
 <p>che vengono poi trasformati dal browser come si vede di seguito:</p>
-<pre>
 <h3>Titolo primo livello</h3>
 <h4>Titolo secondo livello</h4>
 <h5>Titolo terzo livello</h5>
-</pre>
-
 
 <p>Il paragrafo è generato dal tag <code>p</code> che ha il simbolo di apertura <code>&lt;p&gt;</code> ed il simbolo di chiusura <code>&lt;/p&gt;</code>;</p>
 
@@ -141,11 +154,13 @@
 <p>E' ovvio che i tag possono essere inseriti (innestati) l'uno dentro l'altro per creare le combinazioni desiderate, ad esempio per generare un testo grassetto, evidenziato e sottolineato, come <strong><mark><ins>questo testo</ins></mark></strong> si usa il codice</p>
 
 <pre>
+  <code class="html">
     &lt;strong&gt;
         &lt;mark&gt;
             &lt;ins&gt;questo testo&lt;/ins&gt;
         &lt;/mark&gt;
     &lt;/strong&gt;
+  </code>
 </pre>
 
 <h3 id="tagArticoli">Tag di articoli e libri</h3>
@@ -166,43 +181,39 @@
 
 <p>Il tag <code>nav</code> è usato per indicare i collegamenti principali della pubblicazione.</p>
 
-<p><p>Un esempio di articolo potrebbe essere</p>:
+<p><p>Un esempio di articolo potrebbe essere:</p>
 <pre>
-&lt;nav&gt;link1, link2, &hellip;&lt;/nav&gt;
-&lt;main&gt;
-  &lt;article&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Titolo 1° livello&lt;/h1&gt;
-        &lt;h3&gt;Titolo 3° livello (sottotitolo)&lt;/h3&gt;
-        &lt;p&gt;Altre informazioni&lt;/p&gt;
-    &lt;/header&gt;</p>
-
-<pre><code>&amp;lt;section&amp;gt;
-    &amp;lt;h2&amp;gt;Titolo sezione&amp;lt;/h2&amp;gt;
-    &amp;lt;p&amp;gt;contenuto sezione...&amp;lt;/p&amp;gt;
-&amp;lt;/section&amp;gt;
-
-&amp;lt;section&amp;gt;
-    &amp;lt;h2&amp;gt;Titolo sezione&amp;lt;/h2&amp;gt;
-    &amp;lt;p&amp;gt;contenuto sezione...&amp;lt;/p&amp;gt;
-&amp;lt;/section&amp;gt;
-
-&amp;lt;aside&amp;gt;
-    &amp;lt;h4&amp;gt;Titolo contenuti legati&amp;lt;/h4&amp;gt;
-    &amp;lt;p&amp;gt;contenuti legati...&amp;lt;/p&amp;gt;
-&amp;lt;/aside&amp;gt;
-
-&amp;lt;footer&amp;gt;
-    &amp;lt;p&amp;gt;Scritto da: Me&amp;lt;/p&amp;gt;
-    &amp;lt;p&amp;gt;Contattami a someone@example.com&amp;lt;/p&amp;gt;
-&amp;lt;/footer&amp;gt;
-</code></pre>
-
-<p>&lt;/article&gt;
-&lt;/main&gt;
-</pre></p>
-
-<p><p>Il codice HTML precedente genera il seguente documento:</p>
+  <code class="html">
+    &lt;nav&gt;link1, link2, &hellip;&lt;/nav&gt;
+    &lt;article&gt;
+      &lt;header&gt;
+          &lt;h1&gt;Titolo 1° livello&lt;/h1&gt;
+          &lt;h3&gt;Titolo 3° livello (sottotitolo)&lt;/h3&gt;
+          &lt;p&gt;Altre informazioni&lt;/p&gt;
+      &lt;/header&gt;
+      &lt;main id=&ldquo;principale&rdquo;&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Titolo sezione&lt;/h2&gt;
+            &lt;p&gt;contenuto sezione&hellip;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Titolo sezione&lt;/h2&gt;
+            &lt;p&gt;contenuto sezione&hellip;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;aside&gt;
+            &lt;h4&gt;Titolo contenuti legati&lt;/h4&gt;
+            &lt;p&gt;contenuti legati&hellip;&lt;/p&gt;
+        &lt;/aside&gt;
+      &lt;/main&gt;
+      &lt;footer&gt;
+          &lt;p&gt;Scritto da: Me&lt;/p&gt;
+          &lt;p&gt;Contattami a someone@example.com&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/article&gt;
+  </code>
+</pre>
+<!-- TODO without this comment, somethings go wrong in html validation -->
+<p>Il codice HTML precedente genera il seguente documento:</p>
 <!-- sostituisco i tag di documento con i tag "div" per
      evitare problemi di validazione a causa di duplicati nella pagina -->
 <div>
@@ -212,31 +223,26 @@
         <h3>Titolo 1° livello</h3>
         <h4>Titolo 3° livello (sottotitolo)</h4>
         <p>Altre informazioni</p>
-    </div></p>
-
-<pre><code>&lt;div&gt;
-    &lt;h3&gt;Titolo sezione&lt;/h3&gt;
-    &lt;p&gt;contenuto sezione...&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-    &lt;h3&gt;Titolo sezione&lt;/h3&gt;
-    &lt;p&gt;contenuto sezione...&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-    &lt;h3&gt;Titolo contenuti legati&lt;/h3&gt;
-    &lt;p&gt;contenuti legati...&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-    &lt;p&gt;Scritto da: Me&lt;/p&gt;
-    &lt;p&gt;Contattami a someone@example.com&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
-
-<p></div>
-</div></p>
+    </div>
+    <div>
+        <h3>Titolo sezione</h3>
+        <p>contenuto sezione&hellip;</p>
+    </div>
+    <div>
+        <h3>Titolo sezione</h3>
+        <p>contenuto sezione&hellip;</p>
+    </div>
+    <div>
+        <h3>Titolo contenuti legati</h3>
+        <p>contenuti legati&hellip;</p>
+    </div>
+    <div>
+        <p>Scritto da: Me</p>
+        <p>Contattami a someone@example.com</p>
+    </div>
+  </div>
+</div>
+<!-- TODO without this comment, somethings go wrong in html validation --></p>
 
 		</div>
 		
