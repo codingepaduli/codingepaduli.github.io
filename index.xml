@@ -12,31 +12,21 @@
     
     
     <item>
-      <title>Tag principali dell&#39;HTML</title>
+      <title>HTML Lez. 02 - Etichette (tag)</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags01/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags01/</guid>
+      <description>HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 01 - Introduzione</title>
       <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
-      <pubDate>Tue, 16 Jul 2019 17:10:46 +0200</pubDate>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
-      <description>Tag principali dell&amp;rsquo;HTML</description>
-    </item>
-    
-    <item>
-      <title>HTML</title>
-      <link>http://codingepaduli.github.io/coding/web/html/html/</link>
-      <pubDate>Mon, 15 Jul 2019 17:10:46 +0200</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/html/</guid>
-      <description>Introduzione al linguaggio HTML e allo sviluppo di pagine web.</description>
-    </item>
-    
-    <item>
-      <title>Coding e tools</title>
-      <link>http://codingepaduli.github.io/coding/intro/</link>
-      <pubDate>Mon, 15 Jul 2019 16:10:46 +0200</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/intro/</guid>
-      <description>menu identifier and text to show menu: &amp;ldquo;main&amp;rdquo; linktitle: &amp;ldquo;Intro&amp;rdquo;
-menu: docs: name: &amp;ldquo;liste&amp;rdquo; identifier: &amp;ldquo;liste&amp;rdquo; parent: &amp;ldquo;main&amp;rdquo; weight: 01 linktitle: &amp;ldquo;Coding e tools&amp;rdquo;</description>
+      <description>HTML Lez. 01 - Introduzione al linguaggio HTML ed alla creazione, validazione e pubblicazione di pagine web</description>
     </item>
     
   </channel>

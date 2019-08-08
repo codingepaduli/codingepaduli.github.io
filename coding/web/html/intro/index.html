@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tag principali dell&#39;HTML - Coding e Paduli</title>
+	<title>HTML Lez. 01 - Introduzione - Coding e Paduli</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Tag principali dell&#39;HTML">
+	<meta name="description" content="HTML Lez. 01 - Introduzione">
 	
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -42,10 +42,10 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">Coding e Paduli</a>
+			<a class="menu__link" href="/coding/web/html/">HTML</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/coding/intro/">Coding e tools</a>
+			<a class="menu__link" href="/">Home</a>
 		</li>
 	</ul>
 </nav>
@@ -59,12 +59,11 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Tag principali dell&#39;HTML</h1>
+			<h1 class="post__title">HTML Lez. 01 - Introduzione</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-07-16T17:10:46">July 16, 2019</time>
-	<time class="meta__text" datetime="2019-07-19T00:00:00"> (Last Modified: July 19, 2019)</time>
+	<time class="meta__text" datetime="2019-07-15T00:00:00">July 15, 2019</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -73,176 +72,26 @@
 </div>
 </div>
 		</header><div class="content post__content clearfix">
-			<p>Un documento HTML è composto da un insieme di etichette, chiamate TAG (in inglese), che indicano l'inizio e la fine dei vari contenuti del documento. La struttura base di un documento HTML e' la seguente:</p>
-<pre>
-  <code class="html">
-  &lt;!doctype html&gt;
-  &lt;html&gt;
-    &lt;head&gt;
-      &lt;meta name="author" content="codingepaduli"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-      &lt;h1&gt;Titolo pagina web&lt;/h1&gt;
-      &lt;p&gt;paragrafo della pagina web.&lt;/p&gt;
-      &lt;!-- commento in html--&gt;
-    &lt;/body&gt;
-  &lt;/html&gt;
-  </code>
-</pre>
+			<p>Il linguaggio <abbr title="HyperText Markup Language">HTML</abbr> e' un linguaggio di etichettatura (in inglese Markup) degli ipertesti (in inglese HyperText).</p>
 
-<p>In questa struttura si evidenziano i 4 elementi principali che devono sempre essere presenti: </p>
-<ol>
-    <li>L'indicazione <code>doctype</code> (non è un tag, quindi non va chiuso) indica semplicemente che il documento è di tipo HTML (versione 5);</li>
-    <li>Il tag <code>html</code> indica l'inizio del documento HTML (con il simbolo di apertura <code>&lt;html&gt;</code>) e la fine del documento HTML (con il simbolo di chiusura <code>&lt;/html&gt;</code>);</li>
-    <li>Il tag di informazioni <code>head</code> (non indirizzate all'utente, ma al browser o ai motori di ricerca) che viene aperto (con il simbolo <code>&lt;head&gt;</code>) e chiuso (con il simbolo <code>&lt;/head&gt;</code>);</li>
-    <li>Il tag di contenuti <code>body</code> che viene aperto (con il simbolo <code>&lt;body&gt;</code>) e poi chiuso (con il simbolo <code>&lt;/body&gt;</code>) appena prima della fine del documento.</li>
-</ol>
+<p>L'<strong>ipertesto</strong> e' un testo contenente immagini, collegamenti, video, ecc... quindi l'ipertesto rappresenta i contenuti di una pagina web (oltre ai contenuti, abbiamo gli effetti grafici, le animazioni, le azioni, che sono comunque parte della pagina web, ma sono scritte in altri linguaggi). Le <strong>etichette</strong> (in inglese Markup o TAG) indicano un elemento della pagina web ed hanno un simbolo di inizio elemento ed uno di fine elemento: inizio e fine di un titolo, di un'immagine, di un video, di una tabella...</p>
 
- <p>Si fa notare nuovamente che tutti i tag nell'esempio sono prima aperti e poi chiusi. Inoltre, si fa notare che il testo è <strong>indentato</strong>, ovvero che, nella riga successiva ad un simbolo di apertura, vengono aggiunti 2 o 4 spazi. Questi spazi vengono tolti quando il tag viene chiuso (simbolo di chiusura). L'indentazione è una caratteristica dei documenti molto apprezzata, ed alcuni editor di testo permettono di indentare il documento in automatico, con combinazioni di tasti e/o plugins. Altra caratteristica apprezzata è la presenza di <strong>commenti</strong>, che l'autore scrive come informazioni aggiuntive e promemoria al fine di fare chiarezza.</p>
+<p>Per esempio l'etichetta <code>h1</code> è l'etichetta del "titolo", ed ha il simbolo di apertura <code>&lt;h1&gt;</code>, che indica l'inizio del titolo, ed il simbolo di chiusura <code>&lt;/h1&gt;</code> che indica la fine del titolo, quindi, il titolo in HTML sarà scritto cosi: <code>&lt;h1&gt;Titolo&lt;/h1&gt;</code></p>
 
-<p>Tutti i contenuti vanno inseriti nel tag <code>body</code>, tra i simboli di apertura <code>&lt;body&gt;</code> e chiusura <code>&lt;/body&gt;</code>, come nell'esempio precedente, in cui il titolo <code>h1</code> ed il paragrafo <code>p</code> si trovano nel tag dei contenuti <code>body</code>.</p>
+<p>Da sottolineare che il linguaggio HTML non definisce lo stile grafico del documento, ma solo la <strong>struttura</strong> di un ipertesto. Imparare il linguaggio HTML corrisponde ad imparare tutte le etichette.</p>
 
-<p>Possiamo dividere i tag in differenti categorie:</p>
+<p>Per creare una pagina HTML serve un semplice editor di testi, tra quelli consigliati spunta <a href="https://atom.io/">Atom</a>, estremamente configurabile, mentre tra quelli da evitare assolutamente si elenca l'editor Word di Office, e l'editor Notepad di Windows. Creata la pagina web, si deve <strong>validarla</strong> per verificare che non contenga errori, utilizzando un validatore HTML come quello della <a href="https://validator.w3.org/">W3C Validator</a>, e si deve controllare sia <strong>accessibile</strong> a chiunque, anche a chi ha difficoltà visive o motorie. Il controllo avviene attraverso strumenti specifici. <!-- TODO add accessibility tools--> Inoltre, è consigliabile che sia <strong>"responsive"</strong>, cioè che sia fruibile su differenti risoluzioni e formati, da quelli piccoli dei cellulari e palmari, a quelli classici dei computer e tablet, a quelli extra-large delle smart-TV. <!-- TODO add responsive tools--></p>
 
-<ol>
-    <li><a href="#tagTesto">Tag di testo;</a></li>
-    <li><a href="#tagArticoli">Tag di articoli;</a></li>
-    <li><a href="#tagListe">Tag di liste e tabelle;</a></li>
-    <li><a href="#tagAttr">Tag di immagini e video;</a></li>
-</ol>
+<p>La creazione di pagine web può avvenire anche attraverso strumenti di sviluppo visuale, che permettono di disegnarle e configurarle, piuttosto che scriverle. Esistono software che permettono di amministrare anche l'intero sito, pur avendo poche conoscenze tecniche, e sono chiamati genericamente <a href="https://it.wikipedia.org/wiki/Content_management_system">CMS</a>. Tra i CMS più noti troviamo <a href="https://wordpress.org/">WordPress</a> e <a href="https://www.joomla.org/">Joomla</a>, ma la scelta è ampia.</p>
 
-<h3 id="tagTesto">Tag di testo</h3>
+<p>L'ultimo step consiste nel pubblicare la pagina o il sito web su un dominio, quindi è necessario costruire le competenze necessarie sia alla scelta del dominio, sia all'uso di strumenti per il trasferimento o la sincronizzazione delle pagine sul dominio.</p>
 
-<p>Il titolo, come visto nell'esempio precedente, è generato dal tag <code>h1</code>, che ha il simbolo di apertura <code>&lt;h1&gt;</code> ed il simbolo di chiusura <code>&lt;/h1&gt;</code>. In realtà, esistono 7 livelli di titolo, che servono a dividere il documento in più capitoli e sotto-capitoli, in modo da poter dare una struttura "alberata" al documento. Questi livelli sono espressi dai tag <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code> ed <code>h7</code>, ma nella realtà si consiglia l'uso fino al terzo livello.</p>
-
-<p>Di seguito si riporta un esempio dei primi tre livelli:</p>
-<pre>
-  <code class="html">
-    &lt;h1&gt; Titolo primo livello &lt;/h1&gt;
-    &lt;h2&gt; Titolo secondo livello &lt;h2&gt;
-    &lt;h3&gt; Titolo terzo livello &lt;h2&gt;
-  </code>
-</pre>
-
-<p>che vengono poi trasformati dal browser come si vede di seguito:</p>
-<h3>Titolo primo livello</h3>
-<h4>Titolo secondo livello</h4>
-<h5>Titolo terzo livello</h5>
-
-<p>Il paragrafo è generato dal tag <code>p</code> che ha il simbolo di apertura <code>&lt;p&gt;</code> ed il simbolo di chiusura <code>&lt;/p&gt;</code>;</p>
-
-<p>il tag <code>del</code> genera un testo cancellato come ad esempio questo testo <del>cancellato</del> generato dal seguente codice:
-    <code>&lt;del&gt;cancellato&lt;/del&gt;</code>;</p>
-<p>il tag <code>ins</code> genera un testo sottolineato come ad esempio questo testo <ins>sottolineato</ins> generato dal seguente codice: <code>&lt;ins&gt;sottolineato&lt;/ins&gt;</code>;</p>
-<p>il tag <code>sup</code> genera un testo in apice come ad esempio questo testo <sup>in apice</sup> generato dal seguente codice:
-    <code>&lt;sup&gt;in apice&lt;/sup&gt;</code>;</p>
-<p>il tag <code>sub</code> genera un testo in pedice come ad esempio questo testo <sub>in pedice</sub> generato dal seguente codice:
-    <code>&lt;sub&gt;in pedice&lt;/sub&gt;</code>;</p>
-<p>il tag <code>strong</code> genera un testo in grassetto, come ad esempio questo testo <strong>in grassetto</strong> generato dal seguente codice:
-    <code>&lt;strong&gt;in grassetto&lt;/strong&gt;</code>;</p>
-<p>il tag <code>em</code> genera un testo in corsivo, come ad esempio questo testo <em>in corsivo</em> generato dal seguente codice:
-    <code>&lt;em&gt;in corsivo&lt;/em&gt;</code>;</p>
-<p>il tag <code>mark</code> genera un testo evidenziato, come ad esempio questo testo <mark>evidenziato</mark> generato dal seguente codice:
-    <code>&lt;mark&gt;evidenziato&lt;/mark&gt;</code>;</p>
-<p>il tag <code>abbr</code> è usato per visualizzarne il significato di un acronimo quando il mouse si ferma sopra questo, come ad esempio questo acronimo <abbr title="HyperText Markup Language">HTML</abbr> generato dal seguente codice:
-    <code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code>;</p>
-
-<!-- Obsolete TAG <acronym title="as soon as possible">ASAP</acronym> -->
-
-<!-- Obsolete TAG <big>This text is big</big> -->
-
-<p>E' ovvio che i tag possono essere inseriti (innestati) l'uno dentro l'altro per creare le combinazioni desiderate, ad esempio per generare un testo grassetto, evidenziato e sottolineato, come <strong><mark><ins>questo testo</ins></mark></strong> si usa il codice</p>
-
-<pre>
-  <code class="html">
-    &lt;strong&gt;
-        &lt;mark&gt;
-            &lt;ins&gt;questo testo&lt;/ins&gt;
-        &lt;/mark&gt;
-    &lt;/strong&gt;
-  </code>
-</pre>
-
-<h3 id="tagArticoli">Tag di articoli e libri</h3>
-
-<p>Esistono diversi tag che permettono di definire le varie sezioni di una pubblicazione: intestazione, articolo, corpo, sezioni, pie di pagina, ecc..</p>
-
-<p>Il tag <code>header</code> è usato sia come intestazione principale della pubblicazione, sia come intestazione di ogni sezione.</p>
-
-<p>Il tag <code>article</code> indica il contenuto dell'articolo pubblicato, che deve essere "auto-contenuto", cioè che si può leggere indipendentemente dal resto.</p>
-
-<p>Il tag <code>section</code> è usato per raggruppare contenuti dell'articolo che trattano la stessa tematica.</p>
-
-<p>Il tag <code>aside</code> è usato per indicare contenuti legati all'articolo, ma in maniera trasversale, come digressioni e divagazioni che interrompono la linearità dell'articolo.</p>
-
-<p>Il tag <code>main</code> raggruppa sia l'articolo che i contenuti trasversali. Ha la limitazione che un solo main può essere contenuto nella pagina web.</p>
-
-<p>Il tag <code>footer</code> è usato per indicare l'autore, la data di pubblicazione, il copyright, i collegamenti esterni e tutte le informazioni della pubblicazione.</p>
-
-<p>Il tag <code>nav</code> è usato per indicare i collegamenti principali della pubblicazione.</p>
-
-<p><p>Un esempio di articolo potrebbe essere:</p>
-<pre>
-  <code class="html">
-    &lt;nav&gt;link1, link2, &hellip;&lt;/nav&gt;
-    &lt;article&gt;
-      &lt;header&gt;
-          &lt;h1&gt;Titolo 1° livello&lt;/h1&gt;
-          &lt;h3&gt;Titolo 3° livello (sottotitolo)&lt;/h3&gt;
-          &lt;p&gt;Altre informazioni&lt;/p&gt;
-      &lt;/header&gt;
-      &lt;main id=&ldquo;principale&rdquo;&gt;
-        &lt;section&gt;
-            &lt;h2&gt;Titolo sezione&lt;/h2&gt;
-            &lt;p&gt;contenuto sezione&hellip;&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;section&gt;
-            &lt;h2&gt;Titolo sezione&lt;/h2&gt;
-            &lt;p&gt;contenuto sezione&hellip;&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;aside&gt;
-            &lt;h4&gt;Titolo contenuti legati&lt;/h4&gt;
-            &lt;p&gt;contenuti legati&hellip;&lt;/p&gt;
-        &lt;/aside&gt;
-      &lt;/main&gt;
-      &lt;footer&gt;
-          &lt;p&gt;Scritto da: Me&lt;/p&gt;
-          &lt;p&gt;Contattami a someone@example.com&lt;/p&gt;
-      &lt;/footer&gt;
-    &lt;/article&gt;
-  </code>
-</pre>
-<!-- TODO without this comment, somethings go wrong in html validation -->
-<p>Il codice HTML precedente genera il seguente documento:</p>
-<!-- sostituisco i tag di documento con i tag "div" per
-     evitare problemi di validazione a causa di duplicati nella pagina -->
-<div>
-  <div>link1, link2, &hellip;</div>
-  <div>
-    <div>
-        <h3>Titolo 1° livello</h3>
-        <h4>Titolo 3° livello (sottotitolo)</h4>
-        <p>Altre informazioni</p>
-    </div>
-    <div>
-        <h3>Titolo sezione</h3>
-        <p>contenuto sezione&hellip;</p>
-    </div>
-    <div>
-        <h3>Titolo sezione</h3>
-        <p>contenuto sezione&hellip;</p>
-    </div>
-    <div>
-        <h3>Titolo contenuti legati</h3>
-        <p>contenuti legati&hellip;</p>
-    </div>
-    <div>
-        <p>Scritto da: Me</p>
-        <p>Contattami a someone@example.com</p>
-    </div>
-  </div>
-</div>
-<!-- TODO without this comment, somethings go wrong in html validation --></p>
+<p>Su internet sono presenti moltissimi corsi e chiarimenti sul linguaggio HTML, degni di nota sono:
+    <a href="https://www.html.it/guide/guida-html/">html.it</a> (in italiano),
+    <a href="https://www.w3schools.com/html/">w3schools.com</a> (in inglese),
+    <a href="https://internetingishard.com/html-and-css/">internetingishard.com</a> (in inglese, per principianti),
+    <a href="https://developer.mozilla.org/it/docs/Web/HTML">developer.mozilla.org</a>, sito della Mozilla Foundation dedicato agli sviluppatori (in corso di traduzione) ed infine
+    <a href="https://guide.freecodecamp.org/html/">freecodecamp.org</a>, organizzazione no-profit per aiutare le persone ad apprendere l'arte della programmazione, con corsi e certificazioni disponibili gratuitamente (in inglese).</p>
 
 		</div>
 		

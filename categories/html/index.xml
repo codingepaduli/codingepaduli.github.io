@@ -6,36 +6,36 @@
     <description>Recent content in html on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Tue, 16 Jul 2019 17:10:46 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Tag principali dell&#39;HTML</title>
+      <title>HTML Lez. 02 - Etichette (tag)</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags01/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags01/</guid>
+      <description>HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 01 - Introduzione</title>
       <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
-      <pubDate>Tue, 16 Jul 2019 17:10:46 +0200</pubDate>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
-      <description>Tag principali dell&amp;rsquo;HTML</description>
+      <description>HTML Lez. 01 - Introduzione al linguaggio HTML ed alla creazione, validazione e pubblicazione di pagine web</description>
     </item>
     
     <item>
-      <title>HTML</title>
-      <link>http://codingepaduli.github.io/coding/web/html/html/</link>
-      <pubDate>Mon, 15 Jul 2019 17:10:46 +0200</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/html/</guid>
-      <description>Introduzione al linguaggio HTML e allo sviluppo di pagine web.</description>
-    </item>
-    
-    <item>
-      <title>Linguaggio HTML</title>
+      <title>Lezioni sul linguaggio HTML</title>
       <link>http://codingepaduli.github.io/coding/web/html/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/</guid>
-      <description></description>
+      <description>Lezioni sul linguaggio HTML</description>
     </item>
     
   </channel>
