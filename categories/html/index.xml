@@ -6,10 +6,19 @@
     <description>Recent content in html on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML Lez. 03 - Etichette con attributi</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags02/</link>
+      <pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags02/</guid>
+      <description>HTML Lez. 03 - Etichette con attributi - Spiegazione dei tag che fanno uso di attributi</description>
+    </item>
     
     <item>
       <title>HTML Lez. 02 - Etichette (tag)</title>

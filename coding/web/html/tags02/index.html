@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HTML Lez. 03 - Etichette con attributi - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="HTML Lez. 03 - Etichette con attributi - Spiegazione dei tag che fanno uso di attributi">
+	
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/styles/default.min.css">
+<script src="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/web/html/">HTML</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/">Home</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">HTML Lez. 03 - Etichette con attributi</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-07-25T00:00:00">July 25, 2019</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/html" rel="category">html</a></span>
+</div>
+</div>
+		</header><div class="content post__content clearfix">
+			<p>I tag possono avere degli <strong>attributi</strong> che servono ad aggiungere informazioni al tag. Alcuni attributi sono comuni a tutti i tag, ad esempio gli attributi <code>id</code> (che identifica in maniera univoca il tag) e <code>style</code> (che indica lo stile grafico del tag), mentre altri attributi sono specifici del singolo tag.</p>
+
+<p>Gli attributi sono aggiunti solo nei simboli di apertura di un tag, non nei simboli di chiusura, e hanno la forma <strong>nome='valore'</strong>. Il valore deve essere sempre racchiuso da apici singoli o doppi.</p>
+ 
+
+<p>Di seguito, elenchiamo altri tag dell'HTML che utilizzano gli attributi.</p>
+
+<p>Il tag <code>a</code> serve a creare un collegamento (in inglese "link") verso un ipertesto (un'altra pagina web). Questo tag ha gli attributi:</p>
+<ul>
+  <li><code>href</code>, che permette di indicare l'indirizzo dell'ipertesto da raggiungere;</li>
+  <li><code>target</code>, che permette di indicare come aprire l'ipertesto, e può assumere solo i seguenti valori: <code>&#95;blank</code>, per aprire l'ipertesto in una nuova pagina, e <code>&#95;self</code>, per aprire l'ipertesto nella stessa pagina.</li>
+</ul>
+
+<p>Un esempio di collegamento è questo <a href="/" target="&#95;blank">collegamento alla home</a>, generato dal codice
+    <code>&lt;a href="/" target="&#95;blank"&gt;collegamento alla home&lt;/a&gt;</code>; 
+    in cui si evidenzia sia l'indirizzo dell'ipertesto "/", cioè la home page, sia l'attributo <code>target="&#95;blank"</code>, cioè l'indicazione di aprire la home page in una nuova scheda del browser</p>
+
+<p><p>Il tag <code>ol</code> genera una lista numerata di elementi, analogamente il tag <code>ul</code> genera una lista di elementi non ordinata. Entrambi i tag prevedono che ogni elemento della lista  deve essere contenuto nel tag <code>li</code>. Entrambi i tag di lista hanno l&rsquo;attributo <code>type</code> (di recente sostituito dalla proprietà CSS list-style-type) che può avere uno dei seguenti valori:</p>
+<ul>
+  <li><code>1</code> elementi della lista elencati con numeri latini;</li>
+  <li><code>A</code> oppure <code>a</code> elementi della lista elencati con lettere alfabetiche maiuscole o minuscole;</li>
+  <li><code>I</code> oppure <code>i</code> elementi della lista elencati con numeri romani in maiuscolo o minuscolo;</li>
+  <li><code>disc</code> elementi della lista elencati con dei cerchietti pieni;</li>
+  <li><code>square</code> elementi della lista elencati con dei quadrati pieni;</li>
+  <li><code>circle</code> elementi della lista elencati con dei cerchietti vuoti;</li>
+</ul>
+<p>Ad esempio, il seguente codice genera la lista numerata (con numeri romani) di browser pessimi per la navigazione:</p>
+<pre>
+  <code class="html">
+    &lt;ol type=&ldquo;I&rdquo;&gt;
+      &lt;li&gt;Internet Explorer&lt;/li&gt;
+      &lt;li&gt;Safari&lt;/li&gt;
+    &lt;/ol&gt;
+  </code>
+</pre></p>
+
+<p><p>La lista viene visualizzata di seguito:</p>
+<ol type="I">
+  <li>Internet Explorer</li>
+  <li>Safari</li>
+</ol></p>
+
+<p><p>Altro esempio, il seguente codice genera la lista non ordinata di browser ottimi per la navigazione:</p>
+<pre>
+  <code class="html">
+    &lt;ul type=&ldquo;disc&rdquo;&gt;
+      &lt;li&gt;Firefox&lt;/li&gt;
+      &lt;li&gt;Chrome&lt;/li&gt;
+      &lt;li&gt;Edge (Microsoft)&lt;/li&gt;
+    &lt;/ul&gt;
+  </code>
+</pre></p>
+
+<p><p>La lista viene visualizzata di seguito:</p>
+<ul type="disc">
+  <li>Firefox</li>
+  <li>Chrome</li>
+  <li>Edge (Microsoft)</li>
+</ul></p>
+
+<p><p>Il tag <code>table</code> genera una tabella, e può contenere una descrizione del contenuto generata dal tag <code>caption</code>. Il tag di tabella deve contenere i tag <code>tr</code>, che generano le righe della tabella. Ogni tag <code>tr</code> deve contenere all&rsquo;interno delle celle che formano le colonne. Le celle possono essere di intestazione, e sono generate dai tag <code>th</code>, oppure di dati, e sono generate dai tag <code>td</code>.</p>
+<p>I tag delle celle <code>th</code> e <code>td</code> hanno gli attributi:</p>
+<ul>
+  <li><code>colspan</code>, che permette ad una cella di espandersi su più colonne;</li>
+  <li><code>rowspan</code>, che permette ad una cella di espandersi su più righe.</li>
+</ul></p>
+
+<p><p>Ad esempio, una tabella di 3 righe e 2 colonne viene generata dal seguente codice:</p>
+  <pre>
+    <code class="html">
+      &lt;table style=&ldquo;border: 5px solid green;&rdquo;&gt;
+        &lt;caption&gt;Tabella con stile&lt;/caption&gt;
+        &lt;tr&gt;
+          &lt;th&gt;header1&lt;/th&gt;
+          &lt;th&gt;header2&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;data1&lt;/td&gt;
+          &lt;td&gt;$100&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;data2&lt;/td&gt;
+          &lt;td&gt;$50&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    </code>
+  </pre></p>
+
+<p><p>La tabella viene visualizzata di seguito:</p>
+  <table style="border: 5px solid green;">
+    <caption>Tabella con stile</caption>
+    <tr>
+      <th>header1</th>
+      <th>header2</th>
+    </tr>
+    <tr>
+      <td>data1</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>data2</td>
+      <td>$50</td>
+    </tr>
+  </table></p>
+
+<p><p>Volendo riportare un esempio di codice che preveda l&rsquo;espansione delle celle su piu righe o colonne, possiamo creare una tabella di 3 righe e 2 colonne, in cui l&rsquo;ultima riga si espande su entrambe le colonne, mentre la prima cella in alto a sinistra occupa due righe:</p>
+<pre>
+  <code class="html">
+    &lt;table style=&ldquo;border: 5px solid green;&rdquo;&gt;
+      &lt;caption&gt;Tabella con stile&lt;/caption&gt;
+      &lt;tr&gt;
+        &lt;th rowspan=&ldquo;2&rdquo;&gt;Cella espansa su 2 righe grazie all&rsquo;attributo rowspan=&ldquo;2&rdquo; &lt;/th&gt;
+        &lt;td&gt;34£&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;!&minus;&minus; Cella mancante perchè occupata dalla cella che si è espansa     &minus; &minus;&gt;
+        &lt;td&gt;$100&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th colspan=&ldquo;2&rdquo;&gt;Cella espansa su 2 colonne, grazie all&rsquo;attributo colspan=&ldquo;2&rdquo;&lt;/th&gt;
+        &lt;!&minus;&minus; Cella mancante perchè occupata dalla cella che si è espansa &minus;&minus;&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  </code>
+</pre></p>
+
+<p><p>La lista viene visualizzata di seguito:</p>
+<table style="border: 5px solid green;">
+  <caption>Tabella con stile</caption>
+  <tr>
+      <th rowspan="2">Cella espansa su 2 righe grazie all&rsquo;attributo <code>rowspan=&ldquo;2&rdquo;</code></th>
+      <td>34£</td>
+  </tr>
+  <tr>
+      <!-- Cella mancante perchè occupata dalla cella che si è espansa -->
+      <td>$100</td>
+  </tr>
+  <tr>
+      <th colspan="2">Cella espansa su 2 colonne, grazie all&rsquo;attributo <code>colspan=&ldquo;2&rdquo;</code> </th>
+      <!-- Cella mancante perchè occupata dalla cella che si è espansa -->
+  </tr>
+</table></p>
+
+		</div>
+		
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>
