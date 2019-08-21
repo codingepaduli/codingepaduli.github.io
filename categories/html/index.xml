@@ -6,10 +6,19 @@
     <description>Recent content in html on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Thu, 25 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML Lez. 04 - Validazione e codifica UTF-8</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags03/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags03/</guid>
+      <description>HTML Lez. 04 - Validazione del codice HTML e codifica UTF-8 delle pagine web, HTML entities ed emoji</description>
+    </item>
     
     <item>
       <title>HTML Lez. 03 - Etichette con attributi</title>
@@ -36,15 +45,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
       <description>HTML Lez. 01 - Introduzione al linguaggio HTML ed alla creazione, validazione e pubblicazione di pagine web</description>
-    </item>
-    
-    <item>
-      <title>Lezioni sul linguaggio HTML</title>
-      <link>http://codingepaduli.github.io/coding/web/html/</link>
-      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/</guid>
-      <description>Lezioni sul linguaggio HTML</description>
     </item>
     
   </channel>
