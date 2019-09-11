@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>html</title>
+      <link>http://codingepaduli.github.io/categories/html/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/html/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>coding</title>
@@ -17,15 +26,6 @@
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/coding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>http://codingepaduli.github.io/categories/html/</link>
-      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/categories/html/</guid>
       <description></description>
     </item>
     
