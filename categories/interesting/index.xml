@@ -12,7 +12,16 @@
     
     
     <item>
-      <title>Coding</title>
+      <title>Link interessanti</title>
+      <link>http://codingepaduli.github.io/interesting/others/</link>
+      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/others/</guid>
+      <description>Set di link interessanti</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       
