@@ -4,14 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Categories - Coding e Paduli</title>
+	<title>Question And Answer WebApp - Coding e Paduli</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="">
+	<meta name="description" content="Question And Answer WebApp">
 	
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="alternate" type="application/rss+xml" href="/categories/index.xml" title="Coding e Paduli">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
 	
@@ -51,7 +50,7 @@
 		<li class="menu__item">
 			<a class="menu__link" href="/interesting/">Interessanti</a>
 		</li>
-		<li class="menu__item">
+		<li class="menu__item menu__item--active">
 			<a class="menu__link" href="/webapp/questionandanswer/qa/">Question And Answer WebApp</a>
 		</li>
 		<li class="menu__item">
@@ -66,85 +65,72 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">Categories</h1>
-	</header><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/webapp/" rel="bookmark">
-			webapp
-			</a>
-		</h3>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Question And Answer WebApp</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2019-12-27T10:10:10">December 27, 2019</time>
 	<time class="meta__text" datetime="2019-12-27T00:00:00"> (Last Modified: December 27, 2019)</time>
 </div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/webapp" rel="category">webapp</a></span>
 </div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
+</div>
+		</header><div class="content post__content clearfix">
+			  <script type="text/javascript" src="/static/webApp/questionAndAnswer.js"></script>
+  <style>
+    .btn-outline-primary {
+      border-color: #033C73;
+      color: #033C73;
+    }
+    .btn-outline-info {
+      border-color: #2FA4E7;
+      color: #2FA4E7;
+    }
+    .btn-success {
+      background-color: green;
+    }
+    .btn-danger {
+      background-color: lightcoral;
+    }
+    .btn-block {
+      display: block;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+    }
+    input {
+      white-space:normal !important;
+      word-wrap: break-word;
+      word-break: normal;
+    }
+  </style>
+  <form>
+    <fieldset>
+      <input type="button" class="btn-block wpcf7-form-control wpcf7-submit " onclick="ask()" value="Prossima domanda">
+      <input id="question" type="button" readonly="" class="form-control-plaintext" id="staticEmail" value="">
+      <input id="answer1" type="button" class="wpcf7-form-control wpcf7-text btn-block" onclick="check(this.id)">
+      <input id="answer2" type="button" class="wpcf7-form-control wpcf7-text btn-block" onclick="check(this.id)">
+      <input id="answer3" type="button" class="wpcf7-form-control wpcf7-text btn-block" onclick="check(this.id)">
+      <input id="answer4" type="button" class="wpcf7-form-control wpcf7-text btn-block" onclick="check(this.id)">
+    </fieldset>
+  </form>
+
+		</div>
 		
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/interesting/" rel="bookmark">
-			interesting
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-10-20T00:00:00">October 20, 2019</time>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/html/" rel="bookmark">
-			html
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-08-26T00:00:00">August 26, 2019</time>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/coding/" rel="bookmark">
-			coding
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-08-20T00:00:00">August 20, 2019</time>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article>
+	</article>
 </main>
+
+
 
 
 			</div>
 			
-
 		</div>
 		<footer class="footer">
 	<div class="container footer__container flex">
