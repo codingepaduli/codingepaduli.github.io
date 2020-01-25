@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell on Coding e Paduli</title>
+    <link>http://codingepaduli.github.io/coding/shell/</link>
+    <description>Recent content in shell on Coding e Paduli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it</language>
+    <lastBuildDate>Sat, 11 Jan 2020 18:44:11 +0200</lastBuildDate>
+    
+	<atom:link href="http://codingepaduli.github.io/coding/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
