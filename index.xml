@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Comandi della CLI di Windows</title>
-      <link>http://codingepaduli.github.io/coding/shell/dos/comandidos/</link>
-      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/shell/dos/comandidos/</guid>
-      <description>Comandi della CLI di Windows</description>
-    </item>
-    
-    <item>
       <title>Question And Answer WebApp</title>
       <link>http://codingepaduli.github.io/webapp/questionandanswer/qa/</link>
       <pubDate>Fri, 27 Dec 2019 10:10:10 +0200</pubDate>
@@ -45,60 +36,6 @@
       
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 06 - Immagini, aree e caricamento asincrono</title>
-      <link>http://codingepaduli.github.io/coding/web/html/immagini/</link>
-      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/immagini/</guid>
-      <description>HTML Lez. 06 - Immagini, aree e caricamento asincrono</description>
-    </item>
-    
-    <item>
-      <title>EditorConfig</title>
-      <link>http://codingepaduli.github.io/coding/tools/editorconfig/</link>
-      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/tools/editorconfig/</guid>
-      <description>EditorConfig, uno strumento per condividere le stesse impostazioni di stile e codifica tra gli sviluppatori che lavorano sullo stesso progetto con vari editors e IDEs</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 04 - Validazione e codifica UTF-8</title>
-      <link>http://codingepaduli.github.io/coding/web/html/tags03/</link>
-      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/tags03/</guid>
-      <description>HTML Lez. 04 - Validazione del codice HTML e codifica UTF-8 delle pagine web, HTML entities ed emoji</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 03 - Etichette con attributi</title>
-      <link>http://codingepaduli.github.io/coding/web/html/tags02/</link>
-      <pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/tags02/</guid>
-      <description>HTML Lez. 03 - Etichette con attributi - Spiegazione dei tag che fanno uso di attributi</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 02 - Etichette (tag)</title>
-      <link>http://codingepaduli.github.io/coding/web/html/tags01/</link>
-      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/tags01/</guid>
-      <description>HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 01 - Introduzione</title>
-      <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
-      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
-      <description>HTML Lez. 01 - Introduzione al linguaggio HTML ed alla creazione, validazione e pubblicazione di pagine web</description>
     </item>
     
   </channel>

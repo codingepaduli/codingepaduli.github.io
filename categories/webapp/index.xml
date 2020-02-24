@@ -20,5 +20,14 @@
       <description>Domande di cultura generale</description>
     </item>
     
+    <item>
+      <title>WebApp</title>
+      <link>http://codingepaduli.github.io/webapp/</link>
+      <pubDate>Fri, 27 Dec 2019 10:10:10 +0200</pubDate>
+      
+      <guid>http://codingepaduli.github.io/webapp/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

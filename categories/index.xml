@@ -12,11 +12,29 @@
     
     
     <item>
-      <title>shell</title>
-      <link>http://codingepaduli.github.io/categories/shell/</link>
+      <title>dos</title>
+      <link>http://codingepaduli.github.io/categories/dos/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
+      <guid>http://codingepaduli.github.io/categories/dos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>http://codingepaduli.github.io/categories/shell/</link>
+      <pubDate>Sat, 11 Jan 2020 18:44:11 +0200</pubDate>
+      
       <guid>http://codingepaduli.github.io/categories/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>http://codingepaduli.github.io/categories/web/</link>
+      <pubDate>Fri, 27 Dec 2019 10:10:10 +0200</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/web/</guid>
       <description></description>
     </item>
     
@@ -39,20 +57,29 @@
     </item>
     
     <item>
-      <title>html</title>
-      <link>http://codingepaduli.github.io/categories/html/</link>
-      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      <title>tools</title>
+      <link>http://codingepaduli.github.io/categories/tools/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/categories/html/</guid>
+      <guid>http://codingepaduli.github.io/categories/tools/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>coding</title>
-      <link>http://codingepaduli.github.io/categories/coding/</link>
-      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      <title>home</title>
+      <link>http://codingepaduli.github.io/categories/home/</link>
+      <pubDate>Mon, 15 Jul 2019 09:41:11 +0200</pubDate>
       
-      <guid>http://codingepaduli.github.io/categories/coding/</guid>
+      <guid>http://codingepaduli.github.io/categories/home/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>http://codingepaduli.github.io/categories/html/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/html/</guid>
       <description></description>
     </item>
     

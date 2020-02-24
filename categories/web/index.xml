@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>web on Coding e Paduli</title>
@@ -6,18 +6,18 @@
     <description>Recent content in web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Mon, 15 Jul 2019 09:43:11 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 10:10:10 +0200</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tecnologie Web</title>
-      <link>http://codingepaduli.github.io/coding/web/</link>
+      <link></link>
       <pubDate>Mon, 15 Jul 2019 09:43:11 +0200</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/</guid>
-      <description>Tecnologie Web</description>
+      <guid></guid>
+      <description></description>
     </item>
     
   </channel>
