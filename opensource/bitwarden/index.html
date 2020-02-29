@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bitwarden - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Bitwarden, un servizio di gestione credenziali/password open source">
+	
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/styles/default.min.css">
+<script src="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">Home</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">Interessanti</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">Open Source</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/questionandanswer/qa/">Question And Answer WebApp</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Bitwarden</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-02-29T00:00:00">February 29, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/open-source" rel="category">open source</a>, <a class="meta__link" href="/categories/software" rel="category">software</a></span>
+</div>
+</div>
+		</header><div class="content post__content clearfix">
+			<p>Bitwarden è un servizio di gestione credenziali/password open source che memorizza le credenziali e le password dell&rsquo;utente e permette di utilizzarle con un semplice &ldquo;click&rdquo; da un qualsiasi dispositivo (computer, smartphone, raspberry, ecc&hellip;).</p>
+<p>E&rsquo; possibile utilizzare Bitwarden tramite interfaccia web, tramite applicazione installata (su Windows, Linux e Mac), tramite estensione del browser (Google Chrome, Mozilla Firefox, Opera, Microsoft Edge, Safari, Vivaldi, Brave, Tor Browser), tramite app mobile e anche da linea di comando.</p>
+<p>L&rsquo;utente può generare casualmente le proprie password e poi dimenticarsene, dato che Bitwarden ricorda le credenziali (user/password) per l&rsquo;utente. Accedendo ad un sito su cui è registrato, l&rsquo;utente può effettuare il login semplicemente cliccando sull&rsquo;icona di Bitwarden, che riempirà i campi utente e password necessari al login.</p>
+<p>L&rsquo;architettura è centralizzata, con il server che memorizza credenziali e password in forma criptata con algoritmo AES-256, salted hashing, e PBKDF2 SHA-256. Ogni account Bitwarden è associato ad una “fingerprint phrase”, un codice che non cambierà mai e che serve ad identificare l&rsquo;utente (da usare in caso di smarrimento password).</p>
+<p>L&rsquo;utente ha la possibilità di attivare una seconda fase di verifica all&rsquo;atto del login (two-step login) su Bitwarden, che avviene attraverso un secondo codice di sicurezza da inserire durante il login. Questo codice può essere rilasciato da un&rsquo;app di autorizzazione OTP (come l&rsquo;app open source AndOTP), può essere inviato via mail o, solo per gli utenti premium, si possono sfruttare servizi quali YubiKey OTP Security Key, Duo e FIDO U2F Security Key.</p>
+<p>Per attivare la seconda fase di verifica all&rsquo;atto del login (two-step login) su Bitwarden, accedere all&rsquo;area &ldquo;two step login&rdquo;:</p>
+<p><img src="/static/openSource/Bitwarden-TwoStepLogin1.png" alt="Image" title="Two step login - Immagine 1"></p>
+<p>E&rsquo; utile prendere nota della “fingerprint phrase”, il codice che serve ad identificare l&rsquo;utente, cliccando sul pulsante &ldquo;view recovery code&rdquo;, in caso si cancelli per sbaglio i propri dati di accesso dall&rsquo;applicazione di autenticazione OTP.</p>
+<p>A questo punto, cliccare su gestione app di autenticazione &ldquo;Authenticator App&rdquo;, quindi utilizzare l&rsquo;app AndOTP (o una qualsiasi app di autenticazione OTP) per scannerizzare il codice QR (o inserire a mano il codice indicato):</p>
+<p><img src="/static/openSource/Bitwarden-TwoStepLogin2.png" alt="Image" title="Two step login - Immagine 2"></p>
+<p>Una volta scannerizzato il codice QR (o inserito a mano), l&rsquo;app di autenticazione fornisce un codice OTP. Inserendo questo codice OTP e cliccando su &ldquo;Enable&rdquo;, Bitwarden indica che la seconda fase di verifica all&rsquo;atto del login (two-step login) è abilitata:</p>
+<p><img src="/static/openSource/Bitwarden-TwoStepLogin3.png" alt="Image" title="Two step login - Immagine 3"></p>
+<p>Si ricoda ancoda di prendere nota della “fingerprint phrase”, da utilizzarsi nel caso si cancelli per sbaglio i propri dati di accesso dall&rsquo;applicazione di autenticazione OTP.</p>
+<p>A questo punto, installare l&rsquo;estensione per il browser, ad esempio per Mozilla Firefox:</p>
+<p><img src="/static/openSource/Bitwarden-FirefoxPlugin.png" alt="Image" title="Mozilla Firefox Plugin - Immagine 1"></p>
+<p>Durante la navigazione, quando si effettua il login ad un sito tramite utente e password, Bitwarden chiederà di memorizzare le credenziali.</p>
+<p>La seconda volta che l&rsquo;utente ha necessità di effettuare il login sul sito, sarà possibile cliccare sull&rsquo;icona dell&rsquo;estensione di Bitwarden per far si che Bitwarden inserisca le credenziali di login (precedentemente memorizzate) al posto dell&rsquo;utente.</p>
+
+		</div>
+		
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>

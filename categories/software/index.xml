@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Software open source on Coding e Paduli</title>
-    <link>http://codingepaduli.github.io/opensource/</link>
-    <description>Recent content in Software open source on Coding e Paduli</description>
+    <title>software on Coding e Paduli</title>
+    <link>http://codingepaduli.github.io/categories/software/</link>
+    <description>Recent content in software on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
     <lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingepaduli.github.io/opensource/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://codingepaduli.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,6 +18,15 @@
       
       <guid>http://codingepaduli.github.io/opensource/bitwarden/</guid>
       <description>Bitwarden, un servizio di gestione credenziali/password open source.</description>
+    </item>
+    
+    <item>
+      <title>Software open source</title>
+      <link>http://codingepaduli.github.io/opensource/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/opensource/</guid>
+      <description>Software open source</description>
     </item>
     
   </channel>
