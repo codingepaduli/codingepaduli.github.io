@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>OpenTasks</title>
+      <link>http://codingepaduli.github.io/opensource/opentasks/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/opensource/opentasks/</guid>
+      <description>OpenTasks, un&amp;rsquo;app open source per la gestione delle proprie attivitá.</description>
+    </item>
+    
+    <item>
+      <title>AndOTP</title>
+      <link>http://codingepaduli.github.io/opensource/andotp/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/opensource/andotp/</guid>
+      <description>AndOTP, un&amp;rsquo;app open source per l&amp;rsquo;autenticazione a due fattori.</description>
+    </item>
+    
+    <item>
       <title>Bitwarden</title>
       <link>http://codingepaduli.github.io/opensource/bitwarden/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
