@@ -6,10 +6,19 @@
     <description>Recent content in open source on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Tue, 03 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/open-source/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>F-Droid</title>
+      <link>http://codingepaduli.github.io/opensource/fdroid/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/opensource/fdroid/</guid>
+      <description>F-Droid, un&amp;rsquo;app store open source, simile a Google Play Store, per la distribuzione di app free ed open source (FOSS) per Android</description>
+    </item>
     
     <item>
       <title>OpenTasks</title>
