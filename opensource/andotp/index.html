@@ -118,13 +118,18 @@
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>AndOTP è un&rsquo;app open source per l&rsquo;autenticazione a due fattori. Si occupa della generazione di una password valida &ldquo;una volta sola&rdquo; (dall&rsquo;inglese &ldquo;one time&rdquo;).</p>
-<p>In generale la password OTP cambia ogni 30 secondi (algoritmo temporale) o cambia a seconda della password usata in precedenza o anche casualmente.</p>
-<p>Queste password &ldquo;OTP&rdquo; sono utili nell&rsquo;autenticazione a due fattori, cioè l&rsquo;accesso ad un servizio tramite prima utente/password e poi (seconda fase) una password OTP.</p>
-<p>Il vantaggio dell&rsquo;uso di un&rsquo;autenticazione a due fattori è che se un potenziale intruso riesce a intercettare utente e password, deve comunque inserire una OTP per accedere al servizio. Nel caso il potenziale intruso avesse intercettato anche la password OTP,  non potrebbe comunque riutilizzarla, in quanto non più valida (è valida &ldquo;una volta sola&rdquo;).</p>
-<p><img src="/static/openSource/AndOTP-Pin.png" alt="Image" title="AndOTP - Immagine 1"></p>
-<p>AndOTP permette di generare la password OTP a partire da un codice QR da scannerizzare o da una frase identificativa da inserire (sia il codice QR che la frase identificativa sono generati dal servizio che si vuole utilizzare).</p>
-<p>Permette il backup criptato o protetto da password e l&rsquo;accesso all&rsquo;app solo attraverso un pin.</p>
+			<p>AndOTP è un&rsquo;app open source per l&rsquo;autenticazione a due fattori. Si occupa della generazione di una password valida &ldquo;una volta sola&rdquo;, dall&rsquo;inglese &ldquo;one time password&rdquo; (OTP).</p>
+<p>Queste password &ldquo;OTP&rdquo; sono utili nell&rsquo;autenticazione a due fattori, cioè l&rsquo;accesso ad un servizio tramite prima l&rsquo;inserimento di utente e password e poi (in seconda fase) l&rsquo;inserimento di una password OTP.</p>
+<p>In generale la password OTP cambia ogni 30 secondi (algoritmo temporale) o cambia a seconda della password usata in precedenza o ancora può essere generata casualmente ed inviata all&rsquo;utente (tramite SMS o email).</p>
+<p>Il vantaggio dell&rsquo;uso di un&rsquo;autenticazione a due fattori è che se un potenziale intruso riesce a intercettare utente e password, deve comunque inserire una OTP per accedere al servizio. Nel caso il potenziale intruso avesse intercettato anche la password OTP, non potrebbe comunque riutilizzarla, in quanto non più valida (è valida &ldquo;una volta sola&rdquo;).</p>
+<p>All&rsquo;avvio, l&rsquo;app richiede di impostare la password per l&rsquo;accesso all&rsquo;app ed ai dati memorizzati.</p>
+<p><img src="/static/openSource/AndOTP-Setup.png" alt="Image" title="AndOTP - Setup"></p>
+<p><img src="/static/openSource/AndOTP-PinSetup.png" alt="Image" title="AndOTP - Pin Setup"></p>
+<p>AndOTP permette di generare la password OTP a partire da un codice QR da scannerizzare o da una chiave segreta da inserire (sia il codice QR che la chiave segreta sono forniti dal servizio che si intende utilizzare).</p>
+<p><img src="/static/openSource/AndOTP-AddService.png" alt="Image" title="AndOTP - Add Service"></p>
+<p>Aggiunti i dettagli, è possibile visualizzare le password OTP generate:</p>
+<p><img src="/static/openSource/AndOTP-ServiceList.png" alt="Image" title="AndOTP - Service List"></p>
+<p>Installa l&rsquo;app da <a href="/opensource/fdroid/" title="F-Droid">F-Droid</a>.</p>
 
 		</div>
 	</article>
