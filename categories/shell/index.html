@@ -21,12 +21,36 @@
 <body class="body">
 	<div class="container container--outer">
 		
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/styles/default.min.css">
-<script src="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/highlight.min.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
 
+
+<style>
+	 
+	@media screen and (min-width : 320px), print and (min-width : 320px) {
+		img {
+			max-width: 80%;
+		}
+	}
+	 
+    @media screen and (min-width : 768px), print and (min-width : 768px) {
+		img {
+			max-width: 60%;
+		}
+    }
+	 
+    @media screen and (min-width : 992px), print and (min-width : 992px) {
+		img {
+			max-width: 40%;
+		}
+    }
+
+     
+    @media screen and (min-width : 1200px), print and (min-width : 1200px) {
+		img {
+			max-width: 25%;
+		}
+    }
+
+</style>
 
 <header class="header">
 	<div class="container">
@@ -43,16 +67,32 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">Home</a>
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/interesting/">Interessanti</a>
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/opensource/">Open Source</a>
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/webapp/questionandanswer/qa/">Question And Answer WebApp</a>
+			<a class="menu__link" href="/webapp/questionandanswer/qa/">
+				
+				<span class="menu__text">Question And Answer WebApp</span>
+				
+			</a>
 		</li>
 	</ul>
 </nav>
@@ -84,5 +124,6 @@
 	</div>
 </footer>
 	</div>
-<script async defer src="/js/menu.js"></script></body>
+<script async defer src="/js/menu.js"></script>
+</body>
 </html>

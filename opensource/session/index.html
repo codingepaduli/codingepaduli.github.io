@@ -20,12 +20,36 @@
 <body class="body">
 	<div class="container container--outer">
 		
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/styles/default.min.css">
-<script src="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/highlight.min.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
 
+
+<style>
+	 
+	@media screen and (min-width : 320px), print and (min-width : 320px) {
+		img {
+			max-width: 80%;
+		}
+	}
+	 
+    @media screen and (min-width : 768px), print and (min-width : 768px) {
+		img {
+			max-width: 60%;
+		}
+    }
+	 
+    @media screen and (min-width : 992px), print and (min-width : 992px) {
+		img {
+			max-width: 40%;
+		}
+    }
+
+     
+    @media screen and (min-width : 1200px), print and (min-width : 1200px) {
+		img {
+			max-width: 25%;
+		}
+    }
+
+</style>
 
 <header class="header">
 	<div class="container">
@@ -42,16 +66,32 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">Home</a>
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/interesting/">Interessanti</a>
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/opensource/">Open Source</a>
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/webapp/questionandanswer/qa/">Question And Answer WebApp</a>
+			<a class="menu__link" href="/webapp/questionandanswer/qa/">
+				
+				<span class="menu__text">Question And Answer WebApp</span>
+				
+			</a>
 		</li>
 	</ul>
 </nav>
@@ -69,30 +109,29 @@
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-03-10T00:00:00">March 10, 2020</time>
+	<time class="meta__text" datetime="2020-03-10T00:00:00Z">March 10, 2020</time>
 </div>
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/open-source" rel="category">open source</a>, <a class="meta__link" href="/categories/software" rel="category">software</a></span>
-</div>
-</div>
+	<span class="meta__text"><a class="meta__link" href="/categories/open-source/" rel="category">open source</a>, <a class="meta__link" href="/categories/software/" rel="category">software</a>
+	</span>
+</div></div>
 		</header><div class="content post__content clearfix">
 			<p>Session, un&rsquo;app open source per la messaggistica (simile a whatsapp e signal) progettata per offrire comunicazioni criptate e orientate al rispetto della privacy.</p>
 <p>La differenza di Session rispetto alle altre app di messaggistica è che non richiede una mail o un numero di telefono per utilizzarlo. All&rsquo;avvio dell&rsquo;applicazione viene generato un Session ID che serve ad identificare l&rsquo;utente.</p>
 <p><img src="/static/openSource/Session-SessionID.png" alt="Image" title="Session - Session ID"></p>
-<p>Sempre all&rsquo;avvio, Session crea la propria frase di recupero, in modo che l&rsquo;utente possa accedere in qualunque momento alle proprie comunicazioni.
-<img src="/static/openSource/Session-RecoveryPhrase.png" alt="Image" title="Session - Recovery Phrase"></p>
+<p>Sempre all&rsquo;avvio, Session crea la propria frase di recupero, in modo che l&rsquo;utente possa accedere in qualunque momento alle proprie comunicazioni.</p>
+<p><img src="/static/openSource/Session-RecoveryPhrase.png" alt="Image" title="Session - Recovery Phrase"></p>
 <p>Dato che Session non usa il numero di telefono, non può creare una lista di contatti a partire da quelli presenti in rubrica.
 Questo comporta che per iniziare una comunicazione è necessario inserire il Session ID della persona da contattare, per cui è necessario che questi trasmetta il proprio Session ID (anche rappresentato da un codice QR) tramite sms, bluetooth, mail o altro mezzo di comunicazione.</p>
 <p><img src="/static/openSource/Session-NewChat.png" alt="Image" title="Session - New Chat"></p>
-<p>L&rsquo;interfaccia si presenta del tutto simile alle altre app di messaggistica, con l&rsquo;elenco di chat avviate.
-<img src="/static/openSource/Session-ChatList.png" alt="Image" title="Session - Chat List"></p>
+<p>L&rsquo;interfaccia si presenta del tutto simile alle altre app di messaggistica, con l&rsquo;elenco di chat avviate.</p>
+<p><img src="/static/openSource/Session-ChatList.png" alt="Image" title="Session - Chat List"></p>
 <p>Le funzionalità sono molteplici, la creazione di gruppi aperti o chiusi, l&rsquo;invio di messaggi che si autodistruggono dopo tot minuti, la possibilità di collegare più dispositivi allo stesso Session ID e tante altre.</p>
 <p>L&rsquo;app si puó scaricare dal sito web <a href="https://getsession.org/">https://getsession.org/</a>.</p>
 
 		</div>
-		
 	</article>
 </main>
 
@@ -112,5 +151,6 @@ Questo comporta che per iniziare una comunicazione è necessario inserire il Ses
 	</div>
 </footer>
 	</div>
-<script async defer src="/js/menu.js"></script></body>
+<script async defer src="/js/menu.js"></script>
+</body>
 </html>
