@@ -12,6 +12,42 @@
     
     
     <item>
+      <title>DOS</title>
+      <link>http://codingepaduli.github.io/coding/shell/dos/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/dos/</guid>
+      <description>Lezioni sui comandi del prompt di windows (DOS) e sulla programmazione di script in batch nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/dos&#39;&gt;DOS&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>http://codingepaduli.github.io/coding/shell/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/</guid>
+      <description>Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell&#39;&gt;Shell&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>http://codingepaduli.github.io/coding/tools/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/</guid>
+      <description>Strumenti di lavoro e risorse per il programmatore nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/tools&#39;&gt;Tools&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>http://codingepaduli.github.io/coding/web/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/</guid>
+      <description>Corso di programmazione web nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web&#39;&gt;Web&lt;/a&gt;</description>
+    </item>
+    
+    <item>
       <title>Session</title>
       <link>http://codingepaduli.github.io/opensource/session/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
@@ -81,6 +117,60 @@
       
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 06 - Immagini, aree e caricamento asincrono</title>
+      <link>http://codingepaduli.github.io/coding/web/html/immagini/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/immagini/</guid>
+      <description>HTML Lez. 06 - Immagini, aree e caricamento asincrono</description>
+    </item>
+    
+    <item>
+      <title>EditorConfig</title>
+      <link>http://codingepaduli.github.io/coding/tools/editorconfig/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/editorconfig/</guid>
+      <description>EditorConfig, uno strumento per condividere le stesse impostazioni di stile e codifica tra gli sviluppatori che lavorano sullo stesso progetto con vari editors e IDEs</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 04 - Validazione e codifica UTF-8</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags03/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags03/</guid>
+      <description>HTML Lez. 04 - Validazione del codice HTML e codifica UTF-8 delle pagine web, HTML entities ed emoji</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 03 - Etichette con attributi</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags02/</link>
+      <pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags02/</guid>
+      <description>HTML Lez. 03 - Etichette con attributi - Spiegazione dei tag che fanno uso di attributi</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 02 - Etichette (tag)</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags01/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags01/</guid>
+      <description>HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 01 - Introduzione</title>
+      <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
+      <description>HTML Lez. 01 - Introduzione al linguaggio HTML ed alla creazione, validazione e pubblicazione di pagine web</description>
     </item>
     
   </channel>

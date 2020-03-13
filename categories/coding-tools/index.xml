@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coding, tools on Coding e Paduli</title>
+    <link>http://codingepaduli.github.io/categories/coding-tools/</link>
+    <description>Recent content in coding, tools on Coding e Paduli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it</language>
+    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://codingepaduli.github.io/categories/coding-tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>EditorConfig</title>
+      <link>http://codingepaduli.github.io/coding/tools/editorconfig/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/editorconfig/</guid>
+      <description>EditorConfig, uno strumento per condividere le stesse impostazioni di stile e codifica tra gli sviluppatori che lavorano sullo stesso progetto con vari editors e IDEs</description>
+    </item>
+    
+  </channel>
+</rss>

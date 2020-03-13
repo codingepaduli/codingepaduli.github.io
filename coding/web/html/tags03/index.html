@@ -20,12 +20,36 @@
 <body class="body">
 	<div class="container container--outer">
 		
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/styles/default.min.css">
-<script src="http://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.9/build/highlight.min.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
 
+
+<style>
+	 
+	@media screen and (min-width : 320px), print and (min-width : 320px) {
+		img {
+			max-width: 80%;
+		}
+	}
+	 
+    @media screen and (min-width : 768px), print and (min-width : 768px) {
+		img {
+			max-width: 60%;
+		}
+    }
+	 
+    @media screen and (min-width : 992px), print and (min-width : 992px) {
+		img {
+			max-width: 40%;
+		}
+    }
+
+     
+    @media screen and (min-width : 1200px), print and (min-width : 1200px) {
+		img {
+			max-width: 25%;
+		}
+    }
+
+</style>
 
 <header class="header">
 	<div class="container">
@@ -42,22 +66,39 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">Home</a>
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/coding/web/html/">HTML</a>
+			<a class="menu__link" href="/coding/web/html/">
+				
+				<span class="menu__text">HTML</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/interesting/">Interessanti</a>
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/coding/shell/dos/">prompt dei comandi</a>
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/webapp/questionandanswer/qa/">Question And Answer WebApp</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/coding/tools/">tools</a>
+			<a class="menu__link" href="/webapp/questionandanswer/qa/">
+				
+				<span class="menu__text">Question And Answer WebApp</span>
+				
+			</a>
 		</li>
 	</ul>
 </nav>
@@ -75,14 +116,14 @@
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-07-30T00:00:00">July 30, 2019</time>
+	<time class="meta__text" datetime="2019-07-30T00:00:00Z">July 30, 2019</time>
 </div>
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/html" rel="category">html</a></span>
-</div>
-</div>
+	<span class="meta__text"><a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div></div>
 		</header><div class="content post__content clearfix">
 			<p>É importante che il documento HTML sia salvato   con codifica <a href="https://it.wikipedia.org/wiki/UTF-8">UTF-8</a>, in modo tale da poter inserire nel documento qualsiasi carattere o simbolo, dall'alfabeto cinese a quello arabo, dalle lingue morte come latino e greco ai simboli matematici, alle figure geometriche, fino agli emoticons ed emoji.</p>
 <p>La codifica UTF-8 deriva dal sistema <a href="https://it.m.wikipedia.org/wiki/Unicode">Unicode</a>, che assegna un numero univoco ad ogni carattere di ogni lingua, ad ogni simbolo e ad ogni emoticons o emoji.</p>
@@ -141,7 +182,6 @@ All'interno del tag <code>head</code> deve essere inserito il tag <code>title</c
 <p><strong>Bad character after <mark>&lt;</mark>. Probable cause: Unescaped. Try escaping it as &amp;#xxxx;</strong> indica che il carattere evidenziato deve essere codificato come "html entity" oppure rappresentato con codifica Unicode decimale o esadecimale.</p>
 
 		</div>
-		
 	</article>
 </main>
 
@@ -161,5 +201,6 @@ All'interno del tag <code>head</code> deve essere inserito il tag <code>title</c
 	</div>
 </footer>
 	</div>
-<script async defer src="/js/menu.js"></script></body>
+<script async defer src="/js/menu.js"></script>
+</body>
 </html>

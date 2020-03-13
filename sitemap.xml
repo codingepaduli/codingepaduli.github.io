@@ -3,8 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://codingepaduli.github.io/coding/web/</loc>
+    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/categories/coding/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/categories/coding-shell-dos/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/shell/dos/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/shell/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/categories/shell/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/shell/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/tools/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -53,8 +98,8 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/categories/shell/</loc>
-    <lastmod>2020-01-11T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/coding/shell/dos/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -98,8 +143,53 @@
   </url>
   
   <url>
+    <loc>http://codingepaduli.github.io/categories/html/</loc>
+    <lastmod>2019-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/html/immagini/</loc>
+    <lastmod>2019-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/categories/coding-tools/</loc>
+    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/tools/editorconfig/</loc>
+    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingepaduli.github.io/categories/tools/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/tools/</loc>
+    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/html/tags03/</loc>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/html/tags02/</loc>
+    <lastmod>2019-07-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/</loc>
+    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/html/tags01/</loc>
+    <lastmod>2019-07-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -113,7 +203,12 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/categories/html/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/html/intro/</loc>
+    <lastmod>2019-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/html/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url>
   
