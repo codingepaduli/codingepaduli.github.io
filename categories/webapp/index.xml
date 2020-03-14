@@ -6,27 +6,27 @@
     <description>Recent content in webapp on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 27 Dec 2019 10:10:10 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/webapp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Question And Answer WebApp</title>
-      <link>http://codingepaduli.github.io/webapp/questionandanswer/qa/</link>
-      <pubDate>Fri, 27 Dec 2019 10:10:10 +0200</pubDate>
+      <link>http://codingepaduli.github.io/webapp/questionandanswer/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/webapp/questionandanswer/qa/</guid>
-      <description>Domande di cultura generale</description>
+      <guid>http://codingepaduli.github.io/webapp/questionandanswer/</guid>
+      <description>Question and Answer WebApp, per domande sul diritto allo studio.</description>
     </item>
     
     <item>
       <title>WebApp</title>
       <link>http://codingepaduli.github.io/webapp/</link>
-      <pubDate>Fri, 27 Dec 2019 10:10:10 +0200</pubDate>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/webapp/</guid>
-      <description></description>
+      <description>Applicazioni web eseguite direttamente nel browser</description>
     </item>
     
   </channel>

@@ -6,7 +6,7 @@
     <description>Recent content in web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 27 Dec 2019 10:10:10 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,19 @@
     <item>
       <title>Tecnologie Web</title>
       <link>http://codingepaduli.github.io/coding/web/</link>
-      <pubDate>Mon, 15 Jul 2019 09:43:11 +0200</pubDate>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/</guid>
-      <description>Tecnologie Web</description>
+      <description>Lezioni di programmazione sulle diverse Tecnologie Web</description>
+    </item>
+    
+    <item>
+      <title>Lezioni sul linguaggio HTML</title>
+      <link>http://codingepaduli.github.io/coding/web/html/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/</guid>
+      <description>Lezioni sul linguaggio HTML</description>
     </item>
     
   </channel>

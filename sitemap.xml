@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/web/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingepaduli.github.io/categories/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
@@ -18,12 +13,17 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/categories/coding-shell-dos/</loc>
+    <loc>http://codingepaduli.github.io/coding/shell/__dos/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/shell/dos/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/__html/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/__shell/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,17 +38,12 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/shell/</loc>
+    <loc>http://codingepaduli.github.io/coding/__tools/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/tools/</loc>
-    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/coding/web/</loc>
+    <loc>http://codingepaduli.github.io/coding/__web/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -103,7 +98,7 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/webapp/questionandanswer/qa/</loc>
+    <loc>http://codingepaduli.github.io/webapp/questionandanswer/</loc>
     <lastmod>2019-12-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -183,23 +178,28 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/</loc>
+    <loc>http://codingepaduli.github.io/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/web/html/tags01/</loc>
-    <lastmod>2019-07-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/</loc>
+    <loc>http://codingepaduli.github.io/coding/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/home/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/</loc>
+    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/html/tags01/</loc>
+    <lastmod>2019-07-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>

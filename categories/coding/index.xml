@@ -12,39 +12,30 @@
     
     
     <item>
+      <title>DOS</title>
+      <link>http://codingepaduli.github.io/coding/shell/__dos/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/__dos/</guid>
+      <description>Lezioni sui comandi del prompt di windows (DOS) e sulla programmazione di script in batch nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/dos&#39;&gt;DOS&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>http://codingepaduli.github.io/coding/web/__html/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/__html/</guid>
+      <description>Lezioni sul linguaggio HTML nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/html&#39;&gt;HTML&lt;/a&gt;</description>
+    </item>
+    
+    <item>
       <title>Shell</title>
       <link>http://codingepaduli.github.io/coding/shell/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/shell/</guid>
-      <description>Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell&#39;&gt;Shell&lt;/a&gt;</description>
-    </item>
-    
-    <item>
-      <title>shell</title>
-      <link>http://codingepaduli.github.io/coding/shell/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/shell/</guid>
       <description>Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script</description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>http://codingepaduli.github.io/coding/tools/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/tools/</guid>
-      <description>Strumenti di lavoro e risorse per il programmatore nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/tools&#39;&gt;Tools&lt;/a&gt;</description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>http://codingepaduli.github.io/coding/web/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/</guid>
-      <description>Corso di programmazione web nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web&#39;&gt;Web&lt;/a&gt;</description>
     </item>
     
     <item>
@@ -54,6 +45,24 @@
       
       <guid>http://codingepaduli.github.io/coding/</guid>
       <description>Programmazione e strumenti connessi</description>
+    </item>
+    
+    <item>
+      <title>Tecnologie Web</title>
+      <link>http://codingepaduli.github.io/coding/web/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/</guid>
+      <description>Lezioni di programmazione sulle diverse Tecnologie Web</description>
+    </item>
+    
+    <item>
+      <title>Lezioni sul linguaggio HTML</title>
+      <link>http://codingepaduli.github.io/coding/web/html/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/</guid>
+      <description>Lezioni sul linguaggio HTML</description>
     </item>
     
   </channel>

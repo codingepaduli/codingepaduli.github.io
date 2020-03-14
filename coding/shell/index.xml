@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>shell on Coding e Paduli</title>
+    <title>Shell on Coding e Paduli</title>
     <link>http://codingepaduli.github.io/coding/shell/</link>
-    <description>Recent content in shell on Coding e Paduli</description>
+    <description>Recent content in Shell on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
     <lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>DOS</title>
-      <link>http://codingepaduli.github.io/coding/shell/dos/</link>
+      <link>http://codingepaduli.github.io/coding/shell/__dos/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/shell/dos/</guid>
+      <guid>http://codingepaduli.github.io/coding/shell/__dos/</guid>
       <description>Lezioni sui comandi del prompt di windows (DOS) e sulla programmazione di script in batch nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/dos&#39;&gt;DOS&lt;/a&gt;</description>
     </item>
     
