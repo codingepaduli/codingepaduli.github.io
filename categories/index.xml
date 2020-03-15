@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>coding</title>
       <link>http://codingepaduli.github.io/categories/coding/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding, tools</title>
+      <link>http://codingepaduli.github.io/categories/coding-tools/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/coding-tools/</guid>
       <description></description>
     </item>
     
@@ -89,15 +98,6 @@
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>coding, tools</title>
-      <link>http://codingepaduli.github.io/categories/coding-tools/</link>
-      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/categories/coding-tools/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VirtualBox - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="VirtualBox, uno strumento open-source per la creazione di macchine virtuali.">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		
+
+
+<style>
+	 
+	@media screen and (min-width : 320px), print and (min-width : 320px) {
+		img {
+			max-width: 80%;
+		}
+	}
+	 
+    @media screen and (min-width : 768px), print and (min-width : 768px) {
+		img {
+			max-width: 60%;
+		}
+    }
+	 
+    @media screen and (min-width : 992px), print and (min-width : 992px) {
+		img {
+			max-width: 40%;
+		}
+    }
+
+     
+    @media screen and (min-width : 1200px), print and (min-width : 1200px) {
+		img {
+			max-width: 25%;
+		}
+    }
+
+</style>
+
+<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">VirtualBox</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-15T00:00:00Z">March 15, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/coding-tools/" rel="category">coding, tools</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<p>VirtualBox è uno software open-source per la gestione di macchine virtuali.</p>
+<p>All&rsquo;avvio si presenta con un&rsquo;interfaccia molto semplice, che permette di gestire le preferenze, l&rsquo;importazione, l&rsquo;esportazione, la creazione e l&rsquo;aggiunta di macchine virtuali.</p>
+<p><img src="/static/coding/tools/VirtualBox-Welcome.png" alt="Image" title="VirtualBox - Welcome"></p>
+<p>Il processo di creazione di una macchina virtuale è molto semplice, è necessario inserire un nome per la macchina virtuale, indicare in quale cartella salvarla, selezionare il tipo di macchina virtuale ed il sistema operativo che deve ospitare:</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Step1.png" alt="Image" title="VirtualBox - New Machine - step 1"></p>
+<p>Il passo successivo richiede la selezione della quantità di memoria che la macchina ospitante può dedicare alla macchina virtuale:</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Step2.png" alt="Image" title="VirtualBox - New Machine - step 2"></p>
+<p>Il terzo passo richiede la creazione di un nuovo disco fisso o la selezione di un disco fisso esistente per la macchina virtuale:</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Step3.png" alt="Image" title="VirtualBox - New Machine - step 3"></p>
+<p>Il quarto passo richiede la scelta della dimensione del disco fisso e il percorso in cui salvarlo. E&rsquo; necessario scegliere anche il tipo di formato con cui salvare il disco fisso, ma questa scelta dipende dal tipo di software che vogliamo usare per leggere questo disco fisso.
+Nel caso si usino più programmi per la gestione di macchine virtuali, allora la scelta deve ricadere su un formato compatibile per tutti, in modo da poter leggere il disco virtuale da una qualsiasi macchina virtuale eseguita da un qualsiasi programma di gestione.
+La scelta dell&rsquo;allocazione dinamica è utile quando si vuole che il disco fisso, posizionato al percorso specificato, sia archiviato man mano che il disco della macchina virtuale si riempie. L&rsquo;alternativa è creare subito un file della dimensione indicata, anche se il disco fisso della macchina virtuale è vuoto o occupa una quantità inferiore di spazio, e quindi si sceglie di utilizzare inutilmente spazio sul disco della macchina ospitante.</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Step4.png" alt="Image" title="VirtualBox - New Machine - step 4"></p>
+<p>Al termine di tutti questi passi, Cliccando su pulsante &ldquo;crea&rdquo; la macchina virtuale viene creata.
+In realtà, al passo 1, cliccando su modalità esperta, si potevano inserire tutte queste informazioni in un&rsquo;unica volta:</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-StepExpert.png" alt="Image" title="VirtualBox - New Machine - step expert"></p>
+<p>Nella schermata principale vengono quindi visualizzate le varie macchine virtuali, tra cui quella appena creata. Cliccando su una macchina virtuale vengono visualizzati i dettagli, dalle informazioni generali a quelle software a quelle delle varie (virtualizzate) componenti hardware. Troviamo quindi informazioni sul sistema, sulle componenti audio, video e di rete, sui dispositivi di archiviazione e sulle cartelle condivise con il sistema ospitante.</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Created.png" alt="Image" title="VirtualBox - VM Created"></p>
+<p>Le informazioni visualizzate sono modificabili. Cliccando su un&rsquo;opzione si apre la corrispondente finestra di dialogo per modificarla, mostrando le opzioni alternative o permettendo di modificare il valore presente.</p>
+<p>La macchina virtuale è stata creata, quindi le componenti hardware sono presenti (in forma virtuale). E&rsquo; necessario indicare il software, in particolare il Sistema Operativo da eseguire quando si avvia la macchina virtuale.</p>
+<p>E&rsquo; necessario prestare particolare attenzione in questa fase: nel caso si avvi la macchina virtuale senza scegliere l&rsquo;archivio contenente il sistema operativo, allora si otterrà l&rsquo;errore: &ldquo;No Bootable medium found&rdquo; che tradotto indica &ldquo;nessun dispositivo avviabile&rdquo;, cioè manca il sistema operativo e quindi la macchina virtuale non può avviarsi.</p>
+<p><img src="/static/coding/tools/VirtualBox-VM-StartError.png" alt="Image" title="VirtualBox - Start with an error"></p>
+<p>E&rsquo; necessario configurare la macchina virtuale per avviare il Sistema Operativo:</p>
+<ul>
+<li>se il sistema operativo è stato masterizzato su CD-ROM, si clicca nella sezione &ldquo;Archiviazione&rdquo; sul controller IDE / ATA e si seleziona l&rsquo;avvio dal lettore ottico della macchina ospitante (host);</li>
+<li>se il sistema operativo è stato scaricato e salvato sul disco fisso, allora è necessario cliccare nella sezione &ldquo;Archiviazione&rdquo; sul controller IDE / ATA e selezionare la voce &ldquo;Scegli un file dal disco&rdquo; e quindi indicare il percorso in cui si trova il file contenente il sistema operativo scaricato;</li>
+</ul>
+<p><img src="/static/coding/tools/VirtualBox-VM-StartFromCdOrISO.png" alt="Image" title="VirtualBox - Start from cd"></p>
+<p><img src="/static/coding/tools/VirtualBox-VM-StartFromCdOrISO2.png" alt="Image" title="VirtualBox - Start from cd"></p>
+<p>Configurato correttamente il sistema operativo, la macchina virtuale si avvia, il sistema operativo viene eseguito e quindi l&rsquo;utente può interagirvi:</p>
+<p><img src="/static/coding/tools/VirtualBox-VM-Start.png" alt="Image" title="VirtualBox - Start"></p>
+<p>Cliccando sulla macchina virtuale, viene fornita l&rsquo;indicazione che il puntatore del mouse non sarà più disponibile nella macchina ospitante perchè sarà catturato dalla macchina virtuale. Per riaverlo disponibile, è necessario premere la combinazione di tasti indicata dal messaggio:</p>
+<p><img src="/static/coding/tools/VirtualBox-VM-StartCatchPointer.png" alt="Image" title="VirtualBox - Catch pointer"></p>
+<p>Alla chiusura della macchina virtuale viene chiesto se:</p>
+<ul>
+<li>spegnere la macchina, quindi il sistema operativo termina l&rsquo;esecuzione.</li>
+<li>salvare lo stato della macchina virtuale, quindi il sistema operativo resta in esecuzione e, all&rsquo;apertura della macchina virtuale, il sistema operativo riprendera l&rsquo;esecuzione dal punto salvato.</li>
+</ul>
+<p><img src="/static/coding/tools/VirtualBox-VM-Shutdown.png" alt="Image" title="VirtualBox - Shutdown"></p>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

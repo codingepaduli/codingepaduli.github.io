@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>Macchine Virtuali</title>
+      <link>http://codingepaduli.github.io/coding/tools/macchinevirtuali/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/macchinevirtuali/</guid>
+      <description>Macchine virtuali, cosa sono, che vantaggi e svantaggi hanno.</description>
+    </item>
+    
+    <item>
+      <title>VirtualBox</title>
+      <link>http://codingepaduli.github.io/coding/tools/virtualbox/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/virtualbox/</guid>
+      <description>VirtualBox, uno strumento proprietario per la creazione di macchine virtuali.</description>
+    </item>
+    
+    <item>
       <title>EditorConfig</title>
       <link>http://codingepaduli.github.io/coding/tools/editorconfig/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>

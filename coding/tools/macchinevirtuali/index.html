@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Macchine Virtuali - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Macchine virtuali, cosa sono, che vantaggi e svantaggi hanno.">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		
+
+
+<style>
+	 
+	@media screen and (min-width : 320px), print and (min-width : 320px) {
+		img {
+			max-width: 80%;
+		}
+	}
+	 
+    @media screen and (min-width : 768px), print and (min-width : 768px) {
+		img {
+			max-width: 60%;
+		}
+    }
+	 
+    @media screen and (min-width : 992px), print and (min-width : 992px) {
+		img {
+			max-width: 40%;
+		}
+    }
+
+     
+    @media screen and (min-width : 1200px), print and (min-width : 1200px) {
+		img {
+			max-width: 25%;
+		}
+    }
+
+</style>
+
+<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Macchine Virtuali</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-15T00:00:00Z">March 15, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/coding-tools/" rel="category">coding, tools</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<p>Una macchina virtuale è una macchina che ha tutte le componenti hardware simulate da un&rsquo;altra macchina (la macchina &ldquo;host&rdquo;, dall&rsquo;inglese &ldquo;macchina ospitante&rdquo;). Hard disk, processore, RAM, scheda di rete e tutte le altre componenti sono disponibili come risorse virtuali.</p>
+<p>Il principale vantaggio nell&rsquo;avere un sistema virtualizzato consiste nell&rsquo;isolamento: tutte le azioni e le modifiche che avvengono nella macchina virtuale restano confinate nella macchina virtuale. Se la macchina virtuale dovesse prendere un virus, questo è comunque confinato alla macchina virtuale e non infetta la macchina ospitante.</p>
+<p>Un altro vantaggio nell&rsquo;avere un sistema virtualizzato consiste nell&rsquo;emulazione: la macchina virtuale può avere un&rsquo;architettura completamente differente dalla macchina ospitante. Si può emulare un personal computer, un server, uno smartphone, una X-Box, una playstation, un Game Boy, un Atari Lynx, uno smartwatch e così via..</p>
+<p>Infine, lo stato di una macchina virtuale può essere salvato e poi recuperato successivamente. Ad esempio, mentre è in corso un aggiornamento sulla macchina virtuale, questa può essere spenta (e lo stato viene salvato). Alla riaccensione, la macchina virtuale riparte dallo stato salvato e l&rsquo;aggiornamento riprende dal punto in cui è stato salvato.</p>
+<p>La virtualizzazione realizzata attraverso macchina virtuale è una virtualizzazione a livello hardware. Un punto da chiarire è come avviene la comunicazione tra la macchina virtuale e la macchina ospitante. In generale è necessario un software chiamato hypervisor (o anche Virtual Machine Monitor) che si occupa di gestire l&rsquo;accesso della macchina virtuale alle risorse hardware della macchina ospitante. L&rsquo; hypervisor si occupa anche di gestire la protezione della macchina ospitante e l&rsquo;isolamento tra le diverse macchine virtuali che sono virtualizzate dalla macchina ospitante.</p>
+<p>A partire dagli anni 2000 sono nate tecnologie hardware quali Intel® Virtualization Technology e AMD-V™ Technology for Client Virtualization che servono a rendere le CPU più efficienti nell&rsquo;eseguire il processo di virtualizzazione.</p>
+<p>Sul sito del produttore della CPU si può verificare se il supporto hardware alla virtualizzazione è presente. Prendendo ad esempio un processore Intel Core i-9, sul sito dell&rsquo;azienda e verificando le speficiche della CPU troviamo:</p>
+<p><img src="/static/coding/tools/VirtualBox-Virtualization-Tech-Intel-Specification.png" alt="Image" title="VirtualBox - Intel Technology 1"></p>
+<p>Nella sezione &ldquo;tecnologie avanzate&rdquo; troviamo la conferma che la CPU ha il supporto hardware alla virtualizzazione alla riga &ldquo;Intel® Virtualization Technology : SI&rdquo;.</p>
+<p><img src="/static/coding/tools/VirtualBox-Virtualization-Tech-Intel-Specification2.png" alt="Image" title="VirtualBox - Intel Technology 1"></p>
+<p>Facendo la stessa ricerca per un processore AMD, sul sito del produttore troviamo:</p>
+<p><img src="/static/coding/tools/VirtualBox-Virtualization-Tech-AMD-Specification.png" alt="Image" title="VirtualBox - AMD Technology"></p>
+<p>e alla riga &ldquo;Tecnologie supportate&rdquo; troviamo compresa la tecnologia di virtualizzazione &ldquo;Virtualization&rdquo;.</p>
+<p>La nota negativa nell&rsquo;uso di una macchina virtuale è che bisogna simulare l&rsquo;intero hardware e software, sistema operativo compreso. Avere più macchine virtuali in esecuzione sulla stessa macchina ospite è molto dispendioso in termini di risorse necessarie per la macchina ospite. Per questo ultimamente si considerano tecnologie meno &ldquo;pesanti&rdquo; quando possibile.</p>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
