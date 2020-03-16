@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Aqemu</title>
+      <link>http://codingepaduli.github.io/coding/tools/aquemu/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/aquemu/</guid>
+      <description>Aqemu, uno strumento open-source per la creazione di macchine virtuali.</description>
+    </item>
+    
+    <item>
       <title>Macchine Virtuali</title>
       <link>http://codingepaduli.github.io/coding/tools/macchinevirtuali/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
