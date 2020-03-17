@@ -118,9 +118,11 @@
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>Una macchina virtuale è una macchina che ha tutte le componenti hardware simulate da un&rsquo;altra macchina (la macchina &ldquo;host&rdquo;, dall&rsquo;inglese &ldquo;macchina ospitante&rdquo;). Hard disk, processore, RAM, scheda di rete e tutte le altre componenti sono disponibili come risorse virtuali.</p>
+<h3 id="vantaggi">Vantaggi</h3>
 <p>Il principale vantaggio nell&rsquo;avere un sistema virtualizzato consiste nell&rsquo;isolamento: tutte le azioni e le modifiche che avvengono nella macchina virtuale restano confinate nella macchina virtuale. Se la macchina virtuale dovesse prendere un virus, questo è comunque confinato alla macchina virtuale e non infetta la macchina ospitante.</p>
 <p>Un altro vantaggio nell&rsquo;avere un sistema virtualizzato consiste nell&rsquo;emulazione: la macchina virtuale può avere un&rsquo;architettura completamente differente dalla macchina ospitante. Si può emulare un personal computer, un server, uno smartphone, una X-Box, una playstation, un Game Boy, un Atari Lynx, uno smartwatch e così via..</p>
 <p>Infine, lo stato di una macchina virtuale può essere salvato e poi recuperato successivamente. Ad esempio, mentre è in corso un aggiornamento sulla macchina virtuale, questa può essere spenta (e lo stato viene salvato). Alla riaccensione, la macchina virtuale riparte dallo stato salvato e l&rsquo;aggiornamento riprende dal punto in cui è stato salvato.</p>
+<h3 id="interazione-con-lhardware">Interazione con l&rsquo;hardware</h3>
 <p>La virtualizzazione realizzata attraverso macchina virtuale è una virtualizzazione a livello hardware. Un punto da chiarire è come avviene la comunicazione tra la macchina virtuale e la macchina ospitante. In generale è necessario un software chiamato hypervisor (o anche Virtual Machine Monitor) che si occupa di gestire l&rsquo;accesso della macchina virtuale alle risorse hardware della macchina ospitante. L&rsquo; hypervisor si occupa anche di gestire la protezione della macchina ospitante e l&rsquo;isolamento tra le diverse macchine virtuali che sono virtualizzate dalla macchina ospitante.</p>
 <p>A partire dagli anni 2000 sono nate tecnologie hardware quali Intel® Virtualization Technology e AMD-V™ Technology for Client Virtualization che servono a rendere le CPU più efficienti nell&rsquo;eseguire il processo di virtualizzazione.</p>
 <p>Sul sito del produttore della CPU si può verificare se il supporto hardware alla virtualizzazione è presente. Prendendo ad esempio un processore Intel Core i-9, sul sito dell&rsquo;azienda e verificando le speficiche della CPU troviamo:</p>
@@ -130,7 +132,11 @@
 <p>Facendo la stessa ricerca per un processore AMD, sul sito del produttore troviamo:</p>
 <p><img src="/static/coding/tools/VirtualBox-Virtualization-Tech-AMD-Specification.png" alt="Image" title="VirtualBox - AMD Technology"></p>
 <p>e alla riga &ldquo;Tecnologie supportate&rdquo; troviamo compresa la tecnologia di virtualizzazione &ldquo;Virtualization&rdquo;.</p>
+<p>E&rsquo; importante controllare che questa tecnologia sia abilitata nelle impostazioni del BIOS:</p>
+<p><img src="/static/coding/tools/VirtualMachine-BIOS-Settings.png" alt="Image" title="VirtualMachine - BIOS settings"></p>
+<h3 id="svantaggi">Svantaggi</h3>
 <p>La nota negativa nell&rsquo;uso di una macchina virtuale è che bisogna simulare l&rsquo;intero hardware e software, sistema operativo compreso. Avere più macchine virtuali in esecuzione sulla stessa macchina ospite è molto dispendioso in termini di risorse necessarie per la macchina ospite. Per questo ultimamente si considerano tecnologie meno &ldquo;pesanti&rdquo; quando possibile.</p>
+<p>Altra nota negativa è che per ogni macchina virtuale bisogna gestire il sistema operativo: bisogna gestire l&rsquo;accesso di tutti gli utenti, i ruoli, i servizi da configurare o da eseguire all&rsquo;avvio, gli aggiornamenti del sistema operativo, ecc.. Per quanto la gestione possa essere in parte o completamente automatizzata, comunque si tratta di una duplicazione di un compito che già viene svolto sul sistema operativo della macchina ospitante.</p>
 
 		</div>
 	</article>
