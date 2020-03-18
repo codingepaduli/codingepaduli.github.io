@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/tools/aquemu/</loc>
+    <loc>http://codingepaduli.github.io/coding/tools/aqemu/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,6 +24,11 @@
   
   <url>
     <loc>http://codingepaduli.github.io/coding/tools/macchinevirtuali/</loc>
+    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/categories/tools/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -169,11 +174,6 @@
   
   <url>
     <loc>http://codingepaduli.github.io/coding/tools/editorconfig/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/categories/tools/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
   </url>
   
