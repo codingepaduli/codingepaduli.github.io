@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://codingepaduli.github.io/coding/tools/gradle/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingepaduli.github.io/coding/tools/vagrant/</loc>
     <lastmod>2020-03-19T00:00:00+00:00</lastmod>
   </url>

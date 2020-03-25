@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Gradle</title>
+      <link>http://codingepaduli.github.io/coding/tools/gradle/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/gradle/</guid>
+      <description>Gradle è un sistema open source per automatizzare le fasi di compilazione, test, pacchettizzazione, deploy e tutte le altre fasi di sviluppo</description>
+    </item>
+    
+    <item>
       <title>Vagrant</title>
       <link>http://codingepaduli.github.io/coding/tools/vagrant/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
