@@ -217,13 +217,13 @@ Source package <span style="color:#f92672">(</span>default: gradle-example<span 
 <p><code>src/test/resources</code> contiene altri file necessari durante i test;</p>
 </li>
 </ul>
-<p>Troviamo poi i file eseguibili <code>gradlew</code> per eseguire il &ldquo;wrapper&rdquo; su Linux e <code>gradlew.bat</code> per eseguire il wrapper su Windows.</p>
+<p>Sono presenti poi i file <code>gradlew</code> per eseguire il &ldquo;wrapper&rdquo; su Linux e <code>gradlew.bat</code> per eseguire il wrapper su Windows.</p>
 <p>La cartella <code>gradle/wrapper</code> contiene il wrapper mentre la cartella <code>.gradle</code> contiene la versione di Gradle che il wrapper scarica.</p>
 <p>Tutti i file prodotti, dalle classi compilate al jar prodotto, alla documentazione javadoc, all&rsquo;esito dei test, al report di progetto, sono creati nella cartella <code>build</code>.</p>
 <h2 id="concetti-principali-di-gradle">Concetti principali di Gradle</h2>
 <p>I principali concetti su cui si basa Gradle sono i <strong>progetti</strong>, i <strong>plugin</strong>, i <strong>task</strong> e le <strong>configurazioni di dipendenza</strong>.</p>
 <p>Un <strong>progetto</strong> in Gradle può rappresentare un&rsquo;applicazione web scritta in java, una libreria scritta in c++, ecc..</p>
-<p>Possiamo desiderare di automatizzare diverse fasi in un progetto, dalla compilazione dei sorgenti al deploy su server, dalla realizzazione della documentazione al report di progetto.</p>
+<p>Si può decidere di automatizzare diverse fasi in un progetto, dalla compilazione dei sorgenti al deploy su server, dalla realizzazione della documentazione al report di progetto.</p>
 <p>I <strong>task</strong> servono ad automatizzare queste fasi. Gradle mette a disposizione task per compilare, task per realizzare la documentazione, task per avviare il server ed effettuare il deploy dell&rsquo;applicazione web sullo stesso.</p>
 <p>Sono i <strong>plugin</strong> a rendere disponibili i task nel progetto: il plugin per applicazioni java rende disponibili i task per la compilazione e la realizzazione della documentazione. Il plugin per i report rende disponibili i task per la generazione dei report di progetto.</p>
 <p>I plugin mettono a disposizione anche le <strong>configurazioni di dipendenza</strong>, che permettono allo sviluppatore di gestire le dipendenze dell&rsquo;applicazione.</p>
@@ -237,13 +237,13 @@ Source package <span style="color:#f92672">(</span>default: gradle-example<span 
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Gradle fornisce di base una serie di plugin &ldquo;core&rdquo;, che sono elencati all&rsquo;indirizzo: <a href="https://docs.gradle.org/current/userguide/java_plugin.html">https://docs.gradle.org/current/userguide/java_plugin.html</a>.</p>
 <p>Per importare un plugin &ldquo;core&rdquo; di Gradle è necessario semplicemente indicarne il nome nella sezione &ldquo;plugins&rdquo; del file <code>build.gradle</code>.</p>
-<p>Tra i vari plugin core abbiamo:</p>
+<p>Tra i vari plugin core elenchiamo:</p>
 <ul>
 <li>
 <p>Il Build Init plugin, che fornisce il task di <code>init</code> per la creazione di nuovi progetti; Non necessita configurazione;</p>
 </li>
 <li>
-<p>Il Base Plugin, che fornisce i vari task quali <code>clean</code> e <code>build</code>; Va configurato:</p>
+<p>Il Base Plugin, che fornisce i vari task quali <code>clean</code> e <code>build</code>; Deve essere configurato:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
  id <span style="color:#e6db74">&#39;base&#39;</span>
 <span style="color:#f92672">}</span>
@@ -309,7 +309,7 @@ tasks <span style="color:#f92672">-</span> Displays the tasks runnable from root
 :build SKIPPED
 </code></pre></div><p>Il piano di esecuzione indica che per eseguire il task <code>jar</code> per la creazione del pacchetto java è necessario prima eseguire il task <code>compileJava</code> che compila le classi java. Il che è un ragionamento ovvio.</p>
 <h3 id="configurazioni-di-dipendenza">Configurazioni di dipendenza</h3>
-<p>In un progetto possiamo avere diversi tipi di dipendenze:</p>
+<p>In un progetto si possono avere diversi tipi di dipendenze:</p>
 <ul>
 <li>
 <p>dipendenza da una libreria necessaria per la compilazione e l&rsquo;esecuzione;</p>
