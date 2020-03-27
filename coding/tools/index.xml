@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Installare OpenJDK</title>
+      <link>http://codingepaduli.github.io/coding/tools/openjdk/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/openjdk/</guid>
+      <description>Guida passo passo all&amp;rsquo;installazione di OpenJDK, l&amp;rsquo;ambiente di sviluppo per applicazioni Java</description>
+    </item>
+    
+    <item>
       <title>Gradle</title>
       <link>http://codingepaduli.github.io/coding/tools/gradle/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
