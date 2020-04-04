@@ -6,10 +6,46 @@
     <description>Recent content in web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>02 - Primi script</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/primi_script/</link>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/primi_script/</guid>
+      <description>Primi script</description>
+    </item>
+    
+    <item>
+      <title>01 - Tipi di dato</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/tipi_di_dato/</link>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/tipi_di_dato/</guid>
+      <description>Tipi di dato</description>
+    </item>
+    
+    <item>
+      <title>01 - Introduzione al linguaggio Javascript</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/intro/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/intro/</guid>
+      <description>Introduzione al linguaggio Javascript</description>
+    </item>
+    
+    <item>
+      <title>Lezioni sul linguaggio Javascript</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/</guid>
+      <description>Lezioni sul linguaggio Javascript</description>
+    </item>
     
     <item>
       <title>Tecnologie Web</title>

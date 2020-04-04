@@ -14,43 +14,11 @@
 	<link rel="stylesheet" href="/css/style.css">
 	
 	<link rel="shortcut icon" href="/favicon.ico">
-		
+
 </head>
 <body class="body">
 	<div class="container container--outer">
-		
-
-
-<style>
-	 
-	@media screen and (min-width : 320px), print and (min-width : 320px) {
-		img {
-			max-width: 80%;
-		}
-	}
-	 
-    @media screen and (min-width : 768px), print and (min-width : 768px) {
-		img {
-			max-width: 60%;
-		}
-    }
-	 
-    @media screen and (min-width : 992px), print and (min-width : 992px) {
-		img {
-			max-width: 40%;
-		}
-    }
-
-     
-    @media screen and (min-width : 1200px), print and (min-width : 1200px) {
-		img {
-			max-width: 25%;
-		}
-    }
-
-</style>
-
-<header class="header">
+		<header class="header">
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
@@ -97,23 +65,20 @@
 
 	</div>
 </header>
-
 		<div class="wrapper flex">
 			<div class="primary">
 			
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Gradle</h1>
+			
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-03-22T00:00:00Z">March 22, 2020</time>
-	<time class="meta__text" datetime="2020-03-27T00:00:00Z"> (Last Modified: March 27, 2020)</time>
-</div>
-</div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-22T00:00:00Z">March 22, 2020</time>
+	<time class="meta__text" datetime="2020-03-27T00:00:00Z">(Last Modified: March 27, 2020)</time></div></div>
 		</header><div class="content post__content clearfix">
-			<p>Gradle è un sistema open source per automatizzare le fasi di compilazione, test, pacchettizzazione, deploy e tutte le altre fasi di sviluppo.</p>
+			<h1 id="gradle">Gradle</h1>
+<p><a href="https://gradle.org/">Gradle</a> è un sistema open source per automatizzare le fasi di compilazione, test, pacchettizzazione, deploy e tutte le altre fasi di sviluppo.</p>
 <p>Nel corso di questo articolo si descriveranno i concetti fondamentali (validi per qualsiasi tipo di progetto) e si utilizzerà Gradle per la gestione di un progetto Java.</p>
 <h2 id="gestione-progetto-con-gradle">Gestione progetto con Gradle</h2>
 <h3 id="creazione-progetto-java">Creazione progetto Java</h3>
@@ -157,24 +122,22 @@ Source package <span style="color:#f92672">(</span>default: gradle-example<span 
 <h3 id="primi-task">Primi task</h3>
 <p>Creato il progetto, è possibile eseguire, nella cartella principale di progetto, i seguenti task (utilizzando il wrapper di gradle):</p>
 <ul>
-<li>
-<p>Task di pulizia (cancella la cartella <code>build</code>):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradle clean
-</code></pre></div></li>
-<li>
-<p>Task di compilazione dei sorgenti java, di creazione del pacchetto &ldquo;jar&rdquo; e di creazione dei pacchetti da distribuire:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew build
-</code></pre></div></li>
-<li>
-<p>Task di esecuzione dell&rsquo;applicazione java:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew run
-</code></pre></div></li>
-<li>
-<p>Task per la generezione della documentazione dei sorgenti:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew javadoc
-</code></pre></div></li>
+<li>Task di pulizia (cancella la cartella <code>build</code>):</li>
 </ul>
-<p>Si possono anche eseguire più task con un singolo comando. Per pulire la cartella di &ldquo;lavoro&rdquo; <code>build</code>, eseguire la compilazione, creare i pacchetti da distribuire ed eseguire l&rsquo;applicazione, è possibile, sempre nella cartella principale di progetto, eseguire il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew clean
+</code></pre></div><ul>
+<li>Task di compilazione dei sorgenti java, di creazione del pacchetto &ldquo;jar&rdquo; e di creazione dei pacchetti da distribuire:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew build
+</code></pre></div><ul>
+<li>Task di esecuzione dell&rsquo;applicazione java:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew run
+</code></pre></div><ul>
+<li>Task per la generezione della documentazione dei sorgenti:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew javadoc
+</code></pre></div><p>Si possono anche eseguire più task con un singolo comando. Per pulire la cartella di &ldquo;lavoro&rdquo; <code>build</code>, eseguire la compilazione, creare i pacchetti da distribuire ed eseguire l&rsquo;applicazione, è possibile, sempre nella cartella principale di progetto, eseguire il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew clean build javadoc run
 </code></pre></div><p>Tutti i file prodotti vengono memorizzati nella cartella <code>build</code>.</p>
 <p>Per una descrizione più dettagliata dei task da utilizzare in un progetto Java, si rimanda ai capitoli successivi.</p>
@@ -244,19 +207,21 @@ Source package <span style="color:#f92672">(</span>default: gradle-example<span 
 </li>
 <li>
 <p>Il Base Plugin, che fornisce i vari task quali <code>clean</code> e <code>build</code>; Deve essere configurato:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
- id <span style="color:#e6db74">&#39;base&#39;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
-<li>
-<p>Il Project Report Plugin, che fornisce funzionalità basilari per la gestione dei report di progetto attraverso il task ```projectReport``;</p>
-<p>Questo plugin deve essere configurato:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
-    id <span style="color:#e6db74">&#39;project-report&#39;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+</li>
 </ul>
-<p>Ogni plugin importa uno specifico insieme di task. Se nel file <code>build.gradle</code> non fosse presente l&rsquo;indicazione del plugin (che indica la tipologia di progetto), Gradle non saprebbe su cosa deve lavorare, quindi utilizzarebbe il plugin di <code>init</code> . I task disponibili sarebbero quindi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  plugins <span style="color:#f92672">{</span>
+      id <span style="color:#e6db74">&#39;base&#39;</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>
+<p>Il Project Report Plugin, che fornisce funzionalità basilari per la gestione dei report di progetto attraverso il task <code>projectReport</code>;</p>
+<p>Questo plugin deve essere configurato:</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  plugins <span style="color:#f92672">{</span>
+      id <span style="color:#e6db74">&#39;project-report&#39;</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><p>Ogni plugin importa uno specifico insieme di task. Se nel file <code>build.gradle</code> non fosse presente l&rsquo;indicazione del plugin (che indica la tipologia di progetto), Gradle non saprebbe su cosa deve lavorare, quindi utilizzarebbe il plugin di <code>init</code> . I task disponibili sarebbero quindi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">gradlew tasks
 
 Build Setup tasks
@@ -278,7 +243,7 @@ tasks <span style="color:#f92672">-</span> Displays the tasks runnable from root
 </code></pre></div><h3 id="task">Task</h3>
 <p>I task sono le azioni che è possibile effettuare su un progetto.</p>
 <p>Per eseguire dei task, dalla cartella principale del progetto è necessario eseguire il comando <code>gradlew</code> passando i vari task come parametri:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradle task1 task2 task3
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew task1 task2 task3
 </code></pre></div><p>E&rsquo; possibile crearne di personalizzati, aggiungendoli al file <code>build.gradle</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">task<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     doLast <span style="color:#f92672">{</span>
@@ -327,27 +292,25 @@ tasks <span style="color:#f92672">-</span> Displays the tasks runnable from root
 <p>Una configurazione rappresenta proprio l&rsquo;insieme di dipendenze necessarie ad un preciso scopo ed è rappresentata da un nome univoco.</p>
 <p>Una congiruazione può dichiarare differenti tipi di dipendenze:</p>
 <ul>
-<li>
-<p>dipendenza da moduli (pubblicati sui repository, tipo Maven Central o Ivy). Si può usare nella seguente forma:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">dependencies <span style="color:#f92672">{</span>
-    nomeConfigurazione: <span style="color:#e6db74">&#39;org.hibernate:hibernate:3.0.5&#39;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
-<li>
-<p>dipendenza da file presenti su disco. Si può usare nella seguente forma:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">dependencies <span style="color:#f92672">{</span>
-    nomeConfigurazione: files<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;libs/lang.jar&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;libs/log4j.jar&#39;</span><span style="color:#f92672">)</span>
-    nomeConfigurazione: fileTree<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;tools&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> include <span style="color:#e6db74">&#39;*.exe&#39;</span> <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
-<li>
-<p>dipendenza tra progetti, da usare nella seguente forma:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">dependencies <span style="color:#f92672">{</span>
-    nomeConfigurazione <span style="color:#a6e22e">project</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:shared&#39;</span><span style="color:#f92672">)</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<li>dipendenza da moduli (pubblicati sui repository, tipo Maven Central o Ivy). Si può usare nella seguente forma:</li>
 </ul>
-<p>Un concetto chiave sul quale Gradle basa la risoluzione delle dipendenze è la prospettiva con cui il produttore ed il consumatore vedono il progetto.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  dependencies <span style="color:#f92672">{</span>
+      nomeConfigurazione: <span style="color:#e6db74">&#39;org.hibernate:hibernate:3.0.5&#39;</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>dipendenza da file presenti su disco. Si può usare nella seguente forma:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  dependencies <span style="color:#f92672">{</span>
+      nomeConfigurazione: files<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;libs/lang.jar&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;libs/log4j.jar&#39;</span><span style="color:#f92672">)</span>
+      nomeConfigurazione: fileTree<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;tools&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> include <span style="color:#e6db74">&#39;*.exe&#39;</span> <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>dipendenza tra progetti, da usare nella seguente forma:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  dependencies <span style="color:#f92672">{</span>
+      nomeConfigurazione <span style="color:#a6e22e">project</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:shared&#39;</span><span style="color:#f92672">)</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><p>Un concetto chiave sul quale Gradle basa la risoluzione delle dipendenze è la prospettiva con cui il produttore ed il consumatore vedono il progetto.</p>
 <p>La prospettiva del produttore è quella di chi si occupa di costruire il progetto e quindi fa uso di tutte le librerie necessarie per la compilazione, l&rsquo;esecuzione ed i test.</p>
 <p>La prospettiva del consumatore invece è quella di usare un progetto o una libreria come dipendenza, in modo tale da poter compilare o eseguire il suo prodotto.</p>
 <p>Gradle fa spesso questa differenza, soprattutto nella gestione di progetti di libreria, che prevedono differenti configurazioni:</p>
@@ -376,9 +339,9 @@ tasks <span style="color:#f92672">-</span> Displays the tasks runnable from root
 <span style="color:#f92672">}</span>
 </code></pre></div><p>allora il consumatore che utilizza il nostro progetto riscontrerebbe errori di compilazione ed esecuzione dato che la libreria <code>commons-lang3</code> non è visibile al consumatore e quindi gli oggetti <code>BitField</code> e  <code>ContextedException</code> sarebbero sconosciuti.</p>
 <p>Per visualizzare le dipendenze di tutte le configurazioni:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./gradlew -q dependencies
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew -q dependencies
 </code></pre></div><p>Per visualizzare le dipendenze di una singola configurazione</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./gradlew -q dependencies --configuration api
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew -q dependencies --configuration api
 </code></pre></div><h2 id="scelta-ed-uso-dei-plugin-per-lambiente-java">Scelta ed uso dei plugin per l&rsquo;ambiente java</h2>
 <h3 id="plugin-per-java">Plugin per java</h3>
 <p>Per configurare il progetto come &ldquo;progetto java&rdquo;, bisogna aggiungere uno dei plugin java messi a disposizione da Gradle . In questo modo Gradle viene configurato per l&rsquo;uso di tutti i task e di tutte le configurazioni relativi alla compilazione del codice Java, come visto nei capitoli precedenti.</p>

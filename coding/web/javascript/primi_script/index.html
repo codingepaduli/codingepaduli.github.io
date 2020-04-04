@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>02 - Primi script - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Primi script">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-03T00:00:00Z">April 03, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">javascript</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			
+<h1 id="top">Primi script</h1>
+
+<p>Per la scrittura di programmi in javascript si consiglia innanzitutto di configurare caratteristiche generali quali la codifica di caratteri o il carattere di fine riga, utilizzando strumenti quali <a href="/coding/tools/editorconfig/">EditorConfig</a>.</p>
+
+<h2>Inserimento script in pagina</h2>
+
+<p>Per inserire uno script in una pagina web esistono diverse possibilità:</p>
+<ul>
+    <li>inserire uno script <strong>inline</strong> ovvero nei tag HTML che ne permettono la possibilità;
+    <li>inserire uno script direttamente nella pagina HTML, utilizzando il tag <code>script</code>;
+    <li>inserire un collegamento ad un file javascript esterno, utilizzando il tag <code>script</code>;
+</ul>
+
+<p>Per inserire il tag <strong>inline</strong>, lo si può allegare ai tag HTML che lo prevedono; ad esempio al tag button:</p>
+
+<pre>
+    <code>
+        &lt;input type="button" onclick="alert('Script contenuto inline');"&gt;
+    </code>
+</pre>
+
+<p>Quando l'utente clicca sul pulsante, si attiva l'azione "onclick" e quindi si visualizza il messaggio.</p>
+
+<p>Per inserire uno script direttamente nella pagina web, si usa il tag <code>script</code> per includere il codice. Di seguito un esempio:</p>
+
+<pre>
+    <code>
+        &lt;script&gt;
+            alert("script contenuto nella pagina web");
+        &lt;/script&gt;
+    </code>
+</pre>
+
+<p>Per inserire un collegamento ad un file esterno, si inserisce il tag <code>script</code> con l'attributo <code>src</code> che contiene il collegamento al file javascript esterno. Di seguito un esempio:</p>
+
+<pre>
+    <code>
+        &lt;script src="file.js"&gt;&lt;/script&gt;
+    </code>
+</pre>
+
+<p>Gli script vengono eseguiti man mano che la pagina javascript viene "letta" dal browser e mostrata all'utente. Quindi conta l'ordine in cui il codice è scritto nella pagina web.</p>
+
+<h2>Uso della console</h2>
+
+<p>Lo strumento che più aiuta nella scrittura di codice javascript è la console del browser, che appare quando si preme il tasto "F12" o quando si clicca con il seconda tasto del mouse sulla pagina web e si sceglie la voce "Ispeziona".</p>
+
+<p><img src="/static/coding/web/javascript/javascript-console.png" alt="Browser's console" width="70%" height="auto"></p>
+
+<p>La console aiuta lo sviluppo poichè lo sviluppatore può scrivere sulla console tutte le informazioni di cui ha bisogno.<p>
+
+<p>Nella console è possibile scrivere informazioni, allarmi ed errori attraverso le istruzioni <code>console.info()</code>, <code>console.warn()</code> e <code>console.error()</code>:</p>
+
+<pre>
+    <code>
+        console.info("informazione");
+        console.warn("allarme");
+        console.error("errore");
+    </code>
+</pre>
+
+<p>E' possibile anche creare gruppi di messaggi, utilizzando le istruzioni <code>console.group()</code> e <code>console.groupEnd()</code>:</p>
+
+<pre>
+    <code>
+        console.group("gruppo di informazioni");
+        console.info("informazione 1");
+        console.info("informazione 2");
+        console.warn("allarme 1");
+        console.groupEnd();
+    </code>
+</pre>
+
+<p>La scrittura di una tabella nella console, attraverso l'istruzione <code>console.table()</code>, è particolarmente utile poichè permette di visualizzare array e matrici in un formato molto comprensibile:</p>
+
+<pre>
+    <code>
+        let vettore = ['uno', 'due', 'tre'];
+        console.table();
+    </code>
+</pre>
+
+<p>Utilissima pure la scrittura in console del tempo di esecuzione intercorso tra due punti dello script, indicati dalle istruzioni <code>console.time()</code> e <code>console.timeEnd()</code>:</p>
+
+<pre>
+    <code>
+        console.time("tempo impiegato:");
+
+        // istruzioni
+
+        console.timeEnd("tempo impiegato:");
+    </code>
+</pre>
+
+<p>In output ci sarà la scritta "tempo impiegato: 12.014 ms".</p>
+
+<p>Per stampare la struttura di un oggetto si usa l'utilissima istruzione <code>console.dir()</code>, come nel seguente esempio</p>
+
+<pre>
+    <code>
+        let obj = {nome: "Pippo", cognome: "Pluto"};
+        console.dir(obj);
+    </code>
+</pre>
+
+<p>Un esempio completo della console contenente l'output di tutte le istruzioni viste è il seguente:</p>
+
+<p><img src="/static/coding/web/javascript/javascript-console-primi-script.png" alt="Browser's console" width="70%" height="auto"></p>
+
+
+<script>
+    console.time("tempo impiegato:");
+
+    console.info("informazione");
+    console.warn("allarme");
+    console.error("errore");
+
+    console.group("gruppo di informazioni");
+    console.info("informazione 1");
+    console.info("informazione 2");
+    console.warn("allarme 1");
+    console.groupEnd();
+
+    let vettore = ['uno', 'due', 'tre'];
+    console.table();
+
+    let obj = {nome: "Pippo", cognome: "Pluto"};
+    console.dir(obj);
+
+    console.timeEnd("tempo impiegato:");
+</script>
+
+
+<p>L'istruzione più conosciuta di javascript è <code>alert()</code> che permette di mostrare un messaggio all'utente. Il messaggio è ovviamente una stringa, quindi la frase deve essere racchiusa da apici doppi o singoli;</p>
+
+<pre>
+    <code>
+        alert("Hello World");
+    </code>
+</pre>
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

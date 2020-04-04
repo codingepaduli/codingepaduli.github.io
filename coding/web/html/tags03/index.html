@@ -14,43 +14,11 @@
 	<link rel="stylesheet" href="/css/style.css">
 	
 	<link rel="shortcut icon" href="/favicon.ico">
-		
+
 </head>
 <body class="body">
 	<div class="container container--outer">
-		
-
-
-<style>
-	 
-	@media screen and (min-width : 320px), print and (min-width : 320px) {
-		img {
-			max-width: 80%;
-		}
-	}
-	 
-    @media screen and (min-width : 768px), print and (min-width : 768px) {
-		img {
-			max-width: 60%;
-		}
-    }
-	 
-    @media screen and (min-width : 992px), print and (min-width : 992px) {
-		img {
-			max-width: 40%;
-		}
-    }
-
-     
-    @media screen and (min-width : 1200px), print and (min-width : 1200px) {
-		img {
-			max-width: 25%;
-		}
-    }
-
-</style>
-
-<header class="header">
+		<header class="header">
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
@@ -97,30 +65,23 @@
 
 	</div>
 </header>
-
 		<div class="wrapper flex">
 			<div class="primary">
 			
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">HTML Lez. 04 - Validazione e codifica UTF-8</h1>
+			
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-07-30T00:00:00Z">July 30, 2019</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/html/" rel="category">html</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-07-30T00:00:00Z">July 30, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/html/" rel="category">html</a>
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>É importante che il documento HTML sia salvato   con codifica <a href="https://it.wikipedia.org/wiki/UTF-8">UTF-8</a>, in modo tale da poter inserire nel documento qualsiasi carattere o simbolo, dall'alfabeto cinese a quello arabo, dalle lingue morte come latino e greco ai simboli matematici, alle figure geometriche, fino agli emoticons ed emoji.</p>
+			<p>É importante che il documento HTML sia salvato con codifica <a href="https://it.wikipedia.org/wiki/UTF-8">UTF-8</a>, in modo tale da poter inserire nel documento qualsiasi carattere o simbolo, dall'alfabeto cinese a quello arabo, dalle lingue morte come latino e greco ai simboli matematici, alle figure geometriche, fino agli emoticons ed emoji.</p>
 <p>La codifica UTF-8 deriva dal sistema <a href="https://it.m.wikipedia.org/wiki/Unicode">Unicode</a>, che assegna un numero univoco ad ogni carattere di ogni lingua, ad ogni simbolo e ad ogni emoticons o emoji.</p>
 <p>Per salvare i file nella codifica UTF-8, si consiglia di leggere l'articolo sull'uso di <a href="/coding/tools/EditorConfig/">EditorConfig</a>.</p>
-<p>Una volta che le pagine web sono state salvate con la codifica giusta, è consigliato indicarla nelle informazioni della pagina, all'interno del tag <code  class="html">head</code>, come nell'esempio:</p>
+<p>Una volta che le pagine web sono state salvate con la codifica giusta, è consigliato indicarla nelle informazioni della pagina, all'interno del tag <code class="html">head</code>, come nell'esempio:</p>
 <pre>
   <code class="html">
     &lt;head&gt;
@@ -130,20 +91,23 @@
 </pre>
 <p><strong>Senza la codifica giusta, molti caratteri potrebbero non essere visualizzati nella pagina web</strong>.</p>
 <p>In alcuni casi, peró, è necessario evitare di scrivere direttamente questi caratteri nel documento, ed utilizzare, invece, delle rappresentazioni alternative, che utilizzino i codici numerici decimali o esadecimali del sistema Unicode, oppure, i codici mnemonici chiamati "html entities".</p>
-<p>Gli html entities sono dei codici mnemonici che vengono dati ad alcuni caratteri, ad esempio:
-gt = greather than (&gt;),
-lt = lower than (&lt;),
-minus = segno meno o trattino (-), 
-amp = ampersand (&amp;),
-quot = quotation mark ("),
-apos = apostrophe ('), …
-Questi codici devono essere usati tra il simbolo <code  class="html">&amp;</code> ed il simbolo <code  class="html">;</code>, come negli esempi <code  class="html">&amp;minus;</code> (con risultato &minus;) ed <code  class="html">&amp;amp;</code> (con risultato &amp;).</p>
-<p>La rappresentazione mediante codice numerico decimale permette di inserire i caratteri o i simboli usando il corrispondente codice decimale, che deve essere inserito tra il simbolo <code  class="html">&amp;#</code> ed il simbolo <code  class="html">;</code>. Si puó usare anche il codice numerico esadecimale, che va inserito tra il simbolo <code  class="html">&amp;#x</code> ed il simbolo <code  class="html">;</code>.</p>
-<p>Ad esempio, la lettera greca &Delta; è associata al codice numerico decimale 916 ed al codice numerico esadecimale 394, quindi possiamo scrivere questo carattere o con la notazione decimale <code  class="html">&amp;#916;</code> (con risultato &#916;) oppure con quella esadecimale <code  class="html">&amp;#x394;</code> (con risultato &#x394;).</p>
-<p>Altro esempio, il simbolo dell'euro &euro; è associato al codice numerico decimale 8364 ed al codice numerico esadecimale 20AC, quindi possiamo scrivere questo carattere o con la notazione decimale <code  class="html">&amp;#8364;</code> (con risultato &#8364;) oppure con quella esadecimale <code  class="html">&amp;#x20AC;</code> (con risultato &#x20AC;).</p>
-<p>Anche gli emoticons e gli <a href="https://www.unicode.org/emoji/charts/full-emoji-list.html">emoji</a> fanno parte della specifica Unicode, per cui o li si scrive nel documento "cosi come sono" o li si puó includere attraverso  
+<p>Gli html entities sono dei codici mnemonici che vengono associati ad alcuni caratteri. La specifica delle html entities si trova al link <a href="https://html.spec.whatwg.org/multipage/entities.json">https://html.spec.whatwg.org/multipage/entities.json</a>. Tra le varie html entities elencate, troviamo ad esempio:<p>
+<ul>
+  <li>gt = greather than (&gt;)</li>
+  <li>lt = lower than (&lt;)</li>
+  <li>minus = segno meno o trattino (-)</li>
+  <li>amp = ampersand (&amp;)</li>
+  <li>quot = quotation mark (")</li>
+  <li>apos = apostrophe (')</li>
+  <li>…</li>
+</ul>
+<p>Questi codici devono essere usati tra il simbolo <code class="html">&amp;</code> ed il simbolo <code class="html">;</code>, come negli esempi <code class="html">&amp;minus;</code> (con risultato &minus;) ed <code class="html">&amp;amp;</code> (con risultato &amp;).</p>
+<p>La rappresentazione mediante codice numerico decimale permette di inserire i caratteri o i simboli usando il corrispondente codice decimale, che deve essere inserito tra il simbolo <code class="html">&amp;#</code> ed il simbolo <code class="html">;</code>. Si puó usare anche il codice numerico esadecimale, che va inserito tra il simbolo <code class="html">&amp;#x</code> ed il simbolo <code class="html">;</code>.</p>
+<p>Ad esempio, la lettera greca &Delta; è associata al codice numerico decimale 916 ed al codice numerico esadecimale 394, quindi possiamo scrivere questo carattere o con la notazione decimale <code class="html">&amp;#916;</code> (con risultato &#916;) oppure con quella esadecimale <code class="html">&amp;#x394;</code> (con risultato &#x394;).</p>
+<p>Altro esempio, il simbolo dell'euro &euro; è associato al codice numerico decimale 8364 ed al codice numerico esadecimale 20AC, quindi possiamo scrivere questo carattere o con la notazione decimale <code class="html">&amp;#8364;</code> (con risultato &#8364;) oppure con quella esadecimale <code class="html">&amp;#x20AC;</code> (con risultato &#x20AC;).</p>
+<p>Anche gli emoticons e gli <a href="https://www.unicode.org/emoji/charts/full-emoji-list.html">emoji</a> fanno parte della specifica Unicode, per cui o li si scrive nel documento "cosi come sono" o li si puó includere attraverso 
 "html entities" o attraverso rappresentazione con codice decimale/esadecimale.</p>
-<p>Ad esempio, l'emoji "rolling on the floor laughing" (rotola sul pavimento ridendo) è associata al codice numerico esadecimale 1F923, quindi possiamo scrivere questo carattere con la notazione esadecimale <code  class="html">&amp;#x1F923;</code> (con risultato &#x1F923;).</p>
+<p>Ad esempio, l'emoji "rolling on the floor laughing" (rotola sul pavimento ridendo) è associata al codice numerico esadecimale 1F923, quindi possiamo scrivere questo carattere con la notazione esadecimale <code class="html">&amp;#x1F923;</code> (con risultato &#x1F923;).</p>
 <p>I tag, gli attributi e le rappresentazioni in decimale/esadecimale fin qui visti, possono portare ad una vasta serie di errori, che devono essere corretti mediante validazione.</p>
 <p>La validazione di una pagina web serve sia a risolvere eventuali errori presenti, sia ad evitare l'uso di pratiche non piú al passo con gli ultimi standard.</p>
 <p>La validazione puó essere inclusa all'interno dell'editor, oppure, ci si puó servire di servizi esterni, come il <a href="https://validator.w3.org/">W3C Validator</a>.</p>
@@ -156,8 +120,8 @@ Questi codici devono essere usati tra il simbolo <code  class="html">&amp;</code
 <img src="/static/coding/web/html/html-W3C-validator-Errors.webp" alt="immagine del validatore con errori"></p>
 <p>Tra i diversi messaggi, di avviso o di errore, abbiamo:</p>
 <p><strong>Consider adding a lang attribute to the html start tag to declare the language of this document</strong>: 
-È un messaggio di avviso per indicare che il tag <code>html</code> manca dell'attributo che indica la lingua in cui è scritta la pagina, quindi bisogna correggere con: <code  class="html">&lt;html lang="it"&gt;</code>.</p>
-<p><strong>Non-space characters found without seeing a doctype first. Expected <code  class="html">&lt;!DOCTYPE html&gt;</code></strong>:
+È un messaggio di avviso per indicare che il tag <code>html</code> manca dell'attributo che indica la lingua in cui è scritta la pagina, quindi bisogna correggere con: <code class="html">&lt;html lang="it"&gt;</code>.</p>
+<p><strong>Non-space characters found without seeing a doctype first. Expected <code class="html">&lt;!DOCTYPE html&gt;</code></strong>:
 Manca la prima riga di intestazione, che indica che il documento è un HTML. Deve essere aggiunta come prima riga.</p>
 <p><strong>Element head is missing a required instance of child element title</strong>:
 All'interno del tag <code>head</code> deve essere inserito il tag <code>title</code> come di seguito:</p>
