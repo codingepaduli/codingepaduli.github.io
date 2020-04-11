@@ -6,13 +6,49 @@
     <description>Recent content in coding on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>02 - Primi script</title>
+      <title>01 - Introduzione a PowerShell</title>
+      <link>http://codingepaduli.github.io/coding/shell/powershell/intro/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/powershell/intro/</guid>
+      <description>Introduzione a PowerShell</description>
+    </item>
+    
+    <item>
+      <title>02 - Uso di CommandLet</title>
+      <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</guid>
+      <description>Uso di CommandLet</description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>http://codingepaduli.github.io/coding/shell/linkpowershell/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/linkpowershell/</guid>
+      <description>Lezioni sulla programmazione di script in PowerShell nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/powershell&#39;&gt;PowerShell&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>04 - Operatori ed espressioni</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/operatori/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/operatori/</guid>
+      <description>Operatori ed espressioni</description>
+    </item>
+    
+    <item>
+      <title>03 - Primi script</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/primi_script/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -21,7 +57,7 @@
     </item>
     
     <item>
-      <title>01 - Tipi di dato</title>
+      <title>02 - Tipi di dato</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/tipi_di_dato/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -66,12 +102,30 @@
     </item>
     
     <item>
-      <title>Aqemu</title>
+      <title>Gradle</title>
+      <link>http://codingepaduli.github.io/coding/tools/gradle/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/gradle/</guid>
+      <description>Gradle è un sistema open source per automatizzare le fasi di compilazione, test, pacchettizzazione, deploy e tutte le altre fasi di sviluppo</description>
+    </item>
+    
+    <item>
+      <title>Vagrant</title>
+      <link>http://codingepaduli.github.io/coding/tools/vagrant/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/vagrant/</guid>
+      <description>Vagrant, uno strumento open-source per la creazione e la gestione di ambiente virtualizzato attraverso un workflow, seguendo la metodologia DevOps.</description>
+    </item>
+    
+    <item>
+      <title>AQemu</title>
       <link>http://codingepaduli.github.io/coding/tools/aqemu/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/tools/aqemu/</guid>
-      <description>Aqemu, uno strumento open-source per la creazione di macchine virtuali.</description>
+      <description>AQemu, uno strumento open-source per la creazione di macchine virtuali.</description>
     </item>
     
     <item>
@@ -93,15 +147,6 @@
     </item>
     
     <item>
-      <title>DOS</title>
-      <link>http://codingepaduli.github.io/coding/shell/linkdos/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/shell/linkdos/</guid>
-      <description>Lezioni sui comandi del prompt di windows (DOS) e sulla programmazione di script in batch nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/dos&#39;&gt;DOS&lt;/a&gt;</description>
-    </item>
-    
-    <item>
       <title>HTML</title>
       <link>http://codingepaduli.github.io/coding/web/linkhtml/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
@@ -120,12 +165,48 @@
     </item>
     
     <item>
+      <title>HTML Lez. 06 - Immagini ed aree</title>
+      <link>http://codingepaduli.github.io/coding/web/html/immagini/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/immagini/</guid>
+      <description>HTML Lez. 06 - Immagini, aree e caricamento asincrono</description>
+    </item>
+    
+    <item>
       <title>EditorConfig</title>
       <link>http://codingepaduli.github.io/coding/tools/editorconfig/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/tools/editorconfig/</guid>
       <description>EditorConfig, uno strumento per condividere le stesse impostazioni di stile e codifica tra gli sviluppatori che lavorano sullo stesso progetto con vari editors e IDEs</description>
+    </item>
+    
+    <item>
+      <title>Tools di sviluppo</title>
+      <link>http://codingepaduli.github.io/coding/tools/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/</guid>
+      <description>Tools di sviluppo</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 04 - Validazione, codifica UTF-8, HTML entities ed emoji</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags03/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags03/</guid>
+      <description>HTML Lez. 04 - Validazione del codice HTML e codifica UTF-8 delle pagine web, HTML entities ed emoji</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 03 - Etichette con attributi</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags02/</link>
+      <pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags02/</guid>
+      <description>HTML Lez. 03 - Etichette con attributi - Spiegazione dei tag che fanno uso di attributi</description>
     </item>
     
     <item>
@@ -144,6 +225,24 @@
       
       <guid>http://codingepaduli.github.io/coding/web/</guid>
       <description>Lezioni di programmazione sulle diverse Tecnologie Web</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 02 - Etichette (tag)</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tags01/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tags01/</guid>
+      <description>HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 01 - Introduzione</title>
+      <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
+      <description>HTML Lez. 01 - Introduzione al linguaggio HTML ed alla creazione, validazione e pubblicazione di pagine web</description>
     </item>
     
     <item>

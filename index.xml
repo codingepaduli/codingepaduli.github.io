@@ -12,7 +12,43 @@
     
     
     <item>
-      <title>02 - Primi script</title>
+      <title>01 - Introduzione a PowerShell</title>
+      <link>http://codingepaduli.github.io/coding/shell/powershell/intro/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/powershell/intro/</guid>
+      <description>Introduzione a PowerShell</description>
+    </item>
+    
+    <item>
+      <title>02 - Uso di CommandLet</title>
+      <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</guid>
+      <description>Uso di CommandLet</description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>http://codingepaduli.github.io/coding/shell/linkpowershell/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/linkpowershell/</guid>
+      <description>Lezioni sulla programmazione di script in PowerShell nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/powershell&#39;&gt;PowerShell&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>04 - Operatori ed espressioni</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/operatori/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/operatori/</guid>
+      <description>Operatori ed espressioni</description>
+    </item>
+    
+    <item>
+      <title>03 - Primi script</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/primi_script/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -21,7 +57,7 @@
     </item>
     
     <item>
-      <title>01 - Tipi di dato</title>
+      <title>02 - Tipi di dato</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/tipi_di_dato/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -75,12 +111,12 @@
     </item>
     
     <item>
-      <title>Aqemu</title>
+      <title>AQemu</title>
       <link>http://codingepaduli.github.io/coding/tools/aqemu/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/tools/aqemu/</guid>
-      <description>Aqemu, uno strumento open-source per la creazione di macchine virtuali.</description>
+      <description>AQemu, uno strumento open-source per la creazione di macchine virtuali.</description>
     </item>
     
     <item>
@@ -99,15 +135,6 @@
       
       <guid>http://codingepaduli.github.io/coding/tools/virtualbox/</guid>
       <description>VirtualBox, uno strumento open-source per la creazione di macchine virtuali.</description>
-    </item>
-    
-    <item>
-      <title>DOS</title>
-      <link>http://codingepaduli.github.io/coding/shell/linkdos/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/shell/linkdos/</guid>
-      <description>Lezioni sui comandi del prompt di windows (DOS) e sulla programmazione di script in batch nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/dos&#39;&gt;DOS&lt;/a&gt;</description>
     </item>
     
     <item>
@@ -143,7 +170,7 @@
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/link-web/</guid>
-      <description>Corso di programmazione web nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web&#39;&gt;Web&lt;/a&gt;</description>
+      <description>Corsi di programmazione web nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web&#39;&gt;Web&lt;/a&gt;</description>
     </item>
     
     <item>
@@ -219,7 +246,7 @@
     </item>
     
     <item>
-      <title>HTML Lez. 06 - Immagini, aree e caricamento asincrono</title>
+      <title>HTML Lez. 06 - Immagini ed aree</title>
       <link>http://codingepaduli.github.io/coding/web/html/immagini/</link>
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
@@ -237,7 +264,7 @@
     </item>
     
     <item>
-      <title>HTML Lez. 04 - Validazione e codifica UTF-8</title>
+      <title>HTML Lez. 04 - Validazione, codifica UTF-8, HTML entities ed emoji</title>
       <link>http://codingepaduli.github.io/coding/web/html/tags03/</link>
       <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
       

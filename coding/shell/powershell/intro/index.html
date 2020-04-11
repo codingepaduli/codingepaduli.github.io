@@ -4,13 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>shell - Coding e Paduli</title>
+	<title>01 - Introduzione a PowerShell - Coding e Paduli</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="">
+	<meta name="description" content="Introduzione a PowerShell">
 	
 	
 	
-	<link rel="alternate" type="application/rss+xml" href="/categories/shell/index.xml" title="Coding e Paduli">
 	
 	<link rel="stylesheet" href="/css/style.css">
 	
@@ -69,64 +68,51 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">shell</h1>
-	</header><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/coding/shell/powershell/intro/" rel="bookmark">
-			01 - Introduzione a PowerShell
-			</a>
-		</h3>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-10T00:00:00Z">April 10, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>, <a class="meta__link" href="/categories/shell/" rel="category">shell</a>, <a class="meta__link" href="/categories/powershell/" rel="category">powershell</a>
 	</span>
 </div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Introduzione a PowerShell
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/coding/shell/powershell/cmdlet/" rel="bookmark">
-			02 - Uso di CommandLet
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-10T00:00:00Z">April 10, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>, <a class="meta__link" href="/categories/shell/" rel="category">shell</a>, <a class="meta__link" href="/categories/powershell/" rel="category">powershell</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Uso di CommandLet
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/coding/shell/" rel="bookmark">
-			Shell
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-13T00:00:00Z">March 13, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/shell/" rel="category">shell</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script
-	</div>
-</article>
+		</header><div class="content post__content clearfix">
+			<h1 id="introduzione-a-powershell">Introduzione a PowerShell</h1>
+<p>PowerShell è un linguaggio di scripting orientato agli oggetti che è fortemete integrato con la shell del sistema operativo (SO) e facilita l&rsquo;interazione con il sistema operativo sottostante.</p>
+<p>Un vantaggio di PowerShell è che permette di sfruttare gli oggetti messi a disposizione dal <code>.Net Framework</code>, ovvero gli oggetti che fanno parte del linguaggio di programmazione <code>.Net</code>.</p>
+<p>Questo però rappresenta anche uno svantaggio perchè il <code>.Net Framework</code> non è completamente disponibile su sistemi Linux, soprattutto server, e ne esiste solo una versione ridotta, ovvero il <code>.Net Core</code>. Inoltre, essendo un prodotto relativamente &ldquo;nuovo&rdquo;, non è presente sui server che eseguono software relativamente &ldquo;datato&rdquo;.</p>
+<p>PowerShell ha una lista estendibile di comandi che è possibile eseguire. Ogni comando è noto come <code>CommandLet</code> o <code>CmdLet</code> ed è progettato per prendere in input oggetti e restituire in output un oggetto.</p>
+<p>Il fatto che i CmdLet lavorino con oggetti permette la gestione delle informazioni in maniera strutturata, evitando di ricorrere alla scansione del testo in input per accedere ad una specifica informazione o in output per scrivere un particolare dato.</p>
+<p>Per questioni di sicurezza, le impostazioi predefinite prevedono che non sia possibile eseguire gli script con il doppio click e che gli script debbano essere firmati.</p>
+<p>Per eseguire uno script, cliccare sullo script con il secondo tasto e scegliere la voce &ldquo;Esegui con powershell&rdquo;.</p>
+<p>Le politiche di esecuzione degli script sono:</p>
+<ul>
+<li>
+<p>Restricted: script non permessi;</p>
+</li>
+<li>
+<p>AllSigned: script eseguiti solo se firmati;</p>
+</li>
+<li>
+<p>RemoteSigned: script eseguiti se propri o se firmati;</p>
+</li>
+<li>
+<p>Unrestricted: script eseguiti sempre.</p>
+</li>
+</ul>
+<p>Per impostare la politica di esecuzione degli script anche se non firmati, è necessario eseguire il comando <code>Set-ExecutionPolicy Unrestricted</code>;</p>
+<p>Tra le guide disponibili online, quella sul sito del produttore è completamente in italiano <a href="https://docs.microsoft.com/it-it/powershell/scripting/overview?view=powershell-7" title="Guida a Powershell">Guida a Powershell</a>, oltre ad altre guide in inglese come <a href="https://www.guru99.com/powershell-tutorial.html" title="Guida a powershell">https://www.guru99.com/powershell-tutorial.html</a> ed a <a href="https://www.tutorialspoint.com/powershell/index.htm" title="Guida a powershell">https://www.tutorialspoint.com/powershell/index.htm</a>.</p>
+
+		</div>
+	</article>
 </main>
+
+
 
 
 			</div>
 			
-
 		</div>
 		<footer class="footer">
 	<div class="container footer__container flex">

@@ -6,13 +6,22 @@
     <description>Recent content in javascript on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>02 - Primi script</title>
+      <title>04 - Operatori ed espressioni</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/operatori/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/operatori/</guid>
+      <description>Operatori ed espressioni</description>
+    </item>
+    
+    <item>
+      <title>03 - Primi script</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/primi_script/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -21,7 +30,7 @@
     </item>
     
     <item>
-      <title>01 - Tipi di dato</title>
+      <title>02 - Tipi di dato</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/tipi_di_dato/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shell on Coding e Paduli</title>
-    <link>http://codingepaduli.github.io/coding/shell/</link>
-    <description>Recent content in Shell on Coding e Paduli</description>
+    <title>powershell on Coding e Paduli</title>
+    <link>http://codingepaduli.github.io/categories/powershell/</link>
+    <description>Recent content in powershell on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingepaduli.github.io/coding/shell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://codingepaduli.github.io/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -27,15 +27,6 @@
       
       <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</guid>
       <description>Uso di CommandLet</description>
-    </item>
-    
-    <item>
-      <title>PowerShell</title>
-      <link>http://codingepaduli.github.io/coding/shell/linkpowershell/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/shell/linkpowershell/</guid>
-      <description>Lezioni sulla programmazione di script in PowerShell nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/powershell&#39;&gt;PowerShell&lt;/a&gt;</description>
     </item>
     
   </channel>

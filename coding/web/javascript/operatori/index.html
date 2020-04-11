@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>04 - Operatori ed espressioni - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Operatori ed espressioni">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-08T00:00:00Z">April 08, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">javascript</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="top">Operatori ed espressioni</h1>
+<p>Le espressioni sono utilizzate per calcolare un risultato applicando gli operatori ai dati o alle variabili indicate. Ad esempio, la somma tra due numeri è calcolata dall&rsquo;espressione <code>3 + 4</code>. L&rsquo;operazione di calcolo del risultato di un&rsquo;espressione è detta <strong>valutazione</strong>, pertanto le espressioni sono <strong>valutate</strong>.</p>
+<p>Gli operatori possono essere applicati generalmente ad un singolo valore o ad una coppia di valori. I valori possono essere dati di tipo differente, come un numero ed una stringa.</p>
+<p>Ci sono operatori che hanno la precedenza rispetto ad altri, come ad esempio la moltiplicazione che ha precedenza sulla sottrazione. Per cui, nelle espressioni, si valutano prima le operazioni che hanno la precedenza. Quando tutte le precedenze sono state gestite, le operazioni in un&rsquo;espressione sono valutate da sinistra verso destra.</p>
+<p>Ad esempio, data l&rsquo;espressione</p>
+<p><code>3 + 4 * 5 + 6</code></p>
+<p>la moltiplicazione tra i numeri <code>4</code> e <code>5</code> ha la precedenza, quindi viene calcolata per prima, restituendo valore <code>20</code>.</p>
+<p>L&rsquo;espressione risultante è quindi</p>
+<p><code>3 + 20 + 6</code></p>
+<p>Dato che non ci sono altre precedenze da gestire, l&rsquo;espressione viene valutata da sinistra verso destra, quindi prima viene fatta la somma tra <code>3</code> e <code>20</code> che restituisce il valore <code>23</code> e poi questo viene sommato a <code>6</code>, restituendo il risultato <code>29</code>. Per cui, la valutazione dell&rsquo;espressione restituisce il risultato <code>29</code>.</p>
+<p>E&rsquo; possibile però modificare l&rsquo;ordine delle operazioni da svolgere utilizzando le parentesi tonde <code>(</code> e <code>)</code>.</p>
+<p>Ad esempio, data l&rsquo;espressione</p>
+<p><code>((3 + 4) - 5) * 6</code></p>
+<p>le parentesi tonde hanno la precedenza, per cui viene prima valutato il risultato della somma tra <code>3</code> e <code>4</code>, restituendo <code>7</code>. Vi è ancora una parentesi tonda che ha precedenza, quindi viene valutato il risultato della sottrazione tra <code>7</code> e <code>5</code>, restituendo due. Quindi viene svolta la moltiplicazione tra <code>2</code> e <code>6</code>, restituendo <code>12</code>. Per cui, la valutazione dell&rsquo;espressione restituisce il risultato <code>12</code>.</p>
+<p>Nonostante la gestione delle precedenze possa sembrare semplice, quando si valutano espressioni con un vasto numero di operatori differenti nella stessa espressione si può incorrere in errori di valutazione dato che le precedenze non sono scontate.</p>
+<h2 id="operazioni-ed-operatori-per-le-stringhe">Operazioni ed operatori per le stringhe</h2>
+<p>Diversi operatori possono lavorare sulle stringhe:</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo operatore</th>
+<th>Operatore</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>concatenazione tra due stringhe</td>
+<td><code>x = &quot;una &quot; + &quot;stringa.&quot;</code></td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>confronto di eguaglianza di due stringhe</td>
+<td><code>&quot;una &quot; == &quot;stringa&quot;</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>confronto di due stringhe in base all&rsquo;ordinamento naturale</td>
+<td><code>&quot;una &quot; &gt; &quot;stringa&quot;</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>confronto di due stringhe in base all&rsquo;ordinamento naturale</td>
+<td><code>&quot;una &quot; &gt;= &quot;stringa&quot;</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>confronto di due stringhe in base all&rsquo;ordinamento naturale</td>
+<td><code>&quot;una &quot; &lt; &quot;stringa&quot;</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>confronto di due stringhe in base all&rsquo;ordinamento naturale</td>
+<td><code>&quot;una &quot; &lt;= &quot;stringa&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Per tutte le altre operazioni sulle stringhe si utilizzano le proprietà ed i metodi dell&rsquo;oggetto <code>String</code>. Tutte le stringhe sono istanze di questo oggetto (come le istanze di una classe nella programmazione OOP), e quindi le proprietà ed i metodi di questo oggetto <code>String</code> sono disponibili alle istanze.</p>
+<p>L&rsquo;unica proprietà disponibile nelle stringhe è <code>length</code>, ed è di sola lettura.</p>
+<table>
+<thead>
+<tr>
+<th>Proprietà</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lenghth</code></td>
+<td>lunghezza della stringa</td>
+<td><code>&quot;Questa è una stringa&quot;.length</code></td>
+</tr>
+</tbody>
+</table>
+<p>I metodi disponibili sono numerosissimi, per un elenco completo si rimanda alla documentazione della classe <code>String</code>. Di seguito un elenco dei metodi più utilizzati:</p>
+<table>
+<thead>
+<tr>
+<th>Metodi</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>charAt(index)</code></td>
+<td>restituisce il carattere alla posizione passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.charAt(0)</code>{:.javascript}</td>
+</tr>
+<tr>
+<td><code>endsWith(stringa)</code></td>
+<td>indica se termina con la stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.endsWith(&quot;inga&quot;)</code></td>
+</tr>
+<tr>
+<td><code>indexOf(stringa)</code></td>
+<td>restituisce l&rsquo;indice in cui appare la stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.indexOf(&quot;inga&quot;)</code></td>
+</tr>
+<tr>
+<td><code>lastIndexOf(stringa)</code></td>
+<td>restituisce l&rsquo;ultimo indice in cui appare la stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.lastIndexOf(&quot;ga&quot;)</code></td>
+</tr>
+<tr>
+<td><code>replace(stringa1, stringa2)</code></td>
+<td>sostituisce tutte le occorrenze della prima stringa passata come argomento con la seconda stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.replace(&quot;a&quot;, &quot;altra stringa&quot;)</code></td>
+</tr>
+<tr>
+<td><code>startsWith(stringa)</code></td>
+<td>indica se inizia con la stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.startsWith(&quot;inga&quot;)</code></td>
+</tr>
+<tr>
+<td><code>substring(inizio, fine)</code></td>
+<td>restituisce la stringa inclusa tra le posizioni di inizio e fine</td>
+<td><code>&quot;Questa è una stringa&quot;.substring(1,4)</code></td>
+</tr>
+<tr>
+<td><code>toLowerCase()</code></td>
+<td>restituisce la stringa con tutti i caratteri in minuscolo</td>
+<td><code>&quot;Questa è una stringa&quot;.toLowerCase()</code></td>
+</tr>
+<tr>
+<td><code>toUpperCase()</code></td>
+<td>restituisce la stringa con tutti i caratteri in maiuscolo</td>
+<td><code>&quot;Questa è una stringa&quot;.toUpperCase()</code></td>
+</tr>
+<tr>
+<td><code>trim()</code></td>
+<td>rimuove tutti gli spazi iniziali e finali</td>
+<td><code>&quot;Questa è una stringa&quot;.trim()</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="operazioni-sui-numeri-ed-operatori-aritmetici">Operazioni sui numeri ed operatori aritmetici</h2>
+<p>Gli operatori aritmetici si applicano a valori numerici e servono per le classiche operazioni aritmetiche.</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo operatore</th>
+<th>Operatore aritmetico</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>somma tra due numeri</td>
+<td><code>x = 3 + 4</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>sottrazione tra due numeri o negazione di un numero</td>
+<td><code>x = 3 - 4</code> oppure <code>x = -(-3)</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>moltiplicazione tra due numeri</td>
+<td><code>x = 3 * 4</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>divisione tra due numeri</td>
+<td><code>x = 3 / 4</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>resto della divisione tra due numeri</td>
+<td><code>x = 3 % 4</code></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>esponenziale</td>
+<td><code>x = 3 ** 4</code></td>
+</tr>
+<tr>
+<td><code>++</code></td>
+<td>incremento (incrementa il numero di un&rsquo;unità)</td>
+<td><code>x = 3++</code></td>
+</tr>
+<tr>
+<td><code>--</code></td>
+<td>decremento (decrementa il numero di un&rsquo;unità)</td>
+<td><code>x = 3--</code></td>
+</tr>
+</tbody>
+</table>
+<p>Per tutte le altre operazioni sui numeri si utilizzano le proprietà ed i metodi della libreria <code>Math</code> e dell&rsquo;oggetto <code>Number</code>.</p>
+<p>Le costanti ed i metodi resi disponibili dalla libreria <code>Math</code> sono numerosissimi, per un elenco completo si rimanda alla documentazione della libreria. Di seguito un elenco delle costanti e dei metodi più utilizzati:</p>
+<table>
+<thead>
+<tr>
+<th>Costante</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Math.E</code></td>
+<td>Costante e di Eulero / Nepero</td>
+<td><code>&quot;La costante E vale&quot; + Math.E</code></td>
+</tr>
+<tr>
+<td><code>Math.PI</code></td>
+<td>Costante Π (pi greco) / Costante di Archimede</td>
+<td><code>&quot;La costante &amp;Pi; vale&quot; + Math.PI</code></td>
+</tr>
+<tr>
+<td><code>Math.SQRT2</code></td>
+<td>Valore della radice quadrata di 2</td>
+<td><code>&quot;La costante SQRT2 vale&quot; + Math.SQRT2</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Metodi</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>abs(x)</code></td>
+<td>restituisce il valore assoluto del numero x</td>
+<td><code>Math.abs(-2)</code></td>
+</tr>
+<tr>
+<td><code>cbrt(x)</code></td>
+<td>restituisce la radice cubica del numero x</td>
+<td><code>Math.cbrt(-2)</code></td>
+</tr>
+<tr>
+<td><code>ceil(x)</code></td>
+<td>restituisce l&rsquo;arrotondamento di x al numero intero più grande</td>
+<td><code>Math.ceil(-2.12)</code></td>
+</tr>
+<tr>
+<td><code>cos(x)</code></td>
+<td>restituisce il coseno dell&rsquo;angolo x (espresso in radianti)</td>
+<td><code>Math.cos(-2)</code></td>
+</tr>
+<tr>
+<td><code>exp(x)</code></td>
+<td>restituisce l&rsquo;esponenziale in base E del numero x</td>
+<td><code>Math.exp(2)</code></td>
+</tr>
+<tr>
+<td><code>floor(x)</code></td>
+<td>restituisce l&rsquo;arrotondamento di x al numero intero più piccolo</td>
+<td><code>Math.floor(-2)</code></td>
+</tr>
+<tr>
+<td><code>log(x)</code></td>
+<td>restituisce il logaritmo in base E del numero x</td>
+<td><code>Math.log(2)</code></td>
+</tr>
+<tr>
+<td><code>max(x, y, w, ...)</code></td>
+<td>restituisce il maggiore dei valori passati come argomento</td>
+<td><code>Math.max(-2, 3, 4, -8)</code></td>
+</tr>
+<tr>
+<td><code>min(x, y, w, ...)</code></td>
+<td>restituisce il minore dei valori passati come argomento</td>
+<td><code>Math.min(-2, 3, 4, -8)</code></td>
+</tr>
+<tr>
+<td><code>pow(x, y)</code></td>
+<td>restituisce il valore di x elevato ad y</td>
+<td><code>Math.pow(2, 3)</code></td>
+</tr>
+<tr>
+<td><code>random()</code></td>
+<td>restituisce un valore casuale tra zero ed uno</td>
+<td><code>Math.random()</code></td>
+</tr>
+<tr>
+<td><code>round(x)</code></td>
+<td>restituisce l&rsquo;arrotondamento di x al numero intero più vicino</td>
+<td><code>Math.round(3.12)</code></td>
+</tr>
+<tr>
+<td><code>sin(x)</code></td>
+<td>restituisce il seno dell&rsquo;angolo x (espresso in radianti)</td>
+<td><code>Math.sin(2)</code></td>
+</tr>
+<tr>
+<td><code>sqrt(x)</code></td>
+<td>restituisce la radice quadrata di x</td>
+<td><code>Math.sqrt(2)</code></td>
+</tr>
+<tr>
+<td><code>trunc(x)</code></td>
+<td>restituisce il valore di x senza la parte decimale</td>
+<td><code>Math.trunc(3.2)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Le costanti ed i metodi comunemente utilizzati dell&rsquo;oggetto <code>Number</code> sono di seguito descritti:</p>
+<table>
+<thead>
+<tr>
+<th>Costante</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Number.NaN</code></td>
+<td>Valore speciale indicante &lsquo;Not a Number&rsquo;</td>
+<td><code>&quot;Il valore NaN vale&quot; + Number.NaN</code></td>
+</tr>
+<tr>
+<td><code>Number.NEGATIVE_INFINITY</code></td>
+<td>Valore speciale indicante &lsquo;Infinito negativo&rsquo;</td>
+<td><code>&quot; -Infinito &quot; + Number.NEGATIVE_INFINITY</code></td>
+</tr>
+<tr>
+<td><code>Number.POSITIVE_INFINITY</code></td>
+<td>Valore speciale indicante &lsquo;Infinito positivo&rsquo;</td>
+<td><code>&quot; +Infinito &quot; + Number.POSITIVE_INFINITY</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Metodi</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>isNaN()</code></td>
+<td>indica se il valore è &lsquo;NaN&rsquo;</td>
+<td><code>Number.isNaN(-2)</code></td>
+</tr>
+<tr>
+<td><code>isFinite()()</code></td>
+<td>indica se il valore è un numero finito</td>
+<td><code>Number.isFinite()</code></td>
+</tr>
+<tr>
+<td><code>isInteger()</code></td>
+<td>indica se il valore è un numero intero</td>
+<td><code>Number.isInteger()</code></td>
+</tr>
+<tr>
+<td><code>parseFloat(string)</code></td>
+<td>converte la stringa in un numero decimale</td>
+<td><code>Number.parseFloat(&quot;2.15&quot;)</code></td>
+</tr>
+<tr>
+<td><code>parseInt(string)</code></td>
+<td>converte la stringa in un numero intero</td>
+<td><code>Number.parseInt(&quot;2.15&quot;)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="operatori-relazionali">Operatori relazionali</h2>
+<p>Permettodo di valutare le relazioni tra i valori indicati. I confronti possono avvenire anche tra tipi diversi, poichè Javascript prevede delle conversioni automatiche da un tipo all&rsquo;altro prima di confrontarli.</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo operatore</th>
+<th>operatore relazionale</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;</code></td>
+<td>minore</td>
+<td><code>3 &lt; 4</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>minore o uguale</td>
+<td><code>3 &lt;= 4</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>maggiore</td>
+<td><code>3 &gt; 4</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>maggiore o uguale</td>
+<td><code>3 &gt;= 4</code></td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>valore uguale</td>
+<td><code>3 == 4</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>valore diverso</td>
+<td><code>3 != 4</code></td>
+</tr>
+<tr>
+<td><code>===</code></td>
+<td>strettamente uguale (valore e tipo di dato uguali)</td>
+<td><code>3 === '3'</code></td>
+</tr>
+<tr>
+<td><code>!==</code></td>
+<td>strettamente diverso (valore o tipo di dato differenti)</td>
+<td><code>3 !== '4''</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="operatori-logici">Operatori logici</h2>
+<p>Gli operatori logici permettono di lavorare con i valori di verità delle proposizioni logiche, ovvero con i valori <strong>vero</strong> o <strong>falso</strong>. Ad esempio la proposizione <code>3 &lt; 4</code> ha il valore <strong>vero</strong>. Gli operatori logici permettono quindi di congiungere, disgiungere o negare proposizioni.</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo operatore</th>
+<th>Operatore logico</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>and (congiunzione logica)</td>
+<td><code>x = (3 &lt; 4) &amp;&amp; (4 &lt; 5)</code></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>or (disgiunzione logica)</td>
+<td><code>x = (3 &lt; 4) || (4 &lt; 5)</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>not (negazione logica)</td>
+<td><code>x = ! (3 &lt; 4) </code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="operatori-binari">Operatori binari</h2>
+<p>Gli operatori binari operano sulla rappresentazione binaria dei numeri e permettono le classiche operazioni disponibili nell&rsquo;algebra di Boole.</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo operatore</th>
+<th>Operatore binario</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;</code></td>
+<td>operazione di and booleano tra due sequenze di bit</td>
+<td><code>x = 3 &amp; 5</code></td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>operazione di or booleano tra due sequenze di bit</td>
+<td><code>x = 3 | 5</code></td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>operazione di xor booleano tra due sequenze di bit</td>
+<td><code>x = 3 ^ 5</code></td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>operazione di not booleano su una sequenza di bit</td>
+<td><code>x = 3 ~ 5</code></td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>shift sinistro di n posizioni</td>
+<td><code>x = 3 &lt;&lt; 5</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>shift destro di n posizioni</td>
+<td><code>x = 3 &gt;&gt; 5</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;&gt;</code></td>
+<td>shift destro senza segno di n posizioni</td>
+<td><code>x = 3 &gt;&gt;&gt; 5</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="assegnazione">Assegnazione</h2>
+<p>Gli operatori di assegnazione si utilizzano per assegnare il valore o il risultato di un&rsquo;espressione ad una variabile. L&rsquo;elenco degli operatori di assegnazione è il seguente:</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo operatore</th>
+<th>Operatore relazionale</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>assegna il valore ad una variabile</td>
+<td><code>x = 5</code></td>
+</tr>
+<tr>
+<td><code>+=</code></td>
+<td>somma il valore al valore della variabile e assegna il risultato alla variabile stessa</td>
+<td><code>x += 5</code></td>
+</tr>
+<tr>
+<td><code>-=</code></td>
+<td>sottrae il valore della variabile il valore indicato e assegna il risultato alla variabile stessa</td>
+<td><code>x -= 5</code></td>
+</tr>
+<tr>
+<td><code>*=</code></td>
+<td>moltiplica il valore della variabile per il valore indicato e assegna il risultato alla variabile stessa</td>
+<td><code>x *= 5</code></td>
+</tr>
+<tr>
+<td><code>/=</code></td>
+<td>divide il valore della variabile per il valore indicato e assegna il risultato alla variabile stessa</td>
+<td><code>x /= 5</code></td>
+</tr>
+<tr>
+<td><code>%=</code></td>
+<td>calcola il resto della divisione tra il valore della variabile ed il valore indicato ed assegna il risultato alla variabile stessa</td>
+<td><code>x %= 5</code></td>
+</tr>
+<tr>
+<td><code>&amp;=</code></td>
+<td>effettua l&rsquo;operazione di and booleano tra due sequenze di bit ed assegna il risultato alla variabile stessa</td>
+<td><code>x &amp;= 5</code></td>
+</tr>
+<tr>
+<td><code>|=</code></td>
+<td>effettua l&rsquo;operazione di or booleano tra due sequenze di bit ed assegna il risultato alla variabile stessa</td>
+<td><code>x |= 5</code></td>
+</tr>
+<tr>
+<td><code>^=</code></td>
+<td>effettua l&rsquo;operazione di xor booleano tra due sequenze di bit ed assegna il risultato alla variabile stessa</td>
+<td><code>x ^= 5</code></td>
+</tr>
+<tr>
+<td><code>~=</code></td>
+<td>effettua l&rsquo;operazione di not booleano su una sequenza di bit ed assegna il risultato alla variabile stessa</td>
+<td><code>x ~= 5</code></td>
+</tr>
+<tr>
+<td><code>&lt;&lt;=</code></td>
+<td>effettua l&rsquo;operazione di shift sinistro di n posizioni ed assegna il risultato alla variabile stessa</td>
+<td><code>x &lt;&lt;= 5</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;=</code></td>
+<td>effettua l&rsquo;operazione di shift destro di n posizioni ed assegna il risultato alla variabile stessa</td>
+<td><code>x &gt;&gt;= 5</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;&gt;=</code></td>
+<td>effettua l&rsquo;operazione di shift destro senza segno di n posizioni ed assegna il risultato alla variabile stessa</td>
+<td><code>x &gt;&gt;&gt;= 5</code></td>
+</tr>
+</tbody>
+</table>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

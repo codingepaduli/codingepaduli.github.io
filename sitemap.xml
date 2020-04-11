@@ -3,27 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/web/javascript/primi_script/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/coding/shell/powershell/intro/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/coding/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/shell/linkpowershell/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/categories/powershell/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/categories/shell/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/categories/tools/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/javascript/operatori/</loc>
+    <lastmod>2020-04-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/javascript/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/web/</loc>
+    <lastmod>2020-04-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/javascript/primi_script/</loc>
     <lastmod>2020-04-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -53,11 +88,6 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/categories/tools/</loc>
-    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingepaduli.github.io/coding/tools/gradle/</loc>
     <lastmod>2020-03-27T00:00:00+00:00</lastmod>
   </url>
@@ -83,11 +113,6 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/shell/linkdos/</loc>
-    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingepaduli.github.io/coding/web/linkhtml/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
@@ -99,11 +124,6 @@
   
   <url>
     <loc>http://codingepaduli.github.io/coding/shell/</loc>
-    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/categories/shell/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -155,16 +175,6 @@
   <url>
     <loc>http://codingepaduli.github.io/opensource/</loc>
     <lastmod>2020-02-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/categories/dos/</loc>
-    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/coding/shell/dos/</loc>
-    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>

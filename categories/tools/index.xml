@@ -6,10 +6,28 @@
     <description>Recent content in tools on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 27 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>01 - Introduzione a PowerShell</title>
+      <link>http://codingepaduli.github.io/coding/shell/powershell/intro/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/powershell/intro/</guid>
+      <description>Introduzione a PowerShell</description>
+    </item>
+    
+    <item>
+      <title>02 - Uso di CommandLet</title>
+      <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</guid>
+      <description>Uso di CommandLet</description>
+    </item>
     
     <item>
       <title>Installare OpenJDK</title>
@@ -21,12 +39,30 @@
     </item>
     
     <item>
-      <title>Aqemu</title>
+      <title>Gradle</title>
+      <link>http://codingepaduli.github.io/coding/tools/gradle/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/gradle/</guid>
+      <description>Gradle è un sistema open source per automatizzare le fasi di compilazione, test, pacchettizzazione, deploy e tutte le altre fasi di sviluppo</description>
+    </item>
+    
+    <item>
+      <title>Vagrant</title>
+      <link>http://codingepaduli.github.io/coding/tools/vagrant/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/vagrant/</guid>
+      <description>Vagrant, uno strumento open-source per la creazione e la gestione di ambiente virtualizzato attraverso un workflow, seguendo la metodologia DevOps.</description>
+    </item>
+    
+    <item>
+      <title>AQemu</title>
       <link>http://codingepaduli.github.io/coding/tools/aqemu/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/tools/aqemu/</guid>
-      <description>Aqemu, uno strumento open-source per la creazione di macchine virtuali.</description>
+      <description>AQemu, uno strumento open-source per la creazione di macchine virtuali.</description>
     </item>
     
     <item>
@@ -62,7 +98,7 @@
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/tools/</guid>
-      <description></description>
+      <description>Tools di sviluppo</description>
     </item>
     
   </channel>
