@@ -12,24 +12,6 @@
     
     
     <item>
-      <title>01 - Introduzione a PowerShell</title>
-      <link>http://codingepaduli.github.io/coding/shell/powershell/intro/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/shell/powershell/intro/</guid>
-      <description>Introduzione a PowerShell</description>
-    </item>
-    
-    <item>
-      <title>02 - Uso di CommandLet</title>
-      <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</guid>
-      <description>Uso di CommandLet</description>
-    </item>
-    
-    <item>
       <title>PowerShell</title>
       <link>http://codingepaduli.github.io/coding/shell/linkpowershell/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
