@@ -74,7 +74,7 @@
 			
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-10T00:00:00Z">April 10, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>, <a class="meta__link" href="/categories/shell/" rel="category">shell</a>, <a class="meta__link" href="/categories/powershell/" rel="category">powershell</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-11T00:00:00Z">April 11, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>, <a class="meta__link" href="/categories/shell/" rel="category">shell</a>, <a class="meta__link" href="/categories/powershell/" rel="category">powershell</a>
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
@@ -118,14 +118,16 @@
 </code></pre></div><p>L&rsquo;output generato da entrambi i precedenti CmdLet è di seguito riportato:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Hello World!!
 </code></pre></div><h2 id="alias">Alias</h2>
-<p>Powershell associa ai diversi CmdLet conosciuti una serie di alias gia familiari a chi proviene da altre shell, facilitando il passaggio a Powershell.</p>
-<p>E&rsquo; possibile personalizzare la lista di alias per i CmdLet, aggiungendone di nuovi con il comando:</p>
+<p>Powershell associa ai diversi CmdLet disponibili una serie di alias gia familiari a chi proviene da altre shell, facilitando il passaggio a Powershell.</p>
+<p>Per ottenere la lista completa di alias, si usa la CmdLet:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Alias
+</code></pre></div><p>E&rsquo; possibile personalizzare la lista di alias per i CmdLet, aggiungendone di nuovi con il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Alias -Name <span style="color:#e6db74">&#34;wo&#34;</span> -Value <span style="color:#e6db74">&#34;Write-Output&#34;</span>
 </code></pre></div><p>A questo punto è possibile utilizzare l&rsquo;alias <code>wo</code> al posto di <code>Write-Output</code>, come nell&rsquo;esempio seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">wo <span style="color:#e6db74">&#34;Hello&#34;</span>
 </code></pre></div><p>E&rsquo; possibile cancellare un alias con il CmdLet:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Alias -Name <span style="color:#e6db74">&#34;wo&#34;</span>
-</code></pre></div><p>Per visualizzare il comando corrispondente ad un alias si utilizza il CmdLet seguente:</p>
+</code></pre></div><p>Per visualizzare il CommandLet corrispondente ad un alias, si utilizza il CmdLet seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Alias <span style="color:#e6db74">&#34;Write-Output&#34;</span>
 </code></pre></div><h2 id="guida-in-linea">Guida in linea</h2>
 <p>La guida in linea è il punto di partenza per imparare ad usare uno specifico CommandLet, per visualizzare i parametri obbligatori e facoltativi e per visualizzare la lista di alias conosciuti.</p>

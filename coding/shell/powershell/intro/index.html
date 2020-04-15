@@ -84,7 +84,8 @@
 <p>Questo però rappresenta anche uno svantaggio perchè il <code>.Net Framework</code> non è completamente disponibile su sistemi Linux, soprattutto server, e ne esiste solo una versione ridotta, ovvero il <code>.Net Core</code>. Inoltre, essendo un prodotto relativamente &ldquo;nuovo&rdquo;, non è presente sui server che eseguono software relativamente &ldquo;datato&rdquo;.</p>
 <p>PowerShell ha una lista estendibile di comandi che è possibile eseguire. Ogni comando è noto come <code>CommandLet</code> o <code>CmdLet</code> ed è progettato per prendere in input oggetti e restituire in output un oggetto.</p>
 <p>Il fatto che i CmdLet lavorino con oggetti permette la gestione delle informazioni in maniera strutturata, evitando di ricorrere alla scansione del testo in input per accedere ad una specifica informazione o in output per scrivere un particolare dato.</p>
-<p>Per questioni di sicurezza, le impostazioi predefinite prevedono che non sia possibile eseguire gli script con il doppio click e che gli script debbano essere firmati.</p>
+<p>Powershell usa i provider per gestire i dati memorizzati. I provider sono moduli che fanno parte del <code>.Net Framework</code> (lo stesso di PowerShell) e che forniscono un accesso specializzato ad una collezione di dati. Vi è un provider che gestisce file e cartelle, uno che gestire gli alias, uno che gestire le variabili d&rsquo;ambiente, ecc&hellip; E&rsquo; possibile scrivere nuovi provider per gestire altre collezioni di dati.</p>
+<p>Per questioni di sicurezza, le impostazioni predefinite prevedono che non sia possibile eseguire gli script con il doppio click e che gli script debbano essere firmati.</p>
 <p>Per eseguire uno script, cliccare sullo script con il secondo tasto e scegliere la voce &ldquo;Esegui con powershell&rdquo;.</p>
 <p>Le politiche di esecuzione degli script sono:</p>
 <ul>
