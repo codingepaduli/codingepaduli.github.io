@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>03 - Primi comandi e primi script - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Primi comandi e primi script">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-12T00:00:00Z">April 12, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>, <a class="meta__link" href="/categories/shell/" rel="category">shell</a>, <a class="meta__link" href="/categories/powershell/" rel="category">powershell</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="primi-comandi-e-primi-script">Primi comandi e primi script</h1>
+<h2 id="commandlet-per-gestione-del-terminale">CommandLet per gestione del terminale</h2>
+<p>I CommandLet sono i comandi che è possibile eseguire nell&rsquo;ambiente PowerShell.</p>
+<p>Per la gestione del terminale, PowerShell fornisce i seguenti CmdLet:</p>
+<ul>
+<li><code>Clear-Host</code>: pulisce l&rsquo;area del terminale;</li>
+<li><code>Write-Output</code>: Scrive sul flusso di output;</li>
+<li><code>Write-Error</code>: Scrive sul flusso di errore;</li>
+<li><code>Write-Debug</code>: Scrive sul flusso di debug;</li>
+<li><code>Write-Warning</code>: Scrive sul flusso di warning;</li>
+<li><code>Write-Verbose</code>: Scrive sul flusso di verbose;</li>
+<li><code>Write-Host</code>: Scrive sul flusso di output personalizzando l&rsquo;output;</li>
+<li><code>Read-Host</code>: Legge in input dal terminale e memorizza il valore in una variabile.</li>
+</ul>
+<h3 id="pulire-larea-del-terminale">Pulire l&rsquo;area del terminale</h3>
+<p>Il CommandLet utilizzato per pulire l&rsquo;area del terminale è <code>Clear-Host</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">SYNTAX
+    Clear-Host [&lt;CommonParameters&gt;]
+
+ALIASES
+    echo
+</code></pre></div><p>Non sono previsti parametri, se non quelli comuni, e non è previsto nessun output.</p>
+<h3 id="scrivere-sul-flusso-di-output">Scrivere sul flusso di output</h3>
+<p>Il CommandLet utilizzato per scrivere sul flusso di output è <code>Write-Output</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">SYNTAX
+    Write-Output [-InputObject] &lt;PSObject[]&gt;[&lt;CommonParameters&gt;]
+    
+ALIASES
+    echo
+</code></pre></div><p>Il parametro indicato nella sintassi ha il seguente significato:</p>
+<ul>
+<li><code>PSObject[]</code>: i messaggi o gli oggetti da scrivere in output.</li>
+</ul>
+<p>Per scrivere uno o più messaggi sul terminale, si usa quindi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output <span style="color:#e6db74">&#34;Hello&#34;</span> <span style="color:#e6db74">&#34;World&#34;</span> <span style="color:#e6db74">&#34;!!&#34;</span>
+</code></pre></div><p>L&rsquo;output è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Hello
+World
+!!
+</code></pre></div><p>Si può anche utilizzare l&rsquo;alias come da esempio seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">echo <span style="color:#e6db74">&#34;Hello&#34;</span> <span style="color:#e6db74">&#34;World&#34;</span> <span style="color:#e6db74">&#34;!!&#34;</span>
+</code></pre></div><p>L&rsquo;output è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Hello
+World
+!!
+</code></pre></div><h3 id="scrivere-sul-flusso-di-errore">Scrivere sul flusso di errore</h3>
+<p>Il CommandLet utilizzato per scrivere sul flusso di errore è <code>Write-Error</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Error [-Message] &lt;String&gt; [-ErrorId &lt;String&gt;]
+</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<ul>
+<li><code>Message</code>: il messaggio da scrivere sul flusso di errore;</li>
+<li><code>ErrorId</code>: il codice di errore che si vuole assegnare all&rsquo;errore.</li>
+</ul>
+<p>Per scrivere un messaggio di errore sul terminale, si usa quindi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Error <span style="color:#e6db74">&#34;Hello&#34;</span> -ErrorId <span style="color:#e6db74">&#34;123&#34;</span>
+</code></pre></div><p>L&rsquo;output è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Error<span style="color:#960050;background-color:#1e0010">:</span> Hello
+</code></pre></div><h3 id="scrivere-sul-flusso-di-debug">Scrivere sul flusso di debug</h3>
+<p>Il CommandLet utilizzato per scrivere sul flusso di debug è <code>Write-Debug</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Debug [-Message] &lt;String&gt;
+</code></pre></div><p>Il parametro indicato nella sintassi ha il seguente significato:</p>
+<ul>
+<li><code>Message</code>: il messaggio da scrivere sul flusso di debug.</li>
+</ul>
+<p>Per scrivere un messaggio di debug sul terminale, si usa quindi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Debug <span style="color:#e6db74">&#34;Hello&#34;</span>
+</code></pre></div><p>Il comando non presenta nessun output, perchè le impostazioni predefinite non visualizzano sul terminale lo stream di output. Nel caso fosse attivato, l&rsquo;output sarebbe il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">DEBUG<span style="color:#960050;background-color:#1e0010">:</span> Hello
+</code></pre></div><h3 id="scrivere-sul-flusso-di-warning">Scrivere sul flusso di warning</h3>
+<p>Il CommandLet utilizzato per scrivere sul flusso di warning è <code>Write-Warning</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Warning [-Message] &lt;String&gt;
+</code></pre></div><p>Il parametro indicato nella sintassi ha il seguente significato:</p>
+<ul>
+<li><code>Message</code>: il messaggio da scrivere sul flusso di warning.</li>
+</ul>
+<p>Per scrivere un messaggio di warning sul terminale, si usa quindi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Warning <span style="color:#e6db74">&#34;Hello&#34;</span>
+</code></pre></div><p>L&rsquo;output è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Warning<span style="color:#960050;background-color:#1e0010">:</span> Hello
+</code></pre></div><h3 id="scrivere-sul-flusso-di-verbose">Scrivere sul flusso di verbose</h3>
+<p>Il CommandLet utilizzato per scrivere sul flusso di verbose è <code>Write-Verbose</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Verbose [-Message] &lt;String&gt;
+</code></pre></div><p>Il parametro indicato nella sintassi ha il seguente significato:</p>
+<ul>
+<li><code>Message</code>: il messaggio da scrivere sul flusso di verbose.</li>
+</ul>
+<p>Per scrivere un messaggio di verbose sul terminale, si usa quindi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Verbose <span style="color:#e6db74">&#34;Hello&#34;</span>
+</code></pre></div><p>Il comando non presenta nessun output, perchè le impostazioni predefinite non visualizzano sul terminale lo stream di output. Questo stream si attiva passando il parametro <code>-Verbose</code>, comune a tutti i CommandLet.</p>
+<p>Per visualizzare il messaggio di verbose sul terminale, si usa quindi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Verbose <span style="color:#e6db74">&#34;Hello&#34;</span> -Verbose
+</code></pre></div><p>L&rsquo;output è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Verbose<span style="color:#960050;background-color:#1e0010">:</span> Hello
+</code></pre></div><h3 id="scrivere-sul-flusso-di-output-personalizzando-loutput">Scrivere sul flusso di output personalizzando l&rsquo;output</h3>
+<p>Il CommandLet utilizzato per scrivere sul flusso di output è <code>Write-Host</code> che permette di personalizzare l&rsquo;output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Host [[-Object] &lt;Object[]&gt;] [-NoNewline] [-Separator &lt;Object&gt;]
+    [-ForegroundColor &lt;ConsoleColor&gt;]  [-BackgroundColor &lt;ConsoleColor&gt;]
+</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<ul>
+<li><code>Object[]</code>: lista di oggetti da scrivere sul flusso di output;</li>
+<li><code>NoNewline</code>: indica di non aggiungere caratteri di &lsquo;a capo&rsquo;;</li>
+<li><code>Separator</code>: indica il separatore da utilizzare;</li>
+<li><code>ForegroundColor</code>: il colore del testo;</li>
+<li><code>BackgroundColor</code>: il colore dello sfondo.</li>
+</ul>
+<p>La lista di colori disponibili è la seguente: <code>Black</code>, <code>DarkBlue</code>, <code>DarkGreen</code>, <code>DarkCyan</code>, <code>DarkRed</code>, <code>DarkMagenta</code>, <code>DarkYellow</code>, <code>Gray</code>, <code>DarkGray</code>, <code>Blue</code>, <code>Green</code>, <code>Cyan</code>, <code>Red</code>, <code>Magenta</code>, <code>Yellow</code>, <code>White</code>.</p>
+<p>Per scrivere un messaggio di output sul terminale con sfondo nero e colore testo rosso, si usa quindi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Host <span style="color:#e6db74">&#34;Red&#34;</span> <span style="color:#e6db74">&#34;on white&#34;</span> <span style="color:#e6db74">&#34;text.&#34;</span> -NoNewline -Separator <span style="color:#e6db74">&#34; -- &#34;</span> 
+  -ForegroundColor red -BackgroundColor white 
+</code></pre></div><p>L&rsquo;output è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Red -- on white -- text.
+</code></pre></div><p>Si nota che i vari oggetti sono separati dal separatore <code>--</code> e non è presente nessun carattere &lsquo;a capo&rsquo;; Il testo è in rosso e lo sfondo è in bianco.</p>
+<h3 id="leggere-dal-terminale">Leggere dal terminale</h3>
+<p>Il CommandLet utilizzato per leggere dal terminale è <code>Read-Host</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Read-Host [[-Prompt] &lt;Object&gt;] [-AsSecureString]
+</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<ul>
+<li><code>Prompt</code>: il messaggio da visualizzare;</li>
+<li><code>AsSecureString</code>: non visualizza i caratteri scritti dall&rsquo;utente.</li>
+</ul>
+<p>Per leggere un valore dal terminale si usa quindi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$nome = Read-Host <span style="color:#e6db74">&#34;Inserisci il nome&#34;</span>
+</code></pre></div><p>Nel caso in cui si deve inserire una password o comunque un input che non si vuole visualizzare a video, si usa l&rsquo;opzione <code>AsSecureString</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$nome = Read-Host <span style="color:#e6db74">&#34;Inserisci il nome&#34;</span> -AsSecureString
+</code></pre></div><h2 id="commenti">Commenti</h2>
+<p>E&rsquo; possibile aggiungere commenti attraverso il carattere <code>#</code>. In caso di commenti su più righe, questi vanno racchiusi tra i simboli di apertura e chiusura commento rappresentati da <code>&lt;#</code> e <code>#&gt;</code>.</p>
+<p>Ad esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> <span style="color:#75715e"># Questo è un commento</span>
+ 
+ <span style="color:#75715e">&lt;# Questo è un 
+</span><span style="color:#75715e">    commento su 
+</span><span style="color:#75715e">    più righe #&gt;</span>
+</code></pre></div><h2 id="primi-script">Primi script</h2>
+<p>Uno script è un elenco di istruzioni inserite in un file. Eseguire uno script consiste nell&rsquo;esecuzione di tutte le istruzioni inserite nel file. L&rsquo;estensione del file per gli script PowerShell è <code>ps1</code>.</p>
+<p>Prima di creare uno script è consigliato impostare le opzioni di salvataggio (quali codifica dei caratteri UTF-8 ed il carattere di terminazione riga) attraverso gli strumenti appositi quali <a href="/coding/tools/editorconfig/">EditorConfig</a>.</p>
+<p>E&rsquo; possibile creare il primo script salvando le seguenti istruzioni in un file <code>esempio.ps1</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> <span style="color:#75715e"># Questo è il primo script</span>
+ 
+ <span style="color:#75715e"># Scrivo un messaggio</span>
+ Write-Host <span style="color:#e6db74">&#34;Inserisci il nome&#34;</span>
+ 
+  <span style="color:#75715e">&lt;# procedo con la lettura
+</span><span style="color:#75715e">    del nome dell&#39;utente #&gt;</span>
+  
+  $nome = Read-Host
+  
+  <span style="color:#75715e"># Scrivo il nome sullo stream di errore</span>
+  Write-Error $nome
+</code></pre></div><p>Per questioni di sicurezza, le impostazioni predefinite prevedono che l&rsquo;esecuzione di script sia disabilitata. Per verificare le impostazioni, aprire il terminale di PowerShell ed eseguire:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Get-ExecutionPolicy
+</code></pre></div><p>L&rsquo;output del comando rappresenta la politica di esecuzione degli script impostata.</p>
+<p>Le politiche di esecuzione sono:</p>
+<ul>
+<li>
+<p><code>Restricted</code>: script non permessi;</p>
+</li>
+<li>
+<p><code>AllSigned</code>: script eseguiti solo se firmati;</p>
+</li>
+<li>
+<p><code>RemoteSigned</code>: script eseguiti se propri o se firmati;</p>
+</li>
+<li>
+<p><code>Unrestricted</code>: script eseguiti sempre.</p>
+</li>
+</ul>
+<p>Per impostare una politica, ad esempio la politica di esecuzione senza restrizioni, eseguire:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-ExecutionPolicy Unrestricted
+</code></pre></div><p>Sempre per impostazioni di sicurezza predefinite, gli script non possono essere eseguiti con il doppio click del mouse.</p>
+<p>Per eseguire lo script da terminale, è necessario indicare il nome, nel caso dell&rsquo;esempio precedente è <code>esempio.ps1</code>.</p>
+<p>Per eseguire lo script da interfaccia grafica, cliccare con il tasto destro del mouse sullo script e scegliere da menu la voce &ldquo;Esegui con powershell&rdquo;.</p>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

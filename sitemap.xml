@@ -3,32 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/shell/powershell/cmdlet/</loc>
-    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-path/</loc>
+    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/coding/</loc>
-    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/powershell/</loc>
-    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/shell/</loc>
-    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/tools/</loc>
+    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/shell/powershell/primiscript/</loc>
+    <lastmod>2020-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/shell/powershell/concetti/</loc>
     <lastmod>2020-04-11T00:00:00+00:00</lastmod>
   </url>
   

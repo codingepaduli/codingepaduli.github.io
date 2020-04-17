@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>coding</title>
       <link>http://codingepaduli.github.io/categories/coding/</link>
-      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/coding/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>powershell</title>
       <link>http://codingepaduli.github.io/categories/powershell/</link>
-      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/powershell/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>shell</title>
       <link>http://codingepaduli.github.io/categories/shell/</link>
-      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/shell/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>tools</title>
       <link>http://codingepaduli.github.io/categories/tools/</link>
-      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/tools/</guid>
       <description></description>

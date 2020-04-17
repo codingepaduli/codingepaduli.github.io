@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>03 - Filesystem - Gestione percorsi - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Filesystem - Gestione percorsi">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-13T00:00:00Z">April 13, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>, <a class="meta__link" href="/categories/shell/" rel="category">shell</a>, <a class="meta__link" href="/categories/powershell/" rel="category">powershell</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="gestione-percorsi">Gestione percorsi</h1>
+<h2 id="percorso-corrente">Percorso corrente</h2>
+<p>Il provider <code>FileSystem</code> fornisce l&rsquo;accesso al filesystem, ovvero gestisce file e cartelle;</p>
+<p>Essendo un provider di tipo <strong>gerarchico</strong>, l&rsquo;accesso alle risorse è gestito attraverso un percorso.</p>
+<p>Il percorso in cui si posiziona l&rsquo;utente è detto <strong>percorso corrente</strong>. Quando l&rsquo;utente avvia PowerShell, il percorso corrente viene mostrato.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PowerShell 7.0.0
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+https<span style="color:#960050;background-color:#1e0010">:</span>//aka.ms/powershell
+Type &amp;<span style="color:#75715e">#39;help&amp;#39; to get help.</span>
+
+PS /home/user &gt; 
+</code></pre></div><p>Come si nota nell&rsquo;esempio, l&rsquo;ultima riga indica il percorso corrente <code>/home/user</code>, anche detto <strong>cartella di lavoro</strong> o cartella corrente. Quindi l&rsquo;utente &ldquo;si trova&rdquo; o &ldquo;sta lavorando&rdquo; nella cartella <code>/home/user</code>.</p>
+<p>L&rsquo;utente può spostarsi tra i percorsi. Ad ogni spostamento in un nuovo percorso, il <strong>percorso corrente</strong> viene aggiornato al nuovo percorso.</p>
+<p>Ad esempio, nel caso l&rsquo;utente si spostasse al percorso <code>/home/user/Documenti</code>, questo diventerebbe il suo percorso corrente.</p>
+<h2 id="percorsi-di-file-e-cartelle">Percorsi di file e cartelle</h2>
+<p>Ogni file o cartella è identificato attraverso un percorso.</p>
+<p>Su sistema operativo Windows, il percorso è composto dalla lettera dell&rsquo;unità che identifica il disco logico (la partizione), dalle cartelle da attraversare per raggiungere il file o la cartella, ed opzionalmente dal nome del file. Il carattere <code>\</code> è utilizzato per separare i nomi delle cartelle da attraversare.</p>
+<p>Si prenda ad esempio il seguente percorso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">c:\Windows\Temp\temp.txt
+</code></pre></div><p>Il percorso indica che il file si trova nella partizione <code>c:</code>, le cartelle da attraversare per raggiungerlo sono <code>Windows</code> e <code>Temp</code> ed il nome del file è <code>temp.txt</code>.</p>
+<p>Nei sistemi operativi Gnu/Linux, Mac e Unix, i dischi non hanno una lettera di unità, ma devono essere montati nel sistema principale di gestione del filesystem. Sui questi sistemi è utilizzato il carattere <code>/</code> per separare i nomi delle cartelle da attraversare ed il percorso inizia sempre dalla cartella principale &ldquo;<strong>/</strong>&rdquo; (detta &ldquo;root&rdquo;, da non confondere con l&rsquo;utente amministratore, anch&rsquo;egli chiamato &ldquo;root&rdquo;), è seguito dalle cartelle da attraversare ed opzionalmente dal nome del file desiderato.</p>
+<p>Si prenda ad esempio il seguente percorso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">/home/temp/temp.txt
+</code></pre></div><p>Il percorso indica che il file si trova nella partizione di root <code>/</code>, le cartelle da attraversare sono <code>home</code> e <code>temp</code> ed il nome del file è <code>temp.txt</code>.</p>
+<p>Si consideri un ulteriore esempio di percorso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">c:\utenti\
+</code></pre></div><p>Il percorso indica, all&rsquo;interno dell&rsquo;unita <code>c:</code> la cartella <code>utenti </code>. In questo caso non è stato indicato un file, ma una cartella.</p>
+<h2 id="percorsi-relativi-ed-assoluti">Percorsi relativi ed assoluti</h2>
+<p>PowerShell utilizza il simbolo <code>.</code> per indicare la cartella corrente e <code>..</code> per indicare la cartella precedente.</p>
+<p>E&rsquo; importante sottolineare che questi simboli sono relativi al percorso, non alla cartella di lavoro.</p>
+<p>Il sistema operativo si occupa della risoluzione dei percorsi contenenti i simboli <code>.</code> e <code>..</code> trasformandoli in percorsi assoluti.</p>
+<h3 id="primo-esempio-risoluzione-percorso">Primo esempio risoluzione percorso</h3>
+<p>Prendendo ad esempio il percorso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">c:\utenti\prof\Documenti\.\elenco.txt
+</code></pre></div><p>La risoluzione del percorso inizia accedendo all&rsquo;unità <code>c:</code>, accedendo poi alle directory <code>utenti</code>, <code>prof</code>, <code>Documenti</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è <code>c:\utenti\prof\Documenti</code>.</p>
+<p>Il simbolo <code>.</code>, dato che si riferisce alla cartella corrente, viene risolto come un riferimento alla cartella <code>Documenti</code>.</p>
+<p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>Documenti</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>c:\utenti\prof\Documenti\elenco.txt</code>.</p>
+<h3 id="secondo-esempio-risoluzione-percorso">Secondo esempio risoluzione percorso</h3>
+<p>Prendendo ad esempio il percorso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">c:\utenti\.\prof\.\Documenti\.\elenco.txt
+</code></pre></div><p>La risoluzione del percorso inizia accedendo all&rsquo;unità <code>c:</code>, poi accedendo alla cartella <code>utenti</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è <code>c:\utenti</code>.</p>
+<p>La prima occorrenza del simbolo <code>.</code> viene risolta come un riferimento alla cartella <code>utenti</code>.</p>
+<p>Dalla cartella <code>utenti</code> continua la risoluzione del percorso e si fa accesso alla cartella <code>prof</code>, che diventa la cartella <strong>corrente</strong> (<code>c:\utenti\prof</code>).</p>
+<p>La seconda occorrenza del simbolo <code>.</code> viene risolta come un riferimento alla cartella <code>prof</code>.</p>
+<p>Dalla cartella <code>prof</code> il sistema fa quindi accesso alla cartella <code>Documenti</code>, che diventa la cartella corrente (<code>c:\utenti\prof\Documenti</code>).</p>
+<p>La terza occorrenza del simbolo <code>.</code> viene risolta come un riferimento alla cartella <code>Documenti</code>.</p>
+<p>Dalla cartella <code>Documenti</code> il sistema fa quindi accesso al file <code>elenco.txt</code>.</p>
+<p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>Documenti</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>c:\utenti\prof\Documenti\elenco.txt</code>.</p>
+<h3 id="terzo-esempio-risoluzione-percorso">Terzo esempio risoluzione percorso</h3>
+<p>Prendendo ad esempio il percorso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">/home/prof/./Documenti/./elenco.txt
+</code></pre></div><p>La risoluzione del percorso inizia accedendo alla cartella <strong>root</strong> <code>/</code>, poi accedendo alla cartella <code>home</code> e quindi alla cartella <code>prof</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è quindi <code>/home/prof</code>.</p>
+<p>La prima occorrenza del simbolo <code>.</code> viene risolta come un riferimento alla cartella <code>prof</code>.</p>
+<p>Dalla cartella <code>prof</code> si fa accesso alla cartella <code>Documenti</code>, che diventa la cartella <strong>corrente</strong> (<code>/home/prof/Documenti</code>).</p>
+<p>La seconda occorrenza del simbolo <code>.</code> viene risolta come un riferimento alla cartella <code>Documenti</code>.</p>
+<p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>Documenti</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>/home/prof/Documenti/elenco.txt</code>.</p>
+<h3 id="quarto-esempio-risoluzione-percorso">Quarto esempio risoluzione percorso</h3>
+<p>Prendendo ad esempio il percorso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">.\elenco.txt
+</code></pre></div><p>La risoluzione del percorso inizia valutando il simbolo <code>.</code> che fa riferimento al percorso corrente. Dato che non è specificato nessun percorso corrente, il simbolo viene risolto facendo riferimento alla cartella di lavoro <strong>corrente dell&rsquo;utente</strong>.</p>
+<p>Supponendo che all&rsquo;avvio della shell ci si trovi al percorso <code>c:\utenti\prof</code>, allora il simbolo <code>.</code> viene risolto come un riferimento alla cartella <code>prof</code>.</p>
+<p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>prof</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>c:\utenti\prof\elenco.txt</code>.</p>
+<h3 id="quinto-esempio-risoluzione-percorso">Quinto esempio risoluzione percorso</h3>
+<p>Prendendo ad esempio il percorso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">c:\utenti\prof\Documenti\..\elenco.txt
+</code></pre></div><p>La risoluzione del percorso inizia accedendo all&rsquo;unità <code>c:</code>, accedendo poi alle directory <code>utenti</code>, <code>prof</code>, <code>Documenti</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è <code>c:\utenti\prof\Documenti</code>.</p>
+<p>Il simbolo <code>..</code> si riferisce alla cartella <strong>precedente</strong> nel percorso e quindi viene risolto come un riferimento alla cartella <code>prof</code>.</p>
+<p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>prof</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>c:\utenti\prof\elenco.txt</code>.</p>
+<h3 id="sesto-esempio-risoluzione-percorso">Sesto esempio risoluzione percorso</h3>
+<p>Prendendo ad esempio il percorso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">c:\utenti\.\prof\..\mario\..\elenco.txt
+</code></pre></div><p>La risoluzione del percorso inizia accedendo all&rsquo;unità <code>c:</code>, poi accedendo alla cartella <code>utenti</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è quindi <code>c:\utenti</code>.</p>
+<p>La prima occorrenza del simbolo <code>.</code> viene risolto come un riferimento alla cartella <code>utenti</code>.</p>
+<p>Dalla cartella <code>utenti</code> si fa accesso alla cartella <code>prof</code>, che diventa la cartella <strong>corrente</strong> (<code>c:\utenti\prof</code>).</p>
+<p>La prima occorrenza del simbolo <code>..</code> viene risolta come un riferimento alla cartella <code>utenti</code> (cartella <strong>precedente</strong> la cartella <code>prof</code>).</p>
+<p>Dalla cartella <code>utenti</code> il sistema fa quindi accesso alla cartella <code>mario</code>, che diventa la cartella <strong>corrente</strong> (<code>c:\utenti\mario</code>).</p>
+<p>La seconda occorrenza del simbolo <code>.</code> viene risolta come un riferimento alla cartella <code>utenti</code> (cartella <strong>precedente</strong> la cartella <code>mario</code>).</p>
+<p>Dalla cartella <code>utenti</code> il sistema fa quindi accesso al file <code>elenco.txt</code>.</p>
+<p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>utenti</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>c:\utenti\elenco.txt</code>.</p>
+<h2 id="cmdlet-per-la-gestione-dei-percorsi">CmdLet per la gestione dei percorsi</h2>
+<p>La gestione del percorso è svolta principalmente dalle seguenti CmdLet:</p>
+<ul>
+<li>
+<p><code>Get-Location</code>: Restituisce la cartella di lavoro corrente;</p>
+</li>
+<li>
+<p><code>Set-Location</code>: Imposta la cartella indicata come cartella di lavoro corrente;</p>
+</li>
+<li>
+<p><code>Test-Path</code>: Verifica l&rsquo;esistenza del file o della cartella.</p>
+</li>
+</ul>
+<h3 id="impostare-la-cartella-di-lavoro-corrente">Impostare la cartella di lavoro corrente</h3>
+<p>L&rsquo;impostazione della cartella di lavoro corrente avviene con la CmdLet <code>Set-Location</code>, che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Location [[-Path] &lt;String&gt;]
+</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<ul>
+<li><code>Path</code>: il percorso della cartella da impostare come cartella corrente;</li>
+</ul>
+<p>Esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Location -Path <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
+</code></pre></div><p>E&rsquo; possibile usare l&rsquo;alias <code>cd</code>, noto su tutti i sistemi operativi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cd <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
+</code></pre></div><h3 id="ottenere-la-cartella-di-lavoro-corrente">Ottenere la cartella di lavoro corrente</h3>
+<p>Per visualizzare o ottenere la cartella di lavoro corrente si utilizza la CmdLet <code>Get-Location</code>, che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location 
+</code></pre></div><p>Esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location
+</code></pre></div><p>E&rsquo; possibile usare l&rsquo;alias <code>pwd</code>, noto sui sistemi Gnu/Linux, Unix e Mac.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">pwd
+</code></pre></div><h3 id="verifica-esistenza-o-correttezza-sintattica-dei-percorsi">Verifica esistenza o correttezza sintattica dei percorsi</h3>
+<p>La verifica dell&rsquo;esistenza o della correttezza sintattica di uno o più percorsi avviene con la CmdLet <code>Test-Path</code>, che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path  [-Path] &lt;String[]&gt; [-PathType &lt;TestPathType&gt;] [-IsValid]
+</code></pre></div><p>Questo CmdLet restituisce un valore <strong>booleano</strong> che, se affermativo, indica l&rsquo;esistenza o la correttezza sintattica di tutti i percorsi indicati, se negativo, indica l&rsquo;inesistenza o l&rsquo;errata sintassi di uno dei percorsi indicato.</p>
+<p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<ul>
+<li>
+<p><code>Path</code>: la lista di percorsi di cui si intende verificare l&rsquo;esistenza o la sintassi;</p>
+</li>
+<li>
+<p><code>IsValid</code>: la presenza di questo parametro specifica che si desidera verificare la correttezza sintattica del percorso indicato; l&rsquo;assenza specifica che si desidera verificare l&rsquo;esistenza del percorso indicato.</p>
+</li>
+<li>
+<p><code>PathType</code>: serve ad indicare che si vuole verificare che il percorso sia un file, una cartella o uno dei due. Può assumere uno dei seguenti valori:</p>
+<ul>
+<li>
+<p><code>Container</code>: una cartella;</p>
+</li>
+<li>
+<p><code>Leaf</code> un file o un collegamento;</p>
+</li>
+<li>
+<p><code>Any</code> qualsiasi tipo.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Per verificare l&rsquo;esistenza di una cartella, si usa il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;C:\test&#34;</span>
+</code></pre></div><p>Per verificare che la stringa indicata nel percorso sia corretta sintatticamente, si usa il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;/test&#34;</span> -IsValid
+</code></pre></div><p>Per verificare che il file indicato esista e sia effettivamente un file, si usa il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;file.txt&#34;</span> -PathType <span style="color:#e6db74">&#34;leaf&#34;</span>
+</code></pre></div>
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
