@@ -104,7 +104,7 @@ ALIASES
 <p>Il CommandLet utilizzato per scrivere sul flusso di output è <code>Write-Output</code> che ha la seguente sintassi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">SYNTAX
     Write-Output [-InputObject] &lt;PSObject[]&gt;[&lt;CommonParameters&gt;]
-    
+
 ALIASES
     echo
 </code></pre></div><p>Il parametro indicato nella sintassi ha il seguente significato:</p>
@@ -206,26 +206,33 @@ World
 <p>E&rsquo; possibile aggiungere commenti attraverso il carattere <code>#</code>. In caso di commenti su più righe, questi vanno racchiusi tra i simboli di apertura e chiusura commento rappresentati da <code>&lt;#</code> e <code>#&gt;</code>.</p>
 <p>Ad esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> <span style="color:#75715e"># Questo è un commento</span>
- 
+
  <span style="color:#75715e">&lt;# Questo è un 
 </span><span style="color:#75715e">    commento su 
 </span><span style="color:#75715e">    più righe #&gt;</span>
+</code></pre></div><h2 id="creazione-e-rimozione-di-alias">Creazione e rimozione di Alias</h2>
+<p>E&rsquo; possibile personalizzare la lista di alias per i CmdLet, aggiungendone di nuovi con il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Alias -Name <span style="color:#e6db74">&#34;wo&#34;</span> -Value <span style="color:#e6db74">&#34;Write-Output&#34;</span>
+</code></pre></div><p>A questo punto è possibile utilizzare l&rsquo;alias <code>wo</code> al posto di <code>Write-Output</code>, come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">wo <span style="color:#e6db74">&#34;Hello&#34;</span>
+</code></pre></div><p>E&rsquo; possibile cancellare un alias con il CmdLet:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Alias -Name <span style="color:#e6db74">&#34;wo&#34;</span>
 </code></pre></div><h2 id="primi-script">Primi script</h2>
 <p>Uno script è un elenco di istruzioni inserite in un file. Eseguire uno script consiste nell&rsquo;esecuzione di tutte le istruzioni inserite nel file. L&rsquo;estensione del file per gli script PowerShell è <code>ps1</code>.</p>
 <p>Prima di creare uno script è consigliato impostare le opzioni di salvataggio (quali codifica dei caratteri UTF-8 ed il carattere di terminazione riga) attraverso gli strumenti appositi quali <a href="/coding/tools/editorconfig/">EditorConfig</a>.</p>
 <p>E&rsquo; possibile creare il primo script salvando le seguenti istruzioni in un file <code>esempio.ps1</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> <span style="color:#75715e"># Questo è il primo script</span>
- 
- <span style="color:#75715e"># Scrivo un messaggio</span>
- Write-Host <span style="color:#e6db74">&#34;Inserisci il nome&#34;</span>
- 
-  <span style="color:#75715e">&lt;# procedo con la lettura
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># Questo è il primo script</span>
+
+<span style="color:#75715e"># Scrivo un messaggio</span>
+Write-Host <span style="color:#e6db74">&#34;Inserisci il nome&#34;</span>
+
+<span style="color:#75715e">&lt;# procedo con la lettura
 </span><span style="color:#75715e">    del nome dell&#39;utente #&gt;</span>
-  
-  $nome = Read-Host
-  
-  <span style="color:#75715e"># Scrivo il nome sullo stream di errore</span>
-  Write-Error $nome
+
+$nome = Read-Host
+
+<span style="color:#75715e"># Scrivo il nome sullo stream di errore</span>
+Write-Error $nome
 </code></pre></div><p>Per questioni di sicurezza, le impostazioni predefinite prevedono che l&rsquo;esecuzione di script sia disabilitata. Per verificare le impostazioni, aprire il terminale di PowerShell ed eseguire:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Get-ExecutionPolicy
 </code></pre></div><p>L&rsquo;output del comando rappresenta la politica di esecuzione degli script impostata.</p>

@@ -6,13 +6,22 @@
     <description>Recent content in tools on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Mon, 13 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>03 - Filesystem - Gestione percorsi</title>
+      <title>05 - Filesystem - Gestione file e cartelle</title>
+      <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-filecartelle/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-filecartelle/</guid>
+      <description>Gestione file e cartelle</description>
+    </item>
+    
+    <item>
+      <title>04 - Filesystem - Gestione percorsi</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-path/</link>
       <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
       

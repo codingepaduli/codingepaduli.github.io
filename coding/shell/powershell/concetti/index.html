@@ -85,7 +85,7 @@
 <p>E&rsquo; possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Module -ListAvailable
 </code></pre></div><p>L&rsquo;output riportato è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Directory<span style="color:#960050;background-color:#1e0010">:</span> /opt/microsoft/powershell/7/Modules
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Directory: /opt/microsoft/powershell/7/Modules
 
 ModuleType Version    PreRelease Name                                PSEdition
 ---------- -------    ---------- ----                                ---------
@@ -99,25 +99,27 @@ Script     2.2.3                 PowerShellGet                       Desk
 Script     2.0.5                 PSDesiredStateConfiguration         Core     
 Script     2.0.0                 PSReadLine                          Desk     
 Binary     2.0.3                 ThreadJob                           Desk 
-</code></pre></div><h2 id="providers">Providers</h2>
-<p>I provider sono moduli che fanno parte del <code>.Net Framework</code> (lo stesso di PowerShell) e che forniscono un accesso specializzato ad una collezione di dati. Vi è un provider che gestisce file e cartelle, uno che gestire gli alias, uno che gestire le variabili d&rsquo;ambiente, ecc&hellip;</p>
+</code></pre></div><h2 id="providers-e-drive">Providers e drive</h2>
+<p>I provider sono oggetti che fanno parte del <code>.Net Framework</code> (lo stesso di PowerShell) e che forniscono un accesso specializzato ad una collezione di dati. Vi è un provider che gestisce file e cartelle, uno che gestire gli alias, uno che gestire le variabili d&rsquo;ambiente, ecc&hellip;</p>
 <p>L&rsquo;utente può creare nuovi provider per gestire altre collezioni di dati.</p>
 <p>E&rsquo; possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSProvider
 </code></pre></div><p>L&rsquo;output riportato è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Name                 Capabilities                  Drives
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Name                 Capabilities                  Drives
 ----                 ------------                  ------
-<span style="color:#66d9ef">Alias</span>                ShouldProcess                 {<span style="color:#66d9ef">Alias</span>}
+Alias                ShouldProcess                 {Alias}
 Environment          ShouldProcess                 {Env}
-FileSystem           <span style="color:#66d9ef">Filter</span>, ShouldProcess, Crede<span style="color:#960050;background-color:#1e0010">…</span> {/, Temp}
-<span style="color:#66d9ef">Function</span>             ShouldProcess                 {<span style="color:#66d9ef">Function</span>}
+FileSystem           Filter, ShouldProcess, Crede… {/, Temp}
+Function             ShouldProcess                 {Function}
 Variable             ShouldProcess                 {Variable}
-</code></pre></div><h2 id="sessioni">Sessioni</h2>
+</code></pre></div><p>Un provider può fornire più punti d&rsquo;accesso alla collezione di dati. Ad esempio l&rsquo;accesso al filesystem su ambienti Windows è fornito attraverso i drive <code>c:</code>, <code>d:</code>, &hellip;, ognuno dei quali fornisce un punto d&rsquo;accesso ad un disco logico.</p>
+<h2 id="sessioni">Sessioni</h2>
 <p>Le sessioni sono utilizzate per memorizzare le informazioni relative ad una connessione locale o remota ad un computer,</p>
 <p>Le sessioni sono memorizzate sul computer a cui ci si collega, in modo tale da permettere la disconnessione e la successiva riconnessione da un altro computer.</p>
 <h2 id="commandlet">CommandLet</h2>
-<p>I CommandLet sono i comandi &ldquo;interni&rdquo; che è possibile eseguire nell&rsquo;ambiente PowerShell.</p>
-<p>I CommandLet hanno un nome composto <code>Verbo-Oggetto</code> in modo da identificare in maniera semplice l&rsquo;operazione eseguita.</p>
+<p>I CommandLet sono i comandi &ldquo;interni&rdquo; che è possibile eseguire nell&rsquo;ambiente PowerShell. Per una lista completa di CmdLet disponibili, eseguire il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command
+</code></pre></div><p>I CommandLet hanno un nome composto <code>Verbo-Oggetto</code> in modo da identificare in maniera semplice l&rsquo;operazione eseguita.</p>
 <p>Tra i verbi comunemente usati vi sono:</p>
 <ul>
 <li>Get: Per recuperare un valore o un oggetto;</li>
@@ -135,12 +137,10 @@ Variable             ShouldProcess                 {Variable}
 <li>Member; un parametro;</li>
 <li>Item: un oggetto generico.</li>
 </ul>
-<p>Un esempio di CommandLet utilizzato per pulire lo schermo è il seguente:</p>
+<p>Ad esempio il CommandLet utilizzato per pulire lo schermo è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Clear-Host
-</code></pre></div><p>Per una lista completa di CmdLet disponibili, eseguire il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Command
 </code></pre></div><h3 id="parametri">Parametri</h3>
-<p>I CmdLet possono prendere in input una lista di parametri. I parametri vengono generalmente passati al CmdLet come coppie &ldquo;nome valore&rdquo;, col nome del parametro preceduto dal carattere <code>-</code> e separato dal valore da uno spazio o anche come lista di valori.</p>
+<p>I CmdLet possono prendere in input una lista di parametri. I parametri vengono generalmente passati al CmdLet come coppie &ldquo;nome valore&rdquo;, col nome del parametro generalmente preceduto dal carattere <code>-</code>.</p>
 <p>Tutti i CommandLet prendono una serie comune di argomenti, tra cui:</p>
 <ul>
 <li><code>-?</code> che mostra la guida in linea del CommandLet invocato;</li>
@@ -148,20 +148,12 @@ Variable             ShouldProcess                 {Variable}
 </ul>
 <p>Un esempio di CmdLet che prende in input un parametro e lo stampa in output nel terminale è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output -InputObject <span style="color:#e6db74">&#34;Hello World!!&#34;</span>
-</code></pre></div><p>E&rsquo; possibile scriverlo anche passando la lista di valori:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output <span style="color:#e6db74">&#34;Hello World!!&#34;</span>
-</code></pre></div><p>L&rsquo;output generato da entrambi i precedenti CmdLet è di seguito riportato:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Hello World!!
+</code></pre></div><p>L&rsquo;output generato dal CmdLet è di seguito riportato:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Hello World!!
 </code></pre></div><h3 id="alias">Alias</h3>
 <p>Powershell associa ai diversi CmdLet disponibili una serie di alias gia familiari a chi proviene da altre shell, facilitando il passaggio a Powershell.</p>
 <p>Per ottenere la lista completa di alias, si usa la CmdLet:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Alias
-</code></pre></div><p>E&rsquo; possibile personalizzare la lista di alias per i CmdLet, aggiungendone di nuovi con il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Alias -Name <span style="color:#e6db74">&#34;wo&#34;</span> -Value <span style="color:#e6db74">&#34;Write-Output&#34;</span>
-</code></pre></div><p>A questo punto è possibile utilizzare l&rsquo;alias <code>wo</code> al posto di <code>Write-Output</code>, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">wo <span style="color:#e6db74">&#34;Hello&#34;</span>
-</code></pre></div><p>E&rsquo; possibile cancellare un alias con il CmdLet:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Alias -Name <span style="color:#e6db74">&#34;wo&#34;</span>
 </code></pre></div><p>Per visualizzare il CommandLet corrispondente ad un alias, si utilizza il CmdLet seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Alias <span style="color:#e6db74">&#34;Write-Output&#34;</span>
 </code></pre></div><h2 id="redirezioni">Redirezioni</h2>
@@ -173,17 +165,21 @@ Variable             ShouldProcess                 {Variable}
 <p>Il risultato è una complessa catena di comandi, detta appunto pipeline, che si presenta in questo modo:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Command-1 | Command-2 | Command-3
 </code></pre></div><h2 id="variabili">Variabili</h2>
-<p>Le variabili sono spazi di memoria in cui vengono memorizzate delle informazioni. PowerShell utilizza le variabili per memorizzare informazioni sull&rsquo;utente, sull&rsquo;ambiente di esecuzione, ecc&hellip;</p>
-<p>Ogni variabile ha un nome che inizia con il carattere <code>$</code>. Essendo PowerShell un linguaggio tipizzato, le variabili hanno un tipo associato, ad esempio tipo numerico, tipo booleano o tipo &ldquo;stringa&rdquo;.</p>
-<p>Per l&rsquo;elenco completo dei tipi, si rimanda alle specifiche del <code>.Net Framework</code>.</p>
+<p>Le variabili sono spazi di memoria in cui vengono memorizzate delle informazioni. Hanno un nome ed un tipo associato, ad esempio tipo numerico, tipo booleano o tipo &ldquo;stringa&rdquo;. PowerShell utilizza le variabili per memorizzare informazioni sull&rsquo;utente, sull&rsquo;ambiente di esecuzione, ecc&hellip;</p>
 <p>L&rsquo;utente può creare le proprie variabili per memorizzare dati e preferenze. Ad esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$variabile = 2;
-</code></pre></div><h2 id="guida-in-linea">Guida in linea</h2>
-<p>La guida in linea è il punto di partenza per imparare ad usare uno specifico CommandLet, per visualizzare i parametri obbligatori e facoltativi e per visualizzare la lista di alias conosciuti.</p>
-<p>Ad esempio la guida in linea del CmdLet <code>Write-Output</code> è generata dal comando seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$variabileNumerica = 2;
+$variabileTestuale = <span style="color:#e6db74">&#34;2&#34;</span>;
+</code></pre></div><p>Dato che PowerShell è basato su oggetti, una variabile può contenere un oggetto ed è possibile accedere ai campi ed ai metodi dell&rsquo;oggetto.</p>
+<p>Per i dettagli relativI ad un tipo di dato, si rimanda alla documentazione del <code>.Net Framework</code>.</p>
+<h2 id="guida-in-linea">Guida in linea</h2>
+<p>La guida in linea è il punto di riferimento per informazioni dettagliate su uno specifico argomento. Per visualizzare la guida in linea, eseguire:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Help
+</code></pre></div><p>Per visualizzare la guida in linea su uno specifico CommandLet si può utilizzare il comando <code>Get-Help</code> passando come parametro il nome del comando, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Help Write-Output
+</code></pre></div><p>Allo stesso modo si può visualizzare la guida in linea del CmdLet invocandolo con il parametro <code>-?</code>, come ne seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output -?
-</code></pre></div><p>La guida in linea mostrata è la seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">NAME
+</code></pre></div><p>La guida in linea mostrata in entrambi gli esempi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">NAME
     Write-Output
 
 SYNTAX
@@ -193,13 +189,13 @@ ALIASES
     echo
 
 REMARKS
-    Get-Help cannot find the Help files <span style="color:#66d9ef">for</span> this cmdlet on this computer. 
+    Get-Help cannot find the Help files for this cmdlet on this computer. 
         It is displaying only partial help.
-        -- To download and install Help files <span style="color:#66d9ef">for</span> the module that 
+        -- To download and install Help files for the module that 
            includes this cmdlet, use Update-Help.
-        -- To view the Help topic <span style="color:#66d9ef">for</span> this cmdlet online, type<span style="color:#960050;background-color:#1e0010">:</span> 
-           <span style="color:#e6db74">&#34;Get-Help Write-Output -Online&#34;</span> or go to 
-           https<span style="color:#960050;background-color:#1e0010">:</span>//go.microsoft.com/fwlink/<span style="color:#66d9ef">?</span>LinkID=2097117
+        -- To view the Help topic for this cmdlet online, type: 
+           &#34;Get-Help Write-Output -Online&#34; or go to 
+           https://go.microsoft.com/fwlink/?LinkID=2097117
 </code></pre></div><p>La guida mostra:</p>
 <ul>
 <li>
@@ -216,6 +212,15 @@ REMARKS
 </li>
 </ul>
 <p>Aggiornata la guida in linea, verranno mostrate le descrizioni di tutti i parametri, di tutti gli oggetti in input ed in output, gli esempi ed i collegamenti consigliati.</p>
+<!-- 
+
+Per la lista di comandi con il parametro WhatIf
+
+# Get-Command | where { $_.parameters.keys -Contains "WhatIf"}
+
+# Get-Command -commandType cmdlet | where { $_.parameters.keys -Contains "Confirm"}
+
+-->
 
 		</div>
 	</article>

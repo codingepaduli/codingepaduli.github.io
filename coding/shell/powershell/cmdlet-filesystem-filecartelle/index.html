@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>05 - Filesystem - Gestione file e cartelle - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Gestione file e cartelle">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-15T00:00:00Z">April 15, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>, <a class="meta__link" href="/categories/shell/" rel="category">shell</a>, <a class="meta__link" href="/categories/powershell/" rel="category">powershell</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="gestione-di-file-e-cartelle">Gestione di file e cartelle</h1>
+<p>La gestione di file e cartelle è gestita dal provider <code>Filesystem</code>.</p>
+<h2 id="cmdlet-per-la-gestione-di-file-e-cartelle">CmdLet per la gestione di file e cartelle</h2>
+<p>La gestione di file e cartelle è fatta dalle seguenti CmdLet:</p>
+<ul>
+<li><code>Copy-Item</code>: copia un file, una cartella o una voce di registro;</li>
+<li><code>Get-Item</code>: accedere al file o alla cartella riferita dal percorso;</li>
+<li><code>Get-ChildItem</code>: restituisce i file contenuti in una cartella o le voci di registro contenute in un percorso;</li>
+<li><code>Move-Item</code>: sposta un file, una cartella o una voce di registro;</li>
+<li><code>New-Item</code>: crea un file, una cartella o una voce di registro;</li>
+<li><code>Remove-Item</code>: cancella un file, una cartella o una voce di registro;</li>
+<li><code>Rename-Item</code>: rinomina un file, una cartella o una voce di registro;</li>
+</ul>
+<h3 id="creazione-file-cartelle-e-collegamenti">Creazione file, cartelle e collegamenti</h3>
+<p>La creazione di un file o una cartella avviene con la CmdLet <code>New-Item</code>, che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item [-Path] &lt;String[]&gt; -Name &lt;String&gt; 
+    [-ItemType &lt;String&gt;] [-Value &lt;Object&gt;] [-Force]
+</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<ul>
+<li>
+<p><code>Path</code>: indica il percorso in cui creare il file o la cartella;</p>
+</li>
+<li>
+<p><code>Name</code>: indica il nome del file o della cartella da creare;</p>
+</li>
+<li>
+<p><code>Value</code>: indica il contenuto iniziale del nuovo file o il file a cui si fa riferimento in un nuovo collegamento;</p>
+</li>
+<li>
+<p><code>Force</code>: forza l&rsquo;eliminazione di file nascosti o di sola lettura;</p>
+</li>
+<li>
+<p><code>ItemType</code>: serve ad indicare il tipo di contenuto da creare e può assumere uno dei seguenti valori:</p>
+<ul>
+<li>
+<p><code>File</code>;</p>
+</li>
+<li>
+<p><code>Directory</code>;</p>
+</li>
+<li>
+<p><code>SymbolicLink</code>;</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Esempi d&rsquo;uso:</p>
+<p>Per creare un file di nome &ldquo;nuovo.txt&rdquo; nella locazione di lavoro corrente si usa quindi il seguente comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;file&#34;</span>
+</code></pre></div><p>Per creare un file di nome &ldquo;nuovo.txt&rdquo; alla locazione &ldquo;/&rdquo; si usa il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -Path <span style="color:#e6db74">&#34;/&#34;</span> -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;file&#34;</span>
+</code></pre></div><p>Per creare un file di nome &ldquo;nuovo.txt&rdquo; alla locazione &ldquo;/&rdquo; e con il contenuto iniziale &ldquo;nuovo file&rdquo; si usa il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -Path <span style="color:#e6db74">&#34;/&#34;</span> -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;file&#34;</span> -Value <span style="color:#e6db74">&#34;nuovo file&#34;</span>
+</code></pre></div><p>Per creare una cartella, si usa il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;Directory&#34;</span>
+</code></pre></div><p>Per creare un collegamento simbolico, si usa il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -ItemType <span style="color:#e6db74">&#34;SymbolicLink&#34;</span> -Name <span style="color:#e6db74">&#34;link&#34;</span> -Value <span style="color:#e6db74">&#34;nuovo.txt&#34;</span>
+</code></pre></div><p>Per una descrizione accurata della CommandLet, si rimanda alla guida online.</p>
+<h3 id="eliminazione-di-file-cartelle-e-collegamenti">Eliminazione di file, cartelle e collegamenti</h3>
+<p>La rimozione di un file, una cartella o un collegamento avviene con il CmdLet <code>Remove-Item</code>, che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Item [-Path] &lt;String[]&gt; [-Filter &lt;String&gt;] 
+    [-Include &lt;String[]&gt;] [-Exclude &lt;String[]&gt;] 
+    [-Recurse] [-Force]
+</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<ul>
+<li>
+<p><code>Path</code>: indica il percorso in cui eliminare file o cartelle;</p>
+</li>
+<li>
+<p><code>Filter</code>: indica di selezionare i file o le cartelle corrispondenti al filtro indicato;</p>
+</li>
+<li>
+<p><code>Include</code>: indica uno schema per selezionare file o cartelle da eliminare;</p>
+</li>
+<li>
+<p><code>Exclude</code>: indica uno schema per escludere file o cartelle dall&rsquo;eliminazione;</p>
+</li>
+<li>
+<p><code>Recurse</code>: elimina ricorsivamente anche tutte le voci innestate;/</p>
+</li>
+<li>
+<p><code>Force</code>: forza l&rsquo;eliminazione di file nascosti o di sola lettura.</p>
+</li>
+</ul>
+<p>Esempio d&rsquo;uso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Item -Path <span style="color:#e6db74">&#34;C:\Test\hidden-RO-file.txt&#34;</span>
+</code></pre></div><p>Per eliminare una cartella vuota si esegue il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Item -Path <span style="color:#e6db74">&#34;C:\Test\&#34;</span>
+</code></pre></div><p>Nel caso la cartella non fosse vuota, il comando chiederebbe conferma all&rsquo;utente della cancellazione di tutte le voci contenute.</p>
+<p>Per eliminare in maniera ricorsiva una cartella con tutte le sottocartelle ed i file contenuti si esegue il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Item -Path <span style="color:#e6db74">&#34;C:\Test\&#34;</span> -Recurse
+</code></pre></div><h3 id="rinominare-file-o-cartella">Rinominare file o cartella</h3>
+<p>Per rinominare un file o una cartella si usa il CmdLet <code>Rename-Item</code>, che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Rename-Item [-Path] &lt;String&gt; [-NewName] &lt;String&gt; [-Force]
+</code></pre></div><p>I parametri indicati nella precedente sintassi hanno il seguente significato:</p>
+<ul>
+<li><code>Path</code>: indica il percorso in cui testare file o cartelle;</li>
+<li><code>NewName</code>: indica il nuovo nome da assegnare;</li>
+<li><code>Force</code>: forza la rinominazione di un file nascosto o di sola lettura;</li>
+</ul>
+<p>Esempio d&rsquo;uso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Rename-Item -Path <span style="color:#e6db74">&#34;daily_file.txt&#34;</span> -NewName <span style="color:#e6db74">&#34;monday_file.txt&#34;</span>
+</code></pre></div><h3 id="spostare-file-o-cartelle">Spostare file o cartelle</h3>
+<p>Per spostare un file o una cartella si usa il CmdLet <code>Move-Item</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Move-Item [-Path] &lt;String[]&gt; [[-Destination] &lt;String&gt;] [-Force]
+</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<ul>
+<li>
+<p><code>Path</code>: indica il file o la cartella da spostare;</p>
+</li>
+<li>
+<p><code>Destination</code>: indica dove spostare il file o la cartella;</p>
+</li>
+<li>
+<p><code>Force</code>: forza lo spostamento di file nascosti o di sola lettura;</p>
+</li>
+</ul>
+<p>Esempio d&rsquo;uso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Move-Item -Path <span style="color:#e6db74">&#34;C:\test.txt&#34;</span> -Destination <span style="color:#e6db74">&#34;E:\Temp\tst.txt&#34;</span>
+</code></pre></div><h3 id="copiare-file-o-cartelle">Copiare file o cartelle</h3>
+<p>Per copiare un file o una cartella si usa il CmdLet <code>Copy-Item</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Copy-Item [-Path] &lt;String[]&gt; [[-Destination] &lt;String&gt;] [-Force]
+</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<ul>
+<li>
+<p><code>Path</code>: indica il file o la cartella da spostare;</p>
+</li>
+<li>
+<p><code>Destination</code>: indica dove spostare il file o la cartella;</p>
+</li>
+<li>
+<p><code>Force</code>: forza lo spostamento di file nascosti o di sola lettura;</p>
+</li>
+</ul>
+<p>Esempio d&rsquo;uso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Copy-Item -Path <span style="color:#e6db74">&#34;C:\test.txt&#34;</span> -Destination <span style="color:#e6db74">&#34;E:\Temp\tst.txt&#34;</span>
+</code></pre></div><h3 id="accesso-al-file-o-alla-cartella">Accesso al file o alla cartella</h3>
+<p>Per accedere al file o alla cartella indicata nel percorso si usa il CmdLet <code>Get-Item</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Item [-Path] &lt;String[]&gt; [-Force]
+</code></pre></div><p>I parametri indicati nella precedente sintassi hanno il seguente significato:</p>
+<ul>
+<li><code>Path</code>: indica il percorso del file o della cartella a cui accedere;</li>
+<li><code>Force</code>: forza l&rsquo;accesso ad un file nascosto o di sola lettura;</li>
+</ul>
+<p>Esempio d&rsquo;uso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Item -Path <span style="color:#e6db74">&#34;C:\test.txt&#34;</span>
+</code></pre></div><h3 id="accesso-ai-file-e-cartelle-contenute-in-un-percorso">Accesso ai file e cartelle contenute in un percorso</h3>
+<p>Per accedere ai file e cartelle contenute in un percorso si usa il CmdLet <code>Get-ChildItem</code> che ha la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-ChildItem [-Path] &lt;String[]&gt; [-Recurse] [-Depth &lt;uint32&gt;]
+    [-FollowSymlink] [-Directory] [<span style="color:#f92672">-File</span>] [-Hidden] [-ReadOnly]
+</code></pre></div><p>I parametri indicati nella precedente sintassi hanno il seguente significato:</p>
+<ul>
+<li><code>Path</code>: indica il percorso del file o della cartella a cui accedere;</li>
+<li><code>Recurse</code>: effettua un accesso ricorsivo a tutti i file e cartelle contenuti nel percorso indicato e ne restituisce tutti i file e cartelle trovati;</li>
+<li><code>Depth</code>: indica la profondità massima di sotto-cartelle a cui accedere durante l&rsquo;operazione ricorsiva;</li>
+<li><code>FollowSymlink</code>: indica di accedere anche ai link simbolici durante l&rsquo;operazione di accesso ricorsivo e restituire i file e cartelle contenuti in questi ultimi;</li>
+<li><code>Directory</code>: indica di restituire solo la lista di cartelle;</li>
+<li><code>File</code>: indica di restituire solo la lista di file;</li>
+<li><code>Hidden</code>: indica di restituire solo i file nascosti;</li>
+<li><code>ReadOnly</code>: indica di restituire solo i file di sola lettura;</li>
+</ul>
+<p>Esempio d&rsquo;uso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-ChildItem -Path <span style="color:#e6db74">&#34;C:\test&#34;</span>
+</code></pre></div><p>L&rsquo;output prodotto è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Directory: C:\Test
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        2/15/2019     13:21                cartella1
+d-----        2/15/2019     08:28                cartella2
+d-----        2/15/2019     13:21                Backup
+-a----        2/12/2019     16:16             20 fileTemp2.txt
+-a----        2/13/2019     13:26             20 fileTemp2.txt
+-a----        2/12/2019     16:24             23 systemlog1.log
+</code></pre></div>
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
