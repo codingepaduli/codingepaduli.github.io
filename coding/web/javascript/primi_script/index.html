@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>03 - Primi script - Coding e Paduli</title>
+	<title>02 - Primi script - Coding e Paduli</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Primi script">
 	
@@ -78,150 +78,92 @@
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			
-<h1 id="top">Primi script</h1>
+			<h1 id="primi-script">Primi script</h1>
+<p>Per la scrittura di programmi in javascript si consiglia innanzitutto di configurare l&rsquo;editor di testi per utilizzare caratteristiche generali quali la codifica di caratteri o il carattere di fine riga, magari usando strumenti come <a href="/coding/tools/editorconfig/">EditorConfig</a>.</p>
+<p>Gli script vengono eseguiti man mano che la pagina web viene &ldquo;letta&rdquo; dal browser e mostrata all&rsquo;utente. Quindi conta l&rsquo;ordine in cui il codice è scritto nella pagina web.</p>
+<p>L&rsquo;istruzione più conosciuta di javascript è <code>alert()</code>, che permette di mostrare un messaggio all&rsquo;utente.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World!!&#34;</span>);
+</code></pre></div><p>I prossimi esempi faranno uso di questa istruzione per illustrare l&rsquo;inserimento degli script in pagina.</p>
+<h2 id="modalità-di-esecuzione-strict-e-sloppy">Modalità di esecuzione strict e sloppy</h2>
+<p>Javascript utilizza due modalità di esecuzione degli script:</p>
+<ul>
+<li><strong>sloppy</strong>: una modalità che permette che alcuni errori non vengano segnalati, ma ignorati silenziosamente, portando a malfunzionamenti non semplici da individuare; Questa modalità è quella applicata di default e talvolta;</li>
+<li><strong>strict</strong>: una modalità che segnala alcuni errori non facilmente riscontrabili e che rende più rigida e chiara l&rsquo;esecuzione degli script. Deve essere specificata all&rsquo;inizio di ogni script e di ogni funzione dalla seguente stringa:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;use strict&#34;</span>;
+</code></pre></div><h2 id="commenti">Commenti</h2>
+<p>Javascript permette di commentare il codice su una sola riga utilizzando il simbolo <code>//</code> seguito dal commento, mentre i commenti su più righe includono i commenti tra i caratteri <code>/*</code> e <code>*/</code>.</p>
+<p>Un esempio di commenti è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#e6db74">&#39;use strict&#39;</span>;
 
-<p>Per la scrittura di programmi in javascript si consiglia innanzitutto di configurare caratteristiche generali quali la codifica di caratteri o il carattere di fine riga, utilizzando strumenti quali <a href="/coding/tools/editorconfig/">EditorConfig</a>.</p>
-
-<h2>Inserimento script in pagina</h2>
-
+<span style="color:#75715e">// commento su una rigida
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">  commento su
+</span><span style="color:#75715e">  più righe
+</span><span style="color:#75715e">*/</span>
+</code></pre></div><h2 id="inserimento-script-in-pagina">Inserimento script in pagina</h2>
 <p>Per inserire uno script in una pagina web esistono diverse possibilità:</p>
 <ul>
-    <li>inserire uno script <strong>inline</strong> ovvero nei tag HTML che ne permettono la possibilità;
-    <li>inserire uno script direttamente nella pagina HTML, utilizzando il tag <code>script</code>;
-    <li>inserire un collegamento ad un file javascript esterno, utilizzando il tag <code>script</code>;
+<li>inserire uno script <strong>inline</strong> ovvero nei tag HTML che ne permettono la possibilità;</li>
+<li>inserire uno script direttamente nella pagina HTML, utilizzando il tag <code>script</code>;</li>
+<li>inserire un collegamento ad un file javascript esterno, che ha tipicamente estensione <code>.js</code>, utilizzando il tag <code>script</code>;</li>
 </ul>
-
+<h3 id="inserimento-script-inline">Inserimento script inline</h3>
 <p>Per inserire il tag <strong>inline</strong>, lo si può allegare ai tag HTML che lo prevedono; ad esempio al tag button:</p>
-
-<pre>
-    <code>
-        &lt;input type="button" onclick="alert('Script contenuto inline');"&gt;
-    </code>
-</pre>
-
-<p>Quando l'utente clicca sul pulsante, si attiva l'azione "onclick" e quindi si visualizza il messaggio.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;Script contenuto inline&#39;);&#34;</span>&gt;  
+</code></pre></div><p>Quando l&rsquo;utente clicca sul pulsante, si attiva l&rsquo;azione &ldquo;onclick&rdquo; e quindi si visualizza il messaggio.</p>
+<h3 id="inserimento-script-nella-pagina-html">Inserimento script nella pagina HTML</h3>
 <p>Per inserire uno script direttamente nella pagina web, si usa il tag <code>script</code> per includere il codice. Di seguito un esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#e6db74">&#34;use strict&#34;</span>;
 
-<pre>
-    <code>
-        &lt;script&gt;
-            alert("script contenuto nella pagina web");
-        &lt;/script&gt;
-    </code>
-</pre>
+  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;script contenuto nella pagina web&#34;</span>);
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div><h3 id="inserimento-script-in-un-file-esterno">Inserimento script in un file esterno</h3>
+<p>Per inserire un collegamento ad un file esterno, si inserisce il tag <code>script</code> con l&rsquo;attributo <code>src</code> che contiene il collegamento al file javascript esterno. Di seguito un esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;file.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div><p>Il file esterno ovviamente conterrà tutte le istruzioni javascript, come nel seguente esempio</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;use strict&#34;</span>;
 
-<p>Per inserire un collegamento ad un file esterno, si inserisce il tag <code>script</code> con l'attributo <code>src</code> che contiene il collegamento al file javascript esterno. Di seguito un esempio:</p>
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;script contenuto in un file esterno&#34;</span>);
+</code></pre></div><h2 id="console-javascript">Console javascript</h2>
+<p>Lo strumento che più aiuta nello sviluppo di codice javascript è la console del browser, che appare quando si preme il tasto &ldquo;F12&rdquo; o quando si clicca con il seconda tasto del mouse sulla pagina web e si sceglie
+la voce &ldquo;Ispeziona&rdquo;.</p>
+<p><img src="/static/coding/web/javascript/javascript-console.png" alt="Browser&rsquo;s console"></p>
+<h3 id="informazioni-avvisi-ed-errori">Informazioni, avvisi ed errori</h3>
+<p>Nella console è possibile scrivere informazioni, allarmi ed errori attraverso le istruzioni <code>console.info()</code>, <code>console.warn()</code> e <code>console.error()</code>, che prendono come parametro un messaggio da mostrare.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;informazione&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;allarme&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;errore&#34;</span>);
+</code></pre></div><h3 id="raggruppare-messaggi">Raggruppare messaggi</h3>
+<p>E&rsquo; possibile creare gruppi di messaggi, utilizzando le istruzioni <code>console.group()</code> e <code>console.groupEnd()</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">group</span>(<span style="color:#e6db74">&#34;gruppo di informazioni&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;informazione 1&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;informazione 2&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;allarme 1&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">groupEnd</span>();
+</code></pre></div><h3 id="tabelle">Tabelle</h3>
+<p>La scrittura di una tabella nella console, attraverso l&rsquo;istruzione <code>console.table()</code>, è particolarmente utile poichè permette di visualizzare array e matrici in un formato molto comprensibile:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">vettore</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;uno&#39;</span>, <span style="color:#e6db74">&#39;due&#39;</span>, <span style="color:#e6db74">&#39;tre&#39;</span>];
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">table</span>(<span style="color:#a6e22e">vettore</span>);
+</code></pre></div><h3 id="tempo-di-esecuzione">Tempo di esecuzione</h3>
+<p>Utilissima pure la scrittura in console del tempo di esecuzione intercorso tra due punti dello script, indicati dalle istruzioni
+<code>console.time()</code> e <code>console.timeEnd()</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">time</span>(<span style="color:#e6db74">&#34;tempo impiegato:&#34;</span>);
 
-<pre>
-    <code>
-        &lt;script src="file.js"&gt;&lt;/script&gt;
-    </code>
-</pre>
+<span style="color:#75715e">// istruzioni
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">timeEnd</span>(<span style="color:#e6db74">&#34;tempo impiegato:&#34;</span>);
+</code></pre></div><p>In output ci sarà la scritta &ldquo;tempo impiegato: 12.014 ms&rdquo;.</p>
+<p>Per stampare la struttura di un oggetto si usa l&rsquo;utilissima istruzione
+<code>console.dir()</code>, come nel seguente esempio</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">nome</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Pippo&#34;</span>, <span style="color:#a6e22e">cognome</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Pluto&#34;</span>};
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">obj</span>);
+</code></pre></div><p>Un esempio completo della console contenente l&rsquo;output di tutte le istruzioni viste è il seguente:</p>
+<p><img src="/static/coding/web/javascript/javascript-console-primi-script.png" alt="Browser&rsquo;s console"></p>
 
-<p>Gli script vengono eseguiti man mano che la pagina javascript viene "letta" dal browser e mostrata all'utente. Quindi conta l'ordine in cui il codice è scritto nella pagina web.</p>
-
-<h2>Uso della console</h2>
-
-<p>Lo strumento che più aiuta nella scrittura di codice javascript è la console del browser, che appare quando si preme il tasto "F12" o quando si clicca con il seconda tasto del mouse sulla pagina web e si sceglie la voce "Ispeziona".</p>
-
-<p><img src="/static/coding/web/javascript/javascript-console.png" alt="Browser's console" width="70%" height="auto"></p>
-
-<p>La console aiuta lo sviluppo poichè lo sviluppatore può scrivere sulla console tutte le informazioni di cui ha bisogno.<p>
-
-<p>Nella console è possibile scrivere informazioni, allarmi ed errori attraverso le istruzioni <code>console.info()</code>, <code>console.warn()</code> e <code>console.error()</code>:</p>
-
-<pre>
-    <code>
-        console.info("informazione");
-        console.warn("allarme");
-        console.error("errore");
-    </code>
-</pre>
-
-<p>E' possibile anche creare gruppi di messaggi, utilizzando le istruzioni <code>console.group()</code> e <code>console.groupEnd()</code>:</p>
-
-<pre>
-    <code>
-        console.group("gruppo di informazioni");
-        console.info("informazione 1");
-        console.info("informazione 2");
-        console.warn("allarme 1");
-        console.groupEnd();
-    </code>
-</pre>
-
-<p>La scrittura di una tabella nella console, attraverso l'istruzione <code>console.table()</code>, è particolarmente utile poichè permette di visualizzare array e matrici in un formato molto comprensibile:</p>
-
-<pre>
-    <code>
-        let vettore = ['uno', 'due', 'tre'];
-        console.table();
-    </code>
-</pre>
-
-<p>Utilissima pure la scrittura in console del tempo di esecuzione intercorso tra due punti dello script, indicati dalle istruzioni <code>console.time()</code> e <code>console.timeEnd()</code>:</p>
-
-<pre>
-    <code>
-        console.time("tempo impiegato:");
-
-        // istruzioni
-
-        console.timeEnd("tempo impiegato:");
-    </code>
-</pre>
-
-<p>In output ci sarà la scritta "tempo impiegato: 12.014 ms".</p>
-
-<p>Per stampare la struttura di un oggetto si usa l'utilissima istruzione <code>console.dir()</code>, come nel seguente esempio</p>
-
-<pre>
-    <code>
-        let obj = {nome: "Pippo", cognome: "Pluto"};
-        console.dir(obj);
-    </code>
-</pre>
-
-<p>Un esempio completo della console contenente l'output di tutte le istruzioni viste è il seguente:</p>
-
-<p><img src="/static/coding/web/javascript/javascript-console-primi-script.png" alt="Browser's console" width="70%" height="auto"></p>
-
-<!-- TODO usa strict mode -->
-
-<!-- TODO aggiungi commenti -->
-
-<script>
-    console.time("tempo impiegato:");
-
-    console.info("informazione");
-    console.warn("allarme");
-    console.error("errore");
-
-    console.group("gruppo di informazioni");
-    console.info("informazione 1");
-    console.info("informazione 2");
-    console.warn("allarme 1");
-    console.groupEnd();
-
-    let vettore = ['uno', 'due', 'tre'];
-    console.table();
-
-    let obj = {nome: "Pippo", cognome: "Pluto"};
-    console.dir(obj);
-
-    console.timeEnd("tempo impiegato:");
-</script>
-
-
-<p>L'istruzione più conosciuta di javascript è <code>alert()</code> che permette di mostrare un messaggio all'utente. Il messaggio è ovviamente una stringa, quindi la frase deve essere racchiusa da apici doppi o singoli;</p>
-
-<pre>
-    <code>
-        alert("Hello World");
-    </code>
-</pre>
 		</div>
 	</article>
 </main>
