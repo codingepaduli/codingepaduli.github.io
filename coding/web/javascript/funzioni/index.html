@@ -139,8 +139,29 @@
 Giuseppe Verdi
 Pinco Pallino
 Tizio Caio
-</code></pre></div><p>L&rsquo;uso dei parametri ci permette quindi di rendere più &ldquo;generica&rdquo; l&rsquo;operazione definita dalla funzione.</p>
-
+</code></pre></div><p>L&rsquo;uso dei parametri ci permette quindi di rendere &ldquo;generica&rdquo; l&rsquo;operazione definita dalla funzione.</p>
+<h2 id="parametri-di-default">Parametri di default</h2>
+<p>E&rsquo; possibile assegnare ai parametri un valore predefinito, come per il seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>(<span style="color:#a6e22e">nome</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mario&#34;</span>, <span style="color:#a6e22e">cognome</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Rossi&#34;</span>) {
+    <span style="color:#e6db74">&#39;use strict&#39;</span>;
+    
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">nome</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">cognome</span>);
+}
+</code></pre></div><h2 id="parametri-rimanenti-rest-parameter">Parametri rimanenti (rest parameter)</h2>
+<p>E&rsquo; possibile definire funzioni che prendano un numero variabile di parametri, precedendo l&rsquo;unico o l&rsquo;ultimo parametro  con i tre punti <code>...</code>.</p>
+<p>Dato che questo tipo di sintassi crea di fatto una collezione di valori, è possibile accedervi attraverso l&rsquo;istruzione iterativa <code>for-in</code>.</p>
+<p>Supponendo, ad esempio, di voler creare una funzione che scriva un numero imprecisato di nomi, il codice sarà il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>(...<span style="color:#a6e22e">nomi</span>) {
+    <span style="color:#e6db74">&#39;use strict&#39;</span>;
+    
+    <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">nome</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">nomi</span>) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">nome</span>);
+    }
+}
+</code></pre></div><p>Definita la funzione, è possibile invocarla passando tutti i parametri di cui si ha necessità, come nei seguenti esempi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Mario Rossi&#34;</span>);
+<span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Giuseppe Verdi&#34;</span>, <span style="color:#e6db74">&#34;Pinco Pallino&#34;</span>, <span style="color:#e6db74">&#34;Tizio Caio&#34;</span>);
+</code></pre></div>
 		</div>
 	</article>
 </main>
