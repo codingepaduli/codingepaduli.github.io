@@ -102,7 +102,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">naturalNumberHexadecimal</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0xFF</span>;
 </code></pre></div><p>La rappresentazione binaria si esprime anteponendo al valore da assegnare alla variabile il simbolo <code>0b</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">naturalNumberBinary</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0b010111</span>;
-</code></pre></div><p>Il valore decimale può essere espresso in forma esponenziale, nella classica forma <strong>mantissa</strong>, simbolo <code>e</code> /indicante l&rsquo;esponenziale) ed <strong>esponente</strong>, come nel seguente esempio:</p>
+</code></pre></div><p>Il valore intero o decimale può essere espresso in <a href="https://it.wikipedia.org/wiki/Notazione_scientifica">notazione scientifica</a>, nella classica forma <strong>mantissa</strong>, simbolo <code>e</code> (indicante l&rsquo;esponenziale) ed <strong>esponente</strong>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">realNumberExponentiation</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1E100</span>;
 </code></pre></div><p>Tra i valori numerici esistono dei casi particolari:</p>
 <ul>
@@ -114,8 +114,21 @@
 </code></pre></div><h2 id="tipo-stringa">Tipo stringa</h2>
 <p>Le variabili possono avere assegnata una sequenza di caratteri e quindi il tipo associato sarà stringa. La sequenza di caratteri deve essere racchiusa tra singoli apici <code>'</code> o doppi apici <code>&quot;</code>.</p>
 <p>Un esempio di dichiarazione di variabile a cui viene associato un tipo stringa è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Una stringa&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Una stringa&#39;</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringVariable2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Seconda stringa&#39;</span>;
+</code></pre></div><p>Per definire una sequenza di caratteri che occupi più righe, si può racchiudere tra apici inversi <code>`</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Una 
+</span><span style="color:#e6db74">stringa`</span>;
+</code></pre></div><p>Questo tipo di definizione è utilizzato anche per concatenare variabili o il risultato di un&rsquo;espressione all&rsquo;interno della stringa. Le variabili e le espressioni devono essere racchiuse tra simboli <code>${</code> e <code>}</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">messaggio</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`La somma dei 
+</span><span style="color:#e6db74">numeri </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">num1</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> e </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">num2</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 
+</span><span style="color:#e6db74">vale </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">num1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num2</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>;
+</code></pre></div><p>L&rsquo;esempio precedente produce il seguente output (su più righe):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">La somma dei 
+numeri 9 e 18 
+vale 27.
 </code></pre></div><h2 id="tipo-oggetto">Tipo oggetto</h2>
 <p>Un oggetto in ambito informatico è un dato complesso che risiede in memoria ed ha più proprietà ed anche dei metodi. Tipicamente la creazione di un oggetto è effettuata attraverso la parola chiave <code>new</code>.</p>
 <p>L&rsquo;operazione di inserimento di un oggetto in memoria è detta <strong>allocazione</strong>, quindi tecnicamente un oggetto è <strong>allocato</strong> in memoria.</p>
@@ -205,7 +218,7 @@ base specifica.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x2</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>).<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">2</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x8</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">8</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x16</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>).<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">16</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x16</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">16</span>);
 </code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x2 = &#34;1010&#34;
 x8 = &#34;12&#34;
@@ -215,6 +228,29 @@ x16 = &#34;a&#34;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">xC2</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toString</span>()
 </code></pre></div><p>Il numero è convertito in una stringa rappresentata da 32 bit:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">xC2 = &#34;11111111111111111111111111111111&#34;
+</code></pre></div><p>Per la conversione in formato esponenziale si utilizza il metodo <code>toExponential()</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.4</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">z</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123456789.123456</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringX</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toExponential</span>();
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y</span>.<span style="color:#a6e22e">toExponential</span>();
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringW</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">toExponential</span>();
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>();
+</code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&#34;1e+0&#34;
+&#34;1.4e+0&#34;
+&#34;1.4e+1&#34;
+&#34;1.2346e+8&#34;
+</code></pre></div><p>Si può passare al metodo il parametro opzionale indicante il numero di cifre decimali da utilizzare per la mantissa, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">z</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123456789.123456</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">2</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">8</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">16</span>);
+</code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&#34;1.23e+8&#34;
+&#34;1.23456789e+8&#34;
+&#34;1.2345678912345600e+8&#34;
 </code></pre></div>
 		</div>
 	</article>

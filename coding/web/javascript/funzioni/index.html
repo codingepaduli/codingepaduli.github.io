@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>06 - Funzioni - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Funzioni">
+	
+	
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-26T00:00:00Z">April 26, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">javascript</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="funzioni">Funzioni</h1>
+<p>Le funzioni sono blocchi di codice progettati per eseguire un&rsquo;operazione.</p>
+<p>Alle funzioni viene dato un <strong>nome</strong>, in modo da poter eseguire l&rsquo;operazione più volte semplicemente usando il nome (e non dover ripetere il blocco di codice).</p>
+<p>Le funzioni sono <strong>dichiarate</strong> dalla parola chiave <code>function</code> seguita dal nome, dalle parentesi tonde <code>()</code> ed infine dal blocco di codice racchiuso tra le parentesi graffe <code>{</code> e <code>}</code>.</p>
+<p>Un esempio di funzione che scrive il proprio nome è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>() {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Mario Rossi&#34;</span>);
+}
+</code></pre></div><p>E&rsquo; importante notare la differenza tra <strong>dichiarazione</strong> ed <strong>invocazione</strong>: la funzione dichiarata viene &ldquo;creata&rdquo; ma non viene &ldquo;eseguita&rdquo;.</p>
+<p>Per eseguire la funzione è necessario invocarla mediante il nome, seguito dalle parentesi tonde <code>()</code>.</p>
+<p>Ad esempio, per invocare la funzione dichiarata nel codice precedente si usa:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>();
+</code></pre></div><p>Questo esempio produce in output il messaggio seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Mario Rossi
+</code></pre></div><p>Per eseguire più volte la funzione, e quindi eseguire più volte il blocco di codice corrispondente, la si deve invocare più volte, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>();
+<span style="color:#a6e22e">scriviNome</span>();
+<span style="color:#a6e22e">scriviNome</span>();
+<span style="color:#a6e22e">scriviNome</span>();
+</code></pre></div><p>Il vantaggio principale dell&rsquo;uso delle funzioni è che permettono di organizzare il programma in termini di operazioni da svolgere e consentono di separare i compiti tra i vari programmatori, ognuno dei quali si occuperà di sviluppare alcune funzionalità.</p>
+<h2 id="modalità-di-esecuzione">Modalità di esecuzione</h2>
+<p>Le funzioni possono essere eseguite in modalità <code>strict</code> o <code>sloppy</code>, indipendentemente dalla modalità di esecuzione indicata negli script.</p>
+<p>Per cui, per specificare la modalità <code>strict</code> è necessario indicarla all&rsquo;inizio di ogni funzione, come nel seguente esempio.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>() {
+    <span style="color:#e6db74">&#39;use strict&#39;</span>;
+    
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Mario Rossi&#34;</span>);
+}
+</code></pre></div><h2 id="valore-di-ritorno">Valore di ritorno</h2>
+<p>Le funzioni sono progettate per eseguire un&rsquo;operazione. Il risultato di questa operazione può essere restituito, attraverso la parola chiave <code>return</code>, a chi invoca la funzione.</p>
+<p>Supponendo ad esempio di voler <strong>definire</strong> una funzione che scriva il proprio nome nella console e che lo restituisca anche al chiamante, il codice sarà il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>() {
+    <span style="color:#e6db74">&#39;use strict&#39;</span>;
+  
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">nome</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Mario Rossi&#34;</span>;
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">nome</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">nome</span>;
+}
+</code></pre></div><p>Per <strong>invocare</strong> la funzione dichiarata nel codice precedente ed ottenere il risultato si usa il seguente codice:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ris</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">scriviNome</span>();
+</code></pre></div><p>La variabile <code>ris</code> assume quindi valore <code>Mario Rossi</code>, dato che l&rsquo;istruzione <code>return</code> restituisce questo valore.</p>
+<h2 id="parametri">Parametri</h2>
+<p>L&rsquo;operazione che viene svolta da una funzione può necessitare di uno o più parametri su cui lavorare.</p>
+<p>L&rsquo;esempio visto fin&rsquo;ora della funzione <code>scriviNome</code> mostrava sempre lo stesso nome (Mario Rossi). Questa funzione potrebbe essere generalizzata permettendo di scrivere un qualsiasi nome e cognome. Ciò significa che è necessario passare alla funzione <code>scriviNome</code> il nome ed il cognome da mostrare, <strong>passandoli come parametri</strong>.</p>
+<p>Per poter usare i parametri, questi devono essere indicati nella definizione tra le parentesi tonde, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>(<span style="color:#a6e22e">nome</span>, <span style="color:#a6e22e">cognome</span>) {
+    <span style="color:#e6db74">&#39;use strict&#39;</span>;
+    
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">nome</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">cognome</span>);
+}
+</code></pre></div><p>Come si può notare, i parametri <code>nome</code> e <code>cognome</code> passati alla funzione sono utilizzati come se fossero delle variabili.</p>
+<p><strong>Definita</strong> la funzione con i parametri, è possibile <strong>invocarla</strong> passando i valori da utilizzare sempre tra le parentesi tonde, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Mario&#34;</span>, <span style="color:#e6db74">&#34;Rossi&#34;</span>);
+<span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Giuseppe&#34;</span>, <span style="color:#e6db74">&#34;Verdi&#34;</span>);
+<span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Pinco&#34;</span>, <span style="color:#e6db74">&#34;Pallino&#34;</span>);
+<span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Tizio&#34;</span>, <span style="color:#e6db74">&#34;Caio&#34;</span>);
+</code></pre></div><p>L&rsquo;esempio precedente mostra il seguente output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Mario Rossi
+Giuseppe Verdi
+Pinco Pallino
+Tizio Caio
+</code></pre></div><p>L&rsquo;uso dei parametri ci permette quindi di rendere più &ldquo;generica&rdquo; l&rsquo;operazione definita dalla funzione.</p>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
