@@ -6,10 +6,19 @@
     <description>Recent content in web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>07 - Istruzioni basilari per processare il contenuto di una pagina web</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/interazionehtml/</link>
+      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/interazionehtml/</guid>
+      <description>07 - Istruzioni basilari per processare il contenuto di una pagina web</description>
+    </item>
     
     <item>
       <title>06 - Funzioni</title>
