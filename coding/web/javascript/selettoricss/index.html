@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>08 - DOM e selettori CSS - Coding e Paduli</title>
+    <script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+    <meta name="description" content="08 - DOM e selettori CSS">
+    <meta property="og:title" content="08 - DOM e selettori CSS" />
+<meta property="og:description" content="08 - DOM e selettori CSS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/selettoricss/" />
+<meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+<meta property="article:published_time" content="2020-05-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-04T00:00:00+00:00" />
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="08 - DOM e selettori CSS"/>
+<meta name="twitter:description" content="08 - DOM e selettori CSS"/>
+
+    
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/static/css/customImages.css">
+
+    <link rel="shortcut icon" href="/static/wifi-5.svg" type="image/svg+xml">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+				<div class="logo__title">Coding e Paduli</div>
+				<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-05-04T00:00:00Z">May 04, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">javascript</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="08---dom-e-selettori-css">08 - DOM e selettori CSS</h1>
+<h2 id="dom">DOM</h2>
+<p>Il Document Object Model (DOM) è un&rsquo;interfaccia che permette di rappresentare la struttura di un documento come un albero, consentendo le classiche operazioni di creazione, lettura, modifica e cancellazione di un nodo dell&rsquo;albero (CRUD è un&rsquo;abbreviazione che indica le operazioni indicate, ovvero Create, Read, Update e Delete).</p>
+<h2 id="selettori-css">Selettori CSS</h2>
+<p>Le operazioni di selezione di un&rsquo;elemento del documento avvengono attraverso i selettori CSS. Le funzioni principali per la selezione di elementi sono <code>document.querySelector</code> e <code>document.querySelectorAll</code>.</p>
+<p>Man mano che gli standard di Ecmascript si evolvevano, venivano definiti nuovi tipi di selettori, che anche oggi sono identificati per livelli: dal primo al quarto livello.</p>
+<p>I nuovi selettori, definiti nei livelli &ldquo;superiori&rdquo; vanno a potenziare e rendere più compatta la sintassi per la selezione degli elementi del DOM.</p>
+<p>I selettori possono essere combinati in modo da formare combinazioni molto potenti.</p>
+<h3 id="selettore-universale">Selettore universale</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>Seleziona tutti gli elementi;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selettore-per-id">Selettore per id</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#E</td>
+<td>Seleziona il tag con id E;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selettore-per-classe">Selettore per classe</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.C</td>
+<td>Seleziona i tag che hanno classe C;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selettore-per-elemento-tag">Selettore per elemento (tag)</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E</td>
+<td>Seleziona i tag E;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selettori-per-attributi">Selettori per attributi</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[A]</td>
+<td>Seleziona i tag con attributo A avente qualsiasi valore;</td>
+</tr>
+<tr>
+<td>[A=&quot;V&rdquo;]</td>
+<td>Seleziona i tag con attributo A il cui valore è V;</td>
+</tr>
+<tr>
+<td>[A=&quot;V&rdquo; s]</td>
+<td>Seleziona i tag con attributo A il cui valore è V (case-sensitive);</td>
+</tr>
+<tr>
+<td>[A=&quot;V&rdquo; i]</td>
+<td>Seleziona i tag con attributo A il cui valore è V (case-insensitive);</td>
+</tr>
+<tr>
+<td>[A^=&quot;V&rdquo;]</td>
+<td>Seleziona i tag con attributo A il cui valore inizia per V;</td>
+</tr>
+<tr>
+<td>[A$=&quot;V&rdquo;]</td>
+<td>Seleziona i tag con attributo A il cui valore termina per V;</td>
+</tr>
+<tr>
+<td>[A*=&quot;V&rdquo;]</td>
+<td>Seleziona i tag con attributo A il cui valore contiene V;</td>
+</tr>
+<tr>
+<td>[A=&quot;V&rdquo;]</td>
+<td>Seleziona i tag con attributo A il cui valore è V oppure è V seguito immediatamente da un carattere &ldquo;trattino&rdquo; <code>-</code>;</td>
+</tr>
+<tr>
+<td>[A~=&quot;V&rdquo;]</td>
+<td>Seleziona i tag con attributo A il cui valore è una lista di stringhe separata da uno spazio contenente, tra i vari valori, il valore V;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selettori-per-raggruppamento">Selettori per raggruppamento</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1,S2</td>
+<td>Seleziona i tag selezionati dal selettore S1 o dal selettore S2;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selettori-per-relazione-di-parentela">Selettori per relazione di &ldquo;parentela&rdquo;</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E F</td>
+<td>Seleziona i tag F discendenti dei tag E;</td>
+</tr>
+<tr>
+<td>E &gt; F</td>
+<td>Seleziona i tag F figli diretti dei tag E;</td>
+</tr>
+<tr>
+<td>E + F</td>
+<td>Seleziona i tag F, fratelli di E, che seguono immediatamente i tag E;</td>
+</tr>
+<tr>
+<td>E ~ F</td>
+<td>Seleziona i tag F, fratelli di E, che seguono (anche non immediatamente) i tag E;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selettori-per-posizione">Selettori per posizione</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:first-child</td>
+<td>Seleziona il primo figlio (diretto);</td>
+</tr>
+<tr>
+<td>:last-child</td>
+<td>Seleziona l&rsquo;ultimo figlio (diretto);</td>
+</tr>
+<tr>
+<td>:only-child</td>
+<td>Seleziona gli elementi che sono figli unici (senza fratelli);</td>
+</tr>
+<tr>
+<td>:nth-child(I)</td>
+<td>Seleziona l&rsquo;<strong>I</strong>-esimo figlio;</td>
+</tr>
+<tr>
+<td>:nth-child(even</td>
+<td>odd)</td>
+</tr>
+<tr>
+<td>:nth-child(Xn+Y)</td>
+<td>Seleziona i figli multipli di X con spiazzamento Y;</td>
+</tr>
+<tr>
+<td>:nth-last-child(even</td>
+<td>odd)</td>
+</tr>
+<tr>
+<td>:nth-last-child(Xn+Y)</td>
+<td>Seleziona i figli multipli di X con spiazzamento Y partendo dall&rsquo;ultimo elemento ed andando a ritroso;</td>
+</tr>
+<tr>
+<td>S1:first-of-type</td>
+<td>Seleziona il primo elemento del tipo specificato dal selettore S1;</td>
+</tr>
+<tr>
+<td>S1:last-of-type</td>
+<td>Seleziona l&rsquo;ultimo elemento del tipo specificato dal selettore S1;</td>
+</tr>
+<tr>
+<td>S1:only-of-type</td>
+<td>Seleziona l&rsquo;unico figlio del tipo specificato dal selettore S1;</td>
+</tr>
+<tr>
+<td>S1:nth-of-type(I)</td>
+<td>Seleziona l&rsquo;elemento in posizione <strong>I</strong>-esima del tipo specificato dal selettore S</td>
+</tr>
+<tr>
+<td>S1:nth-of-type(even</td>
+<td>odd)</td>
+</tr>
+<tr>
+<td>S1:nth-of-type(Xn+Y)</td>
+<td>Seleziona gli elementi in posizione che è multiplo di X con spiazzamento Y del tipo specificato dal selettore S1;</td>
+</tr>
+<tr>
+<td>S1:nth-last-of-type(I)</td>
+<td>Seleziona l&rsquo;elemento in posizione <strong>I</strong>-esima del tipo specificato dal selettore S1, partendo dall&rsquo;ultimo elemento ed andando a ritroso;</td>
+</tr>
+<tr>
+<td>S1:nth-last-of-type(even</td>
+<td>odd)</td>
+</tr>
+<tr>
+<td>S1:nth-last-of-type(Xn+Y)</td>
+<td>Seleziona gli elementi in posizione che è multiplo di X con spiazzamento Y del tipo specificato dal selettore S1, partendo dall&rsquo;ultimo elemento ed andando a ritroso;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selettori-per-pseudo-classi">Selettori per pseudo-classi</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:active</td>
+<td>Seleziona gli elementi attivati, come link o pulsanti;</td>
+</tr>
+<tr>
+<td>:any-link</td>
+<td>Seleziona i link visitati (<code>:visited</code>) o meno (<code>:link</code>);</td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>Seleziona le checkbox, i radio o gli option che sono selezionati;</td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>Seleziona gli elementi disabilitati;</td>
+</tr>
+<tr>
+<td>:empty</td>
+<td>Seleziona gli elementi senza figli;</td>
+</tr>
+<tr>
+<td>:enabled</td>
+<td>Seleziona gli elementi abilitati;</td>
+</tr>
+<tr>
+<td>:focus</td>
+<td>Seleziona l&rsquo;elemento che ha il focus;</td>
+</tr>
+<tr>
+<td>:focus-within</td>
+<td>Seleziona gli elementi che contengono l&rsquo;elemento che ha il focus;</td>
+</tr>
+<tr>
+<td>:has(S1)</td>
+<td>Seleziona gli elementi solo se il selettore S1 seleziona un elemento;</td>
+</tr>
+<tr>
+<td>:hover</td>
+<td>Seleziona gli elementi che si trovano sotto il puntatore del mouse;</td>
+</tr>
+<tr>
+<td>:indeterminate</td>
+<td>Seleziona le checkbox ed i radio che hanno valore indeterminato;</td>
+</tr>
+<tr>
+<td>:in-range</td>
+<td>Seleziona gli input con valore compreso tra i min e max specificati;</td>
+</tr>
+<tr>
+<td>:invalid</td>
+<td>Seleziona gli elementi del form con errori di validazione;</td>
+</tr>
+<tr>
+<td>:link</td>
+<td>Seleziona i link non ancora visitati;</td>
+</tr>
+<tr>
+<td>:not(S1)</td>
+<td>Seleziona gli elementi non selezionati dal selettore S1;</td>
+</tr>
+<tr>
+<td>:optional</td>
+<td>Seleziona gli elementi del form non obbligatori (senza attributo <code>required</code>);</td>
+</tr>
+<tr>
+<td>:out-of-range</td>
+<td>Seleziona gli input con valore non compreso tra i min e max specificati;</td>
+</tr>
+<tr>
+<td>:read-only</td>
+<td>Seleziona gli elementi del form non editabili;</td>
+</tr>
+<tr>
+<td>:read-write</td>
+<td>Seleziona gli elementi del form editabili;</td>
+</tr>
+<tr>
+<td>:required</td>
+<td>Seleziona gli elementi del form obbligatori (con attributo <code>required</code>);</td>
+</tr>
+<tr>
+<td>:valid</td>
+<td>Seleziona gli elementi del form validati;</td>
+</tr>
+<tr>
+<td>:visited</td>
+<td>Seleziona i link visitati;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selettori-per-pseudo-elementi">Selettori per pseudo-elementi</h3>
+<table>
+<thead>
+<tr>
+<th>Selettore</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>::after</td>
+<td>Seleziona lo pseudo-elemento <code>::after</code>;</td>
+</tr>
+<tr>
+<td>::before</td>
+<td>Seleziona lo pseudo-elemento <code>::before</code>;</td>
+</tr>
+<tr>
+<td>::selection</td>
+<td>Seleziona lo pseudo-elemento corrispondente al testo selezionato;</td>
+</tr>
+</tbody>
+</table>
+
+		</div>
+	</article>
+</main>
+
+<script src="/static/coding/web/javascript/selettoriCSS.js"></script>
+
+
+
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+<script async defer src="/js/menu.js"></script>
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

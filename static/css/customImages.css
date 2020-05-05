@@ -1,0 +1,51 @@
+/* Extra Small Devices, Phones */
+@media screen and (min-width : 320px) {
+	img {
+		width: 100%;
+		max-width: 80vw;
+		max-height: 75vh;
+
+		object-fit: contain;
+	}
+}
+/* Small Devices, Tablets */
+@media screen and (min-width : 768px) {
+	img {
+		width: 100%;
+		max-width: 80vw;
+		max-height: 75vh;
+
+		object-fit: contain;
+	}
+}
+/* Medium Devices, Desktops */
+@media screen and (min-width : 992px) {
+	img {
+		width: 100%;
+		max-width: 100vw;
+		max-height: 75vh;
+
+		object-fit: contain;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media screen and (min-width : 1200px) {
+	img {
+		width: 100%;
+		max-width: 100vw;
+		max-height: 75vh;
+
+		object-fit: contain;
+	}
+}
+
+@media print {
+	img {
+		width: 100%;
+		max-width: 80vw;
+		max-height: 40vh;
+
+		object-fit: contain;
+	}
+}
