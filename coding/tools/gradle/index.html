@@ -384,7 +384,10 @@ tasks <span style="color:#f92672">-</span> Displays the tasks runnable from root
 <p><code>ear</code>: è un plugin che estende il plugin <code>java</code> ed è specializzato nella gestione di un&rsquo;applicazione enterprise; Non sarà trattato in questo articolo basilare;</p>
 </li>
 <li>
-<p><code>gretty</code>: è un plugin che in questo articolo viene aggiunto per completezza; Serve ad automatizzare ulteriormente le fasi di progetto gestendo il server ed il deploy dell&rsquo;applicazione.</p>
+<p><code>gretty</code>: è un plugin che in questo articolo viene aggiunto per completezza; Serve ad automatizzare ulteriormente le fasi di progetto gestendo il server ed il deploy dell&rsquo;applicazione;</p>
+</li>
+<li>
+<p><code>eclipse-wtp</code>: è un plugin che che estende il plugin <code>eclipse</code> ed in questo articolo viene aggiunto per completezza; Serve ad automatizzare la creazione di file necessari a lavorare con Eclipse IDE.</p>
 </li>
 </ul>
 <h3 id="plugin-java">Plugin java</h3>
@@ -508,7 +511,7 @@ application <span style="color:#f92672">{</span>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     id <span style="color:#e6db74">&#39;war&#39;</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h3 id="gretty">Gretty</h3>
+</code></pre></div><h3 id="plugin-gretty">Plugin Gretty</h3>
 <p>Gretty è un plugin che serve ad automatizzare ulteriormente la gestione del progetto. Permette di scaricare automaticamente il server, di avviarlo, riavviarlo e stopparlo, ed ancora di effettuare il deploy dell&rsquo;applicazione web sul server.</p>
 <p>I task che il plugin mette a disposizione sono molteplici, ma gli essenziali sono:</p>
 <ul>
@@ -527,6 +530,17 @@ gretty <span style="color:#f92672">{</span>
     httpPort <span style="color:#ae81ff">8080</span>
     contextPath <span style="color:#e6db74">&#39;/web&#39;</span>
 <span style="color:#f92672">}</span>
+</code></pre></div><h3 id="plugin-eclipse-wtp">Plugin eclipse-wtp</h3>
+<p>eclipse-wtp è un plugin che estende il plugin <code>eclipse</code> e serve ad automatizzare la creazione di file necessari ad Eclipse IDE.</p>
+<p>I task che il plugin mette a disposizione sono principalmente:</p>
+<ul>
+<li><code>cleanEclipse</code>: Rimuove i file <code>.project</code>, <code>.classpath</code> e <code>.settings/org.eclipse.jdt.core.prefs</code>;</li>
+<li><code>eclipse</code>: Crea i file <code>.project</code>, <code>.classpath</code> e <code>.settings/org.eclipse.jdt.core.prefs</code>.</li>
+</ul>
+<p>La configurazione del proprio progetto per l&rsquo;uso del plugin prevede la sola dichiarazione del plugin:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+    id <span style="color:#e6db74">&#39;eclipse-wtp&#39;</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><h2 id="esempio-completo-per-applicazioni-java">Esempio completo per applicazioni java</h2>
 <p>Di seguito un esempio completo per la gestione di un&rsquo;applicazione Java con Gradle:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
@@ -534,11 +548,13 @@ gretty <span style="color:#f92672">{</span>
 </span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;application&#39;</span>
     <span style="color:#75715e">// add support for generating project&#39;s reports.
 </span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;project-report&#39;</span>
+    <span style="color:#75715e">// add support for Eclipse IDE.
+</span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;eclipse-wtp&#39;</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#75715e">// all these tasks to execute by default. 
 </span><span style="color:#75715e">// To get a complete list, run ./gradle run --dry-run
-</span><span style="color:#75715e"></span>defaultTasks <span style="color:#e6db74">&#39;clean&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;compileJava&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;jar&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;assemble&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;compileTestJava&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;test&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;build&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;javadoc&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;projectReport&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;run&#39;</span>
+</span><span style="color:#75715e"></span>defaultTasks <span style="color:#e6db74">&#39;clean&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;compileJava&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;jar&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;assemble&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;compileTestJava&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;test&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;build&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;eclipse&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;javadoc&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;projectReport&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;run&#39;</span>
 
 repositories <span style="color:#f92672">{</span>
     <span style="color:#75715e">// Use jcenter for resolving dependencies.
@@ -572,7 +588,7 @@ application <span style="color:#f92672">{</span>
     <span style="color:#75715e">// Define the main class for the application.
 </span><span style="color:#75715e"></span>    mainClassName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;j2se.main.MainClass&#39;</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>Si nota che è stato aggiunto sia il plugin <code>application</code> per la gestione e l&rsquo;esecuzione di un progetto java, sia il plugin <code>project-report</code> per la creazione dei report di progetto.</p>
+</code></pre></div><p>Si nota che è stato aggiunto sia il plugin <code>application</code> per la gestione e l&rsquo;esecuzione di un progetto java, sia il plugin <code>project-report</code> per la creazione dei report di progetto, sia il plugin <code>eclipse</code> per gestire il progetto con Eclipse IDE.</p>
 <p>E stata definita la lista (quasi completa) di task che si desidera vengano lanciati di default, sono state configurate delle voci da aggiungere al file <code>Manifest.mf</code> del pacchetto &ldquo;jar&rdquo; ed è indicata la classe java che contiene il metodo &ldquo;main&rdquo; da eseguire per lanciare l&rsquo;applicazione.</p>
 <h2 id="esempio-completo-per-applicazioni-web-in-java">Esempio completo per applicazioni web in java</h2>
 <p>Di seguito un esempio completo per la gestione di un&rsquo;applicazione web Java con Gradle:</p>
@@ -581,13 +597,15 @@ application <span style="color:#f92672">{</span>
 </span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;war&#39;</span>
     <span style="color:#75715e">// add support for generating project&#39;s reports.    
 </span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;project-report&#39;</span>
+    <span style="color:#75715e">// add support for Eclipse IDE.
+</span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;eclipse-wtp&#39;</span>
     <span style="color:#75715e">// add support for managing the servlet containers.
 </span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;org.gretty&#39;</span> version <span style="color:#e6db74">&#39;3.0.1&#39;</span> 
 <span style="color:#f92672">}</span>
 
 <span style="color:#75715e">// all these tasks to execute by default.
 </span><span style="color:#75715e"></span> <span style="color:#75715e">// To get a complete list, run ./gradle run --dry-run
-</span><span style="color:#75715e"></span>defaultTasks <span style="color:#e6db74">&#39;clean&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;war&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;appStart&#39;</span>
+</span><span style="color:#75715e"></span>defaultTasks <span style="color:#e6db74">&#39;clean&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;war&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;eclipse&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;appStart&#39;</span>
 
 repositories <span style="color:#f92672">{</span>
     <span style="color:#75715e">// Use jcenter for resolving dependencies.
@@ -602,6 +620,7 @@ description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#3
 dependencies <span style="color:#f92672">{</span>
     implementation <span style="color:#e6db74">&#39;jstl:jstl:1.2&#39;</span>
     implementation <span style="color:#e6db74">&#39;org.eclipse.jetty:jetty-annotations:9.4.20.v20190813&#39;</span>
+    implementation <span style="color:#e6db74">&#39;org.eclipse.jetty:jetty-servlets:9.4.20.v20190813&#39;</span>
     implementation <span style="color:#e6db74">&#39;javax:javaee-api:8.0&#39;</span>
 
     <span style="color:#75715e">// This dependency is used by the application.
@@ -616,8 +635,45 @@ gretty <span style="color:#f92672">{</span>
     httpPort <span style="color:#ae81ff">8080</span>
     contextPath <span style="color:#e6db74">&#39;/web&#39;</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>Si nota che è stato aggiunto sia il plugin <code>war</code> per la gestione di un&rsquo;applicazione web in java, sia il plugin <code>project-report</code> per la creazione dei report di progetto, sia il plugin <code>org.gretty</code> per la gestione del servletContainer.</p>
+</code></pre></div><p>Si nota che è stato aggiunto sia il plugin <code>war</code> per la gestione di un&rsquo;applicazione web in java, sia il plugin <code>project-report</code> per la creazione dei report di progetto, sia il plugin <code>eclipse</code> per gestire il progetto con Eclipse IDE, sia il plugin <code>org.gretty</code> per la gestione del servletContainer.</p>
 <p>E stata definita la lista di task che si desidera vengano lanciati di default, sono state configurate le opzioni relative al server da avviare per deployare ed eseguire l&rsquo;applicazione.</p>
+<h3 id="esempio-di-file-srcmainwebappweb-infwebxml-per-chiamate-cors">Esempio di file src/main/webapp/WEB-INF/web.xml per chiamate CORS</h3>
+<p>Per abilitare le chiamate CORS (Cross-Origin resource sharing) sul server Jetty, è necessario aggiungere al progetto il seguente file di configurazione <code>src/main/webapp/WEB-INF/web.xml</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;web-app</span> <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> 
+	<span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://java.sun.com/xml/ns/javaee&#34;</span> 
+	<span style="color:#a6e22e">xmlns:web=</span><span style="color:#e6db74">&#34;http://java.sun.com/xml/ns/javaee&#34;</span> 
+	<span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://java.sun.com/xml/ns/javaee 
+</span><span style="color:#e6db74">	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&#34;</span> 
+	<span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;3.0&#34;</span><span style="color:#f92672">&gt;</span>	
+	<span style="color:#f92672">&lt;filter&gt;</span>
+	   <span style="color:#f92672">&lt;filter-name&gt;</span>cross-origin<span style="color:#f92672">&lt;/filter-name&gt;</span>
+	   <span style="color:#f92672">&lt;filter-class&gt;</span>org.eclipse.jetty.servlets.CrossOriginFilter<span style="color:#f92672">&lt;/filter-class&gt;</span>
+	   <span style="color:#f92672">&lt;init-param&gt;</span>
+	       <span style="color:#f92672">&lt;param-name&gt;</span>allowedOrigins<span style="color:#f92672">&lt;/param-name&gt;</span>
+	       <span style="color:#f92672">&lt;param-value&gt;</span>*<span style="color:#f92672">&lt;/param-value&gt;</span>
+	   <span style="color:#f92672">&lt;/init-param&gt;</span>
+	   <span style="color:#f92672">&lt;init-param&gt;</span>
+	       <span style="color:#f92672">&lt;param-name&gt;</span>allowedMethods<span style="color:#f92672">&lt;/param-name&gt;</span>
+	       <span style="color:#f92672">&lt;param-value&gt;</span>GET,POST,OPTIONS,DELETE,PUT,HEAD<span style="color:#f92672">&lt;/param-value&gt;</span>
+	   <span style="color:#f92672">&lt;/init-param&gt;</span>
+	   <span style="color:#f92672">&lt;init-param&gt;</span>
+	       <span style="color:#f92672">&lt;param-name&gt;</span>allowedHeaders<span style="color:#f92672">&lt;/param-name&gt;</span>
+	       <span style="color:#f92672">&lt;param-value&gt;</span>origin, content-type, accept, authorization<span style="color:#f92672">&lt;/param-value&gt;</span>
+	   <span style="color:#f92672">&lt;/init-param&gt;</span>
+	 <span style="color:#f92672">&lt;/filter&gt;</span>
+	 <span style="color:#f92672">&lt;filter-mapping&gt;</span>
+	     <span style="color:#f92672">&lt;filter-name&gt;</span>cross-origin<span style="color:#f92672">&lt;/filter-name&gt;</span>
+	     <span style="color:#f92672">&lt;url-pattern&gt;</span>*<span style="color:#f92672">&lt;/url-pattern&gt;</span>
+	 <span style="color:#f92672">&lt;/filter-mapping&gt;</span>
+<span style="color:#f92672">&lt;/web-app&gt;</span>
+</code></pre></div><p>Come si nota, il filtro <code>org.eclipse.jetty.servlets.CrossOriginFilter</code>, a cui è stato assegnato il nome <code>cross-origin</code>, abilita le richieste:</p>
+<ul>
+<li>effettuate attraverso HTTP <strong>GET, POST, OPTIONS, DELETE, PUT, HEAD</strong>, (come indicato in <code>allowedMethods</code>);</li>
+<li>di qualsiasi risorsa (quindi su qualsiasi URL, come indicato in <code>url-pattern</code>);</li>
+<li>provenienti da qualsiasi origine (come indicato in <code>allowedOrigins</code>);</li>
+<li>solo se indicano nell&rsquo;header HTTP uno dei parametri a scelta tra <strong>origin, content-type, accept, authorization</strong> (come indicato in <code>allowedHeaders</code>).</li>
+</ul>
 
 		</div>
 	</article>

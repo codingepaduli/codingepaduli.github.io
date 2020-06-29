@@ -220,11 +220,38 @@
     
     <item>
       <title>Shell</title>
+      <link>http://codingepaduli.github.io/coding/link-shell/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/link-shell/</guid>
+      <description>Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell&#39;&gt;Shell&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
       <link>http://codingepaduli.github.io/coding/shell/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/shell/</guid>
       <description>Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>http://codingepaduli.github.io/coding/link-tools/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/link-tools/</guid>
+      <description>Strumenti di lavoro e risorse per il programmatore nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/tools&#39;&gt;Tools&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>http://codingepaduli.github.io/coding/link-web/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/link-web/</guid>
+      <description>Corsi di programmazione web nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web&#39;&gt;Web&lt;/a&gt;</description>
     </item>
     
     <item>
