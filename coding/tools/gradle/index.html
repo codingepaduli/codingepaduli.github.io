@@ -530,6 +530,11 @@ gretty <span style="color:#f92672">{</span>
     httpPort <span style="color:#ae81ff">8080</span>
     contextPath <span style="color:#e6db74">&#39;/web&#39;</span>
 <span style="color:#f92672">}</span>
+</code></pre></div><p>Una scelta opinabile riguarda il salvataggio dei log del server nella cartella &ldquo;home&rdquo; dell&rsquo;utente. Per cambiare tale scelta, si utilizzano le seguenti proprietà:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    // logging configuration 
+    logDir &#34;${buildDir}/log&#34; // pay attention to double quote 
+    logFileName &#39;calcolatrice&#39;
+    loggingLevel &#39;TRACE&#39;     // (loggingLevel &#39;ALL&#39;, &#39;DEBUG&#39;, &#39;ERROR&#39;, &#39;INFO&#39;, &#39;OFF&#39;, &#39;TRACE&#39;, &#39;WARN&#39;)
 </code></pre></div><h3 id="plugin-eclipse-wtp">Plugin eclipse-wtp</h3>
 <p>eclipse-wtp è un plugin che estende il plugin <code>eclipse</code> e serve ad automatizzare la creazione di file necessari ad Eclipse IDE.</p>
 <p>I task che il plugin mette a disposizione sono principalmente:</p>
@@ -634,6 +639,12 @@ gretty <span style="color:#f92672">{</span>
     servletContainer <span style="color:#e6db74">&#39;jetty9.4&#39;</span>
     httpPort <span style="color:#ae81ff">8080</span>
     contextPath <span style="color:#e6db74">&#39;/web&#39;</span>
+    
+    <span style="color:#75715e">// logging configuration 
+</span><span style="color:#75715e"></span>    logDir <span style="color:#e6db74">&#34;${buildDir}/log&#34;</span> <span style="color:#75715e">// pay attention to double quote 
+</span><span style="color:#75715e"></span>    logFileName <span style="color:#e6db74">&#39;calcolatrice&#39;</span>
+    loggingLevel <span style="color:#e6db74">&#39;TRACE&#39;</span>     <span style="color:#75715e">// (loggingLevel &#39;ALL&#39;, &#39;DEBUG&#39;, &#39;ERROR&#39;, &#39;INFO&#39;, &#39;OFF&#39;, &#39;TRACE&#39;, &#39;WARN&#39;)
+</span><span style="color:#75715e"></span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Si nota che è stato aggiunto sia il plugin <code>war</code> per la gestione di un&rsquo;applicazione web in java, sia il plugin <code>project-report</code> per la creazione dei report di progetto, sia il plugin <code>eclipse</code> per gestire il progetto con Eclipse IDE, sia il plugin <code>org.gretty</code> per la gestione del servletContainer.</p>
 <p>E stata definita la lista di task che si desidera vengano lanciati di default, sono state configurate le opzioni relative al server da avviare per deployare ed eseguire l&rsquo;applicazione.</p>
