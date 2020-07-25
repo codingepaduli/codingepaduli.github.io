@@ -95,14 +95,12 @@
 </div></div>
 		</header><div class="content post__content clearfix">
 			<h1 id="08---dom-e-selettori-css">08 - DOM e selettori CSS</h1>
-<h2 id="dom">DOM</h2>
 <p>Il Document Object Model (DOM) è un&rsquo;interfaccia che permette di rappresentare la struttura di un documento come un albero, consentendo le classiche operazioni di creazione, lettura, modifica e cancellazione di un nodo dell&rsquo;albero (CRUD è un&rsquo;abbreviazione che indica le operazioni indicate, ovvero Create, Read, Update e Delete).</p>
-<h2 id="selettori-css">Selettori CSS</h2>
 <p>Le operazioni di selezione di un&rsquo;elemento del documento avvengono attraverso i selettori CSS. Le funzioni principali per la selezione di elementi sono <code>document.querySelector</code> e <code>document.querySelectorAll</code>.</p>
 <p>Man mano che gli standard di Ecmascript si evolvevano, venivano definiti nuovi tipi di selettori, che anche oggi sono identificati per livelli: dal primo al quarto livello.</p>
 <p>I nuovi selettori, definiti nei livelli &ldquo;superiori&rdquo; vanno a potenziare e rendere più compatta la sintassi per la selezione degli elementi del DOM.</p>
 <p>I selettori possono essere combinati in modo da formare combinazioni molto potenti.</p>
-<h3 id="selettore-universale">Selettore universale</h3>
+<h2 id="selettore-universale">Selettore universale</h2>
 <table>
 <thead>
 <tr>
@@ -117,7 +115,17 @@
 </tr>
 </tbody>
 </table>
-<h3 id="selettore-per-id">Selettore per id</h3>
+<h3 id="esempio-duso-del-selettore-universale">Esempio d&rsquo;uso del selettore universale</h3>
+<p>Supponendo che la pagina HTML contenga solo gli elementi:</p>
+<div id="univ">
+  <p>paragrafo1</p>
+  <p>paragrafo2</p>
+</div>
+<p>Per selezionare gli elementi della pagina HTML, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;*&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#univ *')" value="seleziona"></p>
+<h2 id="selettore-per-id">Selettore per id</h2>
 <table>
 <thead>
 <tr>
@@ -132,7 +140,16 @@
 </tr>
 </tbody>
 </table>
-<h3 id="selettore-per-classe">Selettore per classe</h3>
+<h3 id="esempio-duso-del-selettore-per-id">Esempio d&rsquo;uso del selettore per id</h3>
+<p>Supponendo che la pagina HTML contenga il paragrafo identificato da un id, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo1&#34;</span>&gt;paragrafo 1&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Il codice elencato produce il seguente risultato:</p>
+<p id="paragrafo1">paragrafo 1</p>
+<p>Per selezionare il paragrafo, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#paragrafo1&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#paragrafo1')" value="seleziona"></p>
+<h2 id="selettore-per-classe">Selettore per classe</h2>
 <table>
 <thead>
 <tr>
@@ -147,7 +164,18 @@
 </tr>
 </tbody>
 </table>
-<h3 id="selettore-per-elemento-tag">Selettore per elemento (tag)</h3>
+<h3 id="esempio-duso-del-selettore-per-classe">Esempio d&rsquo;uso del selettore per classe</h3>
+<p>Supponendo che la pagina HTML contenga due paragrafi identificati dalla  stessa classe, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo&#34;</span>&gt;paragrafo 1&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo&#34;</span>&gt;paragrafo 2&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Il codice elencato produce il seguente risultato:</p>
+<p class="paragrafo">paragrafo 1</p>
+<p class="paragrafo">paragrafo 2</p>
+<p>Per selezionare i paragrafi, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;.paragrafo&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('.paragrafo')" value="seleziona"></p>
+<h2 id="selettore-per-elemento-tag">Selettore per elemento (tag)</h2>
 <table>
 <thead>
 <tr>
@@ -162,7 +190,20 @@
 </tr>
 </tbody>
 </table>
-<h3 id="selettori-per-attributi">Selettori per attributi</h3>
+<h3 id="esempio-duso-del-selettore-per-elemento">Esempio d&rsquo;uso del selettore per elemento</h3>
+<p>Supponendo che la pagina HTML contenga due paragrafi come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;paragrafo 1&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;paragrafo 2&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Il codice elencato produce il seguente risultato:</p>
+<div id="elem">
+  <p>paragrafo 1</p>
+  <p>paragrafo 2</p>
+</div>
+<p>Per selezionare i paragrafi, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;p&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#elem p')" value="seleziona"></p>
+<h2 id="selettori-per-attributi">Selettori per attributi</h2>
 <table>
 <thead>
 <tr>
@@ -177,7 +218,7 @@
 </tr>
 <tr>
 <td>[A=&quot;V&rdquo;]</td>
-<td>Seleziona i tag con attributo A il cui valore è V;</td>
+<td>Seleziona i tag con attributo A il cui valore è V (case-sensitive);</td>
 </tr>
 <tr>
 <td>[A=&quot;V&rdquo; s]</td>
@@ -200,7 +241,7 @@
 <td>Seleziona i tag con attributo A il cui valore contiene V;</td>
 </tr>
 <tr>
-<td>[A=&quot;V&rdquo;]</td>
+<td>[A|=&quot;V&rdquo;]</td>
 <td>Seleziona i tag con attributo A il cui valore è V oppure è V seguito immediatamente da un carattere &ldquo;trattino&rdquo; <code>-</code>;</td>
 </tr>
 <tr>
@@ -209,6 +250,47 @@
 </tr>
 </tbody>
 </table>
+<h3 id="esempio-duso-del-selettore-per-attributi">Esempio d&rsquo;uso del selettore per attributi</h3>
+<p>Supponendo che la pagina HTML contenga due link come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Link1&#34;</span> <span style="color:#a6e22e">data-custom</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value-v1 value-v2 value-v3&#34;</span>&gt;link 1&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Link2&#34;</span> <span style="color:#a6e22e">data-custom</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value-v1 value-v2 value-v4&#34;</span>&gt;link 2&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Il codice elencato produce il seguente risultato:</p>
+<div id="attr">
+  <a title="Link1" data-custom="value-v1 value-v2 value-v3">link 1</a>
+  <a title="Link2" data-custom="value-v1 value-v2 value-v4">link 2</a>
+</div>
+<p>Per selezionare i link con l&rsquo;attributo &ldquo;title&rdquo;, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[title]&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#attr [title]')" value="seleziona"></p>
+<p>Per selezionare i link con l&rsquo;attributo &ldquo;title&rdquo; avente valore &ldquo;Link1&rdquo; (si noti che è case-sensitive), si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[title=&#34;Link1&#34; s]&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#attr [title=\'Link1\' s]')" value="seleziona"></p>
+<p>Per selezionare i link con l&rsquo;attributo &ldquo;title&rdquo; avente valore &ldquo;link1&rdquo; (si noti che non è case-sensitive), si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[title=&#34;link1&#34; i]&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#attr [title=\'link1\' i]')" value="seleziona"></p>
+<p>Per selezionare i link con l&rsquo;attributo &ldquo;title&rdquo; che inizi con il valore &ldquo;Lin&rdquo;, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[title^=&#34;Lin&#34;]&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#attr [title^=\'Lin\']')" value="seleziona"></p>
+<p>Per selezionare i link con l&rsquo;attributo &ldquo;title&rdquo; terminante il valore &ldquo;k1&rdquo;, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[title$=&#34;k1&#34;]&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#attr [title$=\'k1\']')" value="seleziona"></p>
+<p>Per selezionare i link con l&rsquo;attributo &ldquo;title&rdquo; contenente il valore &ldquo;ink&rdquo;, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[title*=&#34;ink&#34;]&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#attr [title*=\'ink\']')" value="seleziona"></p>
+<p>Per selezionare i link con l&rsquo;attributo &ldquo;data-custom&rdquo;, contenente il valore che inizia con &ldquo;value&rdquo; e seguito opzionalmente dal carattere &ldquo;-&rdquo; e quindi da altra sequenza opzionale di caratteri, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[data-custom|=&#34;value&#34;]&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#attr [data-custom|=\'value\']')" value="seleziona"></p>
+<p>Per selezionare i link con l&rsquo;attributo &ldquo;data-custom&rdquo; contenente una lista di valori separati da uno spazio, e con la lista contenente il valore &ldquo;value-v4&rdquo; , si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[data-custom~=&#34;value-v2&#34;]&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#attr [data-custom~=\'value-v2\']')" value="seleziona"></p>
 <h3 id="selettori-per-raggruppamento">Selettori per raggruppamento</h3>
 <table>
 <thead>
@@ -224,6 +306,19 @@
 </tr>
 </tbody>
 </table>
+<h3 id="esempio-duso-del-selettore-per-raggruppamento">Esempio d&rsquo;uso del selettore per raggruppamento</h3>
+<p>Supponendo che la pagina HTML contenga un paragrafo ed un link, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;paragrafo 1&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">a</span>&gt;link 1&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>Il codice elencato produce il seguente risultato:</p>
+<div id="group">
+  <p>paragrafo 1</p>
+  <a>link 1</a>
+</div>
+<p>Per selezionare il paragrafo ed il link, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;p,a&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#group p, #group a')" value="seleziona"></p>
 <h3 id="selettori-per-relazione-di-parentela">Selettori per relazione di &ldquo;parentela&rdquo;</h3>
 <table>
 <thead>
