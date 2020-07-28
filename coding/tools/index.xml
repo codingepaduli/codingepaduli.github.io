@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Introduzione a Git</title>
+      <link>http://codingepaduli.github.io/coding/tools/git/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/git/</guid>
+      <description>Git - Un sistema per il controllo di versione distribuito</description>
+    </item>
+    
+    <item>
       <title>Gradle</title>
       <link>http://codingepaduli.github.io/coding/tools/gradle/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
