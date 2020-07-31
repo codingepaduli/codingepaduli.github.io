@@ -102,7 +102,7 @@
 		</header><div class="content post__content clearfix">
 			<h1 id="introduzione-a-git-ed-ai-sistemi-per-il-controllo-di-versione">Introduzione a Git ed ai sistemi per il controllo di versione</h1>
 <p>Git è un sistema per il controllo di versione distribuito. Inizialmente sviluppato da Linus Torvalds per gestire lo sviluppo del kernel Linux, oggi è utilizzato dalle aziende informatiche di tutto il mondo. Costituisce anche un requisito basilare delle conoscenze di uno sviluppatore informatico.</p>
-<p>Oggi, i progetti pubblicamente esposti dagli sviluppatore sui vari servizi di controllo di versione rappresentano una sorta di &ldquo;Instagram&rdquo; utilizzato però non per condividere foto e video di se, ma per condividere i propri lavori quali libri, animazioni 2D e 3D, software e così via.</p>
+<p>Oggi, i progetti pubblicamente esposti dagli sviluppatore sui vari servizi di controllo di versione rappresentano una sorta di &ldquo;Instagram&rdquo;, utilizzato per condividere non foto e video, ma i propri lavori, quali libri, animazioni 2D e 3D, software e così via.</p>
 <p>Per rendere l&rsquo;idea di cosa significhi &ldquo;controllo di versione&rdquo; (dall&rsquo;inglese Version Control System), si può immaginare un gruppo di studenti che devono svolgere un progetto da consegnare per un esame universitario. Il progetto può essere la scrittura di un libro, la realizzazione di disegni tecnici, lo sviluppo di un sito web e tanto altro.</p>
 <p>Nell&rsquo;analogia presentata, ogni studente ha una propria area di lavoro in cui crea le varie bozze ed effettua le varie prove, poi quando un proprio lavoro è completo lo si sposta in un quaderno ad anelli. Il quaderno ad anelli contiene solo ed esclusivamente i lavori completati, come la scrittura di un capitolo del libro, la realizzazione di una pagina del sito web oppure il disegno tecnico relativo l&rsquo;arredamento di una stanza di un palazzo.</p>
 <p>Anche nello studio del professore universitario si trova un quaderno ad anelli. I singoli studenti, periodicamente, si recano nello studio ed ognuno effettua una copia dei propri lavori e la mette nel quaderno ad anelli del professore. Allo stesso modo, effettua una copia dei lavori svolti dagli altri studenti, prendendoli dal quaderno ad anelli del professore, e la porta via per metterla nel proprio quaderno ad anelli personale.</p>
@@ -131,28 +131,48 @@
 <p>Il <strong>commit</strong>: E&rsquo; l&rsquo;operazione effettuata dall&rsquo;utente che permette di memorizzare nel sistema di controllo di versione le modifiche effettuate dall&rsquo;utente. Ad ogni commit viene salvata una nuova versione del repository. Nell&rsquo;analogia precedente, è rappresentato dal completamento di un lavoro che viene spostato dall&rsquo;area di lavoro (la scrivania) al proprio quaderno ad anelli.</p>
 </li>
 <li>
-<p>Le <strong>versioni</strong>: le operazioni di commit generano una nuova versione del lavoro svolto. Il lavoro precedente non viene cancellato, ma salvato, in modo da poter sempre tornare ad una versione precedente.</p>
+<p>Le <strong>versioni</strong>: le operazioni di commit generano una nuova versione del lavoro svolto. Il lavoro precedente non viene cancellato, ma salvato, in modo da poter sempre tornare ad una versione precedente. L&rsquo;ultima versione sul ramo di sviluppo sul quale lavora l&rsquo;utente è detta <strong>HEAD</strong>.</p>
 </li>
 <li>
-<p>Il <strong>repository locale</strong>: un insieme di file che si trovano ad una specifica versione. E&rsquo; ospitato sul proprio computer e non è necessario collegarsi alla rete internet per lavorare. Nell&rsquo;analogia precedente, ogni quaderno ad anelli di uno studente rappresenta un repository locale.</p>
+<p>Il <strong>repository locale</strong>: l&rsquo;insieme di file versionati e tracciati. Rappresenta l&rsquo;insieme di file su cui git lavora in locale. E&rsquo; ospitato sul proprio computer e non è necessario collegarsi alla rete internet per lavorare. Nell&rsquo;analogia precedente, ogni quaderno ad anelli di uno studente rappresenta un repository locale.</p>
 </li>
 <li>
-<p>Il <strong>repository remoto</strong>: un insieme di file che si trovano ad una specifica versione. E&rsquo; ospitato sul server e quindi c&rsquo;è bisogno del collegamento ad internet per ricevere il lavoro degli altri studenti e per inviare il proprio lavoro. Nell&rsquo;analogia precedente, è rappresentato dal quaderno ad anelli presente nello studio del professore.</p>
+<p>Il <strong>repository remoto</strong>: l&rsquo;insieme di file versionati e tracciati. Rappresenta l&rsquo;insieme di file su cui git lavora in remoto. E&rsquo; ospitato sul server e quindi c&rsquo;è bisogno del collegamento ad internet per ricevere il lavoro degli altri studenti e per inviare il proprio lavoro. Nell&rsquo;analogia precedente, è rappresentato dal quaderno ad anelli presente nello studio del professore.</p>
 </li>
 <li>
 <p>La <strong>sincronizzazione</strong>: l&rsquo;operazione effettuata dall&rsquo;utente che permette di inviare i lavori dal proprio repository locale al remoto remoto (in git è l&rsquo;operazione di <strong>push</strong>) e, viceversa, di ricevere i lavori dal repository remoto a quello locale (in git è l&rsquo;operazione di <strong>pull</strong>). Nell&rsquo;analogia precedente, è rappresentato dall&rsquo;azione di copia del lavoro presente nel proprio quaderno ad anelli al quaderno ad anelli dello studio del professore e, viceversa, dall&rsquo;azione di copia del lavoro presente nel quaderno ad anelli dello studio nel proprio quaderno ad anelli.</p>
 </li>
 <li>
-<p>La <strong>fusione</strong>: l&rsquo;operazione effettuata dall&rsquo;utente che permette di unire due lavori. Nell&rsquo;analogia precedente, è rappresentata dall&rsquo;unione delle modifiche apportate da studenti diversi ad uno stesso capitolo o uno stesso disegno.</p>
+<p>I <strong>rami di sviluppo</strong>, detti <strong>branches</strong>: E&rsquo; possibile seguire più rami di sviluppo dell&rsquo;opera. Il ramo principale su git è detto <strong>master</strong>, nei sistemi di controllo versione è chiamato <strong>trunk</strong>. Gli altri rami di sviluppo sono detti <strong>branches</strong>. L&rsquo;operazione che permette di unire due rami di sviluppo è la fusione, detta <strong>merge</strong>. Si rimanda al capitolo sui branches per una chiara spiegazione dei concetti relativi allo sviluppo su più rami.</p>
 </li>
 <li>
 <p>La <strong>clonazione</strong>: l&rsquo;operazione di creazione di un repository locale a partire da un repository remoto. Nell&rsquo;analogia precedente, è rappresentata dal nuovo studente che viene aggiunto al gruppo, e che quindi compra un nuovo quaderno ad anelli nel quale poi clona il contenuto del quaderno ad anelli del professore.</p>
 </li>
 </ul>
-<h2 id="registrazione">Registrazione</h2>
+<h2 id="gestione-repository">Gestione repository</h2>
+<p>I servizi online permettono la gestione di un repository git tramite interfaccia web, che rende semplice l&rsquo;interazione con l&rsquo;utente.</p>
 <p>Per la creazione di un repository remoto. ci si può registrare su uno dei vari servizi online. Tra i più noti ci sono GitHub, GitLab e BitBucket.</p>
 <p>Una volta registrati e creato il proprio repository, si può procedere alla configurazione di git, alla clonazione del repository e quindi alla condivisione con altri utenti del proprio lavoro presente sul repository.</p>
-<h2 id="prima-configurazione">Prima configurazione</h2>
+<h3 id="creazione-repository-su-github">Creazione repository su GitHub</h3>
+<p>GitHub permette la creazione di un repository remoto attraverso un&rsquo;interfaccia grafica, in cui inserire il nome, la descrizione e la visibilità.</p>
+<p><img src="/static/coding/tools/GitHub-Repository-New.png" alt="Image" title="GitHub - New Repository"></p>
+<p>Creato il repository, viene fornito un URL per l&rsquo;accesso e la clonazione dello stesso, come in figura:</p>
+<p><img src="/static/coding/tools/GitHub-Repository-URL.png" alt="Image" title="GitHub - Repository URL"></p>
+<p>L&rsquo;indirizzo completo del repository su GitHub, non completamente riportato nell&rsquo;immagine, è il seguente:</p>
+<p><a href="https://github.com/codingepaduli/gitmergetutorial.git">https://github.com/codingepaduli/gitmergetutorial.git</a></p>
+<h3 id="creazione-repository-su-gitlab">Creazione repository su GitLab</h3>
+<p>GitLab permette la creazione di un repository remoto attraverso un&rsquo;interfaccia grafica, in cui inserire il nome, la descrizione e la visibilità.</p>
+<p><img src="/static/coding/tools/GitLab-Repository-New.png" alt="Image" title="GitLab - New Repository"></p>
+<p>Creato il repository, viene fornito un URL per l&rsquo;accesso e la clonazione dello stesso, come in figura:</p>
+<p><img src="/static/coding/tools/GitLab-Repository-URL.png" alt="Image" title="GitLab - Repository URL"></p>
+<p>L&rsquo;indirizzo completo del repository su GitLab, non completamente riportato nell&rsquo;immagine, è il seguente:</p>
+<p><a href="https://gitlab.com/codingepaduli/gitmergetutorial.git">https://gitlab.com/codingepaduli/gitmergetutorial.git</a></p>
+<h3 id="clonazione-repository">Clonazione repository</h3>
+<p>Una volta creato il repository remoto, bisogna prendere nota dell&rsquo;indirizzo web dello stesso per poi procedere alla clonazione, attraverso il seguente comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git clone https://github.com/codingepaduli/codingepaduli.git
+</code></pre></div><p>Si può verificare che il repository locale ha un riferimento al repository remoto, accedendo alla cartella creata ed utilizzando, al suo interno, il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote -v
+</code></pre></div><h3 id="prima-configurazione-del-repository">Prima configurazione del repository</h3>
 <p>Git ha 3 livelli di configurazione:</p>
 <ul>
 <li>configurazione di sistema, su linux si trova in <code>/etc/gitconfig</code>, su Windows si trova in <code>\Git\mingw64\etc\gitconfig</code>;</li>
@@ -176,27 +196,6 @@ git config --global user.email &#34;user@user.com&#34;
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git config --global core.autocrlf input
 </code></pre></div><p>Nella configurazione è utile anche impostare l&rsquo;editor di riferimento:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git config --global core.editor &#34;atom --wait&#34;
-</code></pre></div><h2 id="gestione-repository">Gestione repository</h2>
-<p>I servizi online permettono la gestione di un repository git tramite interfaccia web, che rende semplice l&rsquo;interazione con l&rsquo;utente.</p>
-<h3 id="creazione-repository-su-github">Creazione repository su GitHub</h3>
-<p>GitHub permette la creazione di un repository remoto attraverso un&rsquo;interfaccia grafica, in cui inserire il nome, la descrizione e la visibilità.</p>
-<p><img src="/static/coding/tools/GitHub-Repository-New.png" alt="Image" title="GitHub - New Repository"></p>
-<p>Creato il repository, viene fornito un URL per l&rsquo;accesso e la clonazione dello stesso, come in figura:</p>
-<p><img src="/static/coding/tools/GitHub-Repository-URL.png" alt="Image" title="GitHub - Repository URL"></p>
-<p>L&rsquo;indirizzo completo del repository su GitHub, non completamente riportato nell&rsquo;immagine, è il seguente:</p>
-<p><a href="https://github.com/codingepaduli/gitmergetutorial.git">https://github.com/codingepaduli/gitmergetutorial.git</a></p>
-<h3 id="creazione-repository-su-gitlab">Creazione repository su GitLab</h3>
-<p>GitLab permette la creazione di un repository remoto attraverso un&rsquo;interfaccia grafica, in cui inserire il nome, la descrizione e la visibilità.</p>
-<p><img src="/static/coding/tools/GitLab-Repository-New.png" alt="Image" title="GitLab - New Repository"></p>
-<p>Creato il repository, viene fornito un URL per l&rsquo;accesso e la clonazione dello stesso, come in figura:</p>
-<p><img src="/static/coding/tools/GitLab-Repository-URL.png" alt="Image" title="GitLab - Repository URL"></p>
-<p>L&rsquo;indirizzo completo del repository su GitLab, non completamente riportato nell&rsquo;immagine, è il seguente:</p>
-<p><a href="https://gitlab.com/codingepaduli/gitmergetutorial.git">https://gitlab.com/codingepaduli/gitmergetutorial.git</a></p>
-<h3 id="clonazione-repository">Clonazione repository</h3>
-<p>Una volta creato il repository remoto, bisogna prendere nota dell&rsquo;indirizzo web dello stesso per poi procedere alla clonazione, attraverso il seguente comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git clone https://github.com/codingepaduli/codingepaduli.git
-</code></pre></div><p>Si può verificare che il repository locale ha un riferimento al repository remoto, accedendo alla cartella creata ed utilizzando, al suo interno, il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote -v
 </code></pre></div><h3 id="staging-area-e-commit">Staging area e commit</h3>
 <p>Per creare una nuova versione del repository locale e poi sincronizzarla con il repository remoto, si può partire dalla creazione di tre file, <code>file1.txt</code>, <code>file2.txt</code> e <code>file3.txt</code>, in modo da seguire le varie operazioni.</p>
 <p>Creati i  tre file, si può aggiungere il primo file all&rsquo;area di lavoro, chiamata <strong>staging area</strong> o <strong>caching area</strong>, utilizzando il comando:</p>
@@ -220,7 +219,8 @@ Untracked files:
 </code></pre></div><p>Si nota che il file <code>file1.txt</code> risulta pronto per il commit (&ldquo;to be committed&rdquo;), mentre i file <code>file2.txt</code> e <code>file3.txt</code> risultano tra i file non tracciati (&ldquo;untracked&rdquo;).</p>
 <p>Effettuando ulteriori modifiche al file <code>file1.txt</code>, questo risulta modificato, come si nota visualizzando lo stato dei file attraverso il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git status
-</code></pre></div><p>L&rsquo;output è il seguente:</p>
+</code></pre></div><p>tenendo presente che per ora si sta facendo riferimento al  semplicemente
+L&rsquo;output è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Sul branch master
 Your branch is up to date with &#39;origin/master&#39;.
 
@@ -282,11 +282,18 @@ git commit -m &#34;Primo commit&#34;
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git stash drop stash@{0}
 </code></pre></div><p>dove il numero zero è l&rsquo;indice dell&rsquo;area temporanea da cancellare.</p>
 <h3 id="lavorare-con-più-origini-remote">Lavorare con più origini remote</h3>
-<p>Quando si effettua la clonazione di un repository, git crea un riferimento a questo repository remoto, chiamato <strong>origin</strong>, come evidenziato dal comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote -v
-</code></pre></div><p>E&rsquo; però possibile utilizzate più repository remoti, semplicemente aggiungendo un riferimento remoto, di seguito chiamato <strong>gitlab</strong>, al repository locale:</p>
+<p>Quando si effettua la clonazione di un repository, git crea un riferimento a questo repository remoto, chiamato <strong>origin</strong>:</p>
+<p>E&rsquo; però possibile utilizzate più repository remoti, semplicemente aggiungendo un riferimento remoto, di seguito chiamato <strong>gitlab</strong>, al repository locale:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote add gitlab https://gitlab.com/codingepaduli/codingepaduli.git
-</code></pre></div><p>Aggiunto il repository remoto, è possibile sincronizzarlo con il locale, semplicemente effettuando le classiche operazioni di <strong>push</strong> e <strong>pull</strong>, facendo però attenzione ad indicare l&rsquo;origine <strong>gitlab</strong> appena creata.</p>
+</code></pre></div><p>Per visualizzare i repository remoti, si può utilizzare il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote -v
+</code></pre></div><p>L&rsquo;output mostrato è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">gitlab	https://gitlab.com/codingepaduli/codingepaduli.git (fetch)
+gitlab	https://gitlab.com/codingepaduli/codingepaduli.git (push)
+origin	https://github.com/codingepaduli/codingepaduli.git (fetch)
+origin	https://github.com/codingepaduli/codingepaduli.git (push)
+</code></pre></div><p>Come si nota, i riferimenti remoti per le operazioni di invio e ricezione dati (&ldquo;push&rdquo; e &ldquo;fetch&rdquo;) possono essere differenti.</p>
+<p>Per sincronizzare il ramo di sviluppo principale <strong>master</strong> del repository remoto con il repository locale, si effettuano le classiche operazioni di <strong>push</strong> e <strong>pull</strong>, facendo però attenzione ad indicare l&rsquo;origine <strong>gitlab</strong> appena creata.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git push gitlab master
 git pull gitlab master
 </code></pre></div><p>Si nota che in questo caso viene sincronizzato il ramo di sviluppo principale <strong>master</strong>.</p>
@@ -329,6 +336,13 @@ git commit -m &#34;aggiunto file.txt&#34;
  content/coding/tools/Git.md                          |  84 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
  coding/tools/Git.md | Bin 39000 -&gt; 39569 bytes
  2 files changed, 80 insertions(+), 4 deletions(-)
+</code></pre></div><p>E&rsquo; possibile verificare che i 2 branch sono stati fusi in un&rsquo;unico branch, attraverso il comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git log --pretty=format:&#34;%h %s&#34; --graph
+</code></pre></div><p>L&rsquo;output indica in forma grafica che i rami di sviluppo sono stati fusi e che effettivamente confluiscono in un&rsquo;unico ramo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">*   b21a312 Merge pull request #1 
+|\  
+| * ae55ada Updated posts about tools
+|/  
 </code></pre></div><h3 id="merge-dei-rami-in-modalità-grafica">Merge dei rami in modalità grafica</h3>
 <p>Quando si vuole effettuare la fusione del ramo &ldquo;git-merge&rdquo; con il ramo &ldquo;master&rdquo;, si può utilizzare lo strumento grafico messo a disposizione dai servizi online.</p>
 <p>I passi consistono nel creare una &ldquo;New pull request&rdquo;, cliccando sul relativo pulsante:</p>
@@ -348,6 +362,28 @@ git commit -m &#34;aggiunto file.txt&#34;
 <p><img src="/static/coding/tools/GitHub-MergePullRequest-step3.png" alt="Image" title="GitHub - Merge Pull Request - step 3"></p>
 <p>Completata l&rsquo;operazione, la pull request risulta correttamente fusa nel ramo di sviluppo indicato.</p>
 <p><img src="/static/coding/tools/GitHub-MergePullRequest-step4.png" alt="Image" title="GitHub - Merge Pull Request - step 4"></p>
+<h2 id="contribuire-ad-altri-progetti">Contribuire ad altri progetti</h2>
+<p>Git permette di contribuire ai progetti esterni (di altri sviluppatori, anche sconosciuti) inviando sui loro repository delle pull request contenenti le proprie modifiche.</p>
+<p>Per questioni di sicurezza, però, non è possibile inviare lavoro su un repository che non è il proprio. Dato che si vuole apportare una modifica ad un repository di cui non si possiede la titolarità, è necessaria un&rsquo;operazione preliminare: la <strong>fork</strong>. Con questa operazione, si effettua una copia del repository dello sviluppatore e di questa copia si è titolari.</p>
+<p>Per contribuire al repository dell&rsquo;altro sviluppatore si effettuata la fork e la clonazione del repository, sul quale si apporteranno le modifiche, e quindi si crea una pull request tra il proprio repository ed il repository dell&rsquo;altro sviluppatore.</p>
+<p>L&rsquo;altro sviluppatore può quindi accettare (ed effettuare l&rsquo;operazione di merge) della pull request effettuata oppure può scegliere di rifiutare di includere le modifiche inviate.</p>
+<h2 id="approfondimenti">Approfondimenti</h2>
+<p>L&rsquo;introduzione a git non parla delle molteplici funzionalità avanzate che possono essere però approfondite nelle varie guide e libri, tra i quali si segnala:</p>
+<p>La serie di articoli su Mokabyte:</p>
+<ol>
+<li><a href="http://www.mokabyte.it/2016/09/git-1/">http://www.mokabyte.it/2016/09/git-1/</a>;</li>
+<li><a href="http://www.mokabyte.it/2016/10/git-2/">http://www.mokabyte.it/2016/10/git-2/</a>;</li>
+<li><a href="http://www.mokabyte.it/2017/01/git-3/">http://www.mokabyte.it/2017/01/git-3/</a>;</li>
+<li><a href="http://www.mokabyte.it/2017/02/git-4/">http://www.mokabyte.it/2017/02/git-4/</a>;</li>
+<li><a href="http://www.mokabyte.it/2017/04/git-5/">http://www.mokabyte.it/2017/04/git-5/</a>;</li>
+<li><a href="http://www.mokabyte.it/2017/05/git-6/">http://www.mokabyte.it/2017/05/git-6/</a>;</li>
+<li><a href="http://www.mokabyte.it/2017/07/git-7/">http://www.mokabyte.it/2017/07/git-7/</a>;</li>
+<li><a href="http://www.mokabyte.it/2017/10/git-8/">http://www.mokabyte.it/2017/10/git-8/</a>;</li>
+<li><a href="http://www.mokabyte.it/2017/12/git-9/">http://www.mokabyte.it/2017/12/git-9/</a>;</li>
+<li><a href="http://www.mokabyte.it/2018/01/git-10/">http://www.mokabyte.it/2018/01/git-10/</a>;</li>
+</ol>
+<p>Il libro su git:
+<a href="https://www.git-scm.com/book/en/v2">https://www.git-scm.com/book/en/v2</a>.</p>
 
 		</div>
 	</article>
