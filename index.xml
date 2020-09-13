@@ -12,9 +12,36 @@
     
     
     <item>
+      <title>03 - Colori e stili</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</guid>
+      <description>Colori e stili</description>
+    </item>
+    
+    <item>
+      <title>02 - Area da disegno e primitive per la grafica 2D</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/basics/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/basics/</guid>
+      <description>Area da disegno e primitive per la grafica 2D</description>
+    </item>
+    
+    <item>
+      <title>01 - Introduzione alla libreria grafica p5.js</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/intro/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/intro/</guid>
+      <description>Introduzione alla libreria grafica p5.js</description>
+    </item>
+    
+    <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
@@ -23,10 +50,37 @@
     <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
+    </item>
+    
+    <item>
+      <title>p5.js</title>
+      <link>http://codingepaduli.github.io/coding/web/linkp5js/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/linkp5js/</guid>
+      <description>Lezioni sulla libreria grafica p5.js nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/p5js&#39;&gt;p5.js&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>10 - Asynchronous Javascript And XML (AJAX)</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/ajax/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/ajax/</guid>
+      <description>10 - Asynchronous Javascript And XML (AJAX)</description>
+    </item>
+    
+    <item>
+      <title>09 - Document Object Model (DOM)</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/dom/</guid>
+      <description>09 - Document Object Model (DOM)</description>
     </item>
     
     <item>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>01 - Introduzione alla libreria grafica p5.js - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Introduzione alla libreria grafica p5.js">
+		<meta property="og:title" content="01 - Introduzione alla libreria grafica p5.js" />
+<meta property="og:description" content="Introduzione alla libreria grafica p5.js" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/intro/" />
+<meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+<meta property="article:published_time" content="2020-09-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-10T00:00:00+00:00" />
+
+		<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="01 - Introduzione alla libreria grafica p5.js"/>
+<meta name="twitter:description" content="Introduzione alla libreria grafica p5.js"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/static/css/customImages.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Coding e Paduli</div>
+					<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">01 - Introduzione alla libreria grafica p5.js</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-10T00:00:00Z">September 10, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="introduzione-alla-libreria-grafica-p5js">Introduzione alla libreria grafica p5.js</h1>
+<p>p5.js e&rsquo; una libreria grafica opensource focalizzata al coding in Javascript in un contesto creativo e multimediale. Rappresenta, inoltre, una comunità interessata alla creazione artistica di contenuti mediante tecnologie web.</p>
+<p>p5.js rappresenta anche un &ldquo;porting&rdquo; della piattaforma <a href="https://processing.org/">Processing</a> in ambiente web, per cui sia Processing, sia questa libreria sono entrambi supportati dalla <a href="https://processingfoundation.org">Processing Foundation</a>.</p>
+<p>Esistono numerose librerie che estendono p5.js, aggiungendo strumenti per la gestione audio, per la comunicazione con diversi dispositivi, quali Arduino, per strumenti di gestione grafica in 2D, 3D ed anche in più dimensioni, per la gestione della geolocalizzazione e delle mappe, per la gestione della webcam ed anche per la semplificazione nell&rsquo;applicazione di algoritmi di intelligenza artificiale.</p>
+<p>Il prerequisito necessario all&rsquo;uso di questa libreria è, quindi, l&rsquo;interesse alla programmazione in linguaggio javascript.</p>
+<h2 id="editor-integrato-per-p5js">Editor integrato per p5.js</h2>
+<p>Il punto di partenza è sicuramente l&rsquo;uso dell&rsquo;editor integrato al link <a href="https://editor.p5js.org">https://editor.p5js.org</a>, che permette di iniziare velocemente ad esplorare le potenzialità dell&rsquo;ambiente.</p>
+<p>All&rsquo;utente è mostrata una schermata con i menù tipici dei classici ambienti di sviluppo, i pulstanti per avviare e fermare il proprio lavoro, ed infine l&rsquo;area di lavoro, divisa in un&rsquo;area di testo per la scrittura del codice e l&rsquo;area di visualizzazione per visualizzare il lavoro creato.</p>
+<p><img src="/static/coding/web/p5js/OnlineEditor.png" alt="Image" title="p5js - Editor online"></p>
+<p>L&rsquo;area del codice presenta già un esempio minimale di programma, valido come punto di partenza e descritto nel seguito di questo articolo.</p>
+<h2 id="prima-pagina-web-con-p5js">Prima pagina web con p5.js</h2>
+<p>L&rsquo;editor è di grande utilità, ma per poter pubblicare un lavoro su un sito, è necessario realizzare una pagina web che include la libreria ed il lavoro svolto.</p>
+<p>Richiamando il corso su <code>HTML</code>, si riporta un&rsquo;esempio di codice HTML di una  pagina web che contiene la libreria suddetta:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+        &lt;<span style="color:#f92672">style</span>&gt;
+            <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> {
+                <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+                <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+            }
+            <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
+        &lt;/<span style="color:#f92672">style</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">script</span>&gt;
+            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+                <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+            }
+
+            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+                <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+                <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+            }
+        &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Come si può notare, la libreria viene inclusa attraverso il tag <code>script</code> con collegamento esterno.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Le funzioni di <code>setup</code> e <code>draw</code> sono contenute nel tag <code>script</code>, dato che rappresentano codice <code>javascript</code>.</p>
+<h2 id="primo-programma">Primo programma</h2>
+<p>Sia che si utilizzi la pagina web, sia che si utilizzi l&rsquo;editor online, nel primo programma dovremo dichiarare due funzioni principali, come nel seguente esempio.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+  <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+}
+</code></pre></div><p>La funzione <code>setup</code> viene svolta una sola volta e serve ad impostare gli strumenti e le condizioni iniziali.</p>
+<p>In questo particolare caso, la funzione <code>setup</code> contiene un richiamo alla funzione <code>createCanvas</code> che crea all&rsquo;interno della pagina web un&rsquo;area di lavoro delle dimensioni indicate.</p>
+<p>La funzione <code>draw</code> viene richiamata ciclicamente e serve ad elaborare il lavoro realizzato.</p>
+<p>Nell&rsquo;esempio riportato sopra, questa funzione contiene un richiamo alla funzione <code>background</code>, che serve ad impostare lo sfondo, ed un secondo richiamo alla funzione <code>circle</code>, che crea un cerchio con centro alle cordinate <code>x=100</code> ed <code>y=150</code> e con raggio <code>r=50</code>.</p>
+<p>Il risultato è il seguente:</p>
+<p><img src="/static/coding/web/p5js/Example01.png" alt="Image" title="p5js - Esempio 01"></p>
+<h2 id="prima-animazione">Prima animazione</h2>
+<p>Supponendo di voler far &ldquo;muovere&rdquo; il cerchio verso destra nell&rsquo;area di lavoro, si necessita di una variabile che permetta in primis di indicare la posizione corrente del cerchio nell&rsquo;area di lavoro, e poi che permetta di modificarla con un incremento unitario.</p>
+<p>La dichiarazione della variabile può avvenire prima delle due funzioni, mediante il classico codice:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</code></pre></div><p>Per realizzare il movimento, è necessario incrementare di un&rsquo;unità questa variabile, mediante il codice:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+</code></pre></div><p>L&rsquo;esempio completo è di seguito riportato:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+  <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+}
+</code></pre></div><p>E&rsquo; interessante notare che se l&rsquo;istruzione di incremento <code>x = x + 1</code>la si pone nella funzione <code>setup</code> invece che nella funzione <code>draw</code>, questo incremento viene fatto una sola volta, quindi il cerchio resta immobile.</p>
+<p>Altra cosa interessante da notare, è che se si cancella l&rsquo;istruzione per disegnare lo sfondo (<code>background</code>), allora la vecchia posizione del cerchio non sarà &ldquo;pulita&rdquo;, quindi lo spostamento del cerchio lascerà una &ldquo;scia&rdquo; dovuta alle precedenti posizioni, come nella seguente immagine;</p>
+<p><img src="/static/coding/web/p5js/Example02.png" alt="Image" title="p5js - Esempio 02"></p>
+<p>Di seguito, l&rsquo;esempio funzionante in ambiente web dell&rsquo;animazione realizzata.</p>
+<div id="example02"</div>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

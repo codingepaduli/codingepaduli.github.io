@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>10 - Asynchronous Javascript And XML (AJAX) - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="10 - Asynchronous Javascript And XML (AJAX)">
+		<meta property="og:title" content="10 - Asynchronous Javascript And XML (AJAX)" />
+<meta property="og:description" content="10 - Asynchronous Javascript And XML (AJAX)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/ajax/" />
+<meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+<meta property="article:published_time" content="2020-08-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-05T00:00:00+00:00" />
+
+		<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="10 - Asynchronous Javascript And XML (AJAX)"/>
+<meta name="twitter:description" content="10 - Asynchronous Javascript And XML (AJAX)"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/static/css/customImages.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Coding e Paduli</div>
+					<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">10 - Asynchronous Javascript And XML (AJAX)</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-08-05T00:00:00Z">August 05, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">javascript</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="10---asynchronous-javascript-and-xml-ajax-e-cross-origin-resource-sharing-cors">10 - Asynchronous Javascript And XML (AJAX) e Cross-Origin Resource Sharing (CORS)</h1>
+<p>Il modello AJAX è un modello nato per l&rsquo;uso congiunto di un insieme di tecnologie preesistenti, permette al client di inviare e ricevere informazioni dal server in modalità asincrona. Il client può quindi aggiornare i singoli dati della pagina web senza dover ricaricare l&rsquo;intera pagina.</p>
+<p>Le chiamate AJAX consentono di sfruttare, dalla pagina web e dalle varie applicazioni, i vari servizi offerti online, permettendo in questo modo di separare il front-end, ovvero la grafica di applicazioni web e app degli smartphone, dal back-end, ovvero dai servizi offerti dai server.</p>
+<p>L&rsquo;invio e la ricezione dati sono soggette alle regole di sicurezza del browser e del server.</p>
+<p>La regola principale di sicurezza è detta <strong>same origin policy</strong>, ovvero l&rsquo;applicazione web può richiedere risorse, attraverso chiamate AJAX, solo ed esclusivamente dalla stessa origine (same origin) dalla quale è stata caricata, ovvero al solo sito web visitato, e non ad altri siti web. Ad esempio, se l&rsquo;utente naviga su google, l&rsquo;applicazione web può utilizzare le richieste AJAX per richiedere risorse e servizi solo ed esclusivamente alla stessa google (stessa origine), e non su microsoft o su amazon.</p>
+<p>Una seconda regola di sicurezza è che le chiamate AJAX non sono sempre abilitate da <strong>localhost</strong>, per cui è necessario associare un nome fittizio al sito web attraverso il file <strong>hosts</strong> del sistema operativo.</p>
+<p>L&rsquo;applicazione web può richiedere risorse ad un&rsquo;origine diversa (un altro servizio web) sfruttando il meccanismo Cross-Origin Resource Sharing (CORS, tradotto come condivisione di risorse tra più origini). Questo meccanismo serve ad indicare al server che si sta richiedendo una risorsa o un servizio da un&rsquo;origine diversa, opzionalmente indicando le credenziali o l&rsquo;identificativo d&rsquo;accesso. Il server (a cui l&rsquo;applicazione web fa richieste Cross-Origin) può essere configurato per accettare richieste provenienti da specifici domini o solamente se corredate di specifiche credenziali identificative.</p>
+<h2 id="chiamate-ajax-su-protocollo-https">Chiamate AJAX su protocollo HTTPS</h2>
+<p>Le comunicazioni AJAX avvengono comunque su protocollo HTTP/HTTPS, per cui c&rsquo;è bisogno di indicare:</p>
+<ul>
+<li>l&rsquo;URL del servizio o della risorsa;</li>
+<li>l&rsquo;operazione da effettuare sulla risorsa (lettura, modifica, cancellazione, aggiornamento);</li>
+<li>i dati necessari per effettuare l&rsquo;operazione;</li>
+<li>i dati tecnici per effettuare la chiamata AJAX, quali credenziali di autenticazione, codifica del testo, formato di output richiesto, ecc..</li>
+</ul>
+<p>Alcuni dati vengono trasmessi nell&rsquo;intestazione (tradotto <strong>header</strong>) del protocollo HTTP, come le informazioni relative alle credenziali, all&rsquo;origine della chiamata o anche al tipo di dati che si invia al server;</p>
+<p>Quando si invoca un servizio, la richiesta può essere soddisfatta o meno, e ciò avviene attraverso un codice di risposta, sempre specificato dal protocollo HTTP, che il fornitore del servizio invia a chi lo invoca.</p>
+<p>In alcuni casi, vengono effettuate 2 chiamate al server, la prima è necessaria per verificare che il server sia abilitato a ricevere la richiesta e la seconda effettua la richiesta a tutti gli effetti.</p>
+<h3 id="metodi-del-protocollo-http-per-la-gastione-delle-risorse">Metodi del protocollo HTTP per la gastione delle risorse</h3>
+<p>I metodi previsti dal protocollo, che corrispondono alle operazioni da effettuare, sono i seguenti:</p>
+<ul>
+<li>GET : richiesta della risorsa identificata dall&rsquo;URL;</li>
+<li>PUT : imposta una nuova risorsa sull&rsquo;URL indicato. Se sull&rsquo;URL indicato esiste gia una risorsa, questa sarà sostituita;</li>
+<li>PATCH : modifica della risorsa identificata dall&rsquo;URL;</li>
+<li>POST : aggiunge contenuti (figli) di una risorsa;</li>
+<li>DELETE : cancellazione della risorsa identificata dall&rsquo;URL;</li>
+</ul>
+<p>L&rsquo;URL in questi casi identifica univocamente la risorsa sulla quale si vuole agire.</p>
+<p>Un esempio con relativa spiegazione delle varie chiamate AJAX è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">GET  /blogs                 # Richiede la lista di tutti i blog
+GET  /blogs/12              # Richiede i dati relativi al blog 12
+GET  /blogs/12/articles     # Richiede la lista di tutti gli articoli del blog 12
+GET  /blogs/12/articles/5   # Richiede l&#39;articolo 5 del blog 12
+POST /blogs/12/articles     # Aggiunge un nuovo articolo al blog 12
+PUT  /blogs/12/articles/5   # Inserisce o sostituisce l&#39;articolo 5 del blog 12
+PATCH /blogs/12/articles/5  # Modifica l&#39;articolo 5 del blog 12 (ad esempio il titolo)
+DELETE /blogs/12/articles/5 # Cancella l&#39;articolo 5 del blog 12
+</code></pre></div><p>Ci sono utilizzi non sempre concordi sull&rsquo;uso del metodo POST, ma le specifiche d&rsquo;uso dei due metodi sono principalmente le seguenti:</p>
+<ul>
+<li>Usando il metodo PUT, si aggiunge o sostituisce la risorsa specificata dall&rsquo;URL indicato, mentre usando il metodo POST, si aggiunge un figlio alla risorsa specificata dall&rsquo;URL;</li>
+<li>Usando il metodo PUT, è il client ad indicare l&rsquo;URL della risorsa, mentre usando il metodo POST, è il server a decidere;</li>
+<li>Inviando più volte la stessa richiesta col metodo PUT, la risorsa interessata dalla modifica sarà sempre la stessa e sarà modificata sempre allo stesso modo, come se la richiesta fosse stata una sola. Inviando più volte la stessa richiesta col metodo POST, si otterranno risultati diversi;</li>
+<li>Il metodo POST ha un uso più astratto rispetto al metodo PUT.</li>
+</ul>
+<h3 id="codifica-e-formato-dei-dati-inviati-e-ricevuti">Codifica e formato dei dati inviati e ricevuti</h3>
+<p>I dati da inviare al servizio possono essere in formati diversi. Di seguito una spiegazione per ognuno di essi:</p>
+<ul>
+<li>Formato &ldquo;testo in chiaro&rdquo; <code>text/plain</code>: i dati sono inviati senza nessun tipo di codifica. Questo tipo di trasmissione non è pensata per l&rsquo;invio dei dati verso un altro sistema informatico ma solo per l&rsquo;analisi da parte di un tecnico, quindi per la lettura e la stampa dei dati;</li>
+<li>Formato &ldquo;URL-Encoded&rdquo; <code>application/x-www-form-urlencoded</code>: i dati vengono inviati come fossero parte di un&rsquo;unica striga formata da coppie &ldquo;chiave=valore&rdquo;. Le coppie sono separate tra loro dal carattere <code>&amp;</code> (&ldquo;e&rdquo; commerciale) e sono codificate in codice <strong>ASCII</strong>. I caratteri non rappresentabili da un codice ASCII sono sostituiti da un carattere <code>%</code> (&ldquo;percentuale&rdquo;) seguito da due cifre esadecimali. I caratteri di &ldquo;nuova linea&rdquo; vengono normalizzati, e gli spazi sono sostituiti con il carattere <code>+</code> o con il codice <code>%20</code>;</li>
+<li>Formato &ldquo;multipart&rdquo; <code>multipart/form-data</code>: E&rsquo; il formato utilizzato per l&rsquo;invio di file o per grandi quantità di dati. Ogni dato viene inviato in una propria parte del messaggio, contenente sia le informazioni relative al dato inviato, come ad esempio che si tratti di un campo di un form o che si tratti di un file, sia il valore del campo o il contenuto del file);</li>
+<li>Formato &ldquo;JSON&rdquo; <code>application/json</code>: E&rsquo; il formato utilizzato per l&rsquo;invio dei dati in formato JSON utilizzando la codifica &ldquo;UTF-8&rdquo;.</li>
+</ul>
+<h3 id="risposta-del-server-o-del-servizio">Risposta del server o del servizio</h3>
+<p>Il server risponde ad una chiamata AJAX attraverso un codice di stato che indica se la chiamata è andata a buon fine o meno. Tipicamente i codici di stato sono quelli impliciti del protocollo HTTP, che sono raggruppati per classi, di seguito descritte:</p>
+<ul>
+<li>codici di informazione da <code>100</code> a <code>199</code> indicano che la richiesta del client è stata ricevuta e si può continuare l&rsquo;elaborazione. Tra questi codici troviamo informazioni come &ldquo;continua la trasmissione del messaggio&rdquo; (codice <code>100</code>) oppure &ldquo;cambio di protocollo in corso&rdquo; (codice <code>101</code>);</li>
+<li>codici di elaborazione avvenuta da <code>200</code> a <code>299</code> indicano che il server ha elaborato la richiesta. Tra questi codici troviamo &ldquo;dati inviati correttamente dal server&rdquo; (codice <code>200</code>), &ldquo;richiesta elaborata e nessun dato inviato dal server&rdquo; (codice <code>204</code>), &ldquo;risorsa creata ed inviata dal server&rdquo; (codice <code>201</code>);</li>
+<li>codici di redirezione da <code>300</code> a <code>399</code> indicano che il server non elaborerà la richiesta, ma che la può elaborare se si seguono le indicazioni del server. Tra questi codici troviamo &ldquo;risorsa spostata ad altro URL&rdquo; (codice <code>301</code>), &ldquo;risorsa disponibile tramite proxy&rdquo; (codice <code>305</code>);</li>
+<li>codici di errore del client da <code>400</code> a <code>499</code> indicano che la richiesta effettuata è errata o non ha le condizioni per poter essere elaborata. Tra questi codici troviamo &ldquo;richiesta errata&rdquo; (codice <code>400</code>), &ldquo;richiesta senza autenticazione&rdquo; (codice 401), &ldquo;pagamento richiesto&rdquo; (codice <code>402</code>), &ldquo;risorsa richiesta non trovata&rdquo; (codice <code>404</code>);</li>
+<li>codici di errore del server da <code>500</code> a <code>599</code> indicano che la richiesta non sarà elaborata per problemi interni del server. Tra questi codici troviamo &ldquo;errore del server&rdquo; (codice <code>500</code>), &ldquo;operazione non disponibile&rdquo; (codice <code>501</code>), &ldquo;&ldquo;servizio non disponibile&rdquo; (codice <code>509</code>).</li>
+</ul>
+<h3 id="esempio-di-configurazione-server-abilitato-a-cors">Esempio di configurazione server abilitato a CORS</h3>
+<p>Per completezza, si riporta un esempio di configurazione di un generico server abilitato ad accettare chiamate AJAX di tipo Cross-Origin:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">allowedOrigins: *
+allowedMethods: GET,POST,OPTIONS,DELETE,PUT,HEAD
+allowedHeaders: origin, content-type, accept, authorization
+cross-origin: /api/cors/*
+</code></pre></div><p>Di seguito sono specificate le chiavi e le relative spiegazioni:</p>
+<ul>
+<li>allowedOrigins: indica le &ldquo;origini&rdquo; dalle quali il server può accettare una chiamata AJAX di tipo Cross-Origin; Può essere una lista limitata di server, come <code>www.google.com, www.facebook.com</code>, oppure può essere concesso a tutte le origini, indicate attraverso il carattere <code>*</code>, come nell&rsquo;esempio precedente;</li>
+<li>allowedMethods: indica i metodi del protocollo HTTP che il server gestisce; se il client invia una richiesta con un metodo non abilitato, la richiesta viene respinta; Nell&rsquo;esempio precedente, il server non è abilitato a ricevere richieste di tipo <code>PATCH</code>, che saranno respinte;</li>
+<li>cross-origin: indica su quali percorsi il server accetta chiamate AJAX di tipo Cross-Origin; Nell&rsquo;esempio precedente, il server è abilitato a ricevere richieste AJAX di tipo Cross-Origin solo sui percorsi che iniziano con <code>/api/cors/</code> (il carattere <code>*</code> in questo caso indica qualsiasi percorso seguente);</li>
+<li>allowedHeaders: indica attributi personalizzati che possono essere inclusi nell&rsquo;header della richiesta del protocollo <code>HTTP</code>.</li>
+</ul>
+<p>L&rsquo;esempio e la relativa spiegazione non intendono dare nozioni di configurazione e avvio di un server, ma solo un&rsquo;idea di come un server è configurato e di quali richieste accetta in base alla configurazione;</p>
+<h2 id="chiamate-ajax-con-le-api-fetch">Chiamate AJAX con le API Fetch</h2>
+<p>Le chiamate AJAX in codice Javascript possono essere realizzate attraverso le API <strong>Fetch</strong>, che permettono di gestire richiesta, risposta ed errori (nel caso la richiesta non possa essere completata).</p>
+<p>Il codice Javascript per effettuare una semplice richiesta della risorsa è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;GET&#39;</span>,
+  <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> },
+  <span style="color:#a6e22e">cache</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;no-cache&#39;</span>,
+  <span style="color:#a6e22e">mode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;cors&#39;</span>
+};
+
+<span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://www.google.it/dati.html&#39;</span>, <span style="color:#a6e22e">options</span>)
+.<span style="color:#a6e22e">then</span>( (<span style="color:#a6e22e">response</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Risorsa richiesta&#39;</span>) )
+.<span style="color:#66d9ef">catch</span>( (<span style="color:#a6e22e">error</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Errore nella richiesta della risorsa&#39;</span>) );
+</code></pre></div><p>Come si può notare dal codice, la funzione principale è <code>fetch</code>, che indica l&rsquo;URL dal quale recuperare la risorsa. Questa funzione poi permette di gestire il caso di successo gestito nel ramo <code>then</code> ed il caso di insuccesso gestito nel ramo <code>catch</code>.</p>
+<h3 id="effettuare-la-richiesta-al-server-con-le-api-fetch">Effettuare la richiesta al server con le API Fetch</h3>
+<p>La funzione <code>fetch</code> permette di specificare l&rsquo; URL della richiesta da effettuare ed un secondo oggetto opzionale che speficica tutti dettagli relativi la richiesta da effettuare.
+Questo secondo oggetto opzionale contiene le seguenti proprietà:</p>
+<ul>
+<li><code>method</code>: indica il tipo di richiesta HTTP;</li>
+<li><code>mode</code>: indica il tipo di chiamata AJAX, a scelta tra <code>same-origin</code> (stessa origine), <code>cors</code> (tra origini differenti), <code>no-cors</code> e <code>navigate</code> (che non saranno descritte in questo capitolo e per le quali si rimanda alle specifiche per ulteriori dettagli);</li>
+<li><code>headers</code>: indica un insieme di chiavi-valore che forniscono ulteriori informazioni al server o al servizio, tra cui la chiave <code>Content-Type</code> che indica il formato dei dati inviati al server;</li>
+<li><code>body</code>: indica i dati da inviare al server.</li>
+</ul>
+<h3 id="gestire-la-risposta-del-server-con-le-api-fetch">Gestire la risposta del server con le API Fetch</h3>
+<p>La funzione <code>then</code> restituisce la risposta del server che contiene principalmente le seguenti proprietà:</p>
+<ul>
+<li><code>ok</code>: flag indicante se la risposta del server ha avuto successo, cioè se lo stato HTTP della risposta è compreso tra 200 e 299;</li>
+<li><code>status</code>: indica il codice dello stato HTTP relativo alla risposta del server;</li>
+<li><code>body</code>: contiene la risposta del server.</li>
+</ul>
+<p>In particolare, la  risposta <code>response</code> del server può essere in uno qualsiasi dei formati indicati in precedenza, per cui è necessario trasformare questa risposta in un&rsquo;oggetto conforme al formato utilizzato. Per trasformare la risposta in:</p>
+<ul>
+<li>&ldquo;JSON&rdquo; è necessario applicare la funzione <code>response.json()</code>;</li>
+<li>&ldquo;testo in chiaro&rdquo; è necessario applicare la funzione <code>response.text()</code>;</li>
+<li>&ldquo;URL-Encoded&rdquo; è necessario applicare la funzione <code>response.formData()</code>;</li>
+<li>&ldquo;binario&rdquo; è necessario applicare la funzione <code>response.blob()</code>.</li>
+</ul>
+<h3 id="gestire-errori-nella-richiesta-con-le-api-fetch">Gestire errori nella richiesta con le API Fetch</h3>
+<p>La funzione <code>catch</code> serve a catturare errori nel caso la risposta del server non sia stata recapitata al client. In questo caso, l&rsquo;unico oggetto disponibile è appunto un errore, che viene gestito dal programmatore in questa funzione.</p>
+<p>Esempio di selezione:</p>
+<div id="loadImage"></div>
+<input type="button" onclick="callGetJSON()" value="seleziona">
+<p>headers: { &lsquo;Content-Type&rsquo;: &lsquo;application/x-www-form-urlencoded;charset=UTF-8&rsquo; }
+encodeURI(uri)</p>
+<p>headers: { &lsquo;Content-Type&rsquo;: &lsquo;application/json&rsquo; },
+JSON.stringify(record)</p>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

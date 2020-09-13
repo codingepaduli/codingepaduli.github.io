@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>10 - Asynchronous Javascript And XML (AJAX)</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/ajax/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/ajax/</guid>
+      <description>10 - Asynchronous Javascript And XML (AJAX)</description>
+    </item>
+    
+    <item>
+      <title>09 - Document Object Model (DOM)</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/dom/</guid>
+      <description>09 - Document Object Model (DOM)</description>
+    </item>
+    
+    <item>
       <title>08 - DOM e selettori CSS</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/selettoricss/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>

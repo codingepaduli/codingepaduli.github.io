@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>08 - DOM e selettori CSS - Coding e Paduli</title>
-    
-    <meta name="description" content="08 - DOM e selettori CSS">
-    
-        <meta property="og:title" content="08 - DOM e selettori CSS" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>08 - DOM e selettori CSS - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="08 - DOM e selettori CSS">
+		<meta property="og:title" content="08 - DOM e selettori CSS" />
 <meta property="og:description" content="08 - DOM e selettori CSS" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/selettoricss/" />
@@ -16,28 +15,23 @@
 <meta property="article:published_time" content="2020-05-04T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-05-04T00:00:00+00:00" />
 
-    
-    
-        <meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
 <meta name="twitter:title" content="08 - DOM e selettori CSS"/>
 <meta name="twitter:description" content="08 - DOM e selettori CSS"/>
 
-    
-
-    <link rel="stylesheet" href="/css/style.css">
-
-    <link rel="stylesheet" href="/static/css/customImages.css">
-
-    <link rel="shortcut icon" href="/static/wifi-5.svg" type="image/svg+xml">
-
-    
-        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/static/css/customImages.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
 </head>
 <body class="body">
-    <div class="container container--outer">
-        <header class="header">
+	<div class="container container--outer">
+		<header class="header">
 	<div class="container header__container">
 		
 	<div class="logo">
@@ -87,13 +81,13 @@
 
 	</div>
 </header>
-        <div class="wrapper flex">
-            <div class="primary">
-            
+		<div class="wrapper flex">
+			<div class="primary">
+			
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			
+			<h1 class="post__title">08 - DOM e selettori CSS</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-05-04T00:00:00Z">May 04, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">javascript</a>
@@ -297,7 +291,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[data-custom~=&#34;value-v2&#34;]&#39;</span>);
 </code></pre></div><p>Esempio di selezione:
 <input type="button" onclick="seleziona('#attr [data-custom~=\'value-v2\']')" value="seleziona"></p>
-<h3 id="selettori-per-raggruppamento">Selettori per raggruppamento</h3>
+<h2 id="selettori-per-raggruppamento">Selettori per raggruppamento</h2>
 <table>
 <thead>
 <tr>
@@ -325,7 +319,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;p,a&#39;</span>);
 </code></pre></div><p>Esempio di selezione:
 <input type="button" onclick="seleziona('#group p, #group a')" value="seleziona"></p>
-<h3 id="selettori-per-relazione-di-parentela">Selettori per relazione di &ldquo;parentela&rdquo;</h3>
+<h2 id="selettori-per-relazione-di-parentela">Selettori per relazione di &ldquo;parentela&rdquo;</h2>
 <table>
 <thead>
 <tr>
@@ -335,24 +329,51 @@
 </thead>
 <tbody>
 <tr>
-<td>E F</td>
-<td>Seleziona i tag F discendenti dei tag E;</td>
+<td>S1 S2</td>
+<td>Seleziona i tag selezionati dal selettore S2 discendenti dei tag selezionati dal selettore S1;</td>
 </tr>
 <tr>
-<td>E &gt; F</td>
-<td>Seleziona i tag F figli diretti dei tag E;</td>
+<td>S1 &gt; S2</td>
+<td>Seleziona i tag selezionati dal selettore S2 figli diretti dei tag selezionati dal selettore S1;</td>
 </tr>
 <tr>
-<td>E + F</td>
-<td>Seleziona i tag F, fratelli di E, che seguono immediatamente i tag E;</td>
+<td>S1 + S2</td>
+<td>Seleziona i tag selezionati dal selettore S2 che seguono, direttamente e sullo stesso livello di profondità, i tag selezionati dal selettore S1;</td>
 </tr>
 <tr>
-<td>E ~ F</td>
-<td>Seleziona i tag F, fratelli di E, che seguono (anche non immediatamente) i tag E;</td>
+<td>S1 ~ S2</td>
+<td>Seleziona i tag selezionati dal selettore S2 che seguono, anche non immediatamente ma che sono sullo stesso livello di profondità, i tag selezionati dal selettore S1;</td>
 </tr>
 </tbody>
 </table>
-<h3 id="selettori-per-posizione">Selettori per posizione</h3>
+<h3 id="esempio-duso-del-selettore-per-relazione-di-parentela">Esempio d&rsquo;uso del selettore per relazione di &ldquo;parentela&rdquo;</h3>
+<p>Supponendo che la pagina HTML contenga un paragrafo al cui interno ci sono 3 link, di cui il terzo in grassetto, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;paragrafo con &lt;<span style="color:#f92672">a</span>&gt;primo&lt;/<span style="color:#f92672">a</span>&gt;, &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;link2&#34;</span>&gt;secondo&lt;/<span style="color:#f92672">a</span>&gt;, &lt;<span style="color:#f92672">strong</span>&gt; &lt;<span style="color:#f92672">a</span>&gt;terzo&lt;/<span style="color:#f92672">a</span>&gt; (in grassetto) &lt;/<span style="color:#f92672">strong</span>&gt; e &lt;<span style="color:#f92672">a</span>&gt;quarto&lt;/<span style="color:#f92672">a</span>&gt; link.&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">a</span>&gt;link esterno al paragrafo.&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span>&gt;link2 esterno al paragrafo.&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>Il codice elencato produce il seguente risultato:</p>
+<div id="parent">
+  <p>paragrafo con <a>primo</a>, <a id="link2">secondo</a>, <strong> <a>terzo</a> (in grassetto) </strong> e <a>quarto</a> link.</p>
+  <a>link esterno al paragrafo.</a>
+  <a>link2 esterno al paragrafo.</a>
+</div>
+<p>Per selezionare tutti i link interni al paragrafo, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;p a&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#parent p a')" value="seleziona"></p>
+<p>Per selezionare i link che sono figli &ldquo;diretti&rdquo; del paragrafo, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;p &gt; a&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#parent p > a')" value="seleziona"></p>
+<p>Per selezionare i link immediatamente successivi al paragrafo, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;p + a&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#parent p + a')" value="seleziona"></p>
+<p>Per selezionare i link successivi (anche non immediatamente) al paragrafo, si può utilizzare l&rsquo;istruzione javascript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;p ~ a&#39;</span>);
+</code></pre></div><p>Esempio di selezione:
+<input type="button" onclick="seleziona('#parent p ~ a')" value="seleziona"></p>
+<h2 id="selettori-per-posizione">Selettori per posizione</h2>
 <table>
 <thead>
 <tr>
@@ -431,7 +452,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="selettori-per-pseudo-classi">Selettori per pseudo-classi</h3>
+<h2 id="selettori-per-pseudo-classi">Selettori per pseudo-classi</h2>
 <table>
 <thead>
 <tr>
@@ -530,7 +551,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="selettori-per-pseudo-elementi">Selettori per pseudo-elementi</h3>
+<h2 id="selettori-per-pseudo-elementi">Selettori per pseudo-elementi</h2>
 <table>
 <thead>
 <tr>
@@ -553,20 +574,27 @@
 </tr>
 </tbody>
 </table>
+<h2 id="combinazioni">Combinazioni</h2>
+<p>E&rsquo; possibile combinare i selettori illustrati nei capitoli precedenti, in modo da creare espressioni che risultano molto efficaci.</p>
+<p>Ad esempio è possibile combinare i selettori per ID, per classe, per elemento e per attributo in questa forma:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Tag#Id.class[&#39;attr&#39;]
+</code></pre></div><p>In questo caso verranno selezionati i tag che soddisfano tutti i selettori, ovvero i tag che sono dell&rsquo;elemento specificato, che hanno l&rsquo;ID indicato, le classi associate e gli attributi specificati nel selettore.</p>
+<p>Un secondo esempio, di seguito riportato, permette di combinare i selettori per elemento, per classe, per attributo, per posizione e per pseudo-classe, in modo tale da selezionare gli elementi &ldquo;vuoti&rdquo; che sono contenuti nel primo figlio del gruppo di tag aventi la classe indicata che a loro volta seguono, direttamente e sullo stesso livello di profondità, gli elementi che hanno l&rsquo;attributo indicato.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Tag[&#39;attr&#39;] + .class:first-child :empty 
+</code></pre></div><p>Le combinazioni permettono di creare delle selezioni effettivamente molto potenti,
+anche se la sintassi di selezione risultante non è delle più semplici.</p>
 
 		</div>
 	</article>
 </main>
 
-<script src="/static/coding/web/javascript/selettoriCSS.js"></script>
 
 
 
-
-            </div>
-            
-        </div>
-        <footer class="footer">
+			</div>
+			
+		</div>
+		<footer class="footer">
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
@@ -575,8 +603,7 @@
 		</div>
 	</div>
 </footer>
-    </div>
+	</div>
 <script async defer src="/js/menu.js"></script>
-<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

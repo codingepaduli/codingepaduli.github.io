@@ -6,10 +6,64 @@
     <description>Recent content in web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>03 - Colori e stili</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</guid>
+      <description>Colori e stili</description>
+    </item>
+    
+    <item>
+      <title>02 - Area da disegno e primitive per la grafica 2D</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/basics/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/basics/</guid>
+      <description>Area da disegno e primitive per la grafica 2D</description>
+    </item>
+    
+    <item>
+      <title>01 - Introduzione alla libreria grafica p5.js</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/intro/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/intro/</guid>
+      <description>Introduzione alla libreria grafica p5.js</description>
+    </item>
+    
+    <item>
+      <title>Tecnologie Web</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/</guid>
+      <description>Lezioni di programmazione sulla libreria grafica p5.js</description>
+    </item>
+    
+    <item>
+      <title>10 - Asynchronous Javascript And XML (AJAX)</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/ajax/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/ajax/</guid>
+      <description>10 - Asynchronous Javascript And XML (AJAX)</description>
+    </item>
+    
+    <item>
+      <title>09 - Document Object Model (DOM)</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/dom/</guid>
+      <description>09 - Document Object Model (DOM)</description>
+    </item>
     
     <item>
       <title>08 - DOM e selettori CSS</title>

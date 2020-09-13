@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>p5.js on Coding e Paduli</title>
+    <link>http://codingepaduli.github.io/categories/p5.js/</link>
+    <description>Recent content in p5.js on Coding e Paduli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it</language>
+    <lastBuildDate>Sun, 13 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://codingepaduli.github.io/categories/p5.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>03 - Colori e stili</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</guid>
+      <description>Colori e stili</description>
+    </item>
+    
+    <item>
+      <title>02 - Area da disegno e primitive per la grafica 2D</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/basics/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/basics/</guid>
+      <description>Area da disegno e primitive per la grafica 2D</description>
+    </item>
+    
+    <item>
+      <title>01 - Introduzione alla libreria grafica p5.js</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/intro/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/intro/</guid>
+      <description>Introduzione alla libreria grafica p5.js</description>
+    </item>
+    
+    <item>
+      <title>Tecnologie Web</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/</guid>
+      <description>Lezioni di programmazione sulla libreria grafica p5.js</description>
+    </item>
+    
+  </channel>
+</rss>

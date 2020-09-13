@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>09 - Document Object Model (DOM) - Coding e Paduli</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="09 - Document Object Model (DOM)">
+		<meta property="og:title" content="09 - Document Object Model (DOM)" />
+<meta property="og:description" content="09 - Document Object Model (DOM)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/dom/" />
+<meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+<meta property="article:published_time" content="2020-08-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-01T00:00:00+00:00" />
+
+		<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="09 - Document Object Model (DOM)"/>
+<meta name="twitter:description" content="09 - Document Object Model (DOM)"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/static/css/customImages.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Coding e Paduli</div>
+					<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">09 - Document Object Model (DOM)</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-08-01T00:00:00Z">August 01, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">javascript</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="09---dom---operazioni-sui-nodi">09 - DOM - Operazioni sui nodi</h1>
+<p>Il Document Object Model (DOM) è un&rsquo;interfaccia che permette di rappresentare la struttura di un documento come un albero, consentendo le classiche operazioni di creazione, lettura, modifica e cancellazione di un nodo dell&rsquo;albero (CRUD è un&rsquo;abbreviazione che indica le operazioni indicate, ovvero Create, Read, Update e Delete).</p>
+<p>Le operazioni di selezione di un elemento del documento avvengono attraverso i selettori CSS. Le funzioni principali per la selezione di elementi sono <code>document.querySelector</code> e <code>document.querySelectorAll</code>.</p>
+<p>La selezione non è l&rsquo;unica operazione possibile su DOM. Le tipiche operazioni di creazione, lettura, aggiornamento e cancellazione (CRUD: Create, Read, Update, Delete) sono possibili su un qualsiasi elemento della pagina.</p>
+<h2 id="gestione-di-elementi">Gestione di elementi</h2>
+<p>Per creare un elemento di testo, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ele</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createTextNode</span>(<span style="color:#e6db74">&#39;Hello World!&#39;</span>);
+</code></pre></div><p>Per creare un elemento che fa da contenitore, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ele</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;div&#39;</span>);
+</code></pre></div><p>Per aggiungere un elemento all&rsquo;interno di un secondo elemento, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">ele</span>);
+</code></pre></div><p>Per rimuovere un elemento dall&rsquo;interno di un secondo elemento, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">ele</span>);
+</code></pre></div><p>Per rimuovere un elemento dalla pagina, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">remove</span>();
+</code></pre></div><p>Per ottenere solo ed esclusivamente il testo inserito all&rsquo;interno di un elemento dalla pagina, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">textContent</span>;
+</code></pre></div><p>Per aggiungere un elemento prima di un secondo elemento, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">refEle</span>.<span style="color:#a6e22e">insertAdjacentElement</span>(<span style="color:#e6db74">&#39;beforebegin&#39;</span>, <span style="color:#a6e22e">ele</span>);
+</code></pre></div><p>Per aggiungere un elemento dopo un secondo elemento, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">refEle</span>.<span style="color:#a6e22e">insertAdjacentElement</span>(<span style="color:#e6db74">&#39;afterend&#39;</span>, <span style="color:#a6e22e">ele</span>);
+</code></pre></div><h2 id="gestione-di-codice-html-degli-elementi">Gestione di codice HTML degli elementi</h2>
+<p>Per ottenere il codice HTML (alcuni caratteri sono convertiti in &ldquo;html entities&rdquo;) contenuto all&rsquo;interno di un elemento dalla pagina, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">innerHTML</span>;
+</code></pre></div><p>Per aggiungere codice HTML prima di un secondo elemento, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">refEle</span>.<span style="color:#a6e22e">insertAdjacentHTML</span>(<span style="color:#e6db74">&#39;beforebegin&#39;</span>, <span style="color:#a6e22e">html</span>);
+</code></pre></div><p>Per aggiungere codice HTML dopo un secondo elemento, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">refEle</span>.<span style="color:#a6e22e">insertAdjacentHTML</span>(<span style="color:#e6db74">&#39;afterend&#39;</span>, <span style="color:#a6e22e">html</span>);
+</code></pre></div><h2 id="gestione-di-attributi-di-un-elemento">Gestione di attributi di un elemento</h2>
+<p>Per aggiungere un attributo ad un elemento, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;width&#39;</span>, <span style="color:#e6db74">&#39;100px&#39;</span>);
+</code></pre></div><p>Per accedere ad un attributo di un elemento, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">attr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;attr&#39;</span>);
+</code></pre></div><p>Per rimuovere un attributo da un elemento, si utilizza la seguente funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">removeAttribute</span>(<span style="color:#e6db74">&#39;attr&#39;</span>);
+</code></pre></div><h2 id="gestione-dello-stile-di-un-elemento">Gestione dello stile di un elemento</h2>
+<p>Per aggiungere una proprietà di stile ad un elemento, si utilizza la funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">style</span>[<span style="color:#e6db74">&#39;backgroundColor&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;red&#39;</span>;
+</code></pre></div><p>Per rimuovere una proprietà di stile da un elemento, si utilizza la funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">removeProperty</span>(<span style="color:#e6db74">&#39;background-color&#39;</span>);
+</code></pre></div><p>Per ottenere il valore di una proprietà di stile da un elemento, si utilizza la funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">attr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">style</span>[<span style="color:#e6db74">&#39;backgroundColor&#39;</span>];
+</code></pre></div><h2 id="gestione-delle-classi-di-un-elemento">Gestione delle classi di un elemento</h2>
+<p>Per aggiungere delle classi ad un elemento, si utilizza la funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;another&#39;</span>, <span style="color:#e6db74">&#39;class&#39;</span>, <span style="color:#e6db74">&#39;name&#39;</span>);
+</code></pre></div><p>Per rimuovere delle classi ad un elemento, si utilizza la funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#e6db74">&#39;another&#39;</span>, <span style="color:#e6db74">&#39;class&#39;</span>, <span style="color:#e6db74">&#39;name&#39;</span>);
+</code></pre></div><p>Per effettuare il &ldquo;toggle&rdquo; di una classe di un elemento, si utilizza la funzione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ele</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">toggle</span>(<span style="color:#e6db74">&#39;class-name&#39;</span>);
+</code></pre></div>
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

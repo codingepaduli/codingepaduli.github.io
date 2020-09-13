@@ -6,26 +6,53 @@
     <description>Recent content in Categories on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>coding</title>
+      <link>http://codingepaduli.github.io/categories/coding/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>p5.js</title>
+      <link>http://codingepaduli.github.io/categories/p5.js/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/p5.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>http://codingepaduli.github.io/categories/web/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>interesting</title>
       <link>http://codingepaduli.github.io/categories/interesting/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/interesting/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>coding</title>
-      <link>http://codingepaduli.github.io/categories/coding/</link>
-      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      <title>javascript</title>
+      <link>http://codingepaduli.github.io/categories/javascript/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/categories/coding/</guid>
+      <guid>http://codingepaduli.github.io/categories/javascript/</guid>
       <description></description>
     </item>
     
@@ -57,24 +84,6 @@
     </item>
     
     <item>
-      <title>javascript</title>
-      <link>http://codingepaduli.github.io/categories/javascript/</link>
-      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/categories/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>http://codingepaduli.github.io/categories/web/</link>
-      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/categories/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>powershell</title>
       <link>http://codingepaduli.github.io/categories/powershell/</link>
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
@@ -102,7 +111,7 @@
     </item>
     
     <item>
-      <title>html</title>
+      <title>HTML</title>
       <link>http://codingepaduli.github.io/categories/html/</link>
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
