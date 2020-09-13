@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>02 - Concetti principali - Coding e Paduli</title>
-	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Concetti principali">
-		<meta property="og:title" content="02 - Concetti principali" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>02 - Concetti principali - Coding e Paduli</title>
+    
+    <meta name="description" content="Concetti principali">
+    
+        <meta property="og:title" content="02 - Concetti principali" />
 <meta property="og:description" content="Concetti principali" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/shell/powershell/concetti/" />
@@ -15,23 +16,28 @@
 <meta property="article:published_time" content="2020-04-11T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-04-11T00:00:00+00:00" />
 
-		<meta name="twitter:card" content="summary_large_image"/>
+    
+    
+        <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
 <meta name="twitter:title" content="02 - Concetti principali"/>
 <meta name="twitter:description" content="Concetti principali"/>
 
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/static/css/customImages.css">
-	<link rel="shortcut icon" href="/favicon.ico">
-		
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/static/css/customImages.css">
+
+    <link rel="shortcut icon" href="/static/wifi-5.svg" type="image/svg+xml">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
 </head>
 <body class="body">
-	<div class="container container--outer">
-		<header class="header">
+    <div class="container container--outer">
+        <header class="header">
 	<div class="container header__container">
 		
 	<div class="logo">
@@ -81,13 +87,13 @@
 
 	</div>
 </header>
-		<div class="wrapper flex">
-			<div class="primary">
-			
+        <div class="wrapper flex">
+            <div class="primary">
+            
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">02 - Concetti principali</h1>
+			
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-11T00:00:00Z">April 11, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>, <a class="meta__link" href="/categories/shell/" rel="category">shell</a>, <a class="meta__link" href="/categories/powershell/" rel="category">powershell</a>
@@ -101,7 +107,7 @@
 <p>E&rsquo; possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Module -ListAvailable
 </code></pre></div><p>L&rsquo;output riportato è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Directory: /opt/microsoft/powershell/7/Modules
+<pre><code>Directory: /opt/microsoft/powershell/7/Modules
 
 ModuleType Version    PreRelease Name                                PSEdition
 ---------- -------    ---------- ----                                ---------
@@ -115,20 +121,20 @@ Script     2.2.3                 PowerShellGet                       Desk
 Script     2.0.5                 PSDesiredStateConfiguration         Core     
 Script     2.0.0                 PSReadLine                          Desk     
 Binary     2.0.3                 ThreadJob                           Desk 
-</code></pre></div><h2 id="providers-e-drive">Providers e drive</h2>
+</code></pre><h2 id="providers-e-drive">Providers e drive</h2>
 <p>I provider sono oggetti che fanno parte del <code>.Net Framework</code> (lo stesso di PowerShell) e che forniscono un accesso specializzato ad una collezione di dati. Vi è un provider che gestisce file e cartelle, uno che gestire gli alias, uno che gestire le variabili d&rsquo;ambiente, ecc&hellip;</p>
 <p>L&rsquo;utente può creare nuovi provider per gestire altre collezioni di dati.</p>
 <p>E&rsquo; possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSProvider
 </code></pre></div><p>L&rsquo;output riportato è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Name                 Capabilities                  Drives
+<pre><code>Name                 Capabilities                  Drives
 ----                 ------------                  ------
 Alias                ShouldProcess                 {Alias}
 Environment          ShouldProcess                 {Env}
 FileSystem           Filter, ShouldProcess, Crede… {/, Temp}
 Function             ShouldProcess                 {Function}
 Variable             ShouldProcess                 {Variable}
-</code></pre></div><p>Un provider può fornire più punti d&rsquo;accesso alla collezione di dati. Ad esempio l&rsquo;accesso al filesystem su ambienti Windows è fornito attraverso i drive <code>c:</code>, <code>d:</code>, &hellip;, ognuno dei quali fornisce un punto d&rsquo;accesso ad un disco logico.</p>
+</code></pre><p>Un provider può fornire più punti d&rsquo;accesso alla collezione di dati. Ad esempio l&rsquo;accesso al filesystem su ambienti Windows è fornito attraverso i drive <code>c:</code>, <code>d:</code>, &hellip;, ognuno dei quali fornisce un punto d&rsquo;accesso ad un disco logico.</p>
 <h2 id="sessioni">Sessioni</h2>
 <p>Le sessioni sono utilizzate per memorizzare le informazioni relative ad una connessione locale o remota ad un computer,</p>
 <p>Le sessioni sono memorizzate sul computer a cui ci si collega, in modo tale da permettere la disconnessione e la successiva riconnessione da un altro computer.</p>
@@ -165,8 +171,8 @@ Variable             ShouldProcess                 {Variable}
 <p>Un esempio di CmdLet che prende in input un parametro e lo stampa in output nel terminale è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output -InputObject <span style="color:#e6db74">&#34;Hello World!!&#34;</span>
 </code></pre></div><p>L&rsquo;output generato dal CmdLet è di seguito riportato:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Hello World!!
-</code></pre></div><h3 id="alias">Alias</h3>
+<pre><code>Hello World!!
+</code></pre><h3 id="alias">Alias</h3>
 <p>Powershell associa ai diversi CmdLet disponibili una serie di alias gia familiari a chi proviene da altre shell, facilitando il passaggio a Powershell.</p>
 <p>Per ottenere la lista completa di alias, si usa la CmdLet:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Alias
@@ -195,7 +201,7 @@ $variabileTestuale = <span style="color:#e6db74">&#34;2&#34;</span>;
 </code></pre></div><p>Allo stesso modo si può visualizzare la guida in linea del CmdLet invocandolo con il parametro <code>-?</code>, come ne seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output -?
 </code></pre></div><p>La guida in linea mostrata in entrambi gli esempi è la seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">NAME
+<pre><code>NAME
     Write-Output
 
 SYNTAX
@@ -210,9 +216,9 @@ REMARKS
         -- To download and install Help files for the module that 
            includes this cmdlet, use Update-Help.
         -- To view the Help topic for this cmdlet online, type: 
-           &#34;Get-Help Write-Output -Online&#34; or go to 
+           &quot;Get-Help Write-Output -Online&quot; or go to 
            https://go.microsoft.com/fwlink/?LinkID=2097117
-</code></pre></div><p>La guida mostra:</p>
+</code></pre><p>La guida mostra:</p>
 <ul>
 <li>
 <p>il nome del comando;</p>
@@ -245,10 +251,13 @@ Per la lista di comandi con il parametro WhatIf
 
 
 
-			</div>
-			
-		</div>
-		<footer class="footer">
+
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
@@ -257,7 +266,8 @@ Per la lista di comandi con il parametro WhatIf
 		</div>
 	</div>
 </footer>
-	</div>
+    </div>
 <script async defer src="/js/menu.js"></script>
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

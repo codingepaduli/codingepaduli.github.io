@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>02 - Area da disegno e primitive per la grafica 2D - Coding e Paduli</title>
-	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Area da disegno e primitive per la grafica 2D">
-		<meta property="og:title" content="02 - Area da disegno e primitive per la grafica 2D" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>02 - Area da disegno e primitive per la grafica 2D - Coding e Paduli</title>
+    
+    <meta name="description" content="Area da disegno e primitive per la grafica 2D">
+    
+        <meta property="og:title" content="02 - Area da disegno e primitive per la grafica 2D" />
 <meta property="og:description" content="Area da disegno e primitive per la grafica 2D" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/basics/" />
@@ -15,23 +16,28 @@
 <meta property="article:published_time" content="2020-09-11T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-11T00:00:00+00:00" />
 
-		<meta name="twitter:card" content="summary_large_image"/>
+    
+    
+        <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
 <meta name="twitter:title" content="02 - Area da disegno e primitive per la grafica 2D"/>
 <meta name="twitter:description" content="Area da disegno e primitive per la grafica 2D"/>
 
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/static/css/customImages.css">
-	<link rel="shortcut icon" href="/favicon.ico">
-		
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/static/css/customImages.css">
+
+    <link rel="shortcut icon" href="/static/wifi-5.svg" type="image/svg+xml">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
 </head>
 <body class="body">
-	<div class="container container--outer">
-		<header class="header">
+    <div class="container container--outer">
+        <header class="header">
 	<div class="container header__container">
 		
 	<div class="logo">
@@ -81,13 +87,13 @@
 
 	</div>
 </header>
-		<div class="wrapper flex">
-			<div class="primary">
-			
+        <div class="wrapper flex">
+            <div class="primary">
+            
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">02 - Area da disegno e primitive per la grafica 2D</h1>
+			
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-11T00:00:00Z">September 11, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
@@ -104,8 +110,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;area&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span>&gt;altro paragrafo&lt;/<span style="color:#f92672">p</span>&gt;
 </code></pre></div><p>Per riposizionare il canvas all&rsquo;interno del paragrafo, utilizzeremo la funzione <code>parent</code>, passando come argomento l&rsquo;identificativo del paragrafo <code>area</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">parent</span>(<span style="color:#e6db74">&#39;area&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">parent</span>(<span style="color:#e6db74">&#39;area&#39;</span>);
 </code></pre></div><h2 id="sistema-di-coordinate">Sistema di coordinate</h2>
 <p>Il sistema di coordinate <strong>cartesiane</strong> tipicamente usato da librerie di grafica 2D computerizzata è caratterizzato dagli assi X,Y che si intersecano nell&rsquo;angolo in alto a sinistra dello schermo ed ha la particolarità dell&rsquo;asse Y invertito. Di seguito si mostrano le differenze tra i due sistemi di coordinate:</p>
 <p><img src="https://p5js.org/assets/learn/coordinate-system-and-shapes/images/drawing-03.svg" alt="Image" title="p5js - Sistema di coordinate"></p>
@@ -166,19 +171,22 @@
 <p>Di seguito, si visualizza un esempio completo delle figure realizzate mediante il codice riportato nei vari esempi mostrati:</p>
 <p><img src="/static/coding/web/p5js/basics.png" alt="Image" title="p5js - Basi della grafica 2D"></p>
 <p>In ambiente web è visualizzabile l&rsquo;esempio funzionante dell&rsquo;animazione realizzata.</p>
-<div id="basics"</div>
+<div id="basics"></div>
 
 		</div>
 	</article>
 </main>
 
+<script src="/static/coding/web/p5js/basics.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
 
 
 
-			</div>
-			
-		</div>
-		<footer class="footer">
+
+            </div>
+            
+        </div>
+        <footer class="footer">
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
@@ -187,7 +195,8 @@
 		</div>
 	</div>
 </footer>
-	</div>
+    </div>
 <script async defer src="/js/menu.js"></script>
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
