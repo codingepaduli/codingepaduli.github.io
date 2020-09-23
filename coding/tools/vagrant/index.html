@@ -106,7 +106,7 @@
 <p>Funziona con molti software &ldquo;hypervisor&rdquo;, denominati providers, tra cui l&rsquo;hypervisor di VirtualBox e  l&rsquo;hypervisor KVM presente nel kernel Linux.</p>
 <h2 id="concetti-base-di-vagrant">Concetti base di Vagrant</h2>
 <p>Vagrant crea le macchine virtuali partendo da dei &ldquo;box&rdquo;, ovvero delle immagini di macchine virtuali già configurate con determinati sistemi operativi, che possono essere scelti all&rsquo;indirizzo:
-<a href="https://vagrantcloud.com/search">https://vagrantcloud.com/search</a>.</p>
+<a href="https://vagrantcloud.com/search" title="Vagrant - Pagina web contenente i 'box'">https://vagrantcloud.com/search</a>.</p>
 <p>Quando si crea una macchina virtuale (a partire da un box), Vagrant crea un file, di nome &ldquo;Vagrantfile&rdquo;, che contiene la configurazione della macchina virtuale creata. Questo file può essere esteso per creare un&rsquo;intero ambiente virtuale composto da più macchine virtuali.</p>
 <p>Quando si vuole avviare, stoppare, sospendere o riavviare una macchina virtuale, Vagrant deve leggere il file &ldquo;Vagrantfile&rdquo; che descrive l&rsquo;ambiente virtuale. Per questo motivo, i comandi di  Vagrant devono essere eseguiti nella stessa cartella che contiene il &ldquo;Vagrantfile&rdquo;.</p>
 <p>Si consiglia quindi la creazione di una nuova cartella per ogni macchina virtuale (o ambiente virtuale) che si intende creare ed eseguire i comandi di creazione e gestione dell macchina virtuale (o dell&rsquo;ambiente virtuale) nella cartella contenente il Vagrantfile.</p>
@@ -124,7 +124,7 @@ Una volta scelto il box della macchina virtuale (sul sito di Vagrant), ad esempi
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant ssh
 </code></pre></div><p>Anche per SSH il login avviene il più delle volte con username &ldquo;vagrant&rdquo; e password &ldquo;vagrant&rdquo;, mentre per chiudere la connessione SSH si usa il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">logout
-</code></pre></div><p>La  macchina virtuale si può avviare anche per nome o ID, per cui si esegue (nella stessa cartella che contiene il Vagrantfile) il comando:</p>
+</code></pre></div><p>La macchina virtuale si può avviare anche per nome o ID, per cui si esegue (nella stessa cartella che contiene il Vagrantfile) il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant up nome_macchina <span style="color:#75715e"># avvia la macchina virtuale per nome</span>
 vagrant up id_macchina <span style="color:#75715e"># avvia la macchina virtuale per ID</span>
 </code></pre></div><p>Allo stesso modo si può stoppare la macchina virtuale per nome o ID, per cui si esegue (nella stessa cartella che contiene il Vagrantfile) il comando:</p>
@@ -149,9 +149,9 @@ vagrant halt id_macchina <span style="color:#75715e"># stoppa la macchina virtua
 </code></pre></div><p>Per rimuovere un box (bisogna avere il nome del box):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant box remove debian/buster64
 </code></pre></div><p>Per un elenco dei box aggiungi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant box list 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant box list
 </code></pre></div><p>Per un elenco dei box da aggiornare:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant box list outdated --global 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant box list outdated --global
 </code></pre></div><p>Per aggiornare i box:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vagrant box update
 </code></pre></div><p>Per rimuovere vecchie versioni di uno specifico box:</p>
@@ -161,8 +161,8 @@ vagrant halt id_macchina <span style="color:#75715e"># stoppa la macchina virtua
 </code></pre></div><h2 id="sintassi-del-vagrantfile-e-variabili-definite">Sintassi del Vagrantfile e variabili definite</h2>
 <p>Il Vagrantfile è il file che contiene la configurazione dell&rsquo;ambiente virtuale ed è scritto in linguaggio ruby. In esso sono specificate le configurazioni di tutte le macchina virtuali appartenenti all&rsquo;ambiente virtuale.</p>
 <p>Per fare un riferimento alla sintassi del file, un blocco di istruzioni in Ruby è definito da</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>variabile<span style="color:#f92672">|</span> 
-	<span style="color:#75715e"># blocco istruzioni</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>variabile<span style="color:#f92672">|</span>
+  <span style="color:#75715e"># blocco istruzioni</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Quindi il seguente blocco di istruzioni definisce la variabile config come ambiente virtuale.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Vagrant</span><span style="color:#f92672">.</span>configure(<span style="color:#e6db74">&#34;2&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>config<span style="color:#f92672">|</span>
@@ -176,7 +176,7 @@ vagrant halt id_macchina <span style="color:#75715e"># stoppa la macchina virtua
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Vagrant</span><span style="color:#f92672">.</span>configure(<span style="color:#e6db74">&#34;2&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>config<span style="color:#f92672">|</span>
   config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>box <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;debian/buster64&#34;</span>
   config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>hostname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;debianBuster&#34;</span>
-  
+
   config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>provider <span style="color:#e6db74">&#34;virtualbox&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>vb<span style="color:#f92672">|</span>
     vb<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;exe1DebianBuster&#34;</span>
     vb<span style="color:#f92672">.</span>gui <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
@@ -262,29 +262,29 @@ config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>
 <p>All&rsquo;interno dell&rsquo;ambiente virtuale è possibile definire più macchine virtuali, ognuna con la propria configurazione ed il proprio hypervisor (provider).</p>
 <p>Per definire 2 macchine virtuali assegnate rispettivamente alle variabili &ldquo;web&rdquo; e &ldquo;database&rdquo;, si devono creare due blocchi del tipo:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Vagrant</span><span style="color:#f92672">.</span>configure(<span style="color:#e6db74">&#34;2&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>config<span style="color:#f92672">|</span>
-	config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>define <span style="color:#e6db74">&#34;web&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>web<span style="color:#f92672">|</span>
+  config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>define <span style="color:#e6db74">&#34;web&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>web<span style="color:#f92672">|</span>
         web<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>box <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;debian/buster64&#34;</span>
         web<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>hostname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;web&#39;</span>
-        
+
         web<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>provider <span style="color:#e6db74">&#34;virtualbox&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>vb<span style="color:#f92672">|</span>
-  			vb<span style="color:#f92672">.</span>gui <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
-          	vb<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vm1-Debian&#34;</span>
-  			vb<span style="color:#f92672">.</span>memory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1024&#34;</span>
+        vb<span style="color:#f92672">.</span>gui <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+            vb<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vm1-Debian&#34;</span>
+        vb<span style="color:#f92672">.</span>memory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1024&#34;</span>
             vb<span style="color:#f92672">.</span>cpus <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2&#34;</span>
-   		<span style="color:#66d9ef">end</span>
+      <span style="color:#66d9ef">end</span>
     <span style="color:#66d9ef">end</span>
-      
-	config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>define <span style="color:#e6db74">&#34;database&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>database<span style="color:#f92672">|</span>
-    	database<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>box <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;debian/buster64&#34;</span>
+
+  config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>define <span style="color:#e6db74">&#34;database&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>database<span style="color:#f92672">|</span>
+      database<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>box <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;debian/buster64&#34;</span>
         database<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>hostname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;database&#39;</span>
-        
+
         database<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>provider <span style="color:#e6db74">&#34;virtualbox&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>vb<span style="color:#f92672">|</span>
-  			vb<span style="color:#f92672">.</span>gui <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
-          	vb<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vm2-Debian&#34;</span>
-  			vb<span style="color:#f92672">.</span>memory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1024&#34;</span>
+        vb<span style="color:#f92672">.</span>gui <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+            vb<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vm2-Debian&#34;</span>
+        vb<span style="color:#f92672">.</span>memory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1024&#34;</span>
             vb<span style="color:#f92672">.</span>cpus <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2&#34;</span>
-   		<span style="color:#66d9ef">end</span>
-	<span style="color:#66d9ef">end</span>
+      <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Se molte opzioni sono comuni, si può ridurre il codice rendendolo parametrico e definendo tutti i parametri differenti in un array:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">vm1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;web&#34;</span>,     <span style="color:#e6db74">&#39;v-name&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;vm1-Debian&#34;</span>, <span style="color:#e6db74">&#39;ip&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;192.168.5.224&#34;</span>}
@@ -292,18 +292,17 @@ vm2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&
 vms <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>vm1, vm2<span style="color:#f92672">]</span>
 
 <span style="color:#66d9ef">Vagrant</span><span style="color:#f92672">.</span>configure(<span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>config<span style="color:#f92672">|</span>
-	vms<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>node<span style="color:#f92672">|</span>
-    	
-        config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>define node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">]</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>node_config<span style="color:#f92672">|</span>
-        	node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">].</span>vm<span style="color:#f92672">.</span>box <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;debian/buster64&#34;</span>
-            node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">].</span>vm<span style="color:#f92672">.</span>hostname <span style="color:#f92672">=</span> node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">]</span> 
+  vms<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>node<span style="color:#f92672">|</span>
+                config<span style="color:#f92672">.</span>vm<span style="color:#f92672">.</span>define node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">]</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>node_config<span style="color:#f92672">|</span>
+          node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">].</span>vm<span style="color:#f92672">.</span>box <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;debian/buster64&#34;</span>
+            node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">].</span>vm<span style="color:#f92672">.</span>hostname <span style="color:#f92672">=</span> node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">]</span>
             node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">].</span>vm<span style="color:#f92672">.</span>network <span style="color:#e6db74">&#34;private_network&#34;</span>, <span style="color:#e6db74">ip</span>: node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;ip&#39;</span><span style="color:#f92672">]</span>
 
             node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;name&#39;</span><span style="color:#f92672">].</span>vm<span style="color:#f92672">.</span>provider <span style="color:#e6db74">&#34;virtualbox&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>vb<span style="color:#f92672">|</span>
-				vb<span style="color:#f92672">.</span>gui <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
-				vb<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;v-name&#39;</span><span style="color:#f92672">]</span>
-				vb<span style="color:#f92672">.</span>memory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1024&#34;</span>
-				vb<span style="color:#f92672">.</span>cpus <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2&#34;</span>
+        vb<span style="color:#f92672">.</span>gui <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+        vb<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> node<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;v-name&#39;</span><span style="color:#f92672">]</span>
+        vb<span style="color:#f92672">.</span>memory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1024&#34;</span>
+        vb<span style="color:#f92672">.</span>cpus <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2&#34;</span>
             <span style="color:#66d9ef">end</span>
         <span style="color:#66d9ef">end</span>
     <span style="color:#66d9ef">end</span>
@@ -326,8 +325,8 @@ vms <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>vm1
 <li>deploy via FTP</li>
 <li>deploy attraverso i servizi Heroku o Atlas</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">config<span style="color:#f92672">.</span>push<span style="color:#f92672">.</span>define <span style="color:#e6db74">&#34;ftp&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>push<span style="color:#f92672">|</span> 
-	push<span style="color:#f92672">.</span>host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ftp.company.com&#34;</span> 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">config<span style="color:#f92672">.</span>push<span style="color:#f92672">.</span>define <span style="color:#e6db74">&#34;ftp&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>push<span style="color:#f92672">|</span>
+  push<span style="color:#f92672">.</span>host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ftp.company.com&#34;</span>
     push<span style="color:#f92672">.</span>username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username&#34;</span>
     push<span style="color:#f92672">.</span>password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mypassword&#34;</span>
 <span style="color:#66d9ef">end</span>

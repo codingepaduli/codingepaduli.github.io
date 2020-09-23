@@ -207,11 +207,11 @@ World
 </ul>
 <p>La lista di colori disponibili è la seguente: <code>Black</code>, <code>DarkBlue</code>, <code>DarkGreen</code>, <code>DarkCyan</code>, <code>DarkRed</code>, <code>DarkMagenta</code>, <code>DarkYellow</code>, <code>Gray</code>, <code>DarkGray</code>, <code>Blue</code>, <code>Green</code>, <code>Cyan</code>, <code>Red</code>, <code>Magenta</code>, <code>Yellow</code>, <code>White</code>.</p>
 <p>Per scrivere un messaggio di output sul terminale con sfondo nero e colore testo rosso, si usa quindi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Host <span style="color:#e6db74">&#34;Red&#34;</span> <span style="color:#e6db74">&#34;on white&#34;</span> <span style="color:#e6db74">&#34;text.&#34;</span> -NoNewline -Separator <span style="color:#e6db74">&#34; -- &#34;</span> 
-  -ForegroundColor red -BackgroundColor white 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Host <span style="color:#e6db74">&#34;Red&#34;</span> <span style="color:#e6db74">&#34;on white&#34;</span> <span style="color:#e6db74">&#34;text.&#34;</span> -NoNewline -Separator <span style="color:#e6db74">&#34; -- &#34;</span>
+  -ForegroundColor red -BackgroundColor white
 </code></pre></div><p>L&rsquo;output è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Red -- on white -- text.
-</code></pre></div><p>Si nota che i vari oggetti sono separati dal separatore <code>--</code> e non è presente nessun carattere &lsquo;a capo&rsquo;; Il testo è in rosso e lo sfondo è in bianco.</p>
+</code></pre></div><p>Si nota che i vari oggetti sono separati dal separatore &quot; &ndash; &quot; e non è presente nessun carattere &lsquo;a capo&rsquo;; Il testo è in rosso e lo sfondo è in bianco.</p>
 <h3 id="leggere-dal-terminale">Leggere dal terminale</h3>
 <p>Il CommandLet utilizzato per leggere dal terminale è <code>Read-Host</code> che ha la seguente sintassi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Read-Host [[-Prompt] &lt;Object&gt;] [-AsSecureString]
@@ -225,24 +225,24 @@ World
 </code></pre></div><p>Nel caso in cui si deve inserire una password o comunque un input che non si vuole visualizzare a video, si usa l&rsquo;opzione <code>AsSecureString</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$nome = Read-Host <span style="color:#e6db74">&#34;Inserisci il nome&#34;</span> -AsSecureString
 </code></pre></div><h2 id="commenti">Commenti</h2>
-<p>E&rsquo; possibile aggiungere commenti attraverso il carattere <code>#</code>. In caso di commenti su più righe, questi vanno racchiusi tra i simboli di apertura e chiusura commento rappresentati da <code>&lt;#</code> e <code>#&gt;</code>.</p>
+<p>E' possibile aggiungere commenti attraverso il carattere <code>#</code>. In caso di commenti su più righe, questi vanno racchiusi tra i simboli di apertura e chiusura commento rappresentati da <code>&lt;#</code> e <code>#&gt;</code>.</p>
 <p>Ad esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> <span style="color:#75715e"># Questo è un commento</span>
 
- <span style="color:#75715e">&lt;# Questo è un 
-</span><span style="color:#75715e">    commento su 
+ <span style="color:#75715e">&lt;# Questo è un
+</span><span style="color:#75715e">    commento su
 </span><span style="color:#75715e">    più righe #&gt;</span>
 </code></pre></div><h2 id="creazione-e-rimozione-di-alias">Creazione e rimozione di Alias</h2>
-<p>E&rsquo; possibile personalizzare la lista di alias per i CmdLet, aggiungendone di nuovi con il comando:</p>
+<p>E' possibile personalizzare la lista di alias per i CmdLet, aggiungendone di nuovi con il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Alias -Name <span style="color:#e6db74">&#34;wo&#34;</span> -Value <span style="color:#e6db74">&#34;Write-Output&#34;</span>
 </code></pre></div><p>A questo punto è possibile utilizzare l&rsquo;alias <code>wo</code> al posto di <code>Write-Output</code>, come nell&rsquo;esempio seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">wo <span style="color:#e6db74">&#34;Hello&#34;</span>
-</code></pre></div><p>E&rsquo; possibile cancellare un alias con il CmdLet:</p>
+</code></pre></div><p>E' possibile cancellare un alias con il CmdLet:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Alias -Name <span style="color:#e6db74">&#34;wo&#34;</span>
 </code></pre></div><h2 id="primi-script">Primi script</h2>
 <p>Uno script è un elenco di istruzioni inserite in un file. Eseguire uno script consiste nell&rsquo;esecuzione di tutte le istruzioni inserite nel file. L&rsquo;estensione del file per gli script PowerShell è <code>ps1</code>.</p>
 <p>Prima di creare uno script è consigliato impostare le opzioni di salvataggio (quali codifica dei caratteri UTF-8 ed il carattere di terminazione riga) attraverso gli strumenti appositi quali <a href="/coding/tools/editorconfig/">EditorConfig</a>.</p>
-<p>E&rsquo; possibile creare il primo script salvando le seguenti istruzioni in un file <code>esempio.ps1</code>:</p>
+<p>E' possibile creare il primo script salvando le seguenti istruzioni in un file <code>esempio.ps1</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># Questo è il primo script</span>
 
 <span style="color:#75715e"># Scrivo un messaggio</span>
@@ -256,8 +256,8 @@ $nome = Read-Host
 <span style="color:#75715e"># Scrivo il nome sullo stream di errore</span>
 Write-Error $nome
 </code></pre></div><p>Per questioni di sicurezza, le impostazioni predefinite prevedono che l&rsquo;esecuzione di script sia disabilitata. Per verificare le impostazioni, aprire il terminale di PowerShell ed eseguire:</p>
-<pre><code>Get-ExecutionPolicy
-</code></pre><p>L&rsquo;output del comando rappresenta la politica di esecuzione degli script impostata.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-ExecutionPolicy
+</code></pre></div><p>L&rsquo;output del comando rappresenta la politica di esecuzione degli script impostata.</p>
 <p>Le politiche di esecuzione sono:</p>
 <ul>
 <li>

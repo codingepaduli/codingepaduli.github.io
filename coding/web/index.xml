@@ -6,11 +6,7 @@
     <description>Recent content in Tecnologie Web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://codingepaduli.github.io/coding/web/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/coding/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js</title>
       <link>http://codingepaduli.github.io/coding/web/linkp5js/</link>
@@ -21,12 +17,12 @@
     </item>
     
     <item>
-      <title>Javascript</title>
+      <title>JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/linkjavascript/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/linkjavascript/</guid>
-      <description>Lezioni sul linguaggio Javascript nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/javascript&#39;&gt;Javascript&lt;/a&gt;</description>
+      <description>Lezioni sul linguaggio JavaScript nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/javascript&#39;&gt;JavaScript&lt;/a&gt;</description>
     </item>
     
     <item>

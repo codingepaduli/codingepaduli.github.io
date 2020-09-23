@@ -101,7 +101,7 @@
 </div></div>
 		</header><div class="content post__content clearfix">
 			<h1 id="macchine-virtuali">Macchine virtuali</h1>
-<p>Una macchina virtuale è una macchina che ha tutte le componenti hardware simulate da un&rsquo;altra macchina (la macchina &ldquo;host&rdquo;, dall&rsquo;inglese &ldquo;macchina ospitante&rdquo;). Hard disk, processore, RAM, scheda di rete e tutte le altre componenti sono disponibili come risorse virtuali. E&rsquo; possibile eseguire più macchine virtuali (chiamate &ldquo;guest&rdquo;, dall&rsquo;inglese &ldquo;ospite&rdquo;) sulla macchina ospitante (&ldquo;host&rdquo;)</p>
+<p>Una macchina virtuale è una macchina che ha tutte le componenti hardware simulate da un&rsquo;altra macchina (la macchina &ldquo;host&rdquo;, dall&rsquo;inglese &ldquo;macchina ospitante&rdquo;). Hard disk, processore, RAM, scheda di rete e tutte le altre componenti sono disponibili come risorse virtuali. E' possibile eseguire più macchine virtuali (chiamate &ldquo;guest&rdquo;, dall&rsquo;inglese &ldquo;ospite&rdquo;) sulla macchina ospitante (&ldquo;host&rdquo;).</p>
 <h2 id="vantaggi">Vantaggi</h2>
 <p>Il principale vantaggio nell&rsquo;avere sistemi virtualizzati consiste nell&rsquo;isolamento: tutte le azioni e le modifiche che avvengono nelle singole macchine virtuali restano confinate alle rispettive macchina virtuale. Se una macchina virtuale dovesse prendere un virus, questo sarebbe comunque confinato alla specifica macchina virtuale e non infetta nè la macchina ospitante, nè le altre macchine virtuali.</p>
 <p>Un altro vantaggio nell&rsquo;avere un sistema virtualizzato consiste nell&rsquo;emulazione: una macchina virtuale può avere un&rsquo;architettura completamente differente dalla macchina ospitante. Si può emulare un personal computer, un server, uno smartphone, una X-Box, una playstation, un Game Boy, un Atari Lynx, uno smartwatch e così via..</p>
@@ -110,14 +110,14 @@
 <p>La virtualizzazione realizzata attraverso macchina virtuale è una virtualizzazione a livello hardware. Un punto da chiarire è come avviene la comunicazione tra la macchina virtuale e la macchina ospitante. In generale è necessario un software chiamato hypervisor (o anche Virtual Machine Monitor) che si occupa di gestire l&rsquo;accesso della macchina virtuale alle risorse hardware della macchina ospitante. L&rsquo;hypervisor si occupa anche di gestire la protezione della macchina ospitante e l&rsquo;isolamento tra le diverse macchine virtuali che sono virtualizzate dalla macchina ospitante.</p>
 <p>A partire dagli anni 2000 sono nate tecnologie hardware quali Intel® Virtualization Technology e AMD-V™ Technology for Client Virtualization che servono a rendere le CPU più efficienti nell&rsquo;eseguire il processo di virtualizzazione.</p>
 <p>Sul sito del produttore della CPU si può verificare se il supporto hardware alla virtualizzazione è presente. Prendendo ad esempio un processore Intel Core i-9, sul sito dell&rsquo;azienda e verificando le speficiche della CPU troviamo:</p>
-<p><img src="/static/coding/tools/MacchineVirtuali-Virtualization-Tech-Intel-Specification.png" alt="Image" title="VirtualBox - Intel Technology 1"></p>
+<p><img src="/static/coding/tools/MacchineVirtuali-Virtualization-Tech-Intel-Specification.png" alt="VirtualBox - Specifiche hardware Intel Technology" title="VirtualBox - Specifiche hardware Intel Technology"></p>
 <p>Nella sezione &ldquo;tecnologie avanzate&rdquo; troviamo la conferma che la CPU ha il supporto hardware alla virtualizzazione alla riga &ldquo;Intel® Virtualization Technology : SI&rdquo;.</p>
-<p><img src="/static/coding/tools/MacchineVirtuali-Virtualization-Tech-Intel-Specification2.png" alt="Image" title="VirtualBox - Intel Technology 1"></p>
+<p><img src="/static/coding/tools/MacchineVirtuali-Virtualization-Tech-Intel-Specification2.png" alt="VirtualBox - Specifiche hardware Intel Technology" title="VirtualBox - Specifiche hardware Intel Technology"></p>
 <p>Facendo la stessa ricerca per un processore AMD, sul sito del produttore troviamo:</p>
-<p><img src="/static/coding/tools/MacchineVirtuali-Virtualization-Tech-AMD-Specification.png" alt="Image" title="VirtualBox - AMD Technology"></p>
+<p><img src="/static/coding/tools/MacchineVirtuali-Virtualization-Tech-AMD-Specification.png" alt="VirtualBox - Specifiche hardware AMD Technology" title="VirtualBox - Specifiche hardware AMD Technology"></p>
 <p>e alla riga &ldquo;Tecnologie supportate&rdquo; troviamo compresa la tecnologia di virtualizzazione &ldquo;Virtualization&rdquo;.</p>
-<p>E&rsquo; importante controllare che questa tecnologia sia abilitata nelle impostazioni del BIOS:</p>
-<p><img src="/static/coding/tools/MacchineVirtuali-BIOS-Settings.png" alt="Image" title="VirtualMachine - BIOS settings"></p>
+<p>E' importante controllare che questa tecnologia sia abilitata nelle impostazioni del BIOS:</p>
+<p><img src="/static/coding/tools/MacchineVirtuali-BIOS-Settings.png" alt="VirtualMachine - impostazioni del BIOS" title="VirtualMachine - impostazioni del BIOS"></p>
 <h2 id="svantaggi">Svantaggi</h2>
 <p>La nota negativa nell&rsquo;uso di una macchina virtuale è che bisogna simulare l&rsquo;intero hardware e software, sistema operativo compreso. Avere più macchine virtuali in esecuzione sulla stessa macchina ospite è molto dispendioso in termini di risorse necessarie per la macchina ospite. Se un sistema operativo richiede 8 GB di RAM e 16 GB di spazio su disco, con 5 macchine virtuali avremo necessari 40 GB di RAM e 80 GB di spazio su disco. Le risorse della macchina ospitante terminano falcilmente. Per questo le aziende hanno iniziato a lavorare, quando possibile, con tecnologie meno &ldquo;pesanti&rdquo; in termini di risorse richieste.</p>
 <p>Altra nota negativa è che per ogni macchina virtuale bisogna gestire il sistema operativo: bisogna gestire l&rsquo;accesso di tutti gli utenti, i ruoli, i servizi da configurare o da eseguire all&rsquo;avvio, gli aggiornamenti del sistema operativo, ecc.. Per quanto la gestione possa essere in parte o completamente automatizzata, comunque si tratta di una duplicazione di un compito che già viene svolto sul sistema operativo della macchina ospitante.</p>
@@ -125,7 +125,7 @@
 <p>Esistomo molti software per la gestione di macchine virtuali, ognuno che sfrutta il proprio hypervisor per l&rsquo;accesso all&rsquo;hardware della macchina ospite.</p>
 <p>Degno di nota l&rsquo;hypervisor integrato nel kernel Linux, chiamato KVM.
 L&rsquo;hypervisor Kernel-based Virtual Machine (KVM) è una tecnologia open source che permette di utilizzare proprio il kernel Linux come hypervisor, permettendo a qualsiasi macchina Linux (host) di &ldquo;ospitare&rdquo; più macchine virtuali ospiti (guests). Ogni macchina virtuale è eseguita come un qualsiasi altro processo eseguito da Linux (si ricorda che un processo è un programma in esecuzione).</p>
-<p>Tra i vari software disponibili all&rsquo;utente medio si consigliano <a href="/coding/tools/virtualbox/" title="VirtualBox">VirtualBox</a>, con il proprio hypervisor, e Qemu, con l&rsquo;hypervisor KVM e con la sua interfaccia grafica <a href="/coding/tools/aqemu" title="AQemu">AQemu</a>.</p>
+<p>Tra i vari software disponibili all&rsquo;utente medio si consigliano <a href="/coding/tools/virtualbox/" title="Link a VirtualBox">VirtualBox</a>, con il proprio hypervisor, e Qemu, con l&rsquo;hypervisor KVM e con la sua interfaccia grafica <a href="/coding/tools/aqemu" title="Link a AQemu">AQemu</a>.</p>
 
 		</div>
 	</article>

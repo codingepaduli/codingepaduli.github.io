@@ -6,10 +6,51 @@
     <description>Recent content in coding on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Sun, 13 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>04.2 - Soluzione progetto Pong</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</link>
+      <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</guid>
+      <description>Implementazione del videogioco in stile &amp;lsquo;pong&amp;rsquo;</description>
+    </item>
     
-	<atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>04.4 - Soluzione progetto Arknoid</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</link>
+      <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</guid>
+      <description>Implementazione del videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
+    </item>
     
+    <item>
+      <title>04.1 - Progetto Pong</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</guid>
+      <description>Sviluppo di un videogioco in stile &amp;lsquo;pong&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>04.3 - Progetto Arknoid</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</guid>
+      <description>Sviluppo di un videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>04 - Interattività</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/interactivity/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/interactivity/</guid>
+      <description>Interazione con l&amp;rsquo;utente mediante mouse e tastiera</description>
+    </item>
     
     <item>
       <title>03 - Colori e stili</title>
@@ -57,12 +98,12 @@
     </item>
     
     <item>
-      <title>10 - Asynchronous Javascript And XML (AJAX)</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/ajax/</link>
-      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <title>Test sui numeri primi con la libreria grafica p5.js</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/primes/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/javascript/ajax/</guid>
-      <description>10 - Asynchronous Javascript And XML (AJAX)</description>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/primes/</guid>
+      <description>Test sui numeri primi con la libreria grafica p5.js</description>
     </item>
     
     <item>
@@ -201,21 +242,21 @@
     </item>
     
     <item>
-      <title>01 - Introduzione al linguaggio Javascript</title>
+      <title>01 - Introduzione al linguaggio JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/intro/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/intro/</guid>
-      <description>Introduzione al linguaggio Javascript</description>
+      <description>Introduzione al linguaggio JavaScript</description>
     </item>
     
     <item>
-      <title>Javascript</title>
+      <title>JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/linkjavascript/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/linkjavascript/</guid>
-      <description>Lezioni sul linguaggio Javascript nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/javascript&#39;&gt;Javascript&lt;/a&gt;</description>
+      <description>Lezioni sul linguaggio JavaScript nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/javascript&#39;&gt;JavaScript&lt;/a&gt;</description>
     </item>
     
     <item>

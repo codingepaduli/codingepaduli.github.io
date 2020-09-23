@@ -101,21 +101,28 @@
 </div></div>
 		</header><div class="content post__content clearfix">
 			<h1 id="primi-script">Primi script</h1>
-<p>Per la scrittura di programmi in javascript si consiglia innanzitutto di configurare l&rsquo;editor di testi per utilizzare caratteristiche generali quali la codifica di caratteri o il carattere di fine riga, magari usando strumenti come <a href="/coding/tools/editorconfig/">EditorConfig</a>.</p>
+<p>Per la scrittura di programmi in JavaScript si consiglia innanzitutto di configurare l&rsquo;editor di testi per utilizzare caratteristiche generali quali la codifica di caratteri o il carattere di fine riga, magari usando strumenti come <a href="/coding/tools/editorconfig/" title="Link a EditorConfig">EditorConfig</a>.</p>
 <p>Gli script vengono eseguiti man mano che la pagina web viene &ldquo;letta&rdquo; dal browser e mostrata all&rsquo;utente. Quindi conta l&rsquo;ordine in cui il codice è scritto nella pagina web.</p>
-<p>L&rsquo;istruzione più conosciuta di javascript è <code>alert()</code>, che permette di mostrare un messaggio all&rsquo;utente.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World!!&#34;</span>);
-</code></pre></div><p>I prossimi esempi faranno uso di questa istruzione per illustrare l&rsquo;inserimento degli script in pagina.</p>
 <h2 id="modalità-di-esecuzione-strict-e-sloppy">Modalità di esecuzione strict e sloppy</h2>
-<p>Javascript utilizza due modalità di esecuzione degli script:</p>
+<p>JavaScript utilizza due modalità di esecuzione degli script:</p>
 <ul>
-<li><strong>sloppy</strong>: una modalità che permette che alcuni errori non vengano segnalati, ma ignorati silenziosamente, portando a malfunzionamenti non semplici da individuare; Questa modalità è quella applicata di default e talvolta;</li>
+<li><strong>sloppy</strong>: una modalità che permette che alcuni errori non vengano segnalati, ma ignorati silenziosamente, portando a malfunzionamenti non semplici da individuare; Questa modalità è quella applicata in maniera predefinita;</li>
 <li><strong>strict</strong>: una modalità che segnala alcuni errori non facilmente riscontrabili e che rende più rigida e chiara l&rsquo;esecuzione degli script. Deve essere specificata all&rsquo;inizio di ogni script e di ogni funzione dalla seguente stringa:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;use strict&#34;</span>;
-</code></pre></div><h2 id="commenti">Commenti</h2>
-<p>Javascript permette di commentare il codice su una sola riga utilizzando il simbolo <code>//</code> seguito dal commento, mentre i commenti su più righe includono i commenti tra i caratteri <code>/*</code> e <code>*/</code>.</p>
-<p>Un esempio di commenti è il seguente:</p>
+</code></pre></div><h2 id="istruzione-alert">Istruzione alert</h2>
+<p>Per istruzioni si intendono comandi impartiti ad un esecutore.</p>
+<p>L&rsquo;istruzione più conosciuta di JavaScript è <code>alert()</code>, che permette di mostrare un messaggio all&rsquo;utente, come nell&rsquo;esempio di seguito:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;use strict&#34;</span>;
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World!!&#34;</span>);
+</code></pre></div><h2 id="uso-del-punto-e-virgola-">Uso del punto e virgola &ldquo;;&rdquo;</h2>
+<p>Il <strong>punto e virgola</strong> viene utilizzato per identificare la fine di un’istruzione, per cui ogni istruzione deve terminare con un carattere <code>;</code>.</p>
+<p>Si precisa che non tutto il codice è composto da istruzioni, esistono blocchi e strutture che non sono istruzioni e, quindi, non prevedono la terminazione con il carattere di fine istruzione <code>;</code>, si ponga quindi attenzione all&rsquo;inserimento di questo carattere;</p>
+<h2 id="commenti">Commenti</h2>
+<p>I commenti sono delle note, delle spiegazioni che il programmatore inserisce per descrivere e documentare parti di codice. In fase di esecuzione, i commenti sono completamente ignorati.</p>
+<p>JavaScript permette di commentare il codice su una sola riga utilizzando il simbolo <code>//</code> seguito dal commento, mentre i commenti su più righe includono i commenti tra i caratteri <code>/*</code> e <code>*/</code>.</p>
+<p>Un esempio di script che fa uso di commenti è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#e6db74">&#39;use strict&#39;</span>;
 
@@ -125,42 +132,44 @@
 </span><span style="color:#75715e">  commento su
 </span><span style="color:#75715e">  più righe
 </span><span style="color:#75715e">*/</span>
-</code></pre></div><h2 id="inserimento-script-in-pagina">Inserimento script in pagina</h2>
+<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World!!&#34;</span>);
+</code></pre></div><h2 id="inserimento-script-in-pagina-web">Inserimento script in pagina web</h2>
 <p>Per inserire uno script in una pagina web esistono diverse possibilità:</p>
 <ul>
 <li>inserire uno script <strong>inline</strong> ovvero nei tag HTML che ne permettono la possibilità;</li>
 <li>inserire uno script direttamente nella pagina HTML, utilizzando il tag <code>script</code>;</li>
-<li>inserire un collegamento ad un file javascript esterno, che ha tipicamente estensione <code>.js</code>, utilizzando il tag <code>script</code>;</li>
+<li>inserire un collegamento ad un file JavaScript esterno, che ha tipicamente estensione <code>.js</code>, utilizzando il tag <code>script</code>;</li>
 </ul>
 <h3 id="inserimento-script-inline">Inserimento script inline</h3>
-<p>Per inserire il tag <strong>inline</strong>, lo si può allegare ai tag HTML che lo prevedono; ad esempio al tag button:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;Script contenuto inline&#39;);&#34;</span>&gt;  
-</code></pre></div><p>Quando l&rsquo;utente clicca sul pulsante, si attiva l&rsquo;azione &ldquo;onclick&rdquo; e quindi si visualizza il messaggio.</p>
+<p>Per inserire uno script <strong>inline</strong>, lo si può allegare ai tag HTML che lo prevedono;</p>
+<p>Si supponga, ad esempio, di voler allegare al tag HTML <code>button</code> lo script (composto da una sola istruzione) <code>alert('Script contenuto inline');</code>. Il codice risultante sarà il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;Script contenuto inline&#39;);&#34;</span>&gt;
+</code></pre></div><p>Si nota che nella stessa riga di codice è presente sia il codice <code>HTML</code> sia il codice <code>javascript</code> (inline).</p>
 <h3 id="inserimento-script-nella-pagina-html">Inserimento script nella pagina HTML</h3>
-<p>Per inserire uno script direttamente nella pagina web, si usa il tag <code>script</code> per includere il codice. Di seguito un esempio:</p>
+<p>Per inserire uno script in una sezione apposita della pagina web, si usa il tag <code>script</code>, la cui apertura e chiusura delimita lo script. Di seguito un esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
   <span style="color:#e6db74">&#34;use strict&#34;</span>;
 
-  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;script contenuto nella pagina web&#34;</span>);
+  <span style="color:#75715e">// messaggio all&#39;utente
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;script contenuto nella pagina web&#34;</span>);
 <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
 </code></pre></div><h3 id="inserimento-script-in-un-file-esterno">Inserimento script in un file esterno</h3>
-<p>Per inserire un collegamento ad un file esterno, si inserisce il tag <code>script</code> con l&rsquo;attributo <code>src</code> che contiene il collegamento al file javascript esterno. Di seguito un esempio:</p>
+<p>Per inserire un collegamento ad uno script contenuto in un file esterno, si inserisce il tag <code>script</code> con l&rsquo;attributo <code>src</code> contenente il collegamento al file. Di seguito un esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;file.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
-</code></pre></div><p>Il file esterno ovviamente conterrà tutte le istruzioni javascript, come nel seguente esempio</p>
+</code></pre></div><p>Il file esterno ovviamente conterrà tutte le istruzioni JavaScript, come nel seguente esempio</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;use strict&#34;</span>;
 
 <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;script contenuto in un file esterno&#34;</span>);
-</code></pre></div><h2 id="console-javascript">Console javascript</h2>
-<p>Lo strumento che più aiuta nello sviluppo di codice javascript è la console del browser, che appare quando si preme il tasto &ldquo;F12&rdquo; o quando si clicca con il seconda tasto del mouse sulla pagina web e si sceglie
-la voce &ldquo;Ispeziona&rdquo;.</p>
-<p><img src="/static/coding/web/javascript/javascript-console.png" alt="Browser&rsquo;s console"></p>
+</code></pre></div><h2 id="console-javascript">Console JavaScript</h2>
+<p>Lo strumento che più aiuta nello sviluppo di codice JavaScript è la console del browser, che appare quando si preme il tasto &ldquo;F12&rdquo; o quando si clicca con il seconda tasto del mouse sulla pagina web e si sceglie la voce &ldquo;Ispeziona&rdquo;.</p>
+<p><img src="/static/coding/web/javascript/javascript-console.png" alt="Console del browser" title="Console del browser"></p>
 <h3 id="informazioni-avvisi-ed-errori">Informazioni, avvisi ed errori</h3>
 <p>Nella console è possibile scrivere informazioni, allarmi ed errori attraverso le istruzioni <code>console.info()</code>, <code>console.warn()</code> e <code>console.error()</code>, che prendono come parametro un messaggio da mostrare.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;informazione&#34;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;allarme&#34;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;errore&#34;</span>);
 </code></pre></div><h3 id="raggruppare-messaggi">Raggruppare messaggi</h3>
-<p>E&rsquo; possibile creare gruppi di messaggi, utilizzando le istruzioni <code>console.group()</code> e <code>console.groupEnd()</code>:</p>
+<p>E' possibile creare gruppi di messaggi, utilizzando le istruzioni <code>console.group()</code> e <code>console.groupEnd()</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">group</span>(<span style="color:#e6db74">&#34;gruppo di informazioni&#34;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;informazione 1&#34;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;informazione 2&#34;</span>);
@@ -184,7 +193,7 @@ la voce &ldquo;Ispeziona&rdquo;.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">nome</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Pippo&#34;</span>, <span style="color:#a6e22e">cognome</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Pluto&#34;</span>};
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">obj</span>);
 </code></pre></div><p>Un esempio completo della console contenente l&rsquo;output di tutte le istruzioni viste è il seguente:</p>
-<p><img src="/static/coding/web/javascript/javascript-console-primi-script.png" alt="Browser&rsquo;s console"></p>
+<p><img src="/static/coding/web/javascript/javascript-console-primi-script.png" alt="Console - output di tutte le istruzioni" title="Console - output di tutte le istruzioni"></p>
 
 		</div>
 	</article>

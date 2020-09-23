@@ -6,11 +6,7 @@
     <description>Recent content in Software open source on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://codingepaduli.github.io/opensource/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/opensource/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DavX e Fruux</title>
       <link>http://codingepaduli.github.io/opensource/davx_e_fruux/</link>

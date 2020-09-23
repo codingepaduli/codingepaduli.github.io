@@ -5,10 +5,6 @@
     <link>http://codingepaduli.github.io/tags/</link>
     <description>Recent content in Tags on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>it</language>
-    
-	<atom:link href="http://codingepaduli.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>it</language><atom:link href="http://codingepaduli.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -6,11 +6,7 @@
     <description>Recent content in PowerShell on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://codingepaduli.github.io/coding/shell/powershell/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/coding/shell/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>05 - Filesystem - Gestione file e cartelle</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-filecartelle/</link>

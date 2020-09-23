@@ -104,30 +104,30 @@
 <h2 id="moduli">Moduli</h2>
 <p>Un modulo è un pacchetto che contiene comandi, provider, funzioni, variabili, alias ed altro ancora.</p>
 <p>I moduli possono essere aggiunti e rimossi dall&rsquo;ambiente PowerShell e sono tipicamente organizzati per tematica:, esiste il modulo per la sicurezza, il modulo per gli oggetti di utilità, ecc&hellip;</p>
-<p>E&rsquo; possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
+<p>E' possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Module -ListAvailable
 </code></pre></div><p>L&rsquo;output riportato è il seguente:</p>
-<pre><code>Directory: /opt/microsoft/powershell/7/Modules
+<pre><code class="language-output" data-lang="output">Directory: /opt/microsoft/powershell/7/Modules
 
 ModuleType Version    PreRelease Name                                PSEdition
 ---------- -------    ---------- ----                                ---------
-Manifest   1.2.5                 Microsoft.PowerShell.Archive        Desk     
-Manifest   7.0.0.0               Microsoft.PowerShell.Host           Core     
-Manifest   7.0.0.0               Microsoft.PowerShell.Management     Core     
-Manifest   7.0.0.0               Microsoft.PowerShell.Security       Core     
-Manifest   7.0.0.0               Microsoft.PowerShell.Utility        Core     
-Script     1.4.6                 PackageManagement                   Desk     
-Script     2.2.3                 PowerShellGet                       Desk     
-Script     2.0.5                 PSDesiredStateConfiguration         Core     
-Script     2.0.0                 PSReadLine                          Desk     
-Binary     2.0.3                 ThreadJob                           Desk 
+Manifest   1.2.5                 Microsoft.PowerShell.Archive        Desk
+Manifest   7.0.0.0               Microsoft.PowerShell.Host           Core
+Manifest   7.0.0.0               Microsoft.PowerShell.Management     Core
+Manifest   7.0.0.0               Microsoft.PowerShell.Security       Core
+Manifest   7.0.0.0               Microsoft.PowerShell.Utility        Core
+Script     1.4.6                 PackageManagement                   Desk
+Script     2.2.3                 PowerShellGet                       Desk
+Script     2.0.5                 PSDesiredStateConfiguration         Core
+Script     2.0.0                 PSReadLine                          Desk
+Binary     2.0.3                 ThreadJob                           Desk
 </code></pre><h2 id="providers-e-drive">Providers e drive</h2>
 <p>I provider sono oggetti che fanno parte del <code>.Net Framework</code> (lo stesso di PowerShell) e che forniscono un accesso specializzato ad una collezione di dati. Vi è un provider che gestisce file e cartelle, uno che gestire gli alias, uno che gestire le variabili d&rsquo;ambiente, ecc&hellip;</p>
 <p>L&rsquo;utente può creare nuovi provider per gestire altre collezioni di dati.</p>
-<p>E&rsquo; possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
+<p>E' possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSProvider
 </code></pre></div><p>L&rsquo;output riportato è il seguente:</p>
-<pre><code>Name                 Capabilities                  Drives
+<pre><code class="language-output" data-lang="output">Name                 Capabilities                  Drives
 ----                 ------------                  ------
 Alias                ShouldProcess                 {Alias}
 Environment          ShouldProcess                 {Env}
@@ -136,7 +136,7 @@ Function             ShouldProcess                 {Function}
 Variable             ShouldProcess                 {Variable}
 </code></pre><p>Un provider può fornire più punti d&rsquo;accesso alla collezione di dati. Ad esempio l&rsquo;accesso al filesystem su ambienti Windows è fornito attraverso i drive <code>c:</code>, <code>d:</code>, &hellip;, ognuno dei quali fornisce un punto d&rsquo;accesso ad un disco logico.</p>
 <h2 id="sessioni">Sessioni</h2>
-<p>Le sessioni sono utilizzate per memorizzare le informazioni relative ad una connessione locale o remota ad un computer,</p>
+<p>Le sessioni sono utilizzate per memorizzare le informazioni relative ad una connessione locale o remota ad un computer.</p>
 <p>Le sessioni sono memorizzate sul computer a cui ci si collega, in modo tale da permettere la disconnessione e la successiva riconnessione da un altro computer.</p>
 <h2 id="commandlet">CommandLet</h2>
 <p>I CommandLet sono i comandi &ldquo;interni&rdquo; che è possibile eseguire nell&rsquo;ambiente PowerShell. Per una lista completa di CmdLet disponibili, eseguire il comando:</p>
@@ -171,7 +171,7 @@ Variable             ShouldProcess                 {Variable}
 <p>Un esempio di CmdLet che prende in input un parametro e lo stampa in output nel terminale è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output -InputObject <span style="color:#e6db74">&#34;Hello World!!&#34;</span>
 </code></pre></div><p>L&rsquo;output generato dal CmdLet è di seguito riportato:</p>
-<pre><code>Hello World!!
+<pre><code class="language-output" data-lang="output">Hello World!!
 </code></pre><h3 id="alias">Alias</h3>
 <p>Powershell associa ai diversi CmdLet disponibili una serie di alias gia familiari a chi proviene da altre shell, facilitando il passaggio a Powershell.</p>
 <p>Per ottenere la lista completa di alias, si usa la CmdLet:</p>
@@ -201,7 +201,7 @@ $variabileTestuale = <span style="color:#e6db74">&#34;2&#34;</span>;
 </code></pre></div><p>Allo stesso modo si può visualizzare la guida in linea del CmdLet invocandolo con il parametro <code>-?</code>, come ne seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output -?
 </code></pre></div><p>La guida in linea mostrata in entrambi gli esempi è la seguente:</p>
-<pre><code>NAME
+<pre><code class="language-output" data-lang="output">NAME
     Write-Output
 
 SYNTAX
@@ -211,12 +211,12 @@ ALIASES
     echo
 
 REMARKS
-    Get-Help cannot find the Help files for this cmdlet on this computer. 
+    Get-Help cannot find the Help files for this cmdlet on this computer.
         It is displaying only partial help.
-        -- To download and install Help files for the module that 
+        -- To download and install Help files for the module that
            includes this cmdlet, use Update-Help.
-        -- To view the Help topic for this cmdlet online, type: 
-           &quot;Get-Help Write-Output -Online&quot; or go to 
+        -- To view the Help topic for this cmdlet online, type:
+           &quot;Get-Help Write-Output -Online&quot; or go to
            https://go.microsoft.com/fwlink/?LinkID=2097117
 </code></pre><p>La guida mostra:</p>
 <ul>

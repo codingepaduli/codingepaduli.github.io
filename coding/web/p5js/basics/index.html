@@ -102,7 +102,7 @@
 		</header><div class="content post__content clearfix">
 			<h1 id="area-da-disegno-e-primitive-per-la-grafica-2d">Area da disegno e primitive per la grafica 2D</h1>
 <h2 id="area-da-disegno">Area da disegno</h2>
-<p>L&rsquo;area da disegno è creata attraverso la funzione <code>createCanvas</code>, già vista in precedenza, la quale prevede larghezza e lunghezza dell&rsquo;elemento, come nel seguente esempio:</p>
+<p>L&rsquo;area da disegno è creata attraverso la funzione <code>createCanvas</code>, già accennata in precedenza, la quale prevede larghezza e lunghezza dell&rsquo;elemento, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
 </code></pre></div><h3 id="posizionamento-dellarea-da-disegno">Posizionamento dell&rsquo;area da disegno</h3>
 <p>L&rsquo;area da disegno viene generalmente posizionata alla fine della pagina web, è possibile però riposizionarla in un&rsquo;altro elemento. Il riposizionamento avviene mediante l&rsquo;uso della funzione <code>parent</code>, passando come argomento un ID dell&rsquo;elemento HTML in cui riposizionarla.</p>
@@ -111,19 +111,24 @@
 &lt;<span style="color:#f92672">p</span>&gt;altro paragrafo&lt;/<span style="color:#f92672">p</span>&gt;
 </code></pre></div><p>Per riposizionare il canvas all&rsquo;interno del paragrafo, utilizzeremo la funzione <code>parent</code>, passando come argomento l&rsquo;identificativo del paragrafo <code>area</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">parent</span>(<span style="color:#e6db74">&#39;area&#39;</span>);
-</code></pre></div><h2 id="sistema-di-coordinate">Sistema di coordinate</h2>
-<p>Il sistema di coordinate <strong>cartesiane</strong> tipicamente usato da librerie di grafica 2D computerizzata è caratterizzato dagli assi X,Y che si intersecano nell&rsquo;angolo in alto a sinistra dello schermo ed ha la particolarità dell&rsquo;asse Y invertito. Di seguito si mostrano le differenze tra i due sistemi di coordinate:</p>
-<p><img src="https://p5js.org/assets/learn/coordinate-system-and-shapes/images/drawing-03.svg" alt="Image" title="p5js - Sistema di coordinate"></p>
+</code></pre></div><h3 id="dimensioni-memorizzate-dellarea-da-disegno">Dimensioni memorizzate dell&rsquo;area da disegno</h3>
+<p>Una volta creata l&rsquo;area da disegno attraverso la funzione <code>createCanvas</code>, la larghezza e l&rsquo;altezza dell&rsquo;area da disegno vengono memorizzate rispettivamente nelle variabili <code>width</code> ed <code>height</code>, in modo da essere sempre disponibili.</p>
+<h2 id="sistema-di-coordinate">Sistema di coordinate</h2>
+<p>Il sistema di coordinate <strong>cartesiane</strong> tipicamente usato da librerie di grafica 2D computerizzata è caratterizzato dagli assi X,Y che si intersecano nell&rsquo;angolo in alto a sinistra dello schermo, che rappresenta il punto di coordinate (0,0).</p>
+<p>La particolarità di questo sistema di coordinate è che l&rsquo;asse Y è invertito, cioè i valori positivi sono in basso ed i negativi in alto. Si nota inoltre che saranno disegnati sullo schermo del computer solo i punti che hanno entrambe le coordinate (x, y) con valore positivo.</p>
+<p>Di seguito si mostrano le differenze tra il classico sistema cartesiano e la variante utilizzata in p5.js:</p>
+<p><img src="https://p5js.org/assets/learn/coordinate-system-and-shapes/images/drawing-03.svg" alt="p5.js - Sistema di coordinate" title="p5.js - Sistema di coordinate"></p>
 <h3 id="gestione-angoli">Gestione angoli</h3>
 <p>In ambito matematico, gli angoli sono tipicamente espressi mediante due differenti unità di misura: il <strong>grado d&rsquo;arco</strong> (detto anche <strong>grado sessagesimale</strong>) ed il <strong>radiante</strong> (che fa parte del <strong>sistema internazionale di unità di misura</strong>).</p>
-<p>La libreria p5.js permette al programmatore di utilizzare l&rsquo;una o l&rsquo;altra unità di misura, specificandola attraverso la funzione <code>angleMode</code>, che prende come parametro una delle seguenti costanti:</p>
+<p>Un radiante è la misura dell&rsquo;angolo che si ha in corrispondenza di un arco di circonferenza di lunghezza pari al raggio.</p>
+<p>La libreria p5.js permette al programmatore di esprimere le grandezze angolari in <strong>gradi sessagesimali</strong> o <strong>radianti</strong>, specificando l&rsquo;unità di misura attraverso la funzione <code>angleMode</code>, che prende come parametro una delle seguenti costanti:</p>
 <ul>
 <li><code>DEGREES</code>: indica che l&rsquo;unità di misura degli angoli che si intende usare è il <strong>grado d&rsquo;arco</strong>;</li>
 <li><code>RADIANS</code>: indica che l&rsquo;unità di misura degli angoli che si intende usare è il <strong>radiante</strong>.</li>
 </ul>
 <p>Una caratteristica importante della libreria p5.js è che gli angoli sono misurati seguendo un <strong>senso orario</strong>.</p>
 <p>Volendo fare un parallelo con il quadrante di un l&rsquo;orologio, in cui la lancetta delle ore è posta sul numero tre (ore 3) e la lancetta dei minuti completa l&rsquo;angolo, il classico valore <strong>novanta gradi</strong> sull&rsquo;orologio non corrisponde alle ore <strong>3.00</strong> come ci aspetterebbe, ma corrispone alle ore <strong>3.30</strong>. Allo stesso modo, un angolo di <strong>zero gradi</strong> corrisponde alle ore <strong>3.15</strong>, un angolo di <strong>quarantacinque gradi</strong> corrisponde alle ore <strong>3.22</strong> circa, un angolo di <strong>centottanta gradi d&rsquo;arco</strong> corrisponde alle ore <strong>3.45</strong>.</p>
-<p>Per favorire l&rsquo;uso del <strong>radiante</strong>, la libreria p5.js mette a disposizione le seguenti costanti:</p>
+<p>Per facilitare l&rsquo;uso del radiante, la libreria p5.js mette a disposizione le seguenti costanti:</p>
 <ul>
 <li><code>PI</code>, ovvero la famosa costante matematica <strong>pi greco</strong>, dal valore (approssimato) <strong>3.14</strong>, corrispondente a centottanta gradi d&rsquo;arco;</li>
 <li><code>HALF_PI</code>, ovvero <strong>pi greco mezzi</strong>, corrispondenti a novanta gradi gradi d&rsquo;arco;</li>
@@ -134,7 +139,7 @@
 <p>Le primitive sono delle funzioni che realizzano le basi della grafica, sulle quali poi si poggia il lavoro per il rendering di scene complesse.</p>
 <p>Ogni primitiva è una funzione identificata da un nome e da una lista di parametri obbligatori o facoltativi. Di seguito saranno elencate le primitive principali con i parametri necessari ad indirizzare il lettore ad uso basilare, per tutti gli altri dettagli si rimanda alle specifiche della libreria.</p>
 <h3 id="disegno-di-un-punto">Disegno di un punto</h3>
-<p>Il punto è l&rsquo;entità più semplice da realizzare. La funzione progettata allo scopo è <code>point</code>, che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> del <strong>punto</strong>, come nel seguente esempio</p>
+<p>Il punto è l&rsquo;entità più semplice da realizzare. La funzione progettata allo scopo è <code>point</code>, che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> del <strong>punto</strong>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">point</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">20</span>);
 </code></pre></div><h3 id="disegno-di-una-linea">Disegno di una linea</h3>
 <p>La linea è rappresentata da un segmento che unisce due punti, per cui la si può realizzare attraverso la funzione <code>line</code> che prevede come argomenti le coordinate <code>x1</code> ed <code>y1</code> relative al <strong>primo punto</strong> e le coordinate <code>x2</code> ed <code>y2</code> relative al <strong>secondo punto</strong>, come nel seguente esempio:</p>
@@ -146,10 +151,10 @@
 <p>Il cerchio lo si può realizzare attraverso la funzione <code>circle</code> che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative al <strong>centro</strong> e la dimensione del <strong>diametro</strong>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">40</span>);
 </code></pre></div><h3 id="disegno-di-un-quadrato">Disegno di un quadrato</h3>
-<p>Si può realizzare un quadrato attraverso la funzione <code>square</code> che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative all&rsquo;<strong>angolo in alto a sinistra</strong> e la dimensione del <strong>lato</strong>, come nel seguente esempio:</p>
+<p>Si può realizzare un quadrato attraverso la funzione <code>square</code> che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative all'<strong>angolo in alto a sinistra</strong> e la dimensione del <strong>lato</strong>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">40</span>);
 </code></pre></div><h3 id="disegno-di-un-rettangolo">Disegno di un rettangolo</h3>
-<p>Il rettangolo è realizzabile attraverso la funzione <code>rect</code> che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative all&rsquo;<strong>angolo in alto a sinistra</strong>, la dimensione della <strong>base</strong> e la dimensione dell&rsquo;<strong>altezza</strong>, come nel seguente esempio:</p>
+<p>Il rettangolo è realizzabile attraverso la funzione <code>rect</code> che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative all'<strong>angolo in alto a sinistra</strong>, la dimensione della <strong>base</strong> e la dimensione dell'<strong>altezza</strong>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">rect</span>(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>);
 </code></pre></div><h3 id="disegno-di-un-ellisse">Disegno di un ellisse</h3>
 <p>Un ellisse è una sorta di cerchio &ldquo;schiacciato&rdquo;, lo si può interpretare come una sorta di cerchio con larghezza ed altezza differenti. Matematicamente parlando, l&rsquo;ellisse ha due punti focali invece di uno (a differenza del cerchio che ha come unico fuoco il centro del cerchio).</p>
@@ -164,12 +169,12 @@
 <h3 id="disegno-di-un-testo">Disegno di un testo</h3>
 <p>Il testo può essere racchiuso in un elemento HTML o gestito direttamente nell&rsquo;area da disegno. Per realizzarlo graficamente si utilizza la funzione <code>text</code>, che prevede come argomenti il testo e le coordinate <code>x</code> ed <code>y</code> del <strong>punto in alto a sinistra</strong> dal quale disegnare il testo, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;questo è un testo&#34;</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">340</span>);
-</code></pre></div><p>Un&rsquo;alternativa è rappresentata dalla stessa funzione che utilizza però come argomenti le coordinate <code>x</code> ed <code>y</code> relative al <strong>punto in alto a sinistra</strong> e la dimensione della <strong>base</strong> e la dimensione dell&rsquo;<strong>altezza</strong> del rettangolo nel quale racchiudere il testo, , come nel seguente esempio:</p>
+</code></pre></div><p>Un&rsquo;alternativa è rappresentata dalla stessa funzione che utilizza però come argomenti le coordinate <code>x</code> ed <code>y</code> relative al <strong>punto in alto a sinistra</strong> e la dimensione della <strong>base</strong> e la dimensione dell'<strong>altezza</strong> del rettangolo nel quale racchiudere il testo, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;questo è un testo troppo lungo&#34;</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">360</span>, <span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">20</span>);
 </code></pre></div><p>Da prestare attenzione che se il testo è troppo lungo e non può essere racchiuso nello spazio indicato, il testo rimanente non sarà disegnato.</p>
 <h2 id="esempio-completo">Esempio completo</h2>
 <p>Di seguito, si visualizza un esempio completo delle figure realizzate mediante il codice riportato nei vari esempi mostrati:</p>
-<p><img src="/static/coding/web/p5js/basics.png" alt="Image" title="p5js - Basi della grafica 2D"></p>
+<p><img src="/static/coding/web/p5js/basics.png" alt="p5.js - Basi della grafica 2D" title="p5.js - Basi della grafica 2D"></p>
 <p>In ambiente web è visualizzabile l&rsquo;esempio funzionante dell&rsquo;animazione realizzata.</p>
 <div id="basics"></div>
 

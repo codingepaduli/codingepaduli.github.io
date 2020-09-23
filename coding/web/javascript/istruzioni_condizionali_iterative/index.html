@@ -108,10 +108,10 @@
 <h2 id="istruzione-condizionale-if-else">Istruzione condizionale if-else</h2>
 <p>L&rsquo;istruzione utilizzata per eseguire un azione piuttosto che un&rsquo;altra è l&rsquo;istruzione <code>if-else</code>. Questa istruzione ha la seguente sintassi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition</span>) {
-  <span style="color:#75715e">// gruppo di istruzioni eseguite se la 
+  <span style="color:#75715e">// gruppo di istruzioni eseguite se la
 </span><span style="color:#75715e"></span>  <span style="color:#75715e">// condizione viene valutata con valore true
 </span><span style="color:#75715e"></span>} <span style="color:#66d9ef">else</span> {
-  <span style="color:#75715e">// gruppo di istruzioni eseguite se la 
+  <span style="color:#75715e">// gruppo di istruzioni eseguite se la
 </span><span style="color:#75715e"></span>  <span style="color:#75715e">// condizione viene valutata con valore false
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>Esempio:</p>
@@ -120,7 +120,7 @@
 } <span style="color:#66d9ef">else</span> {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;batteria carica&#34;</span>);
 }
-</code></pre></div><h2 id="operatore-ternario-">Operatore ternario ?</h2>
+</code></pre></div><h2 id="operatore-ternario-">Operatore ternario &ldquo;?&rdquo;</h2>
 <p>L&rsquo;operatore ternario è un operatore che valuta una condizione e restituisce un valore piuttosto che un altro a seconda che una condizione si verifichi o meno. La sintassi è una sorta di abbreviazione dell&rsquo;istruzione <code>if-else</code> ed è generalmente utilizzata nelle assegnazioni.</p>
 <p>Questo operatore ha la seguente sintassi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">condizione</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">valore1</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">valore2</span>;
@@ -153,7 +153,7 @@
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;Allarme attivo per &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">minuti</span>);
   <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">++</span>;
 }
-</code></pre></div><p>E&rsquo; utile notare che l&rsquo;istruzione <code>while</code> potrebbe non ripetere nemmeno una volta il gruppo di istruzioni, e ciò avviene quando la condizione viene immediatamente valutata con valore <code>false</code>.</p>
+</code></pre></div><p>E' utile notare che l&rsquo;istruzione <code>while</code> potrebbe non ripetere nemmeno una volta il gruppo di istruzioni, e ciò avviene quando la condizione viene immediatamente valutata con valore <code>false</code>.</p>
 <h2 id="istruzione-iterativa-do-while">Istruzione iterativa do-while</h2>
 <p>L&rsquo;istruzione iterativa utilizzata per ripetetere un gruppo di istruzioni uno o più volte è l&rsquo;istruzione <code>do-while</code>. Con questa istruzione, prima si esegue il gruppo di istruzioni e poi si valuta la condizione. Ogni volta che la condizione assume valore <code>true</code>, il gruppo di istruzioni viene eseguito, mentre quando assume valore <code>false</code> l&rsquo;iterazione termina.</p>
 <p>Questa istruzione ha la seguente sintassi:</p>
@@ -166,9 +166,9 @@
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;Allarme attivo per &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">minuti</span>);
   <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">++</span>;
 }
-</code></pre></div><p>E&rsquo; utile notare che l&rsquo;istruzione <code>do-while</code> ripetere almeno una volta il gruppo di istruzioni, anche se la condizione viene immediatamente valutata con valore <code>false</code>.</p>
+</code></pre></div><p>E' utile notare che l&rsquo;istruzione <code>do-while</code> ripetere almeno una volta il gruppo di istruzioni, anche se la condizione viene immediatamente valutata con valore <code>false</code>.</p>
 <h2 id="istruzione-iterativa-for">Istruzione iterativa for</h2>
-<p>Anche l&rsquo;istruzione <code>for</code> ripete un gruppo di istruzioni uno o più volte. E&rsquo; tipicamente utilizzata per ripeterlo un determinato numero di volte, ma potrebbe non eseguirlo affatto.</p>
+<p>Anche l&rsquo;istruzione <code>for</code> ripete un gruppo di istruzioni uno o più volte. E' tipicamente utilizzata per ripeterlo un determinato numero di volte, ma potrebbe non eseguirlo affatto.</p>
 <p>Questa istruzione ha la seguente sintassi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">inizializzazione</span>; <span style="color:#a6e22e">condizione</span>; <span style="color:#a6e22e">incremento</span>) {
   <span style="color:#75715e">// gruppo di istruzioni da eseguire

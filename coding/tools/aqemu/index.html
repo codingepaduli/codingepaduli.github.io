@@ -102,63 +102,62 @@
 		</header><div class="content post__content clearfix">
 			<h1 id="aqemu">AQemu</h1>
 <p>Aqemu è l&rsquo;interfaccia grafica che permette di interagire di Qemu, uno software open-source per la gestione di macchine virtuali.</p>
-<p>Al primo avvio all&rsquo;utente viene presentata la procedura guidata di configurazione dell&rsquo;ambiente.
-L&rsquo;utente deve scegliere la cartella di lavoro in cui le macchine virtuali saranno salvate:</p>
-<p><img src="/static/coding/tools/AQemu-Config-Step1.png" alt="Image" title="Aqemu - Config - step 1"></p>
+<p>Al primo avvio all&rsquo;utente viene presentata la procedura guidata di configurazione dell&rsquo;ambiente. L&rsquo;utente deve scegliere la cartella di lavoro in cui le macchine virtuali saranno salvate:</p>
+<p><img src="/static/coding/tools/AQemu-Config-Step1.png" alt="Aqemu - Config - step 1" title="Aqemu - Config - step 1"></p>
 <p>L&rsquo;utente viene poi guidato nella ricerca dello strumento Qemu, che effettivamente gestisce le macchine virtuali:</p>
-<p><img src="/static/coding/tools/AQemu-Config-Step2.png" alt="Image" title="Aqemu - Config - step 2"></p>
+<p><img src="/static/coding/tools/AQemu-Config-Step2.png" alt="Aqemu - Config - step 2" title="Aqemu - Config - step 2"></p>
 <p>Terminata la configurazione dell&rsquo;ambiente (ed anche ai successivi avvii), il programma si presenta con un&rsquo;interfaccia minimale che permette la creazione e l&rsquo;eliminazione di macchine virtuali. Le preferenze sono raggiungibili da menù.</p>
-<p><img src="/static/coding/tools/AQemu-VM-ListEmpty.png" alt="Image" title="Aqemu - Welcome"></p>
+<p><img src="/static/coding/tools/AQemu-VM-ListEmpty.png" alt="Aqemu - Welcome" title="Aqemu - Welcome"></p>
 <p>Il processo di creazione di una macchina virtuale è molto semplice, il primo passo permette la scelta la modalità di creazione tra tipica e personalizzata:</p>
 <ul>
 <li>la configurazione tipica permette solo poche scelte all&rsquo;utente in modo tale da rendere il processo di creazione della macchina virtuale più semplice per l&rsquo;utente;</li>
 <li>la configurazione personalizzata permette un maggior numero di scelte all&rsquo;utente, quindi una maggiore configurazione, ma è necessario una maggiore competenza tecnica;</li>
 </ul>
-<p><img src="/static/coding/tools/AQemu-NewVM-Step1.png" alt="Image" title="Aqemu - New Machine - step 1"></p>
+<p><img src="/static/coding/tools/AQemu-NewVM-Step1.png" alt="Aqemu - New Machine - step 1" title="Aqemu - New Machine - step 1"></p>
 <p>La scelta successiva riguarda la modalità da utilizzare per la creazione della macchina virtuale. Si può creare a partire da un modello del sistema operativo o da un modello di computer utilizzato:</p>
 <ul>
 <li>scegliendo il modello del sistema operativo l&rsquo;utente deve indicare il kernel utilizzato dal sistema operativo, il che potrebbe mettere in difficoltà l&rsquo;utente senza una formazione tecnica;</li>
 <li>scegliendo il modello di computer utilizzato l&rsquo;utente deve indicare il tipo di computer che si vuole virtualizzare ed un range di anni di riferimento, cosa molto più semplice per l&rsquo;utente non esperto.</li>
 </ul>
-<p><img src="/static/coding/tools/AQemu-NewVM-Step2.png" alt="Image" title="Aqemu - New Machine - step 2"></p>
+<p><img src="/static/coding/tools/AQemu-NewVM-Step2.png" alt="Aqemu - New Machine - step 2" title="Aqemu - New Machine - step 2"></p>
 <p>Passo successivo riguarda la scelta del software di hypervisor da utilizzare e i suggerimenti indicano di usare KVM (Kernel-based Virtual Machine) per macchine virtuali con architettura i386 e TCG per macchine virtuali che non hanno un&rsquo;architettura i386.</p>
-<p><img src="/static/coding/tools/AQemu-NewVM-Step3.png" alt="Image" title="Aqemu - New Machine - step 3"></p>
+<p><img src="/static/coding/tools/AQemu-NewVM-Step3.png" alt="Aqemu - New Machine - step 3" title="Aqemu - New Machine - step 3"></p>
 <p>L&rsquo;utente deve inserire il nome della macchina virtuale.</p>
-<p><img src="/static/coding/tools/AQemu-NewVM-Step4.png" alt="Image" title="Aqemu - New Machine - step 4"></p>
+<p><img src="/static/coding/tools/AQemu-NewVM-Step4.png" alt="Aqemu - New Machine - step 4" title="Aqemu - New Machine - step 4"></p>
 <p>L&rsquo;utente deve inserire la dimensione del disco fisso</p>
-<p><img src="/static/coding/tools/AQemu-NewVM-Step5.png" alt="Image" title="Aqemu - New Machine - step 5"></p>
+<p><img src="/static/coding/tools/AQemu-NewVM-Step5.png" alt="Aqemu - New Machine - step 5" title="Aqemu - New Machine - step 5"></p>
 <p>L&rsquo;utente deve scegliere se la macchina virtuale deve condividere la connessione con la macchina ospitante o se lasciare la macchina virtuale senza connessione.</p>
-<p><img src="/static/coding/tools/AQemu-NewVM-Step6.png" alt="Image" title="Aqemu - New Machine - step 6"></p>
+<p><img src="/static/coding/tools/AQemu-NewVM-Step6.png" alt="Aqemu - New Machine - step 6" title="Aqemu - New Machine - step 6"></p>
 <p>E quindi l&rsquo;utente arriva al messaggio di conferma dell&rsquo;avvenuta creazione della macchina virtuale.</p>
-<p><img src="/static/coding/tools/AQemu-NewVM-Step7.png" alt="Image" title="Aqemu - New Machine - step 7"></p>
+<p><img src="/static/coding/tools/AQemu-NewVM-Step7.png" alt="Aqemu - New Machine - step 7" title="Aqemu - New Machine - step 7"></p>
 <p>A questo punto l&rsquo;utente visualizza tutte le informazioni sulla macchina virtuale, divise per schede. La prima scheda mostra le informazioni generali sulla macchina virtuale, ovvero informazioni sul sistema, sulle componenti audio, video e di rete, sui dispositivi di archiviazione e sulle cartelle condivise con il sistema ospitante:</p>
-<p><img src="/static/coding/tools/AQemu-VM-List1.png" alt="Image" title="Aqemu - VM - Info 1"></p>
+<p><img src="/static/coding/tools/AQemu-VM-List1.png" alt="Aqemu - VM - Info 1" title="Aqemu - VM - Info 1"></p>
 <p>La seconda scheda permette di modificare le informazioni generali e le componenti hardware della macchina:</p>
-<p><img src="/static/coding/tools/AQemu-VM-List2.png" alt="Image" title="Aqemu - VM - Info 2"></p>
+<p><img src="/static/coding/tools/AQemu-VM-List2.png" alt="Aqemu - VM - Info 2" title="Aqemu - VM - Info 2"></p>
 <p>La terza scheda è divisa in più sezioni.</p>
 <p>La prima sezione della terza scheda permette di configurare i dispositivi di archiviazione, quali hard disk e CD/DVD.</p>
-<p><img src="/static/coding/tools/AQemu-VM-List3-1.png" alt="Image" title="Aqemu - VM - Info 3-1"></p>
+<p><img src="/static/coding/tools/AQemu-VM-List3-1.png" alt="Aqemu - VM - Info 3-1" title="Aqemu - VM - Info 3-1"></p>
 <p>La seconda sezione della terza scheda permette di configurare le cartelle che saranno condivise con la macchina ospitante.</p>
-<p><img src="/static/coding/tools/AQemu-VM-List3-2.png" alt="Image" title="Aqemu - VM - Info 3-2"></p>
+<p><img src="/static/coding/tools/AQemu-VM-List3-2.png" alt="Aqemu - VM - Info 3-2" title="Aqemu - VM - Info 3-2"></p>
 <p>La terza sezione della terza scheda permette di configurare le porte della macchina virtuale, in particolare le porte parallele, le porte seriali e le porte USB:</p>
-<p><img src="/static/coding/tools/AQemu-VM-List3-3.png" alt="Image" title="Aqemu - VM - Info 3-3"></p>
+<p><img src="/static/coding/tools/AQemu-VM-List3-3.png" alt="Aqemu - VM - Info 3-3" title="Aqemu - VM - Info 3-3"></p>
 <p>La quarta sezione della terza scheda mostra opzioni avanzate per il test di kernel Linux e la quinta sezione della terza scheda mostra opzioni avanzate per il BIOS. Per maggiori informazioni su queste opzioni si rimanda al wiki.</p>
 <p>La quarta scheda permette di scegliere se accedere alla macchina virtuale solo tramite tecnologie di remote desktop (ad esempio VNC). Per un uso locale questa opzione deve essere disabilitata, mentre può essere abilitata per accedervi da remoto. Scegliendo questa opzione la macchina virtuale sarà avviata in modalità headless (cioè viene avviata ma l&rsquo;interfaccia grafica non viene mostrata all&rsquo;utente, che può accedervi solo tramite desktop remoto):</p>
-<p><img src="/static/coding/tools/AQemu-VM-List4.png" alt="Image" title="Aqemu - VM - Info 4"></p>
+<p><img src="/static/coding/tools/AQemu-VM-List4.png" alt="Aqemu - VM - Info 4" title="Aqemu - VM - Info 4"></p>
 <p>La quarta scheda permette di configurare le opzioni di connessione:</p>
-<p><img src="/static/coding/tools/AQemu-VM-List5.png" alt="Image" title="Aqemu - VM - Info 5"></p>
-<p>La macchina virtuale è stata creata, quindi le componenti hardware sono presenti (in forma virtuale). E&rsquo; necessario indicare il software, in particolare il Sistema Operativo da eseguire quando si avvia la macchina virtuale.</p>
-<p>E&rsquo; necessario configurare la macchina virtuale per avviare il Sistema Operativo. La configurazione del dispositivo contenente il sistema operativo avviene nella scheda &ldquo;Media&rdquo;, alla prima sezione &ldquo;Dispositivi&rdquo;.</p>
+<p><img src="/static/coding/tools/AQemu-VM-List5.png" alt="Aqemu - VM - Info 5" title="Aqemu - VM - Info 5"></p>
+<p>La macchina virtuale è stata creata, quindi le componenti hardware sono presenti (in forma virtuale). E' necessario indicare il software, in particolare il Sistema Operativo da eseguire quando si avvia la macchina virtuale.</p>
+<p>E' necessario configurare la macchina virtuale per avviare il Sistema Operativo. La configurazione del dispositivo contenente il sistema operativo avviene nella scheda &ldquo;Media&rdquo;, alla prima sezione &ldquo;Dispositivi&rdquo;.</p>
 <p>In questa sezione è possibile aggiungere un nuovo lettore ottico dalla macchina ospitante (host), se il sistema operativo è stato masterizzato su CD-ROM.</p>
-<p><img src="/static/coding/tools/AQemu-VM-BootFromCD.png" alt="Image" title="Aqemu - VM - Boot from CD"></p>
+<p><img src="/static/coding/tools/AQemu-VM-BootFromCD.png" alt="Aqemu - VM - Boot from CD" title="Aqemu - VM - Boot from CD"></p>
 <p>In questa sezione è possibile anche aggiungere un nuovo disco di archiviazione dalla macchina ospitante (host), se il sistema operativo è stato scaricato e salvato sul disco fisso.</p>
-<p><img src="/static/coding/tools/AQemu-VM-BootFromISO.png" alt="Image" title="Aqemu - VM - Boot from ISO"></p>
+<p><img src="/static/coding/tools/AQemu-VM-BootFromISO.png" alt="Aqemu - VM - Boot from ISO" title="Aqemu - VM - Boot from ISO"></p>
 <p>Configurato correttamente il sistema operativo, è necessario controllare nella seconda scheda (la scheda di configurazione della Macchina Virtuale) che il dispositivo sia compreso nella lista di dispositivi di avvio (di Boot):</p>
-<p><img src="/static/coding/tools/AQemu-VM-Boot.png" alt="Image" title="Aqemu - VM - Boot"></p>
+<p><img src="/static/coding/tools/AQemu-VM-Boot.png" alt="Aqemu - VM - Boot" title="Aqemu - VM - Boot"></p>
 <p>Verificato che il dispositivo è nella lista di boot, è possibile avviare la macchina virtuale, il sistema operativo viene eseguito e quindi l&rsquo;utente può interagirvi:</p>
-<p><img src="/static/coding/tools/AQemu-VM-Run.png" alt="Image" title="Aqemu - VM - Run"></p>
+<p><img src="/static/coding/tools/AQemu-VM-Run.png" alt="Aqemu - VM - Run" title="Aqemu - VM - Run"></p>
 <p>Nel caso ci dovessero essere problemi di avvio, la macchina virtuale visualizza per breve tempo il messaggio di scelta del dispositivo che contiene il sistema operativo. Si deve premere il tasto ESC e poi scegliere il dispositivo dal quale avviare il sistema operativo.</p>
-<p><img src="/static/coding/tools/AQemu-VM-RunChooseBoot.png" alt="Image" title="Aqemu - VM - Choose Boot"></p>
+<p><img src="/static/coding/tools/AQemu-VM-RunChooseBoot.png" alt="Aqemu - VM - Choose Boot" title="Aqemu - VM - Choose Boot"></p>
 <p>Alla chiusura della macchina virtuale viene chiesto se:</p>
 <ul>
 <li>spegnere la macchina, quindi il sistema operativo termina l&rsquo;esecuzione.</li>

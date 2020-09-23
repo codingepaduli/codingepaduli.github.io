@@ -105,7 +105,7 @@
 <p>Quando si dichiara una variabile e si assegna un valore, allora alla variabile viene associato un tipo di dato. Se si assegna un valore differente, anche il tipo di dato cambia di conseguenza.</p>
 <p>Questo tipo di tipizzazione delle variabili è detto tipizzazione <strong>debole</strong>, in contrapposizione alla tipizzazione <strong>forte</strong>, in cui una variabile non può cambiare il tipo di dato associato.</p>
 <p>I tipi di dato possono essere semplici o complessi. Quelli semplici sono detti <code>primitivi</code> e quelli complessi sono gli oggetti.</p>
-<p>Dalla versione di Ecmascript 6 le variabili si dichiarano utilizzando la parola chiave <code>let</code>, anche se la parola chiave <code>var</code> usata in Ecmascript 5 è ancora valida.</p>
+<p>Dalla versione di ECMAScript 6 le variabili si dichiarano utilizzando la parola chiave <code>let</code>, anche se la parola chiave <code>var</code> usata in ECMAScript 5 è ancora valida.</p>
 <p>Le costanti sono spazi di memoria con un nome, un tipo associato ed un valore associato che non è più possibile modificare. Si dichiarano con la parola chiave <code>const</code>;</p>
 <h2 id="tipo-booleano">Tipo booleano</h2>
 <p>Le variabili possono avere assegnato un valore logico, detto Booleano, che può essere <code>true</code> oppure <code>false</code>.</p>
@@ -139,17 +139,17 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Una stringa&#39;</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringVariable2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Seconda stringa&#39;</span>;
 </code></pre></div><p>Per definire una sequenza di caratteri che occupi più righe, si può racchiudere tra apici inversi <code>`</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Una 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringVariable</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Una
 </span><span style="color:#e6db74">stringa`</span>;
 </code></pre></div><p>Questo tipo di definizione è utilizzato anche per concatenare variabili o il risultato di un&rsquo;espressione all&rsquo;interno della stringa. Le variabili e le espressioni devono essere racchiuse tra simboli <code>${</code> e <code>}</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">messaggio</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`La somma dei 
-</span><span style="color:#e6db74">numeri </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">num1</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> e </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">num2</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">messaggio</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`La somma dei
+</span><span style="color:#e6db74">numeri </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">num1</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> e </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">num2</span><span style="color:#e6db74">}</span><span style="color:#e6db74">
 </span><span style="color:#e6db74">vale </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">num1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num2</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>;
 </code></pre></div><p>L&rsquo;esempio precedente produce il seguente output (su più righe):</p>
-<pre><code>La somma dei 
-numeri 9 e 18 
+<pre><code class="language-output" data-lang="output">La somma dei
+numeri 9 e 18
 vale 27.
 </code></pre><h2 id="tipo-oggetto">Tipo oggetto</h2>
 <p>Un oggetto in ambito informatico è un dato complesso che risiede in memoria ed ha più proprietà ed anche dei metodi. Tipicamente la creazione di un oggetto è effettuata attraverso la parola chiave <code>new</code>.</p>
@@ -161,7 +161,7 @@ vale 27.
     <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5566</span>
 };
 </code></pre></div><h3 id="tipi-oggetto-wrapper">Tipi oggetto wrapper</h3>
-<p>E&rsquo; possibile creare una versione ad oggetti (detta &ldquo;wrapper&rdquo;)
+<p>E' possibile creare una versione ad oggetti (detta &ldquo;wrapper&rdquo;)
 dei tipi primitivi di dato numerici, stringhe o booleani:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">naturalNumberObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Number(<span style="color:#ae81ff">10</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">realNumberObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Number(<span style="color:#ae81ff">10.5</span>);
@@ -178,11 +178,11 @@ dei tipi primitivi di dato numerici, stringhe o booleani:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">variabileIndefinita</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">variabileIndefinita2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>;
 </code></pre></div><h2 id="identificazione-del-tipo-di-dato-di-una-variabile">Identificazione del tipo di dato di una variabile</h2>
-<p>E&rsquo; possibile identificare il tipo di una variabile utilizzando la parola
+<p>E' possibile identificare il tipo di una variabile utilizzando la parola
 chiave <code>typeof</code>. Partendo dal seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;use strict&#39;</span>
 
-<span style="color:#75715e">// variabili primitive 
+<span style="color:#75715e">// variabili primitive
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">naturalNumber</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">realNumber</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.5</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">toBeOrNotToBe</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
@@ -210,7 +210,7 @@ chiave <code>typeof</code>. Partendo dal seguente esempio:</p>
 </ul>
 <p>Come si può notare, sia la variabile oggetto, sia le variabili con valore <code>null</code>, sia la variabile sia tutte le variabili &ldquo;wrapper&rdquo; sono di tipo oggetto.</p>
 <p>Una precisazione però è da fare sulla variabile inizializzata a <code>null</code>:
-la specifica di Ecmascript prevede che, nonostante la variabile sia da
+la specifica di ECMAScript prevede che, nonostante la variabile sia da
 considerare come tipo &ldquo;null&rdquo;, l&rsquo;operazione <code>typeof null</code> restituisca
 <code>object</code>.</p>
 <h2 id="conversioni-tra-tipi">Conversioni tra tipi</h2>
@@ -222,7 +222,7 @@ l&rsquo;istruzione <code>parseInt()</code>, come nell&rsquo;esempio seguente:</p
 </span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;aaaa&#34;</span>)     <span style="color:#75715e">// restituisce NaN
 </span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;0.1e6&#34;</span>)    <span style="color:#75715e">// restituisce 0 perchè legge solo il numero intero 0
 </span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;0x77&#34;</span>)     <span style="color:#75715e">// restituisce 119 (= 7*16 + 7)
-</span></code></pre></div><p>E&rsquo; possibile convertire la stringa in un numero con una base specifica,
+</span></code></pre></div><p>E' possibile convertire la stringa in un numero con una base specifica,
 come nell&rsquo;esempio seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">parseInt(<span style="color:#e6db74">&#34;ZR&#34;</span>, <span style="color:#ae81ff">36</span>) <span style="color:#75715e">// restituisce 1289 (= 35*36 + 29)
 </span></code></pre></div><p>Per convertire dati dal formato stringa al formato float, si usa
@@ -235,21 +235,21 @@ base specifica.</p>
 <p>Per quanto concerne la conversione di un numero in formato stringa, è possibile utilizzare il metodo <code>toString()</code> dei tipi numerici, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringX</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>();
-</code></pre></div><p>E&rsquo; possibile convertire il numero in una base specificata passando come argomento al metodo <code>toString()</code> la base in cui si vuole convertire il numero.</p>
+</code></pre></div><p>E' possibile convertire il numero in una base specificata passando come argomento al metodo <code>toString()</code> la base in cui si vuole convertire il numero.</p>
 <p>Ad esempio, per la conversione in binario, ottale ed esadecimale si usa il seguente codice:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x2</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>).<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">2</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x8</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">8</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x16</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">16</span>);
 </code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
-<pre><code>x2 = &quot;1010&quot;
+<pre><code class="language-output" data-lang="output">x2 = &quot;1010&quot;
 x8 = &quot;12&quot;
 x16 = &quot;a&quot;
 </code></pre><p>Nel caso di numeri negativi, si può effettuare una conversione in complemento a 2, utilizzando il seguente codice:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">xC2</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toString</span>()
 </code></pre></div><p>Il numero è convertito in una stringa rappresentata da 32 bit:</p>
-<pre><code>xC2 = &quot;11111111111111111111111111111111&quot;
+<pre><code class="language-output" data-lang="output">xC2 = &quot;11111111111111111111111111111111&quot;
 </code></pre><p>Per la conversione in formato esponenziale si utilizza il metodo <code>toExponential()</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.4</span>;
@@ -260,7 +260,7 @@ x16 = &quot;a&quot;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringW</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">toExponential</span>();
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>();
 </code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
-<pre><code>&quot;1e+0&quot;
+<pre><code class="language-output" data-lang="output">&quot;1e+0&quot;
 &quot;1.4e+0&quot;
 &quot;1.4e+1&quot;
 &quot;1.2346e+8&quot;
@@ -270,7 +270,7 @@ x16 = &quot;a&quot;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">8</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">16</span>);
 </code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
-<pre><code>&quot;1.23e+8&quot;
+<pre><code class="language-output" data-lang="output">&quot;1.23e+8&quot;
 &quot;1.23456789e+8&quot;
 &quot;1.2345678912345600e+8&quot;
 </code></pre>

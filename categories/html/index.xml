@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HTML on Coding e Paduli</title>
+    <title>html on Coding e Paduli</title>
     <link>http://codingepaduli.github.io/categories/html/</link>
-    <description>Recent content in HTML on Coding e Paduli</description>
+    <description>Recent content in html on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it</language>
-    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML Lez. 06 - Immagini ed aree</title>
       <link>http://codingepaduli.github.io/coding/web/html/immagini/</link>
@@ -36,6 +32,15 @@
       
       <guid>http://codingepaduli.github.io/coding/web/html/tags02/</guid>
       <description>HTML Lez. 03 - Etichette con attributi - Spiegazione dei tag che fanno uso di attributi</description>
+    </item>
+    
+    <item>
+      <title>Tecnologie Web</title>
+      <link>http://codingepaduli.github.io/coding/web/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/</guid>
+      <description>Lezioni di programmazione sulle diverse Tecnologie Web</description>
     </item>
     
     <item>

@@ -106,13 +106,13 @@
 <p>Essendo un provider di tipo <strong>gerarchico</strong>, l&rsquo;accesso alle risorse è gestito attraverso un percorso.</p>
 <p>Questo provider fornisce più punti d&rsquo;accesso al filesystem. L&rsquo;accesso al filesystem su ambienti Windows è fornito attraverso i drive <code>c:</code>, <code>d:</code>, &hellip;, ognuno dei quali fornisce un punto d&rsquo;accesso ad un disco logico. Su ambiente Gnu/Linux il punto d&rsquo;accesso è fornito dal drive <strong>root</strong> indicato dal simbolo <code>/</code>.</p>
 <p>Il percorso in cui si posiziona l&rsquo;utente è detto <strong>percorso corrente</strong>. Quando l&rsquo;utente avvia PowerShell, il percorso corrente viene mostrato.</p>
-<pre><code>PowerShell 7.0.0
+<pre><code class="language-output" data-lang="output">PowerShell 7.0.0
 Copyright (c) Microsoft Corporation. All rights reserved.
 
 https://aka.ms/powershell
 Type &amp;#39;help&amp;#39; to get help.
 
-PS /home/user &gt; 
+PS /home/user &gt;
 </code></pre><p>Come si nota nell&rsquo;esempio, l&rsquo;ultima riga indica il percorso corrente <code>/home/user</code>, anche detto <strong>cartella di lavoro</strong> o cartella corrente. Quindi l&rsquo;utente &ldquo;si trova&rdquo; o &ldquo;sta lavorando&rdquo; nella cartella <code>/home/user</code>.</p>
 <p>L&rsquo;utente può spostarsi tra i percorsi. Ad ogni spostamento in un nuovo percorso, il <strong>percorso corrente</strong> viene aggiornato al nuovo percorso.</p>
 <p>Ad esempio, nel caso l&rsquo;utente si spostasse al percorso <code>/home/user/Documenti</code>, questo diventerebbe il suo percorso corrente.</p>
@@ -120,28 +120,28 @@ PS /home/user &gt;
 <p>Ogni file o cartella è identificato attraverso un percorso.</p>
 <p>Su sistema operativo Windows, il percorso è composto dalla lettera dell&rsquo;unità che identifica il disco logico (la partizione), dalle cartelle da attraversare per raggiungere il file o la cartella, ed opzionalmente dal nome del file. Il carattere <code>\</code> è utilizzato per separare i nomi delle cartelle da attraversare.</p>
 <p>Si prenda ad esempio il seguente percorso:</p>
-<pre><code>c:\Windows\Temp\temp.txt
+<pre><code class="language-output" data-lang="output">c:\Windows\Temp\temp.txt
 </code></pre><p>Il percorso indica che il file si trova nella partizione <code>c:</code>, le cartelle da attraversare per raggiungerlo sono <code>Windows</code> e <code>Temp</code> ed il nome del file è <code>temp.txt</code>.</p>
 <p>Nei sistemi operativi Gnu/Linux, Mac e Unix, i dischi non hanno una lettera di unità, ma devono essere montati nel sistema principale di gestione del filesystem. Sui questi sistemi è utilizzato il carattere <code>/</code> per separare i nomi delle cartelle da attraversare ed il percorso inizia sempre dalla cartella principale &ldquo;<strong>/</strong>&rdquo; (detta &ldquo;root&rdquo;, da non confondere con l&rsquo;utente amministratore, anch&rsquo;egli chiamato &ldquo;root&rdquo;), è seguito dalle cartelle da attraversare ed opzionalmente dal nome del file desiderato.</p>
 <p>Si prenda ad esempio il seguente percorso:</p>
-<pre><code>/home/temp/temp.txt
+<pre><code class="language-output" data-lang="output">/home/temp/temp.txt
 </code></pre><p>Il percorso indica che il file si trova nella partizione di root <code>/</code>, le cartelle da attraversare sono <code>home</code> e <code>temp</code> ed il nome del file è <code>temp.txt</code>.</p>
 <p>Si consideri un ulteriore esempio di percorso:</p>
-<pre><code>c:\utenti\
-</code></pre><p>Il percorso indica, all&rsquo;interno dell&rsquo;unita <code>c:</code> la cartella <code>utenti </code>. In questo caso non è stato indicato un file, ma una cartella.</p>
+<pre><code class="language-output" data-lang="output">c:\utenti\
+</code></pre><p>Il percorso indica, all&rsquo;interno dell&rsquo;unita <code>c:</code> la cartella <code>utenti</code>. In questo caso non è stato indicato un file, ma una cartella.</p>
 <h2 id="percorsi-relativi-ed-assoluti">Percorsi relativi ed assoluti</h2>
 <p>PowerShell utilizza il simbolo <code>.</code> per indicare la cartella corrente e <code>..</code> per indicare la cartella precedente.</p>
-<p>E&rsquo; importante sottolineare che questi simboli sono relativi al percorso, non alla cartella di lavoro.</p>
+<p>E' importante sottolineare che questi simboli sono relativi al percorso, non alla cartella di lavoro.</p>
 <p>Il sistema operativo si occupa della risoluzione dei percorsi contenenti i simboli <code>.</code> e <code>..</code> trasformandoli in percorsi assoluti.</p>
 <h3 id="primo-esempio-risoluzione-percorso">Primo esempio risoluzione percorso</h3>
 <p>Prendendo ad esempio il percorso:</p>
-<pre><code>c:\utenti\prof\Documenti\.\elenco.txt
+<pre><code class="language-output" data-lang="output">c:\utenti\prof\Documenti\.\elenco.txt
 </code></pre><p>La risoluzione del percorso inizia accedendo all&rsquo;unità <code>c:</code>, accedendo poi alle directory <code>utenti</code>, <code>prof</code>, <code>Documenti</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è <code>c:\utenti\prof\Documenti</code>.</p>
 <p>Il simbolo <code>.</code>, dato che si riferisce alla cartella corrente, viene risolto come un riferimento alla cartella <code>Documenti</code>.</p>
 <p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>Documenti</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>c:\utenti\prof\Documenti\elenco.txt</code>.</p>
 <h3 id="secondo-esempio-risoluzione-percorso">Secondo esempio risoluzione percorso</h3>
 <p>Prendendo ad esempio il percorso:</p>
-<pre><code>c:\utenti\.\prof\.\Documenti\.\elenco.txt
+<pre><code class="language-output" data-lang="output">c:\utenti\.\prof\.\Documenti\.\elenco.txt
 </code></pre><p>La risoluzione del percorso inizia accedendo all&rsquo;unità <code>c:</code>, poi accedendo alla cartella <code>utenti</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è <code>c:\utenti</code>.</p>
 <p>La prima occorrenza del simbolo <code>.</code> viene risolta come un riferimento alla cartella <code>utenti</code>.</p>
 <p>Dalla cartella <code>utenti</code> continua la risoluzione del percorso e si fa accesso alla cartella <code>prof</code>, che diventa la cartella <strong>corrente</strong> (<code>c:\utenti\prof</code>).</p>
@@ -152,7 +152,7 @@ PS /home/user &gt;
 <p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>Documenti</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>c:\utenti\prof\Documenti\elenco.txt</code>.</p>
 <h3 id="terzo-esempio-risoluzione-percorso">Terzo esempio risoluzione percorso</h3>
 <p>Prendendo ad esempio il percorso:</p>
-<pre><code>/home/prof/./Documenti/./elenco.txt
+<pre><code class="language-output" data-lang="output">/home/prof/./Documenti/./elenco.txt
 </code></pre><p>La risoluzione del percorso inizia accedendo alla cartella <strong>root</strong> <code>/</code>, poi accedendo alla cartella <code>home</code> e quindi alla cartella <code>prof</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è quindi <code>/home/prof</code>.</p>
 <p>La prima occorrenza del simbolo <code>.</code> viene risolta come un riferimento alla cartella <code>prof</code>.</p>
 <p>Dalla cartella <code>prof</code> si fa accesso alla cartella <code>Documenti</code>, che diventa la cartella <strong>corrente</strong> (<code>/home/prof/Documenti</code>).</p>
@@ -160,19 +160,19 @@ PS /home/user &gt;
 <p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>Documenti</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>/home/prof/Documenti/elenco.txt</code>.</p>
 <h3 id="quarto-esempio-risoluzione-percorso">Quarto esempio risoluzione percorso</h3>
 <p>Prendendo ad esempio il percorso:</p>
-<pre><code>.\elenco.txt
+<pre><code class="language-output" data-lang="output">.\elenco.txt
 </code></pre><p>La risoluzione del percorso inizia valutando il simbolo <code>.</code> che fa riferimento al percorso corrente. Dato che non è specificato nessun percorso corrente, il simbolo viene risolto facendo riferimento alla cartella di lavoro <strong>corrente dell&rsquo;utente</strong>.</p>
 <p>Supponendo che all&rsquo;avvio della shell ci si trovi al percorso <code>c:\utenti\prof</code>, allora il simbolo <code>.</code> viene risolto come un riferimento alla cartella <code>prof</code>.</p>
 <p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>prof</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>c:\utenti\prof\elenco.txt</code>.</p>
 <h3 id="quinto-esempio-risoluzione-percorso">Quinto esempio risoluzione percorso</h3>
 <p>Prendendo ad esempio il percorso:</p>
-<pre><code>c:\utenti\prof\Documenti\..\elenco.txt
+<pre><code class="language-output" data-lang="output">c:\utenti\prof\Documenti\..\elenco.txt
 </code></pre><p>La risoluzione del percorso inizia accedendo all&rsquo;unità <code>c:</code>, accedendo poi alle directory <code>utenti</code>, <code>prof</code>, <code>Documenti</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è <code>c:\utenti\prof\Documenti</code>.</p>
 <p>Il simbolo <code>..</code> si riferisce alla cartella <strong>precedente</strong> nel percorso e quindi viene risolto come un riferimento alla cartella <code>prof</code>.</p>
 <p>Il file <code>elenco.txt</code> è quindi individuato all&rsquo;interno della cartella <code>prof</code>. Il percorso iniziale è stato trasformato nel percorso assoluto <code>c:\utenti\prof\elenco.txt</code>.</p>
 <h3 id="sesto-esempio-risoluzione-percorso">Sesto esempio risoluzione percorso</h3>
 <p>Prendendo ad esempio il percorso:</p>
-<pre><code>c:\utenti\.\prof\..\mario\..\elenco.txt
+<pre><code class="language-output" data-lang="output">c:\utenti\.\prof\..\mario\..\elenco.txt
 </code></pre><p>La risoluzione del percorso inizia accedendo all&rsquo;unità <code>c:</code>, poi accedendo alla cartella <code>utenti</code>. A questo punto della risoluzione, la cartella <strong>corrente</strong> è quindi <code>c:\utenti</code>.</p>
 <p>La prima occorrenza del simbolo <code>.</code> viene risolto come un riferimento alla cartella <code>utenti</code>.</p>
 <p>Dalla cartella <code>utenti</code> si fa accesso alla cartella <code>prof</code>, che diventa la cartella <strong>corrente</strong> (<code>c:\utenti\prof</code>).</p>
@@ -206,14 +206,14 @@ PS /home/user &gt;
 </ul>
 <p>Esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Location -Path <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
-</code></pre></div><p>E&rsquo; possibile usare l&rsquo;alias <code>cd</code>, noto su tutti i sistemi operativi:</p>
+</code></pre></div><p>E' possibile usare l&rsquo;alias <code>cd</code>, noto su tutti i sistemi operativi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cd <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
 </code></pre></div><h3 id="ottenere-la-cartella-di-lavoro-corrente">Ottenere la cartella di lavoro corrente</h3>
 <p>Per visualizzare o ottenere la cartella di lavoro corrente si utilizza la CmdLet <code>Get-Location</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location
 </code></pre></div><p>Esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location
-</code></pre></div><p>E&rsquo; possibile usare l&rsquo;alias <code>pwd</code>, noto sui sistemi Gnu/Linux, Unix e Mac.</p>
+</code></pre></div><p>E' possibile usare l&rsquo;alias <code>pwd</code>, noto sui sistemi Gnu/Linux, Unix e Mac.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">pwd
 </code></pre></div><h3 id="verifica-esistenza-o-correttezza-sintattica-dei-percorsi">Verifica esistenza o correttezza sintattica dei percorsi</h3>
 <p>La verifica dell&rsquo;esistenza o della correttezza sintattica di uno o più percorsi avviene con la CmdLet <code>Test-Path</code>, che ha la seguente sintassi:</p>
@@ -254,7 +254,7 @@ PS /home/user &gt;
 </code></pre></div><p>Esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSDrive
 </code></pre></div><p>Output:</p>
-<pre><code>Name           Used (GB)     Free (GB) Provider      Root
+<pre><code class="language-output" data-lang="output">Name           Used (GB)     Free (GB) Provider      Root
 ----           ---------     --------- --------      ----
 Alias                                  Alias
 C                 202.06      23718.91 FileSystem    C:\

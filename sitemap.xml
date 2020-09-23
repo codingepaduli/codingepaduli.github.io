@@ -3,27 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/coding/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/categories/web/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</loc>
+    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</loc>
+    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/interactivity/</loc>
+    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</loc>
     <lastmod>2020-09-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,17 +88,17 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/web/javascript/ajax/</loc>
-    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/categories/javascript/</loc>
-    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/primes/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingepaduli.github.io/coding/web/javascript/dom/</loc>
+    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/categories/javascript/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   

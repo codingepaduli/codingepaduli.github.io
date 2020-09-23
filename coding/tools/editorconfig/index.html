@@ -101,12 +101,12 @@
 </div></div>
 		</header><div class="content post__content clearfix">
 			<h1 id="editorconfig">EditorConfig</h1>
-<p><a href="https://editorconfig.org">EditorConfig</a> è uno strumento per condividere le stesse impostazioni di stile e codifica tra gli sviluppatori, che lavorano sullo stesso progetto con vari editors e IDEs. Alcuni di questi editors e IDEs sono giá abilitati all&rsquo;uso di EditorConfig, mentre per altri è necessario installare un plugin (vedere sul sito la lista di editor giá abilitati o che prevedono dei plugin x supportarlo).</p>
+<p><a href="https://editorconfig.org" title="Sito web di EditorConfig">EditorConfig</a> è uno strumento per condividere le stesse impostazioni di stile e codifica tra gli sviluppatori, che lavorano sullo stesso progetto con vari editors e IDEs. Alcuni di questi editors e IDEs sono giá abilitati all&rsquo;uso di EditorConfig, mentre per altri è necessario installare un plugin (vedere sul sito la lista di editor giá abilitati o che prevedono dei plugin x supportarlo).</p>
 <p>EditorConfig si configura creando, nella cartella principale del sito web, un file di testo con nome <code>.editorconfig</code>, in cui impostare le opzioni di codifica, spaziatura e indentazione. Questo file va condiviso su tutti gli ambienti e tra tutti gli sviluppatori.</p>
 <p>Il contenuto di questo file prevede poche regole:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">root</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
 
-<span style="color:#a6e22e">[*] </span>
+<span style="color:#66d9ef">[*]</span>
 <span style="color:#a6e22e">end_of_line</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">lf</span>
 <span style="color:#a6e22e">insert_final_newline</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
 <span style="color:#a6e22e">charset</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">utf-8</span>
@@ -114,7 +114,7 @@
 <span style="color:#a6e22e">indent_size</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">4</span>
 </code></pre></div><p><strong>root</strong> impostato a <code>true</code>, indica che è la cartella principale di progetto. In caso non fosse la cartella principale,  deve essere impostato a <code>false</code>, in modo che la cartella principale viene cercata tra le .</p>
 <p><strong>[*]</strong> indica che le impostazioni presenti nelle righe successive devono essere applicate a tutti i files.</p>
-<p><strong>end_of_line</strong> indica il carattere di <a href="https://it.m.wikipedia.org/wiki/Ritorno_a_capo">&ldquo;Ritorno a capo&rdquo;</a>, cioè &ldquo;invio&rdquo;, da utilizzare nei file di testo. Puó essere il carattere <strong>LF</strong> (utilizzato su Unix o Linux) oppure <strong>CRLF</strong> (utilizzato su Windows).</p>
+<p><strong>end_of_line</strong> indica il carattere di <a href="https://it.m.wikipedia.org/wiki/Ritorno_a_capo" title="Link a wikipedia sull'articolo 'Ritorno a capo'">&ldquo;Ritorno a capo&rdquo;</a>, cioè &ldquo;invio&rdquo;, da utilizzare nei file di testo. Puó essere il carattere <strong>LF</strong> (utilizzato su Unix o Linux) oppure <strong>CRLF</strong> (utilizzato su Windows).</p>
 <p><strong>insert_final_newline</strong> impostato a <code>true</code>, viene aggiunta una riga vuota, se non presente, alla fine del file, ogni volta che si salva il file. Impostato a <code>false</code> non sono aggiunte righe.</p>
 <p><strong>charset</strong> indica la codifica del file, di default è UTF-8.</p>
 <p><strong>indent_style</strong> indica il carattere per indentare il codice. Puó essere <code>space</code> per usare lo spazio, oppure <code>tab</code> per utilizzare il carattere di tabulazione &ldquo;TAB&rdquo;.</p>

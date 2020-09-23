@@ -96,7 +96,7 @@
 			
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-08-26T00:00:00Z">August 26, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">HTML</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-08-26T00:00:00Z">August 26, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
@@ -106,12 +106,12 @@
 <p>Sempre nell'ottica dell'ottimizzazione dei tempi, si possono utilizzare tecniche di <strong>lazy laoding</strong>, ovvero di caricamento delle immagini solo su richiesta.</p>
 <p>Partendo dal caso piú semplice, ovvero per mostrare un'unica immagine sempre alle stesse dimensioni qualsiasi sia il dispositivo, il tag delle immagini <code>img</code> prevede, per questo specifico compito, gli attributi <code>src</code> per indicare l'URL dell'immagine, <code>width</code> per indicare la larghezza ed <code>height</code> per l'altezza.</p>
 <p>Il codice di esempio è il seguente:</p>
-<p><code>&lt;img src=&rdquo;/static/immagine.png&rdquo; width=&quot;145&rdquo; height=&quot;126&rdquo; alt=&quot;Immagine&rdquo; /&gt;</code></p>
+<p><code>&lt;img src=&quot;/static/immagine.png&quot; width=&ldquo;145&rdquo; height=&ldquo;126&rdquo; alt=&ldquo;Immagine&rdquo; /&gt;</code></p>
 <p>Il risultato si puó apprezzare qua:</p>
 <p><img src="/static/coding/web/html/program_CC0.png" width="145" height="126" alt="Immagine" /></p>
 <p style="font-size: 0.9rem;font-style: italic;">
-  <a href="https://svgsilh.com/3f51b5/image/1970468.html">Immagine</a> 
-  rilasciata con Licenza 
+  <a href="https://svgsilh.com/3f51b5/image/1970468.html">Immagine</a>
+  rilasciata con Licenza
   <a href="https://creativecommons.org/licenses/cc0/1.0/?ref=ccsearch&atype=html">CC0 1.0</a>
   <a href="https://creativecommons.org/licenses/cc0/1.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block">
   <img style="display: inline-block;height: 22px;" src="https://search.creativecommons.org/static/img/cc_icon.svg" alt="logo licenza cc" />
@@ -119,7 +119,7 @@
   </a>
 </p>
 <p>Ci possono essere casi in cui l'immagine non puó trovarsi su un file a parte e non puó essere scaricata da internet, perchè magari il dispositivo IoT è collegato ad una rete locale senza accesso ad internet, quindi l'immagine puó contenuta direttamente nel tag,  ma a patto che sia stata convertita in base 64 data-URI e che sia specificato il tipo con <code>data:image/png;base64,</code>, come nel seguente esempio:</p>
-<p><code>&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==&rdquo;  alt=&quot;Immagine&rdquo; /&gt;</code></p>
+<p><code>&lt;img src=&ldquo;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==&rdquo;  alt=&ldquo;Immagine&rdquo; /&gt;</code></p>
 <p>Il risultato dell'esempio è il seguente:</p>
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
 <p>Per la conversione dell'immagine in base64 data-URI si puó usare il servizio on-line <a href="https://websemantics.uk/tools/image-to-data-uri-converter/">https://websemantics.uk/tools/image-to-data-uri-converter/</a>.</p>
@@ -137,15 +137,15 @@ Il browser, peró, utilizza una propria misura, detta <strong>pixel CSS</strong>
 <p>Si tenga presente che ogni browser puó leggere a proprio modo larghezza e pixel ratio. Per valutare quelle del proprio schermo, si puó navigare con  browser diversi questo sito: <a href="https://www.mydevice.io/">www.mydevice.io</a>.</p>
 <p>Quindi, data la stessa immagine salvata in risoluzioni diverse (per mostrarle su schermi con pixel ratio differenti), ad esempio "immagine1.png, immagine2.png ed immagine3.png", e dato uno schermo con pixel ratio di 1x, puó il browser selezionare l'immagine che piú si adatta ad occupare l'intera larghezza del dispositivo?</p>
 <p>Non puó, perchè non conosce la larghezza dell'immagine "immagine1.png". Per conoscere la risoluzione di ogni immagine, dovrebbe scaricarle tutte dal server. Per evitare questo spreco di tempo e risorse, è necessario che sia lo sviluppatore ad indicare, per ogni immagine, la rispettiva risoluzione.</p>
-<p>Per ora, l'unico parametro che viene considerato della risoluzione è la larghezza (in futuro forse anche l'altezza??), che viene indicata esplicitamente aggiungendo al valore la lettera <strong>w</strong> (che sta per "weight" ovvero "larghezza"). 
+<p>Per ora, l'unico parametro che viene considerato della risoluzione è la larghezza (in futuro forse anche l'altezza??), che viene indicata esplicitamente aggiungendo al valore la lettera <strong>w</strong> (che sta per "weight" ovvero "larghezza").
 Quindi, per permettere al browser di scegliere l'immagine con la larghezza adatta allo spazio da riempire sullo schermo, il programmatore deve indicare la lista di immagini, con rispettive larghezze, nell'attributo <code>srcset</code>, come da seguente esempio:</p>
-<p><code>srcset=&quot;immagine1.png 200w, immagine2.png 600w,
-immagine3.png 1200w&quot;</code></p>
+<p><code>srcset=&ldquo;immagine1.png 200w, immagine2.png 600w,
+immagine3.png 1200w&rdquo;</code></p>
 <p>Indicate le immagini e le rispettive larghezze, ad esempio img1 di 200px, img2 di 600px e img3 di 1200px, dobbiamo associare queste immagini ai vari dispositivi.
 Si tenga presente che, su uno schermo di 1200px di larghezza, non è detto si debba visualizzare un immagine di 1200px, perchè magari si ha una pagina con 6 colonne e quindi la larghezza adatta per ogni colonna è 1200px/6 = 200px. Caricando quindi un'immagine di 200px x 150px (invece che una da 1200px x 900px) si ha un risparmio di tempo (e dati trasmessi di rete) di 35 volte! Considerando che le colonne dell'esempio sono 6, il risparmio è considerevole.</p>
 <p>Inoltre c'è da considerare la pixel ratio, quindi come indicare  l'associazione delle immagini al dispositivo? Per indicare il dispositivo, si usano le media query, che peró non saranno trattate in dettaglio ora, si rimanda ad una lezione successiva. Per indicare invece la dimensione che deve occupare l'immagine, si usano i descrittori <strong>vw</strong>, che descrive la percentuale di larghezza da occupare sullo schermo (in termini di pixel CSS), e <strong>vh</strong>, che descrive la percentuale di altezza da occupare sullo schermo (in termini di pixel CSS).</p>
 <p>L'attributo <code>sizes</code> serve appunto a descrivere le associazioni tra schermo e larghezza desiderata per l'immagine, di seguito se ne fa un esempio d'uso:</p>
-<p><code>sizes=&rdquo;(max-width: 500px) 100vw, (max-width: 1500px) 50vw, 25vm&quot;</code></p>
+<p><code>sizes=&quot;(max-width: 500px) 100vw, (max-width: 1500px) 50vw, 25vm&quot;</code></p>
 <p>Il codice indicato descrive 3 associazioni: la prima indica che a schermi con risoluzione massima di 500 pixel, l'immagine deve essere presentata a schermo intero;
 la seconda indica che a schermi con risoluzione massima di 1500 pixel, l'immagine deve essere presentata a metá schermo, nell'ultimo caso, con schermi piú grandi di 1500 (per esclusione), l'immagine deve essere presentata ad un quarto dello schermo.</p>
 <p>Il browser, quindi,  conoscendo la grandezza del display e la pixel-ratio, conoscendo le dimensioni che deve occupare l'immagine per lo schermo utilizzato, descritte nel tag <code>sizes</code>, puó scegliere l'immagine appropriata tra le immagini (e le relative dimensioni) indicate nel tag <code>sources</code>. Se nessuna delle immagini viene selezionata, il browser di default visualizza l'immagine descritta dal tag <code>src</code>.</p>
@@ -168,20 +168,22 @@ la seconda indica che a schermi con risoluzione massima di 1500 pixel, l'immagin
     &lt;map/&gt;
 </code>
 <p>La mappa poi viene associata all'immagine indicando l'id della mappa nell'attributo <code>usemap</code> del tag <code>img</code>, come nel seguente esempio:</p>
-<p><code>&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png&rdquo; width=&quot;145&rdquo; height=&quot;126&rdquo; alt=&quot;Planets&rdquo; usemap=&rdquo;#planetmap&rdquo; /&gt;</code></p>
+<!-- markdownlint-disable MD034 -->
+<p><code>&lt;img src=&ldquo;<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png%22">https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png&quot;</a> width=&ldquo;145&rdquo; height=&ldquo;126&rdquo; alt=&ldquo;Planets&rdquo; usemap=&quot;#planetmap&rdquo; /&gt;</code></p>
+<!-- markdownlint-enable MD034 -->
 <p>Cliccare su uno dei pianeti per collegarsi sulla pagina corrispondente al pianeta scelto.</p>
-<pre><code>&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png&quot; width=&quot;145&quot; height=&quot;126&quot; alt=&quot;Planets&quot; usemap=&quot;#planetmap&quot; /&gt;
-
-&lt;map name=&quot;planetmap&quot;&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;0,0,82,126&quot; alt=&quot;Terra&quot; title=&quot;Terra&quot; href=&quot;https://it.wikipedia.org/wiki/Terra&quot; /&gt;
-    &lt;area shape=&quot;circle&quot; coords=&quot;90,58,3&quot; alt=&quot;Mercury&quot; title=&quot;Mercury&quot; href=&quot;https://it.wikipedia.org/wiki/Mercurio_(astronomia)&quot; /&gt;
-    &lt;area shape=&quot;circle&quot; coords=&quot;124,58,8&quot; alt=&quot;Venus&quot; title=&quot;Venus&quot; href=&quot;https://it.m.wikipedia.org/wiki/Venere_(astronomia)&quot; /&gt;
-&lt;/map&gt;
-</code></pre>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png" width="145" height="126" alt="Planets" usemap="#planetmap" /></p>
+<map name="planetmap">
+    <area shape="rect" coords="0,0,82,126" alt="Terra" title="Terra" href="https://it.wikipedia.org/wiki/Terra" />
+    <area shape="circle" coords="90,58,3" alt="Mercury" title="Mercury" href="https://it.wikipedia.org/wiki/Mercurio_(astronomia)" />
+    <area shape="circle" coords="124,58,8" alt="Venus" title="Venus" href="https://it.m.wikipedia.org/wiki/Venere_(astronomia)" />
+</map>
 <p>Le immagini possono essere caricate su richiesta utilizzando le tecniche di <strong>lazy loading</strong>, ovvero le immagini che si trovano in aree non visibili (l'utente deve scorrere la pagina o deve cliccare qualche area per renderle visibili sullo schermo) possono essere caricate in modalitá <strong>eager</strong>, cioè immediatamente, oppure in modalitá <strong>lazy</strong>, cioè solo quando l'utente scorre la pagina o rende visibile l'area e quindi arriva a "vedere" l'immagine.</p>
 <p>Utilizzare il caricamento lazy per le immagini che si trovano sulle aree non visibili permette di ridurre i tempi iniziali di caricamento della pagina, rimandando il caricamento di questi dati in un secondo momento.</p>
 <p>Per attivare il caricamento delle immagini in modalitá lazy (o eager), si utilizza l'attributo <code>loading</code> del tag <code>img</code>, che puó assumere il valore "eager" o "lazy", come nell'esempio seguente:
-<p><code>&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png&rdquo; width=&quot;145&rdquo; height=&quot;126&rdquo; alt=&quot;Planets&rdquo; loading=&quot;lazy&rdquo; /&gt;</code></p>
+<!-- markdownlint-disable MD034 -->
+<p><code>&lt;img src=&ldquo;<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png%22">https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png&quot;</a> width=&ldquo;145&rdquo; height=&ldquo;126&rdquo; alt=&ldquo;Planets&rdquo; loading=&ldquo;lazy&rdquo; /&gt;</code></p>
+<!-- markdownlint-enable MD034 -->
 <p>Ricapitolando quindi gli attributi del tag img, abbiamo:</p>
 <ul>
     <li><code>src</code> per indicare l'URL dell'<strong>unica</strong> immagine da mostrare;</li>

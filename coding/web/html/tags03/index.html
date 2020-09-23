@@ -96,7 +96,7 @@
 			
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-07-30T00:00:00Z">July 30, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">HTML</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-07-30T00:00:00Z">July 30, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
@@ -128,7 +128,7 @@
 <p>La rappresentazione mediante codice numerico decimale permette di inserire i caratteri o i simboli usando il corrispondente codice decimale, che deve essere inserito tra il simbolo <code class="html">&amp;#</code> ed il simbolo <code class="html">;</code>. Si puó usare anche il codice numerico esadecimale, che va inserito tra il simbolo <code class="html">&amp;#x</code> ed il simbolo <code class="html">;</code>.</p>
 <p>Ad esempio, la lettera greca &Delta; è associata al codice numerico decimale 916 ed al codice numerico esadecimale 394, quindi possiamo scrivere questo carattere o con la notazione decimale <code class="html">&amp;#916;</code> (con risultato &#916;) oppure con quella esadecimale <code class="html">&amp;#x394;</code> (con risultato &#x394;).</p>
 <p>Altro esempio, il simbolo dell'euro &euro; è associato al codice numerico decimale 8364 ed al codice numerico esadecimale 20AC, quindi possiamo scrivere questo carattere o con la notazione decimale <code class="html">&amp;#8364;</code> (con risultato &#8364;) oppure con quella esadecimale <code class="html">&amp;#x20AC;</code> (con risultato &#x20AC;).</p>
-<p>Anche gli emoticons e gli <a href="https://www.unicode.org/emoji/charts/full-emoji-list.html">emoji</a> fanno parte della specifica Unicode, per cui o li si scrive nel documento "cosi come sono" o li si puó includere attraverso 
+<p>Anche gli emoticons e gli <a href="https://www.unicode.org/emoji/charts/full-emoji-list.html">emoji</a> fanno parte della specifica Unicode, per cui o li si scrive nel documento "cosi come sono" o li si puó includere attraverso
 "html entities" o attraverso rappresentazione con codice decimale/esadecimale.</p>
 <p>Ad esempio, l'emoji "rolling on the floor laughing" (rotola sul pavimento ridendo) è associata al codice numerico esadecimale 1F923, quindi possiamo scrivere questo carattere con la notazione esadecimale <code class="html">&amp;#x1F923;</code> (con risultato &#x1F923;).</p>
 <p>I tag, gli attributi e le rappresentazioni in decimale/esadecimale fin qui visti, possono portare ad una vasta serie di errori, che devono essere corretti mediante validazione.</p>
@@ -137,12 +137,12 @@
 <p>Il servizio di validazione della W3C permette di validare attraverso un link, facendo l'upload del file, oppure inserendo in input (con copia e incolla) il codice HTML da validare, come da immagine seguente:
 <img src="/static/coding/web/html/html-W3C-validator.webp" alt="immagine del validatore">
 </p>
-<p>L'operazione di validazione, con il servizio della W3C, puó indicare che in pagina non sono presenti errori, come da immagine seguente: 
+<p>L'operazione di validazione, con il servizio della W3C, puó indicare che in pagina non sono presenti errori, come da immagine seguente:
 <img src="/static/coding/web/html/html-W3C-validator-OK.webp" alt="immagine del validatore senza errori"></p>
 <p> Nel caso siano presenti errori, vengono elencati uno ad uno, e viene riportata sia la presunta riga d'errore, sia viene evidenziato il codice con tutti gli errori, come nella seguente immagine:
 <img src="/static/coding/web/html/html-W3C-validator-Errors.webp" alt="immagine del validatore con errori"></p>
 <p>Tra i diversi messaggi, di avviso o di errore, abbiamo:</p>
-<p><strong>Consider adding a lang attribute to the html start tag to declare the language of this document</strong>: 
+<p><strong>Consider adding a lang attribute to the html start tag to declare the language of this document</strong>:
 È un messaggio di avviso per indicare che il tag <code>html</code> manca dell'attributo che indica la lingua in cui è scritta la pagina, quindi bisogna correggere con: <code class="html">&lt;html lang="it"&gt;</code>.</p>
 <p><strong>Non-space characters found without seeing a doctype first. Expected <code class="html">&lt;!DOCTYPE html&gt;</code></strong>:
 Manca la prima riga di intestazione, che indica che il documento è un HTML. Deve essere aggiunta come prima riga.</p>
