@@ -37,14 +37,14 @@ function preload() {
     console.info("pixelDensity: " + pixelDensity());
 
     // ball diameter and radius
-    d = Math.min(50, displayWidth * pixelDensity() * 0.9 / 15);
+    d = Math.min(50, displayWidth * 0.9 / 15);
     r = d/2;
     console.info("raggio: " + r);
 
     // rect height
     rectHeight = 2*d;
 
-    let centerX = displayWidth * pixelDensity() * 0.9 / 2;
+    let centerX = displayWidth * 0.9 / 2;
 
     // initialize (X,Y and color) of each ball
     for (let i = 0; i<righePalline; i++) {
@@ -57,7 +57,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth * pixelDensity() * 0.9, windowWidth / 2 *  pixelDensity() * 0.9).parent('progettoArknoid');
+    createCanvas(windowWidth * 0.9, windowWidth / 2 * 0.9).parent('progettoArknoid');
 }
 
 function draw() {

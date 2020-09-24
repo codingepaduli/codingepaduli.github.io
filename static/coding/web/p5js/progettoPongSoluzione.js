@@ -23,7 +23,7 @@ function preload() {
     console.info("pixelDensity: " + pixelDensity());
 
     // ball diameter and radius
-    d = Math.min(50, displayWidth * pixelDensity() * 0.9 / 15);
+    d = Math.min(50, displayWidth * 0.9 / 15);
     r = d/2;
     console.info("raggio: " + r);
 
@@ -32,7 +32,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth * pixelDensity() * 0.9, windowWidth / 2 *  pixelDensity() * 0.9).parent('progettoPong');
+    createCanvas(windowWidth * 0.9, windowWidth / 2 * 0.9).parent('progettoPong');
 }
 
 function draw() {
