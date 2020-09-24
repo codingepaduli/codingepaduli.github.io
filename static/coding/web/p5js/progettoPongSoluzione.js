@@ -1,10 +1,3 @@
-// rect height
-let rectHeight = 80;
-
-// ball diameter and radius
-let d = 50;
-let r = d/2;
-
 // ball X and Y
 let x = 50;
 let y = 50;
@@ -17,8 +10,29 @@ let dy = 1;
 // goals
 p1Goals=0;
 
+// rect height
+let rectHeight;
+
+// ball diameter and radius
+let d;
+let r;
+
+function preload() {
+    console.info("displayWidth / displayHeight: " + displayWidth + " " + displayHeight);
+    console.info("windowWidth / windowHeight: " + windowWidth + " " + windowHeight);
+    console.info("pixelDensity: " + pixelDensity());
+
+    // ball diameter and radius
+    d = Math.min(50, displayWidth * pixelDensity() * 0.9 / 15);
+    r = d/2;
+    console.info("raggio: " + r);
+
+    // rect height
+    rectHeight = 2*d;
+}
+
 function setup() {
-    createCanvas(800, 550).parent('progettoPong');
+    createCanvas(windowWidth * pixelDensity() * 0.9, windowWidth / 2 *  pixelDensity() * 0.9).parent('progettoPong');
 }
 
 function draw() {
@@ -40,7 +54,7 @@ function draw() {
     }
 
     // draw the rectangle
-    rect(10,rectY,10,80);
+    rect(10,rectY,10,rectHeight);
 
     // the ball will bounce on the top and bottom borders
     if (y < r || y + r > height) {

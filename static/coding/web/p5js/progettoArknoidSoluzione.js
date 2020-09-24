@@ -1,14 +1,7 @@
-// my rect height
-let rectHeight = 80;
-
-// ball diameter and radius
-let d = 50;
-let r = d/2;
-
 // ball X and Y
 let x = 50;
 let y = 50;
-let speed = 3;
+let speed = 10;
 
 // ball directions
 let dx = 1;
@@ -19,7 +12,7 @@ p1Goals=0;
 
 // set the numbers of row and columns
 let righePalline = 4;
-let colonnePalline = 11;
+let colonnePalline = 7;
 
 // create a matrix for the (X,Y and color) of each ball
 let pallineX = new Array(righePalline);
@@ -31,17 +24,40 @@ for (let i = 0; i<righePalline; i++) {
     pallineColore[i] = new Array(colonnePalline);
 }
 
-// initialize (X,Y and color) of each ball
-for (let i = 0; i<righePalline; i++) {
-    for (let j = 0; j<colonnePalline; j++) {
-        pallineX[i][j] = 500 + i*d;
-        pallineY[i][j] = j * d + r;
-        pallineColore[i][j] = 0;
+// my rect height
+let rectHeight;
+
+// ball diameter and radius
+let d;
+let r;
+
+function preload() {
+    console.info("displayWidth / displayHeight: " + displayWidth + " " + displayHeight);
+    console.info("windowWidth / windowHeight: " + windowWidth + " " + windowHeight);
+    console.info("pixelDensity: " + pixelDensity());
+
+    // ball diameter and radius
+    d = Math.min(50, displayWidth * pixelDensity() * 0.9 / 15);
+    r = d/2;
+    console.info("raggio: " + r);
+
+    // rect height
+    rectHeight = 2*d;
+
+    let centerX = displayWidth * pixelDensity() * 0.9 / 2;
+
+    // initialize (X,Y and color) of each ball
+    for (let i = 0; i<righePalline; i++) {
+        for (let j = 0; j<colonnePalline; j++) {
+            pallineX[i][j] = centerX + i*d;
+            pallineY[i][j] = j * d + r;
+            pallineColore[i][j] = 0;
+        }
     }
 }
 
 function setup() {
-    createCanvas(800, 550).parent('progettoArknoid');
+    createCanvas(windowWidth * pixelDensity() * 0.9, windowWidth / 2 *  pixelDensity() * 0.9).parent('progettoArknoid');
 }
 
 function draw() {
