@@ -8,6 +8,51 @@
     <language>it</language>
     <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>05 - Accesso ai pixel di un&#39;immagine con la libreria grafica p5.js</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</guid>
+      <description>Accesso ai pixel di un&amp;rsquo;immagine con la libreria grafica p5.js</description>
+    </item>
+    
+    <item>
+      <title>Link interessanti</title>
+      <link>http://codingepaduli.github.io/interesting/others/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/others/</guid>
+      <description>Set di link interessanti</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
+    
+    <item>
+      <title>04.4 - Soluzione progetto Arknoid</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</guid>
+      <description>Implementazione del videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>04.3 - Progetto Arknoid</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</guid>
+      <description>Sviluppo di un videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
+    </item>
+    
+    <item>
       <title>04.2 - Soluzione progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
@@ -17,30 +62,12 @@
     </item>
     
     <item>
-      <title>04.4 - Soluzione progetto Arknoid</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</link>
-      <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</guid>
-      <description>Implementazione del videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
-    </item>
-    
-    <item>
       <title>04.1 - Progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</guid>
       <description>Sviluppo di un videogioco in stile &amp;lsquo;pong&amp;rsquo;</description>
-    </item>
-    
-    <item>
-      <title>04.3 - Progetto Arknoid</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</link>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</guid>
-      <description>Sviluppo di un videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
     </item>
     
     <item>
@@ -77,24 +104,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/intro/</guid>
       <description>Introduzione alla libreria grafica p5.js</description>
-    </item>
-    
-    <item>
-      <title>Link interessanti</title>
-      <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/others/</guid>
-      <description>Set di link interessanti</description>
-    </item>
-    
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
     </item>
     
     <item>
