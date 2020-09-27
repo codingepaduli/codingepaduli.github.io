@@ -16,7 +16,9 @@ function preload() {
 }
 
 function setup() {
-    canvas = createCanvas(800, 700).parent('pixelAccess');
+    let canvasNode = document.querySelector('#pixelAccess');
+    let cw = canvasNode.parentNode.clientWidth;
+    let canvas = createCanvas(cw * 0.9, cw * 0.4).parent('pixelAccess');
     ctx = canvas.drawingContext;
 }
 

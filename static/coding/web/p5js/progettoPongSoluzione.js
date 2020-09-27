@@ -32,7 +32,9 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth * 0.9, windowWidth / 2 * 0.9).parent('progettoPong');
+    let canvasNode = document.querySelector('#progettoPong');
+    let cw = canvasNode.parentNode.clientWidth;
+    createCanvas(cw * 0.9, cw * 0.4).parent('progettoPong');
 }
 
 function draw() {

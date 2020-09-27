@@ -1,8 +1,9 @@
 let x = 100;
 
 function setup() {
-    var canvas = createCanvas(400, 400);
-    canvas.parent('example02');
+    let canvasNode = document.querySelector('#example02');
+    let cw = canvasNode.parentNode.clientWidth;
+    createCanvas(cw * 0.9, cw * 0.4).parent('example02');
 }
 
 function draw() {

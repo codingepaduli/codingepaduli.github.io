@@ -1,6 +1,7 @@
 function setup() {
-    var canvas = createCanvas(400, 400);
-    canvas.parent('colors02');
+    let canvasNode = document.querySelector('#colors02');
+    let cw = canvasNode.parentNode.clientWidth;
+    createCanvas(cw * 0.9, cw * 0.4).parent('colors02');
 }
 
 function draw() {

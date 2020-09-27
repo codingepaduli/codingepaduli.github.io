@@ -15,14 +15,24 @@ let righePalline = 4;
 let colonnePalline = 7;
 
 // create a matrix for the (X,Y and color) of each ball
-let pallineX = new Array(righePalline);
-let pallineY = new Array(righePalline);
-let pallineColore = new Array(righePalline);
-for (let i = 0; i<righePalline; i++) {
-    pallineX[i] = new Array(colonnePalline);
-    pallineY[i] = new Array(colonnePalline);
-    pallineColore[i] = new Array(colonnePalline);
-}
+let pallineX = [
+    [colonnePalline],
+    [colonnePalline],
+    [colonnePalline],
+    [colonnePalline]
+];
+let pallineY = [
+    [colonnePalline],
+    [colonnePalline],
+    [colonnePalline],
+    [colonnePalline]
+];
+let pallineColore = [
+    [colonnePalline],
+    [colonnePalline],
+    [colonnePalline],
+    [colonnePalline]
+];
 
 // my rect height
 let rectHeight;
@@ -39,7 +49,6 @@ function preload() {
     // ball diameter and radius
     d = Math.min(50, displayWidth * 0.9 / 15);
     r = d/2;
-    console.info("raggio: " + r);
 
     // rect height
     rectHeight = 2*d;
@@ -57,11 +66,16 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth * 0.9, windowWidth / 2 * 0.9).parent('progettoArknoid');
+    let canvasNode = document.querySelector('#progettoArknoid');
+    let cw = canvasNode.parentNode.clientWidth;
+    createCanvas(cw * 0.9, cw * 0.4).parent('progettoArknoid');
 }
 
 function draw() {
     background(50,50,50);
+    fill(255, 204, 100);
+    strokeWeight(1);
+    stroke(255, 204, 100);
 
     // draw the others ball
     for (let i = 0; i<righePalline; i++) {
@@ -71,10 +85,6 @@ function draw() {
             }
         }
     }
-
-    // draw the goals
-    textSize(16);
-    text("P1: " + p1Goals, 150, 50);
 
     // get the Y axe from the mouse
     let rectY = mouseY;
@@ -144,6 +154,17 @@ function draw() {
     }
 
     // draw the ball
-    fill(255, 204, 100);
     ellipse(x, y, d, d);
+
+    // fullscreen rectangle
+    textSize(28);
+    text("[ ]", width - 60, height - 30);
+}
+
+// fullscreen when click
+function mousePressed() {
+  if (mouseX > width - 60 && mouseX < width - 30 && mouseY > height - 60 && mouseY < height - 30) {
+    let fs = fullscreen();
+    fullscreen(!fs);
+  }
 }
