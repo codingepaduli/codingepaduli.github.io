@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</loc>
-    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/categories/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/categories/</loc>
+    <loc>http://codingepaduli.github.io/categories/interesting/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/interesting/others/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</loc>
     <lastmod>2020-09-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -309,11 +324,6 @@
   
   <url>
     <loc>http://codingepaduli.github.io/interesting/</loc>
-    <lastmod>2019-10-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingepaduli.github.io/categories/interesting/</loc>
     <lastmod>2019-10-20T00:00:00+00:00</lastmod>
   </url>
   
