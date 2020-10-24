@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 03 - Etichette per la formattazione del testo - Coding e Paduli</title>
+    
+    <meta name="description" content="HTML Lez. 03 - Etichette per la formattazione del testo">
+    
+        <meta property="og:title" content="HTML Lez. 03 - Etichette per la formattazione del testo" />
+<meta property="og:description" content="HTML Lez. 03 - Etichette per la formattazione del testo" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/tagtesto/" />
+<meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+<meta property="article:published_time" content="2019-07-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-07-17T00:00:00+00:00" />
+
+    
+    
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 03 - Etichette per la formattazione del testo"/>
+<meta name="twitter:description" content="HTML Lez. 03 - Etichette per la formattazione del testo"/>
+
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="shortcut icon" href="/static/wifi-5.svg" type="image/svg+xml">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Coding e Paduli</div>
+					<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-07-17T00:00:00Z">July 17, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="etichette-per-la-formattazione-del-testo">Etichette per la formattazione del testo</h1>
+<h2 id="titoli">Titoli</h2>
+<p>Il titolo, come visto nell&rsquo;esempio precedente, è generato dal tag <code>h1</code>,
+che ha il simbolo di apertura <code>&lt;h1&gt;</code> ed il simbolo di chiusura <code>&lt;/h1&gt;</code>.</p>
+<p>Esistono 7 livelli di titolo, che servono a dividere il
+documento in più capitoli e sotto-capitoli, in modo da poter dare una
+struttura &ldquo;alberata&rdquo; al documento. Questi livelli sono espressi dai tag
+<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code> ed <code>h7</code>, anche se si consiglia
+l&rsquo;uso fino al terzo livello.</p>
+<p>Di seguito si riporta un esempio di codice per generare i titoli dei primi tre livelli:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt; Esempio di titolo di primo livello &lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h2</span>&gt; Esempio di titolo di secondo livello &lt;<span style="color:#f92672">h2</span>&gt;
+&lt;<span style="color:#f92672">h3</span>&gt; Esempio di titolo di terzo livello &lt;<span style="color:#f92672">h2</span>&gt;
+</code></pre></div><p>che vengono poi trasformati dal browser come si vede di seguito:</p>
+<!-- TODO replace with an image of titles ?? -->
+<h3 id="esempio-di-titolo-di-primo-livello">Esempio di titolo di primo livello</h3>
+<h4 id="esempio-di-titolo-di-secondo-livello">Esempio di titolo di secondo livello</h4>
+<h5 id="esempio-di-titolo-di-terzo-livello">Esempio di titolo di terzo livello</h5>
+<h2 id="formattazione-testo">Formattazione testo</h2>
+<p>Il paragrafo è generato dal tag <code>p</code> che ha il simbolo di apertura <code>&lt;p&gt;</code>
+ed il simbolo di chiusura <code>&lt;/p&gt;</code>;</p>
+<p>il tag <code>del</code> genera un testo cancellato come ad esempio questo testo
+<del>cancellato</del> generato dal seguente codice:
+<code>&lt;del&gt;cancellato&lt;/del&gt;</code>;</p>
+<p>il tag <code>ins</code> genera un testo sottolineato come ad esempio questo testo
+<ins>sottolineato</ins> generato dal seguente codice:
+<code>&lt;ins&gt;sottolineato&lt;/ins&gt;</code>;</p>
+<p>il tag <code>sup</code> genera un testo in apice come ad esempio questo testo
+<sup>in apice</sup> generato dal seguente codice:
+<code>&lt;sup&gt;in apice&lt;/sup&gt;</code>;</p>
+<p>il tag <code>sub</code> genera un testo in pedice come ad esempio questo testo
+<sub>in pedice</sub> generato dal seguente codice:
+<code>&lt;sub&gt;in pedice&lt;/sub&gt;</code>;</p>
+<p>il tag <code>strong</code> genera un testo in grassetto, come ad esempio questo
+testo <strong>in grassetto</strong> generato dal seguente codice:
+<code>&lt;strong&gt;in grassetto&lt;/strong&gt;</code>;</p>
+<p>il tag <code>em</code> genera un testo in corsivo, come ad esempio questo testo <em>in
+corsivo</em> generato dal seguente codice:
+<code>&lt;em&gt;in corsivo&lt;/em&gt;</code>;</p>
+<p>il tag <code>mark</code> genera un testo evidenziato, come ad esempio questo testo
+<mark>evidenziato</mark> generato dal seguente codice:
+<code>&lt;mark&gt;evidenziato&lt;/mark&gt;</code>;</p>
+<p>il tag <code>abbr</code> è usato per visualizzarne il significato di un acronimo
+quando il mouse si ferma sopra questo, come ad esempio questo acronimo
+<abbr title="HyperText Markup Language">HTML</abbr> generato dal seguente codice:
+<code>&lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;</code>;</p>
+<h2 id="combinazioni-innestate-per-la-formattazione">Combinazioni innestate per la formattazione</h2>
+<p>I tag possono essere inseriti (innestati) l&rsquo;uno dentro
+l&rsquo;altro per creare le combinazioni desiderate, ad esempio per generare
+un testo grassetto, evidenziato e sottolineato, come
+<strong><mark><ins>questo testo</ins></mark></strong> si usa il codice</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">strong</span>&gt;
+    &lt;<span style="color:#f92672">mark</span>&gt;
+        &lt;<span style="color:#f92672">ins</span>&gt;questo testo&lt;/<span style="color:#f92672">ins</span>&gt;
+    &lt;/<span style="color:#f92672">mark</span>&gt;
+&lt;/<span style="color:#f92672">strong</span>&gt;
+</code></pre></div><p>Se si vuole che solo una parte del testo sia sottolineata, come
+<strong><mark>questo <ins>testo</ins></mark></strong> si usa il codice</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">strong</span>&gt;
+    &lt;<span style="color:#f92672">mark</span>&gt;
+      questo
+      &lt;<span style="color:#f92672">ins</span>&gt;testo&lt;/<span style="color:#f92672">ins</span>&gt;
+    &lt;/<span style="color:#f92672">mark</span>&gt;
+&lt;/<span style="color:#f92672">strong</span>&gt;
+</code></pre></div>
+		</div>
+	</article>
+</main>
+
+
+
+
+
+
+
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+<script async defer src="/js/menu.js"></script>
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

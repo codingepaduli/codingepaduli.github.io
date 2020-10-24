@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 07 - Validazione del codice HTML - Coding e Paduli</title>
+    
+    <meta name="description" content="HTML Lez. 07 - Validazione del codice HTML">
+    
+        <meta property="og:title" content="HTML Lez. 07 - Validazione del codice HTML" />
+<meta property="og:description" content="HTML Lez. 07 - Validazione del codice HTML" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/validazione/" />
+<meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+<meta property="article:published_time" content="2019-08-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-08-03T00:00:00+00:00" />
+
+    
+    
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 07 - Validazione del codice HTML"/>
+<meta name="twitter:description" content="HTML Lez. 07 - Validazione del codice HTML"/>
+
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="shortcut icon" href="/static/wifi-5.svg" type="image/svg+xml">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Coding e Paduli</div>
+					<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/coding/">
+				
+				<span class="menu__text">Coding e tools</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interesting/">
+				
+				<span class="menu__text">Interessanti</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/opensource/">
+				
+				<span class="menu__text">Open Source</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/webapp/">
+				
+				<span class="menu__text">WebApp</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-08-03T00:00:00Z">August 03, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="validazione-del-codice-html">Validazione del codice HTML</h1>
+<p>La validazione di una pagina web serve sia a risolvere eventuali errori
+presenti, sia ad evitare l&rsquo;uso di pratiche non piú al passo con gli
+ultimi standard.</p>
+<p>La validazione puó essere inclusa all&rsquo;interno dell&rsquo;editor, oppure, ci si
+puó servire di servizi esterni, come il
+<a href="https://validator.w3.org/" title="Link al validatore W3C">W3C Validator</a>.</p>
+<p>Il servizio di validazione della W3C permette di validare attraverso un
+link, facendo l&rsquo;upload del file, oppure inserendo in input (con copia e
+incolla) il codice HTML da validare, come da immagine seguente:
+<img src="/static/coding/web/html/html-W3C-validator.png" alt="immagine del validatore" title="immagine del validatore"></p>
+<p>L&rsquo;operazione di validazione, con il servizio della W3C, puó indicare che
+in pagina non sono presenti errori, come da immagine seguente:
+<img src="/static/coding/web/html/html-W3C-validator-OK.png" alt="immagine del validatore senza errori" title="immagine del validatore"></p>
+<p>Nel caso siano presenti errori, vengono elencati uno ad uno, e viene
+riportata sia la presunta riga d&rsquo;errore, sia viene evidenziato il codice
+con tutti gli errori, come nella seguente immagine:
+<img src="/static/coding/web/html/html-W3C-validator-Errors.png" alt="immagine del validatore con errori" title="immagine del validatore con errori"></p>
+<p>Tra i diversi messaggi, di avviso o di errore, abbiamo:</p>
+<p><strong>Consider adding a lang attribute to the HTML start tag to declare the language of this document</strong>: È un messaggio di avviso per indicare che
+il tag <code>html</code> manca dell&rsquo;attributo che indica la lingua in cui è scritta
+la pagina, quindi bisogna correggere con: <code>&lt;html lang=&quot;it&quot;&gt;</code>.</p>
+<p><strong>Non-space characters found without seeing a doctype first. Expected <code>&lt;!DOCTYPE html&gt;</code></strong>: Manca la prima riga di intestazione, che indica che
+il documento è un HTML. Deve essere aggiunta come prima riga.</p>
+<p><strong>Element head is missing a required instance of child element title</strong>:
+All&rsquo;interno del tag <code>head</code> deve essere inserito il tag <code>title</code> come di
+seguito:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;Titolo pagina web &lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+</code></pre></div><p><strong>The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment</strong> Indica che non si possono mettere due trattini
+consecutivi all&rsquo;interno di un commento, quindi i due trattini vanno
+rimossi. Spesso si sbaglia a scrivere il commento, aggiungendo uno
+spazio di troppo, che deve essere rimosso, come nel seguente esempio:
+<code>&lt;!</code><mark> </mark><code>−− commento −−</code><mark> </mark><code>&gt;</code>, nel quale sono evidenziati gli spazi da
+rimuovere.</p>
+<p><strong>No <mark>p</mark> element in scope but a <mark>p end tag</mark> seen</strong> indica che l&rsquo;etichetta
+evidenziata è stata aperta (ad esempio <code>&lt;p&gt;</code>) e non è stata chiusa (con
+<code>&lt;/p&gt;</code>).</p>
+<p><strong>The center element is obsolete. Use CSS instead.</strong> indica che gli
+ultimi standard sconsigliano l&rsquo;uso dell&rsquo;etichetta evidenziata (in questo caso, l&rsquo;etichetta <code>&lt;center&gt;</code>). In questo
+caso si consiglia di sostituirla facendo uso dei CSS.</p>
+<p><strong>Bad character after <code>&lt;</code>. Probable cause: Unescaped. Try escaping it as
+<code>&amp;#xxxx;</code></strong> indica che il carattere evidenziato deve essere codificato
+come &ldquo;HTML entity&rdquo; oppure rappresentato con codifica Unicode decimale o
+esadecimale.</p>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+
+
+
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+<script async defer src="/js/menu.js"></script>
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
