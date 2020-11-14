@@ -98,30 +98,56 @@
 </style>
 
 <main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			
-			<div class="post__meta meta">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-07-25T00:00:00Z">July 25, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			<h1 id="etichette-con-attributi">Etichette con attributi</h1>
-<p>I tag possono avere degli <strong>attributi</strong> che servono ad aggiungere
-informazioni al tag.</p>
-<p>Gli attributi sono aggiunti solo nei simboli di apertura di un tag, non
-nei simboli di chiusura, e hanno la forma <strong>nome=&lsquo;valore&rsquo;</strong>. Il valore
-deve essere sempre racchiuso da apici singoli o doppi.</p>
-<p>Alcuni attributi sono comuni a tutti i tag, ad
-esempio gli attributi <code>id</code> (che identifica in maniera univoca il tag), <code>class</code> e
-<code>style</code> (che indica lo stile grafico del tag), mentre altri attributi
-sono specifici del singolo tag.</p>
-<p>Il tag <code>html</code> finora visto prevede l&rsquo;attributo <code>lang</code> che serve ad indicare il codice del linguaggio in cui è scritta la pagina web. I codici dei linguaggi sono espressi secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_639-1" title="Link a wikipedia per lo standard ISO 639-1">ISO 639-1</a>.</p>
-<p>Le pagine web in italiano devono avere l&rsquo;etichetta di apertura <code>&lt;html lang=&quot;it&quot;&gt;</code>.</p>
-<p>Di seguito, sono elencati altre etichette dell&rsquo;HTML che richiedono attributi.</p>
-<p>Il tag <code>a</code> serve a creare un collegamento (in inglese &ldquo;link&rdquo;) verso un
-ipertesto (un&rsquo;altra pagina web). Questo tag ha gli attributi:</p>
+    </header><div class="content post__content clearfix">
+      <h1 id="etichette-con-attributi">Etichette con attributi</h1>
+<p>Le etichette possono avere degli <strong>attributi</strong> che forniscono informazioni aggiuntive all&rsquo;etichetta.</p>
+<p>Ogni etichetta ha i propri attributi specifici, per cui non è possibile utilizzare un&rsquo;attributo in una etichetta che non lo preveda. Inoltre, gli attributi devono essere aggiunti esclusivamente nelle etichette di apertura, non nelle etichette di chiusura.</p>
+<p>Un attributo ha la forma <strong>nome=&lsquo;valore&rsquo;</strong>, con il valore sempre racchiuso da apici singoli o doppi.</p>
+<p>La sintassi delle etichette con attributi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">etichetta</span> <span style="color:#a6e22e">nome1</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valore1&#34;</span> <span style="color:#a6e22e">nome2</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valore2&#34;</span> <span style="color:#960050;background-color:#1e0010">...</span> &gt;
+  contenuti etichetta
+&lt;/<span style="color:#f92672">etichetta</span>&gt;
+</code></pre></div><p>Alcuni attributi sono comuni a tutte le etichette:</p>
+<ul>
+<li>l&rsquo;attributo <code>id</code> identifica in maniera univoca l&rsquo;etichetta, è anche utilizzato per collegamenti che fanno riferimento ad un preciso punto della pagina;</li>
+<li>l&rsquo;attributo <code>class</code> serve ad identificare gruppi di etichette come facenti parte dello stesso insieme, per poi poter elaborare l&rsquo;intero insieme o per applicare lo stile grafico a tutto l&rsquo;insieme; Un&rsquo;etichetta può appartenere a più insiemi;</li>
+<li>l&rsquo;attributo <code>style</code> indica lo stile grafico da applicare per l&rsquo;etichetta, è rappresentato da un valore scritto in linguaggio CSS;</li>
+</ul>
+<p>Un esempio di questi attributi è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo1&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;insieme1&#34;</span>&gt;paragrafo 1&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo2&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;insieme1&#34;</span>&gt;paragrafo 2&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo3&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;insieme1 citazione&#34;</span>&gt;paragrafo 3&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo4&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;citazione&#34;</span>&gt;paragrafo 4&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Dall&rsquo;esempio, si nota che ogni paragrafo ha un suo identificativo, e che i primi tre paragrafi fanno parte dello stesso insieme (chiamato &ldquo;insieme1&rdquo;), dato che il valore dell&rsquo;attributo <code>class</code> è lo stesso; Poi si nota che il terzo e il quarto paragrafo fanno parte di un secondo insieme (chiamato &ldquo;citazione&rdquo;); Per un apprefondimento, si rimanda alle specifiche sui selettori CSS.</p>
+<h2 id="etichetta-html-e-lattributo-lang">Etichetta <code>html</code> e l&rsquo;attributo <code>lang</code></h2>
+<p>L&rsquo;etichetta <code>html</code>, già vista nei capitoli precedenti, prevede l&rsquo;attributo <code>lang</code>, che serve ad indicare il &ldquo;Codice di lingua IETF&rdquo; della pagina web.
+Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata la lingua in una determinata regione di uno stato. Ad esempio, la pagina web può essere scritta in &ldquo;francese-belga&rdquo;, una varietà del francese parlato dai francofoni del Belgio, con differenze fonetiche. Oppure, può essere scritta in biellorusso con alfabeto cirillico, o ancora biellorusso con alfabeto latino. O anche, russo, scritto in alfabeto cirillico e parlato in Biellorussia. Il codice IETF è composto principalmente da tre parti, la prima obbligatoria, le rimanenti facoltative:</p>
+<ol>
+<li>il codice del linguaggio, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_639-1" title="Link a wikipedia per lo standard ISO 639-1">ISO 639-1</a>;</li>
+<li>il codice del nome della scrittura, espresso secondo lo standard <a href="https://en.wikipedia.org/wiki/ISO_15924" title="Link a wikipedia per lo standard ISO 15924">ISO 15924</a>;</li>
+<li>il codice del paese, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_3166" title="Link a wikipedia per lo standard ISO 3166">ISO 3166</a>.</li>
+</ol>
+<p>Le pagine web in italiano, non avendo particolari complicazioni di linguaggio, devono avere l&rsquo;etichetta di apertura <code>&lt;html lang=&quot;it&quot;&gt;</code>.</p>
+<p>L&rsquo;attributo <code>lang</code> può però essere usato per indicare che un particolare contenuto è scritto in un linguaggio differente rispetto alla pagina; Questa informazione aggiuntiva può aiutare enormemente sia gli strumenti di traduzione, sia gli strumenti di lettura ad alta voce del testo.</p>
+<p>Un esempio in cui la pagina è in italiano, ma un paragrafo è in spagnolo è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;it&#34;</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;…&lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;Informazioni in italiano&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;es&#34;</span>&gt;Información para hispanohablantes&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h2 id="etichetta-di-collegamento-con-attributi-href-e-target">Etichetta di collegamento con attributi <code>href</code> e <code>target</code></h2>
+<p>L&rsquo;etichetta <code>a</code> serve a creare un collegamento (in inglese &ldquo;link&rdquo;) verso un
+ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
 <ul>
 <li><code>href</code>, che permette di indicare l&rsquo;indirizzo dell&rsquo;ipertesto da
 raggiungere;</li>
@@ -133,14 +159,33 @@ assumere solo i seguenti valori:
 </ol>
 </li>
 </ul>
-<p>Un esempio di collegamento è questo <a href="/" target="_blank">collegamento alla
-home</a>, generato dal codice <code>&lt;a href=&quot;/&quot; target=&quot;_blank&quot;&gt;collegamento alla home&lt;/a&gt;</code> in cui si evidenzia sia l&rsquo;indirizzo della home page &ldquo;/&rdquo;, sia l&rsquo;attributo <code>target=&quot;_blank&quot;</code> che indica di aprire la home page in una nuova scheda.</p>
-<p>Il tag <code>ol</code> genera una lista numerata di elementi, analogamente il tag
-<code>ul</code> genera una lista di elementi non ordinata. Entrambi i tag prevedono
-che ogni elemento della lista deve essere contenuto nel tag <code>li</code>.
-Entrambi i tag di lista hanno l&rsquo;attributo <code>type</code> (di recente sostituito
-dalla proprietà CSS list-style-type) che può avere uno dei seguenti
-valori:</p>
+<p>Un esempio di collegamento è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;www.google.it&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;collegamento a Google&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>Da questo esempio, si evidenziano sia l&rsquo;indirizzo web di &ldquo;Google&rdquo;, sia l&rsquo;attributo <code>target=&quot;_blank&quot;</code> che indica di aprire il sito web in una nuova scheda.</p>
+<p>L&rsquo;etichetta <code>a</code> può essere utilizzata per creare collegamenti ad un punto specifico del documento, ad esempio al sotto-capitolo sulle tabelle, indicando l&rsquo;identificativo del sotto-capitolo nell&rsquo;attributo <code>href</code>;</p>
+<p>Supponendo che il sotto-capitolo sia stato creato con l&rsquo;identificativo <code>idTabella</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idTabella&#34;</span>&gt;Sotto-capitolo sulle tabelle&lt;/<span style="color:#f92672">h2</span>&gt;
+</code></pre></div><p>Per creare un collegamento al sotto-capitolo, l&rsquo;indirizzo di collegamento deve iniziare con il carattere <code>#</code> seguito dall&rsquo;identificativo di cui sopra, come nel codice seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#idTabella&#34;</span>&gt;Link al Sotto-capitolo sulle tabelle&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>E' possibile utilizzare entrambe le forme viste in precedenza, creando un collegamento ad un punto preciso di un documento presente su web.</p>
+<p>Ad esempio, per effettuare un collegamento al sotto-capitolo &ldquo;Struttura di un documento HTML&rdquo; della pagina web &ldquo;HTML&rdquo; ospitata su wikipedia, supponendo che il sotto-capitolo sia identificato dalla voce univoca <code>Struttura_di_un_documento_HTML</code>, allora per creare il collegamento si utilizza il codice seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://it.wikipedia.org/wiki/HTML#Struttura_di_un_documento_HTML&#34;</span>&gt;Link al Sotto-capitolo &#34;Struttura di un documento HTML&#34;&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>Sono state previste tipologie di indirizzi speciali per email e numeri di telefono. Con queste tipologie di collegamenti, il browser delega ad un&rsquo;applicazione esterna il compito di inviare una email, di effettuare una chiamata telefonica e di inviare SMS verso l&rsquo;identificativo indicato.</p>
+<p>Di seguito si riportano gli esempi per queste tipologie di indirizzi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:bianchi@email.com,rossi@email.com?cc=paolo@email.com&amp;subject=Oggetto&#34;</span>&gt;Scrivi una mail&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tel:+390001234567&#34;</span>&gt;Chiama&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sms:+390001234567&#34;</span>&gt;Invia un SMS&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><h2 id="etichette-di-lista-con-attributo-type">Etichette di lista con attributo <code>type</code></h2>
+<p>L&rsquo;etichetta <code>ol</code> genera una lista numerata di elementi, analogamente l&rsquo;etichetta <code>ul</code> genera una lista di elementi non ordinata.
+Gli elementi della lista devono essere contenuti nell&rsquo;etichetta <code>li</code>.</p>
+<p>Ad esempio, il seguente codice genera la lista numerata (con numeri
+romani) di browser pessimi per la navigazione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ol</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;Internet Explorer&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;Safari&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ol</span>&gt;
+</code></pre></div><p>Entrambe le liste prevedono lo stile di numerazione, desritto dall&rsquo;attributo <code>type</code> (di recente sostituito
+dalla proprietà CSS <code>list-style-type</code>) che può avere uno dei seguenti valori:</p>
 <ul>
 <li><code>1</code> elementi della lista elencati con numeri latini;</li>
 <li><code>A</code> oppure <code>a</code> elementi della lista elencati con lettere alfabetiche
@@ -175,13 +220,18 @@ browser ottimi per la navigazione:</p>
   <li>Chrome</li>
   <li>Edge (Microsoft)</li>
 </ul>
-<p>Il tag <code>table</code> genera una tabella, e può contenere una descrizione del
-contenuto generata dal tag <code>caption</code>. Il tag di tabella deve contenere i
-tag <code>tr</code>, che generano le righe della tabella. Ogni tag <code>tr</code> deve
-contenere all&rsquo;interno delle celle che formano le colonne. Le celle
-possono essere di intestazione, e sono generate dai tag <code>th</code>, oppure di
-dati, e sono generate dai tag <code>td</code>.</p>
-<p>I tag delle celle <code>th</code> e <code>td</code> hanno gli attributi:</p>
+<h2 id="etichette-di-tabella-con-attributi-colspan-e-rowspan">Etichette di tabella con attributi <code>colspan</code> e <code>rowspan</code></h2>
+<p>L&rsquo;etichetta <code>table</code> indica l&rsquo;inizio e la fine di una tabella.</p>
+<p>Una tabella può contenere le righe, racchiuse dall&rsquo;etichetta <code>tr</code>
+(in inglese &ldquo;table row&rdquo;), ed, opzionalmente, una descrizione del
+contenuto, indicato nell&rsquo;etichetta <code>caption</code>.</p>
+<p>Tutte le righe contengono delle celle.
+Le celle delle prime righe e/o colonne di una tabella possono essere
+di intestazione (in inglese &ldquo;table header&rdquo;), e quindi devono essere
+racchiuse dalle etichette <code>th</code>, mentre le celle successive contengono
+i dati, e quindi devono essere racchiusi dalle etichette <code>td</code> (in
+inglese &ldquo;table data&rdquo;).</p>
+<p>Le etichette delle celle <code>th</code> e <code>td</code> hanno gli attributi:</p>
 <ul>
 <li><code>colspan</code>, che permette ad una cella di espandersi su più colonne;</li>
 <li><code>rowspan</code>, che permette ad una cella di espandersi su più righe.</li>
@@ -238,7 +288,7 @@ la prima cella in alto a sinistra occupa due righe:</p>
     <span style="color:#75715e">&lt;!−− Cella mancante perchè occupata dalla cella che si è espansa −−&gt;</span>
   &lt;/<span style="color:#f92672">tr</span>&gt;
 &lt;/<span style="color:#f92672">table</span>&gt;
-</code></pre></div><p>La lista viene visualizzata di seguito:</p>
+</code></pre></div><p>La tabella viene visualizzata di seguito:</p>
 <table style="border: 5px solid green;">
   <caption>Tabella con stile</caption>
   <tr>
@@ -255,8 +305,8 @@ la prima cella in alto a sinistra occupa due righe:</p>
   </tr>
 </table>
 
-		</div>
-	</article>
+    </div>
+  </article>
 </main>
 
 
@@ -265,6 +315,20 @@ la prima cella in alto a sinistra occupa due righe:</p>
 
 
 
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/tagtesto/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">HTML Lez. 03 - Etichette per la formattazione del testo</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/html/metadati/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">HTML Lez. 05 - Metadati</p>
+		</a>
+	</div>
+</nav>
 
 
             </div>
