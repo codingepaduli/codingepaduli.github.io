@@ -108,10 +108,10 @@
 </div></div>
     </header><div class="content post__content clearfix">
       <h1 id="etichette-con-attributi">Etichette con attributi</h1>
-<p>Le etichette possono avere degli <strong>attributi</strong> che forniscono informazioni aggiuntive all&rsquo;etichetta.</p>
-<p>Ogni etichetta ha i propri attributi specifici, per cui non è possibile utilizzare un&rsquo;attributo in una etichetta che non lo preveda. Inoltre, gli attributi devono essere aggiunti esclusivamente nelle etichette di apertura, non nelle etichette di chiusura.</p>
-<p>Un attributo ha la forma <strong>nome=&lsquo;valore&rsquo;</strong>, con il valore sempre racchiuso da apici singoli o doppi.</p>
-<p>La sintassi delle etichette con attributi è la seguente:</p>
+<p>Le etichette possono avere una lista di <strong>attributi</strong> che forniscono informazioni aggiuntive all&rsquo;etichetta.</p>
+<p>Gli attributi devono essere aggiunti esclusivamente nelle etichette di apertura, non nelle etichette di chiusura, e devono essere separati l&rsquo;uno dall&rsquo;altro da uno spazio.</p>
+<p>Ogni attributo è una coppia <strong>nome=&lsquo;valore&rsquo;</strong>. La regola di scrittura indica il nome dell&rsquo;attributo seguito da un carattere <code>=</code> e poi dal valore, che deve essere sempre racchiuso da apici singoli o doppi.</p>
+<p>Riepilogando, la sintassi delle etichette con attributi è la seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">etichetta</span> <span style="color:#a6e22e">nome1</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valore1&#34;</span> <span style="color:#a6e22e">nome2</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valore2&#34;</span> <span style="color:#960050;background-color:#1e0010">...</span> &gt;
   contenuti etichetta
 &lt;/<span style="color:#f92672">etichetta</span>&gt;
@@ -127,17 +127,19 @@
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo3&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;insieme1 citazione&#34;</span>&gt;paragrafo 3&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo4&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;citazione&#34;</span>&gt;paragrafo 4&lt;/<span style="color:#f92672">p</span>&gt;
 </code></pre></div><p>Dall&rsquo;esempio, si nota che ogni paragrafo ha un suo identificativo, e che i primi tre paragrafi fanno parte dello stesso insieme (chiamato &ldquo;insieme1&rdquo;), dato che il valore dell&rsquo;attributo <code>class</code> è lo stesso; Poi si nota che il terzo e il quarto paragrafo fanno parte di un secondo insieme (chiamato &ldquo;citazione&rdquo;); Per un apprefondimento, si rimanda alle specifiche sui selettori CSS.</p>
+<p>Non tutti gli attributi sono comuni a tutte le etichette, vi sono attributi specifici per una singola etichetta, per cui è possibile associarli solo ed esclusivamente a questa etichetta.</p>
 <h2 id="etichetta-html-e-lattributo-lang">Etichetta <code>html</code> e l&rsquo;attributo <code>lang</code></h2>
-<p>L&rsquo;etichetta <code>html</code>, già vista nei capitoli precedenti, prevede l&rsquo;attributo <code>lang</code>, che serve ad indicare il &ldquo;Codice di lingua IETF&rdquo; della pagina web.
+<p>L&rsquo;etichetta <code>html</code> prevede l&rsquo;attributo <code>lang</code>, che serve ad indicare il &ldquo;Codice di lingua IETF&rdquo; della pagina web.
 Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata la lingua in una determinata regione di uno stato. Ad esempio, la pagina web può essere scritta in &ldquo;francese-belga&rdquo;, una varietà del francese parlato dai francofoni del Belgio, con differenze fonetiche. Oppure, può essere scritta in biellorusso con alfabeto cirillico, o ancora biellorusso con alfabeto latino. O anche, russo, scritto in alfabeto cirillico e parlato in Biellorussia. Il codice IETF è composto principalmente da tre parti, la prima obbligatoria, le rimanenti facoltative:</p>
 <ol>
 <li>il codice del linguaggio, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_639-1" title="Link a wikipedia per lo standard ISO 639-1">ISO 639-1</a>;</li>
 <li>il codice del nome della scrittura, espresso secondo lo standard <a href="https://en.wikipedia.org/wiki/ISO_15924" title="Link a wikipedia per lo standard ISO 15924">ISO 15924</a>;</li>
 <li>il codice del paese, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_3166" title="Link a wikipedia per lo standard ISO 3166">ISO 3166</a>.</li>
 </ol>
+<p>L&rsquo;indicazione della lingua corretta aiuta gli strumenti di traduzione e quelli di lettura ad alta voce del testo nella corretta interpretazione del testo.</p>
 <p>Le pagine web in italiano, non avendo particolari complicazioni di linguaggio, devono avere l&rsquo;etichetta di apertura <code>&lt;html lang=&quot;it&quot;&gt;</code>.</p>
-<p>L&rsquo;attributo <code>lang</code> può però essere usato per indicare che un particolare contenuto è scritto in un linguaggio differente rispetto alla pagina; Questa informazione aggiuntiva può aiutare enormemente sia gli strumenti di traduzione, sia gli strumenti di lettura ad alta voce del testo.</p>
-<p>Un esempio in cui la pagina è in italiano, ma un paragrafo è in spagnolo è il seguente:</p>
+<p>Possono esservi casi in cui un particolare contenuto è scritto in un linguaggio differente rispetto al resto della pagina web. In questi casi, l&rsquo;attributo <code>lang</code> può essere usato per indicare il linguaggio utilizzato per lo specifico contenuto.</p>
+<p>Di seguito visualizziamo un esempio in cui la pagina web è in italiano, ma un paragrafo è in spagnolo:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;it&#34;</span>&gt;
     &lt;<span style="color:#f92672">head</span>&gt;…&lt;/<span style="color:#f92672">head</span>&gt;
     &lt;<span style="color:#f92672">body</span>&gt;
@@ -145,7 +147,8 @@ Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata l
         &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;es&#34;</span>&gt;Información para hispanohablantes&lt;/<span style="color:#f92672">p</span>&gt;
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h2 id="etichetta-di-collegamento-con-attributi-href-e-target">Etichetta di collegamento con attributi <code>href</code> e <code>target</code></h2>
+</code></pre></div><p>Nell&rsquo;esempio appena visto, l&rsquo;indicazione aggiuntiva del paragrafo con lingua differente aiuta enormemente sia gli strumenti di traduzione, sia gli strumenti di lettura ad alta voce a leggere e tradurre correttamente il testo spagnolo.</p>
+<h2 id="etichetta-di-collegamento-con-attributi-href-e-target">Etichetta di collegamento con attributi <code>href</code> e <code>target</code></h2>
 <p>L&rsquo;etichetta <code>a</code> serve a creare un collegamento (in inglese &ldquo;link&rdquo;) verso un
 ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
 <ul>
@@ -161,17 +164,26 @@ assumere solo i seguenti valori:
 </ul>
 <p>Un esempio di collegamento è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;www.google.it&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;collegamento a Google&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><p>Da questo esempio, si evidenziano sia l&rsquo;indirizzo web di &ldquo;Google&rdquo;, sia l&rsquo;attributo <code>target=&quot;_blank&quot;</code> che indica di aprire il sito web in una nuova scheda.</p>
-<p>L&rsquo;etichetta <code>a</code> può essere utilizzata per creare collegamenti ad un punto specifico del documento, ad esempio al sotto-capitolo sulle tabelle, indicando l&rsquo;identificativo del sotto-capitolo nell&rsquo;attributo <code>href</code>;</p>
-<p>Supponendo che il sotto-capitolo sia stato creato con l&rsquo;identificativo <code>idTabella</code>, come nel seguente esempio:</p>
+</code></pre></div><p>Da questo esempio, si evidenziano sia l&rsquo;indirizzo web di &ldquo;Google&rdquo;, che è un indirizzo <strong>assoluto</strong>, sia l&rsquo;attributo <code>target=&quot;_blank&quot;</code> che indica di aprire il sito web in una nuova scheda.</p>
+<p>Un secondo esempio di collegamento è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagina1.html&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_self&#34;</span>&gt;collegamento a Google&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>Da questo secondo esempio, si evidenzia sia l&rsquo;attributo <code>target=&quot;_self&quot;</code> che indica di aprire il sito web nella stessa scheda, sia l&rsquo;indirizzo della pagina web <code>pagina1.html</code>, che in questo caso è un indirizzo <strong>relativo</strong> al sito web sul quale sta navigando l&rsquo;utente;</p>
+<p>L&rsquo;etichetta <code>a</code> può essere utilizzata per creare collegamenti ad un punto preciso del documento, inserendo nell&rsquo;attributo <code>href</code> <strong>l&rsquo;identificativo</strong> dello specifico punto preceduto dal carattere <code>#</code>;</p>
+<p>Ad esempio, supponiamo che nella parte finale del documento sia stato creato il sotto-capitolo con l&rsquo;identificativo <code>idTabella</code>, come nel codice seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idTabella&#34;</span>&gt;Sotto-capitolo sulle tabelle&lt;/<span style="color:#f92672">h2</span>&gt;
-</code></pre></div><p>Per creare un collegamento al sotto-capitolo, l&rsquo;indirizzo di collegamento deve iniziare con il carattere <code>#</code> seguito dall&rsquo;identificativo di cui sopra, come nel codice seguente:</p>
+</code></pre></div><p>Per creare, in cima al documento, un collegamento al sotto-capitolo che si trova in fondo alla pagina, l&rsquo;indirizzo di collegamento deve iniziare con il carattere <code>#</code> seguito dall&rsquo;identificativo di cui sopra, come nel codice seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#idTabella&#34;</span>&gt;Link al Sotto-capitolo sulle tabelle&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><p>E' possibile utilizzare entrambe le forme viste in precedenza, creando un collegamento ad un punto preciso di un documento presente su web.</p>
+</code></pre></div><p>Questo tipo di collegamento non è limitato allo stesso documento, per cui è possibile anche creare un collegamento ad un punto preciso di una qualsiasi pagina web presente online, a patto che in questa pagina web siano presenti dei punti con un identificativo al quale collegarsi.</p>
 <p>Ad esempio, per effettuare un collegamento al sotto-capitolo &ldquo;Struttura di un documento HTML&rdquo; della pagina web &ldquo;HTML&rdquo; ospitata su wikipedia, supponendo che il sotto-capitolo sia identificato dalla voce univoca <code>Struttura_di_un_documento_HTML</code>, allora per creare il collegamento si utilizza il codice seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://it.wikipedia.org/wiki/HTML#Struttura_di_un_documento_HTML&#34;</span>&gt;Link al Sotto-capitolo &#34;Struttura di un documento HTML&#34;&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><p>Sono state previste tipologie di indirizzi speciali per email e numeri di telefono. Con queste tipologie di collegamenti, il browser delega ad un&rsquo;applicazione esterna il compito di inviare una email, di effettuare una chiamata telefonica e di inviare SMS verso l&rsquo;identificativo indicato.</p>
-<p>Di seguito si riportano gli esempi per queste tipologie di indirizzi:</p>
+</code></pre></div><p>Sempre trattando i collegamenti, state previste tipologie di indirizzi speciali per email e numeri di telefono che vengono gestite tramite collegamenti. Quando l&rsquo;utente clicca su un collegamento con un indirizzo &ldquo;speciale&rdquo;, il browser delega ad un&rsquo;applicazione esterna il compito di inviare una email, di effettuare una chiamata telefonica e di inviare SMS verso il numero di telefono indicato.</p>
+<p>In particolare, gli indirizzi speciali hanno un prefisso ben definito:</p>
+<ul>
+<li><code>mailto:</code> è il prefisso che indica un indirizzo speciale per l&rsquo;invio di una mail;</li>
+<li><code>tel:</code> è il prefisso che indica un indirizzo speciale per effettuare una chiamata telefonica;</li>
+<li><code>sms</code> è il prefisso che indica un indirizzo speciale per inviare un SMS.</li>
+</ul>
+<p>Di seguito si riporta un esempio d&rsquo;uso dei collegamenti verso queste tipologie di indirizzi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:bianchi@email.com,rossi@email.com?cc=paolo@email.com&amp;subject=Oggetto&#34;</span>&gt;Scrivi una mail&lt;/<span style="color:#f92672">a</span>&gt;
 &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tel:+390001234567&#34;</span>&gt;Chiama&lt;/<span style="color:#f92672">a</span>&gt;
 &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sms:+390001234567&#34;</span>&gt;Invia un SMS&lt;/<span style="color:#f92672">a</span>&gt;
