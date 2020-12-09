@@ -62,12 +62,21 @@
     </item>
     
     <item>
-      <title>03 - Costanti, variabili e conversioni</title>
+      <title>04 - Identificazione del tipo e conversioni tra tipi</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/conversioni/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/conversioni/</guid>
+      <description>Identificazione del tipo di dato di una variabile e conversioni tra i vari tipi</description>
+    </item>
+    
+    <item>
+      <title>03 - Costanti, variabili e tipi di dato</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/variabili/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/variabili/</guid>
-      <description>Costanti, variabili e conversioni</description>
+      <description>Dichiarazione di costanti e variabili per i vari tipi di dato</description>
     </item>
     
     <item>
@@ -76,7 +85,7 @@
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/primi_script/</guid>
-      <description>Primi script</description>
+      <description>Introduzione alle prime istruzioni di JavaScript</description>
     </item>
     
     <item>

@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HTML Lez. 06 - Codifica UTF-8, HTML entities ed emoji - Coding e Paduli</title>
+    <title>HTML Lez. 07 - Codifica UTF-8, HTML entities ed emoji - Coding e Paduli</title>
     
-    <meta name="description" content="HTML Lez. 06 - Codifica UTF-8 delle pagine web, HTML entities ed emoji">
+    <meta name="description" content="HTML Lez. 07 - Codifica UTF-8 delle pagine web, HTML entities ed emoji">
     
-        <meta property="og:title" content="HTML Lez. 06 - Codifica UTF-8, HTML entities ed emoji" />
-<meta property="og:description" content="HTML Lez. 06 - Codifica UTF-8 delle pagine web, HTML entities ed emoji" />
+        <meta property="og:title" content="HTML Lez. 07 - Codifica UTF-8, HTML entities ed emoji" />
+<meta property="og:description" content="HTML Lez. 07 - Codifica UTF-8 delle pagine web, HTML entities ed emoji" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/codificaunicode/" />
 <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
-<meta property="article:published_time" content="2019-07-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-07-30T00:00:00+00:00" />
+<meta property="article:published_time" content="2019-08-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-08-05T00:00:00+00:00" />
 
     
     
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="HTML Lez. 06 - Codifica UTF-8, HTML entities ed emoji"/>
-<meta name="twitter:description" content="HTML Lez. 06 - Codifica UTF-8 delle pagine web, HTML entities ed emoji"/>
+<meta name="twitter:title" content="HTML Lez. 07 - Codifica UTF-8, HTML entities ed emoji"/>
+<meta name="twitter:description" content="HTML Lez. 07 - Codifica UTF-8 delle pagine web, HTML entities ed emoji"/>
 
     
 
@@ -103,78 +103,51 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-07-30T00:00:00Z">July 30, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-08-05T00:00:00Z">August 05, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
 	</span>
 </div></div>
     </header><div class="content post__content clearfix">
       <h1 id="codifica-utf-8-html-entities-ed-emoji">Codifica UTF-8, HTML entities ed emoji</h1>
 <p>É importante che il documento HTML sia salvato con codifica
-<a href="https://it.wikipedia.org/wiki/UTF-8" title="Link ad UTF-8 su wikipedia">UTF-8</a>, in modo tale da poter
-inserire nel documento qualsiasi carattere o simbolo, dall&rsquo;alfabeto
-cinese a quello arabo, dalle lingue morte come latino e greco ai simboli
-matematici, alle figure geometriche, fino agli emoticons ed emoji.</p>
+<a href="https://it.wikipedia.org/wiki/UTF-8" title="Link ad UTF-8 su wikipedia">UTF-8</a>,
+in modo tale da poter inserire nel documento qualsiasi carattere o simbolo, dall&rsquo;alfabeto cinese a quello arabo, dalle lingue morte come latino e greco ai simboli matematici, alle figure geometriche, fino agli emoticons ed emoji.</p>
 <p>La codifica UTF-8 deriva dal sistema
 <a href="https://it.m.wikipedia.org/wiki/Unicode" title="Link ad Unicode su wikipedia">Unicode</a>,
-che assegna un
-numero univoco ad ogni carattere di ogni lingua, ad ogni simbolo e ad
-ogni emoticons o emoji.</p>
-<p>Per salvare i file nella codifica UTF-8, si consiglia il tool <a href="/coding/tools/editorconfig/" title="Link ad EditorConfig su wikipedia">EditorConfig</a>, leggendo il relativo articolo.</p>
-<p>Una volta che le pagine web sono state salvate con la codifica giusta, è
-consigliato indicarla nelle informazioni della pagina, all&rsquo;interno del
-tag <code>head</code>, come nell&rsquo;esempio:</p>
+che assegna un numero univoco ad ogni carattere di ogni lingua, ad ogni simbolo e ad ogni emoticons o emoji che può essere rappresentato in un documento.</p>
+<p>Per il salvataggio dei file nella codifica UTF-8 è necessario configurare correttamente il proprio editor di testo o il proprio strumento di sviluppo.</p>
+<!-- TODO: impostare il link a wikipedia -->
+<p>Una soluzione a più ampio raggio consiste nel configurare strumenti quali
+<a href="/coding/tools/editorconfig/" title="Link ad EditorConfig su wikipedia">EditorConfig</a>,
+in modo da poter condividere le impostazioni di codifica (e di scrittura dei documenti di testo) con l&rsquo;intero gruppo di lavoro o nell&rsquo;intera azienda.</p>
+<p>Una volta che le pagine web sono state salvate con la codifica giusta, è necessario indicarla nelle informazioni della pagina, all&rsquo;interno dell&rsquo;etichetta <code>head</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
-  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
 &lt;/<span style="color:#f92672">head</span>&gt;
-</code></pre></div><p><strong>Senza la codifica giusta, molti caratteri potrebbero non essere
-visualizzati nella pagina web</strong>.</p>
-<p>In alcuni casi, peró, è necessario evitare di scrivere direttamente
-questi caratteri nel documento, ed utilizzare, invece, delle
-rappresentazioni alternative, che utilizzino i codici numerici decimali
-o esadecimali del sistema Unicode, oppure, i codici mnemonici chiamati
-&ldquo;HTML entities&rdquo;.</p>
-<p>Gli HTML entities sono dei codici mnemonici che vengono associati ad
-alcuni caratteri. La specifica delle HTML entities si trova al link
-<a href="https://html.spec.whatwg.org/multipage/entities.json" title="Link alla lista di HTML entities">https://html.spec.whatwg.org/multipage/entities.json</a>. Tra le varie
-HTML entities elencate, troviamo ad esempio:</p>
+</code></pre></div><p><strong>Senza la codifica giusta, molti caratteri potrebbero non essere visualizzati nella pagina web</strong>.</p>
+<p>In alcuni casi, peró, è necessario evitare di scrivere direttamente questi caratteri nel documento, ed utilizzare, invece, delle rappresentazioni alternative, che utilizzino i codici numerici decimali o esadecimali del sistema Unicode, oppure, i codici mnemonici chiamati &ldquo;HTML entities&rdquo;.</p>
+<p>Gli HTML entities sono dei codici mnemonici che vengono associati ad alcuni caratteri. La specifica delle HTML entities si trova al link <a href="https://html.spec.whatwg.org/multipage/entities.json" title="Link alla lista di HTML entities">https://html.spec.whatwg.org/multipage/entities.json</a>. Tra le varie HTML entities elencate, troviamo ad esempio:</p>
 <ul>
-<li>gt = greather than (&gt;)</li>
-<li>lt = lower than (&lt;)</li>
-<li>minus = segno meno o trattino (−)</li>
-<li>amp = ampersand (&amp;)</li>
-<li>quot = quotation mark (&quot;)</li>
-<li>apos = apostrophe (')</li>
-<li>…</li>
+<li>gt = greather than, ovvero il simbolo di maggiore (&gt;);</li>
+<li>lt = lower than, ovvero il simbolo di minore (&lt;);</li>
+<li>minus = segno meno (−);</li>
+<li>amp = ampersand, ovvero il simbolo di &ldquo;e commerciale&rdquo; (&amp;);</li>
+<li>quot = quotation mark, ovvero il simbolo di doppi apici (&quot;);</li>
+<li>apos = apostrophe, ovvero il simbolo di apostrofo (');</li>
+<li>… ;</li>
 </ul>
-<p>Questi codici devono essere usati tra il simbolo <code>&amp;</code> ed il simbolo <code>;</code>,
-come negli esempi <code>&amp;minus;</code> (con risultato − <!-- − -->) ed <code>&amp;amp;</code> (con risultato
-&amp; <!-- & -->).</p>
-<p>La rappresentazione mediante codice numerico decimale permette di
-inserire i caratteri o i simboli usando il corrispondente codice
-decimale, che deve essere inserito tra il simbolo <code>&amp;#</code> ed il simbolo
-<code>;</code>. Si puó usare anche il codice numerico esadecimale, che va inserito
-tra il simbolo <code>&amp;#x</code> ed il simbolo <code>;</code>.</p>
-<p>Ad esempio, la lettera greca Δ <!-- Δ --> è associata al codice numerico decimale
-916 ed al codice numerico esadecimale 394, quindi possiamo scrivere
-questo carattere o con la notazione decimale <code>&amp;#916;</code> (con risultato Δ)
-oppure con quella esadecimale <code>&amp;#x394;</code> (con risultato Δ).</p>
-<p>Altro esempio, il simbolo dell&rsquo;euro € <!-- € --> è associato al codice numerico
-decimale 8364 ed al codice numerico esadecimale 20AC, quindi possiamo
-scrivere questo carattere o con la notazione decimale <code>&amp;#8364;</code> (con
-risultato €) oppure con quella esadecimale <code>&amp;#x20AC;</code> (con risultato €).</p>
+<p>Questi codici devono essere usati tra il simbolo <code>&amp;</code> ed il simbolo <code>;</code>, come negli esempi <code>&amp;minus;</code> (con risultato − <!-- − -->) ed <code>&amp;amp;</code> (con risultato &amp; <!-- & -->).</p>
+<p>La rappresentazione mediante codice numerico decimale permette di inserire i caratteri o i simboli usando il corrispondente codice decimale, che deve essere inserito tra il simbolo <code>&amp;#</code> ed il simbolo <code>;</code>. Si puó usare anche il codice numerico esadecimale, che va inserito tra il simbolo <code>&amp;#x</code> ed il simbolo <code>;</code>.</p>
+<p>Ad esempio, la lettera greca Δ <!-- Δ --> è associata al codice numerico decimale 916 ed al codice numerico esadecimale 394, quindi possiamo scrivere questo carattere o con la notazione decimale <code>&amp;#916;</code> (con risultato Δ) oppure con quella esadecimale <code>&amp;#x394;</code> (con risultato Δ).</p>
+<p>Altro esempio, il simbolo dell&rsquo;euro € <!-- € --> è associato al codice numerico decimale 8364 ed al codice numerico esadecimale 20AC, quindi possiamo scrivere questo carattere o con la notazione decimale <code>&amp;#8364;</code> (con risultato €) oppure con quella esadecimale <code>&amp;#x20AC;</code> (con risultato €).</p>
 <p>Anche gli emoticons e gli
-<a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" title="Link alle specifiche degli emoji">emoji</a> fanno
-parte della specifica Unicode, per cui o li si scrive nel documento
-&ldquo;cosi come sono&rdquo; o li si puó includere attraverso &ldquo;HTML entities&rdquo; o
-attraverso rappresentazione con codice decimale/esadecimale.</p>
-<p>Ad esempio, l&rsquo;emoji &ldquo;rolling on the floor laughing&rdquo; (rotola sul
-pavimento ridendo) è associata al codice numerico esadecimale 1F923,
-quindi possiamo scrivere questo carattere con la notazione esadecimale
-<code>&amp;#x1F923;</code> (con risultato 🤣 <!-- 🤣 -->).</p>
-<p>I tag, gli attributi e le rappresentazioni in decimale/esadecimale fin
-qui visti, possono portare ad una vasta serie di errori, che devono
-essere corretti mediante validazione.</p>
+<a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" title="Link alle specifiche degli emoji">emoji</a>
+fanno parte della specifica Unicode, per cui o li si scrive nel documento &ldquo;cosi come sono&rdquo; o li si puó includere attraverso &ldquo;HTML entities&rdquo; o attraverso rappresentazione con codice decimale/esadecimale.</p>
+<p>Ad esempio, l&rsquo;emoji &ldquo;rolling on the floor laughing&rdquo; (rotola sul pavimento ridendo) è associata al codice numerico esadecimale 1F923, quindi possiamo scrivere questo carattere con la notazione esadecimale <code>&amp;#x1F923;</code> (con risultato 🤣 <!-- 🤣 -->).</p>
 
     </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="http://codingepaduli.github.io/coding/tools/editorconfig/" style="font-weight: 700; color: #e22d30;">EditorConfig</a>: Articolo per la configurazione di Editorconfig</p><p><a href="https://richardjharris.github.io/unicode-in-five-minutes.html" style="font-weight: 700; color: #e22d30;">Unicode In Five Minutes</a>: A description of five minutes about Unicode</p><p><a href="https://www.branah.com/unicode-converter" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicodes and text converter</a>: A tool to convert between Unicode and plain text</p><p><a href="https://r12a.github.io/app-conversion/" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicode code converter</a>: Another tool to convert between Unicode and plain text</p><p><a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" style="font-weight: 700; color: #e22d30;">Emoji Chart, v12.0</a>: A full list of Emoji</p>
   </article>
 </main>
 
@@ -186,15 +159,9 @@ essere corretti mediante validazione.</p>
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/html/metadati/" rel="prev">
+		<a class="pager__link" href="/coding/web/html/validazione/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">HTML Lez. 05 - Metadati</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/html/validazione/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">HTML Lez. 07 - Validazione del codice HTML</p>
+			<p class="pager__title">HTML Lez. 06 - Validazione del codice HTML</p>
 		</a>
 	</div>
 </nav>

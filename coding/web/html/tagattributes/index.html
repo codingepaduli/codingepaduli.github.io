@@ -113,7 +113,7 @@
 <p>Ogni attributo è una coppia <strong>nome=&lsquo;valore&rsquo;</strong>. La regola di scrittura indica il nome dell&rsquo;attributo seguito da un carattere <code>=</code> e poi dal valore, che deve essere sempre racchiuso da apici singoli o doppi.</p>
 <p>Riepilogando, la sintassi delle etichette con attributi è la seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">etichetta</span> <span style="color:#a6e22e">nome1</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valore1&#34;</span> <span style="color:#a6e22e">nome2</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valore2&#34;</span> <span style="color:#960050;background-color:#1e0010">...</span> &gt;
-  contenuti etichetta
+    contenuti etichetta
 &lt;/<span style="color:#f92672">etichetta</span>&gt;
 </code></pre></div><p>Alcuni attributi sono comuni a tutte le etichette:</p>
 <ul>
@@ -129,8 +129,8 @@
 </code></pre></div><p>Dall&rsquo;esempio, si nota che ogni paragrafo ha un suo identificativo, e che i primi tre paragrafi fanno parte dello stesso insieme (chiamato &ldquo;insieme1&rdquo;), dato che il valore dell&rsquo;attributo <code>class</code> è lo stesso; Poi si nota che il terzo e il quarto paragrafo fanno parte di un secondo insieme (chiamato &ldquo;citazione&rdquo;); Per un apprefondimento, si rimanda alle specifiche sui selettori CSS.</p>
 <p>Non tutti gli attributi sono comuni a tutte le etichette, vi sono attributi specifici per una singola etichetta, per cui è possibile associarli solo ed esclusivamente a questa etichetta.</p>
 <h2 id="etichetta-html-e-lattributo-lang">Etichetta <code>html</code> e l&rsquo;attributo <code>lang</code></h2>
-<p>L&rsquo;etichetta <code>html</code> prevede l&rsquo;attributo <code>lang</code>, che serve ad indicare il &ldquo;Codice di lingua IETF&rdquo; della pagina web.
-Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata la lingua in una determinata regione di uno stato. Ad esempio, la pagina web può essere scritta in &ldquo;francese-belga&rdquo;, una varietà del francese parlato dai francofoni del Belgio, con differenze fonetiche. Oppure, può essere scritta in biellorusso con alfabeto cirillico, o ancora biellorusso con alfabeto latino. O anche, russo, scritto in alfabeto cirillico e parlato in Biellorussia. Il codice IETF è composto principalmente da tre parti, la prima obbligatoria, le rimanenti facoltative:</p>
+<p>L&rsquo;etichetta <code>html</code> prevede l&rsquo;attributo <code>lang</code>, che serve ad indicare il &ldquo;Codice di lingua IETF&rdquo; della pagina web.</p>
+<p>Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata la lingua in una determinata regione di uno stato. Ad esempio, la pagina web può essere scritta in &ldquo;francese-belga&rdquo;, una varietà del francese parlato dai francofoni del Belgio, con differenze fonetiche. Oppure, può essere scritta in biellorusso con alfabeto cirillico, o ancora biellorusso con alfabeto latino. O anche, russo, scritto in alfabeto cirillico e parlato in Biellorussia. Il codice IETF è composto principalmente da tre parti, la prima obbligatoria, le rimanenti facoltative:</p>
 <ol>
 <li>il codice del linguaggio, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_639-1" title="Link a wikipedia per lo standard ISO 639-1">ISO 639-1</a>;</li>
 <li>il codice del nome della scrittura, espresso secondo lo standard <a href="https://en.wikipedia.org/wiki/ISO_15924" title="Link a wikipedia per lo standard ISO 15924">ISO 15924</a>;</li>
@@ -152,10 +152,8 @@ Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata l
 <p>L&rsquo;etichetta <code>a</code> serve a creare un collegamento (in inglese &ldquo;link&rdquo;) verso un
 ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
 <ul>
-<li><code>href</code>, che permette di indicare l&rsquo;indirizzo dell&rsquo;ipertesto da
-raggiungere;</li>
-<li><code>target</code>, che permette di indicare come aprire l&rsquo;ipertesto, e può
-assumere solo i seguenti valori:
+<li><code>href</code>, che permette di indicare l&rsquo;indirizzo dell&rsquo;ipertesto da raggiungere;</li>
+<li><code>target</code>, che permette di indicare come aprire l&rsquo;ipertesto, e può assumere solo i seguenti valori:
 <ol>
 <li><code>_blank</code> indica al browser di aprire l&rsquo;ipertesto in una nuova scheda o finestra;</li>
 <li><code>_self</code> indica al browser di aprire l&rsquo;ipertesto nella stessa scheda o finestra.</li>
@@ -163,19 +161,21 @@ assumere solo i seguenti valori:
 </li>
 </ul>
 <p>Un esempio di collegamento è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;www.google.it&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;collegamento a Google&lt;/<span style="color:#f92672">a</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;www.google.it&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;collegamento a Google&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><p>Da questo esempio, si evidenziano sia l&rsquo;indirizzo web di &ldquo;Google&rdquo;, che è un indirizzo <strong>assoluto</strong>, sia l&rsquo;attributo <code>target=&quot;_blank&quot;</code> che indica di aprire il sito web in una nuova scheda.</p>
 <p>Un secondo esempio di collegamento è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagina1.html&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_self&#34;</span>&gt;collegamento a Google&lt;/<span style="color:#f92672">a</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagina1.html&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_self&#34;</span>&gt;collegamento a Google&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><p>Da questo secondo esempio, si evidenzia sia l&rsquo;attributo <code>target=&quot;_self&quot;</code> che indica di aprire il sito web nella stessa scheda, sia l&rsquo;indirizzo della pagina web <code>pagina1.html</code>, che in questo caso è un indirizzo <strong>relativo</strong> al sito web sul quale sta navigando l&rsquo;utente;</p>
 <p>L&rsquo;etichetta <code>a</code> può essere utilizzata per creare collegamenti ad un punto preciso del documento, inserendo nell&rsquo;attributo <code>href</code> <strong>l&rsquo;identificativo</strong> dello specifico punto preceduto dal carattere <code>#</code>;</p>
 <p>Ad esempio, supponiamo che nella parte finale del documento sia stato creato il sotto-capitolo con l&rsquo;identificativo <code>idTabella</code>, come nel codice seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idTabella&#34;</span>&gt;Sotto-capitolo sulle tabelle&lt;/<span style="color:#f92672">h2</span>&gt;
 </code></pre></div><p>Per creare, in cima al documento, un collegamento al sotto-capitolo che si trova in fondo alla pagina, l&rsquo;indirizzo di collegamento deve iniziare con il carattere <code>#</code> seguito dall&rsquo;identificativo di cui sopra, come nel codice seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#idTabella&#34;</span>&gt;Link al Sotto-capitolo sulle tabelle&lt;/<span style="color:#f92672">a</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#idTabella&#34;</span>&gt;Link al Sotto-capitolo sulle tabelle&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><p>Questo tipo di collegamento non è limitato allo stesso documento, per cui è possibile anche creare un collegamento ad un punto preciso di una qualsiasi pagina web presente online, a patto che in questa pagina web siano presenti dei punti con un identificativo al quale collegarsi.</p>
 <p>Ad esempio, per effettuare un collegamento al sotto-capitolo &ldquo;Struttura di un documento HTML&rdquo; della pagina web &ldquo;HTML&rdquo; ospitata su wikipedia, supponendo che il sotto-capitolo sia identificato dalla voce univoca <code>Struttura_di_un_documento_HTML</code>, allora per creare il collegamento si utilizza il codice seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://it.wikipedia.org/wiki/HTML#Struttura_di_un_documento_HTML&#34;</span>&gt;Link al Sotto-capitolo &#34;Struttura di un documento HTML&#34;&lt;/<span style="color:#f92672">a</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://it.wikipedia.org/wiki/HTML#Struttura_di_un_documento_HTML&#34;</span>&gt;
+    Link al Sotto-capitolo &#34;Struttura di un documento HTML&#34;
+&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><p>Sempre trattando i collegamenti, state previste tipologie di indirizzi speciali per email e numeri di telefono che vengono gestite tramite collegamenti. Quando l&rsquo;utente clicca su un collegamento con un indirizzo &ldquo;speciale&rdquo;, il browser delega ad un&rsquo;applicazione esterna il compito di inviare una email, di effettuare una chiamata telefonica e di inviare SMS verso il numero di telefono indicato.</p>
 <p>In particolare, gli indirizzi speciali hanno un prefisso ben definito:</p>
 <ul>
@@ -184,137 +184,121 @@ assumere solo i seguenti valori:
 <li><code>sms</code> è il prefisso che indica un indirizzo speciale per inviare un SMS.</li>
 </ul>
 <p>Di seguito si riporta un esempio d&rsquo;uso dei collegamenti verso queste tipologie di indirizzi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:bianchi@email.com,rossi@email.com?cc=paolo@email.com&amp;subject=Oggetto&#34;</span>&gt;Scrivi una mail&lt;/<span style="color:#f92672">a</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:bianchi@email.com,rossi@email.com?cc=paolo@email.com&amp;subject=Oggetto&#34;</span>&gt;
+    Scrivi una mail
+&lt;/<span style="color:#f92672">a</span>&gt;
 &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tel:+390001234567&#34;</span>&gt;Chiama&lt;/<span style="color:#f92672">a</span>&gt;
 &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sms:+390001234567&#34;</span>&gt;Invia un SMS&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><h2 id="etichette-di-lista-con-attributo-type">Etichette di lista con attributo <code>type</code></h2>
-<p>L&rsquo;etichetta <code>ol</code> genera una lista numerata di elementi, analogamente l&rsquo;etichetta <code>ul</code> genera una lista di elementi non ordinata.
-Gli elementi della lista devono essere contenuti nell&rsquo;etichetta <code>li</code>.</p>
-<p>Ad esempio, il seguente codice genera la lista numerata (con numeri
-romani) di browser pessimi per la navigazione:</p>
+<p>L&rsquo;etichetta <code>ol</code> genera una lista numerata di elementi, analogamente l&rsquo;etichetta <code>ul</code> genera una lista di elementi non ordinata. Gli elementi della lista devono essere contenuti nell&rsquo;etichetta <code>li</code>.</p>
+<p>Ad esempio, il seguente codice genera la lista numerata (con numeri romani) di browser pessimi per la navigazione:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ol</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Internet Explorer&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Safari&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Internet Explorer&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Safari&lt;/<span style="color:#f92672">li</span>&gt;
 &lt;/<span style="color:#f92672">ol</span>&gt;
-</code></pre></div><p>Entrambe le liste prevedono lo stile di numerazione, desritto dall&rsquo;attributo <code>type</code> (di recente sostituito
-dalla proprietà CSS <code>list-style-type</code>) che può avere uno dei seguenti valori:</p>
+</code></pre></div><p>Entrambe le liste prevedono lo stile di numerazione, desritto dall&rsquo;attributo <code>type</code> (di recente sostituito dalla proprietà CSS <code>list-style-type</code>) che può avere uno dei seguenti valori:</p>
 <ul>
 <li><code>1</code> elementi della lista elencati con numeri latini;</li>
-<li><code>A</code> oppure <code>a</code> elementi della lista elencati con lettere alfabetiche
-maiuscole o minuscole;</li>
-<li><code>I</code> oppure <code>i</code> elementi della lista elencati con numeri romani in
-maiuscolo o minuscolo;</li>
+<li><code>A</code> oppure <code>a</code> elementi della lista elencati con lettere alfabetiche maiuscole o minuscole;</li>
+<li><code>I</code> oppure <code>i</code> elementi della lista elencati con numeri romani in maiuscolo o minuscolo;</li>
 <li><code>disc</code> elementi della lista elencati con dei cerchietti pieni;</li>
 <li><code>square</code> elementi della lista elencati con dei quadrati pieni;</li>
 <li><code>circle</code> elementi della lista elencati con dei cerchietti vuoti;</li>
 </ul>
-<p>Ad esempio, il seguente codice genera la lista numerata (con numeri
-romani) di browser pessimi per la navigazione:</p>
+<p>Ad esempio, il seguente codice genera la lista numerata (con numeri romani) di browser pessimi per la navigazione:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ol</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;I&#34;</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Internet Explorer&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Safari&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Internet Explorer&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Safari&lt;/<span style="color:#f92672">li</span>&gt;
 &lt;/<span style="color:#f92672">ol</span>&gt;
 </code></pre></div><p>La lista viene visualizzata di seguito:</p>
 <ol type="I">
-  <li>Internet Explorer</li>
-  <li>Safari</li>
+    <li>Internet Explorer</li>
+    <li>Safari</li>
 </ol>
-<p>Altro esempio, il seguente codice genera la lista non ordinata di
-browser ottimi per la navigazione:</p>
+<p>Altro esempio, il seguente codice genera la lista non ordinata di browser ottimi per la navigazione:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;disc&#34;</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Firefox&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Chrome&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Edge (Microsoft)&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Firefox&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Chrome&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Edge (Microsoft)&lt;/<span style="color:#f92672">li</span>&gt;
 &lt;/<span style="color:#f92672">ul</span>&gt;
 </code></pre></div><p>La lista viene visualizzata di seguito:</p>
 <ul type="disc">
-  <li>Firefox</li>
-  <li>Chrome</li>
-  <li>Edge (Microsoft)</li>
+    <li>Firefox</li>
+    <li>Chrome</li>
+    <li>Edge (Microsoft)</li>
 </ul>
 <h2 id="etichette-di-tabella-con-attributi-colspan-e-rowspan">Etichette di tabella con attributi <code>colspan</code> e <code>rowspan</code></h2>
 <p>L&rsquo;etichetta <code>table</code> indica l&rsquo;inizio e la fine di una tabella.</p>
-<p>Una tabella può contenere le righe, racchiuse dall&rsquo;etichetta <code>tr</code>
-(in inglese &ldquo;table row&rdquo;), ed, opzionalmente, una descrizione del
-contenuto, indicato nell&rsquo;etichetta <code>caption</code>.</p>
-<p>Tutte le righe contengono delle celle.
-Le celle delle prime righe e/o colonne di una tabella possono essere
-di intestazione (in inglese &ldquo;table header&rdquo;), e quindi devono essere
-racchiuse dalle etichette <code>th</code>, mentre le celle successive contengono
-i dati, e quindi devono essere racchiusi dalle etichette <code>td</code> (in
-inglese &ldquo;table data&rdquo;).</p>
+<p>Una tabella può contenere le righe, racchiuse dall&rsquo;etichetta <code>tr</code> (in inglese &ldquo;table row&rdquo;), ed, opzionalmente, una descrizione del contenuto, indicato nell&rsquo;etichetta <code>caption</code>.</p>
+<p>Tutte le righe contengono delle celle. Le celle delle prime righe e/o colonne di una tabella possono essere di intestazione (in inglese &ldquo;table header&rdquo;), e quindi devono essere racchiuse dalle etichette <code>th</code>, mentre le celle successive contengono i dati, e quindi devono essere racchiusi dalle etichette <code>td</code> (in inglese &ldquo;table data&rdquo;).</p>
 <p>Le etichette delle celle <code>th</code> e <code>td</code> hanno gli attributi:</p>
 <ul>
-<li><code>colspan</code>, che permette ad una cella di espandersi su più colonne;</li>
-<li><code>rowspan</code>, che permette ad una cella di espandersi su più righe.</li>
+<li><code>colspan</code> permette ad una cella di espandersi su più colonne;</li>
+<li><code>rowspan</code> permette ad una cella di espandersi su più righe.</li>
 </ul>
-<p>Ad esempio, una tabella di 3 righe e 2 colonne viene generata dal
-seguente codice:</p>
+<p>Ad esempio, una tabella di 3 righe e 2 colonne viene generata dal seguente codice:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: 5px solid green;&#34;</span>&gt;
-  &lt;<span style="color:#f92672">caption</span>&gt;Tabella con stile&lt;/<span style="color:#f92672">caption</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">th</span>&gt;header1&lt;/<span style="color:#f92672">th</span>&gt;
-    &lt;<span style="color:#f92672">th</span>&gt;header2&lt;/<span style="color:#f92672">th</span>&gt;
-  &lt;/<span style="color:#f92672">tr</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;data1&lt;/<span style="color:#f92672">td</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;$100&lt;/<span style="color:#f92672">td</span>&gt;
-  &lt;/<span style="color:#f92672">tr</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;data2&lt;/<span style="color:#f92672">td</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;$50&lt;/<span style="color:#f92672">td</span>&gt;
-  &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">caption</span>&gt;Tabella con stile&lt;/<span style="color:#f92672">caption</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">th</span>&gt;header1&lt;/<span style="color:#f92672">th</span>&gt;
+        &lt;<span style="color:#f92672">th</span>&gt;header2&lt;/<span style="color:#f92672">th</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;data1&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;$100&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;data2&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;$50&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
 &lt;/<span style="color:#f92672">table</span>&gt;
 </code></pre></div><p>La tabella viene visualizzata di seguito:</p>
 <table style="border: 5px solid green;">
-  <caption>Tabella con stile</caption>
-  <tr>
-    <th>header1</th>
-    <th>header2</th>
-  </tr>
-  <tr>
-    <td>data1</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>data2</td>
-    <td>$50</td>
-  </tr>
+    <caption>Tabella con stile</caption>
+    <tr>
+        <th>header1</th>
+        <th>header2</th>
+    </tr>
+    <tr>
+        <td>data1</td>
+        <td>$100</td>
+    </tr>
+    <tr>
+        <td>data2</td>
+        <td>$50</td>
+    </tr>
 </table>
-<p>Volendo riportare un esempio di codice che preveda l&rsquo;espansione delle
-celle su piu righe o colonne, possiamo creare una tabella di 3 righe e 2
-colonne, in cui l&rsquo;ultima riga si espande su entrambe le colonne, mentre
-la prima cella in alto a sinistra occupa due righe:</p>
+<p>Volendo riportare un esempio di codice che preveda l&rsquo;espansione delle celle su piu righe o colonne, possiamo creare una tabella di 3 righe e 2 colonne, in cui l&rsquo;ultima riga si espande su entrambe le colonne, mentre la prima cella in alto a sinistra occupa due righe:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: 5px solid green;&#34;</span>&gt;
-  &lt;<span style="color:#f92672">caption</span>&gt;Tabella con stile&lt;/<span style="color:#f92672">caption</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">rowspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;Cella espansa su 2 righe grazie all&#39;attributo rowspan=&#34;2&#34; &lt;/<span style="color:#f92672">th</span>&gt;
-    &lt;<span style="color:#f92672">td</span>&gt;34£&lt;/<span style="color:#f92672">td</span>&gt;
-  &lt;/<span style="color:#f92672">tr</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    <span style="color:#75715e">&lt;!−− Cella mancante perchè occupata dalla cella che si è espansa −−&gt;</span>
-    &lt;<span style="color:#f92672">td</span>&gt;$100&lt;/<span style="color:#f92672">td</span>&gt;
-  &lt;/<span style="color:#f92672">tr</span>&gt;
-  &lt;<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;Cella espansa su 2 colonne, grazie all&#39;attributo colspan=&#34;2&#34;&lt;/<span style="color:#f92672">th</span>&gt;
-    <span style="color:#75715e">&lt;!−− Cella mancante perchè occupata dalla cella che si è espansa −−&gt;</span>
-  &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">caption</span>&gt;Tabella con stile&lt;/<span style="color:#f92672">caption</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">rowspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;Cella espansa su 2 righe grazie all&#39;attributo rowspan=&#34;2&#34; &lt;/<span style="color:#f92672">th</span>&gt;
+        &lt;<span style="color:#f92672">td</span>&gt;34£&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        <span style="color:#75715e">&lt;!−− Cella mancante perchè occupata dalla cella che si è espansa −−&gt;</span>
+        &lt;<span style="color:#f92672">td</span>&gt;$100&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;Cella espansa su 2 colonne, grazie all&#39;attributo colspan=&#34;2&#34;&lt;/<span style="color:#f92672">th</span>&gt;
+        <span style="color:#75715e">&lt;!−− Cella mancante perchè occupata dalla cella che si è espansa −−&gt;</span>
+    &lt;/<span style="color:#f92672">tr</span>&gt;
 &lt;/<span style="color:#f92672">table</span>&gt;
 </code></pre></div><p>La tabella viene visualizzata di seguito:</p>
 <table style="border: 5px solid green;">
-  <caption>Tabella con stile</caption>
-  <tr>
-      <th rowspan="2">Cella espansa su 2 righe grazie all'attributo <code>rowspan="2"</code></th>
-      <td>34£</td>
-  </tr>
-  <tr>
-      <!-- Cella mancante perchè occupata dalla cella che si è espansa -->
-      <td>$100</td>
-  </tr>
-  <tr>
-      <th colspan="2">Cella espansa su 2 colonne, grazie all'attributo <code>colspan="2"</code> </th>
-      <!-- Cella mancante perchè occupata dalla cella che si è espansa -->
-  </tr>
+    <caption>Tabella con stile</caption>
+    <tr>
+        <th rowspan="2">Cella espansa su 2 righe grazie all'attributo <code>rowspan="2"</code></th>
+        <td>34£</td>
+    </tr>
+    <tr>
+        <!-- Cella mancante perchè occupata dalla cella che si è espansa -->
+        <td>$100</td>
+    </tr>
+    <tr>
+        <th colspan="2">Cella espansa su 2 colonne, grazie all'attributo <code>colspan="2"</code> </th>
+        <!-- Cella mancante perchè occupata dalla cella che si è espansa -->
+    </tr>
 </table>
 
     </div>

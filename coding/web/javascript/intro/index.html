@@ -108,60 +108,28 @@
 </div></div>
     </header><div class="content post__content clearfix">
       <h1 id="introduzione-al-linguaggio-javascript">Introduzione al linguaggio JavaScript</h1>
-<p>JavaScript e' un linguaggio di programmazione che ricalca la sintassi di
-<strong>c</strong> e <strong>Java</strong>. Si sottolinea subito quindi la differenza con Java,
-che è un altro linguaggio. In origine JavaScript aveva lo scopo di
-permettere piccole elaborazioni nel browser. Gli script venivano inclusi
-nelle pagine web per renderle dinamiche, animate e per alleggerire il
-lavoro del server (gli script vengono eseguiti lato client).</p>
-<p>In passato, JavaScript era una delle varie implementazioni incluse nei
-browser. C&rsquo;erano anche JScript, ActionScript, ecc.. Poi le specifiche
-sono state standardizzate con il nome di <strong>ECMAScript</strong>.</p>
-<p>Il linguaggio ECMAScript è in evoluzione, passando dalla versione
-ECMAScript 6 (ES6) del 2015 alla ES10 del 2019 e si evolverà ancora.
-Le specifiche sono pubblicate sul sito:
-<a href="https://www.ecma-international.org/ecma-262/">https://www.ecma-international.org/ecma-262/</a></p>
-<p>Ogni browser ha comunque la propria implementazione di ECMAScript, da
-<a href="http://www.mozilla.org/js/language/" title="Mozilla - implementazione ECMAScript">Mozilla</a>, a Chrome a Safari, ma tutti i browser garantiscono nel tempo il pieno supporto alle nuove
-specifiche. Una tabella di compatibilità delle funzionalità supportate
-dai singoli browser è mantenuta al link:
+<p>JavaScript e' un linguaggio di programmazione che ricalca la sintassi dei linguaggi di programmazione <strong>c</strong> e <strong>Java</strong>. Si sottolinea subito che, nonostante il nome simile, Java è un linguaggio di programmazione differente da JavaScript.</p>
+<p>In origine, i programmi JavaScript, chiamati comunemente <strong>script</strong>, venivano inclusi nelle pagine web allo scopo di alleggerire il lavoro del server. Le elaborazioni e animazioni che si potevano realizzare nella pagina web, quindi lato client, erano modeste, dato che, all&rsquo;epoca, i personal computer avevano una capacità di elaborazione molto limitata.</p>
+<p>JavaScript, in origine, era solo una delle varie implementazioni disponibili per l&rsquo;elaborazione dati lato client, poichè esistevano anche varianti quali JScript, ActionScript, ecc&hellip; Tutte queste varianti sono poi state indirizzate verso delle specifiche comuni, standardizzate con il nome di <strong>ECMAScript</strong>.</p>
+<p>Oggi, le specifiche ECMAScript sono in evoluzione, avanzando dalla versione ECMAScript 6 (ES6) del 2015 alla ES10 del 2019 e si arricchiranno ancora di nuove funzionalità. Le specifiche sono pubblicate sul sito
+<a href="https://www.ecma-international.org/ecma-262" title="Sito web delle specifiche ECMAScript">https://www.ecma-international.org/ecma-262</a>.</p>
+<p>Ogni browser sviluppa la propria implementazione di ECMAScript, e sia
+<a href="http://www.mozilla.org/js/language/" title="Mozilla - implementazione ECMAScript">Mozilla</a>,
+sia Chrome, sia Safari, per citare i browser più conosciuti, garantiscono nel tempo il pieno supporto alle nuove specifiche. Una tabella di compatibilità delle funzionalità supportate dai singoli browser è mantenuta al link
 <a href="https://kangax.github.io/compat-table/es6/" title="ECMAScript - tabella di compatibilità">https://kangax.github.io/compat-table/es6/</a>.</p>
-<p>Inoltre è possibile verificare se una specifica è implementata completamente o parzialmente dai vari browser scrivendo il nome della specifica al link <a href="https://caniuse.com/" title="Link al sito caniuse.com">https://caniuse.com/</a></p>
-<p>Esistono diversi corsi basilari su JavaScript:
+<p>Per verificare se una specifica è implementata completamente o parzialmente dai vari browser, si può utilizzare il servizio <a href="https://caniuse.com/" title="Link al sito caniuse.com">https://caniuse.com/</a>. Inserendo per nome la specifica a cui si è interessati, ad esempio &ldquo;WebGL&rdquo; o &ldquo;WebStorage&rdquo;, si visualizzano i browser che la supportano appieno, solo in parte oppure non la supportano ancora.</p>
+<p>Esistono diversi corsi basilari su JavaScript,
 <a href="https://www.html.it/guide/guida-javascript-di-base/" title="Link al sito html.it">HTML.it</a> (in
-italiano);
-<a href="https://it.m.wikibooks.org/wiki/JavaScript" title="Link al sito it.wikibooks.org">it.wikibooks.org</a> (un buon manuale in italiano);
-<a href="https://www.w3schools.com/js/default.asp" title="Link al sito www.w3schools.com">www.w3schools.com</a> (in
-inglese);
-<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/" title="Link al sito freecodecamp.org">freecodecamp.org</a>
-organizzazione no-profit per aiutare le persone ad apprendere l&rsquo;arte
-della programmazione, con corsi e certificazioni disponibili
-gratuitamente (in inglese).</p>
-<p>ECMAScript è un linguaggio debolmente tipato nato come procedurale, e
-che con il tempo ha inglobato sia caratteristiche dei linguaggi
-funzionali sia la possibilità di creare classi ed oggetti, anche se non
-supporta completamente la programmazione ad oggetti.</p>
-<p>L&rsquo;enorme espansione del web, accessibile anche da smartphone e
-dispositivi IoT, hanno diffuso notevolmente il linguaggio, che è
-diventato un valido linguaggio anche per applicazioni lato server.</p>
-<p>La tipizzazione debole e il mancato supporto alla OOP (Object Oriented
-Programming) hanno comunque evidenziato dei limiti.</p>
-<p>Sono quindi nati linguaggi come TypeScript, che estendono ECMAScript e
-che permettono sia la tipizzazione forte sia la programmazione ad
-oggetti. Questi linguaggi permettono la scrittura di programmi che, una
-volta compilati, generano codice JavaScript da includere nelle
-applicazioni (come per TypeScript).</p>
-<p>Inoltre sono nati molti framework che rendono le pagine web dinamiche e
-permettono di gestire direttamente il dialogo con il server per la
-richiesta di dati e risorse, senza dover nè ricaricare la pagina web, nè
-aver bisogno della connessione ad internet per poter interagire con la
-pagina web.</p>
-<p>Infine è nato lo standard WebAssembly, che definisce un formato binario
-eseguibile dal browser e che permette a programmi scritti in <strong>c</strong>, in
-<strong>c++</strong>, in <strong>rust</strong> e tanti altri linguaggi di poter essere compilati
-in formato binario (webAssembly) eseguibile sulle pagine web.</p>
-<p>In ambito lavorativo la conoscenza basilare di JavaScript è comunque
-fortemente richiesta.</p>
+italiano),
+<a href="https://it.m.wikibooks.org/wiki/JavaScript" title="Link al sito it.wikibooks.org">it.wikibooks.org</a> (un buon manuale in italiano),
+<a href="https://www.w3schools.com/js/default.asp" title="Link al sito www.w3schools.com">www.w3schools.com</a> (in inglese),
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/" title="Link al sito freecodecamp.org">freecodecamp.org</a>,
+organizzazione no-profit per aiutare le persone ad apprendere l&rsquo;arte della programmazione, con corsi e certificazioni disponibili gratuitamente (in inglese), e tanti altri.</p>
+<p>JavaScript è un linguaggio debolmente tipato nato come procedurale, e che con il tempo ha inglobato sia caratteristiche dei linguaggi funzionali sia la possibilità di creare classi ed oggetti, anche se non supporta completamente la programmazione ad oggetti. L&rsquo;enorme espansione del web, accessibile anche da smartphone e dispositivi IoT, hanno diffuso notevolmente il linguaggio, che è diventato un valido linguaggio anche per applicazioni lato server. Restano purtroppo i limiti dovuti alla mancanza di una tipizzazione forte ed al mancato supporto alla OOP (Object Oriented Programming).</p>
+<p>Per ovviare a queste mancanze, sono nati linguaggi come TypeScript, che estendono ECMAScript e che permettono sia la tipizzazione forte sia la programmazione ad oggetti. Questi linguaggi permettono la scrittura di programmi che, una volta compilati, generano codice JavaScript da includere nelle applicazioni (come per TypeScript).</p>
+<p>Inoltre, sono nati molti framework che rendono l&rsquo;elaborazione delle informazioni disponibili sul client un compito molto semplice e che permettono un dialogo <strong>asincrono</strong> con il server, cioè si permette agli script in esecuzione di inviare e ricevere dati dal server senza bloccare le elaborazioni in corso e, soprattutto, senza interrompere l&rsquo;attività dell&rsquo;utente nella pagina.</p>
+<p>Infine, è nato lo standard WebAssembly, che definisce un formato binario eseguibile dal browser. Utilizzando questa tecnologia, programmi scritti in altri linguaggi di programmazione (tra cui <strong>c</strong>, <strong>c++</strong>, <strong>rust</strong>, ecc&hellip;) possono essere compilati in formato binario webAssembly per essere inclusi ed eseguiti in una pagina web.</p>
+<p>Data la continua diffusione dei servizi basati su web, la conoscenza in ambito lavorativo di JavaScript e delle tecnologie collegate è fortemente richiesta.</p>
 
     </div>
   </article>
