@@ -127,7 +127,7 @@
 </ul>
 <p>Il problema di questo modello è che per una persona non è intuitivo indicare le quantità dei colori primari per ottenere il viola o il marrone o il celeste.</p>
 <h2 id="modello-di-colori-hsb">Modello di colori HSB</h2>
-<p>Il modello Hue-Saturation-Brightness è un modello più intuitivo per le persone, perchè definisce il colore nel seguente spazio dei colori:</p>
+<p>Il modello Hue-Saturation-Brightness è un modello più intuitivo per le persone, perché definisce il colore nel seguente spazio dei colori:</p>
 <p><img src="https://p5js.org/assets/learn/color/hsb.png" alt="p5.js - Modello di colori HSB" title="p5.js - Modello di colori HSB"></p>
 <p>In questo spazio curvo, l&rsquo;angolo definisce la tonalità, detta anche tinta. Quindi troviamo la tonalità rossa a 0 gradi, la tonalità verde a 120 gradi e la tonalità blu a 240 gradi, e nel mezzo tutte le altre sfumature di tonalità di colori.</p>
 <p>La saturazione indica quanto forte o, al contrario, pallida si vuole la tonalità di colore. Saturazioni forti rendono la tonalità di colore molto accesa, saturazioni deboli la rendono vicina ad un colore bianco.</p>
@@ -154,7 +154,7 @@ Le costanti sono le seguenti:</p>
 <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
 </code></pre></div><h3 id="usare-un-colore-di-riempimento">Usare un colore di riempimento</h3>
 <p>Per scegliere il colore (sempre riferito al modello di colori utilizzato) di <strong>riempimento</strong> da utilizzare per qualsiasi entità da disegnare, si utilizza la funzione <code>fill</code>, che usa tre parametri per indicare il colore.</p>
-<p>Una volta impostato il colore di <strong>riempimento</strong>, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi entità da disegnare. Se si vuole cambiare il colore di riempimento, bisogna richiamare nuovamente la funzione <code>fill</code> impostando un&rsquo;altro colore.</p>
+<p>Una volta impostato il colore di <strong>riempimento</strong>, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi entità da disegnare. Se si vuole cambiare il colore di riempimento, bisogna richiamare nuovamente la funzione <code>fill</code> impostando un altro colore.</p>
 <p>Ad esempio, supponiamo di voler disegnare un triangolo ed un cerchio di un colore, e poi un rettangolo ed un quadrato di un secondo colore, si utilizzerà il seguente codice:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
 <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
@@ -173,7 +173,7 @@ Le costanti sono le seguenti:</p>
 <p>Per impostare lo spessore, si utilizza la funzione <code>strokeWeight</code> che prende come parametro lo spessore in pixel della linea, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">4</span>);
 </code></pre></div><p>Per scegliere il colore (sempre riferito al modello di colori utilizzato) di <strong>linea</strong> da utilizzare per qualsiasi entità da disegnare, si utilizza la funzione <code>stroke</code>, che usa tre parametri per indicare il colore.</p>
-<p>Una volta impostato il colore di <strong>linea</strong>, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi entità da disegnare. Se si vuole cambiare il colore di linea, bisogna richiamare nuovamente la funzione <code>stroke</code> impostando un&rsquo;altro colore.</p>
+<p>Una volta impostato il colore di <strong>linea</strong>, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi entità da disegnare. Se si vuole cambiare il colore di linea, bisogna richiamare nuovamente la funzione <code>stroke</code> impostando un altro colore.</p>
 <p>Ad esempio, supponiamo di riprendere l&rsquo;esempio precedente e di voler aggiungere anche stile di linea e colore di contorno delle figure. Per effettuare ciò, si utilizzerà il seguente codice:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
 <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
@@ -194,21 +194,21 @@ Le costanti sono le seguenti:</p>
 </code></pre></div><p>Il risultato sarà il seguente:</p>
 <p><img src="/static/coding/web/p5js/colors02.png" alt="p5.js - Uso di colori differenti anche per i contorni" title="p5.js - Uso di colori differenti anche per i contorni"></p>
 <h3 id="usare-uno-stile-di-testo">Usare uno stile di testo</h3>
-<p>Il testo può essere stilizzato impostando il carattere, la dimensione, l&rsquo;allineameno, ecc&hellip;</p>
+<p>Il testo può essere stilizzato impostando il carattere, la dimensione, l&rsquo;allineamento, ecc&hellip;</p>
 <p>Per impostare la dimensione del testo, si utilizza la funzione <code>textSize</code>, che prende come parametro la dimensione in pixel del testo, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">16</span>);
 <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
-</code></pre></div><p>Una volta impostata la dimensione del testo, questa sarà <strong>memorizzato</strong> e quindi sarà utilizzata per qualsiasi testo da disegnare. Se si vuole cambiare la dimensione del testo, bisogna richiamare nuovamente la funzione <code>textSize</code> impostando un&rsquo;altro colore.</p>
+</code></pre></div><p>Una volta impostata la dimensione del testo, questa sarà <strong>memorizzato</strong> e quindi sarà utilizzata per qualsiasi testo da disegnare. Se si vuole cambiare la dimensione del testo, bisogna richiamare nuovamente la funzione <code>textSize</code> impostando un altro colore.</p>
 <p>Lo stesso discorso vale per l&rsquo;allineamento, che viene memorizzato e quindi utilizzato per qualsiasi testo da disegnare.</p>
-<p>L&rsquo;allineameno può essere verticale e/o orizzontale e si imposta mediante la funzione <code>textAlign</code>, che prende come parametri due costanti che indichino rispettivamente l&rsquo;allineameno verticale e orizzontale da applicare; La libreria p5.js prevede le seguenti costanti:</p>
+<p>L&rsquo;allineamento può essere verticale e/o orizzontale e si imposta mediante la funzione <code>textAlign</code>, che prende come parametri due costanti che indichino rispettivamente l&rsquo;allineamento verticale e orizzontale da applicare; La libreria p5.js prevede le seguenti costanti:</p>
 <ul>
-<li><code>LEFT</code> indica l&rsquo;allineameno orizzontale a sinistra;</li>
-<li><code>CENTER</code> indica l&rsquo;allineameno orizzontale centrale;</li>
-<li><code>RIGHT</code> indica l&rsquo;allineameno orizzontale a destra;</li>
-<li><code>TOP</code>  indica l&rsquo;allineameno verticale in alto;</li>
-<li><code>BOTTOM</code> indica l&rsquo;allineameno verticale in basso;</li>
-<li><code>CENTER</code> indica l&rsquo;allineameno verticale al centro;</li>
-<li><code>BASELINE</code> indica l&rsquo;allineameno verticale sulla linea di base;</li>
+<li><code>LEFT</code> indica l&rsquo;allineamento orizzontale a sinistra;</li>
+<li><code>CENTER</code> indica l&rsquo;allineamento orizzontale centrale;</li>
+<li><code>RIGHT</code> indica l&rsquo;allineamento orizzontale a destra;</li>
+<li><code>TOP</code>  indica l&rsquo;allineamento verticale in alto;</li>
+<li><code>BOTTOM</code> indica l&rsquo;allineamento verticale in basso;</li>
+<li><code>CENTER</code> indica l&rsquo;allineamento verticale al centro;</li>
+<li><code>BASELINE</code> indica l&rsquo;allineamento verticale sulla linea di base;</li>
 </ul>
 <p>Un esempio d&rsquo;uso dell&rsquo;allineamento del testo è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textAlign</span>(<span style="color:#a6e22e">RIGHT</span>, <span style="color:#a6e22e">CENTER</span>);
@@ -220,10 +220,10 @@ Le costanti sono le seguenti:</p>
 <li><code>BOLD</code>: indica lo stile di testo <strong>grassetto</strong>;</li>
 <li><code>BOLDITALIC</code>: indica lo stile di testo <strong>corsivo-grassetto</strong>.</li>
 </ul>
-<p>Per impostare la dimensione del testo, si utilizza la funzione <code>textStyle</code>, che prende come parametro la costante di allineameno tra quelle precedentemente elencate, come nel seguente esempio:</p>
+<p>Per impostare la dimensione del testo, si utilizza la funzione <code>textStyle</code>, che prende come parametro la costante di allineamento tra quelle precedentemente elencate, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textStyle</span>(<span style="color:#a6e22e">ITALIC</span>);
 <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
-</code></pre></div><p>Una volta impostato lo stile del testo, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi testo da disegnare. Se si vuole cambiare lo stile del testo, bisogna richiamare nuovamente la funzione <code>textSize</code> impostando un&rsquo;altro colore.</p>
+</code></pre></div><p>Una volta impostato lo stile del testo, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi testo da disegnare. Se si vuole cambiare lo stile del testo, bisogna richiamare nuovamente la funzione <code>textSize</code> impostando un altro colore.</p>
 <p>Per il caricamento e la scelta del carattere da utilizzare (in inglese il <strong>font</strong>), si rimanda alle specifiche della libreria.</p>
 <p>Di seguito un esempio completo del disegno del testo con il codice fino ad ora utilizzato:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">16</span>);

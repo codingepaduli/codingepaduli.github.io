@@ -112,7 +112,7 @@
 <p>Dalla versione di ECMAScript 6 le variabili si dichiarano utilizzando la parola chiave <code>let</code>, anche se la parola chiave <code>var</code> usata in ECMAScript 5 è ancora valida.</p>
 <p>Anche le costanti sono spazi di memoria con un nome ed un tipo associato, ma non è possibile modificare il valore assegnato. Si dichiarano con la parola chiave <code>const</code>;</p>
 <p>Quando si dichiara una variabile e si assegna un valore, allora alla variabile viene associato un tipo di dato.</p>
-<p>Se si assegna un valore differente, anche il tipo di dato cambia di conseguenza. Questo è permesso poichè JavaScript ha una tipizzazione <strong>debole</strong>, a differenza di linguaggi con tipizzazione <strong>forte</strong>, in cui una variabile non può cambiare il tipo di dato associato.</p>
+<p>Se si assegna un valore differente, anche il tipo di dato cambia di conseguenza. Questo è permesso poiché JavaScript ha una tipizzazione <strong>debole</strong>, a differenza di linguaggi con tipizzazione <strong>forte</strong>, in cui una variabile non può cambiare il tipo di dato associato.</p>
 <p>I tipi di dato possono essere <strong>primitivi</strong> o <strong>complessi</strong>. Ai tipi primitivi è associato un solo valore, mentre liste di valori, oggetti con più proprietà sono considerati tipi complessi.</p>
 <h2 id="tipi-primitivi">Tipi primitivi</h2>
 <h3 id="tipo-booleano">Tipo booleano</h3>
@@ -132,11 +132,11 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">naturalNumberHexadecimal</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0xFF</span>;
 </code></pre></div><p>La rappresentazione binaria si esprime anteponendo al valore da assegnare alla variabile il simbolo <code>0b</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">naturalNumberBinary</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0b010111</span>;
-</code></pre></div><p>Il valore intero o decimale può essere espresso in <a href="https://it.wikipedia.org/wiki/Notazione_scientifica">notazione scientifica</a>, nella classica forma <strong>mantissa</strong>, simbolo <code>e</code> (indicante l&rsquo;esponenziale) ed <strong>esponente</strong>, come nel seguente esempio:</p>
+</code></pre></div><p>Il valore intero o decimale può essere espresso in <a href="https://it.wikipedia.org/wiki/Notazione_scientifica" title="Link a Wikipedia sulla notazione scientifica">notazione scientifica</a>, nella classica forma <strong>mantissa</strong>, simbolo <code>e</code> (indicante l&rsquo;esponenziale) ed <strong>esponente</strong>, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">realNumberExponentiation</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1E100</span>;
 </code></pre></div><p>Tra i valori numerici esistono dei casi particolari:</p>
 <ul>
-<li><code>Nan</code> valore utilizzato per indicare un risultato che <a href="https://it.wikipedia.org/wiki/NaN">Non è un Numero</a> (dall&rsquo;inglese Not a Number). Questo valore è assegnato quando si tentano operazioni del tipo &ldquo;radice quadrata di meno uno&rdquo;, che non ha risultato nell&rsquo;insieme dei numeri reali;</li>
+<li><code>Nan</code> valore utilizzato per indicare un risultato che <a href="https://it.wikipedia.org/wiki/NaN" title="Link a Wikipedia su Not A Number">Non è un Numero</a> (dall&rsquo;inglese Not a Number). Questo valore è assegnato quando si tentano operazioni del tipo &ldquo;radice quadrata di meno uno&rdquo;, che non ha risultato nell&rsquo;insieme dei numeri reali;</li>
 <li><code>Infinity</code> utilizzato per indicare un valore infinito. Può essere specificato l&rsquo;infinito positivo <code>+Infinity</code> o anche negativo <code>-Infinity</code>.</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">positiveInfinity</span> <span style="color:#f92672">=</span> <span style="color:#f92672">+</span><span style="color:#66d9ef">Infinity</span>;
@@ -163,7 +163,7 @@ vale 27.
 <h3 id="tipo-oggetto">Tipo oggetto</h3>
 <p>Un oggetto in ambito informatico è un dato complesso che risiede in memoria ed ha più proprietà ed anche dei metodi. Tipicamente la creazione di un oggetto è effettuata attraverso la parola chiave <code>new</code>.</p>
 <p>L&rsquo;operazione di inserimento di un oggetto in memoria è detta <strong>allocazione</strong>, quindi tecnicamente un oggetto è <strong>allocato</strong> in memoria.</p>
-<p>Un&rsquo;esempio di oggetto può essere una persona, che contiene proprietà quali nome, cognome, data di nascita, ecc..</p>
+<p>Un esempio di oggetto può essere una persona, che contiene proprietà quali nome, cognome, data di nascita, ecc..</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">persona</span> <span style="color:#f92672">=</span> {
     <span style="color:#a6e22e">firstname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
     <span style="color:#a6e22e">lastname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Doe&#34;</span>,
@@ -205,7 +205,7 @@ vale 27.
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;allarme 1&#34;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">groupEnd</span>();
 </code></pre></div><h3 id="dati-in-tabella">Dati in tabella</h3>
-<p>La scrittura di una tabella nella console, attraverso l&rsquo;istruzione <code>console.table()</code>, è particolarmente utile poichè permette di visualizzare array e matrici in un formato molto comprensibile:</p>
+<p>La scrittura di una tabella nella console, attraverso l&rsquo;istruzione <code>console.table()</code>, è particolarmente utile poiché permette di visualizzare array e matrici in un formato molto comprensibile:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">vettore</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;uno&#39;</span>, <span style="color:#e6db74">&#39;due&#39;</span>, <span style="color:#e6db74">&#39;tre&#39;</span>];
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">table</span>(<span style="color:#a6e22e">vettore</span>);
 </code></pre></div><h3 id="tempo-di-esecuzione">Tempo di esecuzione</h3>

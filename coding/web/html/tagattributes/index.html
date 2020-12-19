@@ -126,15 +126,15 @@
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo2&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;insieme1&#34;</span>&gt;paragrafo 2&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo3&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;insieme1 citazione&#34;</span>&gt;paragrafo 3&lt;/<span style="color:#f92672">p</span>&gt;
 &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo4&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;citazione&#34;</span>&gt;paragrafo 4&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p>Dall&rsquo;esempio, si nota che ogni paragrafo ha un suo identificativo, e che i primi tre paragrafi fanno parte dello stesso insieme (chiamato &ldquo;insieme1&rdquo;), dato che il valore dell&rsquo;attributo <code>class</code> è lo stesso; Poi si nota che il terzo e il quarto paragrafo fanno parte di un secondo insieme (chiamato &ldquo;citazione&rdquo;); Per un apprefondimento, si rimanda alle specifiche sui selettori CSS.</p>
+</code></pre></div><p>Dall&rsquo;esempio, si nota che ogni paragrafo ha un suo identificativo, e che i primi tre paragrafi fanno parte dello stesso insieme (chiamato &ldquo;insieme1&rdquo;), dato che il valore dell&rsquo;attributo <code>class</code> è lo stesso; Poi si nota che il terzo e il quarto paragrafo fanno parte di un secondo insieme (chiamato &ldquo;citazione&rdquo;); Per un approfondimento, si rimanda alle specifiche sui selettori CSS.</p>
 <p>Non tutti gli attributi sono comuni a tutte le etichette, vi sono attributi specifici per una singola etichetta, per cui è possibile associarli solo ed esclusivamente a questa etichetta.</p>
 <h2 id="etichetta-html-e-lattributo-lang">Etichetta <code>html</code> e l&rsquo;attributo <code>lang</code></h2>
 <p>L&rsquo;etichetta <code>html</code> prevede l&rsquo;attributo <code>lang</code>, che serve ad indicare il &ldquo;Codice di lingua IETF&rdquo; della pagina web.</p>
-<p>Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata la lingua in una determinata regione di uno stato. Ad esempio, la pagina web può essere scritta in &ldquo;francese-belga&rdquo;, una varietà del francese parlato dai francofoni del Belgio, con differenze fonetiche. Oppure, può essere scritta in biellorusso con alfabeto cirillico, o ancora biellorusso con alfabeto latino. O anche, russo, scritto in alfabeto cirillico e parlato in Biellorussia. Il codice IETF è composto principalmente da tre parti, la prima obbligatoria, le rimanenti facoltative:</p>
+<p>Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata la lingua in una determinata regione di uno stato. Ad esempio, la pagina web può essere scritta in &ldquo;francese-belga&rdquo;, una varietà del francese parlato dai francofoni del Belgio, con differenze fonetiche. Oppure, può essere scritta in bielorusso con alfabeto cirillico, o ancora bielorusso con alfabeto latino. O anche, russo, scritto in alfabeto cirillico e parlato in Bielorussia. Il codice IETF è composto principalmente da tre parti, la prima obbligatoria, le rimanenti facoltative:</p>
 <ol>
-<li>il codice del linguaggio, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_639-1" title="Link a wikipedia per lo standard ISO 639-1">ISO 639-1</a>;</li>
-<li>il codice del nome della scrittura, espresso secondo lo standard <a href="https://en.wikipedia.org/wiki/ISO_15924" title="Link a wikipedia per lo standard ISO 15924">ISO 15924</a>;</li>
-<li>il codice del paese, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_3166" title="Link a wikipedia per lo standard ISO 3166">ISO 3166</a>.</li>
+<li>il codice del linguaggio, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_639-1" title="Link a Wikipedia per lo standard ISO 639-1">ISO 639-1</a>;</li>
+<li>il codice del nome della scrittura, espresso secondo lo standard <a href="https://en.wikipedia.org/wiki/ISO_15924" title="Link a Wikipedia per lo standard ISO 15924">ISO 15924</a>;</li>
+<li>il codice del paese, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_3166" title="Link a Wikipedia per lo standard ISO 3166">ISO 3166</a>.</li>
 </ol>
 <p>L&rsquo;indicazione della lingua corretta aiuta gli strumenti di traduzione e quelli di lettura ad alta voce del testo nella corretta interpretazione del testo.</p>
 <p>Le pagine web in italiano, non avendo particolari complicazioni di linguaggio, devono avere l&rsquo;etichetta di apertura <code>&lt;html lang=&quot;it&quot;&gt;</code>.</p>
@@ -172,7 +172,7 @@ ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
 </code></pre></div><p>Per creare, in cima al documento, un collegamento al sotto-capitolo che si trova in fondo alla pagina, l&rsquo;indirizzo di collegamento deve iniziare con il carattere <code>#</code> seguito dall&rsquo;identificativo di cui sopra, come nel codice seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#idTabella&#34;</span>&gt;Link al Sotto-capitolo sulle tabelle&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><p>Questo tipo di collegamento non è limitato allo stesso documento, per cui è possibile anche creare un collegamento ad un punto preciso di una qualsiasi pagina web presente online, a patto che in questa pagina web siano presenti dei punti con un identificativo al quale collegarsi.</p>
-<p>Ad esempio, per effettuare un collegamento al sotto-capitolo &ldquo;Struttura di un documento HTML&rdquo; della pagina web &ldquo;HTML&rdquo; ospitata su wikipedia, supponendo che il sotto-capitolo sia identificato dalla voce univoca <code>Struttura_di_un_documento_HTML</code>, allora per creare il collegamento si utilizza il codice seguente:</p>
+<p>Ad esempio, per effettuare un collegamento al sotto-capitolo &ldquo;Struttura di un documento HTML&rdquo; della pagina web &ldquo;HTML&rdquo; ospitata su Wikipedia, supponendo che il sotto-capitolo sia identificato dalla voce univoca <code>Struttura_di_un_documento_HTML</code>, allora per creare il collegamento si utilizza il codice seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://it.wikipedia.org/wiki/HTML#Struttura_di_un_documento_HTML&#34;</span>&gt;
     Link al Sotto-capitolo &#34;Struttura di un documento HTML&#34;
 &lt;/<span style="color:#f92672">a</span>&gt;
@@ -196,7 +196,7 @@ ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
     &lt;<span style="color:#f92672">li</span>&gt;Internet Explorer&lt;/<span style="color:#f92672">li</span>&gt;
     &lt;<span style="color:#f92672">li</span>&gt;Safari&lt;/<span style="color:#f92672">li</span>&gt;
 &lt;/<span style="color:#f92672">ol</span>&gt;
-</code></pre></div><p>Entrambe le liste prevedono lo stile di numerazione, desritto dall&rsquo;attributo <code>type</code> (di recente sostituito dalla proprietà CSS <code>list-style-type</code>) che può avere uno dei seguenti valori:</p>
+</code></pre></div><p>Entrambe le liste prevedono lo stile di numerazione, descritto dall&rsquo;attributo <code>type</code> (di recente sostituito dalla proprietà CSS <code>list-style-type</code>) che può avere uno dei seguenti valori:</p>
 <ul>
 <li><code>1</code> elementi della lista elencati con numeri latini;</li>
 <li><code>A</code> oppure <code>a</code> elementi della lista elencati con lettere alfabetiche maiuscole o minuscole;</li>
@@ -268,7 +268,7 @@ ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
         <td>$50</td>
     </tr>
 </table>
-<p>Volendo riportare un esempio di codice che preveda l&rsquo;espansione delle celle su piu righe o colonne, possiamo creare una tabella di 3 righe e 2 colonne, in cui l&rsquo;ultima riga si espande su entrambe le colonne, mentre la prima cella in alto a sinistra occupa due righe:</p>
+<p>Volendo riportare un esempio di codice che preveda l&rsquo;espansione delle celle su più righe o colonne, possiamo creare una tabella di 3 righe e 2 colonne, in cui l&rsquo;ultima riga si espande su entrambe le colonne, mentre la prima cella in alto a sinistra occupa due righe:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: 5px solid green;&#34;</span>&gt;
     &lt;<span style="color:#f92672">caption</span>&gt;Tabella con stile&lt;/<span style="color:#f92672">caption</span>&gt;
     &lt;<span style="color:#f92672">tr</span>&gt;
@@ -276,12 +276,12 @@ ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
         &lt;<span style="color:#f92672">td</span>&gt;34£&lt;/<span style="color:#f92672">td</span>&gt;
     &lt;/<span style="color:#f92672">tr</span>&gt;
     &lt;<span style="color:#f92672">tr</span>&gt;
-        <span style="color:#75715e">&lt;!−− Cella mancante perchè occupata dalla cella che si è espansa −−&gt;</span>
+        <span style="color:#75715e">&lt;!−− Cella mancante perché occupata dalla cella che si è espansa −−&gt;</span>
         &lt;<span style="color:#f92672">td</span>&gt;$100&lt;/<span style="color:#f92672">td</span>&gt;
     &lt;/<span style="color:#f92672">tr</span>&gt;
     &lt;<span style="color:#f92672">tr</span>&gt;
         &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;Cella espansa su 2 colonne, grazie all&#39;attributo colspan=&#34;2&#34;&lt;/<span style="color:#f92672">th</span>&gt;
-        <span style="color:#75715e">&lt;!−− Cella mancante perchè occupata dalla cella che si è espansa −−&gt;</span>
+        <span style="color:#75715e">&lt;!−− Cella mancante perché occupata dalla cella che si è espansa −−&gt;</span>
     &lt;/<span style="color:#f92672">tr</span>&gt;
 &lt;/<span style="color:#f92672">table</span>&gt;
 </code></pre></div><p>La tabella viene visualizzata di seguito:</p>
@@ -292,12 +292,12 @@ ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
         <td>34£</td>
     </tr>
     <tr>
-        <!-- Cella mancante perchè occupata dalla cella che si è espansa -->
+        <!-- Cella mancante perché occupata dalla cella che si è espansa -->
         <td>$100</td>
     </tr>
     <tr>
         <th colspan="2">Cella espansa su 2 colonne, grazie all'attributo <code>colspan="2"</code> </th>
-        <!-- Cella mancante perchè occupata dalla cella che si è espansa -->
+        <!-- Cella mancante perché occupata dalla cella che si è espansa -->
     </tr>
 </table>
 
