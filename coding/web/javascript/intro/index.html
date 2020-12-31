@@ -108,9 +108,9 @@
 </div></div>
     </header><div class="content post__content clearfix">
       <h1 id="introduzione-al-linguaggio-javascript">Introduzione al linguaggio JavaScript</h1>
-<p>JavaScript e' un linguaggio di programmazione che ricalca la sintassi dei linguaggi di programmazione <strong>c</strong> e <strong>Java</strong>. Si sottolinea subito che, nonostante il nome simile, Java è un linguaggio di programmazione differente da JavaScript.</p>
-<p>In origine, i programmi JavaScript, chiamati comunemente <strong>script</strong>, venivano inclusi nelle pagine web allo scopo di alleggerire il lavoro del server. Le elaborazioni e animazioni che si potevano realizzare nella pagina web, quindi lato client, erano modeste, dato che, all&rsquo;epoca, i personal computer avevano una capacità di elaborazione molto limitata.</p>
-<p>JavaScript, in origine, era solo una delle varie implementazioni disponibili per l&rsquo;elaborazione dati lato client, poiché esistevano anche varianti quali JScript, ActionScript, ecc&hellip; Tutte queste varianti sono poi state indirizzate verso delle specifiche comuni, standardizzate con il nome di <strong>ECMAScript</strong>.</p>
+<p>JavaScript e' un linguaggio di programmazione sviluppato inizialmente nel 1995 dalla Netscape Communications allo scopo di rendere dinamiche le pagine web visualizzabili attraverso il proprio browser Netscape. Il nome iniziale era LiveScript, proprio ad indicare che rendeva le pagine web &ldquo;vive&rdquo;, poi il successo di un altro linguaggio di programmazione, Java, portò a cambiare il nome in JavaScript, poiché si voleva cavalcare a livello commerciale il successo di Java. A parte l&rsquo;assonanza nel nome, i due linguaggi non condividono nessuna relazione, solo qualche similitudine nella sintassi che era ereditata dal linguaggio <strong>C</strong>.</p>
+<p>I programmi scritti in JavaScript furono chiamati semplicemente <strong>script</strong> ed erano contenuti direttamente nella pagina web.</p>
+<p>Il successo di JavaScript portò anche gli altri browser a creare delle proprie varianti, quali JScript, ActionScript, ecc&hellip; Tutte queste varianti, in origine incompatibili, sono poi state indirizzate verso delle specifiche comuni, standardizzate con il nome di <strong>ECMAScript</strong>.</p>
 <p>Oggi, le specifiche ECMAScript sono in evoluzione, avanzando dalla versione ECMAScript 6 (ES6) del 2015 alla ES10 del 2019 e si arricchiranno ancora di nuove funzionalità. Le specifiche sono pubblicate sul sito
 <a href="https://www.ecma-international.org/ecma-262" title="Sito web delle specifiche ECMAScript">https://www.ecma-international.org/ecma-262</a>.</p>
 <p>Ogni browser sviluppa la propria implementazione di ECMAScript, e sia
@@ -118,15 +118,8 @@
 sia Chrome, sia Safari, per citare i browser più conosciuti, garantiscono nel tempo il pieno supporto alle nuove specifiche. Una tabella di compatibilità delle funzionalità supportate dai singoli browser è mantenuta al link
 <a href="https://kangax.github.io/compat-table/es6/" title="ECMAScript - tabella di compatibilità">https://kangax.github.io/compat-table/es6/</a>.</p>
 <p>Per verificare se una specifica è implementata completamente o parzialmente dai vari browser, si può utilizzare il servizio <a href="https://caniuse.com/" title="Link al sito caniuse.com">https://caniuse.com/</a>. Inserendo per nome la specifica a cui si è interessati, ad esempio &ldquo;WebGL&rdquo; o &ldquo;WebStorage&rdquo;, si visualizzano i browser che la supportano appieno, solo in parte oppure non la supportano ancora.</p>
-<p>Esistono diversi corsi basilari su JavaScript,
-<a href="https://www.html.it/guide/guida-javascript-di-base/" title="Link al sito html.it">HTML.it</a> (in
-italiano),
-<a href="https://it.m.wikibooks.org/wiki/JavaScript" title="Link al sito it.wikibooks.org">it.wikibooks.org</a> (un buon manuale in italiano),
-<a href="https://www.w3schools.com/js/default.asp" title="Link al sito www.w3schools.com">www.w3schools.com</a> (in inglese),
-<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/" title="Link al sito freecodecamp.org">freecodecamp.org</a>,
-organizzazione no-profit per aiutare le persone ad apprendere l&rsquo;arte della programmazione, con corsi e certificazioni disponibili gratuitamente (in inglese), e tanti altri.</p>
-<p>JavaScript è un linguaggio debolmente tipato nato come procedurale, e che con il tempo ha inglobato sia caratteristiche dei linguaggi funzionali sia la possibilità di creare classi ed oggetti, anche se non supporta completamente la programmazione ad oggetti. L&rsquo;enorme espansione del web, accessibile anche da smartphone e dispositivi IoT, hanno diffuso notevolmente il linguaggio, che è diventato un valido linguaggio anche per applicazioni lato server. Restano purtroppo i limiti dovuti alla mancanza di una tipizzazione forte ed al mancato supporto alla OOP (Object Oriented Programming).</p>
-<p>Per ovviare a queste mancanze, sono nati linguaggi come TypeScript, che estendono ECMAScript e che permettono sia la tipizzazione forte sia la programmazione ad oggetti. Questi linguaggi permettono la scrittura di programmi che, una volta compilati, generano codice JavaScript da includere nelle applicazioni (come per TypeScript).</p>
+<p>JavaScript è un linguaggio debolmente tipizzato nato come procedurale, e che con il tempo ha inglobato sia caratteristiche dei linguaggi funzionali sia la possibilità di creare classi ed oggetti, anche se non supporta completamente la programmazione ad oggetti. L&rsquo;enorme espansione del web, accessibile anche da smartphone e dispositivi IoT, hanno diffuso notevolmente il linguaggio, che è diventato un valido linguaggio anche per applicazioni lato server. Restano purtroppo i limiti dovuti alla mancanza di una tipizzazione forte ed al mancato supporto alla OOP (Object Oriented Programming).</p>
+<p>Per ovviare a queste mancanze, sono nati linguaggi come TypeScript, che estendono le specifiche di ECMAScript per aggiungere sia la tipizzazione forte sia la programmazione ad oggetti. Questi linguaggi permettono la scrittura di programmi che, una volta compilati, generano codice JavaScript da includere nelle pagine web.</p>
 <p>Inoltre, sono nati molti framework che rendono l&rsquo;elaborazione delle informazioni disponibili sul client un compito molto semplice e che permettono un dialogo <strong>asincrono</strong> con il server, cioè si permette agli script in esecuzione di inviare e ricevere dati dal server senza bloccare le elaborazioni in corso e, soprattutto, senza interrompere l&rsquo;attività dell&rsquo;utente nella pagina.</p>
 <p>Infine, è nato lo standard WebAssembly, che definisce un formato binario eseguibile dal browser. Utilizzando questa tecnologia, programmi scritti in altri linguaggi di programmazione (tra cui <strong>c</strong>, <strong>c++</strong>, <strong>rust</strong>, ecc&hellip;) possono essere compilati in formato binario WebAssembly per essere inclusi ed eseguiti in una pagina web.</p>
 <p>Data la continua diffusione dei servizi basati su web, la conoscenza in ambito lavorativo di JavaScript e delle tecnologie collegate è fortemente richiesta.</p>
@@ -134,7 +127,7 @@ organizzazione no-profit per aiutare le persone ad apprendere l&rsquo;arte della
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="https://javascript.info/" style="font-weight: 700; color: #e22d30;">Sito JavaScript.info</a>: The modern Javascript tutorial;</p><p><a href="https://javascript.christmas/" style="font-weight: 700; color: #e22d30;">Sito JavaScript.christmas</a>: JavaScript articles;</p><p><a href="https://practicejs.com/" style="font-weight: 700; color: #e22d30;">Sito practicejs.com</a>: Some JavaScript coding exercises;</p><p><a href="https://www.html.it/guide/guida-javascript-di-base/" style="font-weight: 700; color: #e22d30;">Sito HTML.it</a>: Corso JavaScript in italiano su HTML.it</p><p><a href="https://it.m.wikibooks.org/wiki/JavaScript" style="font-weight: 700; color: #e22d30;">Sito it.wikibooks.org</a>: Manuale in italiano su it.wikibooks.org</p><p><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/" style="font-weight: 700; color: #e22d30;">Sito freecodecamp.org</a>: Algorithms and data structures on freecodecamp.org</p>
+      <p><a href="https://www.html.it/guide/guida-javascript-di-base/" style="font-weight: 700; color: #e22d30;">Sito HTML.it</a>: Corso JavaScript in italiano su HTML.it</p><p><a href="https://it.m.wikibooks.org/wiki/JavaScript" style="font-weight: 700; color: #e22d30;">Sito it.wikibooks.org</a>: Manuale in italiano su it.wikibooks.org</p><p><a href="https://javascript.info/" style="font-weight: 700; color: #e22d30;">Sito JavaScript.info</a>: The modern Javascript tutorial;</p><p><a href="https://javascript.christmas/" style="font-weight: 700; color: #e22d30;">Sito JavaScript.christmas</a>: JavaScript articles;</p><p><a href="https://practicejs.com/" style="font-weight: 700; color: #e22d30;">Sito practicejs.com</a>: Some JavaScript coding exercises;</p><p><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/" style="font-weight: 700; color: #e22d30;">Sito freecodecamp.org</a>: Algorithms and data structures on freecodecamp.org</p><p><a href="https://www.w3schools.com/js/default.asp" style="font-weight: 700; color: #e22d30;">Sito w3schools.com</a>: Sito w3schools.com</p>
   </article>
 </main>
 
@@ -152,6 +145,67 @@ organizzazione no-profit per aiutare le persone ad apprendere l&rsquo;arte della
 		</a>
 	</div>
 </nav>
+<div class="article-content">
+  <h2>Commenti</h2>
+  <p>Puoi commentare registrandoti o accedendo al tuo account <a href="https://mastodon.it/" style="color: #e22d30;">Mastodon</a> e rispondendo a questo <a class="link" href="https:///@/" style="color: #e22d30;">post</a>.</p>
+  <p><a class="button" href="https:///interact/?type=reply">Rispondi</a></p>
+  <p id="mastodon-comments-list"><button id="load-comment">Leggi tutti i commenti</button></p>
+  <noscript><p>E' necessario attivare JavaScript per leggere i commenti.</p></noscript>
+  <script src="/static/js/purify.min.js"></script>
+  <script type="text/javascript">
+    function escapeHtml(unsafe) {
+      return unsafe
+           .replace(/&/g, "&amp;")
+           .replace(/</g, "&lt;")
+           .replace(/>/g, "&gt;")
+           .replace(/"/g, "&quot;")
+           .replace(/'/g, "&#039;");
+   }
+
+    document.getElementById("load-comment").addEventListener("click", function() {
+      document.getElementById("load-comment").innerHTML = "Lettura in corso...";
+      fetch('https:///api/v1/statuses//context')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          if(data['descendants'] &&
+             Array.isArray(data['descendants']) &&
+            data['descendants'].length > 0) {
+              document.getElementById('mastodon-comments-list').innerHTML = "";
+              data['descendants'].forEach(function(reply) {
+                reply.account.display_name = escapeHtml(reply.account.display_name);
+                reply.account.emojis.forEach(emoji => {
+                  reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
+                    `<img src="${escapeHtml(emoji.static_url)}" alt="Emoji ${emoji.shortcode}" height="20" width="20" />`);
+                });
+                mastodonComment =
+                  `<div class="mastodon-comment">
+                     <div class="avatar">
+                       <img src="${escapeHtml(reply.account.avatar_static)}" height=60 width=60 alt="">
+                     </div>
+                     <div class="content">
+                       <div class="author">
+                         <a href="${reply.account.url}" rel="nofollow">
+                           <span>${reply.account.display_name}</span>
+                           <span class="disabled">${escapeHtml(reply.account.acct)}</span>
+                         </a>
+                         <a class="date" href="${reply.uri}" rel="nofollow">
+                           ${reply.created_at.substr(0, 10)}
+                         </a>
+                       </div>
+                       <div class="mastodon-comment-content">${reply.content}</div>
+                     </div>
+                   </div>`;
+                document.getElementById('mastodon-comments-list').appendChild(DOMPurify.sanitize(mastodonComment, {'RETURN_DOM_FRAGMENT': true}));
+              });
+          } else {
+            document.getElementById('mastodon-comments-list').innerHTML = "<p>Nessun commento trovato.</p>";
+          }
+        });
+      });
+  </script>
+</div>
 
 
             </div>
