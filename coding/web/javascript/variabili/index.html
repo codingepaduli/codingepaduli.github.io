@@ -108,12 +108,18 @@
 </div></div>
     </header><div class="content post__content clearfix">
       <h1 id="costanti-e-variabili">Costanti e variabili</h1>
-<p>Le variabili sono spazi di memoria in cui vengono memorizzate delle informazioni. Hanno un nome ed un tipo associato, ad esempio tipo numerico, tipo booleano o tipo &ldquo;stringa&rdquo;.</p>
+<p>Le variabili sono spazi di memoria in cui vengono memorizzate delle informazioni. Hanno un nome ed un tipo associato, ad esempio tipo numerico, tipo booleano (vero o falso) o tipo &ldquo;stringa&rdquo; (sequenza di caratteri).</p>
 <p>Dalla versione di ECMAScript 6 le variabili si dichiarano utilizzando la parola chiave <code>let</code>, anche se la parola chiave <code>var</code> usata in ECMAScript 5 è ancora valida.</p>
 <p>Anche le costanti sono spazi di memoria con un nome ed un tipo associato, ma non è possibile modificare il valore assegnato. Si dichiarano con la parola chiave <code>const</code>;</p>
-<p>Quando si dichiara una variabile e si assegna un valore, allora alla variabile viene associato un tipo di dato.</p>
-<p>Se si assegna un valore differente, anche il tipo di dato cambia di conseguenza. Questo è permesso poiché JavaScript ha una tipizzazione <strong>debole</strong>, a differenza di linguaggi con tipizzazione <strong>forte</strong>, in cui una variabile non può cambiare il tipo di dato associato.</p>
-<p>I tipi di dato possono essere <strong>primitivi</strong> o <strong>complessi</strong>. Ai tipi primitivi è associato un solo valore, mentre liste di valori, oggetti con più proprietà sono considerati tipi complessi.</p>
+<p>Di seguito, un esempio di dichiarazione di una variabile con nome &ldquo;valoreX&rdquo; e valore <code>10</code> ed una dichiarazione di una costante con nome &ldquo;VALORE_Y&rdquo; e valore <code>20</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">valoreX</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">VALORE_Y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</code></pre></div><p>Il nome di una variabile o di una costante è scelto dal programmatore, non può contenere caratteri particolari, non può iniziare con un carattere numerico e non può essere una parola utilizzata dal linguaggio JavaScript, altrimenti sarà generato un errore.</p>
+<p>Per i nomi delle variabili esiste una regola stilistica che consiglia di utilizzare solo caratteri alfanumerici e di scriverli con <strong>carattere a cammello</strong> (in inglese &ldquo;camelCase&rdquo;), ovvero tutte le parole che compongono il nome vengono unite (togliendo gli spazi), trasformando tutte le loro iniziali, tranne la prima, in maiuscolo. Ad esempio, per il calcolo della &ldquo;media punti delle partite effettuate&rdquo; si può dichiarare una variabile con nome <code>mediaPuntiDellePartiteEffettuate</code>.</p>
+<p>Anche per i nomi delle costanti esiste una regola stilistica che consiglia di scriverle trasformando tutti i <strong>caratteri in maiuscolo</strong> e trasformando gli spazi in &ldquo;trattino basso&rdquo; (in inglese &ldquo;underscore&rdquo;). Ad esempio, per il valore &ldquo;pi greco mezzi&rdquo; si può dichiarare una costante con nome <code>PI_GRECO_MEZZI</code>.</p>
+<p>Quando ad una variabile viene assegnato un valore, allora alla variabile viene associato un tipo di dato, ad esempio il tipo numerico, il tipo booleano o tipo &ldquo;stringa&rdquo;.</p>
+<p>Se si assegna un valore differente, anche il tipo di dato cambia di conseguenza. Questo è permesso poiché JavaScript ha una tipizzazione <strong>debole</strong>, a differenza di linguaggi con tipizzazione <strong>forte</strong>, in cui, una volta associato il tipo di dato ad una variabile, questo non può più cambiare.</p>
+<p>I tipi di dato possono essere <strong>primitivi</strong> o <strong>complessi</strong>. Ai tipi primitivi è associato un solo valore, mentre sono considerati tipi complessi le liste di valori, gli oggetti con una o più proprietà, le strutture di dati, ecc&hellip; .</p>
 <h2 id="tipi-primitivi">Tipi primitivi</h2>
 <h3 id="tipo-booleano">Tipo booleano</h3>
 <p>Le variabili possono avere assegnato un valore logico, detto Booleano, che può essere <code>true</code> oppure <code>false</code>.</p>
@@ -186,7 +192,8 @@ vale 27.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">variabileIndefinita</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">variabileIndefinita2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>;
 </code></pre></div><h2 id="uso-della-console-javascript">Uso della console JavaScript</h2>
-<p>Uno strumento che aiuta moltissimo nello sviluppo di codice JavaScript è la console del browser, che fa parte degli strumenti di sviluppo e che appare quando si preme il tasto &ldquo;F12&rdquo; o quando si clicca con il seconda tasto del mouse sulla pagina web e si sceglie la voce &ldquo;Ispeziona&rdquo;.</p>
+<p>Uno strumento che aiuta moltissimo nello sviluppo di codice JavaScript è la console del browser.</p>
+<p>Fa parte degli strumenti di sviluppo ed appare quando si preme il tasto &ldquo;F12&rdquo; o quando si clicca con il seconda tasto del mouse sulla pagina web e si sceglie la voce &ldquo;Ispeziona&rdquo;. Sul browser Safari, la console fa parte del menu di sviluppo (&ldquo;Develop Menu&rdquo;) e deve essere abilitata nelle impostazioni del browser per poterla poi attivare con la combinazione di tasti <code>Cmd+Opt+C</code>.</p>
 <p><img src="/static/coding/web/javascript/javascript-console.png" alt="Console del browser" title="Console del browser"></p>
 <p>La console visualizza, in fase di esecuzione, eventuali errori generati, in modo che il programmatore possa correggerli. Inoltre, visualizza i messaggi informativi, di avviso e di errore che il programmatore inserisce negli script per avere in output il valore di variabili, di oggetti, il tempo di esecuzione e così via.</p>
 <h3 id="messaggi-informativi-di-avviso-e-di-errore">Messaggi informativi, di avviso e di errore</h3>
@@ -249,65 +256,9 @@ vale 27.
 	</div>
 </nav>
 <div class="article-content">
-  <h2>Commenti</h2>
-  <p>Puoi commentare registrandoti o accedendo al tuo account <a href="https://mastodon.it/" style="color: #e22d30;">Mastodon</a> e rispondendo a questo <a class="link" href="https:///@/" style="color: #e22d30;">post</a>.</p>
-  <p><a class="button" href="https:///interact/?type=reply">Rispondi</a></p>
-  <p id="mastodon-comments-list"><button id="load-comment">Leggi tutti i commenti</button></p>
-  <noscript><p>E' necessario attivare JavaScript per leggere i commenti.</p></noscript>
-  <script src="/static/js/purify.min.js"></script>
-  <script type="text/javascript">
-    function escapeHtml(unsafe) {
-      return unsafe
-           .replace(/&/g, "&amp;")
-           .replace(/</g, "&lt;")
-           .replace(/>/g, "&gt;")
-           .replace(/"/g, "&quot;")
-           .replace(/'/g, "&#039;");
-   }
 
-    document.getElementById("load-comment").addEventListener("click", function() {
-      document.getElementById("load-comment").innerHTML = "Lettura in corso...";
-      fetch('https:///api/v1/statuses//context')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          if(data['descendants'] &&
-             Array.isArray(data['descendants']) &&
-            data['descendants'].length > 0) {
-              document.getElementById('mastodon-comments-list').innerHTML = "";
-              data['descendants'].forEach(function(reply) {
-                reply.account.display_name = escapeHtml(reply.account.display_name);
-                reply.account.emojis.forEach(emoji => {
-                  reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
-                    `<img src="${escapeHtml(emoji.static_url)}" alt="Emoji ${emoji.shortcode}" height="20" width="20" />`);
-                });
-                mastodonComment =
-                  `<div class="mastodon-comment">
-                     <div class="avatar">
-                       <img src="${escapeHtml(reply.account.avatar_static)}" height=60 width=60 alt="">
-                     </div>
-                     <div class="content">
-                       <div class="author">
-                         <a href="${reply.account.url}" rel="nofollow">
-                           <span>${reply.account.display_name}</span>
-                           <span class="disabled">${escapeHtml(reply.account.acct)}</span>
-                         </a>
-                         <a class="date" href="${reply.uri}" rel="nofollow">
-                           ${reply.created_at.substr(0, 10)}
-                         </a>
-                       </div>
-                       <div class="mastodon-comment-content">${reply.content}</div>
-                     </div>
-                   </div>`;
-                document.getElementById('mastodon-comments-list').appendChild(DOMPurify.sanitize(mastodonComment, {'RETURN_DOM_FRAGMENT': true}));
-              });
-          } else {
-            document.getElementById('mastodon-comments-list').innerHTML = "<p>Nessun commento trovato.</p>";
-          }
-        });
-      });
-  </script>
+  
+
 </div>
 
 
@@ -318,7 +269,7 @@ vale 27.
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2020 Coding e Paduli.
+			&copy; 2021 Coding e Paduli.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

@@ -116,12 +116,12 @@
 <p>Il comando da utilizzare per creare un nuovo progetto è:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradle init
 </code></pre></div><p>Attraverso una procedura guidata, all&rsquo;utente vengono chieste le opzioni sulle quali creare un progetto:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Select type of project to generate:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Select type of project to generate:
   1: basic
   2: application
   3: library
   4: Gradle plugin
-Enter selection <span style="color:#f92672">(</span>default: basic<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>1..4<span style="color:#f92672">]</span> <span style="color:#ae81ff">2</span>
+Enter selection (default: basic) [1..4] 2
 
 Select implementation language:
   1: C++
@@ -129,22 +129,22 @@ Select implementation language:
   3: Java
   4: Kotlin
   5: Swift
-Enter selection <span style="color:#f92672">(</span>default: Java<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>1..5<span style="color:#f92672">]</span> <span style="color:#ae81ff">3</span>
+Enter selection (default: Java) [1..5] 3
 
 Select build script DSL:
   1: Groovy
   2: Kotlin
-Enter selection <span style="color:#f92672">(</span>default: Groovy<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>1..2<span style="color:#f92672">]</span> <span style="color:#ae81ff">1</span>
+Enter selection (default: Groovy) [1..2] 1
 
 Select test framework:
-  1: JUnit <span style="color:#ae81ff">4</span>
+  1: JUnit 4
   2: TestNG
   3: Spock
   4: JUnit Jupiter
-Enter selection <span style="color:#f92672">(</span>default: JUnit 4<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>1..4<span style="color:#f92672">]</span> <span style="color:#ae81ff">1</span>
+Enter selection (default: JUnit 4) [1..4] 1
 
-Project name <span style="color:#f92672">(</span>default: gradle-example<span style="color:#f92672">)</span>: example
-Source package <span style="color:#f92672">(</span>default: gradle-example<span style="color:#f92672">)</span>: example
+Project name (default: gradle-example): example
+Source package (default: gradle-example): example
 </code></pre></div><h3 id="gradle-wrapper">Gradle wrapper</h3>
 <p>La creazione di un progetto basato su Gradle comporta anche la creazione di un &ldquo;wrapper&rdquo; di Gradle.</p>
 <p>Questo &ldquo;wrapper&rdquo; permette a tutti gli utenti che non hanno installato Gradle di poter comunque eseguire i task di Gradle, dalla compilazione all&rsquo;esecuzione, poichè scarica una versione di Gradle nella macchina dell&rsquo;utente.</p>
@@ -174,7 +174,7 @@ Source package <span style="color:#f92672">(</span>default: gradle-example<span 
 <p>Per una descrizione più dettagliata dei task da utilizzare in un progetto Java, si rimanda ai capitoli successivi.</p>
 <h3 id="struttura-progetto">Struttura progetto</h3>
 <p>I file creati in un progetto Gradle sono i seguenti:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">example
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">example
 ├── build.gradle
 ├── gradle
 │   └── wrapper
@@ -253,18 +253,18 @@ Source package <span style="color:#f92672">(</span>default: gradle-example<span 
       id <span style="color:#e6db74">&#39;project-report&#39;</span>
   <span style="color:#f92672">}</span>
 </code></pre></div><p>Ogni plugin importa uno specifico insieme di task. Se nel file <code>build.gradle</code> non fosse presente l&rsquo;indicazione del plugin (che indica la tipologia di progetto), Gradle non saprebbe su cosa deve lavorare, quindi utilizzarebbe il plugin di <code>init</code> . I task disponibili sarebbero quindi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">gradlew tasks
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">gradlew tasks
 
 Build Setup tasks
-<span style="color:#f92672">-----------------</span>
-init <span style="color:#f92672">-</span> Initializes a <span style="color:#66d9ef">new</span> Gradle build<span style="color:#f92672">.</span>
-wrapper <span style="color:#f92672">-</span> Generates Gradle wrapper files<span style="color:#f92672">.</span>
+-----------------
+init - Initializes a new Gradle build.
+wrapper - Generates Gradle wrapper files.
 
 Help tasks
-<span style="color:#f92672">----------</span>
-help <span style="color:#f92672">-</span> Displays a help message<span style="color:#f92672">.</span>
-tasks <span style="color:#f92672">-</span> Displays the tasks runnable from root project <span style="color:#e6db74">&#39;example&#39;</span><span style="color:#f92672">.</span>
-<span style="color:#f92672">...</span>
+----------
+help - Displays a help message.
+tasks - Displays the tasks runnable from root project &#39;example&#39;.
+...
 </code></pre></div><p>Oltre ai plugin &ldquo;core&rdquo; di Gradle, sono disponibili una serie di plugin pubblicati dalla comunità sul portale Gradle all&rsquo;indirizzo: <a href="https://plugins.gradle.org/" title="Gradle - Pagina web contenente l'elenco di plugin pubblicati dalla comunità">https://plugins.gradle.org/</a>.</p>
 <p>Questi plugin forniscono l&rsquo;integrazione di tools quali Jetty (con plugin org.gretty), SpotBugs (con plugin com.github.spotbugs) e tanti altri.</p>
 <p>Per applicare un plugin dal portale, è necessario indicare nome e versione, come da esempio seguente:</p>
@@ -292,7 +292,7 @@ tasks <span style="color:#f92672">-</span> Displays the tasks runnable from root
 <p>Ad esempio, per visualizzare il piano di esecuzione dei task per il comando <code>build</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew build --dry-run
 </code></pre></div><p>L&rsquo;output prodotto, per un progetto Java, è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:compileJava SKIPPED
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">:compileJava SKIPPED
 :processResources SKIPPED
 :classes SKIPPED
 :jar SKIPPED
@@ -544,11 +544,11 @@ gretty <span style="color:#f92672">{</span>
     contextPath <span style="color:#e6db74">&#39;/web&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Una scelta opinabile riguarda il salvataggio dei log del server nella cartella &ldquo;home&rdquo; dell&rsquo;utente. Per cambiare tale scelta, si utilizzano le seguenti proprietà:</p>
-<pre><code class="language-output" data-lang="output">    // logging configuration
-    logDir &quot;${buildDir}/log&quot; // pay attention to double quote
-    logFileName 'calcolatrice'
-    loggingLevel 'TRACE'     // (loggingLevel 'ALL', 'DEBUG', 'ERROR', 'INFO', 'OFF', 'TRACE', 'WARN')
-</code></pre><h3 id="plugin-eclipse-wtp">Plugin <code>eclipse-wtp</code></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">    // logging configuration
+    logDir &#34;${buildDir}/log&#34; // pay attention to double quote
+    logFileName &#39;calcolatrice&#39;
+    loggingLevel &#39;TRACE&#39;     // (loggingLevel &#39;ALL&#39;, &#39;DEBUG&#39;, &#39;ERROR&#39;, &#39;INFO&#39;, &#39;OFF&#39;, &#39;TRACE&#39;, &#39;WARN&#39;)
+</code></pre></div><h3 id="plugin-eclipse-wtp">Plugin <code>eclipse-wtp</code></h3>
 <p>eclipse-wtp è un plugin che estende il plugin <code>eclipse</code> e serve ad automatizzare la creazione di file necessari ad Eclipse IDE.</p>
 <p>I task che il plugin mette a disposizione sono principalmente:</p>
 <ul>
@@ -724,65 +724,9 @@ gretty <span style="color:#f92672">{</span>
 	</div>
 </nav>
 <div class="article-content">
-  <h2>Commenti</h2>
-  <p>Puoi commentare registrandoti o accedendo al tuo account <a href="https://mastodon.it/" style="color: #e22d30;">Mastodon</a> e rispondendo a questo <a class="link" href="https:///@/" style="color: #e22d30;">post</a>.</p>
-  <p><a class="button" href="https:///interact/?type=reply">Rispondi</a></p>
-  <p id="mastodon-comments-list"><button id="load-comment">Leggi tutti i commenti</button></p>
-  <noscript><p>E' necessario attivare JavaScript per leggere i commenti.</p></noscript>
-  <script src="/static/js/purify.min.js"></script>
-  <script type="text/javascript">
-    function escapeHtml(unsafe) {
-      return unsafe
-           .replace(/&/g, "&amp;")
-           .replace(/</g, "&lt;")
-           .replace(/>/g, "&gt;")
-           .replace(/"/g, "&quot;")
-           .replace(/'/g, "&#039;");
-   }
 
-    document.getElementById("load-comment").addEventListener("click", function() {
-      document.getElementById("load-comment").innerHTML = "Lettura in corso...";
-      fetch('https:///api/v1/statuses//context')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          if(data['descendants'] &&
-             Array.isArray(data['descendants']) &&
-            data['descendants'].length > 0) {
-              document.getElementById('mastodon-comments-list').innerHTML = "";
-              data['descendants'].forEach(function(reply) {
-                reply.account.display_name = escapeHtml(reply.account.display_name);
-                reply.account.emojis.forEach(emoji => {
-                  reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
-                    `<img src="${escapeHtml(emoji.static_url)}" alt="Emoji ${emoji.shortcode}" height="20" width="20" />`);
-                });
-                mastodonComment =
-                  `<div class="mastodon-comment">
-                     <div class="avatar">
-                       <img src="${escapeHtml(reply.account.avatar_static)}" height=60 width=60 alt="">
-                     </div>
-                     <div class="content">
-                       <div class="author">
-                         <a href="${reply.account.url}" rel="nofollow">
-                           <span>${reply.account.display_name}</span>
-                           <span class="disabled">${escapeHtml(reply.account.acct)}</span>
-                         </a>
-                         <a class="date" href="${reply.uri}" rel="nofollow">
-                           ${reply.created_at.substr(0, 10)}
-                         </a>
-                       </div>
-                       <div class="mastodon-comment-content">${reply.content}</div>
-                     </div>
-                   </div>`;
-                document.getElementById('mastodon-comments-list').appendChild(DOMPurify.sanitize(mastodonComment, {'RETURN_DOM_FRAGMENT': true}));
-              });
-          } else {
-            document.getElementById('mastodon-comments-list').innerHTML = "<p>Nessun commento trovato.</p>";
-          }
-        });
-      });
-  </script>
+  
+
 </div>
 
 
@@ -793,7 +737,7 @@ gretty <span style="color:#f92672">{</span>
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2020 Coding e Paduli.
+			&copy; 2021 Coding e Paduli.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
