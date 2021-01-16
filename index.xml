@@ -8,9 +8,27 @@
     <language>it-IT</language>
     <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Anacron ed Anacrontab</title>
+      <link>http://codingepaduli.github.io/coding/tools/anacron/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/anacron/</guid>
+      <description>Anacron ed Anacrontab, strumenti per la schedulazione di un task con una specifica ricorrenza.</description>
+    </item>
+    
+    <item>
+      <title>Cron e Crontab</title>
+      <link>http://codingepaduli.github.io/coding/tools/cron/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/cron/</guid>
+      <description>Cron e Crontab, strumenti per la schedulazione di un task con una specifica ricorrenza.</description>
+    </item>
+    
+    <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
@@ -19,7 +37,7 @@
     <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
@@ -95,6 +113,15 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</guid>
       <description>Colori e stili</description>
+    </item>
+    
+    <item>
+      <title>02.1 - Esercizi di grafica 2D</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/basics_exe/</link>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/basics_exe/</guid>
+      <description>Esercizi di grafica 2D</description>
     </item>
     
     <item>

@@ -7,7 +7,6 @@
     <title>01 - Introduzione alla libreria grafica p5.js - Coding e Paduli</title>
     
     <meta name="description" content="Introduzione alla libreria grafica p5.js">
-    
         <meta property="og:title" content="01 - Introduzione alla libreria grafica p5.js" />
 <meta property="og:description" content="Introduzione alla libreria grafica p5.js" />
 <meta property="og:type" content="article" />
@@ -16,16 +15,14 @@
 <meta property="article:published_time" content="2020-09-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-10T00:00:00+00:00" />
 
-    
-    
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
 <meta name="twitter:title" content="01 - Introduzione alla libreria grafica p5.js"/>
 <meta name="twitter:description" content="Introduzione alla libreria grafica p5.js"/>
 
-    
 
+    
     <link rel="stylesheet" href="/css/style.css">
 
     
@@ -108,16 +105,21 @@
 </div></div>
     </header><div class="content post__content clearfix">
       <h1 id="introduzione-alla-libreria-grafica-p5js">Introduzione alla libreria grafica p5.js</h1>
-<p>p5.js e' una libreria grafica open-source focalizzata al coding in JavaScript in un contesto creativo e multimediale. Questa libreria è di fatto anche un &ldquo;porting&rdquo; della piattaforma <a href="https://processing.org/">Processing</a> in ambiente web, per cui, sia Processing, sia questa libreria, sono supportati dalla <a href="https://processingfoundation.org">Processing Foundation</a>, una comunità interessata alla creazione artistica di contenuti mediante tecnologie web.</p>
-<p>Numerose librerie estendono p5.js, aggiungendo strumenti per la gestione audio, per la gestione grafica in 2D, 3D ed anche in più dimensioni, per la comunicazione con diversi dispositivi, quali Arduino, per la gestione della geolocalizzazione, delle mappe, della webcam ed anche per l&rsquo;applicazione di algoritmi di intelligenza artificiale.</p>
-<h2 id="editor-integrato-per-p5js">Editor integrato per p5.js</h2>
-<p>Il punto di partenza è sicuramente l&rsquo;uso dell&rsquo;editor integrato al link <a href="https://editor.p5js.org">https://editor.p5js.org</a>, che permette di iniziare velocemente ad esplorare le potenzialità dell&rsquo;ambiente.</p>
+<p><a href="https://p5js.org" title="Sito web di p5.js">p5.js</a> è una libreria grafica open-source, focalizzata al coding in JavaScript in un contesto creativo e multimediale. Questa libreria è, di fatto, anche un &ldquo;porting&rdquo; della piattaforma <a href="https://processing.org/" title="Sito web di processing">Processing</a> in ambiente web, per cui, sia Processing, sia questa libreria, sono supportati dalla <a href="https://processingfoundation.org" title="Sito web della Processing Foundation">Processing Foundation</a>, una comunità interessata alla creazione artistica di contenuti mediante tecnologie web.</p>
+<p>Numerose librerie estendono p5.js, aggiungendo strumenti per la gestione audio, per la gestione grafica in 2, 3 ed anche più dimensioni, per la comunicazione con diversi dispositivi, quali Arduino, per la gestione della geo-localizzazione, delle mappe, della webcam ed anche per l&rsquo;applicazione di algoritmi di intelligenza artificiale.</p>
+<h2 id="api-e-documentazione">API e documentazione</h2>
+<p>Per poter utilizzare correttamente la libreria p5.js, è necessario conoscere l&rsquo;interfaccia esposta dalla libreria stessa.</p>
+<p>Il termine <strong>interfaccia</strong>, nelle discipline tecniche, indica l&rsquo;area (la &ldquo;faccia&rdquo;) esposta da un sistema, al fine di potervi interagire. Un esempio sono le interfacce grafiche di Microsoft Windows, che permettono di interagire con i calcolatori, oppure le interfacce vocali di iPhone ed Android, con &ldquo;Siri&rdquo; ed il famoso &ldquo;OK Google&rdquo;, che permettono di interagire con gli smartphone.</p>
+<p>Nello sviluppo di applicazioni, le interfacce esposte da librerie ed ambienti di sviluppo, e quindi anche dalla libreria p5.js, prendono il nome di <strong>Application Programming Interface</strong> (API).</p>
+<p>Le API espongono strutture, funzioni, costanti, e tutti gli altri elementi della libreria, che il programmatore può usare per realizzare la propria applicazione. Le API sono <strong>sempre</strong> accompagnate dalla documentazione, che descrive cosa rappresenta una determinata costante oppure come utilizzare una determinata funzione. La documentazione delle API della libreria p5.js si trova sul sito web della libreria stessa, all&rsquo;indirizzo <a href="https://p5js.org/reference/" title="Documentazione di p5.js">https://p5js.org/reference/</a></p>
+<h2 id="editor-online-per-p5js">Editor online per p5.js</h2>
+<p>Il punto di partenza, per iniziare velocemente ad esplorare le potenzialità della libreria p5.js, è sicuramente l&rsquo;editor presente sul sito web <a href="https://editor.p5js.org" title="Editor online di p5.js">https://editor.p5js.org</a>, che si presenta con la seguente interfaccia grafica:</p>
 <p><img src="/static/coding/web/p5js/OnlineEditor.png" alt="p5.js - Editor online" title="p5.js - Editor online"></p>
-<p>La schermata mostrata all&rsquo;utente presenta i menù tipici dei classici ambienti di sviluppo, la barra dei pulsanti per avviare e fermare il proprio lavoro e l&rsquo;area di lavoro, divisa in un&rsquo;area di testo per la scrittura del codice e l&rsquo;area di visualizzazione per presentare il lavoro creato.</p>
+<p>L&rsquo;interfaccia grafica presenta i menù tipici dei classici ambienti di sviluppo, quali la barra dei pulsanti, per avviare e fermare il proprio lavoro, l&rsquo;area del codice, per la scrittura del codice JavaScript, e l&rsquo;area di visualizzazione, per visualizzare il lavoro realizzato.</p>
 <p>L&rsquo;area del codice presenta già un esempio minimale di programma, valido come punto di partenza e descritto nel seguito di questo articolo.</p>
 <h2 id="prima-pagina-web-con-p5js">Prima pagina web con p5.js</h2>
-<p>L&rsquo;editor online è di grande utilità per iniziare, ma è necessario comunque conoscere la struttura completa della pagina web che permette di presentare e pubblicare il lavoro.</p>
-<p>Dando per assunti i fondamentali sul linguaggio <code>HTML</code>, si riporta il codice di una pagina web che contiene un esempio minimale di programma:</p>
+<p>L&rsquo;editor online è di grande utilità per iniziare, tuttavia si può voler includere il lavoro realizzato in una pagina web. Per far ciò, è necessario conoscere la struttura <code>HTML</code> nella quale includerlo.</p>
+<p>Dando per assunti i fondamentali sul linguaggio <code>HTML</code>, di seguito si riporta la struttura <code>HTML</code> che include l&rsquo;esempio minimale del programma visualizzato nell&rsquo;editor online:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
     &lt;<span style="color:#f92672">head</span>&gt;
@@ -141,9 +143,9 @@
         &lt;/<span style="color:#f92672">script</span>&gt;
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><p>Come si può notare, la libreria viene inclusa attraverso un collegamento esterno definito nel tag <code>script</code>, presente nell&rsquo;intestazione della pagina web.</p>
+</code></pre></div><p>Come si può notare, la libreria p5.js viene inclusa attraverso un collegamento esterno definito nel tag <code>script</code>, presente nell&rsquo;intestazione della pagina web.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p>L&rsquo;esempio minimale di programma, descritto nel seguito di questo articolo, è invece contenuto nel corpo della pagina web (nel tag <code>body</code>) ed è incluso in un secondo tag <code>script</code> (dato che si tratta di codice JavaScript).</p>
+</code></pre></div><p>Il codice JavaScript, descritto nel seguito di questo articolo, è invece contenuto nel corpo della pagina web (nel tag <code>body</code>) ed è incluso in un secondo tag <code>script</code> (dato che si tratta di codice JavaScript).</p>
 <h2 id="primo-programma">Primo programma</h2>
 <p>Sia che si utilizzi la pagina web, sia che si utilizzi l&rsquo;editor online, nel programma devono sempre essere dichiarate le due funzioni principali <code>setup</code> e <code>draw</code>, come nel seguente esempio.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
@@ -154,9 +156,9 @@
   <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
   <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
 }
-</code></pre></div><p>La funzione <code>setup</code> viene svolta una sola volta e serve ad impostare gli strumenti e le condizioni iniziali.</p>
+</code></pre></div><p>La funzione <code>setup()</code> viene eseguita una sola volta e serve ad impostare gli strumenti e le condizioni iniziali.</p>
 <p>In questo particolare caso, la funzione <code>setup</code> contiene un richiamo alla funzione <code>createCanvas</code> che crea all&rsquo;interno della pagina web un&rsquo;area di lavoro delle dimensioni indicate.</p>
-<p>La funzione <code>draw</code> viene richiamata ciclicamente e serve ad elaborare il lavoro realizzato.</p>
+<p>La funzione <code>draw()</code> viene richiamata ciclicamente e serve ad elaborare il lavoro realizzato.</p>
 <p>Nell&rsquo;esempio riportato sopra, questa funzione contiene un richiamo alla funzione <code>background</code>, che serve ad impostare lo sfondo, ed un secondo richiamo alla funzione <code>circle</code>, che crea un cerchio con centro alle coordinate <code>x=100</code> ed <code>y=150</code> e con raggio <code>r=50</code>.</p>
 <p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/p5js/Example01.png" alt="p5.js - Primo esempio" title="p5.js - Primo esempio"></p>
