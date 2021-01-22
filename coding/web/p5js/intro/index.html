@@ -100,7 +100,7 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-10T00:00:00Z">September 10, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-10T00:00:00Z">10-09-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
 	</span>
 </div></div>
     </header><div class="content post__content clearfix">
@@ -111,15 +111,143 @@
 <p>Per poter utilizzare correttamente la libreria p5.js, è necessario conoscere l&rsquo;interfaccia esposta dalla libreria stessa.</p>
 <p>Il termine <strong>interfaccia</strong>, nelle discipline tecniche, indica l&rsquo;area (la &ldquo;faccia&rdquo;) esposta da un sistema, al fine di potervi interagire. Un esempio sono le interfacce grafiche di Microsoft Windows, che permettono di interagire con i calcolatori, oppure le interfacce vocali di iPhone ed Android, con &ldquo;Siri&rdquo; ed il famoso &ldquo;OK Google&rdquo;, che permettono di interagire con gli smartphone.</p>
 <p>Nello sviluppo di applicazioni, le interfacce esposte da librerie ed ambienti di sviluppo, e quindi anche dalla libreria p5.js, prendono il nome di <strong>Application Programming Interface</strong> (API).</p>
-<p>Le API espongono strutture, funzioni, costanti, e tutti gli altri elementi della libreria, che il programmatore può usare per realizzare la propria applicazione. Le API sono <strong>sempre</strong> accompagnate dalla documentazione, che descrive cosa rappresenta una determinata costante oppure come utilizzare una determinata funzione. La documentazione delle API della libreria p5.js si trova sul sito web della libreria stessa, all&rsquo;indirizzo <a href="https://p5js.org/reference/" title="Documentazione di p5.js">https://p5js.org/reference/</a></p>
+<p>Le API espongono strutture, funzioni, costanti, e tutti gli altri elementi della libreria, che il programmatore può usare per realizzare la propria applicazione. Le API sono <strong>sempre</strong> accompagnate dalla documentazione, che descrive cosa rappresenta una determinata costante oppure come utilizzare una determinata funzione. La documentazione delle API della libreria p5.js si può consultare sul sito web della libreria stessa, all&rsquo;indirizzo <a href="https://p5js.org/reference/" title="Documentazione di p5.js">https://p5js.org/reference/</a>.</p>
+<p>La documentazione è organizzata per aree di interesse, tra le varie categorie troviamo:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td>Gestione colori di contorno, di riempimento, di sfondo</td>
+</tr>
+<tr>
+<td>Constants</td>
+<td>Costanti disponibili</td>
+</tr>
+<tr>
+<td>DOM</td>
+<td>Interazione con gli elementi della pagina web</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>Gestione dei dati</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>Informazioni sull&rsquo;ambiente di esecuzione</td>
+</tr>
+<tr>
+<td>Events</td>
+<td>Gestione eventi della tastiera, del mouse e del touch-screen</td>
+</tr>
+<tr>
+<td>Foundation</td>
+<td>Basi di JavaScript</td>
+</tr>
+<tr>
+<td>IO</td>
+<td>Gestione Input / Output</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Gestione immagini</td>
+</tr>
+<tr>
+<td>Lights, Camera</td>
+<td>Gestione luci, camera, materiali, ombre</td>
+</tr>
+<tr>
+<td>Math</td>
+<td>Funzioni matematiche</td>
+</tr>
+<tr>
+<td>Rendering</td>
+<td>Informazioni sul processo di disegno (rendering)</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>Funzioni per il disegno di forme 2D, 3D e curve</td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>Informazioni sul ciclo di esecuzione</td>
+</tr>
+<tr>
+<td>Transform</td>
+<td>Trasformazioni matematiche nel piano (2D) e nello spazio (3D)</td>
+</tr>
+<tr>
+<td>Typography</td>
+<td>Caratteri, stili e formattazione testo</td>
+</tr>
+</tbody>
+</table>
+<p>Ogni categoria mostra le funzioni disponibili, con un link alla documentazione specifica. Ogni costante o funzione è documentata indicando:</p>
+<ul>
+<li>uno o più esempi d&rsquo;uso;</li>
+<li>la descrizione;</li>
+<li>la sintassi d&rsquo;uso;</li>
+</ul>
+<p>Per le funzioni, la sintassi descrive la <strong>firma della funzione</strong>, che è composta dal nome e, tra parentesi tonde, dalla lista di parametri. La lista di parametri elenca prima quelli obbligatori e poi quelli facoltativi, indicati tra parentesi quadre. Ogni parametro è ulteriormente chiarito, indicando tipo, descrizione ed obbligatorietà.</p>
+<h3 id="documentazione-della-funzione-circle">Documentazione della funzione <code>circle</code></h3>
+<p>La sintassi della funzione <code>circle</code>, che serve a disegnare un cerchio nell&rsquo;area da disegno, è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: circle(x, y, d)
+
+Parameters:
+    x   Number: x-coordinate of the centre of the circle.
+    y   Number: y-coordinate of the centre of the circle.
+    d   Number: diameter of the circle.
+</code></pre></div><p>Si deduce che la funzione <code>circle</code> non prevede parametri facoltativi, dato che nessun parametro è indicato tra parentesi quadre.</p>
+<p>Dalla descrizione dei parametri si comprende che sono tutti numerici, con <code>x</code> ed <code>y</code> che indicano le coordinate del centro del cerchio e <code>d</code> che indica il diametro del cerchio.</p>
+<h3 id="documentazione-della-funzione-square">Documentazione della funzione <code>square</code></h3>
+<p>La sintassi della funzione <code>square</code>, che serve a disegnare un quadrato nell&rsquo;area da disegno, è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: square(x, y, s, [tl], [tr], [br], [bl])
+
+Parameters:
+    x   Number: x-coordinate of the square.
+    y   Number: y-coordinate of the square.
+    s   Number: side size of the square.
+    tl  Number: optional radius of top-left corner. (Optional)
+    tr  Number: optional radius of top-right corner. (Optional)
+    br  Number: optional radius of bottom-right corner. (Optional)
+    bl  Number: optional radius of bottom-left corner. (Optional)
+</code></pre></div><p>Si deduce che la funzione <code>square</code> prevede i parametri <strong>obbligatori</strong> <code>x</code>, <code>y</code> ed <code>s</code>. I parametri facoltativi, indicati tra parentesi quadre, sono <code>tl</code>, <code>tr</code>, <code>br</code>, <code>bl</code>.</p>
+<p>La descrizione dei parametri obbligatori indica che <code>x</code> ed <code>y</code> sono le coordinate dell&rsquo;angolo in alto a sinistra del quadrato ed <code>s</code> è la lunghezza del lato; I rimanenti parametri facoltativi rappresentano rispettivamente l&rsquo;arrotondamento dell&rsquo;angolo in alto a sinistra, in alto a destra, in basso a destra ed in basso a sinistra.</p>
+<p>Dalla documentazione si apprende che la funzione può essere usata per disegnare un quadrato senza angoli arrotondati oppure indicare l&rsquo;arrotondamento dei vari angoli, come nelle seguenti istruzioni:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>);
+<span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">5</span>);
+<span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">270</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">20</span>);
+</code></pre></div><p>Il risultato è riportato di seguito:</p>
+<p><img src="/static/coding/web/p5js/api-doc-example.png" alt="p5.js - Editor online" title="p5.js - Esempio risultante dalla documentazione delle API"></p>
 <h2 id="editor-online-per-p5js">Editor online per p5.js</h2>
 <p>Il punto di partenza, per iniziare velocemente ad esplorare le potenzialità della libreria p5.js, è sicuramente l&rsquo;editor presente sul sito web <a href="https://editor.p5js.org" title="Editor online di p5.js">https://editor.p5js.org</a>, che si presenta con la seguente interfaccia grafica:</p>
 <p><img src="/static/coding/web/p5js/OnlineEditor.png" alt="p5.js - Editor online" title="p5.js - Editor online"></p>
-<p>L&rsquo;interfaccia grafica presenta i menù tipici dei classici ambienti di sviluppo, quali la barra dei pulsanti, per avviare e fermare il proprio lavoro, l&rsquo;area del codice, per la scrittura del codice JavaScript, e l&rsquo;area di visualizzazione, per visualizzare il lavoro realizzato.</p>
-<p>L&rsquo;area del codice presenta già un esempio minimale di programma, valido come punto di partenza e descritto nel seguito di questo articolo.</p>
+<p>L&rsquo;interfaccia grafica presenta i menù tipici dei classici ambienti di sviluppo, quali la barra dei pulsanti, per avviare e fermare il proprio lavoro, l&rsquo;area del codice, per la scrittura del codice JavaScript, l&rsquo;area di visualizzazione, per visualizzare il lavoro realizzato e la console per visualizzare i messaggi di informazione, di avviso e di errore.</p>
+<p>L&rsquo;area del codice si presenta con un esempio minimale di programma, valido come punto di partenza e descritto successivamente.</p>
 <h2 id="prima-pagina-web-con-p5js">Prima pagina web con p5.js</h2>
-<p>L&rsquo;editor online è di grande utilità per iniziare, tuttavia si può voler includere il lavoro realizzato in una pagina web. Per far ciò, è necessario conoscere la struttura <code>HTML</code> nella quale includerlo.</p>
-<p>Dando per assunti i fondamentali sul linguaggio <code>HTML</code>, di seguito si riporta la struttura <code>HTML</code> che include l&rsquo;esempio minimale del programma visualizzato nell&rsquo;editor online:</p>
+<p>L&rsquo;editor online è di grande utilità per iniziare, tuttavia si può voler includere il lavoro realizzato in una pagina web. Per far ciò, è necessario conoscere la struttura HTML nella quale includerlo.</p>
+<p>Dando per assunti i fondamentali sul linguaggio HTML, nella pagina web è possibile definire un riferimento alla libreria p5.js mediante l&rsquo;etichetta <code>script</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>All&rsquo;area da disegno è associato il seguente stile:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
+<span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
+</code></pre></div><p>Il programma realizzato, magari tramite l&rsquo;editor online, deve essere incluso come script, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+        <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+    }
+
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+        <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+        <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>L&rsquo;esempio completo della pagina web è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
     &lt;<span style="color:#f92672">head</span>&gt;
@@ -143,11 +271,11 @@
         &lt;/<span style="color:#f92672">script</span>&gt;
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><p>Come si può notare, la libreria p5.js viene inclusa attraverso un collegamento esterno definito nel tag <code>script</code>, presente nell&rsquo;intestazione della pagina web.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p>Il codice JavaScript, descritto nel seguito di questo articolo, è invece contenuto nel corpo della pagina web (nel tag <code>body</code>) ed è incluso in un secondo tag <code>script</code> (dato che si tratta di codice JavaScript).</p>
-<h2 id="primo-programma">Primo programma</h2>
-<p>Sia che si utilizzi la pagina web, sia che si utilizzi l&rsquo;editor online, nel programma devono sempre essere dichiarate le due funzioni principali <code>setup</code> e <code>draw</code>, come nel seguente esempio.</p>
+</code></pre></div><h2 id="primo-programma">Primo programma</h2>
+<p>Sia che si utilizzi la pagina web, sia che si utilizzi l&rsquo;editor online, i programmi in p5.js devono sempre dichiarare le due funzioni principali <code>setup</code> e <code>draw</code>.</p>
+<p>Le istruzioni contenute nella funzione <code>setup</code> sono eseguite una sola volta e servono ad impostare gli strumenti e le condizioni iniziali.</p>
+<p>Le istruzioni contenute nella funzione <code>draw</code> sono eseguite ciclicamente e servono a ridisegnare continuamente l&rsquo;area di lavoro.</p>
+<p>Di seguito sono descritte le istruzioni eseguite dal primo programma d&rsquo;esempio, che per comodità è riportato di seguito:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
   <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
 }
@@ -156,15 +284,13 @@
   <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
   <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
 }
-</code></pre></div><p>La funzione <code>setup()</code> viene eseguita una sola volta e serve ad impostare gli strumenti e le condizioni iniziali.</p>
-<p>In questo particolare caso, la funzione <code>setup</code> contiene un richiamo alla funzione <code>createCanvas</code> che crea all&rsquo;interno della pagina web un&rsquo;area di lavoro delle dimensioni indicate.</p>
-<p>La funzione <code>draw()</code> viene richiamata ciclicamente e serve ad elaborare il lavoro realizzato.</p>
-<p>Nell&rsquo;esempio riportato sopra, questa funzione contiene un richiamo alla funzione <code>background</code>, che serve ad impostare lo sfondo, ed un secondo richiamo alla funzione <code>circle</code>, che crea un cerchio con centro alle coordinate <code>x=100</code> ed <code>y=150</code> e con raggio <code>r=50</code>.</p>
+</code></pre></div><p>La funzione <code>createCanvas</code> crea all&rsquo;interno della pagina web un&rsquo;area da disegno delle dimensioni indicate. Dato che l&rsquo;area da disegno deve essere creata una volta sola, questa istruzione è inserita nella funzione <code>setup</code>.</p>
+<p>Le funzione <code>background</code> serve ad impostare lo sfondo di colore grigio e la funzione <code>circle</code> serve a creare un cerchio. Dato che sono continuamente ridisegnate, sono state inserite nella funzione <code>draw</code>.</p>
 <p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/p5js/Example01.png" alt="p5.js - Primo esempio" title="p5.js - Primo esempio"></p>
 <h2 id="prima-animazione">Prima animazione</h2>
-<p>Supponendo di voler far &ldquo;muovere&rdquo; il cerchio verso destra nell&rsquo;area di lavoro, si necessita di una variabile che permetta, in primis, di indicare la posizione corrente del cerchio nell&rsquo;area di lavoro, e poi, che permetta di modificarla con un incremento unitario.</p>
-<p>La dichiarazione della variabile può avvenire prima delle due funzioni, mediante la classica dichiarazione:</p>
+<p>Supponendo di voler far &ldquo;muovere&rdquo; il cerchio verso destra nell&rsquo;area di lavoro, si necessita di una variabile che permetta, in primis, di indicare la posizione iniziale del cerchio nell&rsquo;area di lavoro, e poi, che permetta di modificarla, incrementandola di volta in volta.</p>
+<p>La dichiarazione della variabile può avvenire prima delle due funzioni <code>setup</code> e <code>draw</code>, mediante la classica dichiarazione:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
 </code></pre></div><p>Per realizzare il movimento, è necessario incrementare di un&rsquo;unità questa variabile, mediante l&rsquo;istruzione:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
@@ -180,10 +306,10 @@
   <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
   <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
 }
-</code></pre></div><p>E' interessante notare che se l&rsquo;istruzione di incremento <code>x = x + 1</code> la si pone nella funzione <code>setup</code> invece che nella funzione <code>draw</code>, questo incremento viene fatto una sola volta, quindi il cerchio resta immobile.</p>
-<p>Altra cosa interessante da notare, è che se si cancella l&rsquo;istruzione per disegnare lo sfondo (<code>background</code>), allora la vecchia posizione del cerchio non sarà &ldquo;pulita&rdquo;, quindi lo spostamento del cerchio lascerà una &ldquo;scia&rdquo; dovuta alle precedenti posizioni, come nella seguente immagine;</p>
+</code></pre></div><p>E' interessante notare che se l&rsquo;istruzione di incremento <code>x = x + 1</code> la si pone nella funzione <code>setup</code> invece che nella funzione <code>draw</code>, questo incremento viene eseguito una sola volta, quindi il cerchio resta immobile.</p>
+<p>Altra cosa interessante da notare, è che se si cancella l&rsquo;istruzione per disegnare lo sfondo (<code>background</code>), allora la vecchia posizione del cerchio non sarà &ldquo;pulita&rdquo; e nell&rsquo;area da disegno rimarrà una &ldquo;scia&rdquo; dovuta a tutte le precedenti posizioni occupate dal cerchio, come nella seguente immagine;</p>
 <p><img src="/static/coding/web/p5js/Example02.png" alt="p5.js - Esempio dell&rsquo;animazione senza il disegno dello sfondo" title="p5.js - Esempio dell'animazione senza il disegno dello sfondo"></p>
-<p>In ambiente web è visualizzabile quest&rsquo;ultimo esempio dell&rsquo;animazione.</p>
+<p>In ambiente web è visualizzabile quest&rsquo;ultimo esempio di animazione.</p>
 <div id="example02"></div>
 
     </div>

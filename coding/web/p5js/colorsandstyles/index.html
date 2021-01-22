@@ -100,50 +100,64 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-13T00:00:00Z">September 13, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-13T00:00:00Z">13-09-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
 	</span>
 </div></div>
     </header><div class="content post__content clearfix">
       <h1 id="colori-e-stili">Colori e stili</h1>
-<p>I colori, in ambito informatico, sono espressi attraverso differenti modelli. Quelli utilizzabili nella libreria p5.js sono i seguenti:</p>
+<p>Il cervello umano interpreta lo spettro elettromagnetico come <strong>colore</strong>.</p>
+<p>Le sezioni non visibili dello spettro sono da una parte onde radio ed infrarossi, che hanno bassa energia e raramente risultano dannosi per gli organismi viventi, e dall&rsquo;altra ultravioletto e raggi gamma, che hanno alta energia e risultano dannosi per gli organismi viventi.</p>
+<p>La sezione centrale dello spettro è visibile e va dal rosso al violetto, passando per arancione, giallo, verde e blu. Se tutti questi colori sono percepiti insieme, cioè se tutto l&rsquo;intervallo dello spettro visibile arriva all&rsquo;occhio umano, il colore risultante è il bianco. Se nessuna parte dello spettro visibile arriva all&rsquo;occhio umano, c&rsquo;è il &ldquo;buio&rdquo; che interpretiamo come nero.</p>
+<p>Gli oggetti, però, non hanno un colore proprio, sono visti grazie alla luce che si riflette su di essi. Un foglio bianco riflette quasi tutta la luce che riceve. Un foglio nero la assorbe quasi del tutto.</p>
+<p>Quando applichiamo il colore &ldquo;giallo&rdquo; ad un foglio bianco, parte della luce viene assorbita dall&rsquo;inchiostro del pennarello, quindi la luce riflessa viene interpretata di colore &ldquo;giallo&rdquo;. Si può affermare che l&rsquo;inchiostro giallo &ldquo;sottrae&rdquo;, in un certo qual modo, una parte dello spettro visibile.</p>
+<p>I colori, in ambito informatico, sono espressi attraverso differenti modelli:</p>
 <ul>
-<li><strong>RGB</strong>: indica il modello Red-Green-Blue, nel quale i colori sono espressi come combinazione di rosso, verde, blu;</li>
+<li><strong>RGB</strong>: indica il modello Red-Green-Blue, nel quale i colori sono espressi come combinazione di rosso, verde e blu;</li>
+<li><strong>CMYK</strong>: indica il modello Cyan-Magenta-Yellow-blacK, nel quale i colori sono espressi come combinazione di ciano, magenta, giallo e nero.</li>
 <li><strong>HSB</strong>: indica il modello Hue-Saturation-Brightness, nel quale i colori sono espressi come combinazione di tonalità, saturazione e luminosità.</li>
 </ul>
 <h2 id="modello-di-colori-rgb">Modello di colori RGB</h2>
-<p>Il modello <strong>RGB</strong> esprime i colori come combinazione di colori &ldquo;primari&rdquo;, che in questo modello sono il Rosso, il Verde ed il Blu.</p>
+<p>Il modello <strong>RGB</strong> è un modello di colori <strong>additivo</strong>, esprime i colori come somma di colori &ldquo;primari&rdquo;, che in questo modello sono il Rosso, il Verde ed il Blu.</p>
 <p><img src="https://p5js.org/assets/learn/color/rgb.jpg" alt="p5.js - Modello di colori RGB" title="p5.js - Modello di colori RGB"></p>
-<p>Ogni colore è definito come una combinazione di quantità dei tre colori elencati. La quantità applicabile per ogni colore primario va da 0 (zero) a 255, quindi un colore lo si può esprimere come una terna di quantità (<strong>r</strong>, <strong>g</strong>, <strong>b</strong>), in cui <strong>r</strong> è la quantità di rosso, <strong>g</strong> è la quantità di verde e <strong>b</strong> è la quantità di blu.</p>
+<p>Ogni colore è definito come una somma delle quantità dei tre colori elencati. La quantità applicabile per ogni colore primario va da 0 (zero) a 255, quindi un colore lo si può esprimere come una terna di quantità (<strong>r</strong>, <strong>g</strong>, <strong>b</strong>), in cui <strong>r</strong> è la quantità di rosso, <strong>g</strong> è la quantità di verde e <strong>b</strong> è la quantità di blu.</p>
 <p>Come ci si può aspettare, quindi, in questo modello:</p>
 <ul>
 <li>il colore rosso si esprime impostando solo la quantità massima di rosso: (255, 0, 0);</li>
 <li>il colore verde si esprime impostando solo la quantità massima di verde: (0, 255, 0);</li>
 <li>il colore blue si esprime impostando solo la quantità massima di blu: (0, 0, 255);</li>
 <li>il colore nero si esprime impostando a zero tutte le quantità: (0, 0, 0);</li>
-<li>il colore bianco si esprime impostando al massimo tutte le quantità: (255, 255, 255);</li>
+<li>il colore bianco si esprime impostando al massimo tutte le quantità: (255, 255, 255), ovvero sommando tutti i colori (il modello è additivo);</li>
 </ul>
-<p>Il problema di questo modello è che per una persona non è intuitivo indicare le quantità dei colori primari per ottenere il viola o il marrone o il celeste.</p>
+<p>Il problema principale di questo modello consiste nel fatto che non è intuitivo indicare le quantità dei colori primari necessari per ottenere un qualsiasi altro colore, come il viola, il marrone o il celeste.</p>
+<h2 id="modello-di-colori-cmyk">Modello di colori CMYK</h2>
+<p>Il modello <strong>CMYK</strong> è un modello di colori <strong>sottrattivo</strong>, esprime i colori come combinazione di colori &ldquo;primari&rdquo;, che in questo modello sono il ciano, il magenta, il giallo ed il nero.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/CMYK_subtractive_color_mixing.svg/300px-CMYK_subtractive_color_mixing.svg.png" alt="p5.js - Modello di colori CMYK" title="p5.js - Modello di colori CMYK"></p>
+<p>Il colore ciano è il colore complementare al rosso, ovvero il colore che si ottiene sottraendo il colore rosso dalla luce bianca.</p>
+<p>Il colore magenta è il colore complementare al verde, ovvero il colore che si ottiene sottraendo il colore verde dalla luce bianca.</p>
+<p>Il colore giallo è il colore complementare al viola, ovvero il colore che si ottiene sottraendo il colore viola dalla luce bianca.</p>
+<p>Dato che miscelando ciano, magenta e giallo si ottiene un colore molto scuro (il modello è sottrattivo), ma non un vero e proprio nero, in questo modello si è aggiunto il colore nero per completare lo spettro di colori visibili.</p>
+<p>Anche per questo modello, il problema principale consiste nel fatto che non è intuitivo indicare le quantità dei colori primari necessari per ottenere un qualsiasi altro colore, come il viola, il marrone o il celeste.</p>
 <h2 id="modello-di-colori-hsb">Modello di colori HSB</h2>
-<p>Il modello Hue-Saturation-Brightness è un modello più intuitivo per le persone, perché definisce il colore nel seguente spazio dei colori:</p>
+<p>Il modello Hue-Saturation-Brightness è un modello utilizzato al fine di rendere più intuitivo la definizione di un colore. In questo modello, ogni colore è definito nel seguente spazio curvo:</p>
 <p><img src="https://p5js.org/assets/learn/color/hsb.png" alt="p5.js - Modello di colori HSB" title="p5.js - Modello di colori HSB"></p>
-<p>In questo spazio curvo, l&rsquo;angolo definisce la tonalità, detta anche tinta. Quindi troviamo la tonalità rossa a 0 gradi, la tonalità verde a 120 gradi e la tonalità blu a 240 gradi, e nel mezzo tutte le altre sfumature di tonalità di colori.</p>
+<p>L&rsquo;angolo definisce la tonalità del colore, detta anche tinta. Quindi troviamo la tonalità rossa a 0 gradi, la tonalità verde a 120 gradi e la tonalità blu a 240 gradi, e nel mezzo tutte le altre sfumature di tonalità di colori.</p>
 <p>La saturazione indica quanto forte o, al contrario, pallida si vuole la tonalità di colore. Saturazioni forti rendono la tonalità di colore molto accesa, saturazioni deboli la rendono vicina ad un colore bianco.</p>
 <p>La brillantezza indica quanto luminosa si vuole la tonalità di colore.</p>
-<p>Ogni colore è definito come una combinazione delle tre componenti elencate. Il valore applicabile per ogni componente va da 0 (zero) a 255, quindi un colore lo si può esprimere come una terna di quantità (<strong>h</strong>, <strong>s</strong>, <strong>b</strong>), in cui <strong>h</strong> è il valore che esprime la tonalità, <strong>s</strong> è il valore che indica la saturazione e <strong>b</strong> è il valore che definisce la brillantezza.</p>
-<p>Come ci si può aspettare, quindi, in questo modello, una volta scelta la tonalità, ad esempio il rosso, è facile ottenere un rosso forte e carico impostando valori alti di saturazione e brillantezza; viceversa, con valori bassi di saturazione e brillantezza si otterrà un colore vicino al rosa (che è un rosso pallido) scuro;</p>
+<p>Ogni colore è, quindi, definito come una combinazione delle tre componenti elencate. Il valore applicabile per ogni componente va da 0 (zero) a 255, quindi un colore lo si può esprimere come una terna di quantità (<strong>h</strong>, <strong>s</strong>, <strong>b</strong>), in cui <strong>h</strong> è il valore che esprime la tonalità, <strong>s</strong> è il valore che indica la saturazione e <strong>b</strong> è il valore che definisce la brillantezza.</p>
+<p>Come ci si può aspettare, una volta scelta la tonalità, ad esempio il rosso, è facile ottenere un rosso forte e carico impostando valori alti di saturazione e brillantezza; viceversa, è altrettanto intuitivo ottenere un colore rosa scuro (che è un rosso pallido) impostando valori bassi di saturazione e brillantezza.</p>
 <h2 id="impostare-il-modello-di-colori">Impostare il modello di colori</h2>
-<p>Per passare da un modello all&rsquo;altro, è necessario utilizzare la funzione <code>colorMode</code>, che prende come parametro una costante rappresentativa del modello di colori da utilizzare.
-Le costanti sono le seguenti:</p>
+<p>Solo i modelli <code>RGB</code> ed <code>HSB</code> sono implementati dalla libreria p5.js.</p>
+<p>Per impostare un modello di colori, è necessario utilizzare la funzione <code>colorMode</code>, che prende come parametro una costante rappresentativa del modello da utilizzare. Le costanti sono le seguenti:</p>
 <ul>
 <li><code>RGB</code>, costante che indica di utilizzare il modello RGB;</li>
 <li><code>HSB</code>, costante che indica di utilizzare il modello HSB.</li>
 </ul>
-<p>Un esempio d&rsquo;uso per scegliere il modello di colori da utilizzare è il seguente:</p>
+<p>Un esempio d&rsquo;uso per impostare il modello di colori da utilizzare è il seguente:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
 </code></pre></div><h2 id="disegnare-testi-e-figure-colorati">Disegnare testi e figure colorati</h2>
 <h3 id="usare-un-colore-di-sfondo">Usare un colore di sfondo</h3>
 <p>Fin&rsquo;ora abbiamo utilizzato la funzione <code>background</code> per impostare lo sfondo. Questa funzione prevede differenti modalità per indicare il colore di sfondo. La modalità tipica è di utilizzare tre parametri per indicare il colore nel modello di colori utilizzato.</p>
-<p>Ad esempio, per impostare uno sfondo rosso usando il modello di colori <strong>HSB</strong>, si utilizza il seguente codice:</p>
+<p>Ad esempio, per impostare uno sfondo rosso &ldquo;acceso&rdquo;, usando il modello di colori <strong>HSB</strong>, si utilizza il seguente codice:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">HSB</span>);
 <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>);
 </code></pre></div><p>Come secondo esempio, per impostare uno sfondo blu usando il modello di colori <strong>RGB</strong>, si utilizza il seguente codice:</p>
@@ -156,11 +170,11 @@ Le costanti sono le seguenti:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
 <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
 
-<span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// primo colore, combinando rosso e verde
+<span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// primo colore, combinazione di rosso e verde
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">triangle</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">100</span>);
 <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">40</span>);
 
-<span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>); <span style="color:#75715e">// secondo colore, combinando verde e blu
+<span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>); <span style="color:#75715e">// secondo colore, somma di verde e blu
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">40</span>);
 <span style="color:#a6e22e">rect</span>(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>);
 </code></pre></div><p>Il risultato sarà il seguente:</p>
