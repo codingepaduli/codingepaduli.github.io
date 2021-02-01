@@ -47,32 +47,35 @@
 	</div>
 		
 <nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
+
 	<ul class="menu__list">
-		<li class="menu__item">
+    <li>
+      <button class="menu__btn menu__btn--active" aria-haspopup="true" aria-expanded="true" tabindex="0" style="display: block; width: 100%; padding: 0; background: #2a2a2a; border: 0; outline: 0; color: #e22d30;">
+        <span class="menu__btn-title" tabindex="-1">Menu</span>
+      </button>
+    </li>
+		<li>
 			<a class="menu__link" href="/coding/">
 				
 				<span class="menu__text">Coding e tools</span>
 				
 			</a>
 		</li>
-		<li class="menu__item menu__item--active">
+		<li>
 			<a class="menu__link" href="/interesting/">
 				
 				<span class="menu__text">Interessanti</span>
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li>
 			<a class="menu__link" href="/opensource/">
 				
 				<span class="menu__text">Open Source</span>
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li>
 			<a class="menu__link" href="/webapp/">
 				
 				<span class="menu__text">WebApp</span>
@@ -81,6 +84,18 @@
 		</li>
 	</ul>
 </nav>
+
+
+<script>
+  
+
+</script>
+
+<style>
+  .menu__link { display: none; }
+  .menu__btn>li:hover>.menu__link { display: block; }
+
+</style>
 
 	</div>
 </header>

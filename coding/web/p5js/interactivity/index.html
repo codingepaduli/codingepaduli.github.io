@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>04 - Interattività - Coding e Paduli</title>
     
-    <meta name="description" content="Interazione con l&#39;utente mediante mouse e tastiera">
+    <meta name="description" content="Interazione utente">
         <meta property="og:title" content="04 - Interattività" />
-<meta property="og:description" content="Interazione con l&#39;utente mediante mouse e tastiera" />
+<meta property="og:description" content="Interazione utente" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/interactivity/" />
 <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
 <meta name="twitter:title" content="04 - Interattività"/>
-<meta name="twitter:description" content="Interazione con l&#39;utente mediante mouse e tastiera"/>
+<meta name="twitter:description" content="Interazione utente"/>
 
 
     
@@ -47,32 +47,35 @@
 	</div>
 		
 <nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
+
 	<ul class="menu__list">
-		<li class="menu__item">
+    <li>
+      <button class="menu__btn menu__btn--active" aria-haspopup="true" aria-expanded="true" tabindex="0" style="display: block; width: 100%; padding: 0; background: #2a2a2a; border: 0; outline: 0; color: #e22d30;">
+        <span class="menu__btn-title" tabindex="-1">Menu</span>
+      </button>
+    </li>
+		<li>
 			<a class="menu__link" href="/coding/">
 				
 				<span class="menu__text">Coding e tools</span>
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li>
 			<a class="menu__link" href="/interesting/">
 				
 				<span class="menu__text">Interessanti</span>
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li>
 			<a class="menu__link" href="/opensource/">
 				
 				<span class="menu__text">Open Source</span>
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li>
 			<a class="menu__link" href="/webapp/">
 				
 				<span class="menu__text">WebApp</span>
@@ -81,6 +84,18 @@
 		</li>
 	</ul>
 </nav>
+
+
+<script>
+  
+
+</script>
+
+<style>
+  .menu__link { display: none; }
+  .menu__btn>li:hover>.menu__link { display: block; }
+
+</style>
 
 	</div>
 </header>
@@ -105,26 +120,19 @@
 </div></div>
     </header><div class="content post__content clearfix">
       <h1 id="interattività">Interattività</h1>
-<p>L&rsquo;utente può interagire con l&rsquo;area da disegno attraverso tastiera, mouse e tutti i dispositivi che permettono di fornire un input al computer.</p>
-<p>Il cursore del mouse è tipicamente usato per controllare la posizione o muovere in una posizione un personaggio o un oggetto sullo schermo. La tastiera permette un controllo in una modalità differente, dato che non ha un segnaposto sullo schermo, come il cursore del mouse.</p>
-<p>Ad esempio, in un videogioco &ldquo;sparatutto&rdquo;, con il mouse è possibile indicare con precisione dove sparare, a differenza della tastiera, che tipicamente è utilizzata per spostare il giocatore.</p>
+<p>L&rsquo;utente può interagire con l&rsquo;area da disegno attraverso tastiera, mouse e tutti gli altri dispositivi di input. L&rsquo;interazione con audio, webcam e dispositivi esterni, come il micro-controllore Arduino e la scheda Raspberry, sono garantiti da opportune estensioni che estendono le funzionalità di base.</p>
+<p>Per il programmatore è estremamente semplice scrivere programmi che interagiscano con questi dispositivi di input ed output, ad esempio può programmare l&rsquo;area da disegno perché si adatti alle dimensioni del display, alla frequenza di disegno, alla rotazione dello schermo ed al funzionamento a tutto schermo.</p>
+<p>Di seguito vengono descritte le principali funzionalità di base che permettono di sviluppare l&rsquo;interazione con l&rsquo;utente, rimandando alla documentazione ufficiale gli approfondimenti dei concetti avanzati.</p>
 <h2 id="interazione-con-il-mouse">Interazione con il mouse</h2>
-<p>La libreria p5.js memorizza nelle variabili <code>mouseX</code> e <code>mouseY</code> le coordinate x ed y del mouse, quando questo si trova nell&rsquo;area da disegno.</p>
-<p>Allo stesso modo, memorizza nella variabile <code>mouseIsPressed</code> il fatto che un (qualsiasi) pulsante del mouse sia stato cliccato o meno, per cui questa variabile può assumere valore <code>true</code> o <code>false</code>.</p>
-<p>Da prestare attenzione al fatto che questa variabile assume valore <code>false</code> appena il pulsante del mouse viene lasciato.</p>
-<p>Nella variabile <code>mouseButton</code> viene memorizzato il pulsante cliccato, che può essere identificato da una delle seguenti costanti:</p>
+<p>L&rsquo;input del mouse è gestito automaticamente dalla libreria p5.js, la quale, in maniera completamente trasparente al programmatore, memorizza nelle variabili <code>mouseX</code> e <code>mouseY</code> le coordinate X ed Y del mouse, quando questo si trova nell&rsquo;area da disegno, e nella variabile <code>mouseButton</code> l&rsquo;ultimo pulsante cliccato, che può essere identificato da una delle seguenti costanti:</p>
 <ul>
-<li><code>LEFT</code>: indica che è stato cliccato il pulsante sinistro del mouse;</li>
-<li><code>RIGHT</code>: indica che è stato cliccato il pulsante destro del mouse;</li>
-<li><code>CENTER</code>: indica che è stato cliccato il pulsante centrale del mouse.</li>
+<li><code>LEFT</code>: indica che l&rsquo;ultimo pulsante cliccato è il pulsante sinistro del mouse;</li>
+<li><code>RIGHT</code>: indica che l&rsquo;ultimo pulsante cliccato è il pulsante destro del mouse;</li>
+<li><code>CENTER</code>: indica che l&rsquo;ultimo pulsante cliccato è il pulsante centrale del mouse.</li>
 </ul>
-<p>Il valore della variabile <code>mouseButton</code> rimane memorizzato anche dopo che il pulsante è stato cliccato e resta disponibile in memoria fino a quando un nuovo pulsante viene cliccato.</p>
-<h2 id="interazione-con-la-tastiera">Interazione con la tastiera</h2>
-<p>La libreria p5.js memorizza nelle variabili <code>key</code> e <code>keyCode</code> il tasto premuto sulla tastiera. Il valore  resta disponibile in memoria fino a quando un nuovo pulsante viene cliccato.</p>
-<p>La differenza tra le due variabili è che la prima si usa per ottenere solo caratteri alfanumerici e di punteggiatura, la seconda variabile si usa per ottenere anche i tasti premuti che non appartengono alla prima categoria, ad esempio i tasti corrispondenti alle frecce, alla cancellazione, il tasto &ldquo;invio&rdquo;, ecc..</p>
-<p>La libreria p5.js cattura anche il fatto che un pulsante della tastiera sia stato cliccato o meno, e memorizza questa informazione nella variabile <code>keyIsPressed</code>, che può assumere valore <code>true</code> o <code>false</code>.</p>
-<p>Da prestare attenzione al fatto che la variabile <code>keyIsPressed</code> assume valore <code>false</code> appena il pulsante premuto viene lasciato.</p>
-<h2 id="cursore-del-mouse">Cursore del mouse</h2>
+<p>Allo stesso modo, nella variabile <code>mouseIsPressed</code> è automaticamente memorizzato il fatto che un (qualsiasi) pulsante del mouse sia stato cliccato o meno, per cui questa variabile può assumere valore <code>true</code> o <code>false</code>.</p>
+<p>Si deve prestare particolare attenzione a questa variabile, dato che al click assume valore <code>true</code>, ma appena il click termina, assume immediatamente valore <code>false</code>.</p>
+<h3 id="cursore-del-mouse">Cursore del mouse</h3>
 <p>E' possibile nascondere o impostare una nuova icona per il cursore del mouse. Le icone fanno parte del sistema operativo e quindi appaiono diverse su macchine e sistemi differenti.</p>
 <p>Per nascondere il cursore, si utilizza la funzione <code>noCursor</code>.</p>
 <p>Per visualizzare nuovamente l&rsquo;icona o per impostare una nuova icona del mouse si utilizza la funzione <code>cursor</code>, che prende come argomento opzionale la costante che indica la nuova icona da usare. Tra le costanti disponibili ci sono:</p>
@@ -136,6 +144,21 @@
 <li><code>TEXT</code>: indica l&rsquo;icona a forma di cursore per l&rsquo;inserimento testo;</li>
 <li><code>WAIT</code>: indica l&rsquo;icona a forma di clessidra d&rsquo;attesa.</li>
 </ul>
+<h2 id="interazione-con-la-tastiera">Interazione con la tastiera</h2>
+<p>La libreria p5.js memorizza nelle variabili <code>key</code> e <code>keyCode</code> il tasto premuto sulla tastiera. Il valore resta disponibile in memoria fino a quando un nuovo pulsante viene cliccato.</p>
+<p>La differenza tra le due variabili è che la prima si usa per ottenere solo caratteri alfanumerici e di punteggiatura, la seconda variabile si usa per ottenere il codice del tasto, e non si limita ai caratteri alfanumerici e di punteggiatura, ma anche i tasti corrispondenti alle frecce, alla cancellazione, al tasto &ldquo;invio&rdquo;, ecc..</p>
+<p>La libreria p5.js cattura anche il fatto che un pulsante della tastiera sia stato cliccato o meno, e memorizza questa informazione nella variabile <code>keyIsPressed</code>, che può assumere valore <code>true</code> o <code>false</code>.</p>
+<p>Da prestare attenzione al fatto che la variabile <code>keyIsPressed</code>, alla pressione di un tasto, assume valore <code>true</code> ma, appena il tasto premuto viene lasciato, assume immediatamente valore <code>false</code>.</p>
+<h2 id="gestione-aggiornamento-area-da-disegno">Gestione aggiornamento area da disegno</h2>
+<p>L&rsquo;area da disegno viene ridisegnata con una frequenza misurata in fotogrammi (frame) per secondo (nota ai video-gamer con la sigla &ldquo;fps&rdquo;); Una frequenza elevata permette una visione più fluida dell&rsquo;animazione generata o del filmato riprodotto.</p>
+<p>Si può utilizzare la funzione <code>frameRate()</code> per ottenere la frequenza utilizzata. La funzione permette anche di impostare la frequenza desiderata passandola come argomento (opzionale). Ad esempio, per impostare la frequenza a 60fps, si utilizza:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">frameRate</span>(<span style="color:#ae81ff">60</span>);
+</code></pre></div><p>La variabile <code>frameCount</code> messa a disposizione dalla libreria è un contatore nel quale viene salvato il numero di fotogrammi disegnati dall&rsquo;inizio dell&rsquo;animazione.</p>
+<p>Anche la variabile <code>deltaTime</code> è messa a disposizione dalla libreria. Questa variabile contiene la differenza in millisecondi del tempo trascorso tra l&rsquo;inizio del fotogramma precedente e l&rsquo;inizio del fotogramma corrente.</p>
+<h2 id="gestione-dimensioni-e-rotazione-schermo">Gestione dimensioni e rotazione schermo</h2>
+<p>La grandezza dello schermo può variare da dispositivo a dispositivo. Inoltre con tablet e smartphone, l&rsquo;utente può ruotare lo schermo.</p>
+<p>La variabile <code>deviceOrientation</code> indica se lo schermo è orientato in orizzontale o verticale;</p>
+<p>Le variabili <code>windowWidth</code> e <code>windowHeight</code> indicano rispettivamente larghezza ed altezza della finestra corrente.</p>
 
     </div>
   </article>
