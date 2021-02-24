@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Link relativi al coding - Coding e Paduli</title>
-    
+
     <meta name="description" content="Set di link relativi al coding">
         <meta property="og:title" content="Link relativi al coding" />
 <meta property="og:description" content="Set di link relativi al coding" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/interesting/developing/" />
 <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
-<meta property="article:published_time" content="2021-01-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-01-18T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-02-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-02-23T00:00:00+00:00" />
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="Set di link relativi al coding"/>
 
 
-    
+
     <link rel="stylesheet" href="/css/style.css">
 
     
@@ -46,56 +46,91 @@
 		</a>
 	</div>
 		
-<nav class="menu">
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <input type="checkbox" id="my_menu">
+  <nav class="my_navbar">
+    <ul>
 
-	<ul class="menu__list">
-    <li>
-      <button class="menu__btn menu__btn--active" aria-haspopup="true" aria-expanded="true" tabindex="0" style="display: block; width: 100%; padding: 0; background: #2a2a2a; border: 0; outline: 0; color: #e22d30;">
-        <span class="menu__btn-title" tabindex="-1">Menu</span>
-      </button>
-    </li>
-		<li>
-			<a class="menu__link" href="/coding/">
-				
-				<span class="menu__text">Coding e tools</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/interesting/">
-				
-				<span class="menu__text">Interessanti</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/opensource/">
-				
-				<span class="menu__text">Open Source</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/webapp/">
-				
-				<span class="menu__text">WebApp</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
+      <li><a href="/coding/">Coding e tools</a></li>
 
+      <li><a href="/interesting/">Interessanti</a></li>
 
-<script>
-  
+      <li><a href="/opensource/">Open Source</a></li>
 
-</script>
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
 
-<style>
-  .menu__link { display: none; }
-  .menu__btn>li:hover>.menu__link { display: block; }
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+     
+    #my_menu {
+      display: none;
+    }
 
-</style>
+     
+    @media screen and (max-width: 767px) {
+       
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+      #my_menu:checked + .my_navbar ul {
+         display: flex;  
+         text-align: center;
+      }
+    }
+  </style>
 
 	</div>
 </header>
@@ -115,7 +150,7 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-01-18T00:00:00Z">18-01-2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/interesting/" rel="category">interesting</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-02-23T00:00:00Z">23-02-2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/interesting/" rel="category">interesting</a>
 	</span>
 </div></div>
     </header><div class="content post__content clearfix">
@@ -473,10 +508,9 @@
 <a href="https://utteranc.es/">utterances</a> - A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments, wiki pages and more!<br>
 <a href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/">Adding comments to your static blog with Mastodon</a> - \</p>
 <h4 id="pandoc">Pandoc</h4>
-<p><a href="https://github.com/prashanth1k/pandoc-ebook-template-windows">prashanth1k/pandoc-ebook-template-windows: An easy way to generate eBooks from multiple markdown files using Pandoc.</a> -<br>
-<a href="https://opensource.com/article/18/9/intro-pandoc">Convert files at the command line with Pandoc</a> -<br>
+<p><a href="https://opensource.com/article/18/9/intro-pandoc">Convert files at the command line with Pandoc</a> -<br>
 <a href="https://github.com/htdebeer/pandocomatic">htdebeer/pandocomatic</a> - Automate the use of pandoc<br>
-<a href="https://groups.google.com/forum/#!searchin/pandoc-discuss/javascript%7Csort:date/pandoc-discuss/XR14gYSf1bo/AGnEsEVgAAAJ">pandoc-include-code snippet</a> - Google Gruppi<br>
+<a href="https://groups.google.com/g/pandoc-discuss">pandoc-discuss</a> - Google Gruppi<br>
 <a href="https://github.com/manuelp/pandoc-stylesheet/blob/master/pub.css">manuelp/pandoc-stylesheet · Publication CSS</a> -<br>
 <a href="https://jdhao.github.io/2019/05/30/markdown2pdf_pandoc/">Converting Markdown to Beautiful PDF with Pandoc</a> - jdhao&rsquo;s blog<br>
 <a href="https://pypi.org/project/pandoc-img-glob/">pandoc-img-glob · PyPI</a> -<br>
@@ -651,7 +685,6 @@
 	</div>
 </footer>
     </div>
-<script async defer src="/js/menu.js"></script>
 <script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

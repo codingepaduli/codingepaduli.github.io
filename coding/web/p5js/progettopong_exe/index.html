@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>04.1 - Progetto Pong - Coding e Paduli</title>
-    
+
     <meta name="description" content="Sviluppo di un videogioco in stile &#39;pong&#39;">
         <meta property="og:title" content="04.1 - Progetto Pong" />
 <meta property="og:description" content="Sviluppo di un videogioco in stile &#39;pong&#39;" />
@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="Sviluppo di un videogioco in stile &#39;pong&#39;"/>
 
 
-    
+
     <link rel="stylesheet" href="/css/style.css">
 
     
@@ -46,56 +46,91 @@
 		</a>
 	</div>
 		
-<nav class="menu">
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <input type="checkbox" id="my_menu">
+  <nav class="my_navbar">
+    <ul>
 
-	<ul class="menu__list">
-    <li>
-      <button class="menu__btn menu__btn--active" aria-haspopup="true" aria-expanded="true" tabindex="0" style="display: block; width: 100%; padding: 0; background: #2a2a2a; border: 0; outline: 0; color: #e22d30;">
-        <span class="menu__btn-title" tabindex="-1">Menu</span>
-      </button>
-    </li>
-		<li>
-			<a class="menu__link" href="/coding/">
-				
-				<span class="menu__text">Coding e tools</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/interesting/">
-				
-				<span class="menu__text">Interessanti</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/opensource/">
-				
-				<span class="menu__text">Open Source</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/webapp/">
-				
-				<span class="menu__text">WebApp</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
+      <li><a href="/coding/">Coding e tools</a></li>
 
+      <li><a href="/interesting/">Interessanti</a></li>
 
-<script>
-  
+      <li><a href="/opensource/">Open Source</a></li>
 
-</script>
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
 
-<style>
-  .menu__link { display: none; }
-  .menu__btn>li:hover>.menu__link { display: block; }
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+     
+    #my_menu {
+      display: none;
+    }
 
-</style>
+     
+    @media screen and (max-width: 767px) {
+       
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+      #my_menu:checked + .my_navbar ul {
+         display: flex;  
+         text-align: center;
+      }
+    }
+  </style>
 
 	</div>
 </header>
@@ -122,15 +157,15 @@
       <h1 id="041---progetto-pong">04.1 - Progetto Pong</h1>
 <p>Si sviluppi un videogioco in stile &ldquo;pong&rdquo;, utilizzando la libreria grafica p5.js per il disegno degli oggetti necessari. I requisiti funzionali del gioco sono i seguenti:</p>
 <ol>
-<li>Il rettangolo di gioco deve avere una dimensione adatta alla pagina web e deve contenere una pallina ed una barra laterale, chiamata &ldquo;racchetta&rdquo;, posizionata vicino al bordo sinistro, non a contatto;</li>
-<li>Il giocatore controlla la &ldquo;racchetta&rdquo; con il mouse.</li>
-<li>Il giocatore può spostare la &ldquo;racchetta&rdquo; solo sull&rsquo;asse verticale. La posizione della &ldquo;racchetta&rdquo; deve essere limitata dal bordo superiore ed inferiore del rettangolo di gioco;</li>
-<li>La pallina si muove continuamente in diagonale;</li>
-<li>Quando la pallina &ldquo;tocca&rdquo; la &ldquo;racchetta&rdquo; oppure uno dei bordi del rettangolo di gioco, vi rimbalza sopra;</li>
-<li>Se la pallina rimbalza sulla &ldquo;racchetta&rdquo;, acquista velocità;</li>
-<li>Se la pallina rimbalza sul bordo dietro la &ldquo;racchetta&rdquo;, il giocatore perde.</li>
+<li><strong>(A)</strong> L&rsquo;area da disegno è un rettangolo di dimensioni e colore a scelta dello studente, comunque adatte alla pagina web. <strong>(B)</strong> La pallina è un cerchio con coordinate iniziali x=50 ed y=50 e con diametro e colore iniziali a scelta dello studente. <strong>(C)</strong> La racchetta è un rettangolo con coordinate iniziali x=5 ed y=30, e con altezza larghezza a scelta dello studente.</li>
+<li>Il giocatore può muovere la racchetta tramite mouse, ma solo lungo l&rsquo;asse verticale.</li>
+<li>La racchetta non deve oltrepassare il bordo superiore o inferiore dell&rsquo;area da disegno.</li>
+<li>La pallina si sposta su entrambi gli assi X ed Y di 10 punti per volta.</li>
+<li><strong>(A)</strong> La pallina, arrivata al limite del bordo inferiore o superiore (y=0), inverte la direzione di spostamento sull&rsquo;asse y. <strong>(B)</strong> Quando, invece, arriva al limite del bordo destro, inverte la direzione di spostamento sull&rsquo;asse x. <strong>(C)</strong> Quando la racchetta è a contatto con la pallina, quest&rsquo;ultima assume direzione positiva lungo l&rsquo;asse x.</li>
+<li>Ogni qualvolta la pallina tocca la racchetta, la velocità della pallina incrementa.</li>
+<li>Se la pallina tocca il bordo sinistro, il giocatore perde.</li>
 </ol>
-<p>Di seguito, un immagine del gioco da realizzare.</p>
+<p>Di seguito, un&rsquo;immagine del gioco da realizzare.</p>
 <p><img src="/static/coding/web/p5js/progettoPong.png" alt="p5.js - progetto pong" title="p5.js - progetto pong"></p>
 <!-- markdownlint-disable MD009 MD036 -->
 <table>
@@ -230,7 +265,6 @@
 	</div>
 </footer>
     </div>
-<script async defer src="/js/menu.js"></script>
 <script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

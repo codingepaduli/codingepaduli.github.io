@@ -10,7 +10,7 @@
     <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
@@ -104,6 +104,15 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/interactivity/</guid>
       <description>Interazione utente</description>
+    </item>
+    
+    <item>
+      <title>03.1 - Esercizi di grafica 2D a colori</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles_exe/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles_exe/</guid>
+      <description>Esercizi di grafica 2D a colori</description>
     </item>
     
     <item>

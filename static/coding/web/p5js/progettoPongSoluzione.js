@@ -38,7 +38,13 @@ function setup() {
 }
 
 function draw() {
+
+      frameRate(48);
+
     background(50,50,50);
+
+    // frame rate
+    text(frameRate(), 30, 30);
 
     // draw the goals
     textSize(16);

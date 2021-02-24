@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tools - Coding e Paduli</title>
-    
+
     <meta name="description" content="Strumenti di lavoro e risorse per il programmatore">
         <meta property="og:title" content="Tools" />
 <meta property="og:description" content="Strumenti di lavoro e risorse per il programmatore" />
@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="Strumenti di lavoro e risorse per il programmatore"/>
 
 
-    
+
     <link rel="stylesheet" href="/css/style.css">
 
     
@@ -46,56 +46,91 @@
 		</a>
 	</div>
 		
-<nav class="menu">
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <input type="checkbox" id="my_menu">
+  <nav class="my_navbar">
+    <ul>
 
-	<ul class="menu__list">
-    <li>
-      <button class="menu__btn menu__btn--active" aria-haspopup="true" aria-expanded="true" tabindex="0" style="display: block; width: 100%; padding: 0; background: #2a2a2a; border: 0; outline: 0; color: #e22d30;">
-        <span class="menu__btn-title" tabindex="-1">Menu</span>
-      </button>
-    </li>
-		<li>
-			<a class="menu__link" href="/coding/">
-				
-				<span class="menu__text">Coding e tools</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/interesting/">
-				
-				<span class="menu__text">Interessanti</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/opensource/">
-				
-				<span class="menu__text">Open Source</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/webapp/">
-				
-				<span class="menu__text">WebApp</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
+      <li><a href="/coding/">Coding e tools</a></li>
 
+      <li><a href="/interesting/">Interessanti</a></li>
 
-<script>
-  
+      <li><a href="/opensource/">Open Source</a></li>
 
-</script>
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
 
-<style>
-  .menu__link { display: none; }
-  .menu__btn>li:hover>.menu__link { display: block; }
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+     
+    #my_menu {
+      display: none;
+    }
 
-</style>
+     
+    @media screen and (max-width: 767px) {
+       
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+      #my_menu:checked + .my_navbar ul {
+         display: flex;  
+         text-align: center;
+      }
+    }
+  </style>
 
 	</div>
 </header>
@@ -165,7 +200,6 @@
 	</div>
 </footer>
     </div>
-<script async defer src="/js/menu.js"></script>
 <script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

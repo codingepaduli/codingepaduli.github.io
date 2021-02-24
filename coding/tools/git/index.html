@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Introduzione a Git - Coding e Paduli</title>
-    
+
     <meta name="description" content="Git - Un sistema per il controllo di versione distribuito">
         <meta property="og:title" content="Introduzione a Git" />
 <meta property="og:description" content="Git - Un sistema per il controllo di versione distribuito" />
@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="Git - Un sistema per il controllo di versione distribuito"/>
 
 
-    
+
     <link rel="stylesheet" href="/css/style.css">
 
     
@@ -46,56 +46,91 @@
 		</a>
 	</div>
 		
-<nav class="menu">
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <input type="checkbox" id="my_menu">
+  <nav class="my_navbar">
+    <ul>
 
-	<ul class="menu__list">
-    <li>
-      <button class="menu__btn menu__btn--active" aria-haspopup="true" aria-expanded="true" tabindex="0" style="display: block; width: 100%; padding: 0; background: #2a2a2a; border: 0; outline: 0; color: #e22d30;">
-        <span class="menu__btn-title" tabindex="-1">Menu</span>
-      </button>
-    </li>
-		<li>
-			<a class="menu__link" href="/coding/">
-				
-				<span class="menu__text">Coding e tools</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/interesting/">
-				
-				<span class="menu__text">Interessanti</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/opensource/">
-				
-				<span class="menu__text">Open Source</span>
-				
-			</a>
-		</li>
-		<li>
-			<a class="menu__link" href="/webapp/">
-				
-				<span class="menu__text">WebApp</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
+      <li><a href="/coding/">Coding e tools</a></li>
 
+      <li><a href="/interesting/">Interessanti</a></li>
 
-<script>
-  
+      <li><a href="/opensource/">Open Source</a></li>
 
-</script>
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
 
-<style>
-  .menu__link { display: none; }
-  .menu__btn>li:hover>.menu__link { display: block; }
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+     
+    #my_menu {
+      display: none;
+    }
 
-</style>
+     
+    @media screen and (max-width: 767px) {
+       
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+      #my_menu:checked + .my_navbar ul {
+         display: flex;  
+         text-align: center;
+      }
+    }
+  </style>
 
 	</div>
 </header>
@@ -121,19 +156,62 @@
     </header><div class="content post__content clearfix">
       <h1 id="introduzione-a-git-ed-ai-sistemi-per-il-controllo-di-versione">Introduzione a Git ed ai sistemi per il controllo di versione</h1>
 <p>Git è un sistema per il controllo di versione distribuito. Inizialmente sviluppato da Linus Torvalds per gestire lo sviluppo del kernel Linux, oggi è utilizzato dalle aziende informatiche di tutto il mondo.</p>
-<p>I progetti pubblicamente esposti dagli sviluppatori sui vari servizi di controllo di versione rappresentano una sorta di &ldquo;Instagram&rdquo;, utilizzato per condividere non foto e video, ma i propri lavori: libri, personaggi 2D e 3D, animazioni, stili grafici e soprattutto software.</p>
+<p>I progetti pubblicamente esposti dagli sviluppatori sui vari servizi di controllo di versione rappresentano una sorta di &ldquo;Instagram&rdquo;, utilizzato per condividere non foto e video, ma i propri lavori: libri, personaggi 2D e 3D, animazioni, stili grafici e soprattutto il codice sorgente dei software in corso di sviluppo.</p>
+<h2 id="installazione-di-git">Installazione di git</h2>
+<p>Git è facilmente installabile attraverso i package manager. Di seguito sono elencati i comandi, relativi ai package manager più conosciuti, necessari per installare Git. Si presuppone, ovviamente, che l&rsquo;utente abbia installato il package manager a cui il comando si riferisce.</p>
+<p>Su package manager &ldquo;choco&rdquo; di Windows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">choco install git
+</code></pre></div><p>Su package manager &ldquo;apt&rdquo; di Linux (Debian based):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install git-all
+</code></pre></div><p>Su package manager &ldquo;apt&rdquo; di Linux (RedHat based):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dnf install git-all
+</code></pre></div><p>Su package manager &ldquo;homebrew&rdquo;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install git
+</code></pre></div><p>Se non si dispone di un package manager, si può effettuare il download del pacchetto di installazione dal sito <a href="https://git-scm.com/" title="Sito Git SCM">https://git-scm.com/</a>.</p>
+<p>Il processo guida l&rsquo;utente nell&rsquo;installazione e nella configurazione iniziale di git, per cui è necessario comprendere le scelte da effettuare durante questo processo.</p>
+<p>La prima schermata mostra la licenza da accettare.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step01.png" alt="git - Installazione - step 1" title="Git - Installazione - Step1"></p>
+<p>La seconda schermata chiede all&rsquo;utente di scegliere la cartella nella quale installare git. Si consiglia di accettare la cartella predefinita.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step02.png" alt="git - Installazione - step 2" title="Git - Installazione - Step2"></p>
+<p>La terza schermata chiede all&rsquo;utente di scegliere i componenti di git da installare. Si consiglia di lasciare tutti quelli già selezionati, assicurandosi di installare le voci &ldquo;git Bash&rdquo; e &ldquo;git GUI&rdquo; nel menù di explorer (il menù che appare cliccando con il tasto destro del mouse in un&rsquo;area vuota), in modo tale da accedere velocemente al terminale da qualsiasi cartella.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step03.png" alt="git - Installazione - step 3" title="Git - Installazione - Step3"></p>
+<p>La quarta schermata chiede all&rsquo;utente di scegliere la voce del menu &ldquo;Start&rdquo; di Windows nella quale creare i collegamenti. La voce consigliata &ldquo;Git&rdquo; è una buona scelta.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step04.png" alt="git - Installazione - step 4" title="Git - Installazione - Step4"></p>
+<p>La quinta schermata chiede all&rsquo;utente di scegliere l&rsquo;editor di testi da utilizzare. Si consiglia di installare Atom o Notepad++ e di selezionarlo in questo passo. L&rsquo;editor &ldquo;Vim&rdquo; non è affatto semplice da utilizzare per un utente alle prime armi, Come indicato anche dal messaggio mostrato all&rsquo;utente, si consiglia di installare e selezionare un editor moderno ed intuitivo.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step05.png" alt="git - Installazione - step 5" title="Git - Installazione - Step5"></p>
+<p>La sesta schermata chiede all&rsquo;utente di scegliere il nome iniziale del ramo di sviluppo da usare quando si crea un nuovo repository. Si anticipa che il ramo iniziale può avere nome &ldquo;main&rdquo; (usato anche da GitHub) o &ldquo;master&rdquo; (usato da GitLab, BitBucket, ecc..). In questo capitolo non sarà creato un nuovo repository, quindi si può lasciare l&rsquo;opzione predefinita, anche se si vedrà spesso utilizzato il nome &ldquo;main&rdquo;.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step06.png" alt="git - Installazione - step 6" title="Git - Installazione - Step6"></p>
+<p>La settima schermata chiede all&rsquo;utente quali percorsi aggiungere alla variabile di sistema &ldquo;PATH&rdquo; (utilizzata per cercare i programmi da eseguire). Si consiglia di lasciare la scelta predefinita &ldquo;command line and 3rd-party software&rdquo;.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step07.png" alt="git - Installazione - step 7" title="Git - Installazione - Step7"></p>
+<p>L&rsquo;ottava schermata chiede all&rsquo;utente quale componente utilizzare per validare i certificati. La libreria OpenSSL va bene per il singolo utente, mentre il componente di Windows &ldquo;Secure Channel&rdquo; è sicuramente più adatto in ambito aziendale, in contesti in cui i computer sono gestiti in maniera centralizzata dal sistemista.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step08.png" alt="git - Installazione - step 8" title="Git - Installazione - Step8"></p>
+<p>La nona schermata chiede all&rsquo;utente la codifica da utilizzare per il carattere di fine riga. Windows adotta la codifica &ldquo;Carriage Return - Line Feed&rdquo;, Linux, Unix e Mac adottano la codifica &ldquo;Line Feed&rdquo;. In generale il server che contiene il repository remoto adotta la codifica &ldquo;Line Feed&rdquo;.</p>
+<p>Agli utenti Windows è consigliata la scelta della voce &ldquo;Checkout Windows Style, commit Unix style line endings&rdquo;.</p>
+<p>Agli utenti Linux è consigliata la scelta della voce &ldquo;Checkout as-is, commit Unix style line endings&rdquo;.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step09.png" alt="git - Installazione - step 9" title="Git - Installazione - Step9"></p>
+<p>La decima schermata chiede all&rsquo;utente di scegliere il terminale da utilizzare quando si lavora a linea di comando. Si consiglia MinTTY, si può in qualsiasi caso lavorare anche con il terminale di Windows.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step10.png" alt="git - Installazione - step 10" title="Git - Installazione - Step10"></p>
+<p>L&rsquo;undicesima schermata chiede all&rsquo;utente di scegliere la strategia di fusione quando si allinea il contenuto dal repository remoto al repository locale. Si consiglia di lasciare la scelta predefinita &ldquo;fast forward on merge&rdquo;.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step11.png" alt="git - Installazione - step 11" title="Git - Installazione - Step11"></p>
+<p>La dodicesima schermata chiede all&rsquo;utente di scegliere il componente per la gestione delle credenziali. Si consiglia di lasciare la scelta predefinita &ldquo;Git Credential Manager&rdquo;.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step12.png" alt="git - Installazione - step 12" title="Git - Installazione - Step12"></p>
+<p>La tredicesima schermata chiede all&rsquo;utente di scegliere se abilitare la cache memory (per migliorare le prestazioni) e se abilitare i link simbolici. Si consiglia di abilitare la cache memory e di ignorare i link simbolici.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step13.png" alt="git - Installazione - step 13" title="Git - Installazione - Step13"></p>
+<p>La quattordicesima schermata chiede all&rsquo;utente di abilitare funzionalità sperimentali. Si consiglia di non abilitare funzionalità che possono creare instabilità e falle di sicurezza.</p>
+<p><img src="/static/coding/tools/Git-Installazione-Step14.png" alt="git - Installazione - step 14" title="Git - Installazione - Step14"></p>
+<p>A questo punto, l&rsquo;installazione è terminata.</p>
 <h2 id="concetto-di-controllo-di-versione">Concetto di controllo di versione</h2>
 <p>Per rendere l&rsquo;idea di cosa significhi &ldquo;sistema per il controllo di versione&rdquo; (dall&rsquo;inglese Version Control System), si può fare un&rsquo;analogia con un&rsquo;attività più vicina agli studenti: la realizzazione, da parte di un gruppo di studenti, di un progetto comune da consegnare ad uno o più insegnanti. Ogni studente prende in carico una parte specifica del progetto e si adopera per portarla a compimento.</p>
 <p>Il progetto può essere la scrittura di un libro, la realizzazione di disegni tecnici, lo sviluppo di un sito web e tanto altro, e può essere diviso in varie fasi, al termine delle quali si può avere, eventualmente, un confronto con gli insegnanti interessati.</p>
-<p>Ogni studente ha una propria area di lavoro, la scrivania di casa o la postazione nel laboratorio di informatica, in cui crea le varie bozze ed effettua le varie prove. Quando un lavoro è completo, ad esempio la scrittura di un capitolo del libro, la realizzazione di una pagina del sito web oppure il disegno tecnico relativo l&rsquo;arredamento di una stanza, allora questo lavoro è spostato in un quaderno ad anelli.</p>
-<p>E' importante tenere presente che il quaderno ad anelli ha una pagina di registro, in cui vengono annotate le operazioni effettuate, l&rsquo;autore e la data. Quando lo studente completa un lavoro, annota nome e data nella pagina di registro ed aggiunge l&rsquo;elenco di operazioni, indicando che ha inserito un nuovo capitolo, che ha cancellato una pagina web o che ne ha modificato un disegno tecnico.</p>
+<p>Ogni studente ha una propria area di lavoro, la scrivania di casa o la postazione nel laboratorio di informatica, sulla quale crea le varie bozze, effettua le varie prove ed un passo per volta svolge il compito giornaliero. Quando un lavoro è completo, ad esempio la scrittura di un capitolo del libro, la realizzazione di una pagina del sito web oppure il disegno tecnico relativo ad una stanza o ad un&rsquo;ala del palazzo, allora questo lavoro è spostato in un quaderno ad anelli.</p>
+<p>E' importante tenere presente che il quaderno ad anelli ha una pagina di registro, in cui vengono annotate le operazioni effettuate, l&rsquo;autore e la data. Quando lo studente completa un lavoro, annota nome e data nella pagina di registro ed aggiunge l&rsquo;operazione effettuata, l&rsquo;aggiunta del nuovo capitolo, la cancellazione della pagina web o la modifica del disegno tecnico della stanza o dell&rsquo;ala del palazzo.</p>
 <p>Le pagine cancellate non vengono effettivamente cestinate, ma vengono annotate con una &ldquo;X&rdquo; rossa in un angolo (in modo tale che siano ancora leggibili) e spostate in coda al quaderno ad anelli. Le pagine da modificare vengono prima corrette con la penna rossa, e poi, a modifica terminata, le pagine corrette con la penna rossa vengono posizionate in coda al quaderno ad anelli, infine viene effettuata una copia completa di queste pagine e questa copia viene posizionata nel punto in cui si trovavano le pagine prima della modifica.</p>
 <p><strong>Questa gestione dei lavori, tramite un quaderno ad anelli con la pagina di registro e le modifiche/cancellazioni allegate in coda, realizza un primo rudimentale sistema di controllo di versione.</strong></p>
 <p>Grazie al controllo di versione realizzato, lo studente può decidere di ripristinare un capitolo che in precedenza aveva cancellato, semplicemente recuperandolo dalla coda del quaderno ad anelli. Allo stesso modo, può vedere dal registro il tempo impiegato per scrivere un nuovo capitolo o per realizzare una nuova pagina web. Ed ancora, può vedere tutte le modifiche apportate ad un certo disegno tecnico nel corso del tempo, recuperando tutte le correzioni effettuate dalla coda del quaderno ad anelli.</p>
 <h3 id="controllo-di-versione-centralizzato">Controllo di versione centralizzato</h3>
 <p>Il quaderno ad anelli può essere condiviso tra tutti gli studenti che partecipano al progetto. Per poterlo condividere fisicamente, il quaderno ad anelli può essere lasciato nel laboratorio o nello studio di un insegnante.</p>
 <p>Questo tipo di controllo di versione realizzato con il quaderno ad anelli <strong>comune</strong> è detto <strong>centralizzato</strong>.</p>
-<p>I singoli studenti, quando completano un lavoro, aggiungendo, modificando o cancellando parti del progetto, sono tenuti a recarsi presso il laboratorio o lo studio dell&rsquo;insegnante per poter aggiornare il quaderno comune, inserendo a registro le operazioni effettuate e, contestualmente, aggiungendo i nuovi lavori, spostando in coda le pagine cancellate ed effettuando una copia di quelle modificate che poi sono spostate in coda).</p>
+<p>I singoli studenti, quando completano un lavoro, aggiungendo, modificando o cancellando parti del progetto, sono tenuti a recarsi presso il laboratorio o lo studio dell&rsquo;insegnante per poter aggiornare il quaderno comune, inserendo a registro le operazioni effettuate e, contestualmente, aggiungendo i nuovi lavori, spostando in coda le pagine cancellate ed effettuando una copia di quelle modificate (che poi sono spostate in coda).</p>
 <p>Avere un quaderno ad anelli in comune permette agli studenti di lavorare in squadra, ma presenta alcuni svantaggi tipici di un sistema centralizzato:</p>
 <ul>
 <li>Non è possibile consegnare un lavoro se il quaderno ad anelli non è &ldquo;raggiungibile&rdquo;, ad esempio perché il laboratorio o lo studio dell&rsquo;insegnante è chiuso per ferie o malattia;</li>
@@ -148,7 +226,7 @@
 <p>I singoli studenti, periodicamente, si recano nello studio, per poter <strong>sincronizzare</strong> il proprio quaderno con il quaderno comune. Con il termine sincronizzare si intende che lo studente provvede ad <strong>effettuare sul quaderno comune tutte le modifiche che ha effettuato sul proprio</strong> e, viceversa, <strong>effettua sul quaderno proprio tutte le modifiche che sono state effettuate sul quaderno comune</strong>. Una volta sincronizzati, i due quaderni sono praticamente identici.</p>
 <p>Nel dettaglio, uno studente che sincronizza il proprio quaderno con il quaderno comune, procede ad inserire sul registro del quaderno comune tutte le operazioni da lui effettuate (prendendole dal registro del quaderno personale) e, contestualmente, esegue queste operazioni sul quaderno comune, aggiungendo i nuovi lavori, spostando in coda le pagine da lui cancellate, effettuando una copia di quelle modificate che poi sposta in coda.</p>
 <p>Allo stesso modo, effettua una copia dei lavori svolti dagli altri studenti, prendendoli dal quaderno ad anelli del professore, e la mette nel proprio quaderno ad anelli personale. Anche le pagine modificate e cancellate dagli altri studenti vengono copiate ed aggiunte in coda. Ed anche le operazioni di registro vengono aggiunte al proprio registro. In questo modo, i due quaderni ad anelli sono sincronizzati, di fatto sono identici.</p>
-<p>Un secondo studente che si reca nello studio effettua le stesse operazioni e cosi via fino al completamento del lavoro.</p>
+<p>Un secondo studente che si reca nello studio effettua le stesse operazioni, cosi come un terzo ed un quarto studente, per tutta la durata del progetto.</p>
 <p>Il sistema distribuito comporta alcuni vantaggi:</p>
 <ul>
 <li>Se il quaderno ad anelli in comune non è &ldquo;raggiungibile&rdquo;, ad esempio perché il laboratorio o lo studio dell&rsquo;insegnante è chiuso per ferie o malattia, lo studente può continuare a lavorare sulla propria copia del quaderno.</li>
@@ -157,11 +235,11 @@
 <h4 id="modalità-di-lavoro-con-un-sistema-di-controllo-di-versione-distribuito">Modalità di lavoro con un sistema di controllo di versione <strong>distribuito</strong></h4>
 <p>E' possibile utilizzare molteplici modalità di lavoro per adattarsi alle diverse esigenze di sviluppo del progetto.</p>
 <p>Si può utilizzare una modalità di lavoro con <strong>team leader</strong>, che si occupa di coordinare il lavoro del proprio team e quindi riportare il lavoro del team sul quaderno ad anelli del professore.</p>
-<p>&lt;&ndash; TODO replace this image &ndash;&gt;</p>
-<p><a href="https://git-scm.com/figures/18333fig0502-tn.png">Workflow con manager d&rsquo;integrazione</a></p>
+<!-- TODO replace this image -->
+<p><img src="https://git-scm.com/figures/18333fig0502-tn.png" alt="Workflow con manager d&rsquo;integrazione"></p>
 <p>Si può utilizzare una modalità di lavoro detta &ldquo;dittatore - tenente&rdquo; in cui sono presenti diverse squadre di lavoro, ognuna con il proprio team leader (in questo caso detto &ldquo;tenente&rdquo;), ed un leader di progetto (detto &ldquo;dittatore benevolo&rdquo;) che coordina il lavoro dei vari &ldquo;tenenti&rdquo; e che si occupa di recuperare il lavoro dai quaderni ad anelli dei vari &ldquo;tenenti&rdquo; per comporre il progetto completo da condividere sul quaderno ad anelli condiviso. Tutti i team, poi, possono aggiornarsi sincronizzando i propri quaderni con questo quaderno condiviso. Questo metodo di lavoro, tra l&rsquo;altro, è quello utilizzato per lo sviluppo del kernel Linux, in cui Linus Torvalds è il dittatore benevolo.</p>
-<p>&lt;&ndash; TODO replace this image &ndash;&gt;</p>
-<p><a href="https://git-scm.com/figures/18333fig0503-tn.png">Workflow con dittatore benevolo</a></p>
+<!-- TODO replace this image -->
+<p><img src="https://git-scm.com/figures/18333fig0503-tn.png" alt="Workflow con dittatore benevolo"></p>
 <h3 id="rami-di-lavoro-conflitti-e-fusioni">Rami di lavoro, conflitti e fusioni</h3>
 <p>Sia che si lavori con un sistema di controllo di versione centralizzato che con uno distribuito, si può verificare la situazione in cui un singolo lavoro debba proseguire su due o più direzioni.</p>
 <p>Si immagini, ad esempio, che uno scrittore venga contattato da casa editoriale per la pubblicazione di un libro, partendo dalla sua bozza di romanzo, ed allo stesso tempo da un&rsquo;azienda cinematografica per realizzare una serie TV, sempre partendo dalla sua bozza di romanzo. Può accadere che la casa editoriale e l&rsquo;azienda cinematografica abbiano interessi diversi, magari indirizzando la scrittura verso due finali distinti, magari richiedendo allo scrittore avventure differenti per il protagonista.</p>
@@ -196,14 +274,14 @@
 <p>La <strong>sincronizzazione</strong>: l&rsquo;operazione di allineamento di due repository. In Git è divisa in due operazioni distinte:</p>
 <ol>
 <li>l&rsquo;operazione di <strong>push</strong> consiste nell&rsquo;inviare tutte le operazioni svolte nel repository locale in quello remoto. Nell&rsquo;analogia precedente, è rappresentata dalle azioni di <strong>effettuare sul quaderno comune tutte le modifiche che sono state effettuate sul proprio quaderno</strong>;</li>
-<li>l&rsquo;operazione di <strong>pull</strong> consiste nel recuperare tutte le operazioni svolte sul repository remoto per copiarle in quello locale. Nell&rsquo;analogia precedente, è rappresentata dalle azioni di <strong>effettuare sul quaderno proprio tutte le modifiche che sono state effettuate sul quaderno comune</strong>.</li>
+<li>l&rsquo;operazione di <strong>pull</strong> consiste nel recuperare tutte le operazioni svolte sul repository remoto per copiarle in quello locale. Nell&rsquo;analogia precedente, è rappresentata dalle azioni di <strong>effettuare sul quaderno proprio tutte le modifiche che sono state effettuate sul quaderno comune</strong> dai vari studenti.</li>
 </ol>
 </li>
 <li>
-<p>I <strong>rami di sviluppo</strong>, detti <strong>branches</strong>: E' possibile seguire più rami di sviluppo dell&rsquo;opera. Il ramo principale su Git è detto <strong>master</strong>, nei sistemi di controllo versione è chiamato <strong>trunk</strong>. Gli altri rami di sviluppo sono detti <strong>branches</strong>. L&rsquo;operazione che permette di unire due rami di sviluppo è la fusione, detta <strong>merge</strong>. Si rimanda al capitolo sui branches per una chiara spiegazione dei concetti relativi allo sviluppo su più rami.</p>
+<p>I <strong>rami di sviluppo</strong>, detti <strong>branches</strong>: E' possibile seguire più rami di sviluppo dell&rsquo;opera. Il ramo di sviluppo principale può essere chiamato <strong>trunk</strong> (come nel software SVN), <strong>master</strong> (come su GitLab) o <strong>main</strong> (come su GitHub). Gli altri rami di sviluppo sono detti <strong>branches</strong>. L&rsquo;operazione che permette di unire due rami di sviluppo è la fusione, detta <strong>merge</strong>. Si rimanda al capitolo sui branches per una chiara spiegazione dei concetti relativi allo sviluppo su più rami.</p>
 </li>
 <li>
-<p>La <strong>clonazione</strong>: l&rsquo;operazione di creazione di un repository locale a partire da un repository remoto. Nell&rsquo;analogia precedente, è rappresentata dal nuovo studente che viene aggiunto al gruppo, e che quindi compra un nuovo quaderno ad anelli nel quale poi clona il contenuto del quaderno ad anelli del professore.</p>
+<p>La <strong>clonazione</strong>: l&rsquo;operazione di creazione di un repository locale a partire da un repository remoto. Nell&rsquo;analogia precedente, è rappresentata dal nuovo studente che viene aggiunto al gruppo, e che quindi compra un nuovo quaderno ad anelli nel quale poi clona (copia) il contenuto del quaderno ad anelli del professore.</p>
 </li>
 </ul>
 <h2 id="gestione-repository">Gestione repository</h2>
@@ -211,13 +289,14 @@
 <p>Per la creazione di un repository remoto. ci si può registrare su uno dei vari servizi online. Tra i più noti ci sono GitHub, GitLab, Gitea e BitBucket.</p>
 <p>Una volta registrati e creato il proprio repository, si può procedere alla configurazione di Git, alla clonazione del repository e quindi alla condivisione con altri utenti del proprio lavoro presente sul repository.</p>
 <h3 id="creazione-repository-su-github">Creazione repository su GitHub</h3>
-<p>GitHub permette la creazione di un repository remoto attraverso un&rsquo;interfaccia grafica, in cui inserire il nome, la descrizione e la visibilità.</p>
-<p><img src="/static/coding/tools/GitHub-Repository-New.png" alt="GitHub - Nuovo Repository" title="GitHub - Nuovo Repository"></p>
-<p>Creato il repository, viene fornito un URL per l&rsquo;accesso e la clonazione dello stesso, come in figura:</p>
-<p><img src="/static/coding/tools/GitHub-Repository-URL.png" alt="GitHub - URL del Repository" title="GitHub - URL del Repository"></p>
-<p>L&rsquo;indirizzo completo del repository su GitHub, non completamente riportato nell&rsquo;immagine, è il seguente:</p>
+<p>GitHub permette la creazione di un repository remoto attraverso un&rsquo;interfaccia grafica, in cui inserire il nome, la descrizione e la visibilità del repository. Si può anche scegliere di creare un file <code>README.md</code> iniziale e di scegliere la licenza da adottare per il progetto.</p>
+<p><img src="/static/coding/tools/GitHub-Repository-New2.png" alt="GitHub - Nuovo Repository" title="GitHub - Nuovo Repository"></p>
+<p>La pagina web mostra il repository appena creato, contenente il file <code>README.md</code>. In particolare, si nota il nome del ramo di sviluppo principale <strong>main</strong> e l&rsquo;indicazione <strong>1 branch</strong> che indica un solo ramo di sviluppo presente (il branch &ldquo;main&rdquo;):</p>
+<p><img src="/static/coding/tools/GitHub-Repository-Page.png" alt="GitHub - URL del Repository" title="GitHub - Pagina del Repository"></p>
+<p>L&rsquo;indirizzo completo del repository su GitHub è visibile cliccando sul pulsante verde &ldquo;code&rdquo; ed è il seguente:</p>
 <!-- markdown-link-check-disable-next-line -->
-<p><a href="https://github.com/codingepaduli/gitmergetutorial.git" title="GitHub - URL completo del Repository">https://github.com/codingepaduli/gitmergetutorial.git</a></p>
+<p><a href="https://github.com/progetto-git/progetto-git.github.io.git" title="GitHub - URL completo del Repository">https://github.com/progetto-git/progetto-git.github.io.git</a></p>
+<p><img src="/static/coding/tools/GitHub-Repository-URL2.png" alt="GitHub - URL del Repository" title="GitHub - Pagina del Repository"></p>
 <h3 id="creazione-repository-su-gitlab">Creazione repository su GitLab</h3>
 <p>GitLab permette la creazione di un repository remoto attraverso un&rsquo;interfaccia grafica, in cui inserire il nome, la descrizione e la visibilità.</p>
 <p><img src="/static/coding/tools/GitLab-Repository-New.png" alt="GitLab - Nuovo Repository" title="GitLab - Nuovo Repository"></p>
@@ -228,7 +307,7 @@
 <p><a href="https://gitlab.com/codingepaduli/gitmergetutorial.git" title="GitLab - URL completo del Repository">https://gitlab.com/codingepaduli/gitmergetutorial.git</a></p>
 <h3 id="clonazione-repository">Clonazione repository</h3>
 <p>Una volta creato il repository remoto, bisogna prendere nota dell&rsquo;indirizzo web dello stesso per poi procedere alla clonazione, attraverso il seguente comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/codingepaduli/codingepaduli.git
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/progetto-git/progetto-git.github.io.git
 </code></pre></div><p>Si può verificare che il repository locale ha un riferimento al repository remoto, accedendo alla cartella creata ed utilizzando, al suo interno, il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote -v
 </code></pre></div><h3 id="prima-configurazione-del-repository">Prima configurazione del repository</h3>
@@ -247,7 +326,7 @@ git config --local --list
 </code></pre></div><p>Per configurare globalmente l&rsquo;identità da utilizzare nei propri repository, si utilizzano i seguenti comandi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.name <span style="color:#e6db74">&#34;User&#34;</span>
 git config --global user.email <span style="color:#e6db74">&#34;user@user.com&#34;</span>
-</code></pre></div><p>Altra operazione generalmente consigliata è l&rsquo;impostazione del carattere di fine riga, dato che su Linux e Mac il carattere di fine riga (INVIO) è LF (linefeed) mentre su Windows il carattere di fine riga (INVIO) è CR + LF (carriage return + linefeed).</p>
+</code></pre></div><p>Altra operazione generalmente consigliata è l&rsquo;impostazione del carattere di fine riga, dato che su Linux e Mac il carattere di fine riga (INVIO) è LF (line feed) mentre su Windows il carattere di fine riga (INVIO) è CR + LF (carriage return + line feed).</p>
 <p>Questa differenza di caratteri porta ad avere confusione quando un file è modificato sia da utenti Mac/Linux sia da utenti Windows. Molti editors su Windows sostituiscono i caratteri di fine riga LF con i caratteri CR + LF, oppure lasciano gli LF ma inseriscono CR + LF quando si preme invio.</p>
 <p>Una macchina windows deve quindi essere configurata per la conversione automatica da LF a CR + LF e viceversa:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.autocrlf true
@@ -255,6 +334,8 @@ git config --global user.email <span style="color:#e6db74">&#34;user@user.com&#3
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.autocrlf input
 </code></pre></div><p>Nella configurazione è utile anche impostare l&rsquo;editor di riferimento:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.editor <span style="color:#e6db74">&#34;atom --wait&#34;</span>
+</code></pre></div><p>Infine, è consigliato non ignorare la differenza tra caratteri minuscoli e maiuscoli nei nomi dei file, con il comando</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.ignorecase false
 </code></pre></div><h3 id="staging-area-e-commit">Staging area e commit</h3>
 <p>Per creare una nuova versione del repository locale e poi sincronizzarla con il repository remoto, si può partire dalla creazione di tre file, <code>file1.txt</code>, <code>file2.txt</code> e <code>file3.txt</code>, in modo da seguire le varie operazioni.</p>
 <p>Creati i  tre file, si può aggiungere il primo file all&rsquo;area di lavoro, chiamata <strong>staging area</strong> o <strong>caching area</strong>, utilizzando il comando:</p>
@@ -262,8 +343,8 @@ git config --global user.email <span style="color:#e6db74">&#34;user@user.com&#3
 </code></pre></div><p>Per visualizzare ora lo stato dei file, si utilizza il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
 </code></pre></div><p>L&rsquo;output è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Sul branch master
-Your branch is up to date with &#39;origin/master&#39;.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Sul branch main
+Your branch is up to date with &#39;origin/main&#39;.
 
 Changes to be committed:
   (use &#34;git reset HEAD &lt;file&gt;...&#34; to unstage)
@@ -278,10 +359,9 @@ Untracked files:
 </code></pre></div><p>Si nota che il file <code>file1.txt</code> risulta pronto per il commit (&ldquo;to be committed&rdquo;), mentre i file <code>file2.txt</code> e <code>file3.txt</code> risultano tra i file non tracciati (&ldquo;untracked&rdquo;).</p>
 <p>Effettuando ulteriori modifiche al file <code>file1.txt</code>, questo risulta modificato, come si nota visualizzando lo stato dei file attraverso il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
-</code></pre></div><p>tenendo presente che per ora si sta facendo riferimento al  semplicemente
-L&rsquo;output è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Sul branch master
-Your branch is up to date with &#39;origin/master&#39;.
+</code></pre></div><p>L&rsquo;output è il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Sul branch main
+Your branch is up to date with &#39;origin/main&#39;.
 
 Changes not staged for commit:
   (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
@@ -312,10 +392,10 @@ git commit -m <span style="color:#e6db74">&#34;Primo commit&#34;</span>
 <h3 id="sincronizzazione">Sincronizzazione</h3>
 <p>Effettuati i vari commit sul repository locale, ci si trova nella situazione in cui il repository locale si trova in una versione più avanzata rispetto al repository remoto (che è stato clonato).</p>
 <p>Per sincronizzare il lavoro (tutti i commit sul repository locale) con il repository remoto, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin master
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin main
 </code></pre></div><p>L&rsquo;operazione di push invia tutti i commit (che sono stati eseguiti sul repository locale) al repository remoto.</p>
 <p>Per effettuare l&rsquo;operazione inversa, cioè per ricevere nel repository locale tutti i commit dal repository remoto (eseguiti dallo stesso utente attraverso computer differenti o eseguiti da altri utenti),  si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git pull origin master
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git pull origin main
 </code></pre></div><h3 id="pulizia-della-staging-area">Pulizia della staging area</h3>
 <p>Può capitare di aggiungere per errore un file alla staging area, per cui lo si vuole togliere, senza però cancellarlo e perdere il contenuto, ma lasciandolo intatto nella cartella in cui si trova. Il comando da utilizzare è:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rm --cached file
@@ -343,26 +423,26 @@ git commit -m <span style="color:#e6db74">&#34;Primo commit&#34;</span>
 <h3 id="lavorare-con-più-origini-remote">Lavorare con più origini remote</h3>
 <p>Quando si effettua la clonazione di un repository, Git crea un riferimento a questo repository remoto, chiamato <strong>origin</strong>:</p>
 <p>E' però possibile utilizzate più repository remoti, semplicemente aggiungendo un riferimento remoto, di seguito chiamato <strong>gitlab</strong>, al repository locale:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add gitlab https://gitlab.com/codingepaduli/codingepaduli.git
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add gitlab https://gitlab.com/progetto-git/progetto-git.git
 </code></pre></div><p>Per visualizzare i repository remoti, si può utilizzare il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote -v
 </code></pre></div><p>L&rsquo;output mostrato è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">gitlab https://gitlab.com/codingepaduli/codingepaduli.git (fetch)
-gitlab https://gitlab.com/codingepaduli/codingepaduli.git (push)
-origin https://github.com/codingepaduli/codingepaduli.git (fetch)
-origin https://github.com/codingepaduli/codingepaduli.git (push)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">gitlab https://gitlab.com/progetto-git/progetto-git.git (fetch)
+gitlab https://gitlab.com/progetto-git/progetto-git.git (push)
+origin https://github.com/progetto-git/progetto-git.github.io.git (fetch)
+origin https://github.com/progetto-git/progetto-git.github.io.git (push)
 </code></pre></div><p>Come si nota, i riferimenti remoti per le operazioni di invio e ricezione dati (&ldquo;push&rdquo; e &ldquo;fetch&rdquo;) possono essere differenti.</p>
-<p>Per sincronizzare il ramo di sviluppo principale <strong>master</strong> del repository remoto con il repository locale, si effettuano le classiche operazioni di <strong>push</strong> e <strong>pull</strong>, facendo però attenzione ad indicare l&rsquo;origine <strong>gitlab</strong> appena creata.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push gitlab master
-git pull gitlab master
-</code></pre></div><p>Si nota che in questo caso viene sincronizzato il ramo di sviluppo principale <strong>master</strong>.</p>
+<p>Per sincronizzare il ramo di sviluppo principale <strong>main</strong> del repository remoto con il repository locale, si effettuano le classiche operazioni di <strong>push</strong> e <strong>pull</strong>, facendo però attenzione ad indicare l&rsquo;origine <strong>gitlab</strong> appena creata.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push gitlab main
+git pull gitlab main
+</code></pre></div><p>Si nota che in questo caso viene sincronizzato il ramo di sviluppo principale <strong>main</strong>.</p>
 <h2 id="branches">Branches</h2>
 <h3 id="modalità-di-lavoro-con-i-branches">Modalità di lavoro con i Branches</h3>
-<p>Il repository principale ha un ramo di sviluppo principale chiamato <strong>master</strong>, ma sul repository possono essere creati anche altri rami di sviluppo chiamati <strong>branches</strong>, che costituiscono la modalità comune di lavoro con Git.</p>
+<p>Il repository principale ha un ramo di sviluppo principale chiamato <strong>main</strong> o <strong>master</strong>, ma sul repository possono essere creati anche altri rami di sviluppo chiamati <strong>branches</strong>, che costituiscono la modalità comune di lavoro con Git.</p>
 <p>Tipicamente sul repository vengono creati diversi branches (rami di sviluppo) per le diverse funzionalità da sviluppare, e su ogni singolo branch (ramo) viene sviluppata una singola funzionalità da parte di uno o più sviluppatori del team.</p>
 <p>Gli sviluppatori che lavorano su un singolo branch creano quindi la prima versione della funzionalità da sviluppare effettuando il primo commit, poi gli sviluppi proseguono e viene creata la seconda versione con un secondo commit, poi la terza versione a cui corrisponde un terzo commit, e cosi via.</p>
-<p>Quando la funzionalità viene completata, questo singolo ramo di sviluppo può essere fuso con il ramo di sviluppo principale (il master).</p>
-<p>Sul ramo principale vengono quindi fusi tutti i diversi rami di sviluppo e quindi di volta in volta le varie funzionalità vengono aggiunte al ramo di sviluppo principale <strong>master</strong>.</p>
+<p>Quando la funzionalità viene completata, questo singolo ramo di sviluppo può essere fuso con il ramo di sviluppo principale.</p>
+<p>Sul ramo principale vengono quindi fusi tutti i diversi rami di sviluppo e quindi di volta in volta le varie funzionalità vengono aggiunte al ramo di sviluppo principale <strong>main</strong>.</p>
 <p>Volendo fare un&rsquo;analogia, si può immaginare la scrittura di una trilogia di libri, e quindi ogni singolo libro viene scritto in un ramo separato. Il ramo principale alla fine conterrà tutti e tre i volumi.</p>
 <p>Volendo fare una seconda analogia, si può immaginare che in uno dei libri della trilogia i personaggi principali si separino, vivendo storie indipendenti, e quindi nel ramo di sviluppo del singolo libro si creano diversi rami in cui si scrivono le storie dei diversi personaggi. Una volta che la storia di un personaggio è completa, il ramo di sviluppo del singolo personaggio viene fuso con il ramo di sviluppo del libro della trilogia.</p>
 <h3 id="creazione-e-gestione-dei-branches">Creazione e gestione dei branches</h3>
@@ -395,9 +475,9 @@ git commit -m <span style="color:#e6db74">&#34;aggiunto file.txt&#34;</span>
  content/coding/tools/Git.md                          |  84 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
  coding/tools/Git.md | Bin 39000 -&gt; 39569 bytes
  2 files changed, 80 insertions(+), 4 deletions(-)
-</code></pre></div><p>E' possibile verificare che i 2 branch sono stati fusi in un&rsquo;unico branch, attraverso il comando:</p>
+</code></pre></div><p>E' possibile verificare che i 2 branch sono stati fusi in un unico branch, attraverso il comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#34;%h %s&#34;</span> --graph
-</code></pre></div><p>L&rsquo;output indica in forma grafica che i rami di sviluppo sono stati fusi e che effettivamente confluiscono in un&rsquo;unico ramo:</p>
+</code></pre></div><p>L&rsquo;output indica in forma grafica che i rami di sviluppo sono stati fusi e che effettivamente confluiscono in un unico ramo:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">*   b21a312 Merge pull request #1
 |\
 | * ae55ada Updated posts about tools
@@ -550,7 +630,6 @@ git commit -m <span style="color:#e6db74">&#34;aggiunto file.txt&#34;</span>
 	</div>
 </footer>
     </div>
-<script async defer src="/js/menu.js"></script>
 <script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
