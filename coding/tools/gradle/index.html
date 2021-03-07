@@ -196,11 +196,15 @@ Enter selection (default: JUnit 4) [1..4] 1
 Project name (default: gradle-example): example
 Source package (default: gradle-example): example
 </code></pre></div><h3 id="gradle-wrapper">Gradle wrapper</h3>
-<p>La creazione di un progetto basato su Gradle comporta anche la creazione di un &ldquo;wrapper&rdquo; di Gradle.</p>
-<p>Questo &ldquo;wrapper&rdquo; permette a tutti gli utenti che non hanno installato Gradle di poter comunque eseguire i task di Gradle, dalla compilazione all&rsquo;esecuzione, poichè scarica una versione di Gradle nella macchina dell&rsquo;utente.</p>
-<p>Il wrapper si può eseguire attraverso il comando <code>gradlew</code> per Linux e <code>gradlew.bat</code> per Windows.</p>
-<p>Se presente il file <code>gradlew</code> per Linux o <code>gradlew.bat</code> per Windows, allora è buona norma utilizzare il wrapper per eseguire tutti i task.</p>
-<h3 id="primi-task">Primi task</h3>
+<p>La creazione di un progetto basato su Gradle comporta anche la creazione di un &ldquo;wrapper&rdquo; di Gradle, salvato nel pacchetto java <code>gradle/wrapper/gradle-wrapper.jar</code> e di un corrispondente file di proprietà, salvato nel file <code>gradle/wrapper/gradle-wrapper.properties</code>, che tra le varie opzioni indica la versione di Gradle utilizzata.</p>
+<p>Tutti gli utenti che non hanno installato Gradle possono, quindi, utilizzare il &ldquo;wrapper&rdquo; per eseguire i task del progetto, usando il comando <code>gradlew</code> (per Linux) o <code>gradlew.bat</code> (per Windows).</p>
+<p>L&rsquo;utente può in qualsiasi momento aggiornare la versione di Gradle da utilizzare, seguendo una delle due strade:</p>
+<ul>
+<li>aggiornare manualmente la voce <code>distributionUrl</code> presente nel file <code>gradle/wrapper/gradle-wrapper.properties</code>;</li>
+<li>ricreare il &ldquo;wrapper&rdquo; presente nel progetto, specificando la versione di Gradle desiderata, utilizzando il comando:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./gradlew wrapper --gradle-version 6.8.3
+</code></pre></div><h3 id="primi-task">Primi task</h3>
 <p>Creato il progetto, è possibile eseguire, nella cartella principale di progetto, i seguenti task (utilizzando il wrapper di gradle):</p>
 <ul>
 <li>Task di pulizia (cancella la cartella <code>build</code>):</li>
@@ -534,7 +538,7 @@ tasks - Displays the tasks runnable from root project &#39;example&#39;.
 applicationName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;my-app&#39;</span>
 
 application <span style="color:#f92672">{</span>
-    mainClassName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;org.gradle.sample.Main&#39;</span>
+    mainClass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;org.gradle.sample.Main&#39;</span>
     applicationDefaultJvmArgs <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;-Dlanguage=en&#39;</span><span style="color:#f92672">]</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Le configurazioni di dipendenza di questo plugin sono ereditate dal plugin <code>java</code>.</p>
@@ -654,7 +658,7 @@ jar <span style="color:#f92672">{</span>
 
 application <span style="color:#f92672">{</span>
     <span style="color:#75715e">// Define the main class for the application.
-</span><span style="color:#75715e"></span>    mainClassName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;j2se.main.MainClass&#39;</span>
+</span><span style="color:#75715e"></span>    mainClass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;j2se.main.MainClass&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Si nota che è stato aggiunto sia il plugin <code>application</code> per la gestione e l&rsquo;esecuzione di un progetto Java, sia il plugin <code>project-report</code> per la creazione dei report di progetto, sia il plugin <code>eclipse</code> per gestire il progetto con Eclipse IDE.</p>
 <p>E stata definita la lista (quasi completa) di task che si desidera vengano lanciati di default, sono state configurate delle voci da aggiungere al file <code>Manifest.mf</code> del pacchetto &ldquo;jar&rdquo; ed è indicata la classe Java che contiene il metodo &ldquo;main&rdquo; da eseguire per lanciare l&rsquo;applicazione.</p>
