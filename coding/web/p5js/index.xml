@@ -8,7 +8,7 @@
     <language>it-IT</language>
     <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/coding/web/p5js/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>05 - Accesso ai pixel di un&#39;immagine con la libreria grafica p5.js</title>
+      <title>05 - Accesso ai pixel di un&#39;immagine</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -86,15 +86,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/basics_exe/</guid>
       <description>Esercizi di grafica 2D</description>
-    </item>
-    
-    <item>
-      <title>02 - Area da disegno e primitive per la grafica 2D</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/basics/</link>
-      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/basics/</guid>
-      <description>Area da disegno e primitive per la grafica 2D</description>
     </item>
     
     <item>

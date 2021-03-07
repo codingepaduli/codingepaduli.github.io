@@ -10,7 +10,7 @@
     <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
@@ -19,7 +19,7 @@
     <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>05 - Accesso ai pixel di un&#39;immagine con la libreria grafica p5.js</title>
+      <title>05 - Accesso ai pixel di un&#39;immagine</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -131,15 +131,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/basics_exe/</guid>
       <description>Esercizi di grafica 2D</description>
-    </item>
-    
-    <item>
-      <title>02 - Area da disegno e primitive per la grafica 2D</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/basics/</link>
-      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/basics/</guid>
-      <description>Area da disegno e primitive per la grafica 2D</description>
     </item>
     
     <item>

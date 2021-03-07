@@ -224,6 +224,29 @@
 
     <span style="color:#75715e">&lt;!-- Icon in the highest resolution --&gt;</span>
     &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icon&#34;</span> <span style="color:#a6e22e">sizes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;192x192&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/path/to/icon.png&#34;</span>&gt;
+</code></pre></div><h3 id="icone-del-sito-web">Icone del sito web</h3>
+<p>Possono essere necessarie anche più di 30 icone, in formati e risoluzioni differenti, per poter mostrare correttamente l&rsquo;icona del sito su tutti i dispositivi. Tablet, smartphone, computer o smart-TV scelgono l&rsquo;icona da mostrare all&rsquo;utente in base alla risoluzione ed alle caratteristiche dello schermo.</p>
+<p>Piuttosto che creare un così vasto numero di icone, in questi paragrafi sarà mostrato un approccio minimale, in cui solo le icone indispensabili saranno incluse nella pagina web.</p>
+<p>Per motivi storici, l&rsquo;icona è memorizzata nel file <code>favicon.ico</code> e si deve trovare all&rsquo;indirizzo <code>/favicon.ico</code>.</p>
+<p>Le icone moderne sono, invece, in formato <strong>SVG</strong>, un formato vettoriale che permette di ingrandirle o ridurle senza perdere qualità.</p>
+<p>Il formato <strong>SVG</strong> non è supportato da tutti i dispositivi, quindi alcune icone sono ancora in formato <code>PNG</code>.</p>
+<p>Alcune icone possono essere descritte nel file <code>manifest.webmanifest</code>, un file che configura il sito web come una <strong>PWA</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- 32×32 px for legacy browsers --&gt;</span>
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/favicon.ico&#34;</span>&gt;
+
+<span style="color:#75715e">&lt;!-- Icone standard --&gt;</span>
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icona.svg&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/svg+xml&#34;</span>&gt;
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;manifest&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;manifest.webmanifest&#34;</span>&gt;
+
+<span style="color:#75715e">&lt;!-- Icona per dispositivi Apple 180×180 px --&gt;</span>
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;apple-touch-icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;apple-touch-icon.png&#34;</span>&gt;
+</code></pre></div><p>Il file <code>manifest.webmanifest</code> descrive le icone da utilizzare attraverso le seguenti proprietà:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#e6db74">&#34;icons&#34;</span><span style="color:#f92672">:</span> [
+    { <span style="color:#e6db74">&#34;src&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/192.png&#34;</span>, <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;image/png&#34;</span>, <span style="color:#e6db74">&#34;sizes&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;192x192&#34;</span> },
+    { <span style="color:#e6db74">&#34;src&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/512.png&#34;</span>, <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;image/png&#34;</span>, <span style="color:#e6db74">&#34;sizes&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;512x512&#34;</span> }
+  ]
+}
 </code></pre></div>
     </div>
       <hr>
