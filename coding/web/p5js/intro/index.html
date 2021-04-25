@@ -261,9 +261,7 @@
 &lt;<span style="color:#f92672">p</span>&gt;altro paragrafo&lt;/<span style="color:#f92672">p</span>&gt;
 </code></pre></div><p>Per spostare l&rsquo;area da disegno all&rsquo;interno del paragrafo, si utilizza la funzione <code>parent</code> con argomento <code>area</code> (identificativo del paragrafo), come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">parent</span>(<span style="color:#e6db74">&#39;area&#39;</span>);
-</code></pre></div><h3 id="dimensioni-memorizzate-dellarea-da-disegno">Dimensioni memorizzate dell&rsquo;area da disegno</h3>
-<p>Una volta creata l&rsquo;area da disegno attraverso la funzione <code>createCanvas</code>, la larghezza e l&rsquo;altezza dell&rsquo;area da disegno vengono memorizzate rispettivamente nelle variabili <code>width</code> ed <code>height</code>, in modo da essere sempre disponibili.</p>
-<h2 id="sistema-di-coordinate">Sistema di coordinate</h2>
+</code></pre></div><h2 id="sistema-di-coordinate">Sistema di coordinate</h2>
 <p>Il sistema di coordinate <strong>cartesiane</strong>, tipicamente usato da librerie di grafica computerizzata 2D, è caratterizzato dagli assi X,Y che si intersecano nell&rsquo;angolo in alto a sinistra dell&rsquo;area da disegno'. In tale estremità si trova, quindi, l&rsquo;origine degli assi, rappresentata dal punto di coordinate (0,0).</p>
 <p>La particolarità di questo sistema di coordinate è l&rsquo;asse Y invertito, cioè i valori positivi sono in basso ed i negativi in alto. Solo i punti che hanno entrambe le coordinate (x, y) con valore positivo saranno disegnati nell&rsquo;area da disegno.</p>
 <p>Di seguito si mostrano le differenze tra il classico sistema cartesiano e la variante utilizzata in p5.js:</p>
@@ -455,29 +453,6 @@ Parameters:
 <h2 id="esempio-completo">Esempio completo</h2>
 <p>Di seguito, si visualizza un esempio completo delle figure realizzate mediante il codice riportato nei vari esempi mostrati:</p>
 <p><img src="/static/coding/web/p5js/basics.png" alt="p5.js - Basi della grafica 2D" title="p5.js - Basi della grafica 2D"></p>
-<h2 id="prima-animazione">Prima animazione</h2>
-<p>Supponendo di voler far &ldquo;muovere&rdquo; il cerchio verso destra nell&rsquo;area di lavoro, si necessita di una variabile che permetta, in primis, di indicare la posizione iniziale del cerchio nell&rsquo;area di lavoro, e poi, che permetta di modificarla, incrementandola di volta in volta.</p>
-<p>La dichiarazione della variabile può avvenire prima delle due funzioni <code>setup</code> e <code>draw</code>, mediante la classica dichiarazione:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
-</code></pre></div><p>Per realizzare il movimento, è necessario incrementare di un&rsquo;unità questa variabile, mediante l&rsquo;istruzione:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
-</code></pre></div><p>L&rsquo;esempio completo è di seguito riportato:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-}
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
-  <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-}
-</code></pre></div><p>E' interessante notare che se l&rsquo;istruzione di incremento <code>x = x + 1</code> la si pone nella funzione <code>setup</code> invece che nella funzione <code>draw</code>, questo incremento viene eseguito una sola volta, quindi il cerchio resta immobile.</p>
-<p>Altra cosa interessante da notare, è che se si cancella l&rsquo;istruzione per disegnare lo sfondo (<code>background</code>), allora la vecchia posizione del cerchio non sarà &ldquo;pulita&rdquo; e nell&rsquo;area da disegno rimarrà una &ldquo;scia&rdquo; dovuta a tutte le precedenti posizioni occupate dal cerchio, come nella seguente immagine;</p>
-<p><img src="/static/coding/web/p5js/Example02.png" alt="p5.js - Esempio dell&rsquo;animazione senza il disegno dello sfondo" title="p5.js - Esempio dell'animazione senza il disegno dello sfondo"></p>
-<p>In ambiente web è visualizzabile quest&rsquo;ultimo esempio di animazione.</p>
-<div id="example02"></div>
 
     </div>
       <hr>

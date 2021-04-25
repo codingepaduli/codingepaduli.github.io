@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>04 - Interattività - Coding e Paduli</title>
+    <title>04 - Interattività ed animazioni - Coding e Paduli</title>
 
-    <meta name="description" content="Interazione utente">
-        <meta property="og:title" content="04 - Interattività" />
-<meta property="og:description" content="Interazione utente" />
+    <meta name="description" content="Interazione con l&#39;utente attraverso le periferiche di input ed output ed animazioni realizzate usando le variabili">
+        <meta property="og:title" content="04 - Interattività ed animazioni" />
+<meta property="og:description" content="Interazione con l&#39;utente attraverso le periferiche di input ed output ed animazioni realizzate usando le variabili" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/interactivity/" />
 <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
@@ -18,8 +18,8 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="04 - Interattività"/>
-<meta name="twitter:description" content="Interazione utente"/>
+<meta name="twitter:title" content="04 - Interattività ed animazioni"/>
+<meta name="twitter:description" content="Interazione con l&#39;utente attraverso le periferiche di input ed output ed animazioni realizzate usando le variabili"/>
 
 
 
@@ -157,46 +157,123 @@
 	</span>
 </div></div>
     </header><div class="content post__content clearfix">
-      <h1 id="interattività">Interattività</h1>
-<p>L&rsquo;utente può interagire con l&rsquo;area da disegno attraverso tastiera, mouse e tutti gli altri dispositivi di input. L&rsquo;interazione con audio, webcam e dispositivi esterni, come il micro-controllore Arduino e la scheda Raspberry, sono garantiti da opportune estensioni che estendono le funzionalità di base.</p>
-<p>Per il programmatore è estremamente semplice scrivere programmi che interagiscano con questi dispositivi di input ed output, ad esempio può programmare l&rsquo;area da disegno perché si adatti alle dimensioni del display, alla frequenza di disegno, alla rotazione dello schermo ed al funzionamento a tutto schermo.</p>
-<p>Di seguito vengono descritte le principali funzionalità di base che permettono di sviluppare l&rsquo;interazione con l&rsquo;utente, rimandando alla documentazione ufficiale gli approfondimenti dei concetti avanzati.</p>
+      <h1 id="interattività-ed-animazioni">Interattività ed animazioni</h1>
+<p>L&rsquo;utente può interagire con l&rsquo;area da disegno utilizzando i classici dispositivi di input, come tastiera, mouse e webcam. L&rsquo;output è inviato allo schermo ed ai dispositivi audio. E' anche possibile comunicare con dispositivi esterni, quali il micro-controllore Arduino o la scheda integrata Raspberry.</p>
+<p>Alcune funzionalità. ad esempio la gestione delle dimensioni dello schermo, della frequenza di disegno o della rotazione dello schermo, sono implementate dalla libreria stessa, mentre altre funzionalità, come la gestione dei suoni o la comunicazione con dispositivi esterni, sono demandate ad opportune librerie esterne che estendono le funzionalità di base.</p>
+<p>Il continuo ridisegnare l&rsquo;area da disegno, gestito dalla libreria grafica, unito alla possibilità di modificare lo stato dei vari oggetti grafici, come la posizione ed il colore, permette lo sviluppo di animazioni con una semplicità notevole.</p>
+<p>L&rsquo;unione delle caratteristiche precedentemente elencate permette al programmatore di poter sfruttare tutta la propria creatività e fantasia per realizzare applicazioni multimediali ed interattive con una notevole semplicità.</p>
+<p>Di seguito vengono descritte le principali funzionalità di base che permettono di gestire lo stato e interagire con i principali dispositivi, rimandando alla documentazione ufficiale gli approfondimenti dei concetti avanzati.</p>
+<h2 id="aggiornamento-area-da-disegno">Aggiornamento area da disegno</h2>
+<p>Quando il programmatore definisce le dimensioni dell&rsquo;area da disegno, utilizzando la funzione <code>createCanvas</code>, la larghezza e l&rsquo;altezza dell&rsquo;area da disegno vengono memorizzate automaticamente nelle rispettive variabili <code>width</code> ed <code>height</code>. Queste variabili sono dichiarate automaticamente, quindi non necessitano di una dichiarazione da parte del programmatore, e sono continuamente aggiornate ad ogni cambiamento delle dimensioni dell&rsquo;area.</p>
+<p>L&rsquo;area da disegno viene ridisegnata con una frequenza misurata in fotogrammi per secondo (in inglese frame per second), il cui acronimo è noto ai video-giocatori con la sigla &ldquo;fps&rdquo;); Una frequenza elevata permette una visione più fluida dell&rsquo;animazione generata o del filmato riprodotto, ma richiede una maggiore potenza di elaborazione.</p>
+<p>Il primo fotogramma dell&rsquo;area da disegno è disegnato eseguendo le istruzioni contenute nella funzione <code>setup</code>, che è eseguita una sola volta. Le istruzioni contenute nella funzione <code>draw</code> sono eseguite ciclicamente per generare i fotogrammi successivi, in modo da ridisegnare continuamente l&rsquo;area di lavoro. Per ottenere la frequenza di ridisegno, si può utilizzare la funzione <code>frameRate()</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">freq</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">frameRate</span>();
+</code></pre></div><p>La stessa funzione permette anche di impostare la frequenza desiderata, indicandola come argomento (opzionale). Ad esempio, per impostare la frequenza a 60fps, si utilizza:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">frameRate</span>(<span style="color:#ae81ff">60</span>);
+</code></pre></div><p>La libreria grafica dichiara automaticamente due variabili che forniscono informazioni sullo stato di aggiornamento dell&rsquo;area da disegno:</p>
+<ul>
+<li>la variabile <code>frameCount</code> è un contatore nel quale viene salvato il numero di fotogrammi disegnati dall&rsquo;inizio dell&rsquo;animazione;</li>
+<li>la variabile <code>deltaTime</code> contiene la differenza in millisecondi del tempo trascorso tra l&rsquo;inizio del fotogramma precedente e l&rsquo;inizio del fotogramma corrente.</li>
+</ul>
+<h2 id="animazioni">Animazioni</h2>
+<p>Le animazioni sono basate principalmente sul cambiamento dello stato di uno o più oggetti grafici.</p>
+<p>Per realizzare il movimento di una figura basta spostare, nel corso del tempo, la posizione della figura e la si vedrà muovere. Per realizzare un passaggio dal giorno alla notte basta cambiare, nel corso del tempo, il colore del cielo da azzurro a blu notte e si vedrà calare la notte.</p>
+<p>Per poter effettuare un cambiamento di stato di un oggetto, è necessario memorizzare lo stato dell&rsquo;oggetto in una variabile. Se un oggetto deve muoversi solo sull&rsquo;asse X, è necessario memorizzare in una variabile la posizione X dell&rsquo;oggetto stesso. Se, invece, l&rsquo;oggetto deve muoversi su entrambi gli assi X ed Y, è necessario memorizzare in una variabile la posizione X, in una seconda variabile la posizione Y. Se è il colore che deve cambiare, le componenti del colore devono essere memorizzate ognuna in una variabile (nel modello RGB la quantità di rosso deve essere memorizzata in una variabile, la quantità di verde in una seconda variabile ed, infine, la quantità di blu in una terza variabile).</p>
+<p>Una volta memorizzato lo stato dell&rsquo;oggetto in una o più variabili, si può realizzare il movimento cambiando il valore di queste variabili.</p>
+<h3 id="esempio-di-movimento-di-un-cerchio">Esempio di movimento di un cerchio</h3>
+<p>Partiamo dal disegno di un cerchio, realizzato attraverso il codice seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</code></pre></div><p>Per far muovere il cerchio verso destra (quindi lungo l&rsquo;asse X), è necessario memorizzare in una variabile, che chiameremo <code>x</code>, la posizione iniziale della coordinata X del cerchio.</p>
+<p>La dichiarazione della variabile può avvenire prima delle due funzioni <code>setup</code> e <code>draw</code>, mediante la classica dichiarazione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</code></pre></div><p>Per realizzare il movimento del cerchio verso destra, è necessario incrementare il valore della variabile <code>x</code> ad ogni operazione di ridisegno dell&rsquo;area di lavoro. Ricordando che l&rsquo;aggiornamento dell&rsquo;area di lavoro avviene nella funzione <code>draw</code>, allora si intuisce facilmente che sia il disegno del cerchio, sia l&rsquo;operazione di incremento della variabile <code>x</code> devono essere inserite all&rsquo;interno di questa funzione.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+</code></pre></div><p>L&rsquo;esempio completo è di seguito riportato:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+  <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+}
+</code></pre></div><p>E' interessante notare che se l&rsquo;istruzione di incremento <code>x = x + 1</code> la si pone nella funzione <code>setup</code> invece che nella funzione <code>draw</code>, questo incremento viene eseguito una sola volta, quindi il cerchio resta immobile.</p>
+<p>Altra cosa interessante da notare, è che se si cancella l&rsquo;istruzione per disegnare lo sfondo (<code>background</code>), allora la vecchia posizione del cerchio non sarà &ldquo;pulita&rdquo; e nell&rsquo;area da disegno rimarrà una &ldquo;scia&rdquo; dovuta a tutte le precedenti posizioni occupate dal cerchio, come nella seguente immagine;</p>
+<p><img src="/static/coding/web/p5js/interactivity01.png" alt="p5.js - Esempio dell&rsquo;animazione senza il disegno dello sfondo" title="p5.js - Esempio dell'animazione senza il disegno dello sfondo"></p>
+<p>In ambiente web è visualizzabile quest&rsquo;ultimo esempio di animazione.</p>
+<div id="interactivity01"></div>
 <h2 id="interazione-con-il-mouse">Interazione con il mouse</h2>
-<p>L&rsquo;input del mouse è gestito automaticamente dalla libreria p5.js, la quale, in maniera completamente trasparente al programmatore, memorizza nelle variabili <code>mouseX</code> e <code>mouseY</code> le coordinate X ed Y del mouse, quando questo si trova nell&rsquo;area da disegno, e nella variabile <code>mouseButton</code> l&rsquo;ultimo pulsante cliccato, che può essere identificato da una delle seguenti costanti:</p>
+<p>L&rsquo;input del mouse è gestito in maniera completamente trasparente per il programmatore. Lo stato del dispositivo, rappresentato dalle coordinate X ed Y del cursore e dall&rsquo;ultimo pulsante del mouse cliccato, è memorizzato nelle variabili <code>mouseX</code>, <code>mouseY</code> e <code>mouseButton</code>. Queste variabili sono dichiarate automaticamente, quindi non necessitano di una dichiarazione da parte del programmatore, e sono continuamente aggiornate ad ogni ridisegno dell&rsquo;area.</p>
+<p>Allo stesso modo, nella variabile <code>mouseIsPressed</code> è automaticamente memorizzato il fatto che un (qualsiasi) pulsante del mouse sia stato cliccato o meno, per cui questa variabile può assumere valore <code>true</code> o <code>false</code>. Si deve prestare particolare attenzione a questa variabile, dato che al click assume valore <code>true</code>, ma appena il click termina, assume immediatamente valore <code>false</code>.</p>
+<p>Per quanto riguarda la variabile <code>mouseButton</code>, l&rsquo;ultimo pulsante cliccato può essere identificato da una delle seguenti costanti:</p>
 <ul>
 <li><code>LEFT</code>: indica che l&rsquo;ultimo pulsante cliccato è il pulsante sinistro del mouse;</li>
 <li><code>RIGHT</code>: indica che l&rsquo;ultimo pulsante cliccato è il pulsante destro del mouse;</li>
 <li><code>CENTER</code>: indica che l&rsquo;ultimo pulsante cliccato è il pulsante centrale del mouse.</li>
 </ul>
-<p>Allo stesso modo, nella variabile <code>mouseIsPressed</code> è automaticamente memorizzato il fatto che un (qualsiasi) pulsante del mouse sia stato cliccato o meno, per cui questa variabile può assumere valore <code>true</code> o <code>false</code>.</p>
-<p>Si deve prestare particolare attenzione a questa variabile, dato che al click assume valore <code>true</code>, ma appena il click termina, assume immediatamente valore <code>false</code>.</p>
-<h3 id="cursore-del-mouse">Cursore del mouse</h3>
-<p>E' possibile nascondere o impostare una nuova icona per il cursore del mouse. Le icone fanno parte del sistema operativo e quindi appaiono diverse su macchine e sistemi differenti.</p>
-<p>Per nascondere il cursore, si utilizza la funzione <code>noCursor</code>.</p>
-<p>Per visualizzare nuovamente l&rsquo;icona o per impostare una nuova icona del mouse si utilizza la funzione <code>cursor</code>, che prende come argomento opzionale la costante che indica la nuova icona da usare. Tra le costanti disponibili ci sono:</p>
-<ul>
-<li><code>ARROW</code>: indica l&rsquo;icona a forma di freccia;</li>
-<li><code>CROSS</code>: indica l&rsquo;icona a forma di croce;</li>
-<li><code>HAND</code>: indica l&rsquo;icona a forma di mano;</li>
-<li><code>MOVE</code>: indica l&rsquo;icona che indica di effettuare uno spostamento;</li>
-<li><code>TEXT</code>: indica l&rsquo;icona a forma di cursore per l&rsquo;inserimento testo;</li>
-<li><code>WAIT</code>: indica l&rsquo;icona a forma di clessidra d&rsquo;attesa.</li>
-</ul>
-<h2 id="interazione-con-la-tastiera">Interazione con la tastiera</h2>
-<p>La libreria p5.js memorizza nelle variabili <code>key</code> e <code>keyCode</code> il tasto premuto sulla tastiera. Il valore resta disponibile in memoria fino a quando un nuovo pulsante viene cliccato.</p>
-<p>La differenza tra le due variabili è che la prima si usa per ottenere solo caratteri alfanumerici e di punteggiatura, la seconda variabile si usa per ottenere il codice del tasto, e non si limita ai caratteri alfanumerici e di punteggiatura, ma anche i tasti corrispondenti alle frecce, alla cancellazione, al tasto &ldquo;invio&rdquo;, ecc..</p>
-<p>La libreria p5.js cattura anche il fatto che un pulsante della tastiera sia stato cliccato o meno, e memorizza questa informazione nella variabile <code>keyIsPressed</code>, che può assumere valore <code>true</code> o <code>false</code>.</p>
-<p>Da prestare attenzione al fatto che la variabile <code>keyIsPressed</code>, alla pressione di un tasto, assume valore <code>true</code> ma, appena il tasto premuto viene lasciato, assume immediatamente valore <code>false</code>.</p>
-<h2 id="gestione-aggiornamento-area-da-disegno">Gestione aggiornamento area da disegno</h2>
-<p>L&rsquo;area da disegno viene ridisegnata con una frequenza misurata in fotogrammi (frame) per secondo (nota ai video-gamer con la sigla &ldquo;fps&rdquo;); Una frequenza elevata permette una visione più fluida dell&rsquo;animazione generata o del filmato riprodotto.</p>
-<p>Si può utilizzare la funzione <code>frameRate()</code> per ottenere la frequenza utilizzata. La funzione permette anche di impostare la frequenza desiderata passandola come argomento (opzionale). Ad esempio, per impostare la frequenza a 60fps, si utilizza:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">frameRate</span>(<span style="color:#ae81ff">60</span>);
-</code></pre></div><p>La variabile <code>frameCount</code> messa a disposizione dalla libreria è un contatore nel quale viene salvato il numero di fotogrammi disegnati dall&rsquo;inizio dell&rsquo;animazione.</p>
-<p>Anche la variabile <code>deltaTime</code> è messa a disposizione dalla libreria. Questa variabile contiene la differenza in millisecondi del tempo trascorso tra l&rsquo;inizio del fotogramma precedente e l&rsquo;inizio del fotogramma corrente.</p>
-<h2 id="gestione-dimensioni-e-rotazione-schermo">Gestione dimensioni e rotazione schermo</h2>
-<p>La grandezza dello schermo può variare da dispositivo a dispositivo. Inoltre con tablet e smartphone, l&rsquo;utente può ruotare lo schermo.</p>
-<p>La variabile <code>deviceOrientation</code> indica se lo schermo è orientato in orizzontale o verticale;</p>
-<p>Le variabili <code>windowWidth</code> e <code>windowHeight</code> indicano rispettivamente larghezza ed altezza della finestra corrente.</p>
+<h3 id="esempio-di-spostamento-del-cerchio-utilizzando-il-mouse">Esempio di spostamento del cerchio utilizzando il mouse</h3>
+<p>Partiamo dal disegno di un cerchio, realizzato attraverso il codice seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</code></pre></div><p>Per poter muovere il cerchio attraverso il mouse (quindi lungo l&rsquo;asse X ed Y), è necessario memorizzare in una variabile, che chiameremo <code>x</code>, la posizione della coordinata X del cerchio ed in una seconda variabile, che chiameremo <code>y</code>, la posizione della coordinata Y del cerchio. Dato che non sappiamo ancora la posizione del mouse, possiamo inizializzare le due variabili con il valore zero, mediante la classica dichiarazione:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</code></pre></div><p>Per poter muovere il cerchio attraverso il mouse, è necessario assegnare alla variabile <code>x</code> la posizione X del mouse, che è memorizzata a sua volta nella variabile mouseX; Allo stesso modo, è necessario assegnare alla variabile <code>y</code> la posizione Y del mouse, che è memorizzata nella variabile mouseY;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseX</span>;
+<span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseY</span>;
+<span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#ae81ff">50</span>);
+</code></pre></div><p>L&rsquo;esempio completo è di seguito riportato:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+    <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseX</span>;
+    <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseY</span>;
+    <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#ae81ff">50</span>);
+}
+</code></pre></div><p>L&rsquo;utente può quindi spostare il cerchio utilizzando il mouse, come nella seguente immagine:</p>
+<p><img src="/static/coding/web/p5js/interactivity02.png" alt="p5.js - Esempio di spostamento del cerchio utilizzando il mouse" title="p5.js - Esempio di spostamento del cerchio utilizzando il mouse"></p>
+<p>In ambiente web è visualizzabile quest&rsquo;ultimo esempio di animazione.</p>
+<div id="interactivity02"></div>
+<h3 id="spostamento-con-il-mouse-di-più-figure-unite">Spostamento con il mouse di più figure unite</h3>
+<p>Quando si intende disegnare più figure per poterle poi spostare contemporaneamente con il mouse, è necessario partire da un punto di riferimento (<code>x</code>, <code>y</code>) dal quale disegnarle. La posizione di ogni figura deve essere calcolata partendo da questo punto di riferimento e sommando uno spiazzamento per collocarla correttamente.</p>
+<p>Partiamo ad esempio dal simbolo dell&rsquo;infinito, una figura composta da due cerchi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>);
+<span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>);
+</code></pre></div><p>Se si vuole spostare entrambi i cerchi partendo dal punto centrale del primo cerchio, allora il punto di riferimento sarà (<code>x</code>, <code>y</code>) = (100, 100); A partire da questo punto, entrambi i cerchi devono essere disegnati con uno spiazzamento. Le coordinate del primo cerchio sono esattamente quelle del punto di riferimento, quindi lo spiazzamento lo si può considerare pari a zero su entrambi gli assi. Le coordinate del secondo cerchio, invece, devono essere calcolate a partire dal punto di riferimento, quindi alla coordinata x=100 deve essere aggiunto uno spiazzamento di altri 100 punti. Il codice risultante sarà il seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+<span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+</code></pre></div><p>Per poter spostare questa figura con il mouse, si deve sostituire al punto di riferimento (<code>x</code>, <code>y</code>) = (100, 100) le coordinate del mouse, quindi sarà (<code>x</code>, <code>y</code>) = (mouseX, mouseY):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">mouseX</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">mouseY</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+<span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">mouseX</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">mouseY</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+</code></pre></div><p>Se si vuole spostare queste figure partendo dal punto di unione (<code>x</code>, <code>y</code>) = (150, 100), allora il primo cerchio avrà uno spiazzamento sull&rsquo;asse X di -50 punti, mentre il secondo avrà uno spiazzamento di +50 punti.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">mouseX</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>, <span style="color:#a6e22e">mouseY</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+<span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">mouseX</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">50</span>, <span style="color:#a6e22e">mouseY</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+</code></pre></div><p>Se si vuole spostare queste figure partendo dal punto centrale del secondo cerchio (<code>x</code>, <code>y</code>) = (200, 100), allora il primo cerchio avrà uno spiazzamento sull&rsquo;asse X di -100 punti, mentre il secondo avrà uno spiazzamento pari a zero.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">mouseX</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">mouseY</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+<span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">mouseX</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">mouseY</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+</code></pre></div><h2 id="calcolo-della-distanza-tra-due-punti">Calcolo della distanza tra due punti</h2>
+<p>Il calcolo della distanza tra due punti del piano è un&rsquo;operazione fondamentale per verificare se due figure collidono.</p>
+<p>Il teorema di Pitagora permette una visualizzazione grafica molto intuitiva della formula utilizzata per calcolare la distanza tra due punti (x1, y1) ed (x2, y2). Sul famoso triangolo rettangolo, la base è calcolata dalla differenza tra le ascisse dei due punti, quindi (x2-x1), mentre l&rsquo;altezza è calcolata come differenza tra le ordinate dei due punti, quindi (y2-y1). L&rsquo;ipotenusa è quindi calcolata con la nota formula: &ldquo;radice quadrata della somma tra il quadrato della base e il quadrato dell&rsquo;altezza&rdquo;.</p>
+<p><img src="/static/coding/web/p5js/distanzaPunti.png" alt="p5.js - Distanza tra due punti" title="p5.js - Distanza tra due punti"></p>
+<p>I tre passi per implementare la formula sono quindi i seguenti:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">differenzaAscisse</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">x1</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">differenzaOrdinate</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">y1</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">distanza</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sqrt</span>( <span style="color:#a6e22e">differenzaAscisse</span><span style="color:#f92672">^</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">differenzaOrdinate</span><span style="color:#f92672">^</span><span style="color:#ae81ff">2</span>);
+</code></pre></div><p>Un&rsquo;osservazione importante è che se due punti si trovano sulla stessa ascissa, allora la differenza tra le ascisse è pari a zero e il calcolo della distanza si riduce alla radice quadrata del quadrato della differenza delle ordinate. Ma le operazioni di calcolo del quadrato e della radice quadrata sono l&rsquo;una l&rsquo;inverso dell&rsquo;altra, per cui si annullano a vicenda e, quindi, la distanza sarà semplicemente la differenza tra le ordinate espressa in valore assoluto:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">differenzaOrdinate</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">y1</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">distanza</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#a6e22e">differenzaOrdinate</span><span style="color:#f92672">^</span><span style="color:#ae81ff">2</span>);
+</code></pre></div><h2 id="interazione-con-la-tastiera">Interazione con la tastiera</h2>
+<p>L&rsquo;input della tastiera è gestito in maniera completamente trasparente per il programmatore. Lo stato del dispositivo, rappresentato tasto premuto e dal codice ASCII del tasto premuto, è memorizzato nelle variabili <code>key</code> e <code>keyCode</code>. Queste variabili sono dichiarate automaticamente, quindi non necessitano di una dichiarazione da parte del programmatore, ed il relativo valore resta disponibile in memoria fino a quando un nuovo pulsante viene cliccato.</p>
+<p>La differenza tra le due variabili è che la prima si usa per ottenere solo caratteri alfanumerici e di punteggiatura, la seconda variabile si usa per ottenere il codice del tasto, e non si limita ai caratteri alfanumerici e di punteggiatura, ma comprende tutti i tasti, ad esempio il tasto &ldquo;invio&rdquo;, il tasto di cancellazione, i tasti corrispondenti alle frecce, e tutti gli altri.</p>
+<p>Sempre in maniera trasparente al programmatore, nella variabile <code>keyIsPressed</code> è automaticamente memorizzato il fatto che un (qualsiasi) tasto sia stato cliccato o meno, per cui questa variabile può assumere valore <code>true</code> o <code>false</code>. Si deve prestare particolare attenzione a questa variabile, dato che alla pressione di un tasto, assume valore <code>true</code> ma, appena il tasto premuto viene lasciato, assume immediatamente valore <code>false</code>.</p>
 
     </div>
   </article>
@@ -204,7 +281,7 @@
 
 
 
-
+<script src="/static/js/p5-1.2.0-min.js"></script><script src="/static/coding/web/p5js/interactivity02.js"></script>
 
 
 
