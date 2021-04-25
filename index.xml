@@ -44,15 +44,6 @@
     </item>
     
     <item>
-      <title>App su F-Droid</title>
-      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
-      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
-      <description>Set di link relativi alle app su F-Droid</description>
-    </item>
-    
-    <item>
       <title>05 - Accesso ai pixel di un&#39;immagine</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
@@ -221,6 +212,15 @@
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</guid>
       <description>Istruzioni condizionali ed iterative</description>
+    </item>
+    
+    <item>
+      <title>App su F-Droid</title>
+      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
+      <description>Set di link relativi alle app su F-Droid</description>
     </item>
     
     <item>

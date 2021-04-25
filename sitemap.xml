@@ -43,11 +43,6 @@
   </url>
   
   <url>
-    <loc>http://codingepaduli.github.io/interesting/fdroidapp/</loc>
-    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</loc>
     <lastmod>2020-09-26T00:00:00+00:00</lastmod>
   </url>
@@ -169,6 +164,11 @@
   
   <url>
     <loc>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingepaduli.github.io/interesting/fdroidapp/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
