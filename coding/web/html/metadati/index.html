@@ -166,13 +166,13 @@
 <p>I seguenti metadati sono obbligatori e devono essere inseriti rispettivamente in prima, seconda e terza posizione tra i metadati della pagina web:</p>
 <ol>
 <li>la codifica della pagina web, per la quale si rimanda all&rsquo;apposito capitolo sulla codifica Unicode e UTF-8;</li>
-<li>la &ldquo;viewport&rdquo;, che indica come adattare la pagina web per far si che sia correttamente visibile sugli schermi dei vari dispositivi, dalle smart TV agli smartphone. Tecnicamente un sito web con le pagine che si adattano agli schermi dei vari dispositivi è detto <strong>responsive</strong>. Per un dettaglio maggiore sull&rsquo;argomento si rimanda alle specifiche HTML;</li>
+<li>la &ldquo;viewport&rdquo;, che indica come adattare la pagina web per far si che sia correttamente visibile sugli schermi dei vari dispositivi, dalle smart TV agli smartphone. Tecnicamente un sito web con le pagine che si adattano agli schermi dei vari dispositivi è detto <strong>responsive</strong>. Per un dettaglio maggiore sull&rsquo;argomento si rimanda alle specifiche HTML; <!-- Nota 1: Nel viewport non è più necessario includere shrink-to-fit=no, dato che l'opzione è relativa ai vecchi dispositivi iOS 9 Nota 2: non è più necessario inserire per Internet Explorer X-UA-Compatible : ie=edge --></li>
 <li>il titolo del documento.</li>
 </ol>
 <p>Il seguente codice, contenente i metadati obbligatori e comprensivo dell&rsquo;etichetta <code>head</code>, è da includere in tutte le pagine web:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
     <span style="color:#75715e">&lt;!-- metadati obbligatori, vanno nelle prime posizioni --&gt;</span>
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
     &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
     &lt;<span style="color:#f92672">title</span>&gt;Page Title&lt;/<span style="color:#f92672">title</span>&gt;
 &lt;/<span style="color:#f92672">head</span>&gt;
@@ -188,9 +188,17 @@
 </code></pre></div><h3 id="informazioni-per-i-social">Informazioni per i social</h3>
 <p>Le informazioni per i social network sono descritte attraverso l&rsquo;Open Graph protocol, a cui si rimanda per approfondimenti.</p>
 <p>I social estraggono le informazioni di una pagina web dalle seguenti chiavi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:title&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Page Title&#34;</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:image&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://example.com/image.jpg&#34;</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!--indica il contenuto che si condivide, scegliendo tra:
+</span><span style="color:#75715e">        website, article o video.movie --&gt;</span>
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:type&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;website&#34;</span>&gt;
+    <span style="color:#75715e">&lt;!--indica il linguaggio utilizzato --&gt;</span>
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:locale&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;it_IT&#34;</span>&gt;
+    <span style="color:#75715e">&lt;!--indica le informazioni sulla pagina web --&gt;</span>
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:title&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Titolo pagina&#34;</span>&gt;
     &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:description&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Descrizione pagina&#34;</span>&gt;
+    <span style="color:#75715e">&lt;!--indica l&#39;immagine principale della pagina con relativa descrizione --&gt;</span>
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:image&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://example.com/image.jpg&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:image:alt&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Descrizione immagine&#34;</span>&gt;
 </code></pre></div><p>Twitter fa eccezione, perché usa le Twitter Card, una tecnologia proprietaria, a cui si rimanda per approfondimenti.</p>
 <p>Twitter estrae le informazioni di una pagina web dalle seguenti chiavi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;twitter:creator&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@account_twitter&#34;</span>&gt;
@@ -251,7 +259,7 @@
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="https://htmlhead.dev/" style="font-weight: 700; color: #e22d30;">Sito htmlhead.dev</a>: Guida (in inglese) all&#39;elemento &#39;head&#39; dell&#39;HTML;</p><p><a href="https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs" style="font-weight: 700; color: #e22d30;">Icone del sito web nel 2021</a>: Articolo (in inglese) sulla scelta e sulla creazione delle icone del sito web nel 2021</p>
+      <p><a href="https://htmlhead.dev/" style="font-weight: 700; color: #e22d30;">Sito htmlhead.dev</a>: Guida (in inglese) all&#39;elemento &#39;head&#39; dell&#39;HTML;</p><p><a href="https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs" style="font-weight: 700; color: #e22d30;">Icone del sito web nel 2021</a>: Articolo (in inglese) sulla scelta e sulla creazione delle icone del sito web nel 2021</p><p><a href="https://www.matuzo.at/blog/html-boilerplate/" style="font-weight: 700; color: #e22d30;">My current HTML template</a>: Articolo (in inglese) sugli elementi basilari utilizzati per construire un template di una pagina HTML</p>
   </article>
 </main>
 
