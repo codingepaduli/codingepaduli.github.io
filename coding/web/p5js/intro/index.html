@@ -10,10 +10,10 @@
         <meta property="og:title" content="01 - Introduzione alla libreria grafica p5.js" />
 <meta property="og:description" content="Introduzione alla libreria grafica p5.js" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/intro/" />
-<meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
-<meta property="article:published_time" content="2020-09-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-10T00:00:00+00:00" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/intro/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2020-09-10T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-09-10T00:00:00&#43;00:00" />
+
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
@@ -159,11 +159,11 @@
     </header><div class="content post__content clearfix">
       <h1 id="introduzione-alla-libreria-grafica-p5js">Introduzione alla libreria grafica p5.js</h1>
 <p><a href="https://p5js.org" title="Sito web di p5.js">p5.js</a> è una libreria grafica open-source, focalizzata al coding in JavaScript in un contesto creativo e multimediale. Questa libreria è, di fatto, anche un &ldquo;porting&rdquo; della piattaforma <a href="https://processing.org/" title="Sito web di processing">Processing</a> in ambiente web, per cui, sia Processing, sia questa libreria, sono supportati dalla <a href="https://processingfoundation.org" title="Sito web della Processing Foundation">Processing Foundation</a>, una comunità interessata alla creazione artistica di contenuti mediante tecnologie web.</p>
-<p>Numerose librerie estendono p5.js, aggiungendo strumenti per la gestione audio, per la gestione grafica in 2, 3 ed anche più dimensioni, per la comunicazione con diversi dispositivi, quali Arduino, per la gestione della geo-localizzazione, delle mappe, della webcam ed anche per l&rsquo;applicazione di algoritmi di intelligenza artificiale.</p>
+<p>Esistono inoltre numerose estensioni che aggiungono strumenti per la gestione audio, per la gestione grafica in 3 dimensioni,  per la gestione della geo-localizzazione, delle mappe, della webcam, per l&rsquo;applicazione di algoritmi di intelligenza artificiale e per la comunicazione con diversi dispositivi basati su micro-controllore, come Arduino.</p>
 <h2 id="editor-online-per-p5js">Editor online per p5.js</h2>
 <p>Il punto di partenza, per iniziare velocemente ad esplorare le potenzialità della libreria p5.js, è sicuramente l&rsquo;editor presente sul sito web <a href="https://editor.p5js.org" title="Editor online di p5.js">https://editor.p5js.org</a>, che si presenta con la seguente interfaccia grafica:</p>
 <p><img src="/static/coding/web/p5js/OnlineEditor.png" alt="p5.js - Editor online" title="p5.js - Editor online"></p>
-<p>L&rsquo;interfaccia grafica presenta i menù tipici dei classici ambienti di sviluppo, quali la barra dei pulsanti, per avviare e fermare il proprio lavoro, l&rsquo;area del codice, per la scrittura del codice JavaScript, l&rsquo;area di visualizzazione, per visualizzare il lavoro realizzato e la console per visualizzare i messaggi di informazione, di avviso e di errore.</p>
+<p>L&rsquo;interfaccia grafica presenta i menù tipici dei classici ambienti di sviluppo, quali la barra dei pulsanti, per avviare e fermare il proprio lavoro, l&rsquo;area del codice, per la scrittura del codice JavaScript, l&rsquo;area di anteprima, per visualizzare il lavoro realizzato e la console per visualizzare i messaggi di informazione, di avviso e di errore.</p>
 <p>L&rsquo;area del codice si presenta con un esempio minimale di programma, valido come punto di partenza e descritto successivamente.</p>
 <h2 id="prima-pagina-web-con-p5js">Prima pagina web con p5.js</h2>
 <p>L&rsquo;editor online è di grande utilità per iniziare, tuttavia si può voler includere il lavoro realizzato in una pagina web. Per far ciò, è necessario conoscere la struttura HTML nella quale includerlo.</p>
@@ -207,10 +207,11 @@
         &lt;/<span style="color:#f92672">script</span>&gt;
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h2 id="primo-programma">Primo programma</h2>
+</code></pre></div><h2 id="prime-funzioni">Prime funzioni</h2>
 <p>Sia che si utilizzi la pagina web, sia che si utilizzi l&rsquo;editor online, i programmi in p5.js devono sempre dichiarare le due funzioni principali <code>setup</code> e <code>draw</code>.</p>
 <p>Le istruzioni contenute nella funzione <code>setup</code> sono eseguite una sola volta e servono ad impostare gli strumenti e le condizioni iniziali.</p>
 <p>Le istruzioni contenute nella funzione <code>draw</code> sono eseguite ciclicamente e servono a ridisegnare continuamente l&rsquo;area di lavoro.</p>
+<p>Come si può notare, sia le istruzioni iniziali, sia le istruzioni di disegno ciclico sono racchiuse tra le parentesi graffe <code>{</code> e <code>}</code> che indicano l&rsquo;inizio e la fine del blocco istruzioni.</p>
 <p>Di seguito sono descritte le istruzioni eseguite dal primo programma d&rsquo;esempio, che per comodità è riportato di seguito:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
   <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
@@ -221,36 +222,9 @@
   <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
 }
 </code></pre></div><p>La funzione <code>createCanvas</code> crea all&rsquo;interno della pagina web un&rsquo;area da disegno delle dimensioni indicate. Dato che l&rsquo;area da disegno deve essere creata una volta sola, questa istruzione è inserita nella funzione <code>setup</code>.</p>
-<p>Le funzione <code>background</code> serve ad impostare lo sfondo di colore grigio e la funzione <code>circle</code> serve a creare un cerchio. Dato che sono continuamente ridisegnate, sono state inserite nella funzione <code>draw</code>.</p>
+<p>Le funzione <code>background</code> serve ad impostare lo sfondo, in questo caso di colore grigio, mentre la funzione <code>circle</code> serve a creare un cerchio. Si può scegliere di ridisegnare continuamente lo sfondo ed il cerchio, e quindi inserire queste istruzioni nella funzione <code>draw</code></p>
 <p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/p5js/basics01.png" alt="p5.js - Primo esempio" title="p5.js - Primo esempio"></p>
-<h2 id="modalità-di-esecuzione-globale-e-di-istanza">Modalità di esecuzione globale e di istanza</h2>
-<p>Gli esempi proposti dichiarano variabili e funzioni da disegno nel contesto globale della pagina web, quindi questa modalità di lavoro è detta <strong>modalità globale</strong>. Dato che il contesto globale è unico, si è vincolati all&rsquo;esecuzione di un unico lavoro nella pagina web.</p>
-<p>Una modalità più avanzata di lavoro è la <strong>modalità di istanza</strong>, in cui le variabili e le funzioni da disegno sono dichiarate in un contesto specifico dato da una sorta di oggetto, detto <strong>closure</strong>. Dato che possono essere create più istanze di questi oggetti, è possibile dichiarare più contesti di esecuzione, ognuno legato alla singola istanza, per cui nella pagina web possono essere eseguiti più lavori.</p>
-<p>Essendo comunque un argomento avanzato, nei capitoli seguenti sarà sempre utilizzata la modalità globale. Solo per completezza, si riporta un esempio di lavoro realizzato utilizzando la modalità di istanza.</p>
-<p>Elemento HTML che conterrà l&rsquo;area da disegno:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idElementoHTML&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p>Dichiarazione delle variabili e delle funzioni da disegno in modalità di istanza:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lavoro</span> <span style="color:#f92672">=</span> ( <span style="color:#a6e22e">sketch</span> ) =&gt; {
-
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
-
-  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">setup</span> <span style="color:#f92672">=</span> () =&gt; {
-    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">200</span>);
-  };
-
-  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">draw</span> <span style="color:#f92672">=</span> () =&gt; {
-    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>);
-    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>);
-    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">rect</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">50</span>);
-  };
-};
-</code></pre></div><p>Creazione ed esecuzione dell&rsquo;area da disegno definita nell&rsquo;istanza <code>lavoro</code> ed inclusione della stessa nell&rsquo;elemento HTML <code>sketch</code> definito in precedenza:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myp5</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">p5</span>(<span style="color:#a6e22e">lavoro</span>, <span style="color:#e6db74">&#39;idElementoHTML&#39;</span>);
-</code></pre></div><p>Si fa notare come entrambi le funzioni <code>draw</code> e <code>setup</code> siano definite all&rsquo;interno dell&rsquo;oggetto <code>sketch</code>, attraverso la sintassi <code>sketch.setup</code> e <code>sketch.draw</code>.</p>
-<p>Si fa notare, inoltre, che entrambe le funzioni sono dichiarate come funzioni <strong>lambda</strong> al fine di non sovrascrivere il contesto dell&rsquo;oggetto <code>sketch</code>.</p>
-<p>Come già detto, sono argomenti avanzati, per cui non saranno utilizzati nei prossimi capitoli.</p>
 <h2 id="area-da-disegno">Area da disegno</h2>
 <p>L&rsquo;area da disegno è creata attraverso la funzione <code>createCanvas</code>, già accennata in precedenza, la quale prevede larghezza e lunghezza dell&rsquo;elemento, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
@@ -284,11 +258,11 @@
 <li><code>TWO_PI</code>, ovvero <strong>due pi greco</strong>, corrispondenti a trecentosessanta gradi d&rsquo;arco;</li>
 </ul>
 <p>Alcune funzioni della libreria permettono come parametri esclusivamente valori espressi  in radianti, per cui si rimanda alla documentazione ufficiale per verificare la possibilità d&rsquo;uso di valori espressi in gradi sessagesimali.</p>
-<h2 id="api-e-documentazione">API e documentazione</h2>
+<h2 id="api-funzioni-e-documentazione">API, funzioni e documentazione</h2>
 <p>Per poter utilizzare correttamente la libreria p5.js, è necessario conoscere l&rsquo;interfaccia esposta dalla libreria stessa.</p>
 <p>Il termine <strong>interfaccia</strong>, nelle discipline tecniche, indica l&rsquo;area (la &ldquo;faccia&rdquo;) esposta da un sistema, al fine di potervi interagire. Un esempio sono le interfacce grafiche di Microsoft Windows, che permettono di interagire con i calcolatori, oppure le interfacce vocali di iPhone ed Android, con &ldquo;Siri&rdquo; ed il famoso &ldquo;OK Google&rdquo;, che permettono di interagire con gli smartphone.</p>
 <p>Nello sviluppo di applicazioni, le interfacce esposte da librerie ed ambienti di sviluppo, e quindi anche dalla libreria p5.js, prendono il nome di <strong>Application Programming Interface</strong> (API).</p>
-<p>Le API espongono strutture, funzioni, costanti, e tutti gli altri elementi della libreria, che il programmatore può usare per realizzare la propria applicazione. Le API sono <strong>sempre</strong> accompagnate dalla documentazione, che descrive cosa rappresenta una determinata costante oppure come utilizzare una determinata funzione. La documentazione delle API della libreria p5.js si può consultare sul sito web della libreria stessa, all&rsquo;indirizzo <a href="https://p5js.org/reference/" title="Documentazione di p5.js">https://p5js.org/reference/</a>.</p>
+<p>Le API espongono strutture, funzioni, costanti e tanti altri elementi della libreria, che il programmatore può usare per realizzare la propria applicazione. Le API sono sempre accompagnate dalla documentazione, che descrive cosa rappresenta una determinata costante oppure come utilizzare una determinata funzione. La documentazione delle API della libreria p5.js si può consultare sul sito web della libreria stessa, all&rsquo;indirizzo <a href="https://p5js.org/reference/" title="Documentazione di p5.js">https://p5js.org/reference/</a>.</p>
 <p>La documentazione è organizzata per aree di interesse, tra le varie categorie troviamo:</p>
 <table>
 <thead>
@@ -364,25 +338,32 @@
 </tr>
 </tbody>
 </table>
-<p>Ogni categoria mostra le funzioni disponibili, con un link alla documentazione specifica. Ogni costante o funzione è documentata indicando:</p>
+<p>Ogni categoria mostra le costanti e le funzioni disponibili, con un link alla documentazione specifica.</p>
+<p>Le costanti, nell&rsquo;ambito informatico come nell&rsquo;ambito matematico, sono dei valori che non variano nel tempo, ed ai quali associamo un nome, come ad esempio la costante matematica <strong>pi greco</strong>, che definisce il rapporto tra la lunghezza della circonferenza e quella del suo diametro, oppure la costante fisica <strong>c</strong> che definisce la velocità della luce.</p>
+<p>Ogni costante è documentata indicando uno o più esempi d&rsquo;uso, il nome, la descrizione ed il valore.</p>
+<p>Le funzioni sono delle istruzioni particolari che permettono di svolgere uno specifico compito, come il disegno di un cerchio o un quadrato o la creazione dell&rsquo;area da disegno. Le funzioni possono prevedere dei <strong>parametri</strong> necessari alla realizzazione del compito. Ad esempio, per creare l&rsquo;area da disegno abbiamo bisogno di due parametri, la larghezza e l&rsquo;altezza dell&rsquo;area da creare. Per disegnare un cerchio abbiamo bisogno di tre parametri, le coordinate x ed y del centro ed il raggio del cerchio. Alcuni parametri possono essere obbligatori, altri facoltativi, e tipicamente sono elencati prima quelli obbligatori e poi, tra parentesi quadre, quelli facoltativi.</p>
+<p>Il nome della funzione insieme alla lista dei parametri riportata tra parentesi tonde formano la <strong>firma della funzione</strong>.</p>
+<p>La documentazione di ogni funzione riporta:</p>
 <ul>
 <li>uno o più esempi d&rsquo;uso;</li>
-<li>la descrizione;</li>
-<li>la sintassi d&rsquo;uso;</li>
+<li>la descrizione del compito svolto;</li>
+<li>la sintassi d&rsquo;uso, ovvero la firma della funzione. Ogni parametro, obbligatorio o facoltativo, è ulteriormente chiarito con l&rsquo;indicazione del tipo e della descrizione.</li>
 </ul>
-<p>Per le funzioni, la sintassi descrive la <strong>firma della funzione</strong>, che è composta dal nome e, tra parentesi tonde, dalla lista di parametri. La lista di parametri elenca prima quelli obbligatori e poi quelli facoltativi, indicati tra parentesi quadre. Ogni parametro è ulteriormente chiarito, indicando tipo, descrizione ed obbligatorietà.</p>
+<p>I parametri indicati nella documentazione sono detti <strong>parametri formali</strong> e, come si vedrà nel capitolo sulle funzioni, sono definiti dallo sviluppatore durante la creazione di una funzione.</p>
 <h3 id="documentazione-della-funzione-circle">Documentazione della funzione <code>circle</code></h3>
-<p>La sintassi della funzione <code>circle</code>, che serve a disegnare un cerchio nell&rsquo;area da disegno, è la seguente:</p>
+<p>La documentazione della funzione <code>circle</code> riporta i vari esempi e la descrizione del compito svolto, che è il disegno di un cerchio nell&rsquo;area da disegno.</p>
+<p>La sintassi riporta la firma della funzione, ovvero il nome della funzione e la lista dei parametri <strong>formali</strong> tra parentesi tonde:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: circle(x, y, d)
 
 Parameters:
     x   Number: x-coordinate of the centre of the circle.
     y   Number: y-coordinate of the centre of the circle.
     d   Number: diameter of the circle.
-</code></pre></div><p>Si deduce che la funzione <code>circle</code> non prevede parametri facoltativi, dato che nessun parametro è indicato tra parentesi quadre.</p>
+</code></pre></div><p>La funzione <code>circle</code> non prevede parametri facoltativi, dato che nessun parametro è indicato tra parentesi quadre.</p>
 <p>Dalla descrizione dei parametri si comprende che sono tutti numerici, con <code>x</code> ed <code>y</code> che indicano le coordinate del centro del cerchio e <code>d</code> che indica il diametro del cerchio.</p>
 <h3 id="documentazione-della-funzione-square">Documentazione della funzione <code>square</code></h3>
-<p>La sintassi della funzione <code>square</code>, che serve a disegnare un quadrato nell&rsquo;area da disegno, è la seguente:</p>
+<p>La documentazione della funzione <code>square</code> riporta i vari esempi e la descrizione del compito svolto, che è il disegno di un quadrato nell&rsquo;area da disegno.</p>
+<p>La sintassi riporta la firma della funzione, ovvero il nome della funzione e la lista dei parametri <strong>formali</strong> tra parentesi tonde:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: square(x, y, s, [tl], [tr], [br], [bl])
 
 Parameters:
@@ -393,7 +374,7 @@ Parameters:
     tr  Number: optional radius of top-right corner. (Optional)
     br  Number: optional radius of bottom-right corner. (Optional)
     bl  Number: optional radius of bottom-left corner. (Optional)
-</code></pre></div><p>Si deduce che la funzione <code>square</code> prevede i parametri <strong>obbligatori</strong> <code>x</code>, <code>y</code> ed <code>s</code>. I parametri facoltativi, indicati tra parentesi quadre, sono <code>tl</code>, <code>tr</code>, <code>br</code>, <code>bl</code>.</p>
+</code></pre></div><p>Dalla sintassi si deduce che la funzione <code>square</code> prevede i parametri <strong>obbligatori</strong> <code>x</code>, <code>y</code> ed <code>s</code>. I parametri facoltativi, indicati tra parentesi quadre, sono <code>tl</code>, <code>tr</code>, <code>br</code>, <code>bl</code>.</p>
 <p>La descrizione dei parametri obbligatori indica che <code>x</code> ed <code>y</code> sono le coordinate dell&rsquo;angolo in alto a sinistra del quadrato ed <code>s</code> è la lunghezza del lato; I rimanenti parametri facoltativi rappresentano rispettivamente l&rsquo;arrotondamento dell&rsquo;angolo in alto a sinistra, in alto a destra, in basso a destra ed in basso a sinistra.</p>
 <p>Dalla documentazione si apprende che la funzione può essere usata per disegnare un quadrato senza angoli arrotondati oppure indicare l&rsquo;arrotondamento dei vari angoli, come nelle seguenti istruzioni:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>);
@@ -405,36 +386,52 @@ Parameters:
 <p>Le primitive grafiche, nella moderna computer grafica, sono le funzioni che realizzano le figure geometriche più elementari, come punti, linee e triangoli. I poligoni e curve sono considerate primitive, anche se possono essere realizzate combinando altre primitive. Oggetti e scene più complesse sono realizzati combinando l&rsquo;uso di più primitive.</p>
 <p>Ogni primitiva è una funzione identificata da un nome e da una lista di parametri obbligatori o facoltativi. Di seguito saranno elencate le primitive principali con i parametri necessari ad indirizzare il lettore ad uso basilare, per tutti gli altri dettagli si rimanda alla documentazione ufficiale.</p>
 <h3 id="disegno-di-un-punto">Disegno di un punto</h3>
-<p>Il punto è l&rsquo;entità più semplice da realizzare. La funzione progettata allo scopo è <code>point</code>, che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> del <strong>punto</strong>, come nel seguente esempio:</p>
+<p>Il punto è l&rsquo;entità più semplice da realizzare. La funzione progettata allo scopo è <code>point</code>, la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: point(x, y)
+</code></pre></div><p>I parametri formali sono <code>x</code> ed <code>y</code>, che rappresentano le coordinate del <strong>punto</strong>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">point</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">20</span>);
 </code></pre></div><h3 id="disegno-di-una-linea">Disegno di una linea</h3>
-<p>La linea è rappresentata da un segmento che unisce due punti, per cui la si può realizzare attraverso la funzione <code>line</code> che prevede come argomenti le coordinate <code>x1</code> ed <code>y1</code> relative al <strong>primo punto</strong> e le coordinate <code>x2</code> ed <code>y2</code> relative al <strong>secondo punto</strong>, come nel seguente esempio:</p>
+<p>La linea è un segmento che unisce due punti ed è realizzata dalla funzione <code>line</code> la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: line(x1, y1, x2, y2)
+</code></pre></div><p>I parametri formali <code>x1</code> ed <code>y1</code> rappresentano le coordinate del punto da cui parte la linea ed i parametri formali <code>x2</code> ed <code>y2</code> rappresentano le coordinate del punto in cui la linea termina.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">line</span>(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">40</span>);
 </code></pre></div><h3 id="disegno-di-un-triangolo">Disegno di un triangolo</h3>
-<p>La figura del triangolo è caratterizzata da tre punti in cui originano e terminano i lati che la vanno a formare, per cui la si può realizzare attraverso la funzione <code>triangle</code> che prevede come argomenti le coordinate <code>x1</code> ed <code>y1</code> relative al <strong>primo punto</strong>, le coordinate <code>x2</code> ed <code>y2</code> relative al <strong>secondo punto</strong> e  le coordinate <code>x3</code> ed <code>y3</code> relative al <strong>terzo punto</strong>, come nel seguente esempio:</p>
+<p>La figura del triangolo è caratterizzata da tre punti in cui originano e terminano i lati che la vanno a formare e la si può realizzare attraverso la funzione <code>triangle</code> la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: triangle(x1, y1, x2, y2, x3, y3)
+</code></pre></div><p>I parametri formali <code>x1</code> ed <code>y1</code> rappresentano le coordinate del primo vertice,  <code>x2</code> ed <code>y2</code> rappresentano le coordinate del secondo vertice, <code>x3</code> ed <code>y3</code> le coordinate del terzo vertice, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">triangle</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">100</span>);
 </code></pre></div><h3 id="disegno-di-un-cerchio">Disegno di un cerchio</h3>
-<p>Il cerchio lo si può realizzare attraverso la funzione <code>circle</code> che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative al <strong>centro</strong> e la dimensione del <strong>diametro</strong>, come nel seguente esempio:</p>
+<p>La circonferenza è caratterizzata da un punto centrale ed un diametro e la si può realizzare attraverso la funzione <code>circle</code> la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: circle(x, y, diameter)
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del centro, <code>diameter</code> è la dimensione del diametro.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">40</span>);
 </code></pre></div><h3 id="disegno-di-un-quadrato">Disegno di un quadrato</h3>
-<p>Si può realizzare un quadrato attraverso la funzione <code>square</code> che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative all'<strong>angolo in alto a sinistra</strong> e la dimensione del <strong>lato</strong>, come nel seguente esempio:</p>
+<p>Il rettangolo è caratterizzata da un punto da cui iniziare a disegnare e dalla dimensioni del lato. Si può disegnare attraverso la funzione <code>square</code> la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: square(x, y, side)
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto da cui iniziare a disegnare, <code>side</code> è la dimensione del lato.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">40</span>);
 </code></pre></div><h3 id="disegno-di-un-rettangolo">Disegno di un rettangolo</h3>
-<p>Il rettangolo è realizzabile attraverso la funzione <code>rect</code> che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative all'<strong>angolo in alto a sinistra</strong>, la dimensione della <strong>base</strong> e la dimensione dell'<strong>altezza</strong>, come nel seguente esempio:</p>
+<p>Il rettangolo è caratterizzata da un punto da cui iniziare a disegnare e dalla dimensioni della base e dell&rsquo;altezza ed è realizzabile attraverso la funzione <code>rect</code> la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: rect(x, y, base, altezza)
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto da cui iniziare a disegnare, <code>base</code> ed <code>altezza</code> sono le dimensioni della base e dell&rsquo;altezza del rettangolo, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">rect</span>(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>);
 </code></pre></div><h3 id="disegno-di-un-ellisse">Disegno di un ellisse</h3>
-<p>Un ellisse è una sorta di cerchio &ldquo;schiacciato&rdquo;, lo si può interpretare come una sorta di cerchio con larghezza ed altezza differenti. Matematicamente parlando, l&rsquo;ellisse ha due punti focali invece di uno (a differenza del cerchio che ha come unico fuoco il centro del cerchio).</p>
-<p>Lo si può realizzare attraverso la funzione <code>ellipse</code> che prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative al <strong>centro</strong> e le dimensioni di <strong>larghezza</strong> ed <strong>altezza</strong>, come nel seguente esempio:</p>
+<p>Un ellisse è una sorta di circonferenza &ldquo;schiacciata&rdquo;, la si può interpretare come una sorta di circonferenza con larghezza ed altezza differenti. Matematicamente parlando, l&rsquo;ellisse ha due punti focali invece di uno (a differenza della circonferenza che ha come unico fuoco il centro).</p>
+<p>La funzione per realizzare un ellisse è <code>ellipse</code>, la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: ellipse(x, y, larghezza, altezza)
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto da cui iniziare a disegnare, <code>larghezza</code> ed <code>altezza</code> sono le dimensioni della larghezza e dell&rsquo;altezza dell&rsquo;ellisse, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ellipse</span>(<span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">220</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">40</span>);
 </code></pre></div><h3 id="disegno-di-un-arco-di-circonferenza-e-dellisse">Disegno di un arco di circonferenza e d&rsquo;ellisse</h3>
-<p>Un <strong>arco di circonferenza</strong> è il tratto di linea curva che ha le due estremità definite da due raggi della circonferenza stessa.</p>
-<p>La funzione <code>arc</code> disegna un arco di circonferenza e prevede come argomenti le coordinate <code>x</code> ed <code>y</code> relative al <strong>centro</strong> della circonferenza, <strong>due volte</strong> la dimensione del <strong>diametro</strong> del cerchio ed infine <strong>l&rsquo;angolo di inizio</strong> e <strong>l&rsquo;angolo di fine</strong> dell&rsquo;arco. Ad esempio:</p>
+<p>Un <strong>arco di circonferenza</strong> è il tratto di linea curva che ha le due estremità definite da due raggi della circonferenza stessa. Un <strong>arco d&rsquo;ellisse</strong> è simile ad un arco di circonferenza, con la differenza che il tratto di linea curva è parte dell&rsquo;ellisse.</p>
+<p>La funzione per realizzare un arco è <code>arc</code> la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: arc(x, y, larghezza, altezza, angoloIniziale, angoloFinale, [type])
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del centro, <code>larghezza</code> ed <code>altezza</code> sono le dimensioni della larghezza e dell&rsquo;altezza dell&rsquo;ellisse. Il parametro <code>angoloIniziale</code> indica l&rsquo;angolo del primo raggio che fa da prima estremità all&rsquo;arco, <code>angoloFinale</code> indica l&rsquo;angolo del secondo raggio che fa da seconda estremità all&rsquo;arco.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">40</span>, <span style="color:#a6e22e">PI</span>, <span style="color:#a6e22e">TWO_PI</span>);
-</code></pre></div><p>Per impostazione predefinita, questa funzione disegna l&rsquo;arco come fosse una figura aperta. Lo si può disegnare come figura chiusa, indicando come collegare i due estremi d&rsquo;arco.</p>
+</code></pre></div><p>Per impostazione predefinita, questa funzione disegna l&rsquo;arco come fosse una figura aperta. Lo si può disegnare come figura chiusa, utilizzando il parametro <code>type</code> per indicare come collegare i due estremi d&rsquo;arco.</p>
 <p>Le due estremità dell&rsquo;arco possono essere unite con una <strong>corda di circonferenza</strong> oppure con i due raggi che si congiungono alle estremità dell&rsquo;arco, disegnando un <strong>settore circolare</strong>.</p>
 <p>Una <strong>corda di circonferenza</strong> è un segmento che ha le due estremità definite da due punti della circonferenza stessa.</p>
 <p>Un <strong>settore circolare</strong> è l&rsquo;area compresa tra l&rsquo;arco di circonferenza ed i raggi che delimitano le estremità dell&rsquo;arco.</p>
-<p>Per indicare come disegnare l&rsquo;arco, si utilizza un ulteriore parametro, non obbligatorio, che è definito dalle seguenti costanti:</p>
+<p>Per indicare come disegnare l&rsquo;arco, si utilizza il parametro <code>type</code>, non obbligatorio, che è definito dalle seguenti costanti:</p>
 <ul>
 <li><code>OPEN</code>: indica di realizzare l&rsquo;arco come figura aperta, quindi senza linee di contorno per unire gli estremi;</li>
 <li><code>CHORD</code>: indica di chiudere l&rsquo;arco con una linea di contorno tracciata come corda di circonferenza;</li>
@@ -445,14 +442,45 @@ Parameters:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">80</span>, <span style="color:#a6e22e">PI</span>, <span style="color:#a6e22e">TWO_PI</span>);
 </code></pre></div><p>Gli archi non sono gli unici tipi di curve supportate. La libreria p5.js permette di disegnare curve complesse, come le curve <strong>spline</strong> e le curve di <strong>Bézier</strong>, ma per queste realizzazioni si rimanda alle specifiche e agli esempi ufficiali.</p>
 <h3 id="disegno-di-un-testo">Disegno di un testo</h3>
-<p>Il testo può essere racchiuso in un elemento HTML o gestito direttamente nell&rsquo;area da disegno. Per realizzarlo graficamente si utilizza la funzione <code>text</code>, che prevede come argomenti il testo e le coordinate <code>x</code> ed <code>y</code> del <strong>punto in alto a sinistra</strong> dal quale disegnare il testo, come nel seguente esempio:</p>
+<p>Il testo può essere racchiuso in un elemento HTML o gestito direttamente nell&rsquo;area da disegno. Per realizzarlo graficamente si utilizza la funzione <code>text</code>, che prevede la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: text(words, x, y)
+</code></pre></div><p>Il parametro formale <code>words</code> indica il testo da disegnare, i parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto in alto a sinistra dal quale disegnare il testo, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;questo è un testo&#34;</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">340</span>);
-</code></pre></div><p>Un&rsquo;alternativa è rappresentata dalla stessa funzione che utilizza però come argomenti le coordinate <code>x</code> ed <code>y</code> relative al <strong>punto in alto a sinistra</strong> e la dimensione della <strong>base</strong> e la dimensione dell'<strong>altezza</strong> del rettangolo nel quale racchiudere il testo, come nel seguente esempio:</p>
+</code></pre></div><p>Un&rsquo;alternativa è rappresentata dalla stessa funzione che utilizza però una sintassi alternativa:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: text(words, x, y, base, altezza)
+</code></pre></div><p>Il parametro formale <code>words</code> indica il testo da disegnare, i parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto in alto a sinistra dal quale disegnare il testo, <code>base</code> ed <code>altezza</code> sono le dimensioni del rettangolo nel quale racchiudere il testo, come nel seguente esempio:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;questo è un testo troppo lungo&#34;</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">360</span>, <span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">20</span>);
-</code></pre></div><p>Da prestare attenzione che se il testo è troppo lungo e non può essere racchiuso nello spazio indicato, il testo rimanente non sarà disegnato.</p>
+</code></pre></div><p>Bisogna prestare attenzione al fatto che se il testo è troppo grande e non può essere racchiuso nell&rsquo;area del rettangolo, la parte eccessiva del testo non sarà disegnata.</p>
 <h2 id="esempio-completo">Esempio completo</h2>
 <p>Di seguito, si visualizza un esempio completo delle figure realizzate mediante il codice riportato nei vari esempi mostrati:</p>
 <p><img src="/static/coding/web/p5js/basics.png" alt="p5.js - Basi della grafica 2D" title="p5.js - Basi della grafica 2D"></p>
+<h2 id="modalità-di-esecuzione-globale-e-di-istanza">Modalità di esecuzione globale e di istanza</h2>
+<p>Gli esempi proposti dichiarano variabili e funzioni da disegno nel contesto globale della pagina web, quindi questa modalità di lavoro è detta <strong>modalità globale</strong>. Dato che il contesto globale è unico, si è vincolati all&rsquo;esecuzione di un unico lavoro nella pagina web.</p>
+<p>Una modalità più avanzata di lavoro è la <strong>modalità di istanza</strong>, in cui le variabili e le funzioni da disegno sono dichiarate in un contesto specifico dato da una sorta di oggetto, detto <strong>closure</strong>. Dato che possono essere create più istanze di questi oggetti, è possibile dichiarare più contesti di esecuzione, ognuno legato alla singola istanza, per cui nella pagina web possono essere eseguiti più lavori.</p>
+<p>Essendo comunque un argomento avanzato, nei capitoli seguenti sarà sempre utilizzata la modalità globale. Solo per completezza, si riporta un esempio di lavoro realizzato utilizzando la modalità di istanza.</p>
+<p>Elemento HTML che conterrà l&rsquo;area da disegno:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idElementoHTML&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Dichiarazione delle variabili e delle funzioni da disegno in modalità di istanza:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lavoro</span> <span style="color:#f92672">=</span> ( <span style="color:#a6e22e">sketch</span> ) =&gt; {
+
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+
+  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">setup</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">200</span>);
+  };
+
+  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">draw</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>);
+    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>);
+    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">rect</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">50</span>);
+  };
+};
+</code></pre></div><p>Creazione ed esecuzione dell&rsquo;area da disegno definita nell&rsquo;istanza <code>lavoro</code> ed inclusione della stessa nell&rsquo;elemento HTML <code>sketch</code> definito in precedenza:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myp5</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">p5</span>(<span style="color:#a6e22e">lavoro</span>, <span style="color:#e6db74">&#39;idElementoHTML&#39;</span>);
+</code></pre></div><p>Si fa notare come entrambi le funzioni <code>draw</code> e <code>setup</code> siano definite all&rsquo;interno dell&rsquo;oggetto <code>sketch</code>, attraverso la sintassi <code>sketch.setup</code> e <code>sketch.draw</code>.</p>
+<p>Si fa notare, inoltre, che entrambe le funzioni sono dichiarate come funzioni <strong>lambda</strong> al fine di non sovrascrivere il contesto dell&rsquo;oggetto <code>sketch</code>.</p>
+<p>Come già detto, sono argomenti avanzati, per cui non saranno utilizzati nei prossimi capitoli.</p>
 
     </div>
       <hr>
