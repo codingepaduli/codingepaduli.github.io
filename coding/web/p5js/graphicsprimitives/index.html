@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>02 - Primitive grafiche - Coding e Paduli</title>
+
+    <meta name="description" content="Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari">
+        <meta property="og:title" content="02 - Primitive grafiche" />
+<meta property="og:description" content="Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2020-09-10T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-09-10T00:00:00&#43;00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="02 - Primitive grafiche"/>
+<meta name="twitter:description" content="Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Coding e Paduli</div>
+					<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+				</div>
+		</a>
+	</div>
+		
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <input type="checkbox" id="my_menu">
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding e tools</a></li>
+
+      <li><a href="/interesting/">Interessanti</a></li>
+
+      <li><a href="/opensource/">Open Source</a></li>
+
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+     
+    #my_menu {
+      display: none;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+       
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+      #my_menu:checked + .my_navbar ul {
+         display: flex;  
+         text-align: center;
+      }
+    }
+  </style>
+
+	</div>
+</header>
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-10T00:00:00Z">10-09-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="primitive-per-la-grafica-2d">Primitive per la grafica 2D</h1>
+<!-- TODO correggere i riferimenti nella sezione "frontmatter" in YAML -->
+<p>Le primitive grafiche, nella moderna computer grafica, sono le funzioni che realizzano le figure geometriche più elementari, come punti, linee e triangoli. I poligoni e le curve sono considerate primitive, anche se possono essere realizzate combinando altre primitive. Oggetti e scene più complesse sono realizzati combinando l&rsquo;uso di più primitive.</p>
+<p>Ogni primitiva è una funzione, e quindi ha una firma composta dal nome e dalla lista di parametri formali, che possono essere obbligatori o facoltativi, riportati tra parentesi tonde.</p>
+<p>Di seguito saranno elencate le primitive principali, con i relativi parametri necessari ad invocarle. Per ulteriori dettagli sulle primitive grafiche, si rimanda alla documentazione ufficiale.</p>
+<h2 id="concetti-di-geometria-piana">Concetti di geometria piana</h2>
+<p>Alcuni concetti di geometria piana saranno necessari per chiarire il funzionamento delle primitive grafiche e saranno utilizzati nei capitoli seguenti.</p>
+<p>Il <strong>vertice</strong> è il punto di incontro di due lati di un poligono (triangolo, quadrilatero, ecc).</p>
+<p>Due segmenti che appartengono alla stessa retta e che hanno un solo punto in comune si dicono <strong>adiacenti</strong>. Allo stesso modo, due poligoni che condividono lo stesso lato si dicono adiacenti. Anche a tre dimensioni, due parallelepipedi che condividono la stessa faccia si dicono adiacenti.</p>
+<!-- vedi https://it.wikipedia.org/wiki/Tassellazione_dello_spazio -->
+<p>Due cerchi che hanno un solo punto in comune si dicono <strong>tangenti</strong>.</p>
+<h2 id="creazione-dellarea-da-disegno">Creazione dell&rsquo;area da disegno</h2>
+<p>L&rsquo;area da disegno è la tavola sulla quale disegnare ed è caratterizzata da una larghezza ed un&rsquo;altezza. La funzione progettata allo scopo è <code>createCanvas</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: createCanvas(w, h)
+
+Parameters:
+    w    Number: width of the canvas
+    h    Number: height of the canvas
+</code></pre></div><p>I parametri formali sono <code>w</code> ed <code>h</code>, che rappresentano la larghezza e l&rsquo;altezza dell&rsquo;area da disegno.</p>
+<p>Per creare un&rsquo;area da disegno di larghezza 600 ed altezza 400 punti, sostituiamo al parametro formale <code>w</code> (che indica la larghezza dell&rsquo;area da disegno) il valore <code>600</code> ed al parametro formale <code>h</code> (che indica l&rsquo;altezza dell&rsquo;area da disegno) il valore <code>400</code>, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">600</span>, <span style="color:#ae81ff">400</span>);
+</code></pre></div><h2 id="disegno-di-un-punto">Disegno di un punto</h2>
+<p>Il punto è l&rsquo;entità più semplice da realizzare. La funzione progettata allo scopo è <code>point</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: point(x, y, [z])
+
+Parameters:
+    x   Number: the x-coordinate
+    y   Number: the y-coordinate
+    z   Number: the z-coordinate (for WebGL mode) (Optional)
+</code></pre></div><p>I parametri formali sono <code>x</code>, <code>y</code> e <code>z</code>, che rappresentano le coordinate del <strong>punto</strong>.  I primi due parametri sono obbligatori e rappresentano le coordinate in un piano, il terzo parametro è tra parentesi quadre, quindi è opzionale, e lo si utilizza per indicare una terza coordinata in un sistema a tre dimensioni (non più un piano, ma uno spazio). Questo terzo parametro si usa solo quando si attiva la modalità WebGL, che non sarà trattata in questo capitolo.</p>
+<p>Per creare un punto alle coordinate (20, 20), sostituiamo al parametro formale <code>x</code> (che indica la coordinata X) il valore <code>20</code> ed al parametro formale <code>y</code> (che indica la coordinata Y) il valore <code>20</code>, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">point</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">20</span>);
+</code></pre></div><h2 id="disegno-di-una-linea">Disegno di una linea</h2>
+<p>La linea è un segmento che unisce due punti ed è realizzata dalla funzione <code>line</code> la cui firma è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: line(x1, y1, x2, y2)
+
+Parameters:
+    x1    Number: the x-coordinate of the first point
+    y1    Number: the y-coordinate of the first point
+    x2    Number: the x-coordinate of the second point
+    y2    Number: the y-coordinate of the second point
+</code></pre></div><p>I parametri formali <code>x1</code> ed <code>y1</code> rappresentano le coordinate del punto da cui parte la linea ed i parametri formali <code>x2</code> ed <code>y2</code> rappresentano le coordinate del punto in cui la linea termina.</p>
+<p>Per creare una linea che parte dal punto alle coordinate (80, 20) e termina al punto alle coordinate (120, 40), sostituiamo al parametro formale <code>x1</code> (che indica la coordinata X del punto di partenza) il valore <code>80</code>, al parametro formale <code>y1</code> (che indica la coordinata Y del punto di partenza) il valore <code>20</code>, al parametro formale <code>x2</code> (che indica la coordinata X del punto di arrivo) il valore <code>120</code> ed al parametro formale <code>y2</code> (che indica la coordinata Y del punto di arrivo) il valore <code>40</code>, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">line</span>(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">40</span>);
+</code></pre></div><h2 id="disegno-di-un-triangolo">Disegno di un triangolo</h2>
+<p>La figura del triangolo è caratterizzata da tre punti in cui originano e terminano i lati che la vanno a formare e la si può realizzare attraverso la funzione <code>triangle</code> la cui firma è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: triangle(x1, y1, x2, y2, x3, y3)
+
+Parameters
+    x1    Number: x-coordinate of the first point
+    y1    Number: y-coordinate of the first point
+    x2    Number: x-coordinate of the second point
+    y2    Number: y-coordinate of the second point
+    x3    Number: x-coordinate of the third point
+    y3    Number: y-coordinate of the third point
+</code></pre></div><p>I parametri formali <code>x1</code> ed <code>y1</code> rappresentano le coordinate del primo vertice,  <code>x2</code> ed <code>y2</code> rappresentano le coordinate del secondo vertice, <code>x3</code> ed <code>y3</code> le coordinate del terzo vertice.</p>
+<p>Per creare una triangolo i cui vertici si trovano alle coordinate (20, 60), (20, 100) e (60, 100), sostituiamo al parametro formale <code>x1</code> (che indica la coordinata X del primo vertice) il valore <code>20</code>, al parametro formale <code>y1</code> (che indica la coordinata Y del primo vertice) il valore <code>60</code>, al parametro formale <code>x2</code> (che indica la coordinata X del secondo vertice) il valore <code>20</code>, al parametro formale <code>y2</code> (che indica la coordinata Y del secondo vertice) il valore <code>100</code>, al parametro formale <code>x3</code> (che indica la coordinata X del terzo vertice) il valore <code>60</code>, al parametro formale <code>y2</code> (che indica la coordinata Y del secondo vertice) il valore <code>100</code>, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">triangle</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">100</span>);
+</code></pre></div><h2 id="disegno-di-un-cerchio">Disegno di un cerchio</h2>
+<p>Il cerchio è caratterizzata da un punto centrale ed un diametro e la si può realizzare attraverso la funzione <code>circle</code> la cui firma è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: circle(x, y, diameter)
+
+Parameters:
+    x           Number: x-coordinate of the centre of the circle.
+    y           Number: y-coordinate of the centre of the circle.
+    diameter    Number: diameter of the circle.
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del centro, <code>diameter</code> è la dimensione del diametro.</p>
+<p>Per creare un cerchio con centro nel punto (100, 80) e diametro 40, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del centro del cerchio) il valore <code>100</code>, al parametro formale <code>y</code> (che indica la coordinata y del centro del cerchio) il valore <code>80</code> ed al parametro formale <code>diameter</code> (che indica il diametro) il valore <code>40</code>, quindi invochiamo la funzione nel seguente modo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">40</span>);
+</code></pre></div><h2 id="disegno-di-un-quadrato">Disegno di un quadrato</h2>
+<p>Il quadrato è caratterizzata da un punto da cui iniziare a disegnare e dalla dimensione del lato. Si può disegnare attraverso la funzione <code>square</code> la cui firma è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: square(x, y, side)
+
+Parameters:
+    x     Number: the x-coordinate of the first point
+    y     Number: the y-coordinate of the first point
+    side  Number: side of the square
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto da cui iniziare a disegnare, <code>side</code> è la dimensione del lato.</p>
+<p>Per creare un quadrato con vertice in alto a sinistra nel punto (20, 140) e lato 40, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>20</code>, al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>140</code> ed al parametro formale <code>side</code> (che indica il lato) il valore <code>40</code>, quindi invochiamo la funzione nel seguente modo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">40</span>);
+</code></pre></div><h2 id="disegno-di-un-rettangolo">Disegno di un rettangolo</h2>
+<p>Il rettangolo è caratterizzata da un punto da cui iniziare a disegnare e dalla dimensioni della base e dell&rsquo;altezza. Lo si può realizzare attraverso la funzione <code>rect</code> la cui firma è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: rect(x, y, w, h)
+
+Parameters:
+    x     Number: the x-coordinate of the first point
+    y     Number: the y-coordinate of the first point
+    w     Number: width of the rectangle.
+    h     Number: height of the rectangle.
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del vertice in alto a sinistra da cui iniziare a disegnare, <code>w</code> ed <code>h</code> sono le dimensioni della base e dell&rsquo;altezza del rettangolo.</p>
+<p>Per creare un rettangolo con vertice in alto a sinistra nel punto (80, 140), base 80 ed altezza 20, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>80</code>, al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>140</code>, al parametro formale <code>w</code> (che indica la base) il valore <code>80</code> ed al parametro formale <code>h</code> (che indica l&rsquo;altezza) il valore <code>20</code>, quindi invochiamo la funzione nel seguente modo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">rect</span>(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>);
+</code></pre></div><h2 id="disegno-di-un-ellisse">Disegno di un ellisse</h2>
+<p>Un ellisse è una sorta di circonferenza &ldquo;schiacciata&rdquo;, la si può interpretare come una sorta di circonferenza con larghezza ed altezza differenti. Nel caso in cui la larghezza è uguale all&rsquo;altezza, la figura risultante è una circonferenza. Matematicamente parlando, l&rsquo;ellisse ha due punti focali invece di uno (a differenza della circonferenza che ha come unico fuoco il centro).</p>
+<p>La funzione per realizzare un ellisse è <code>ellipse</code>, la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: ellipse(x, y, w, h)
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto da cui iniziare a disegnare, <code>w</code> ed <code>h</code> sono le dimensioni della larghezza e dell&rsquo;altezza dell&rsquo;ellisse, come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ellipse</span>(<span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">220</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">40</span>);
+</code></pre></div><h2 id="disegno-di-un-arco-di-circonferenza-e-dellisse">Disegno di un arco di circonferenza e d&rsquo;ellisse</h2>
+<p>Un <strong>arco di circonferenza</strong> è il tratto di linea curva che ha le due estremità definite da due raggi della circonferenza stessa. Un <strong>arco d&rsquo;ellisse</strong> è simile ad un arco di circonferenza, con la differenza che il tratto di linea curva è parte dell&rsquo;ellisse.</p>
+<p>L&rsquo;arco di circonferenza lo si realizza impostando la stessa dimensione per larghezza ed altezza della figura. L&rsquo;arco d&rsquo;ellisse si realizza specificando valori differenti per larghezza ed altezza della figura;</p>
+<p>La funzione per realizzare un arco di circonferenza o d&rsquo;ellisse è <code>arc</code> la cui sintassi è la seguente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: arc(x, y, w, h, start, stop, [mode])
+</code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del centro, <code>w</code> ed <code>h</code> sono le dimensioni della larghezza e dell&rsquo;altezza della figura. Il parametro <code>start</code> indica l&rsquo;angolo del primo raggio che fa da prima estremità all&rsquo;arco, il parametro<code>stop</code> indica l&rsquo;angolo del secondo raggio che fa da seconda estremità all&rsquo;arco. Il parametro <code>mode</code> è tra parentesi quadre, quindi è opzionale, ed indica come disegnare l&rsquo;arco, in particolare come collegare i due estremi d&rsquo;arco.</p>
+<p>Per capire le modalità di disegno dell&rsquo;arco è necessario riportare alla mente altri due concetti di geometria.</p>
+<p>Un <strong>settore circolare</strong> è l&rsquo;area compresa tra l&rsquo;arco di circonferenza ed i raggi che delimitano le estremità dell&rsquo;arco.</p>
+<p>Una <strong>corda di circonferenza</strong> è un segmento che ha le due estremità definite da due punti della circonferenza stessa.</p>
+<p>Per indicare come disegnare l&rsquo;arco, si utilizza il parametro <code>mode</code> che è definito dalle seguenti costanti:</p>
+<ul>
+<li><code>OPEN</code>: indica di realizzare l&rsquo;arco come figura aperta, quindi senza linee di contorno per unire gli estremi. Questa è l&rsquo;impostazione predefinita;</li>
+<li><code>CHORD</code>: indica di chiudere l&rsquo;arco con una linea di contorno tracciata come corda di circonferenza;</li>
+<li><code>PIE</code>: indica di chiudere l&rsquo;arco realizzato con due raggi di contorno al fine di formare un settore circolare;</li>
+</ul>
+<p><img src="/static/coding/web/p5js/basics_arcs.png" alt="p5.js - Opzioni di disegno per gli archi di circonferenza" title="p5.js - Opzioni di disegno per gli archi di circonferenza"></p>
+<p>Gli archi non sono gli unici tipi di curve supportate. La libreria p5.js permette di disegnare curve complesse, come le curve <strong>spline</strong> e le curve di <strong>Bézier</strong>, ma per queste realizzazioni si rimanda alle specifiche e agli esempi ufficiali.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">40</span>, <span style="color:#a6e22e">PI</span>, <span style="color:#a6e22e">TWO_PI</span>);
+<span style="color:#a6e22e">arc</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">80</span>, <span style="color:#a6e22e">PI</span>, <span style="color:#a6e22e">TWO_PI</span>);
+</code></pre></div><h2 id="disegno-di-un-testo">Disegno di un testo</h2>
+<p>Il testo può essere racchiuso in un elemento HTML o gestito direttamente nell&rsquo;area da disegno. Per realizzarlo graficamente si utilizza la funzione <code>text</code>, che prevede la seguente sintassi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: text(str, x, y, [w], [h])
+</code></pre></div><p>Il parametro formale <code>str</code> indica il testo da disegnare, i parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto in alto a sinistra dal quale disegnare il testo.  I parametri <code>w</code> ed <code>h</code> sono tra parentesi quadre, quindi sono opzionali, e si utilizzano per indicare le dimensioni del rettangolo nel quale racchiudere il testo come nel seguente esempio:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;questo è un testo&#34;</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">340</span>);
+<span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;questo è un testo troppo lungo&#34;</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">360</span>, <span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">20</span>);
+</code></pre></div><p>Bisogna prestare attenzione al fatto che se il testo è troppo grande e non può essere racchiuso nell&rsquo;area del rettangolo, la parte eccessiva del testo non sarà disegnata.</p>
+<!-- TODO check it
+
+## Esercizio svolto
+
+Creiamo un'area da disegno, delle dimensioni di 600 per 400, nella quale disegniamo:
+
+- un punto alle coordinate (20, 20);
+- una linea che parte dalle coordinate (80, 20) e termina alle coordinate (120, 40);
+- un triangolo con vertici i punti alle coordinate (20, 60), (20, 100) e (60, 100);
+- una circonferenza alle coordinate (100, 80) e di diametro 40;
+- un quadrato con angolo in alto a sinistra posizionato alle coordinate square(20, 140) e con lato 40;
+- un rettangolo con angolo in alto a sinistra posizionato alle coordinate (80, 140) e con larghezza 80 ed altezza 20;
+- un ellisse con centro alle coordinate (60, 220), con larghezza 80 ed altezza 40;
+- un arco di circonferenza
+
+
+Di seguito, si visualizza un esempio completo delle figure realizzate mediante il codice riportato nei vari esempi mostrati:
+
+![p5.js - Basi della grafica 2D](/static/coding/web/p5js/basics.png "p5.js - Basi della grafica 2D")
+
+-->
+
+    </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="https://gabrielgambetta.com/computer-graphics-from-scratch/introduction.html" style="font-weight: 700; color: #e22d30;">Computer Graphics from scratch</a>: Computer Graphics from scratch (for 3D rendering)</p>
+  </article>
+</main>
+
+
+
+<script src="/static/js/p5-1.2.0-min.js"></script><script src="/static/coding/web/p5js/Example02.js"></script><script src="/static/coding/web/p5js/basics.js"></script>
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/p5js/intro/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">01 - Introduzione alla libreria grafica p5.js</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/p5js/basics_exe/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">02.1 - Esercizi di grafica 2D</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Coding e Paduli.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -89,12 +89,12 @@
     </item>
     
     <item>
-      <title>01 - Introduzione alla libreria grafica p5.js</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/intro/</link>
+      <title>02 - Primitive grafiche</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/p5js/intro/</guid>
-      <description>Introduzione alla libreria grafica p5.js</description>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</guid>
+      <description>Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari</description>
     </item>
     
     <item>
@@ -107,12 +107,12 @@
     </item>
     
     <item>
-      <title>Test sui numeri primi con la libreria grafica p5.js</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/primes/</link>
-      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      <title>01 - Introduzione alla libreria grafica p5.js</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/intro/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/p5js/primes/</guid>
-      <description>Test sui numeri primi con la libreria grafica p5.js</description>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/intro/</guid>
+      <description>Introduzione alla libreria grafica p5.js</description>
     </item>
     
   </channel>
