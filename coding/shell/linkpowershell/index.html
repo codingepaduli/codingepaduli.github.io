@@ -40,15 +40,29 @@
         <header class="header">
 	<div class="container header__container">
 		
+	
 	<div class="logo">
-		<a class="logo__link" href="/" title="Coding e Paduli" rel="home">
-			<div class="logo__item logo__text">
-					<div class="logo__title">Coding e Paduli</div>
-					<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
-				</div>
-		</a>
-	</div>
-		
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item logo__text">
+        <div class="logo__title">
+          Coding e Paduli
+        </div>
+      </div>
+
+      
+      <div>
+        
+
   <div class="menu_button">
     
     <label for="my_menu">
@@ -58,7 +72,34 @@
       <span></span>
     </label>
   </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
   <input type="checkbox" id="my_menu">
+
+
+		
+
   <nav class="my_navbar">
     <ul>
 
@@ -71,6 +112,11 @@
       <li><a href="/webapp/">WebApp</a></li>
     </ul>
   </nav>
+
+	</div>
+</header>
+
+
 
   <style>
      
@@ -89,6 +135,26 @@
       color: white;
       font-weight: 700;
     }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
      
     .menu_button {
       display: none;
@@ -112,31 +178,26 @@
       width: 80%;
       margin: 5px 0px;
     }
-     
-    #my_menu {
-      display: none;
-    }
 
      
     @media screen and (max-width: 767px) {
-       
       .menu_button {
         display: flex;  
         justify-content: flex-end;  
       }
-      .my_navbar ul {
-         flex-direction: column;
-         display: none;  
-      }
-      #my_menu:checked + .my_navbar ul {
-         display: flex;  
-         text-align: center;
-      }
     }
   </style>
 
-	</div>
-</header>
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
         <div class="wrapper flex">
             <div class="primary">
             
