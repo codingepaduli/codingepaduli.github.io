@@ -1,6 +1,14 @@
 {
+  "name": "codingepaduli",
+  "short_name": "C&P",
+  "start_url": "/",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "display": "standalone",
+  "description": " Ennesimo sito/blog di programmazione ed informatica in generale",
   "icons": [
     { "src": "/static/icon-192.png", "type": "image/png", "sizes": "192x192" },
     { "src": "/static/icon-512.png", "type": "image/png", "sizes": "512x512" }
-  ]
+  ],
+  "splash_pages": null
 }
