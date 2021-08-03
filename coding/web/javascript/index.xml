@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lezioni sul linguaggio Javascript on Coding e Paduli</title>
+    <title>Lezioni sul linguaggio JavaScript on Coding e Paduli</title>
     <link>http://codingepaduli.github.io/coding/web/javascript/</link>
-    <description>Recent content in Lezioni sul linguaggio Javascript on Coding e Paduli</description>
+    <description>Recent content in Lezioni sul linguaggio JavaScript on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
     <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/coding/web/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>09 - Document Object Model (DOM)</title>
+      <title>JavaScript Lez. 09 - Document Object Model (DOM)</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>08 - DOM e selettori CSS</title>
+      <title>JavaScript Lez. 08 - DOM e selettori CSS</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/selettoricss/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>07 - Istruzioni basilari per processare il contenuto di una pagina web</title>
+      <title>JavaScript Lez. 07 - Istruzioni basilari per processare il contenuto di una pagina web</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/interazionehtml/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>06 - Funzioni</title>
+      <title>JavaScript Lez. 06 - Funzioni</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/funzioni/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -44,7 +44,7 @@
     </item>
     
     <item>
-      <title>05 - Istruzioni condizionali ed iterative</title>
+      <title>JavaScript Lez. 05 - Istruzioni condizionali ed iterative</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>04 - Operatori ed espressioni</title>
+      <title>JavaScript Lez. 04 - Operatori ed espressioni</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/operatori/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>04 - Identificazione del tipo e conversioni tra tipi</title>
+      <title>JavaScript Lez. 04 - Identificazione del tipo e conversioni tra tipi</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/conversioni/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -71,7 +71,7 @@
     </item>
     
     <item>
-      <title>03 - Costanti, variabili e tipi di dato</title>
+      <title>JavaScript Lez. 03 - Costanti, variabili e tipi di dato</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/variabili/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -80,7 +80,7 @@
     </item>
     
     <item>
-      <title>02 - Primi script</title>
+      <title>JavaScript Lez. 02 - Primi script</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/primi_script/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -89,7 +89,7 @@
     </item>
     
     <item>
-      <title>01 - Introduzione al linguaggio JavaScript</title>
+      <title>JavaScript Lez. 01 - Introduzione al linguaggio JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/intro/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       

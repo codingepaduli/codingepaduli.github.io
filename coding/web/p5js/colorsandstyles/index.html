@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>03 - Colori e stili - Coding e Paduli</title>
+    <title>p5.js Lez. 03 - Colori e stili - Coding e Paduli</title>
 
     <meta name="description" content="Colori e stili">
-        <meta property="og:title" content="03 - Colori e stili" />
+        <meta property="og:title" content="p5.js Lez. 03 - Colori e stili" />
 <meta property="og:description" content="Colori e stili" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2020-09-13T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-09-13T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-09-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-13T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="03 - Colori e stili"/>
+<meta name="twitter:title" content="p5.js Lez. 03 - Colori e stili"/>
 <meta name="twitter:description" content="Colori e stili"/>
 
 
@@ -281,21 +281,21 @@
 <li><code>HSB</code>, costante che indica di utilizzare il modello HSB.</li>
 </ul>
 <p>Un esempio d&rsquo;uso per impostare il modello di colori da utilizzare è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
 </code></pre></div><h2 id="disegnare-testi-e-figure-colorati">Disegnare testi e figure colorati</h2>
 <h3 id="usare-un-colore-di-sfondo">Usare un colore di sfondo</h3>
 <p>Fin&rsquo;ora abbiamo utilizzato la funzione <code>background</code> per impostare lo sfondo. Questa funzione prevede differenti modalità per indicare il colore di sfondo. La modalità tipica è di utilizzare tre parametri per indicare il colore nel modello di colori utilizzato.</p>
 <p>Ad esempio, per impostare uno sfondo rosso &ldquo;acceso&rdquo;, usando il modello di colori <strong>HSB</strong>, si utilizza il seguente codice:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">HSB</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">HSB</span>);
 <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>);
 </code></pre></div><p>Come secondo esempio, per impostare uno sfondo blu usando il modello di colori <strong>RGB</strong>, si utilizza il seguente codice:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
 <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
 </code></pre></div><h3 id="usare-un-colore-di-riempimento">Usare un colore di riempimento</h3>
 <p>Per scegliere il colore (sempre riferito al modello di colori utilizzato) di <strong>riempimento</strong> da utilizzare per qualsiasi entità da disegnare, si utilizza la funzione <code>fill</code>, che usa tre parametri per indicare il colore.</p>
 <p>Una volta impostato il colore di <strong>riempimento</strong>, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi entità da disegnare. Se si vuole cambiare il colore di riempimento, bisogna richiamare nuovamente la funzione <code>fill</code> impostando un altro colore.</p>
 <p>Ad esempio, supponiamo di voler disegnare un triangolo ed un cerchio di un colore, e poi un rettangolo ed un quadrato di un secondo colore, si utilizzerà il seguente codice:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
 <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
 
 <span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// primo colore, combinazione di rosso e verde
@@ -310,11 +310,11 @@
 <h3 id="usare-uno-stile-di-linea">Usare uno stile di linea</h3>
 <p>Punti, linee e contorni possono essere stilizzati impostando lo spessore delle linee, il colore, il tipo di linea (continua, tratteggiata, ecc..).</p>
 <p>Per impostare lo spessore, si utilizza la funzione <code>strokeWeight</code> che prende come parametro lo spessore in pixel della linea, come nel seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">4</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">4</span>);
 </code></pre></div><p>Per scegliere il colore (sempre riferito al modello di colori utilizzato) di <strong>linea</strong> da utilizzare per qualsiasi entità da disegnare, si utilizza la funzione <code>stroke</code>, che usa tre parametri per indicare il colore.</p>
 <p>Una volta impostato il colore di <strong>linea</strong>, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi entità da disegnare. Se si vuole cambiare il colore di linea, bisogna richiamare nuovamente la funzione <code>stroke</code> impostando un altro colore.</p>
 <p>Ad esempio, supponiamo di riprendere l&rsquo;esempio precedente e di voler aggiungere anche stile di linea e colore di contorno delle figure. Per effettuare ciò, si utilizzerà il seguente codice:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
 <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
 
 <span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">4</span>);     <span style="color:#75715e">// primo spessore di linea
@@ -335,7 +335,7 @@
 <h3 id="usare-uno-stile-di-testo">Usare uno stile di testo</h3>
 <p>Il testo può essere stilizzato impostando il carattere, la dimensione, l&rsquo;allineamento, ecc&hellip;</p>
 <p>Per impostare la dimensione del testo, si utilizza la funzione <code>textSize</code>, che prende come parametro la dimensione in pixel del testo, come nel seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">16</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">16</span>);
 <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
 </code></pre></div><p>Una volta impostata la dimensione del testo, questa sarà <strong>memorizzato</strong> e quindi sarà utilizzata per qualsiasi testo da disegnare. Se si vuole cambiare la dimensione del testo, bisogna richiamare nuovamente la funzione <code>textSize</code> impostando un altro colore.</p>
 <p>Lo stesso discorso vale per l&rsquo;allineamento, che viene memorizzato e quindi utilizzato per qualsiasi testo da disegnare.</p>
@@ -350,7 +350,7 @@
 <li><code>BASELINE</code> indica l&rsquo;allineamento verticale sulla linea di base;</li>
 </ul>
 <p>Un esempio d&rsquo;uso dell&rsquo;allineamento del testo è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textAlign</span>(<span style="color:#a6e22e">RIGHT</span>, <span style="color:#a6e22e">CENTER</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textAlign</span>(<span style="color:#a6e22e">RIGHT</span>, <span style="color:#a6e22e">CENTER</span>);
 <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
 </code></pre></div><p>Anche i classici stili del testo sono indicati attraverso delle costanti, di seguito elencate:</p>
 <ul>
@@ -360,12 +360,12 @@
 <li><code>BOLDITALIC</code>: indica lo stile di testo <strong>corsivo-grassetto</strong>.</li>
 </ul>
 <p>Per impostare la dimensione del testo, si utilizza la funzione <code>textStyle</code>, che prende come parametro la costante di allineamento tra quelle precedentemente elencate, come nel seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textStyle</span>(<span style="color:#a6e22e">ITALIC</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textStyle</span>(<span style="color:#a6e22e">ITALIC</span>);
 <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
 </code></pre></div><p>Una volta impostato lo stile del testo, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi testo da disegnare. Se si vuole cambiare lo stile del testo, bisogna richiamare nuovamente la funzione <code>textSize</code> impostando un altro colore.</p>
 <p>Per il caricamento e la scelta del carattere da utilizzare (in inglese il <strong>font</strong>), si rimanda alle specifiche della libreria.</p>
 <p>Di seguito un esempio completo del disegno del testo con il codice fino ad ora utilizzato:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">16</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">16</span>);
 <span style="color:#a6e22e">textAlign</span>(<span style="color:#a6e22e">RIGHT</span>, <span style="color:#a6e22e">CENTER</span>);
 <span style="color:#a6e22e">textStyle</span>(<span style="color:#a6e22e">ITALIC</span>);
 <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
@@ -385,14 +385,14 @@
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/web/p5js/basics_exe/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">02.1 - Esercizi di grafica 2D</p>
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">p5.js Lez. 02.1 - Esercizi di grafica 2D</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/p5js/colorsandstyles_exe/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">03.1 - Esercizi di grafica 2D a colori</p>
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">p5.js Lez. 03.1 - Esercizi di grafica 2D a colori</p>
 		</a>
 	</div>
 </nav>
@@ -411,7 +411,7 @@
 		
 		<div class="footer__copyright">
 			&copy; 2021 Coding e Paduli.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>

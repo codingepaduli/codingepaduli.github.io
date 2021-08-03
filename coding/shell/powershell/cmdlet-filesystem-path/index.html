@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +11,8 @@
 <meta property="og:description" content="Filesystem - Gestione percorsi" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-path/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2020-04-13T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-04-13T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-04-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-13T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
@@ -318,25 +318,25 @@ PS /home/user &gt;
 </ul>
 <h3 id="impostare-la-cartella-di-lavoro-corrente">Impostare la cartella di lavoro corrente</h3>
 <p>L&rsquo;impostazione della cartella di lavoro corrente avviene con la CmdLet <code>Set-Location</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Location [[-Path] &lt;String&gt;]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Location [[-Path] &lt;String&gt;]
 </code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
 <ul>
 <li><code>Path</code>: il percorso della cartella da impostare come cartella corrente;</li>
 </ul>
 <p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Location -Path <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Location -Path <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
 </code></pre></div><p>E' possibile usare l&rsquo;alias <code>cd</code>, noto su tutti i sistemi operativi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cd <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cd <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
 </code></pre></div><h3 id="ottenere-la-cartella-di-lavoro-corrente">Ottenere la cartella di lavoro corrente</h3>
 <p>Per visualizzare o ottenere la cartella di lavoro corrente si utilizza la CmdLet <code>Get-Location</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location
 </code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location
 </code></pre></div><p>E' possibile usare l&rsquo;alias <code>pwd</code>, noto sui sistemi Gnu/Linux, Unix e Mac.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">pwd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">pwd
 </code></pre></div><h3 id="verifica-esistenza-o-correttezza-sintattica-dei-percorsi">Verifica esistenza o correttezza sintattica dei percorsi</h3>
 <p>La verifica dell&rsquo;esistenza o della correttezza sintattica di uno o più percorsi avviene con la CmdLet <code>Test-Path</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path  [-Path] &lt;String[]&gt; [-PathType &lt;TestPathType&gt;] [-IsValid]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path  [-Path] &lt;String[]&gt; [-PathType &lt;TestPathType&gt;] [-IsValid]
 </code></pre></div><p>Questo CmdLet restituisce un valore <strong>booleano</strong> che, se affermativo, indica l&rsquo;esistenza o la correttezza sintattica di tutti i percorsi indicati, se negativo, indica l&rsquo;inesistenza o l&rsquo;errata sintassi di uno dei percorsi indicato.</p>
 <p>I parametri indicati nella sintassi hanno il seguente significato:</p>
 <ul>
@@ -362,16 +362,16 @@ PS /home/user &gt;
 </li>
 </ul>
 <p>Per verificare l&rsquo;esistenza di una cartella, si usa il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;C:\test&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;C:\test&#34;</span>
 </code></pre></div><p>Per verificare che la stringa indicata nel percorso sia corretta sintatticamente, si usa il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;/test&#34;</span> -IsValid
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;/test&#34;</span> -IsValid
 </code></pre></div><p>Per verificare che il file indicato esista e sia effettivamente un file, si usa il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;file.txt&#34;</span> -PathType <span style="color:#e6db74">&#34;leaf&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;file.txt&#34;</span> -PathType <span style="color:#e6db74">&#34;leaf&#34;</span>
 </code></pre></div><h3 id="ottenere-la-lista-di-drive-disponibili">Ottenere la lista di drive disponibili</h3>
 <p>Per visualizzare o ottenere la lista di drive disponibili nel sistema si utilizza la CmdLet <code>Get-PSDrive</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSDrive
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSDrive
 </code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSDrive
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSDrive
 </code></pre></div><p>Output:</p>
 <pre><code class="language-output" data-lang="output">Name           Used (GB)     Free (GB) Provider      Root
 ----           ---------     --------- --------      ----
@@ -399,13 +399,13 @@ Variable                               Variable
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/shell/powershell/primiscript/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
 			<p class="pager__title">03 - Primi comandi e primi script</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/shell/powershell/cmdlet-filesystem-filecartelle/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
 			<p class="pager__title">05 - Filesystem - Gestione file e cartelle</p>
 		</a>
 	</div>
@@ -425,7 +425,7 @@ Variable                               Variable
 		
 		<div class="footer__copyright">
 			&copy; 2021 Coding e Paduli.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>

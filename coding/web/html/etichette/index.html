@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +11,8 @@
 <meta property="og:description" content="HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/etichette/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2019-07-16T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-07-16T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2019-07-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-07-16T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
@@ -237,9 +237,9 @@ l&rsquo;inizio e la fine di un elemento della pagina web.</p>
 <li>l&rsquo;etichetta di chiusura è composta dalle parentesi angolari contenenti il nome dell&rsquo;etichetta preceduto dal carattere <code>/</code>.</li>
 </ul>
 <p>Per esempio,
-l&rsquo;etichetta di inizio del titolo è <code>&lt;h1&gt;</code> e l&rsquo;etichetta di fine titolo è <code>&lt;/h1&gt;</code>, quindi, il titolo in HTML sarà scritto usando il codice: <code>&lt;h1&gt;Titolo&lt;/h1&gt;</code>;
-l&rsquo;etichetta di inizio paragrafo è <code>&lt;p&gt;</code> e l&rsquo;etichetta di fine paragrafo è <code>&lt;/p&gt;</code>, quindi, il paragrafo in HTML sarà scritto usando il codice: <code>&lt;p&gt;paragrafo&lt;/p&gt;</code>;
-l&rsquo;etichetta di inizio testo evidenziato è <code>&lt;mark&gt;</code> e l&rsquo;etichetta di fine testo evidenziato è <code>&lt;/mark&gt;</code>, quindi, il testo evidenziato in HTML sarà scritto usando il codice: <code>&lt;mark&gt;testo evidenziato&lt;/mark&gt;</code>;</p>
+l&rsquo;etichetta di inizio del titolo è <code>&lt;h1&gt;</code> e l&rsquo;etichetta di fine titolo è <code>&lt;/h1&gt;</code>, quindi, il titolo in HTML sarà scritto tra le due etichette usando il codice: <code>&lt;h1&gt;Titolo&lt;/h1&gt;</code>;
+l&rsquo;etichetta di inizio paragrafo è <code>&lt;p&gt;</code> e l&rsquo;etichetta di fine paragrafo è <code>&lt;/p&gt;</code>, quindi, il paragrafo in HTML sarà scritto tra le due etichette usando il codice: <code>&lt;p&gt;paragrafo&lt;/p&gt;</code>;
+l&rsquo;etichetta di inizio testo evidenziato è <code>&lt;mark&gt;</code> e l&rsquo;etichetta di fine testo evidenziato è <code>&lt;/mark&gt;</code>, quindi, il testo evidenziato in HTML sarà scritto tra le due etichette usando il codice: <code>&lt;mark&gt;testo evidenziato&lt;/mark&gt;</code>;</p>
 <p><strong>L&rsquo;etichetta di chiusura non è sempre prevista, esistono delle eccezioni di cui tenere conto.</strong></p>
 <h2 id="prima-pagina-web">Prima pagina web</h2>
 <p>Un&rsquo;indicazione fondamentale che deve essere inserita <strong>nella prima riga</strong> della pagina web (del file HTML) è la dichiarazione del &ldquo;tipo di documento&rdquo;: si deve indicare che il documento è scritto in HTML, utilizzando il codice <code>&lt;!doctype html&gt;</code> (&ldquo;doctype&rdquo; è l&rsquo;abbreviazione di &ldquo;document type&rdquo;, che tradotto significa &ldquo;tipo di documento&rdquo;, quindi si dichiara che il tipo di documento è &ldquo;HTML&rdquo;).</p>
@@ -251,7 +251,7 @@ di chiusura <code>&lt;/html&gt;</code> indica la fine del documento HTML);</p>
 apertura <code>&lt;body&gt;</code> indica l&rsquo;inizio dei contenuti e l&rsquo;etichetta
 di chiusura <code>&lt;/body&gt;</code> indica la fine dei contenuti). Questa etichetta deve essere inserita nell&rsquo;etichetta <code>html</code>.</p>
 <p>La pagina HTML risultante  (ancora incompleta) è la seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!doctype html&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!doctype html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
   &lt;<span style="color:#f92672">body</span>&gt;
     <span style="color:#75715e">&lt;!-- contenuti della pagina html --&gt;</span>
@@ -261,12 +261,32 @@ di chiusura <code>&lt;/body&gt;</code> indica la fine dei contenuti). Questa eti
 &lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><p>Si fa notare nuovamente che tutte le etichette nell&rsquo;esempio riportato sono prima aperte e
 poi chiuse.</p>
-<p>Inoltre, sempre dall&rsquo;esempio precedente, si nota che le etichette possono essere inserite (innestate) l&rsquo;una dentro l&rsquo;altra, come per i contenuti della pagina web (titolo e paragrafo) che si trovano nell&rsquo;etichetta <code>body</code> , che a sua volta è posizionata nell&rsquo;etichetta <code>html</code>.</p>
-<p>Anche l&rsquo;indentazione è una caratteristica molto apprezzata, perché migliora la leggibilità e permette di rilevare gli errori più rapidamente. Difatti, il codice riportato nell&rsquo;esempio è <strong>indentato</strong>. Alcuni editor di testo permettono di indentare il documento in maniera automatica.</p>
-<p>Ed ancora, la presenza di <strong>commenti</strong> è praticamente d&rsquo;obbligo, poiché rappresentano informazioni aggiuntive e promemoria che chiariscono lo scopo del programmatore.</p>
+<p>Sempre dall&rsquo;esempio precedente, si nota che le etichette possono essere inserite (innestate) l&rsquo;una dentro l&rsquo;altra, come avviene per i contenuti della pagina web presentata (il titolo ed il paragrafo) che si trovano nell&rsquo;etichetta <code>body</code> , che a sua volta è posizionata nell&rsquo;etichetta <code>html</code>.</p>
+<h2 id="dom">DOM</h2>
+<p>Esiste un modello che descrive la struttura della pagina web come una struttura gerarchica: il DOM (dall&rsquo;inglese Document Object Model), utilizzato soprattutto in un contesto che tratta di JavaScript, ma molto ricorrente anche quando si parla di HTML.</p>
+<p>In questo modello gerarchico, ogni etichetta della pagina web (il documento ipertestuale) è interpretata come un oggetto posizionato all&rsquo;interno di un albero (tipica struttura gerarchica).</p>
+<p>La radice dell&rsquo;albero è l&rsquo;etichetta <code>html</code>, dato che al suo interno sono presenti tutti gli elementi della pagina web.</p>
+<p>Dalla radice si estendono poi i nodi di &ldquo;primo livello&rdquo;, ovvero tutte le etichette contenute nell&rsquo;etichetta <code>html</code>.</p>
+<p>Da questi nodi di primo livello si estendono i nodi di secondo livello, ovvero le etichette contenute nelle etichette di primo livello, e cosi via per i successivi livelli.</p>
+<p>Le foglie dell&rsquo;albero sono le etichette che non posseggono contenuti.</p>
+<p>Un esempio di rappresentazione della pagina web illustrata in precedenza, secondo il modello DOM è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">html
+└── body
+    ├── h1
+    └── p
+</code></pre></div><p>Data la struttura gerarchica, è possibile stabilire delle relazioni tra gli elementi. Un elemento che contiene altri elementi è detto elemento padre, e di conseguenza gli elementi contenuti in quel nodo sono detti figli. Gli elementi che si trovano nello stesso livello si dicono fratelli, e cosí via con le altre relazioni.</p>
+<h2 id="indentazione">Indentazione</h2>
+<p>L&rsquo;indentazione è una caratteristica che migliora la leggibilità del codice e permette di rilevare gli errori più rapidamente.</p>
+<p>Indentare il codice significa inserire un determinato nunero di spazi all&rsquo;inizio di ogni riga, in maniera proporzionale al livello dell&rsquo;etichetta presente sulla riga.</p>
+<p>Ad esempio, per l&rsquo;etichetta radice <code>html</code> non sono previsti spazi di indentazione, dato che è a livello zero.</p>
+<p>Per l&rsquo;etichetta di primo livello <code>body</code>, è necessario aggiungere quattro spazi prima dell&rsquo;etichetta stessa.</p>
+<p>Per le etichette di secondo livello è necessario aggiungere otto spazi, per quelle di terzo livello sono necessari dodici, e cosí via..</p>
+<p>Se si riguarda il codice riportato nell&rsquo;esempio prededente, si può vedere che è indentato. Alcuni editor di testo permettono di indentare il documento in maniera automatica.</p>
+<h2 id="commenti">Commenti</h2>
+<p>La presenza di <strong>commenti</strong> è praticamente d&rsquo;obbligo, poiché questi rappresentano informazioni aggiuntive e promemoria che chiariscono lo scopo del programmatore.</p>
 <p>I commenti si scrivono tra i caratteri <code>&lt;!--</code> e <code>--&gt;</code>, l&rsquo;unica attenzione da porre è che non devono essere presenti spazi tra i caratteri indicati. Un commento può occupare più righe.</p>
 <p>Di seguito, un esempio di commento multilinea:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- commento relativo i
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- commento relativo i
 </span><span style="color:#75715e">     contenuti della
 </span><span style="color:#75715e">     pagina html --&gt;</span>
 </code></pre></div><h2 id="etichette-obsolete">Etichette obsolete</h2>
@@ -274,7 +294,7 @@ poi chiuse.</p>
 <p>Il termine <strong>obsoleto</strong>, nel linguaggio tecnico, è utilizzato per indicare tecnologie antiquate e quindi in disuso, magari perché non più competitive rispetto ad altre basate su idee più avanzate.</p>
 <p>Il termine significa anche &ldquo;logorato&rdquo;, e lo si utilizza soprattutto quando si parla di <strong>obsolescenza programmata</strong>, ovvero quella odiosa strategia commerciale utilizzata per rendere logoro, e quindi inutilizzabile, un prodotto dopo un certo tempo di utilizzo.</p>
 <p>Di seguito, un esempio di etichette obsolete che è possibile trovare in qualche pagina web non aggiornata:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">acronym</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;as soon as possible&#34;</span>&gt;ASAP&lt;/<span style="color:#f92672">acronym</span>&gt; --&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">acronym</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;as soon as possible&#34;</span>&gt;ASAP&lt;/<span style="color:#f92672">acronym</span>&gt; --&gt;
 &lt;<span style="color:#f92672">big</span>&gt;This text is big&lt;/<span style="color:#f92672">big</span>&gt;
 </code></pre></div><p>Gli strumenti di validazione del codice HTML aiutano a rilevare, e quindi sostituire, le etichette obsolete.</p>
 
@@ -291,13 +311,13 @@ poi chiuse.</p>
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/web/html/intro/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
 			<p class="pager__title">HTML Lez. 01 - Introduzione</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/html/tagtesto/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
 			<p class="pager__title">HTML Lez. 03 - Etichette per la formattazione del testo</p>
 		</a>
 	</div>
@@ -317,7 +337,7 @@ poi chiuse.</p>
 		
 		<div class="footer__copyright">
 			&copy; 2021 Coding e Paduli.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>

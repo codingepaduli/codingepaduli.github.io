@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>06 - Funzioni - Coding e Paduli</title>
+    <title>JavaScript Lez. 06 - Funzioni - Coding e Paduli</title>
 
     <meta name="description" content="Funzioni">
-        <meta property="og:title" content="06 - Funzioni" />
+        <meta property="og:title" content="JavaScript Lez. 06 - Funzioni" />
 <meta property="og:description" content="Funzioni" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/funzioni/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2020-04-26T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-04-26T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-04-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-26T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="06 - Funzioni"/>
+<meta name="twitter:title" content="JavaScript Lez. 06 - Funzioni"/>
 <meta name="twitter:description" content="Funzioni"/>
 
 
@@ -224,17 +224,17 @@
 <p>Alle funzioni viene dato un <strong>nome</strong>, in modo da poter eseguire l&rsquo;operazione più volte semplicemente usando il nome (e non dover ripetere il blocco di codice).</p>
 <p>Le funzioni sono <strong>dichiarate</strong> dalla parola chiave <code>function</code> seguita dal nome, dalle parentesi tonde <code>()</code> ed infine dal blocco di codice racchiuso tra le parentesi graffe <code>{</code> e <code>}</code>.</p>
 <p>Un esempio di funzione che scrive il proprio nome è la seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>() {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>() {
     <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Mario Rossi&#34;</span>);
 }
 </code></pre></div><p>E' importante notare la differenza tra <strong>dichiarazione</strong> ed <strong>invocazione</strong>: la funzione dichiarata viene &ldquo;creata&rdquo; ma non viene &ldquo;eseguita&rdquo;.</p>
 <p>Per eseguire la funzione è necessario invocarla mediante il nome, seguito dalle parentesi tonde <code>()</code>.</p>
 <p>Ad esempio, per invocare la funzione dichiarata nel codice precedente si usa:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>();
 </code></pre></div><p>Questo esempio produce in output il messaggio seguente:</p>
 <pre><code class="language-output" data-lang="output">Mario Rossi
 </code></pre><p>Per eseguire più volte la funzione, e quindi eseguire più volte il blocco di codice corrispondente, la si deve invocare più volte, come nel seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>();
 <span style="color:#a6e22e">scriviNome</span>();
 <span style="color:#a6e22e">scriviNome</span>();
 <span style="color:#a6e22e">scriviNome</span>();
@@ -242,7 +242,7 @@
 <h2 id="modalità-di-esecuzione">Modalità di esecuzione</h2>
 <p>Le funzioni possono essere eseguite in modalità <code>strict</code> o <code>sloppy</code>, indipendentemente dalla modalità di esecuzione indicata negli script.</p>
 <p>Per cui, per specificare la modalità <code>strict</code> è necessario indicarla all&rsquo;inizio di ogni funzione, come nel seguente esempio.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>() {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>() {
     <span style="color:#e6db74">&#39;use strict&#39;</span>;
 
     <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Mario Rossi&#34;</span>);
@@ -250,7 +250,7 @@
 </code></pre></div><h2 id="valore-di-ritorno">Valore di ritorno</h2>
 <p>Le funzioni sono progettate per eseguire un&rsquo;operazione. Il risultato di questa operazione può essere restituito, attraverso la parola chiave <code>return</code>, a chi invoca la funzione.</p>
 <p>Supponendo ad esempio di voler <strong>definire</strong> una funzione che scriva il proprio nome nella console e che lo restituisca anche al chiamante, il codice sarà il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>() {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>() {
     <span style="color:#e6db74">&#39;use strict&#39;</span>;
 
     <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">nome</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Mario Rossi&#34;</span>;
@@ -258,20 +258,20 @@
     <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">nome</span>;
 }
 </code></pre></div><p>Per <strong>invocare</strong> la funzione dichiarata nel codice precedente ed ottenere il risultato si usa il seguente codice:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ris</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">scriviNome</span>();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ris</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">scriviNome</span>();
 </code></pre></div><p>La variabile <code>ris</code> assume quindi valore <code>Mario Rossi</code>, dato che l&rsquo;istruzione <code>return</code> restituisce questo valore.</p>
 <h2 id="parametri">Parametri</h2>
 <p>L&rsquo;operazione che viene svolta da una funzione può necessitare di uno o più parametri su cui lavorare.</p>
 <p>L&rsquo;esempio visto fin&rsquo;ora della funzione <code>scriviNome</code> mostrava sempre lo stesso nome (Mario Rossi). Questa funzione potrebbe essere generalizzata permettendo di scrivere un qualsiasi nome e cognome. Ciò significa che è necessario passare alla funzione <code>scriviNome</code> il nome ed il cognome da mostrare, <strong>passandoli come parametri</strong>.</p>
 <p>Per poter usare i parametri, questi devono essere indicati nella definizione tra le parentesi tonde, come nel seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>(<span style="color:#a6e22e">nome</span>, <span style="color:#a6e22e">cognome</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>(<span style="color:#a6e22e">nome</span>, <span style="color:#a6e22e">cognome</span>) {
     <span style="color:#e6db74">&#39;use strict&#39;</span>;
 
     <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">nome</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">cognome</span>);
 }
 </code></pre></div><p>Come si può notare, i parametri <code>nome</code> e <code>cognome</code> passati alla funzione sono utilizzati come se fossero delle variabili.</p>
 <p><strong>Definita</strong> la funzione con i parametri, è possibile <strong>invocarla</strong> passando i valori da utilizzare sempre tra le parentesi tonde, come nel seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Mario&#34;</span>, <span style="color:#e6db74">&#34;Rossi&#34;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Mario&#34;</span>, <span style="color:#e6db74">&#34;Rossi&#34;</span>);
 <span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Giuseppe&#34;</span>, <span style="color:#e6db74">&#34;Verdi&#34;</span>);
 <span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Pinco&#34;</span>, <span style="color:#e6db74">&#34;Pallino&#34;</span>);
 <span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Tizio&#34;</span>, <span style="color:#e6db74">&#34;Caio&#34;</span>);
@@ -283,7 +283,7 @@ Tizio Caio
 </code></pre><p>L&rsquo;uso dei parametri ci permette quindi di rendere &ldquo;generica&rdquo; l&rsquo;operazione definita dalla funzione.</p>
 <h2 id="parametri-di-default">Parametri di default</h2>
 <p>E' possibile assegnare ai parametri un valore predefinito, come per il seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>(<span style="color:#a6e22e">nome</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mario&#34;</span>, <span style="color:#a6e22e">cognome</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Rossi&#34;</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>(<span style="color:#a6e22e">nome</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mario&#34;</span>, <span style="color:#a6e22e">cognome</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Rossi&#34;</span>) {
     <span style="color:#e6db74">&#39;use strict&#39;</span>;
 
     <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">nome</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">cognome</span>);
@@ -292,7 +292,7 @@ Tizio Caio
 <p>E' possibile definire funzioni che prendano un numero variabile di parametri, precedendo l&rsquo;unico o l&rsquo;ultimo parametro  con i tre punti <code>...</code>.</p>
 <p>Dato che questo tipo di sintassi crea di fatto una collezione di valori, è possibile accedervi attraverso l&rsquo;istruzione iterativa <code>for-in</code>.</p>
 <p>Supponendo, ad esempio, di voler creare una funzione che scriva un numero imprecisato di nomi, il codice sarà il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>(...<span style="color:#a6e22e">nomi</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scriviNome</span>(...<span style="color:#a6e22e">nomi</span>) {
     <span style="color:#e6db74">&#39;use strict&#39;</span>;
 
     <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">nome</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">nomi</span>) {
@@ -300,7 +300,7 @@ Tizio Caio
     }
 }
 </code></pre></div><p>Definita la funzione, è possibile invocarla passando tutti i parametri di cui si ha necessità, come nei seguenti esempi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Mario Rossi&#34;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Mario Rossi&#34;</span>);
 <span style="color:#a6e22e">scriviNome</span>(<span style="color:#e6db74">&#34;Giuseppe Verdi&#34;</span>, <span style="color:#e6db74">&#34;Pinco Pallino&#34;</span>, <span style="color:#e6db74">&#34;Tizio Caio&#34;</span>);
 </code></pre></div>
     </div>
@@ -316,14 +316,14 @@ Tizio Caio
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/web/javascript/istruzioni_condizionali_iterative/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">05 - Istruzioni condizionali ed iterative</p>
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">JavaScript Lez. 05 - Istruzioni condizionali ed iterative</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/javascript/interazionehtml/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">07 - Istruzioni basilari per processare il contenuto di una pagina web</p>
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">JavaScript Lez. 07 - Istruzioni basilari per processare il contenuto di una pagina web</p>
 		</a>
 	</div>
 </nav>
@@ -342,7 +342,7 @@ Tizio Caio
 		
 		<div class="footer__copyright">
 			&copy; 2021 Coding e Paduli.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>

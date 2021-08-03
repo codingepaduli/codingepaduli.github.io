@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>02.1 - Esercizi di grafica 2D - Coding e Paduli</title>
+    <title>p5.js Lez. 02.1 - Esercizi di grafica 2D - Coding e Paduli</title>
 
     <meta name="description" content="Esercizi di grafica 2D">
-        <meta property="og:title" content="02.1 - Esercizi di grafica 2D" />
+        <meta property="og:title" content="p5.js Lez. 02.1 - Esercizi di grafica 2D" />
 <meta property="og:description" content="Esercizi di grafica 2D" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/basics_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2020-09-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-09-12T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-09-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-12T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="02.1 - Esercizi di grafica 2D"/>
+<meta name="twitter:title" content="p5.js Lez. 02.1 - Esercizi di grafica 2D"/>
 <meta name="twitter:description" content="Esercizi di grafica 2D"/>
 
 
@@ -235,34 +235,63 @@
 <li>da destra verso sinistra e dal basso verso l&rsquo;alto;</li>
 <li>da destra verso sinistra e dal basso verso l&rsquo;alto;</li>
 </ol>
-<p>La funzione <code>createCanvas(a, b)</code> serve a creare:</p>
+<p>Il termine API significa:</p>
 <ol>
-<li>l&rsquo;area da disegno di larghezza ed altezza indicate rispettivamente dai parametri <code>a</code> e <code>b</code>;</li>
-<li>l&rsquo;area da disegno di altezza e larghezza indicate rispettivamente dai parametri <code>a</code> e <code>b</code>;</li>
-<li>una pagina web di altezza e larghezza indicate rispettivamente dai parametri <code>a</code> e <code>b</code>;</li>
-<li>un sistema di coordinate di altezza e larghezza indicate rispettivamente dai parametri <code>a</code> e <code>b</code>;</li>
+<li>Application Public Interface;</li>
+<li>Abstract Public Interface;</li>
+<li>Application Programming Interface;</li>
+<li>Abstract Programming Interface.</li>
 </ol>
-<p>La funzione <code>line</code> serve a disegnare una linea nell&rsquo;area da disegno. Questa funzione prevede:</p>
+<p>In ambito informatico, per poter utilizzare una funzione si devono conoscere tutte le seguenti caratteristiche:</p>
 <ol>
-<li>un solo parametro;</li>
-<li>due parametri;</li>
-<li>tre parametri;</li>
-<li>quattro parametri;</li>
+<li>il nome, la lista dei parametri ed il compito che svolge;</li>
+<li>il nome, la descrizione, il compito che svolge;</li>
+<li>la descrizione, la lista di parametri formali, la lista di parametri attuali;</li>
+<li>la descrizione, la lista di parametri obbligatori, la lista di parametri facoltativi;</li>
 </ol>
-<p>La funzione <code>circle</code> serve a disegnare un cerchio nell&rsquo;area da disegno. Questa funzione prevede:</p>
+<p>La documentazione di una funzione indica per ogni parametro formale:</p>
 <ol>
-<li>un solo parametro indicante il punto in cui disegnare il cerchio;</li>
-<li>due parametri indicanti il punto in cui disegnare il cerchio;</li>
-<li>tre parametri indicanti il punto in cui disegnare il cerchio ed il raggio ed il diametro del cerchio;</li>
-<li>quattro parametri indicanti il punto in cui disegnare il cerchio, il raggio ed il diametro del cerchio;</li>
+<li>il nome, il tipo, la descrizione ed il parametro attaule;</li>
+<li>il nome, il tipo e l&rsquo;obbligatorietà;</li>
+<li>il nome, il tipo, la descrizione, l&rsquo;obbligatorietà ed il parametro attuale;</li>
+<li>il nome, il tipo, la descrizione e l&rsquo;obbligatorietà;</li>
 </ol>
-<p>La funzione <code>rect</code> serve a disegnare un rettangolo nell&rsquo;area da disegno. Questa funzione prevede:</p>
+<p>Un nuovo progetto creato nell&rsquo;editor online è composto dai seguenti file:</p>
 <ol>
-<li>un solo parametro indicante il punto in cui disegnare il rettangolo;</li>
-<li>due parametri indicanti il punto in cui disegnare il rettangolo;</li>
-<li>tre parametri indicanti il punto in cui disegnare il rettangolo e dimensione del rettangolo;</li>
-<li>quattro parametri indicanti il punto in cui disegnare il rettangolo, larghezza ed altezza del rettangolo;</li>
+<li>la pagina web <code>index.html</code>, la libreria grafica <code>sketch.js</code>, la libreria audio <code>p5.sound.js</code>, il file <code>p5.js</code> con il proprio lavoro, il file di stile <code>style.css</code>;</li>
+<li>la pagina web <code>sketch.js</code>, la libreria grafica <code>p5.js</code>, la libreria audio <code>p5.sound.js</code>, il file <code>index.html</code> con il proprio lavoro, il file di stile <code>style.css</code>;</li>
+<li>la pagina web <code>p5.js</code>, la libreria grafica <code>index.html</code>, la libreria audio <code>p5.sound.js</code>, il file <code>sketch.js</code> con il proprio lavoro, il file di stile <code>style.css</code>;</li>
+<li>la pagina web <code>sketch.js</code>, la libreria grafica <code>style.css</code>, la libreria audio <code>p5.sound.js</code>, il file <code>p5.js</code> con il proprio lavoro, il file di stile <code>index.html</code>;</li>
 </ol>
+<!--
+La funzione ``createCanvas(a, b)`` serve a creare:
+
+1. l'area da disegno di larghezza ed altezza indicate rispettivamente dai parametri ``a`` e ``b``;
+2. l'area da disegno di altezza e larghezza indicate rispettivamente dai parametri ``a`` e ``b``;
+3. una pagina web di altezza e larghezza indicate rispettivamente dai parametri ``a`` e ``b``;
+4. un sistema di coordinate di altezza e larghezza indicate rispettivamente dai parametri ``a`` e ``b``;
+
+La funzione ``line`` serve a disegnare una linea nell'area da disegno. Questa funzione prevede:
+
+1. un solo parametro;
+2. due parametri;
+3. tre parametri;
+4. quattro parametri;
+
+La funzione ``circle`` serve a disegnare un cerchio nell'area da disegno. Questa funzione prevede:
+
+1. un solo parametro indicante il punto in cui disegnare il cerchio;
+2. due parametri indicanti il punto in cui disegnare il cerchio;
+3. tre parametri indicanti il punto in cui disegnare il cerchio ed il raggio ed il diametro del cerchio;
+4. quattro parametri indicanti il punto in cui disegnare il cerchio, il raggio ed il diametro del cerchio;
+
+La funzione ``rect`` serve a disegnare un rettangolo nell'area da disegno. Questa funzione prevede:
+
+1. un solo parametro indicante il punto in cui disegnare il rettangolo;
+2. due parametri indicanti il punto in cui disegnare il rettangolo;
+3. tre parametri indicanti il punto in cui disegnare il rettangolo e dimensione del rettangolo;
+4. quattro parametri indicanti il punto in cui disegnare il rettangolo, larghezza ed altezza del rettangolo;
+-->
 <h2 id="esercizi-sugli-angoli">Esercizi sugli angoli</h2>
 <p>Data una circonferenza di diametro a scelta dello studente, utilizzando la funzione <code>arc</code>, disegnare gli archi di circonferenza aventi le seguenti ampiezze: 30, 45, 60, 90, 180, 270 e 360 gradi. Sotto ogni arco, aggiungere un testo indicante l&rsquo;ampiezza dell&rsquo;arco.
 Dato che la funzione <code>arc</code> disegna gli archi misurando gli angoli in senso orario, disegnare gli archi di circonferenza della stessa ampiezza indicata in precedenza, simulando però che gli archi siano disegnati misurando gli angoli in senso antiorario. Anche per questo punto, sotto ogni arco deve essere aggiunto un testo indicante l&rsquo;ampiezza dell&rsquo;arco.</p>
@@ -284,14 +313,14 @@ Dato che la funzione <code>arc</code> disegna gli archi misurando gli angoli in 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/web/p5js/graphicsprimitives/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">02 - Primitive grafiche</p>
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">p5.js Lez. 02 - Primitive grafiche</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/p5js/colorsandstyles/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">03 - Colori e stili</p>
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">p5.js Lez. 03 - Colori e stili</p>
 		</a>
 	</div>
 </nav>
@@ -310,7 +339,7 @@ Dato che la funzione <code>arc</code> disegna gli archi misurando gli angoli in 
 		
 		<div class="footer__copyright">
 			&copy; 2021 Coding e Paduli.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>

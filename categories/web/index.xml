@@ -8,7 +8,7 @@
     <language>it-IT</language>
     <lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>05 - Accesso ai pixel di un&#39;immagine</title>
+      <title>p5.js Lez. 05 - Accesso ai pixel di un&#39;immagine</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>04.4 - Soluzione progetto Arknoid</title>
+      <title>p5.js Lez. 04.4 - Soluzione progetto Arknoid</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>04.3 - Progetto Arknoid</title>
+      <title>p5.js Lez. 04.3 - Progetto Arknoid</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>04.2 - Soluzione progetto Pong</title>
+      <title>p5.js Lez. 04.2 - Soluzione progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -44,7 +44,7 @@
     </item>
     
     <item>
-      <title>04.1 - Progetto Pong</title>
+      <title>p5.js Lez. 04.1 - Progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>04 - Interattività ed animazioni</title>
+      <title>p5.js Lez. 04 - Interattività ed animazioni</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/interactivity/</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>03.1 - Esercizi di grafica 2D a colori</title>
+      <title>p5.js Lez. 03.1 - Esercizi di grafica 2D a colori</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles_exe/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -71,7 +71,7 @@
     </item>
     
     <item>
-      <title>03 - Colori e stili</title>
+      <title>p5.js Lez. 03 - Colori e stili</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</link>
       <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -80,7 +80,7 @@
     </item>
     
     <item>
-      <title>02.1 - Esercizi di grafica 2D</title>
+      <title>p5.js Lez. 02.1 - Esercizi di grafica 2D</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/basics_exe/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -89,7 +89,7 @@
     </item>
     
     <item>
-      <title>02 - Primitive grafiche</title>
+      <title>p5.js Lez. 02 - Primitive grafiche</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -98,7 +98,7 @@
     </item>
     
     <item>
-      <title>Libreria grafica p5.js</title>
+      <title>p5.js Lez. Libreria grafica p5.js</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -107,7 +107,7 @@
     </item>
     
     <item>
-      <title>01 - Introduzione alla libreria grafica p5.js</title>
+      <title>p5.js Lez. 01 - Introduzione alla libreria grafica p5.js</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/intro/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -116,7 +116,7 @@
     </item>
     
     <item>
-      <title>09 - Document Object Model (DOM)</title>
+      <title>JavaScript Lez. 09 - Document Object Model (DOM)</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -125,7 +125,7 @@
     </item>
     
     <item>
-      <title>08 - DOM e selettori CSS</title>
+      <title>JavaScript Lez. 08 - DOM e selettori CSS</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/selettoricss/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
@@ -134,7 +134,7 @@
     </item>
     
     <item>
-      <title>07 - Istruzioni basilari per processare il contenuto di una pagina web</title>
+      <title>JavaScript Lez. 07 - Istruzioni basilari per processare il contenuto di una pagina web</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/interazionehtml/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -143,7 +143,7 @@
     </item>
     
     <item>
-      <title>06 - Funzioni</title>
+      <title>JavaScript Lez. 06 - Funzioni</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/funzioni/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -152,7 +152,7 @@
     </item>
     
     <item>
-      <title>05 - Istruzioni condizionali ed iterative</title>
+      <title>JavaScript Lez. 05 - Istruzioni condizionali ed iterative</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -161,7 +161,7 @@
     </item>
     
     <item>
-      <title>04 - Operatori ed espressioni</title>
+      <title>JavaScript Lez. 04 - Operatori ed espressioni</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/operatori/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -170,7 +170,7 @@
     </item>
     
     <item>
-      <title>04 - Identificazione del tipo e conversioni tra tipi</title>
+      <title>JavaScript Lez. 04 - Identificazione del tipo e conversioni tra tipi</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/conversioni/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -179,7 +179,7 @@
     </item>
     
     <item>
-      <title>03 - Costanti, variabili e tipi di dato</title>
+      <title>JavaScript Lez. 03 - Costanti, variabili e tipi di dato</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/variabili/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -188,7 +188,7 @@
     </item>
     
     <item>
-      <title>02 - Primi script</title>
+      <title>JavaScript Lez. 02 - Primi script</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/primi_script/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -197,7 +197,7 @@
     </item>
     
     <item>
-      <title>01 - Introduzione al linguaggio JavaScript</title>
+      <title>JavaScript Lez. 01 - Introduzione al linguaggio JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/intro/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -206,12 +206,12 @@
     </item>
     
     <item>
-      <title>Lezioni sul linguaggio Javascript</title>
+      <title>Lezioni sul linguaggio JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/</guid>
-      <description>Lezioni sul linguaggio Javascript</description>
+      <description>Lezioni sul linguaggio JavaScript</description>
     </item>
     
     <item>

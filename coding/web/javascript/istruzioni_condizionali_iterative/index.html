@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>05 - Istruzioni condizionali ed iterative - Coding e Paduli</title>
+    <title>JavaScript Lez. 05 - Istruzioni condizionali ed iterative - Coding e Paduli</title>
 
     <meta name="description" content="Istruzioni condizionali ed iterative">
-        <meta property="og:title" content="05 - Istruzioni condizionali ed iterative" />
+        <meta property="og:title" content="JavaScript Lez. 05 - Istruzioni condizionali ed iterative" />
 <meta property="og:description" content="Istruzioni condizionali ed iterative" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2020-04-25T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-04-25T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-04-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-25T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="05 - Istruzioni condizionali ed iterative"/>
+<meta name="twitter:title" content="JavaScript Lez. 05 - Istruzioni condizionali ed iterative"/>
 <meta name="twitter:description" content="Istruzioni condizionali ed iterative"/>
 
 
@@ -226,7 +226,7 @@
 <p>Nelle istruzioni condizionali ed iterative, è sempre consigliato l&rsquo;uso delle parentesi graffe <code>{</code> e <code>}</code> per delimitare i blocchi di istruzioni.</p>
 <h2 id="istruzione-condizionale-if-else">Istruzione condizionale if-else</h2>
 <p>L&rsquo;istruzione utilizzata per eseguire un azione piuttosto che un&rsquo;altra è l&rsquo;istruzione <code>if-else</code>. Questa istruzione ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition</span>) {
   <span style="color:#75715e">// gruppo di istruzioni eseguite se la
 </span><span style="color:#75715e"></span>  <span style="color:#75715e">// condizione viene valutata con valore true
 </span><span style="color:#75715e"></span>} <span style="color:#66d9ef">else</span> {
@@ -234,7 +234,7 @@
 </span><span style="color:#75715e"></span>  <span style="color:#75715e">// condizione viene valutata con valore false
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">batteria</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">batteria</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>) {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;computer in fase di spegnimento&#34;</span>);
 } <span style="color:#66d9ef">else</span> {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;batteria carica&#34;</span>);
@@ -242,12 +242,12 @@
 </code></pre></div><h2 id="operatore-ternario-">Operatore ternario &ldquo;?&rdquo;</h2>
 <p>L&rsquo;operatore ternario è un operatore che valuta una condizione e restituisce un valore piuttosto che un altro a seconda che una condizione si verifichi o meno. La sintassi è una sorta di abbreviazione dell&rsquo;istruzione <code>if-else</code> ed è generalmente utilizzata nelle assegnazioni.</p>
 <p>Questo operatore ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">condizione</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">valore1</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">valore2</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">condizione</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">valore1</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">valore2</span>;
 </code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">eta</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;maggiorenne&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;minorenne&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">eta</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;maggiorenne&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;minorenne&#34;</span>;
 </code></pre></div><h2 id="istruzione-condizionale-switch-case">Istruzione condizionale switch-case</h2>
 <p>L&rsquo;istruzione utilizzata per determinare le istruzioni da eseguire a seconda del valore di un&rsquo;espressione è l&rsquo;istruzione <code>switch-case</code>. Questa istruzione ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">espressione</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">espressione</span>) {
   <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">valore1</span><span style="color:#f92672">:</span>
     <span style="color:#a6e22e">istruzioni1</span>;
   <span style="color:#66d9ef">break</span>;
@@ -263,11 +263,11 @@
 <h2 id="istruzione-iterativa-while">Istruzione iterativa while</h2>
 <p>L&rsquo;istruzione iterativa utilizzata per ripetetere un gruppo di istruzioni zero o più volte è l&rsquo;istruzione <code>while</code>. Con questa istruzione, la condizione viene valuta ripetutamente ed ogni volta che assume valore <code>true</code>, esegue il gruppo di istruzioni, mentre quando assume valore <code>false</code> termina l&rsquo;iterazione.</p>
 <p>Questa istruzione ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">condition</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">condition</span>) {
   <span style="color:#75715e">// gruppo di istruzioni da eseguire
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">minuti</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>) {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;Allarme attivo per &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">minuti</span>);
   <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">++</span>;
@@ -276,11 +276,11 @@
 <h2 id="istruzione-iterativa-do-while">Istruzione iterativa do-while</h2>
 <p>L&rsquo;istruzione iterativa utilizzata per ripetetere un gruppo di istruzioni uno o più volte è l&rsquo;istruzione <code>do-while</code>. Con questa istruzione, prima si esegue il gruppo di istruzioni e poi si valuta la condizione. Ogni volta che la condizione assume valore <code>true</code>, il gruppo di istruzioni viene eseguito, mentre quando assume valore <code>false</code> l&rsquo;iterazione termina.</p>
 <p>Questa istruzione ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">condition</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">condition</span>) {
   <span style="color:#75715e">// gruppo di istruzioni da eseguire
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">minuti</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>) {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;Allarme attivo per &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">minuti</span>);
   <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">++</span>;
@@ -289,24 +289,24 @@
 <h2 id="istruzione-iterativa-for">Istruzione iterativa for</h2>
 <p>Anche l&rsquo;istruzione <code>for</code> ripete un gruppo di istruzioni uno o più volte. E' tipicamente utilizzata per ripeterlo un determinato numero di volte, ma potrebbe non eseguirlo affatto.</p>
 <p>Questa istruzione ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">inizializzazione</span>; <span style="color:#a6e22e">condizione</span>; <span style="color:#a6e22e">incremento</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">inizializzazione</span>; <span style="color:#a6e22e">condizione</span>; <span style="color:#a6e22e">incremento</span>) {
   <span style="color:#75715e">// gruppo di istruzioni da eseguire
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>L&rsquo;inizializzazione indica la condizione iniziale;
 La condizione indica se eseguire o meno il gruppo di istruzioni, come per le altre istruzioni iterative;
 L&rsquo;incremento indica l&rsquo;istruzione da eseguire prima della prossima valutazione della condizione;</p>
 <p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">minuti</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; <span style="color:#a6e22e">minuti</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">5</span>) {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#34;Allarme attivo per &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">minuti</span>);
 }
 </code></pre></div><h2 id="istruzione-iterativa-for-in">Istruzione iterativa for-in</h2>
 <p>L&rsquo;istruzione iterativa utilizzata per eseguire un gruppo di istruzioni per ogni proprietà di un oggetto è l&rsquo;istruzione <code>for-in</code>. Questa istruzione ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">property</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">oggetto</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">property</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">oggetto</span>) {
   <span style="color:#75715e">// gruppo di istruzioni da eseguire
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">persona</span> <span style="color:#f92672">=</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">persona</span> <span style="color:#f92672">=</span> {
   <span style="color:#a6e22e">nome</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Mario&#34;</span>,
   <span style="color:#a6e22e">cognome</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Rossi&#34;</span>,
   <span style="color:#a6e22e">eta</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>
@@ -317,11 +317,11 @@ L&rsquo;incremento indica l&rsquo;istruzione da eseguire prima della prossima va
 }
 </code></pre></div><h2 id="istruzione-iterativa-for-of">Istruzione iterativa for-of</h2>
 <p>L&rsquo;istruzione iterativa utilizzata per eseguire un gruppo di istruzioni per ogni elemento di una collezione di dati è l&rsquo;istruzione <code>for-of</code>. Questa istruzione ha la seguente sintassi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">elemento</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">collezione</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">elemento</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">collezione</span>) {
   <span style="color:#75715e">// gruppo di istruzioni da eseguire
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">array1</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>];
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">array1</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>];
 
 <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">element</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">array1</span>) {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">element</span>);
@@ -340,14 +340,14 @@ L&rsquo;incremento indica l&rsquo;istruzione da eseguire prima della prossima va
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/web/javascript/operatori/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">04 - Operatori ed espressioni</p>
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">JavaScript Lez. 04 - Operatori ed espressioni</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/javascript/funzioni/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">06 - Funzioni</p>
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">JavaScript Lez. 06 - Funzioni</p>
 		</a>
 	</div>
 </nav>
@@ -366,7 +366,7 @@ L&rsquo;incremento indica l&rsquo;istruzione da eseguire prima della prossima va
 		
 		<div class="footer__copyright">
 			&copy; 2021 Coding e Paduli.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>

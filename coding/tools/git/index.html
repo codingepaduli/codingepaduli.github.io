@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +11,8 @@
 <meta property="og:description" content="Git - Un sistema per il controllo di versione distribuito" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/tools/git/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2020-07-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-07-01T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-07-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-01T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
@@ -225,13 +225,13 @@
 <h2 id="installazione-di-git">Installazione di git</h2>
 <p>Git è facilmente installabile attraverso i package manager. Di seguito sono elencati i comandi, relativi ai package manager più conosciuti, necessari per installare Git. Si presuppone, ovviamente, che l&rsquo;utente abbia installato il package manager a cui il comando si riferisce.</p>
 <p>Su package manager &ldquo;choco&rdquo; di Windows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">choco install git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">choco install git
 </code></pre></div><p>Su package manager &ldquo;apt&rdquo; di Linux (Debian based):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install git-all
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install git-all
 </code></pre></div><p>Su package manager &ldquo;apt&rdquo; di Linux (RedHat based):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dnf install git-all
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dnf install git-all
 </code></pre></div><p>Su package manager &ldquo;homebrew&rdquo;:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install git
 </code></pre></div><p>Se non si dispone di un package manager, si può effettuare il download del pacchetto di installazione dal sito <a href="https://git-scm.com/" title="Sito Git SCM">https://git-scm.com/</a>.</p>
 <p>Il processo guida l&rsquo;utente nell&rsquo;installazione e nella configurazione iniziale di git, per cui è necessario comprendere le scelte da effettuare durante questo processo.</p>
 <p>La prima schermata mostra la licenza da accettare.</p>
@@ -375,9 +375,9 @@
 <p><a href="https://gitlab.com/codingepaduli/gitmergetutorial.git" title="GitLab - URL completo del Repository">https://gitlab.com/codingepaduli/gitmergetutorial.git</a></p>
 <h3 id="clonazione-repository">Clonazione repository</h3>
 <p>Una volta creato il repository remoto, bisogna prendere nota dell&rsquo;indirizzo web dello stesso per poi procedere alla clonazione, attraverso il seguente comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/progetto-git/progetto-git.github.io.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/progetto-git/progetto-git.github.io.git
 </code></pre></div><p>Si può verificare che il repository locale ha un riferimento al repository remoto, accedendo alla cartella creata ed utilizzando, al suo interno, il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote -v
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote -v
 </code></pre></div><h3 id="prima-configurazione-del-repository">Prima configurazione del repository</h3>
 <p>Git ha 3 livelli di configurazione:</p>
 <ul>
@@ -386,32 +386,32 @@
 <li>configurazione locale al repository, si trova nella cartella <code>.git</code>;</li>
 </ul>
 <p>Per verificare le configurazioni presenti ad ogni livello, si usano i seguenti comandi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --system --list
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --system --list
 git config --global --list
 git config --local --list
 </code></pre></div><p>E' buona norma evitare di usare la configurazione di sistema, disabilitandola attraverso il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.useConfigOnly true
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.useConfigOnly true
 </code></pre></div><p>Per configurare globalmente l&rsquo;identità da utilizzare nei propri repository, si utilizzano i seguenti comandi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.name <span style="color:#e6db74">&#34;User&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.name <span style="color:#e6db74">&#34;User&#34;</span>
 git config --global user.email <span style="color:#e6db74">&#34;user@user.com&#34;</span>
 </code></pre></div><p>Altra operazione generalmente consigliata è l&rsquo;impostazione del carattere di fine riga, dato che su Linux e Mac il carattere di fine riga (INVIO) è LF (line feed) mentre su Windows il carattere di fine riga (INVIO) è CR + LF (carriage return + line feed).</p>
 <p>Questa differenza di caratteri porta ad avere confusione quando un file è modificato sia da utenti Mac/Linux sia da utenti Windows. Molti editors su Windows sostituiscono i caratteri di fine riga LF con i caratteri CR + LF, oppure lasciano gli LF ma inseriscono CR + LF quando si preme invio.</p>
 <p>Una macchina windows deve quindi essere configurata per la conversione automatica da LF a CR + LF e viceversa:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.autocrlf true
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.autocrlf true
 </code></pre></div><p>Una macchina Linux invece deve essere abilitata per la correzione automatica di tutti i file che arrivano dal repository trasformando i caratteri CR + LF con il carattere LF:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.autocrlf input
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.autocrlf input
 </code></pre></div><p>Nella configurazione è utile anche impostare l&rsquo;editor di riferimento:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.editor <span style="color:#e6db74">&#34;atom --wait&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.editor <span style="color:#e6db74">&#34;atom --wait&#34;</span>
 </code></pre></div><p>Infine, è consigliato non ignorare la differenza tra caratteri minuscoli e maiuscoli nei nomi dei file, con il comando</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.ignorecase false
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global core.ignorecase false
 </code></pre></div><h3 id="staging-area-e-commit">Staging area e commit</h3>
 <p>Per creare una nuova versione del repository locale e poi sincronizzarla con il repository remoto, si può partire dalla creazione di tre file, <code>file1.txt</code>, <code>file2.txt</code> e <code>file3.txt</code>, in modo da seguire le varie operazioni.</p>
 <p>Creati i  tre file, si può aggiungere il primo file all&rsquo;area di lavoro, chiamata <strong>staging area</strong> o <strong>caching area</strong>, utilizzando il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add file1.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add file1.txt
 </code></pre></div><p>Per visualizzare ora lo stato dei file, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
 </code></pre></div><p>L&rsquo;output è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Sul branch main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Sul branch main
 Your branch is up to date with &#39;origin/main&#39;.
 
 Changes to be committed:
@@ -426,9 +426,9 @@ Untracked files:
   file3.txt
 </code></pre></div><p>Si nota che il file <code>file1.txt</code> risulta pronto per il commit (&ldquo;to be committed&rdquo;), mentre i file <code>file2.txt</code> e <code>file3.txt</code> risultano tra i file non tracciati (&ldquo;untracked&rdquo;).</p>
 <p>Effettuando ulteriori modifiche al file <code>file1.txt</code>, questo risulta modificato, come si nota visualizzando lo stato dei file attraverso il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
 </code></pre></div><p>L&rsquo;output è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Sul branch main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Sul branch main
 Your branch is up to date with &#39;origin/main&#39;.
 
 Changes not staged for commit:
@@ -450,58 +450,58 @@ Untracked files:
 <li>unmodified: non modificati rispetto all&rsquo;ultimo commit;</li>
 </ul>
 <p>Per committare il primo file <code>file.txt</code>, questo deve essere innanzitutto aggiunto all&rsquo;area di lavoro, poi si può indicare che si vuole effettuare un commit dell&rsquo;area di lavoro (la staging area).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add file1.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add file1.txt
 git commit -m <span style="color:#e6db74">&#34;Primo commit&#34;</span>
 </code></pre></div><p>A questo punto il commit è stato completato ed è stata salvata la nuova versione del repository locale. Per visualizzare la lista di commit e relative versioni del repository locale, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#34;%h %s&#34;</span> --graph
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#34;%h %s&#34;</span> --graph
 </code></pre></div><p>Questo comando permetta anche di avere una vista grafica delle varie versioni del repository locale.</p>
 <p>E' utile sottolineare che <strong>HEAD</strong> è solo un riferimento al commit (e quindi alla versione) su cui ci si trova, ovviamente riferito al ramo di sviluppo su cui si lavora.</p>
 <p>Quando si scaricano le ultime versioni da repository remoto nel repository locale, il riferimento <strong>HEAD</strong> viene aggiornato all&rsquo;ultimo commit scaricato da remoto, sempre per il ramo di sviluppo su cui si sta lavorando. Quando invece si effettua un commit in locale, il riferimento <strong>HEAD</strong> viene aggiornato a questo commit.</p>
 <h3 id="sincronizzazione">Sincronizzazione</h3>
 <p>Effettuati i vari commit sul repository locale, ci si trova nella situazione in cui il repository locale si trova in una versione più avanzata rispetto al repository remoto (che è stato clonato).</p>
 <p>Per sincronizzare il lavoro (tutti i commit sul repository locale) con il repository remoto, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin main
 </code></pre></div><p>L&rsquo;operazione di push invia tutti i commit (che sono stati eseguiti sul repository locale) al repository remoto.</p>
 <p>Per effettuare l&rsquo;operazione inversa, cioè per ricevere nel repository locale tutti i commit dal repository remoto (eseguiti dallo stesso utente attraverso computer differenti o eseguiti da altri utenti),  si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git pull origin main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git pull origin main
 </code></pre></div><h3 id="pulizia-della-staging-area">Pulizia della staging area</h3>
 <p>Può capitare di aggiungere per errore un file alla staging area, per cui lo si vuole togliere, senza però cancellarlo e perdere il contenuto, ma lasciandolo intatto nella cartella in cui si trova. Il comando da utilizzare è:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rm --cached file
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rm --cached file
 </code></pre></div><p>Se invece si è modificato un file in staging area e si vuole cancellare le ultime modifiche effettuate, lasciando il file con le modifiche precedenti in staging area, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git reset HEAD file
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git reset HEAD file
 </code></pre></div><p>Se si vuole ripristinare lo stato dell&rsquo;ultimo commit, allora bisogna cancellare la staging area, e quindi si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout .
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout .
 </code></pre></div><p>Se si vuole cancellare tutti i file e cartelle che non sono tracciati, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clean -fd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clean -fd
 </code></pre></div><p>Per cancellare la cache, in caso di &ldquo;malfunzionamenti&rdquo;, si usa:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git gc --auto
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git gc --auto
 </code></pre></div><h3 id="stashing-area-conservazione-temporanea">Stashing area (conservazione temporanea)</h3>
 <p>Quando si stanno applicando modifiche ai file e si deve interrompere l&rsquo;attività per dare priorità ad altri lavori, si possono spostare i file modificati in un&rsquo;area di conservazione temporanea: la <strong>stashing area</strong>.</p>
 <p>Per spostare tutti i file modificati e i file non tracciati in un&rsquo;area temporanea si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash
 </code></pre></div><p>Per visualizzare la lista di aree temporanee disponibili, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash list
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash list
 </code></pre></div><p>Questo comando elenca tutte le aree temporanee (che possono essere più di una) identificandole con un numero. Questo numero è utilizzato per identificare l&rsquo;area temporanea.</p>
 <p>Per riportare nella staging area i file precedentemente spostati in stashing area, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash apply stash@<span style="color:#f92672">{</span>0<span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash apply stash@<span style="color:#f92672">{</span>0<span style="color:#f92672">}</span>
 </code></pre></div><p>dove il numero zero è l&rsquo;indice dell&rsquo;area temporanea dalla quale prendere i file.</p>
 <p>Per eliminare un&rsquo;area temporanea, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash drop stash@<span style="color:#f92672">{</span>0<span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash drop stash@<span style="color:#f92672">{</span>0<span style="color:#f92672">}</span>
 </code></pre></div><p>dove il numero zero è l&rsquo;indice dell&rsquo;area temporanea da cancellare.</p>
 <h3 id="lavorare-con-più-origini-remote">Lavorare con più origini remote</h3>
 <p>Quando si effettua la clonazione di un repository, Git crea un riferimento a questo repository remoto, chiamato <strong>origin</strong>:</p>
 <p>E' però possibile utilizzate più repository remoti, semplicemente aggiungendo un riferimento remoto, di seguito chiamato <strong>gitlab</strong>, al repository locale:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add gitlab https://gitlab.com/progetto-git/progetto-git.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add gitlab https://gitlab.com/progetto-git/progetto-git.git
 </code></pre></div><p>Per visualizzare i repository remoti, si può utilizzare il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote -v
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote -v
 </code></pre></div><p>L&rsquo;output mostrato è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">gitlab https://gitlab.com/progetto-git/progetto-git.git (fetch)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">gitlab https://gitlab.com/progetto-git/progetto-git.git (fetch)
 gitlab https://gitlab.com/progetto-git/progetto-git.git (push)
 origin https://github.com/progetto-git/progetto-git.github.io.git (fetch)
 origin https://github.com/progetto-git/progetto-git.github.io.git (push)
 </code></pre></div><p>Come si nota, i riferimenti remoti per le operazioni di invio e ricezione dati (&ldquo;push&rdquo; e &ldquo;fetch&rdquo;) possono essere differenti.</p>
 <p>Per sincronizzare il ramo di sviluppo principale <strong>main</strong> del repository remoto con il repository locale, si effettuano le classiche operazioni di <strong>push</strong> e <strong>pull</strong>, facendo però attenzione ad indicare l&rsquo;origine <strong>gitlab</strong> appena creata.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push gitlab main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push gitlab main
 git pull gitlab main
 </code></pre></div><p>Si nota che in questo caso viene sincronizzato il ramo di sviluppo principale <strong>main</strong>.</p>
 <h2 id="branches">Branches</h2>
@@ -515,38 +515,38 @@ git pull gitlab main
 <p>Volendo fare una seconda analogia, si può immaginare che in uno dei libri della trilogia i personaggi principali si separino, vivendo storie indipendenti, e quindi nel ramo di sviluppo del singolo libro si creano diversi rami in cui si scrivono le storie dei diversi personaggi. Una volta che la storia di un personaggio è completa, il ramo di sviluppo del singolo personaggio viene fuso con il ramo di sviluppo del libro della trilogia.</p>
 <h3 id="creazione-e-gestione-dei-branches">Creazione e gestione dei branches</h3>
 <p>Per creare un nuovo branch con nome <strong>git-merge</strong> si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch git-merge
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch git-merge
 </code></pre></div><p>Per visualizzare l&rsquo;elenco di branches con l&rsquo;ultimo commit presente si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -vv
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -vv
 </code></pre></div><p>Per spostarsi sul ramo &ldquo;git-merge&rdquo; appena creato, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout git-merge
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout git-merge
 </code></pre></div><p>Git aggiunge i file alla staging area ed effettua il commit sul branch correntemente selezionato, i comandi di aggiunta e commit sono quelli già visti in precedenza, che per comodità si riportano nuovamente di seguito:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add file.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add file.txt
 git commit -m <span style="color:#e6db74">&#34;aggiunto file.txt&#34;</span>
 </code></pre></div><p>Per visualizzare la lista di commit nei vari branches del repository, si è gia visto di utilizzare il comando di log con grafico:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#34;%h %s&#34;</span> --graph
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#34;%h %s&#34;</span> --graph
 </code></pre></div><h3 id="sincronizzazione-dei-branches-tra-locale-e-remoto">Sincronizzazione dei branches tra locale e remoto</h3>
 <p>Quando si crea un branch in locale, si deve ricordare che il repository remoto non ne possiede una copia, e quindi un&rsquo;azione di sincronizzazione genera errore. Per indicare di creare un branch anche in remoto ed al contempo sincronizzare il branch, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push --set-upstream origin git-merge
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push --set-upstream origin git-merge
 </code></pre></div><p>In remoto è possibile che siano stati creati o cancellati branch, quindi è necessario sincronizzare repository locale e remoto per poter avere disponibili tutti i branch.</p>
 <p>Per poter scaricare tutti i branch, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch --all
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch --all
 </code></pre></div><p>Per poter pulire i branch locali, cancellando quelli che anche in remoto sono stati rimossi, si utilizza il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch --prune
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch --prune
 </code></pre></div><h3 id="merge-dei-rami-in-modalità-a-linea-di-comando">Merge dei rami in modalità a linea di comando</h3>
 <p>Quando si vuole effettuare la fusione del ramo &ldquo;git-merge&rdquo; con il ramo &ldquo;master&rdquo;, da linea di comando bisogna spostarsi sul ramo di sviluppo principale <strong>master</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
 </code></pre></div><p>Effettuato ciò, si può effettuare la fusione del ramo &ldquo;git-merge&rdquo;, eseguendo il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge git-merge
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge git-merge
 </code></pre></div><p>L&rsquo;output indica che l&rsquo;operazione è stata eseguita:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Merge made by the &#39;recursive&#39; strategy.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Merge made by the &#39;recursive&#39; strategy.
  content/coding/tools/Git.md                          |  84 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
  coding/tools/Git.md | Bin 39000 -&gt; 39569 bytes
  2 files changed, 80 insertions(+), 4 deletions(-)
 </code></pre></div><p>E' possibile verificare che i 2 branch sono stati fusi in un unico branch, attraverso il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#34;%h %s&#34;</span> --graph
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#34;%h %s&#34;</span> --graph
 </code></pre></div><p>L&rsquo;output indica in forma grafica che i rami di sviluppo sono stati fusi e che effettivamente confluiscono in un unico ramo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">*   b21a312 Merge pull request #1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">*   b21a312 Merge pull request #1
 |\
 | * ae55ada Updated posts about tools
 |/
@@ -605,13 +605,13 @@ git commit -m <span style="color:#e6db74">&#34;aggiunto file.txt&#34;</span>
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/tools/gradle/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
 			<p class="pager__title">Gradle</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/tools/cron/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
 			<p class="pager__title">Cron e Crontab</p>
 		</a>
 	</div>
@@ -693,7 +693,7 @@ git commit -m <span style="color:#e6db74">&#34;aggiunto file.txt&#34;</span>
 		
 		<div class="footer__copyright">
 			&copy; 2021 Coding e Paduli.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +11,8 @@
 <meta property="og:description" content="Gradle è un sistema open source per automatizzare le fasi di compilazione, test, pacchettizzazione, deploy e tutte le altre fasi di sviluppo" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/tools/gradle/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2020-03-22T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-03-27T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-03-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-27T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
@@ -215,7 +215,7 @@
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-22T00:00:00Z">22-03-2020</time>
-	<time class="meta__text" datetime="2020-03-27T00:00:00Z">(Last Modified: 27-03-2020)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>
+	<time class="meta__text" datetime="2020-03-27T00:00:00Z">(Ultima modifica: 27-03-2020)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>
 	</span>
 </div></div>
     </header>
@@ -226,9 +226,9 @@
 <h2 id="gestione-progetto-con-gradle">Gestione progetto con Gradle</h2>
 <h3 id="creazione-progetto-java">Creazione progetto Java</h3>
 <p>Il comando da utilizzare per creare un nuovo progetto è:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradle init
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradle init
 </code></pre></div><p>Attraverso una procedura guidata, all&rsquo;utente vengono chieste le opzioni sulle quali creare un progetto:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Select type of project to generate:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Select type of project to generate:
   1: basic
   2: application
   3: library
@@ -265,32 +265,32 @@ Source package (default: gradle-example): example
 <li>aggiornare manualmente la voce <code>distributionUrl</code> presente nel file <code>gradle/wrapper/gradle-wrapper.properties</code>;</li>
 <li>ricreare il &ldquo;wrapper&rdquo; presente nel progetto, specificando la versione di Gradle desiderata, utilizzando il comando:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./gradlew wrapper --gradle-version 6.8.3
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./gradlew wrapper --gradle-version 6.8.3
 </code></pre></div><h3 id="primi-task">Primi task</h3>
 <p>Creato il progetto, è possibile eseguire, nella cartella principale di progetto, i seguenti task (utilizzando il wrapper di gradle):</p>
 <ul>
 <li>Task di pulizia (cancella la cartella <code>build</code>):</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew clean
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew clean
 </code></pre></div><ul>
 <li>Task di compilazione dei sorgenti Java, di creazione del pacchetto &ldquo;jar&rdquo; e di creazione dei pacchetti da distribuire:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew build
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew build
 </code></pre></div><ul>
 <li>Task di esecuzione dell&rsquo;applicazione Java:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew run
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew run
 </code></pre></div><ul>
 <li>Task per la generezione della documentazione dei sorgenti:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew javadoc
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  gradlew javadoc
 </code></pre></div><p>Si possono anche eseguire più task con un singolo comando. Per pulire la cartella di &ldquo;lavoro&rdquo; <code>build</code>, eseguire la compilazione, creare i pacchetti da distribuire ed eseguire l&rsquo;applicazione, è possibile, sempre nella cartella principale di progetto, eseguire il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew clean build javadoc run
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew clean build javadoc run
 </code></pre></div><p>Tutti i file prodotti vengono memorizzati nella cartella <code>build</code>.</p>
 <p>Per una descrizione più dettagliata dei task da utilizzare in un progetto Java, si rimanda ai capitoli successivi.</p>
 <h3 id="struttura-progetto">Struttura progetto</h3>
 <p>I file creati in un progetto Gradle sono i seguenti:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">example
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">example
 ├── build.gradle
 ├── gradle
 │   └── wrapper
@@ -341,7 +341,7 @@ Source package (default: gradle-example): example
 <p>E' necessario indicare la tipologia dei progetti sui quali si lavora: progetti Java, c++ o anche progetti con sorgenti HTML o file zip.</p>
 <p>Questa tipologia viene indicata attraverso i plugin, che devono essere specificati nel file <code>build.gradle</code> attraverso la sezione <code>plugins</code>.</p>
 <p>E' possibile aggiungere vari tipi di plugin allo stesso progetto.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     id <span style="color:#e6db74">&#39;nome_plugin&#39;</span><span style="color:#f92672">,</span>
     id <span style="color:#e6db74">&#39;nome_altro_plugin&#39;</span>
 <span style="color:#f92672">}</span>
@@ -356,7 +356,7 @@ Source package (default: gradle-example): example
 <p>Il Base Plugin, che fornisce i vari task quali <code>clean</code> e <code>build</code>; Deve essere configurato:</p>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  plugins <span style="color:#f92672">{</span>
       id <span style="color:#e6db74">&#39;base&#39;</span>
   <span style="color:#f92672">}</span>
 </code></pre></div><ul>
@@ -365,11 +365,11 @@ Source package (default: gradle-example): example
 <p>Questo plugin deve essere configurato:</p>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  plugins <span style="color:#f92672">{</span>
       id <span style="color:#e6db74">&#39;project-report&#39;</span>
   <span style="color:#f92672">}</span>
 </code></pre></div><p>Ogni plugin importa uno specifico insieme di task. Se nel file <code>build.gradle</code> non fosse presente l&rsquo;indicazione del plugin (che indica la tipologia di progetto), Gradle non saprebbe su cosa deve lavorare, quindi utilizzarebbe il plugin di <code>init</code> . I task disponibili sarebbero quindi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">gradlew tasks
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">gradlew tasks
 
 Build Setup tasks
 -----------------
@@ -384,31 +384,31 @@ tasks - Displays the tasks runnable from root project &#39;example&#39;.
 </code></pre></div><p>Oltre ai plugin &ldquo;core&rdquo; di Gradle, sono disponibili una serie di plugin pubblicati dalla comunità sul portale Gradle all&rsquo;indirizzo: <a href="https://plugins.gradle.org/" title="Gradle - Pagina web contenente l'elenco di plugin pubblicati dalla comunità">https://plugins.gradle.org/</a>.</p>
 <p>Questi plugin forniscono l&rsquo;integrazione di tools quali Jetty (con plugin org.gretty), SpotBugs (con plugin com.github.spotbugs) e tanti altri.</p>
 <p>Per applicare un plugin dal portale, è necessario indicare nome e versione, come da esempio seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     id <span style="color:#e6db74">&#39;com.jfrog.bintray&#39;</span> version <span style="color:#e6db74">&#39;0.4.1&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h3 id="task">Task</h3>
 <p>I task sono le azioni che è possibile effettuare su un progetto.</p>
 <p>Per eseguire dei task, dalla cartella principale del progetto è necessario eseguire il comando <code>gradlew</code> passando i vari task come parametri:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew task1 task2 task3
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew task1 task2 task3
 </code></pre></div><p>E' possibile crearne di personalizzati, aggiungendoli al file <code>build.gradle</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">task<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">task<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     doLast <span style="color:#f92672">{</span>
         println <span style="color:#e6db74">&#34;Hello world!&#34;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Per eseguire il task creato, è necessario eseguire il comando:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew hello
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew hello
 </code></pre></div><p>L&rsquo;output del comando è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Hello world!
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Hello world!
 </code></pre></div><p>Oltre ai task personalizzati aggiunti al progetto, è possibile comunque invocare i task messi a disposizione dai plugin configurati nel progetto.</p>
 <p>Per visualizzare una lista di task disponibili in un progetto,  dalla cartella principale del progetto è necessario lanciare:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew tasks
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew tasks
 </code></pre></div><p>Gradle non esegue i task secondo l&rsquo;ordine presente sulla linea di comando, ma crea un proprio piano di esecuzione dei task. Per visualizzarlo, è necessario aggiungere il flag <code>--dry-run</code>  alla linea di comando.</p>
 <p>Ad esempio, per visualizzare il piano di esecuzione dei task per il comando <code>build</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew build --dry-run
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew build --dry-run
 </code></pre></div><p>L&rsquo;output prodotto, per un progetto Java, è il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">:compileJava SKIPPED
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">:compileJava SKIPPED
 :processResources SKIPPED
 :classes SKIPPED
 :jar SKIPPED
@@ -441,20 +441,20 @@ tasks - Displays the tasks runnable from root project &#39;example&#39;.
 <ul>
 <li>dipendenza da moduli (pubblicati sui repository, tipo Maven Central o Ivy). Si può usare nella seguente forma:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  dependencies <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  dependencies <span style="color:#f92672">{</span>
       nomeConfigurazione: <span style="color:#e6db74">&#39;org.hibernate:hibernate:3.0.5&#39;</span>
   <span style="color:#f92672">}</span>
 </code></pre></div><ul>
 <li>dipendenza da file presenti su disco. Si può usare nella seguente forma:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  dependencies <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  dependencies <span style="color:#f92672">{</span>
       nomeConfigurazione: files<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;libs/lang.jar&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;libs/log4j.jar&#39;</span><span style="color:#f92672">)</span>
       nomeConfigurazione: fileTree<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;tools&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> include <span style="color:#e6db74">&#39;*.exe&#39;</span> <span style="color:#f92672">}</span>
   <span style="color:#f92672">}</span>
 </code></pre></div><ul>
 <li>dipendenza tra progetti, da usare nella seguente forma:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  dependencies <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  dependencies <span style="color:#f92672">{</span>
       nomeConfigurazione <span style="color:#a6e22e">project</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:shared&#39;</span><span style="color:#f92672">)</span>
   <span style="color:#f92672">}</span>
 </code></pre></div><p>Un concetto chiave sul quale Gradle basa la risoluzione delle dipendenze è la prospettiva con cui il produttore ed il consumatore vedono il progetto.</p>
@@ -471,24 +471,24 @@ tasks - Displays the tasks runnable from root project &#39;example&#39;.
 </ul>
 <p>Il motivo per cui una dipendenza deve essere visibile al consumatore è che un&rsquo;interfaccia o una classe del proprio progetto rendono visibile  al consumatore una classe, un&rsquo;istanza o un oggetto definito all&rsquo;interno della dipendenza stessa.</p>
 <p>Un esempio d&rsquo;uso delle dipendenze quindi può essere il seguente:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">dependencies <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">dependencies <span style="color:#f92672">{</span>
     api <span style="color:#e6db74">&#39;org.apache.httpcomponents:httpclient:4.5.7&#39;</span>
     implementation <span style="color:#e6db74">&#39;org.apache.commons:commons-lang3:3.5&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Supponendo di avere le dipendenze appena citate nel nostro progetto personale, se dovessimo esponesse una firma del tipo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getResponseCode</span><span style="color:#f92672">(</span>HttpResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ClientProtocolException <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getResponseCode</span><span style="color:#f92672">(</span>HttpResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ClientProtocolException <span style="color:#f92672">{</span>
     <span style="color:#f92672">...</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>allora il consumatore che utilizza il nostro progetto riuscirebbe a compilare ed eseguire il suo progetto perchè la libreria <code>httpclient</code> è visibile e quindi gli oggetti <code>HttpResponse</code> e <code>ClientProtocolException</code> sarebbero riconducibili alla libreria <code>httpclient</code>.</p>
 <p>Se invece, ancora facendo riferimento all&rsquo;esempio corrente, dovessimo esporre una firma del tipo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getCode</span><span style="color:#f92672">(</span>BitField bitField<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ContextedException <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getCode</span><span style="color:#f92672">(</span>BitField bitField<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ContextedException <span style="color:#f92672">{</span>
     <span style="color:#f92672">...</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>allora il consumatore che utilizza il nostro progetto riscontrerebbe errori di compilazione ed esecuzione dato che la libreria <code>commons-lang3</code> non è visibile al consumatore e quindi gli oggetti <code>BitField</code> e  <code>ContextedException</code> sarebbero sconosciuti.</p>
 <p>Per visualizzare le dipendenze di tutte le configurazioni:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew -q dependencies
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew -q dependencies
 </code></pre></div><p>Per visualizzare le dipendenze di una singola configurazione</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew -q dependencies --configuration api
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew -q dependencies --configuration api
 </code></pre></div><h2 id="scelta-ed-uso-dei-plugin-per-lambiente-java">Scelta ed uso dei plugin per l&rsquo;ambiente Java</h2>
 <h3 id="plugin-per-java">Plugin per Java</h3>
 <p>Per configurare il progetto come &ldquo;progetto Java&rdquo;, bisogna aggiungere uno dei plugin Java messi a disposizione da Gradle . In questo modo Gradle viene configurato per l&rsquo;uso di tutti i task e di tutte le configurazioni relativi alla compilazione del codice Java, come visto nei capitoli precedenti.</p>
@@ -593,7 +593,7 @@ tasks - Displays the tasks runnable from root project &#39;example&#39;.
 <p>la lista di parametri da utilizzare quando si esegue l&rsquo;applicazione;</p>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     id <span style="color:#e6db74">&#39;application&#39;</span>
 <span style="color:#f92672">}</span>
 
@@ -617,7 +617,7 @@ application <span style="color:#f92672">{</span>
 </li>
 </ul>
 <p>La configurazione del proprio progetto per l&rsquo;uso del plugin prevede la sola dichiarazione del plugin:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     id <span style="color:#e6db74">&#39;java-library&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h3 id="plugin-war">Plugin <code>war</code></h3>
@@ -637,7 +637,7 @@ application <span style="color:#f92672">{</span>
 </ul>
 <p>Queste due configurazioni rappresentano dipendenze che non saranno aggiunte al pacchetto &ldquo;war&rdquo;.</p>
 <p>La configurazione del proprio progetto per l&rsquo;uso del plugin prevede la sola dichiarazione del plugin:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     id <span style="color:#e6db74">&#39;war&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h3 id="plugin-gretty">Plugin <code>gretty</code></h3>
@@ -649,7 +649,7 @@ application <span style="color:#f92672">{</span>
 </ul>
 <p>Questo plugin non prevede configurazioni di dipendenza.</p>
 <p>La configurazione del proprio progetto per l&rsquo;uso del plugin prevede la dichiarazione del plugin e la scelta delle opzioni relative al server:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     id <span style="color:#e6db74">&#39;org.gretty&#39;</span> version <span style="color:#e6db74">&#39;3.0.1&#39;</span>
 <span style="color:#f92672">}</span>
 
@@ -660,7 +660,7 @@ gretty <span style="color:#f92672">{</span>
     contextPath <span style="color:#e6db74">&#39;/web&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Una scelta opinabile riguarda il salvataggio dei log del server nella cartella &ldquo;home&rdquo; dell&rsquo;utente. Per cambiare tale scelta, si utilizzano le seguenti proprietà:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">    // logging configuration
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">    // logging configuration
     logDir &#34;${buildDir}/log&#34; // pay attention to double quote
     logFileName &#39;calcolatrice&#39;
     loggingLevel &#39;TRACE&#39;     // (loggingLevel &#39;ALL&#39;, &#39;DEBUG&#39;, &#39;ERROR&#39;, &#39;INFO&#39;, &#39;OFF&#39;, &#39;TRACE&#39;, &#39;WARN&#39;)
@@ -672,12 +672,12 @@ gretty <span style="color:#f92672">{</span>
 <li><code>eclipse</code>: Crea i file <code>.project</code>, <code>.classpath</code> e <code>.settings/org.eclipse.jdt.core.prefs</code>.</li>
 </ul>
 <p>La configurazione del proprio progetto per l&rsquo;uso del plugin prevede la sola dichiarazione del plugin:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     id <span style="color:#e6db74">&#39;eclipse-wtp&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h2 id="esempio-completo-per-applicazioni-java">Esempio completo per applicazioni Java</h2>
 <p>Di seguito un esempio completo per la gestione di un&rsquo;applicazione Java con Gradle:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     <span style="color:#75715e">// add support for building a Java application.
 </span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;application&#39;</span>
     <span style="color:#75715e">// add support for generating project&#39;s reports.
@@ -726,7 +726,7 @@ application <span style="color:#f92672">{</span>
 <p>E stata definita la lista (quasi completa) di task che si desidera vengano lanciati di default, sono state configurate delle voci da aggiungere al file <code>Manifest.mf</code> del pacchetto &ldquo;jar&rdquo; ed è indicata la classe Java che contiene il metodo &ldquo;main&rdquo; da eseguire per lanciare l&rsquo;applicazione.</p>
 <h2 id="esempio-completo-per-applicazioni-web-in-java">Esempio completo per applicazioni web in Java</h2>
 <p>Di seguito un esempio completo per la gestione di un&rsquo;applicazione web Java con Gradle:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     <span style="color:#75715e">// add support for building a Java application.
 </span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;war&#39;</span>
     <span style="color:#75715e">// add support for generating project&#39;s reports.
@@ -779,7 +779,7 @@ gretty <span style="color:#f92672">{</span>
 <p>E stata definita la lista di task che si desidera vengano lanciati di default, sono state configurate le opzioni relative al server da avviare per deployare ed eseguire l&rsquo;applicazione.</p>
 <h3 id="esempio-di-file-srcmainwebappweb-infwebxml-per-chiamate-cors">Esempio di file src/main/webapp/WEB-INF/web.xml per chiamate CORS</h3>
 <p>Per abilitare le chiamate CORS (Cross-Origin resource sharing) sul server Jetty, è necessario aggiungere al progetto il seguente file di configurazione <code>src/main/webapp/WEB-INF/web.xml</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span style="color:#f92672">&lt;web-app</span> <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
   <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://java.sun.com/xml/ns/javaee&#34;</span>
   <span style="color:#a6e22e">xmlns:web=</span><span style="color:#e6db74">&#34;http://java.sun.com/xml/ns/javaee&#34;</span>
@@ -828,13 +828,13 @@ gretty <span style="color:#f92672">{</span>
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/tools/vagrant/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
 			<p class="pager__title">Vagrant</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/tools/git/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
 			<p class="pager__title">Introduzione a Git</p>
 		</a>
 	</div>
@@ -854,7 +854,7 @@ gretty <span style="color:#f92672">{</span>
 		
 		<div class="footer__copyright">
 			&copy; 2021 Coding e Paduli.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>

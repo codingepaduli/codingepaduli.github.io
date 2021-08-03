@@ -3,19 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2021-06-28T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/educational/</loc>
-    <lastmod>2021-06-28T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/interesting/</loc>
-    <lastmod>2021-06-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/others/</loc>
-    <lastmod>2021-06-28T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/developing/</loc>
-    <lastmod>2021-06-28T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/others/</loc>
+    <lastmod>2021-06-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/tools/anacron/</loc>
     <lastmod>2021-01-15T00:00:00+00:00</lastmod>
@@ -29,10 +29,10 @@
     <loc>http://codingepaduli.github.io/categories/tools/</loc>
     <lastmod>2021-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</loc>
+    <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
     <lastmod>2020-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</loc>
     <lastmod>2020-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/web/</loc>
@@ -62,22 +62,22 @@
     <loc>http://codingepaduli.github.io/coding/web/p5js/basics_exe/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/linkp5js/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/linkp5js/</loc>
-    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/intro/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/javascript/dom/</loc>
+    <loc>http://codingepaduli.github.io/categories/javascript/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/javascript/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/javascript/dom/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/tools/git/</loc>
@@ -101,10 +101,10 @@
     <loc>http://codingepaduli.github.io/coding/web/javascript/funzioni/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</loc>
+    <loc>http://codingepaduli.github.io/interesting/fdroidapp/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/interesting/fdroidapp/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-filecartelle/</loc>
@@ -143,10 +143,10 @@
     <loc>http://codingepaduli.github.io/coding/web/javascript/primi_script/</loc>
     <lastmod>2020-04-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/javascript/intro/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/linkjavascript/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/linkjavascript/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/javascript/intro/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/javascript/</loc>
