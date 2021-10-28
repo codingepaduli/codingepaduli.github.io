@@ -6,7 +6,16 @@
     <description>Recent content in coding on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript - Operatori ed operazioni matematiche</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
+      <description>Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche</description>
+    </item>
+    
     <item>
       <title>Anacron ed Anacrontab</title>
       <link>http://codingepaduli.github.io/coding/tools/anacron/</link>
@@ -248,15 +257,6 @@
       
       <guid>http://codingepaduli.github.io/coding/shell/linkpowershell/</guid>
       <description>Lezioni sulla programmazione di script in PowerShell nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/powershell&#39;&gt;PowerShell&lt;/a&gt;</description>
-    </item>
-    
-    <item>
-      <title>JavaScript Lez. 04 - Operatori ed espressioni</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/operatori/</link>
-      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/javascript/operatori/</guid>
-      <description>Operatori ed espressioni</description>
     </item>
     
     <item>

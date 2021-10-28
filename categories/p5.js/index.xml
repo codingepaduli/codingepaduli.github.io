@@ -6,7 +6,16 @@
     <description>Recent content in p5.js on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/p5.js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/p5.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript - Operatori ed operazioni matematiche</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
+      <description>Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche</description>
+    </item>
+    
     <item>
       <title>p5.js Lez. 05 - Accesso ai pixel di un&#39;immagine</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</link>

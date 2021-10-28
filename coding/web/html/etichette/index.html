@@ -53,11 +53,16 @@
       </div>
 
       
-      <div class="logo__item logo__text">
+      <div class="logo__item">
         <div class="logo__title">
-          Coding e Paduli
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
         </div>
       </div>
+
+
+
 
       
       <div>
@@ -219,7 +224,13 @@
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="etichette-tag">Etichette (tag)</h1>
+      <h1 id="il-linguaggio-html">Il linguaggio HTML</h1>
+<p>Il linguaggio <abbr title="HyperText Markup Language"><strong>HTML</strong></abbr> e' un linguaggio di etichettatura (in inglese Markup) degli ipertesti (in inglese HyperText), ha lo scopo di strutturare i documenti da pubblicare sul web.</p>
+<p>Le <strong>etichette</strong> (in inglese Markup o TAG) sono dei segnaposto, indicano
+l&rsquo;inizio e la fine di un elemento della pagina web, ad esempio inizio e fine di un titolo, di un&rsquo;immagine, di un video, di una tabella&hellip;</p>
+<p>Da sottolineare che il linguaggio HTML non è un linguaggio di programmazione, ma solo un linguaggio di &ldquo;formattazione&rdquo; delle pagine web, dato che usa le etichette per indicare dove iniziano e finiscono gli elementi. Il linguaggio HTML definisce solo la <strong>struttura</strong> di un ipertesto, non la grafica, né le azioni o le elaborazioni da eseguire.</p>
+<p>Gli stili grafici della pagina web sono scritti in linguaggio CSS, che indica stili e colori da utilizzare. Le azioni, le interazioni e l&rsquo;elaborazione dei dati contenuti della pagina web sono scritti con linguaggi di programmazione come JavaScript.</p>
+<h2 id="etichette-tag">Etichette (tag)</h2>
 <p>Le <strong>etichette</strong> (in inglese Markup o TAG) sono dei segnaposto, indicano
 l&rsquo;inizio e la fine di un elemento della pagina web.</p>
 <p>Ogni etichetta ha un nome, ad esempio
@@ -264,7 +275,7 @@ poi chiuse.</p>
 <p>Sempre dall&rsquo;esempio precedente, si nota che le etichette possono essere inserite (innestate) l&rsquo;una dentro l&rsquo;altra, come avviene per i contenuti della pagina web presentata (il titolo ed il paragrafo) che si trovano nell&rsquo;etichetta <code>body</code> , che a sua volta è posizionata nell&rsquo;etichetta <code>html</code>.</p>
 <h2 id="dom">DOM</h2>
 <p>Esiste un modello che descrive la struttura della pagina web come una struttura gerarchica: il DOM (dall&rsquo;inglese Document Object Model), utilizzato soprattutto in un contesto che tratta di JavaScript, ma molto ricorrente anche quando si parla di HTML.</p>
-<p>In questo modello gerarchico, ogni etichetta della pagina web (il documento ipertestuale) è interpretata come un oggetto posizionato all&rsquo;interno di un albero (tipica struttura gerarchica).</p>
+<p>In questo modello gerarchico, ogni etichetta della pagina web (il documento ipertestuale) è detta <strong>nodo</strong> ed ha una posizione ben definita all&rsquo;interno di un albero (tipica struttura gerarchica).</p>
 <p>La radice dell&rsquo;albero è l&rsquo;etichetta <code>html</code>, dato che al suo interno sono presenti tutti gli elementi della pagina web.</p>
 <p>Dalla radice si estendono poi i nodi di &ldquo;primo livello&rdquo;, ovvero tutte le etichette contenute nell&rsquo;etichetta <code>html</code>.</p>
 <p>Da questi nodi di primo livello si estendono i nodi di secondo livello, ovvero le etichette contenute nelle etichette di primo livello, e cosi via per i successivi livelli.</p>
@@ -283,7 +294,7 @@ poi chiuse.</p>
 <p>Per le etichette di secondo livello è necessario aggiungere otto spazi, per quelle di terzo livello sono necessari dodici, e cosí via..</p>
 <p>Se si riguarda il codice riportato nell&rsquo;esempio prededente, si può vedere che è indentato. Alcuni editor di testo permettono di indentare il documento in maniera automatica.</p>
 <h2 id="commenti">Commenti</h2>
-<p>La presenza di <strong>commenti</strong> è praticamente d&rsquo;obbligo, poiché questi rappresentano informazioni aggiuntive e promemoria che chiariscono lo scopo del programmatore.</p>
+<p>La presenza di <strong>commenti</strong> è praticamente d&rsquo;obbligo, poiché questi rappresentano informazioni aggiuntive e promemoria che chiariscono le intenzioni del programmatore.</p>
 <p>I commenti si scrivono tra i caratteri <code>&lt;!--</code> e <code>--&gt;</code>, l&rsquo;unica attenzione da porre è che non devono essere presenti spazi tra i caratteri indicati. Un commento può occupare più righe.</p>
 <p>Di seguito, un esempio di commento multilinea:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- commento relativo i

@@ -53,11 +53,16 @@
       </div>
 
       
-      <div class="logo__item logo__text">
+      <div class="logo__item">
         <div class="logo__title">
-          Coding e Paduli
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
         </div>
       </div>
+
+
+
 
       
       <div>
@@ -702,10 +707,10 @@
 <h2 id="combinazioni">Combinazioni</h2>
 <p>E' possibile combinare i selettori illustrati nei capitoli precedenti, in modo da creare espressioni che risultano molto efficaci.</p>
 <p>Ad esempio è possibile combinare i selettori per ID, per classe, per elemento e per attributo in questa forma:</p>
-<pre><code class="language-output" data-lang="output">Tag#Id.class['attr']
+<pre tabindex="0"><code class="language-output" data-lang="output">Tag#Id.class['attr']
 </code></pre><p>In questo caso verranno selezionati i tag che soddisfano tutti i selettori, ovvero i tag che sono dell&rsquo;elemento specificato, che hanno l&rsquo;ID indicato, le classi associate e gli attributi specificati nel selettore.</p>
 <p>Un secondo esempio, di seguito riportato, permette di combinare i selettori per elemento, per classe, per attributo, per posizione e per pseudo-classe, in modo tale da selezionare gli elementi &ldquo;vuoti&rdquo; che sono contenuti nel primo figlio del gruppo di tag aventi la classe indicata che a loro volta seguono, direttamente e sullo stesso livello di profondità, gli elementi che hanno l&rsquo;attributo indicato.</p>
-<pre><code class="language-output" data-lang="output">Tag['attr'].class:first-child :empty
+<pre tabindex="0"><code class="language-output" data-lang="output">Tag['attr'].class:first-child :empty
 </code></pre><p>Le combinazioni permettono di creare delle selezioni effettivamente molto potenti,
 anche se la sintassi di selezione risultante non è delle più semplici.</p>
 

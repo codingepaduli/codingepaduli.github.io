@@ -53,11 +53,16 @@
       </div>
 
       
-      <div class="logo__item logo__text">
+      <div class="logo__item">
         <div class="logo__title">
-          Coding e Paduli
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
         </div>
       </div>
+
+
+
 
       
       <div>
@@ -219,48 +224,24 @@
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="introduzione-al-www-ed-al-linguaggio-html">Introduzione al WWW ed al linguaggio HTML</h1>
-<p>Somo molti i servizi diffusi attraverso internet: posta elettronica, memorizzazione dati, streaming audio/video, navigazione, per citarne alcuni.</p>
-<p>Diversi servizi si basano su un&rsquo;architettura client-server, in cui il client invia le richieste al server, il server le elabora e fornisce una risposta al client.</p>
-<p>Altri si basano su un architettura peer to peer, in cui ogni dispositivo è un nodo &ldquo;equivalente&rdquo; o &ldquo;paritario&rdquo; (peer), in quanto puó svolgere in contemporanea il compito di client e server verso altri nodi (peer) della rete.</p>
-<p>Ancora, alcune comunicazioni possono avvenire in broadcast, cioè i dati vengono inviati contemporaneamente ad un gruppo di nodi o un&rsquo;intera rete.</p>
-<p>Ogni servizio sfrutta le potenzialità del tipo di architettura scelta.</p>
-<h2 id="architettura-client-server">Architettura client server</h2>
-<p>Il <strong>server</strong> è generalmente un computer con una grande capacità di elaborazione, che gli permette di gestire allo stesso tempo le richieste di milioni di client.</p>
-<p>I <strong>client</strong> sono dispositivi con una capacità di elaborazione non elevata, inviano le richieste di elaborazione al server e attendono la risposta.</p>
-<p>Il <strong>protocollo</strong> di comunicazione definisce un insieme di regole che client e server seguono per poter comunicare.</p>
-<p>Sul server devono essere in esecuzione i software che consentono di offrire i vari servizi, tra i quali citiamo:</p>
-<ul>
-<li>il server di posta elettronica;</li>
-<li>il database server (che memorizza tutti i dati delle applicazioni);</li>
-<li>il web server, che offre il servizio di navigazione.</li>
-</ul>
-<p>I client hanno in esecuzione le varie applicazioni che permettono di utilizzare i servizi offerti dai server:</p>
-<ul>
-<li>il client di posta elettronica;</li>
-<li>il browser, che permette di navigare tra i siti web;</li>
-<li>le app di uno smartphone, che  chiedono i dati necessari (tipicamente forniti dal web server).</li>
-</ul>
-<h2 id="world-wide-web">World Wide Web</h2>
-<p>Il World Wide Web (dall&rsquo;inglese &ldquo;Rete di Ampiezza Globale&rdquo;) è il servizio di internet che permette di navigare tra i siti web utilizzando i collegamenti tra un sito e l&rsquo;altro. Sono questi collegamenti tra i vari siti web a creare una rete di estensione mondiale.</p>
+      <h1 id="www-ed-html">WWW ed HTML</h1>
+<p>Il <strong>World Wide Web</strong> (dall&rsquo;inglese &ldquo;Rete di Ampiezza Globale&rdquo;) è il servizio di internet che permette di navigare tra i siti web utilizzando i collegamenti tra un sito e l&rsquo;altro. Sono questi collegamenti tra i vari siti web a creare una rete di estensione mondiale.</p>
 <p>Ad esempio, un utente, seguendo i collegamenti di volta in volta presenti, può iniziare la navigazione sul sito web di un quotidiano italiano, poi vedere un video su una piattaforma web americana ed ancora visualizzare un prodotto in vendita su un e-commerce australiano, e così via.</p>
 <p>Il <abbr title="World Wide Web">WWW</abbr> nasce presso il CERN, il più importante laboratorio di fisica europeo, con lo scopo di condividere documenti scientifici in un formato elettronico che sia indipendente dalla piattaforma utilizzata.</p>
 <p>Il <abbr title="World Wide Web">WWW</abbr> diventa un unico grande <strong>ipertesto</strong> (hypertext in inglese), cioè un enorme insieme di documenti messi in relazione tra loro attraverso dei collegamenti ipertestuali (hyperlink in inglese).</p>
-<p>Per permettere la navigazione su WWW ai client, sul server deve essere installato il <strong>web server</strong>, ovvero il software che offre il servizio di navigazione.</p>
+<h2 id="architettura-client-server">Architettura client server</h2>
+<p>Il World Wide Web si basa su un&rsquo;architettura client-server, in cui il client invia le richieste al server, il server le elabora e fornisce una risposta al client.</p>
+<p>Il <strong>server</strong> è generalmente un computer con una grande capacità di elaborazione, che gli permette di gestire allo stesso tempo le richieste di milioni di client.</p>
+<p>I <strong>client</strong> sono dispositivi con una capacità di elaborazione non elevata, inviano le richieste di elaborazione al server e attendono la risposta.</p>
+<p>Il <strong>protocollo</strong> di comunicazione definisce un insieme di regole che client e server seguono per poter comunicare.</p>
 <p>I client, per poter navigare, devono utilizzare un software, chiamato <strong>browser</strong>.</p>
-<p>Il server web espone ogni singola risorsa o servizio su un indirizzo web detto URL.</p>
+<p>Per permettere la navigazione su WWW ai client, sul server deve essere installato il <strong>web server</strong>, ovvero il software che offre il servizio di navigazione.</p>
+<p>Il web server <strong>ospita</strong> (in inglese hosting) uno i piú siti web ed espone ogni singolo file, risorsa o servizio del sito web su un indirizzo web detto URL.</p>
 <p>Un <strong>URL</strong> (acronimo di Uniform Resource Locator) è un indirizzo che identifica univocamente una risorsa su una rete di computer.</p>
 <p>Ogni pagina web, immagine, file di testo e qualsiasi altra risorsa ha associato un proprio URL per poter essere raggiungibile su WWW. Man mano che gli utenti navigano sul web, il browser richiedere le risorse (delle pagine web, delle immagini, dei file) al server, specificando per ogni richiesta l&rsquo;indirizzo web (URL) della risorsa.</p>
 <p>Il protocollo <strong>HTTP</strong> (HyperText Transfer Protocol) regola la navigazione, intesa come scambio di ipertesti, tra client e server.</p>
 <p>Purtroppo, quando si utilizza il protocollo HTTP, è possibile leggere i messaggi che client e server si scambiano, installando un software adatto su un qualsiasi dispositivo posto tra client e server (ad esempio sul router di casa o su un ripetitore wireless).</p>
 <p>Il protocollo <strong>HTTPS</strong> (HTTP Secure) è nato per aggiungere al protocollo HTTP uno strato ulteriore che consenta di evitare il problema descritto in precedenza e garantisca la comunicazione client-server in sicurezza.</p>
-<h2 id="il-linguaggio-html">Il linguaggio HTML</h2>
-<p>Il linguaggio <abbr title="HyperText Markup Language">HTML</abbr> e' un linguaggio di etichettatura (in inglese Markup) degli ipertesti (in inglese HyperText).</p>
-<p>Le <strong>etichette</strong> (in inglese Markup o TAG) sono dei segnaposto, indicano
-l&rsquo;inizio e la fine di un elemento della pagina web, ad esempio inizio e fine di un titolo, di un&rsquo;immagine, di un video, di una tabella&hellip;</p>
-<p>Il linguaggio HTML nasce insieme al WWW con lo scopo di strutturare i documenti scientifici da pubblicare.</p>
-<p>Da sottolineare che il linguaggio HTML non è un linguaggio di programmazione, ma solo un linguaggio di &ldquo;formattazione&rdquo; delle pagine web, dato che usa le etichette per indicare dove iniziano e finiscono gli elementi. Il linguaggio HTML definisce solo la <strong>struttura</strong> di un ipertesto, non la grafica, né le azioni o le elaborazioni da eseguire.</p>
-<p>Gli stili grafici della pagina web sono scritti in linguaggio CSS, che indica stili e colori da utilizzare. Le azioni, le interazioni e l&rsquo;elaborazione dei dati contenuti della pagina web sono scritti con linguaggi di programmazione come JavaScript.</p>
 <h2 id="tecnologie-e-software-per-la-creazione-di-siti-web">Tecnologie e software per la creazione di siti web</h2>
 <p>I siti web possono essere costruiti in mille modi.</p>
 <p>Esistono software che permettono, anche con poche conoscenze tecniche, di disegnare, configurare ed amministrare un sito web mediante interfacce grafiche che guidano l&rsquo;utente nei vari passi. Questi software sono chiamati genericamente
@@ -270,30 +251,31 @@ l&rsquo;inizio e la fine di un elemento della pagina web, ad esempio inizio e fi
 <p>E' possibile creare dei siti web &ldquo;statici&rdquo;, cioè scritti con software che trasformano un insieme di articoli e contenuti in un sito web. Questi strumenti prendono il nome di &ldquo;static site generator&rdquo; (generatori di siti web statici).</p>
 <p>E' comunque possibile creare siti web partendo da un semplice editor di testi. Tra gli editor
 open source consigliati spunta <a href="https://atom.io/" title="Link all'editor Atom">Atom</a>, estremamente configurabile, oppure <a href="https://notepad-plus-plus.org/" title="Link all'editor Notepad++">Notepad++</a>, o ancora <a href="https://vscodium.com/" title="Link all'editor VSCodium">VSCodium</a>, un clone open source di Visual Studio Code. Tra gli editor non adatti si elencano l&rsquo;editor Word di Office e &ldquo;Blocco Note&rdquo; (Notepad) di Windows.</p>
-<p>Esistono dei framework che intendono essere la base sulla quale poggiarsi per sviluppare siti web, quali
-<a href="http://getbootstrap.com/" title="Link al sito web di Bootstrap">Bootstrap</a>,
-<a href="http://foundation.zurb.com/" title="Link al sito web di ZURB">ZURB foundation</a> e
-<a href="http://purecss.io/" title="Link al sito web di Pure CSS">Pure CSS</a>, giusto per nominarne alcuni.</p>
-<h2 id="attività-di-amministrazione">Attività di amministrazione</h2>
-<p>Dal punto di vista tecnico, l&rsquo;amministrazione di un sito web comporta una serie di attività da svolgere, dato che le pagine del sito si devono:</p>
+<p>Una volta costruito, il sito web deve essere <strong>pubblicato</strong> sul web, scegliendo le caratteristiche del servizio di hosting o di cloud, i certificati di sicurezza e gli strumenti adatti per il trasferimento e la sincronizzazione delle pagine sul dominio.</p>
+<h2 id="caratteristiche-di-un-sito-web">Caratteristiche di un sito web</h2>
+<p>Dal punto di vista tecnico, un sito web deve rispondere ad una serie di requisiti molto richiesti, seppur non obbligatori, che elenchiamo di seguito</p>
 <ul>
-<li><strong>validare</strong>, per individuare e correggere errori. Per questi compiti troviamo strumenti per la correzione grammaticale, validatori delle pagine web, validatori dei link (per
-evitare che possano riferirsi a risorse rimosse o spostate). Uno strumento di controllo dei link è il <a href="https://validator.w3.org/checklink" title="Link al validatore dei link">W3C Link Checker</a>. Per validare il codice HTML si può utilizzare il validatore <a href="https://validator.w3.org/" title="Link al validatore HTML">W3C Validator</a>;</li>
-<li>rendere <strong>accessibili</strong> <!-- TODO add accessibility tools--> a chiunque, anche a chi ha difficoltà visive
-o motorie. Il controllo avviene attraverso strumenti specifici;</li>
-<li>rendere <strong>&ldquo;responsive&rdquo;</strong>, cioè fruibili su differenti risoluzioni e
-formati, da quelli piccoli dei cellulari e palmari, a quelli
-classici dei computer e tablet, a quelli extra-large delle smart-TV. Uno strumento per il controllo delle varie risoluzioni è <a href="https://responsively.app/" title="App open source per simulare in un'unica schermata la visualizzazione del sito su più dispositivi">Responsively.App</a>;</li>
-<li>rendere <strong>performanti</strong>, cioè far si che i tempi di caricamento siano ridotti, soprattutto su connessioni lente, usando strumenti quali
+<li>
+<p><strong>validità</strong>: caratteristica che indica l&rsquo;assenza di errori. L&rsquo;attività di validazione è necessaria ad individuare e correggere gli errori prima che siano pubblicati sul sito web. Per svolgere questi compiti, troviamo strumenti per la correzione grammaticale, validatori delle pagine web, validatori dei link (per
+evitare che possano riferirsi a risorse rimosse o spostate). Uno strumento di controllo dei link è il <a href="https://validator.w3.org/checklink" title="Link al validatore dei link">W3C Link Checker</a>. Per validare il codice HTML si può utilizzare il validatore <a href="https://validator.w3.org/" title="Link al validatore HTML">W3C Validator</a>;</p>
+</li>
+<li>
+<p><strong>accessibilità</strong>: <!-- TODO add accessibility tools--> caratteristica che permette l&rsquo;utilizzo del sito web anche a chi ha difficoltà visive o motorie. L&rsquo;attività avviene attraverso strumenti specifici che consentono la visualizzazione del sito web con stili grafici ad alto contrasto oppure utilizzando il sito attraverso strumenti di sintesi vocale;</p>
+</li>
+<li>
+<p><strong>&ldquo;responsività&rdquo;</strong>: caratteristica indicante che il sito web è fruibile su schermi con differenti risoluzioni e formati, sia quelli piccoli dei cellulari e palmari, sia quelli classici dei computer e tablet, sia quelli extra-large delle smart-TV. Uno strumento per verificare che un sito web sia &ldquo;responsive&rdquo; è <a href="https://responsively.app/" title="App open source per simulare in un'unica schermata la visualizzazione del sito su più dispositivi">Responsively.App</a>;</p>
+</li>
+<li>
+<p><strong>rapidità</strong>: Indica i tempi di caricamento della pagina e i tempi di risposta alle azioni dell&rsquo;utente. L&rsquo;attività fa si che i gli utenti possano interagire rapidamente col sito web, anche su connessioni lente, usando strumenti quali
 <a href="https://developers.google.com/web/tools/lighthouse/" title="Link al sito web di lighthouse">lighthouse</a>;
 opzionalmente si può rendere il sito capace di funzionare anche senza connessione internet
-(<a href="https://it.m.wikipedia.org/wiki/Progressive_Web_App" title="Link all'articolo su PWA su wikipedia.it">PWA</a>);</li>
-<li><strong>ottimizzare per i motori di ricerca</strong>
-(<a href="https://it.m.wikipedia.org/wiki/Ottimizzazione_(motori_di_ricerca)" title="Link all'articolo su SEO su wikipedia.it">SEO</a>)
-ed adattare al
-<a href="https://it.m.wikipedia.org/wiki/Web_semantico" title="Link all'articolo sul Web semantico su wikipedia.it">semantic-web</a>;</li>
-<li>integrare con eventuali servizi esterni, quali social, servizi di pagamento, servizi pubblicitari e di gestione contenuti (come youtube);</li>
-<li><strong>pubblicare</strong> sul web, scegliendo le caratteristiche del servizio di hosting o di cloud, i certificati di sicurezza e gli strumenti adatti per il trasferimento e la sincronizzazione delle pagine sul dominio.</li>
+(<a href="https://it.m.wikipedia.org/wiki/Progressive_Web_App" title="Link all'articolo su PWA su wikipedia.it">PWA</a>);</p>
+</li>
+<li>
+<p><strong>ottimizzazione per i motori di ricerca (<a href="https://it.m.wikipedia.org/wiki/Ottimizzazione_(motori_di_ricerca)" title="Link all'articolo su SEO su wikipedia.it">SEO</a>)</strong>: permette al sito web di posizionarsi piú in alto possibile in un motore di ricerca.</p>
+<p>Opzionalmente si può adattare al semantic web.
+<a href="https://it.m.wikipedia.org/wiki/Web_semantico" title="Link all'articolo sul Web semantico su wikipedia.it">semantic-web</a>;</p>
+</li>
 </ul>
 <h2 id="riferimenti-alle-risorse-online">Riferimenti alle risorse online</h2>
 <p>Su internet sono presenti moltissimi corsi e chiarimenti sul linguaggio

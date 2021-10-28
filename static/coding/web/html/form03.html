@@ -1,0 +1,87 @@
+<h1>Campi di input</h1>
+
+<form action="www.server.com/login">
+
+  <fieldset style="width: 40%;">
+    <label>descrizione</label>
+    <input type="text" name="descrizione" minlenght="10" maxlenght="150">
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <label>password</label>
+    <input type="password" name="password">
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <label>email</label>
+    <input type="email" name="email">
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <label>telefono</label>
+    <input type="tel" name="telephone">
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <label>età</label>
+    <input type="number" name="valore" min="20" max="50" step="0.2">
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <label>data</label>
+    <input type="date" name="valore" min="2020-03-05" max="2020-06-05" step="7">
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <label>ora</label>
+    <input type="time" name="valore" min="20:03:05" max="20:36:35" step="1">
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <input type="checkbox" id="coding" name="interest" value="programmazione" checked>
+    <label for="coding">Coding</label>
+    <input type="checkbox" id="soccer" name="interest" value="calcio">
+    <label for="soccer">Calcio</label>
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <input type="radio" id="voce1" name="contatto" value="email">
+    <label for="voce1">email</label>
+
+    <input type="radio" id="voce2" name="contatto" value="telefono">
+    <label for="voce2">telefono</label>
+
+    <input type="radio" id="voce3" name="contatto" value="pec">
+    <label for="pec">PEC</label>
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <label for="auto">auto</label>
+    <select name="car" id="auto">
+          <option value="volvo">Volvo</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+    </select>
+  </fieldset>
+
+  <fieldset style="width: 40%;">
+    <label for="auto">auto</label>
+    <select name="car" id="auto">
+        <optgroup label="auto svedesi">
+          <option value="volvo">
+          Volvo</option>
+          <option value="saab">
+          Saab</option>
+        </optgroup>
+        <optgroup label="auto tedesche">
+          <option value="mercedes">
+          Mercedes</option>
+          <option value="audi">
+          Audi</option>
+        </optgroup>
+    </select>
+  </fieldset>
+
+  <input type="submit" value="Invia richiesta">
+  <input type="reset" value="Cancella dati">
+</form>

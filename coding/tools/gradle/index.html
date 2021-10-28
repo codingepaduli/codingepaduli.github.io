@@ -53,11 +53,16 @@
       </div>
 
       
-      <div class="logo__item logo__text">
+      <div class="logo__item">
         <div class="logo__title">
-          Coding e Paduli
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
         </div>
       </div>
+
+
+
 
       
       <div>
@@ -338,37 +343,46 @@ Source package (default: gradle-example): example
 <p>Sono i <strong>plugin</strong> a rendere disponibili i task nel progetto: il plugin per applicazioni Java rende disponibili i task per la compilazione e la realizzazione della documentazione. Il plugin per i report rende disponibili i task per la generazione dei report di progetto.</p>
 <p>I plugin mettono a disposizione anche le <strong>configurazioni di dipendenza</strong>, che permettono allo sviluppatore di gestire le dipendenze dell&rsquo;applicazione.</p>
 <h3 id="plugin">Plugin</h3>
-<p>E' necessario indicare la tipologia dei progetti sui quali si lavora: progetti Java, c++ o anche progetti con sorgenti HTML o file zip.</p>
-<p>Questa tipologia viene indicata attraverso i plugin, che devono essere specificati nel file <code>build.gradle</code> attraverso la sezione <code>plugins</code>.</p>
-<p>E' possibile aggiungere vari tipi di plugin allo stesso progetto.</p>
+<p>La tipologia dei progetti sui quali si lavora, che siano progetti Java, c++, HTML o di altra natura, deve essere indicata attraverso i plugin.</p>
+<p>Gradle fornisce di base una serie di plugin &ldquo;core&rdquo;, che sono elencati all&rsquo;indirizzo: <a href="https://docs.gradle.org/current/userguide/java_plugin.html" title="Gradle - Pagina web contenente l'elenco di plugin 'core' disponibili">https://docs.gradle.org/current/userguide/java_plugin.html</a>.</p>
+<p>Oltre ai plugin &ldquo;core&rdquo; di Gradle, sono disponibili una serie di plugin pubblicati dalla comunità sul portale Gradle all&rsquo;indirizzo: <a href="https://plugins.gradle.org/" title="Gradle - Pagina web contenente l'elenco di plugin pubblicati dalla comunità">https://plugins.gradle.org/</a>.</p>
+<p>Ogni plugin fornisce determinate funzionalità, come la pulizia del progetto, l&rsquo;integrazione di tools, la gestione dei reports, la pubblicazione su portali esterni, e così via. Ad esempio, il plugin <code>java</code> fornisce le funzionalità tipiche di un progetto Java, come la compilazione, la creazione di un pacchetto jar, e cosi via.</p>
+<p>E' possibile aggiungere più plugin allo stesso progetto.</p>
+<p>Una volta scelti i plugin <strong>core</strong> adatti al progetto, questi devono essere specificati nel file <code>build.gradle</code>, includendoli nella sezione <code>plugins</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
-    id <span style="color:#e6db74">&#39;nome_plugin&#39;</span><span style="color:#f92672">,</span>
-    id <span style="color:#e6db74">&#39;nome_altro_plugin&#39;</span>
+    id <span style="color:#e6db74">&#39;nome_plugin_core&#39;</span><span style="color:#f92672">,</span>
+    id <span style="color:#e6db74">&#39;nome_altro_plugin_core&#39;</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>Gradle fornisce di base una serie di plugin &ldquo;core&rdquo;, che sono elencati all&rsquo;indirizzo: <a href="https://docs.gradle.org/current/userguide/java_plugin.html" title="Gradle - Pagina web contenente l'elenco di plugin 'core' disponibili">https://docs.gradle.org/current/userguide/java_plugin.html</a>.</p>
-<p>Per importare un plugin &ldquo;core&rdquo; di Gradle è necessario semplicemente indicarne il nome nella sezione &ldquo;plugins&rdquo; del file <code>build.gradle</code>.</p>
-<p>Tra i vari plugin core elenchiamo:</p>
+</code></pre></div><p>I plugin non core, scelti quindi dal portale, devono essere indicati inserendo nome e versione, come da esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+    id <span style="color:#e6db74">&#39;nome_plugin_core&#39;</span><span style="color:#f92672">,</span>
+    id <span style="color:#e6db74">&#39;nome_altro_plugin_core&#39;</span>
+    id <span style="color:#e6db74">&#39;plugin_non_core&#39;</span> version <span style="color:#e6db74">&#39;0.4.1&#39;</span>
+    id <span style="color:#e6db74">&#39;altro_plugin_non_core&#39;</span> version <span style="color:#e6db74">&#39;1.2.1&#39;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Alcuni plugin &ldquo;core&rdquo; meritano di essere menzionati:</p>
 <ul>
 <li>
-<p>Il Build Init plugin, che fornisce il task di <code>init</code> per la creazione di nuovi progetti; Non necessita configurazione;</p>
+<p>Il Build Init Plugin permette la creazione di nuovi progetti. Non necessita configurazione. Mette a disposizione il task di <code>init</code>.</p>
 </li>
 <li>
-<p>Il Base Plugin, che fornisce i vari task quali <code>clean</code> e <code>build</code>; Deve essere configurato:</p>
+<p>Il Base Plugin permette la pulizia e la pacchettizzazione del progetto. Fornisce i vari task quali <code>clean</code> e <code>build</code>. Deve essere configurato nell&rsquo;apposita sezione:</p>
 </li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  plugins <span style="color:#f92672">{</span>
       id <span style="color:#e6db74">&#39;base&#39;</span>
   <span style="color:#f92672">}</span>
 </code></pre></div><ul>
-<li>
-<p>Il Project Report Plugin, che fornisce funzionalità basilari per la gestione dei report di progetto attraverso il task <code>projectReport</code>;</p>
-<p>Questo plugin deve essere configurato:</p>
-</li>
+<li>Il Project Report Plugin abilita funzionalità basilari per la gestione dei report di progetto. Fornisce il task <code>projectReport</code>. Deve essere configurato nell&rsquo;apposita sezione:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">  plugins <span style="color:#f92672">{</span>
       id <span style="color:#e6db74">&#39;project-report&#39;</span>
   <span style="color:#f92672">}</span>
-</code></pre></div><p>Ogni plugin importa uno specifico insieme di task. Se nel file <code>build.gradle</code> non fosse presente l&rsquo;indicazione del plugin (che indica la tipologia di progetto), Gradle non saprebbe su cosa deve lavorare, quindi utilizzarebbe il plugin di <code>init</code> . I task disponibili sarebbero quindi:</p>
+</code></pre></div><h3 id="task">Task</h3>
+<p>I task sono le azioni che è possibile effettuare su un progetto. Ogni plugin importato rende disponibili nuovi <code>task</code> sul progetto, anche se è sempre possibile crearne dei nuovi.</p>
+<p>Per visualizzare una lista di task disponibili in un progetto, dalla cartella principale del progetto è necessario lanciare:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew tasks
+</code></pre></div><p>Dato che molti task sono importati specificando un plugin, se non fosse presente l&rsquo;indicazione del plugin, Gradle utilizzerebbe il plugin di <code>init</code>. In questo caso, utilizzando il comando <code>gradlew tasks</code> per visualizzare i task disponibili sul progetto, si otterrebbe il seguente elenco:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">gradlew tasks
 
 Build Setup tasks
@@ -381,15 +395,7 @@ Help tasks
 help - Displays a help message.
 tasks - Displays the tasks runnable from root project &#39;example&#39;.
 ...
-</code></pre></div><p>Oltre ai plugin &ldquo;core&rdquo; di Gradle, sono disponibili una serie di plugin pubblicati dalla comunità sul portale Gradle all&rsquo;indirizzo: <a href="https://plugins.gradle.org/" title="Gradle - Pagina web contenente l'elenco di plugin pubblicati dalla comunità">https://plugins.gradle.org/</a>.</p>
-<p>Questi plugin forniscono l&rsquo;integrazione di tools quali Jetty (con plugin org.gretty), SpotBugs (con plugin com.github.spotbugs) e tanti altri.</p>
-<p>Per applicare un plugin dal portale, è necessario indicare nome e versione, come da esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
-    id <span style="color:#e6db74">&#39;com.jfrog.bintray&#39;</span> version <span style="color:#e6db74">&#39;0.4.1&#39;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h3 id="task">Task</h3>
-<p>I task sono le azioni che è possibile effettuare su un progetto.</p>
-<p>Per eseguire dei task, dalla cartella principale del progetto è necessario eseguire il comando <code>gradlew</code> passando i vari task come parametri:</p>
+</code></pre></div><p>Per eseguire dei task, dalla cartella principale del progetto è necessario eseguire il comando <code>gradlew</code> passando i vari task come parametri:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew task1 task2 task3
 </code></pre></div><p>E' possibile crearne di personalizzati, aggiungendoli al file <code>build.gradle</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">task<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
@@ -402,9 +408,7 @@ tasks - Displays the tasks runnable from root project &#39;example&#39;.
 </code></pre></div><p>L&rsquo;output del comando è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Hello world!
 </code></pre></div><p>Oltre ai task personalizzati aggiunti al progetto, è possibile comunque invocare i task messi a disposizione dai plugin configurati nel progetto.</p>
-<p>Per visualizzare una lista di task disponibili in un progetto,  dalla cartella principale del progetto è necessario lanciare:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew tasks
-</code></pre></div><p>Gradle non esegue i task secondo l&rsquo;ordine presente sulla linea di comando, ma crea un proprio piano di esecuzione dei task. Per visualizzarlo, è necessario aggiungere il flag <code>--dry-run</code>  alla linea di comando.</p>
+<p>Gradle non esegue i task secondo l&rsquo;ordine presente sulla linea di comando, ma crea un proprio piano di esecuzione dei task. Per visualizzarlo, è necessario aggiungere il flag <code>--dry-run</code> alla linea di comando.</p>
 <p>Ad esempio, per visualizzare il piano di esecuzione dei task per il comando <code>build</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gradlew build --dry-run
 </code></pre></div><p>L&rsquo;output prodotto, per un progetto Java, è il seguente:</p>

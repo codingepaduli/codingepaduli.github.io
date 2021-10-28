@@ -53,11 +53,16 @@
       </div>
 
       
-      <div class="logo__item logo__text">
+      <div class="logo__item">
         <div class="logo__title">
-          Coding e Paduli
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
         </div>
       </div>
+
+
+
 
       
       <div>
@@ -221,7 +226,7 @@
 <div class="content post__content clearfix">
       <h1 id="schedulazione-task-ricorrenti-con-cron-e-crontab">Schedulazione task ricorrenti con cron e crontab</h1>
 <p>Cron e anacron permettono la schedulazione di un task utente con una specifica ricorrenza, ad esempio giornaliera o mensile. Per la scrittura dei task da eseguire, ci si avvale di due programmi: <strong>crontab</strong> ed <strong>anacrontab</strong>.</p>
-<p>Cron presume che il sistema sia attivo 24 ore su 24, quindi se in un certo periodo il computer è spento, i task schedulati in quel periodo non saranno eseguiti, ma saranno schedulati per la prossima occorrenza. Ad esempio, se un task schedulato il primo giorno di ogni mese non viene eseguito, magari perché il computer è spento, allora sarà eseguito il primo giorno del mese successivo.</p>
+<p>Cron presume che il sistema sia attivo 24 ore su 24, quindi se in un certo periodo il computer è spento, i task schedulati in quel periodo non saranno eseguiti, e si dovrà attendere successiva ricorrenza schedulata affinchè siano eseguiti. Ad esempio, se un task è schedulato per il primo giorno di ogni mese, ma il primo giorno di Giugno il computer è spento e sarà acceso solo il terzo giorno, allora i task non saranno eseguiti a Giugno, la successiva esecuzione avverrà il primo giorno di Luglio.</p>
 <p>Gli utenti comuni non possono usare cron, però possono gestire i propri task attraverso crontab, se l&rsquo;amministratore da loro i permessi di esecuzione del programma.</p>
 <p>Anche gli amministratori possono utilizzare crontab, ed il corrispondente anacrontab, per gestire i task ricorrenti.</p>
 <h2 id="configurazione-di-cron-per-lamministratore">Configurazione di cron per l&rsquo;amministratore</h2>
@@ -266,7 +271,9 @@ MAILTO<span style="color:#f92672">=</span>root@example.com
 <p>Nel caso non sia stato eseguito, si può cercare una traccia di eventuali errori riferiti a cron nei file seguenti:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep <span style="color:#e6db74">&#39;cron&#39;</span> /var/log/syslog
 grep <span style="color:#e6db74">&#39;cron&#39;</span> /var/log/messages
-</code></pre></div><h2 id="sintassi-di-schedulazione-di-cron">Sintassi di schedulazione di cron</h2>
+</code></pre></div><p><strong>I commenti non sono ammessi sulla stella linea di un comando o di una variabile, poichè vengono interpretati come parte del comando o della variabile.</strong></p>
+<p><strong>Il carattere <code>%</code> è interpretato come <code>new line</code>, per poterlo utilizzare come carattere deve essere preceduto da un &ldquo;escape&rdquo; <code>\</code>.</strong></p>
+<h2 id="sintassi-di-schedulazione-di-cron">Sintassi di schedulazione di cron</h2>
 <p>La sintassi standard di una regola di cron è:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">minuto ora giornoMese mese giornoSettimana  job
 </code></pre></div><table>

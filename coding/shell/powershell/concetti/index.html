@@ -53,11 +53,16 @@
       </div>
 
       
-      <div class="logo__item logo__text">
+      <div class="logo__item">
         <div class="logo__title">
-          Coding e Paduli
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
         </div>
       </div>
+
+
+
 
       
       <div>
@@ -226,7 +231,7 @@
 <p>E' possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Module -ListAvailable
 </code></pre></div><p>L&rsquo;output riportato è il seguente:</p>
-<pre><code class="language-output" data-lang="output">Directory: /opt/microsoft/powershell/7/Modules
+<pre tabindex="0"><code class="language-output" data-lang="output">Directory: /opt/microsoft/powershell/7/Modules
 
 ModuleType Version    PreRelease Name                                PSEdition
 ---------- -------    ---------- ----                                ---------
@@ -246,7 +251,7 @@ Binary     2.0.3                 ThreadJob                           Desk
 <p>E' possibile visualizzare la lista di moduli presenti sul proprio ambiente, attraverso il comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSProvider
 </code></pre></div><p>L&rsquo;output riportato è il seguente:</p>
-<pre><code class="language-output" data-lang="output">Name                 Capabilities                  Drives
+<pre tabindex="0"><code class="language-output" data-lang="output">Name                 Capabilities                  Drives
 ----                 ------------                  ------
 Alias                ShouldProcess                 {Alias}
 Environment          ShouldProcess                 {Env}
@@ -290,7 +295,7 @@ Variable             ShouldProcess                 {Variable}
 <p>Un esempio di CmdLet che prende in input un parametro e lo stampa in output nel terminale è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output -InputObject <span style="color:#e6db74">&#34;Hello World!!&#34;</span>
 </code></pre></div><p>L&rsquo;output generato dal CmdLet è di seguito riportato:</p>
-<pre><code class="language-output" data-lang="output">Hello World!!
+<pre tabindex="0"><code class="language-output" data-lang="output">Hello World!!
 </code></pre><h3 id="alias">Alias</h3>
 <p>Powershell associa ai diversi CmdLet disponibili una serie di alias gia familiari a chi proviene da altre shell, facilitando il passaggio a Powershell.</p>
 <p>Per ottenere la lista completa di alias, si usa la CmdLet:</p>
@@ -320,7 +325,7 @@ $variabileTestuale = <span style="color:#e6db74">&#34;2&#34;</span>;
 </code></pre></div><p>Allo stesso modo si può visualizzare la guida in linea del CmdLet invocandolo con il parametro <code>-?</code>, come ne seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Write-Output -?
 </code></pre></div><p>La guida in linea mostrata in entrambi gli esempi è la seguente:</p>
-<pre><code class="language-output" data-lang="output">NAME
+<pre tabindex="0"><code class="language-output" data-lang="output">NAME
     Write-Output
 
 SYNTAX
