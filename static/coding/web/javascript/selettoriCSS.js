@@ -1,6 +1,6 @@
 function seleziona(selector) {
     let elements = document.querySelectorAll(selector);
-    for (element of elements) {
+    for (let element of elements) {
         alert(element.innerHTML);
     }
 }

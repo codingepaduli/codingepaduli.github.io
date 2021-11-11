@@ -8,7 +8,7 @@ let dx = 1;
 let dy = 1;
 
 // goals
-p1Goals=0;
+let p1Goals=0;
 
 // set the numbers of row and columns
 let righePalline = 4;

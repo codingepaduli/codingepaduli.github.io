@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SSH - Coding e Paduli</title>
+
+    <meta name="description" content="SSH, uno strumento per lo scambio sicuro di dati e informazioni tra client e server">
+        <meta property="og:title" content="SSH" />
+<meta property="og:description" content="SSH, uno strumento per lo scambio sicuro di dati e informazioni tra client e server" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/tools/ssh/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2021-11-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-03T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="SSH"/>
+<meta name="twitter:description" content="SSH, uno strumento per lo scambio sicuro di dati e informazioni tra client e server"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding e tools</a></li>
+
+      <li><a href="/interesting/">Interessanti</a></li>
+
+      <li><a href="/opensource/">Open Source</a></li>
+
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-11-03T00:00:00Z">03-11-2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="ssh">SSH</h1>
+<p>SSH (Secure SHell) è uno strumento per lo scambio sicuro di dati e informazioni tra client e server.</p>
+<p>I metodi di autenticazione e crittografia permettono differenti opzioni:</p>
+<ul>
+<li>autenticazione con user/pass;</li>
+<li>autenticazione con chiave pubblica e privata;</li>
+<li>autenticazione con certificati;</li>
+<li>generazione di un&rsquo;autorità di certificazione per la verifica dei certificati;</li>
+<li>crittografia simmetrica e asimmetrica (ovvero con una e con due chiavi per cifrare e decifrare delle informazioni)</li>
+<li>creazione di proxy e reverse-proxy che fanno da tunnel sicuri;</li>
+<li>&hellip;</li>
+</ul>
+<p>Installazione su client:</p>
+<ul>
+<li><code>apt install openssh-client</code></li>
+</ul>
+<p>Installazione su server:</p>
+<ul>
+<li><code>apt install openssh-server</code></li>
+</ul>
+<p>File di configurazione su client:</p>
+<ul>
+<li><code>/etc/ssh/ssh_config</code></li>
+<li>files in <code>/etc/ssh/ssh_config.d/*.conf</code></li>
+</ul>
+<p>File di configurazione su server:</p>
+<ul>
+<li><code>/etc/ssh/sshd_config</code></li>
+<li>files in <code>/etc/ssh/sshd_config.d/*.conf</code></li>
+</ul>
+<p>Per riavviare il server SSH (al cambio di configurazione, ad esempio), è necessario il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart ssh
+</code></pre></div><p>Per verificare gli algoritmi disponibili:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -Q cipher
+ssh -Q cipher-auth
+ssh -Q mac
+ssh -Q kex
+ssh -Q key
+</code></pre></div><h2 id="autenticazione-con-userpassword">Autenticazione con user/password</h2>
+<p>L&rsquo;autenticazione con utente e password è demandata al sistema operativo.</p>
+<p>L&rsquo;utente fornisce un nome utente ed una password, il server SSH confronta tali dati con il database degli utenti del sistema operativo ed in caso di corrispondenza permette l&rsquo;accesso all&rsquo;utente.</p>
+<p>E' possibile abilitarla o disabilitarla modificando il file di configurazione del server SSH <code>/etc/ssh/sshd_config</code>, alla voce:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PasswordAuthentication yes <span style="color:#75715e"># yes or no</span>
+</code></pre></div><h2 id="autenticazione-e-cifratura-con-chiave-privatapubblica">Autenticazione e cifratura con chiave privata/pubblica</h2>
+<p>L&rsquo;autenticazione e cifratura con chiave privata/pubblica è impostata nel file di configurazione del server SSH <code>/etc/ssh/sshd_config</code> dalla voce seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PubkeyAuthentication yes <span style="color:#75715e"># yes or no</span>
+</code></pre></div><p>Generalmente l&rsquo;utente ha una coppia di chiavi, una privata (id_rsa) ed una pubblica (id_rsa.pub), tipicamente memorizzate nei file:</p>
+<ul>
+<li><code>~/.ssh/id_rsa</code></li>
+<li><code>~/.ssh/id_rsa.pub</code></li>
+</ul>
+<p>La chiave pubblica deve essere copiata sul server remoto, e quando si utilizza SSH, automaticamente si utilizza la chiave privata per criptare la comunicazione con il server, che a sua volta utilizza la chiave pubblica copiata. Se le chiavi sono compatibili, viene stabilita una comunicazione.</p>
+<p>Per generare la coppia di chiavi pubblica/privata, che vengono salvate nei file <code>id_rsa</code> e <code>id_rsa.pub</code> nella cartella <code>chiavi_ssh</code>, si utilizza il comando seguente (nota che l&rsquo;estensione <code>.pub</code> viene aggiunta automaticamente al nome del file che contiene la chiave pubblica):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -f $HOME/chiavi_ssh/id_rsa -C <span style="color:#e6db74">&#34;chiave per server A&#34;</span>
+</code></pre></div><p>Il commento, specificato nel comando precedente attraverso l&rsquo;opzione <code>-C</code> (maiuscola) può essere utile ad indicare lo scopo d&rsquo;uso o il server a cui è destinata una chiave. Si può cambiare utilizzando l&rsquo;opzione <code>-c -C commento</code> (minuscola e maiuscola)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -f $HOME/chiavi_ssh/id_rsa -c -C <span style="color:#e6db74">&#34;chiave per server B&#34;</span>
+</code></pre></div><p>La passphrase (frase di sblocco) viene richiesta, ma può essere omessa con le opzioni <code>-q -N &quot;&quot;</code> che indicano di non utilizzare una passphrase e di non richiederla quando si usa la chiave.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -f $HOME/chiavi_ssh/id_rsa -q -N <span style="color:#e6db74">&#34;&#34;</span>
+</code></pre></div><p>Per cambiare la passphrase, si utilizza il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -f $HOME/chiavi_ssh/id_rsa -p
+</code></pre></div><p>Per ottenere informazioni su una chiave, verificare l&rsquo;output del comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -l -f $HOME/chiavi_ssh/id_rsa
+
+<span style="color:#ae81ff">2048</span> SHA256: abacadaeaf1234567890 Comment <span style="color:#66d9ef">for</span> key xyz <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+^^^^   ^^^^^^^^^^^^^^^^^^^^^^^^       ^^^^^^^^^^       ^^^
+ |__ Size   Fingerprint __|     Comment __|     Type __|
+</code></pre></div><h3 id="autorizzare-laccesso-di-un-client">Autorizzare l&rsquo;accesso di un client</h3>
+<p>Il file <code>$HOME/.ssh/authorized_keys</code> contiene l&rsquo;elenco di client a cui è permesso l&rsquo;accesso.</p>
+<p>Per aggiungere l&rsquo;accesso di un client, è necessario copiare la chiave <strong>pubblica</strong> del client nel server, come di seguito:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id -i $HOME/chiavi_ssh/id_rsa.pub SERVER
+</code></pre></div><p>A questo punto si può accedere al server specificando la chiave:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa SERVER
+</code></pre></div><p>Nel caso l&rsquo;utente non sia autorizzato ad accedere attraverso la chiave pubblica, verificare che la cartella <code>.ssh</code> abbia i permessi <code>700</code> (<code>rwx</code> solo per il proprietario), verificare che il file <code>$HOME/.ssh/authorized_keys</code> abbia i permessi <code>600</code> e verificare che nel file di configurazione del server <code>/etc/ssh/sshd_config</code> si stia leggendo il file <code>authorized_keys</code> corretto:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">AuthorizedKeysFile  .ssh/authorized_keys
+</code></pre></div><h3 id="memorizzare-la-passphrase-usando-lagente-ssh">Memorizzare la passphrase usando l&rsquo;agente SSH</h3>
+<p>L&rsquo;agente SSH si occupa di memorizzare la passphrase per tutta la durata della sessione SSH.</p>
+<p>Per verificare se l&rsquo;agente SSH gestisce già delle chiavi, eseguire il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add -l
+</code></pre></div><p>Per affidargli una chiave, è necessario il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add $HOME/chiavi_ssh/id_rsa
+</code></pre></div><p>Per rimuovere una chiave , è necessario il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add -d $HOME/chiavi_ssh/id_rsa
+</code></pre></div><p>Quando una chiave viene aggiunta, è possibile effettuare il login automatico ad una shell, senza che sia richiesta la passphrase.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa SERVER
+</code></pre></div><p>E' possibile affidare automaticamente la chiave all&rsquo;agente, impostando la configurazione del client <code>/etc/ssh/ssh_config</code> con la voce seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">AddKeysToAgent yes
+</code></pre></div><h2 id="eseguire-comandi-tramite-ssh">Eseguire comandi tramite SSH</h2>
+<p>E' possibile inviare dei comandi al server specificandoli come parametro.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh user@machine.local <span style="color:#e6db74">&#39;COMANDO&#39;</span>
+</code></pre></div><p>E' importante notare che il parametro è composto da una intera stringa, che poi viene eseguita sul server con il comando <code>sh -c COMANDO</code>. Inoltre, la shell del client risolve eventuali variabili ed espressioni prima che SSH possa inviare il comando al server per l&rsquo;esecuzione.</p>
+<p>Questi due passaggi non sono sempre ovvi e portano a degli errori che possono sembrare strani.</p>
+<p>Ad esempio il comando <code>ssh user@machine.local bash -lc &quot;cd /tmp;pwd&quot;</code> intuitivamente dovrebbe avere come output <code>/tmp</code> ma invece ha come output <code>/home/user</code>. Il fatto si spiega analizzando il comando che viene eseguito sul server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sh -c bash -lc cd /tmp;pwd
+</code></pre></div><p>Come si può notare, esistono due shell, la prima è <code>sh</code>, la seconda è <code>bash</code>. I doppi apici sono stati persi perchè SSH prende i tre parametri <code>bash</code> <code>-lc</code> e <code>&quot;cd /tmp;pwd&quot;</code> e crea il COMANDO da passare al server <code>bash -lc cd /tmp;pwd</code>.</p>
+<p>Vengono quindi eseguiti i seguenti comandi:</p>
+<ol>
+<li>la prima shell (<code>sh</code>) esegue nella cartella corrente <code>$HOME</code> la seconda shell (<code>bash -lc cd /tmp</code>) che poi termina perdendo la posizione corrente (<code>/tmp</code>);</li>
+<li>successivamente la prima shell esegue sempre nella cartella corrente <code>$HOME</code> il secondo comando <code>pwd</code>.</li>
+</ol>
+<p>E' sempre consigliato quindi utilizzare i doppi apici, passando i comandi come di seguito:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh user@machine.local <span style="color:#e6db74">&#39;bash -lc &#34;cd /tmp;pwd&#34;&#39;</span>
+</code></pre></div><p>Per osservare il lavoro che la shell svolge nella risoluzione di variabili ed espressioni, supponiamo di voler stampare la home dell&rsquo;utente.</p>
+<p>Se si vuole accedere sul server per poi scrivere a video la cartella home dell&rsquo;utente, si usa il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh prof@localhost <span style="color:#e6db74">&#39;bash -lc &#34;cd $HOME;pwd&#34;&#39;</span>
+</code></pre></div><p>L&rsquo;output, come ci si aspetta, è la cartella dell&rsquo;utente <code>prof</code>, dato che la variabile <code>$HOME</code> non è risolta immediatamente, perché il comando è tra apici singoli, e solo quando il comando è inviato al server viene risolta, per cui l&rsquo;output risultante è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">/home/prof
+</code></pre></div><p>Se si vuole invece ricavare la cartella home dell&rsquo;utente <code>user</code> per inviarla al server, si usa il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh prof@localhost <span style="color:#e6db74">&#34;bash -lc \&#34;cd </span>$HOME<span style="color:#e6db74">;pwd\&#34;&#34;</span>
+</code></pre></div><p>Dato che la variabile <code>$HOME</code> è risolta prima di inviare il comando al server, perché questa volta tra apici doppi, il comando inviato al server contiene il percorso della cartella dell&rsquo;utente <code>user</code>, quindi una volta eseguito genera l&rsquo;output seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">/home/user
+</code></pre></div><h2 id="analisi-della-sicurezza">Analisi della sicurezza</h2>
+<p>Ci sono diverse debolezze nell&rsquo;interazione client server:</p>
+<ol>
+<li>
+<p>Quando il client si collega per la priva volta al server, il server invia al client la propria impronta digitale, quindi l&rsquo;utente deve verificarla ed accettarla per proseguire la connessione. Questa impronta digitale viene salvata nel file <code>./ssh/known_hosts</code>. L&rsquo;utente, per pigrizia, non verifica mai l&rsquo;impronta digitale e sceglie di fidarsi sempre;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">The authenticity of host xxx can<span style="color:#e6db74">&#39;&#39;</span>t be established.
+RSA key fingerprint is SHA256:4fdsanfMfazsbfMadfas
+Are you sure you want to <span style="color:#66d9ef">continue</span> connecting <span style="color:#f92672">(</span>yes/no<span style="color:#f92672">)</span>?
+</code></pre></div></li>
+<li>
+<p>La chiave pubblica dell&rsquo;utente deve essere inviata al server (per poter autenticare l&rsquo;utente), che la memorizza nel file <code>.ssh/authorized_keys</code>. E' problematico inviare la chiave pubblica al server senza connessione sicura, soprattutto se non si ha una password di accesso (il client non ha SSH, dato che ancora non è possibile stabilire una connessione col server). Inoltre le mille chiavi accumulate nel file <code>.ssh/authorized_keys</code> sono ingestibili.</p>
+</li>
+<li>
+<p>Le chiavi SSH non scadono mai.</p>
+</li>
+</ol>
+
+    </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="https://berndbausch.medium.com/ssh-certificates-a45bdcdfac39" style="font-weight: 700; color: #e22d30;">SSH certificates</a>: How to use SSH with certificates</p><p><a href="https://infosec.mozilla.org/guidelines/openssh" style="font-weight: 700; color: #e22d30;">Mozilla SSH recommendations</a>: How to configure SSH server</p><p><a href="https://infosec.mozilla.org/guidelines/key_management.html" style="font-weight: 700; color: #e22d30;">Algorithms by security levels</a>: Mozilla recommendations about handling and management of cryptographic material</p>
+  </article>
+</main>
+
+
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/tools/anacron/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">Anacron ed Anacrontab</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

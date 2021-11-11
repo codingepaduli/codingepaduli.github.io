@@ -46,7 +46,7 @@ function draw() {
     text('270 gradi',520,heightRow1+diameterCircles);
     text('360 gradi',620,heightRow1+diameterCircles);
 
-    line(0, height/2, width, height/2)
+    line(0, height/2, width, height/2);
 
     // circonferenze per misurazione angoli in senso antiorario
     text("Archi di circonferenza con angoli misurati in senso antiorario", 100, 230);

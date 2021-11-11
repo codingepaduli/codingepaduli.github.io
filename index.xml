@@ -8,6 +8,15 @@
     <language>it-IT</language>
     <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>SSH</title>
+      <link>http://codingepaduli.github.io/coding/tools/ssh/</link>
+      <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/tools/ssh/</guid>
+      <description>SSH, uno strumento per lo scambio sicuro di dati e informazioni tra client e server</description>
+    </item>
+    
+    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>

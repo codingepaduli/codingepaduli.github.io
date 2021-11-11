@@ -7,7 +7,6 @@
 // altrimenti tutti i pixel avranno colore rgb=(255, 255, 255);
 
 let img;
-let canvas;
 let ctx;
 let pixel;
 

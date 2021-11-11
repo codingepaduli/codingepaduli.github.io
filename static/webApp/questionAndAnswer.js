@@ -1,7 +1,7 @@
 
     // contains the questions
-    questions = {};
-    index = 0;
+    let questions = {};
+    let index = 0;
 
 		// see dashboard https://jsonbox.io/dashboard.html?box=box_638e0bc908f98bdbc087
 		// delete a row by ID: https://jsonbox.io/box_638e0bc908f98bdbc087/ID
@@ -24,7 +24,7 @@
     );
 
     function cleanAndRandomize() {
-        let classesToRemove = ['btn-success', 'btn-danger', 'btn-outline-primary', 'btn-outline-info']
+        let classesToRemove = ['btn-success', 'btn-danger', 'btn-outline-primary', 'btn-outline-info'];
 
         // Get the paragraphs
         let a1 = document.getElementById("answer1");
