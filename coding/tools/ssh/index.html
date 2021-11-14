@@ -293,9 +293,9 @@ ssh -Q key
 </code></pre></div><h3 id="autorizzare-laccesso-di-un-client">Autorizzare l&rsquo;accesso di un client</h3>
 <p>Il file <code>$HOME/.ssh/authorized_keys</code> contiene l&rsquo;elenco di client a cui è permesso l&rsquo;accesso.</p>
 <p>Per aggiungere l&rsquo;accesso di un client, è necessario copiare la chiave <strong>pubblica</strong> del client nel server, come di seguito:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id -i $HOME/chiavi_ssh/id_rsa.pub SERVER
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id -i $HOME/chiavi_ssh/id_rsa.pub user@server
 </code></pre></div><p>A questo punto si può accedere al server specificando la chiave:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa SERVER
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa user@server
 </code></pre></div><p>Nel caso l&rsquo;utente non sia autorizzato ad accedere attraverso la chiave pubblica, verificare che la cartella <code>.ssh</code> abbia i permessi <code>700</code> (<code>rwx</code> solo per il proprietario), verificare che il file <code>$HOME/.ssh/authorized_keys</code> abbia i permessi <code>600</code> e verificare che nel file di configurazione del server <code>/etc/ssh/sshd_config</code> si stia leggendo il file <code>authorized_keys</code> corretto:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">AuthorizedKeysFile  .ssh/authorized_keys
 </code></pre></div><h3 id="memorizzare-la-passphrase-usando-lagente-ssh">Memorizzare la passphrase usando l&rsquo;agente SSH</h3>
@@ -307,7 +307,7 @@ ssh -Q key
 </code></pre></div><p>Per rimuovere una chiave , è necessario il comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add -d $HOME/chiavi_ssh/id_rsa
 </code></pre></div><p>Quando una chiave viene aggiunta, è possibile effettuare il login automatico ad una shell, senza che sia richiesta la passphrase.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa SERVER
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa user@server
 </code></pre></div><p>E' possibile affidare automaticamente la chiave all&rsquo;agente, impostando la configurazione del client <code>/etc/ssh/ssh_config</code> con la voce seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">AddKeysToAgent yes
 </code></pre></div><h2 id="eseguire-comandi-tramite-ssh">Eseguire comandi tramite SSH</h2>
@@ -334,6 +334,20 @@ ssh -Q key
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh prof@localhost <span style="color:#e6db74">&#34;bash -lc \&#34;cd </span>$HOME<span style="color:#e6db74">;pwd\&#34;&#34;</span>
 </code></pre></div><p>Dato che la variabile <code>$HOME</code> è risolta prima di inviare il comando al server, perché questa volta tra apici doppi, il comando inviato al server contiene il percorso della cartella dell&rsquo;utente <code>user</code>, quindi una volta eseguito genera l&rsquo;output seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">/home/user
+</code></pre></div><p>Un&rsquo;altra attenzione da porre quando i comandi sono passati come argomento, è che non sono legati ad una sessione, quindi anche se si interrompe la comunicazione, i processi avviati rimangono attivi sulla macchina server. Per ovviare a questo problema, si può legare il comando ad un terminale, e quando si verifica un problema, la chiusura del terminale causa la terminazione del processo eseguito da remoto. La creazione del terminale avviene specificando l&rsquo;opzione <code>-t</code>.</p>
+<h2 id="firmare-e-verificare-file-con-ssh">Firmare e verificare file con SSH</h2>
+<p>E' possibile firmare file, email e rami di git utilizzando SSH, e quindi anche verificare una firma.</p>
+<p>Lo strumento di firma di SSH utilizza tre namespace differenti, <code>email</code> è il namespace per la firma delle email, <code>file</code> è il namespace per la firma dei file e <code>git</code> è il namespace per la firma dei commit e dei tag di git.</p>
+<p>Il comando per la firma prevede quindi l&rsquo;opzione <code>-n</code> per indicare il namespace e l&rsquo;opzione <code>-Y sign</code> per indicare di firmare il file, l&rsquo;opzione <code>-f key</code> indica la chiave da utilizzare per firmare ed infine <code>file_to_sign</code> indica il file da firmare, come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -Y sign -n file -f $HOME/chiavi_ssh/id_rsa file_to_sign
+</code></pre></div><p>La firma produce un file firmato di nome <code>file_to_sign.sig</code>.</p>
+<p>Per verificare il file firmato, è necessario prima creare un elenco di chiavi di cui ci si fida, che sono legate all&rsquo;identità (generalmente l&rsquo;email). Questo file ha il seguente formato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">email valid-after=YYYYMMDD,valid-before=YYYYMMDD chiave
+</code></pre></div><p>Un esempio di questo elenco è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">alice@example.com valid-after=20180101,valid-before=20250101 ssh-rsa ABCD..KEY
+bob@example.net   valid-after=20180101,valid-before=20250101 ssh-ed25519 KEY..DA
+</code></pre></div><p>Creato questo file, è possibile verificare che il file sia stato firmato dall&rsquo;utente identificato dalla email specificata, utilizzando le opzioni <code>-Y verify</code> per indicare di verificare il file, <code>-f allowed_signers</code> per indicare l&rsquo;elenco di chiavi fidate, <code>-I alice@example.com</code> per indicare l&rsquo;identità da verificare, <code>-n</code> per indicare il namespace, <code>-s file_to_verify.sig</code> per indicare la firma digitale del file ed infine <code>file_to_verify</code> per indicare il file (in questo caso viene inviato sullo standard input), come di seguito:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -Y verify -f allowed_signers -I alice@example.com -n file -s file_to_verify.sig &lt; file_to_verify
 </code></pre></div><h2 id="analisi-della-sicurezza">Analisi della sicurezza</h2>
 <p>Ci sono diverse debolezze nell&rsquo;interazione client server:</p>
 <ol>
