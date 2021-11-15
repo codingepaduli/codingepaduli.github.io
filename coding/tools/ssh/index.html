@@ -315,15 +315,15 @@ ssh -Q key
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh user@machine.local <span style="color:#e6db74">&#39;COMANDO&#39;</span>
 </code></pre></div><p>E' importante notare che il parametro è composto da una intera stringa, che poi viene eseguita sul server con il comando <code>sh -c COMANDO</code>. Inoltre, la shell del client risolve eventuali variabili ed espressioni prima che SSH possa inviare il comando al server per l&rsquo;esecuzione.</p>
 <p>Questi due passaggi non sono sempre ovvi e portano a degli errori che possono sembrare strani.</p>
-<p>Ad esempio il comando <code>ssh user@machine.local bash -lc &quot;cd /tmp;pwd&quot;</code> intuitivamente dovrebbe avere come output <code>/tmp</code> ma invece ha come output <code>/home/user</code>. Il fatto si spiega analizzando il comando che viene eseguito sul server:</p>
+<p>Ad esempio il comando <code>ssh user@machine.local bash -lc &quot;cd /tmp;pwd&quot;</code> intuitivamente dovrebbe avere come output <code>/tmp</code> ma invece ha come output la cartella <code>/home/user</code> dell&rsquo;utente <code>user</code>. Il fatto si spiega analizzando il comando che viene eseguito sul server:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sh -c bash -lc cd /tmp;pwd
-</code></pre></div><p>Come si può notare, esistono due shell, la prima è <code>sh</code>, la seconda è <code>bash</code>. I doppi apici sono stati persi perchè SSH prende i tre parametri <code>bash</code> <code>-lc</code> e <code>&quot;cd /tmp;pwd&quot;</code> e crea il COMANDO da passare al server <code>bash -lc cd /tmp;pwd</code>.</p>
-<p>Vengono quindi eseguiti i seguenti comandi:</p>
+</code></pre></div><p>Come si può notare, in questo comando sono coinvolte due shell, la prima è <code>sh</code>, la seconda è <code>bash</code>. I doppi apici sono stati persi perché SSH prende i tre parametri <code>bash</code> <code>-lc</code> e <code>&quot;cd /tmp;pwd&quot;</code> e crea il comando da passare al server <code>bash -lc cd /tmp;pwd</code>.</p>
+<p>Sul server si fa quindi accesso come utente <code>user</code> e sono eseguiti i seguenti comandi:</p>
 <ol>
-<li>la prima shell (<code>sh</code>) esegue nella cartella corrente <code>$HOME</code> la seconda shell (<code>bash -lc cd /tmp</code>) che poi termina perdendo la posizione corrente (<code>/tmp</code>);</li>
-<li>successivamente la prima shell esegue sempre nella cartella corrente <code>$HOME</code> il secondo comando <code>pwd</code>.</li>
+<li>la prima shell <code>sh</code> esegue nella cartella corrente <code>$HOME</code> dell&rsquo;utente <code>user</code> la seconda shell <code>bash</code>, che esegue il comando <code>cd /tmp</code> e poi termina. Quindi, anche la shell <code>bash</code> termina, e questo comporta la perdita della posizione corrente (<code>/tmp</code>);</li>
+<li>successivamente la prima shell esegue, sempre nella cartella corrente <code>$HOME</code> dell&rsquo;utente <code>user</code>, il secondo comando <code>pwd</code> che stampa a video <code>/home/user</code>.</li>
 </ol>
-<p>E' sempre consigliato quindi utilizzare i doppi apici, passando i comandi come di seguito:</p>
+<p>E' sempre consigliato quindi utilizzare gli apici singoli o doppi per racchiudere il comando da inviare, come nell&rsquo;esempio di seguito:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh user@machine.local <span style="color:#e6db74">&#39;bash -lc &#34;cd /tmp;pwd&#34;&#39;</span>
 </code></pre></div><p>Per osservare il lavoro che la shell svolge nella risoluzione di variabili ed espressioni, supponiamo di voler stampare la home dell&rsquo;utente.</p>
 <p>Se si vuole accedere sul server per poi scrivere a video la cartella home dell&rsquo;utente, si usa il comando seguente:</p>
@@ -332,7 +332,7 @@ ssh -Q key
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">/home/prof
 </code></pre></div><p>Se si vuole invece ricavare la cartella home dell&rsquo;utente <code>user</code> per inviarla al server, si usa il comando seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh prof@localhost <span style="color:#e6db74">&#34;bash -lc \&#34;cd </span>$HOME<span style="color:#e6db74">;pwd\&#34;&#34;</span>
-</code></pre></div><p>Dato che la variabile <code>$HOME</code> è risolta prima di inviare il comando al server, perché questa volta tra apici doppi, il comando inviato al server contiene il percorso della cartella dell&rsquo;utente <code>user</code>, quindi una volta eseguito genera l&rsquo;output seguente:</p>
+</code></pre></div><p>Dato che la variabile <code>$HOME</code> è risolta prima di inviare il comando al server, perché questa volta tra apici doppi, la shell sostituisce a questa variabile il percorso della cartella dell&rsquo;utente <code>user</code> che esegue il comando ssh. Successivamente il comando è inviato al server e, una volta eseguito, genera l&rsquo;output seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">/home/user
 </code></pre></div><p>Un&rsquo;altra attenzione da porre quando i comandi sono passati come argomento, è che non sono legati ad una sessione, quindi anche se si interrompe la comunicazione, i processi avviati rimangono attivi sulla macchina server. Per ovviare a questo problema, si può legare il comando ad un terminale, e quando si verifica un problema, la chiusura del terminale causa la terminazione del processo eseguito da remoto. La creazione del terminale avviene specificando l&rsquo;opzione <code>-t</code>.</p>
 <h2 id="firmare-e-verificare-file-con-ssh">Firmare e verificare file con SSH</h2>
@@ -364,7 +364,9 @@ Are you sure you want to <span style="color:#66d9ef">continue</span> connecting 
 <p>Le chiavi SSH non scadono mai.</p>
 </li>
 </ol>
-
+<p>Si può scegliere se fidarsi o meno di un partner esterno per la diffusione delle chiavi pubbliche. Ad esempio GitHub permette di accedere alla chiave pubblica di un utente <code>USERNAME</code> dal link:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">https://github.com/USERNAME.keys
+</code></pre></div>
     </div>
       <hr>
       <h2>Riferimenti</h2>
