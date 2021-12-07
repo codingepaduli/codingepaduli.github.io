@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SSH - Coding e Paduli</title>
 
-    <meta name="description" content="SSH, uno strumento per lo scambio sicuro di dati e informazioni tra client e server">
+    <meta name="description" content="SSH, uno strumento per l&#39;amministrazione di una macchina da remoto">
         <meta property="og:title" content="SSH" />
-<meta property="og:description" content="SSH, uno strumento per lo scambio sicuro di dati e informazioni tra client e server" />
+<meta property="og:description" content="SSH, uno strumento per l&#39;amministrazione di una macchina da remoto" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/tools/ssh/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
 <meta property="article:published_time" content="2021-11-03T00:00:00+00:00" />
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
 <meta name="twitter:title" content="SSH"/>
-<meta name="twitter:description" content="SSH, uno strumento per lo scambio sicuro di dati e informazioni tra client e server"/>
+<meta name="twitter:description" content="SSH, uno strumento per l&#39;amministrazione di una macchina da remoto"/>
 
 
 
@@ -225,17 +225,7 @@
     </header>
 <div class="content post__content clearfix">
       <h1 id="ssh">SSH</h1>
-<p>SSH (Secure SHell) è uno strumento per lo scambio sicuro di dati e informazioni tra client e server.</p>
-<p>I metodi di autenticazione e crittografia permettono differenti opzioni:</p>
-<ul>
-<li>autenticazione con user/pass;</li>
-<li>autenticazione con chiave pubblica e privata;</li>
-<li>autenticazione con certificati;</li>
-<li>generazione di un&rsquo;autorità di certificazione per la verifica dei certificati;</li>
-<li>crittografia simmetrica e asimmetrica (ovvero con una e con due chiavi per cifrare e decifrare delle informazioni)</li>
-<li>creazione di proxy e reverse-proxy che fanno da tunnel sicuri;</li>
-<li>&hellip;</li>
-</ul>
+<p>SSH (Secure SHell) è uno strumento per l&rsquo;amministrazione di una macchina da remoto. Fornisce i meccanismi per autenticare l&rsquo;utente sulla macchina remota e per creare un canale di comunicazione criptato sul quale far viaggiare input e output.</p>
 <p>Installazione su client:</p>
 <ul>
 <li><code>apt install openssh-client</code></li>
@@ -256,19 +246,52 @@
 </ul>
 <p>Per riavviare il server SSH (al cambio di configurazione, ad esempio), è necessario il comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart ssh
-</code></pre></div><p>Per verificare gli algoritmi disponibili:</p>
+</code></pre></div><h2 id="cenni-di-crittografia">Cenni di crittografia</h2>
+<p>Lo scopo della crittografia è rendere incomprensibile un testo o un messaggio a persone terze, permettendo la comprensione dello stesso solo ai soggetti autorizzati.</p>
+<p>La storia della crittografia può essere divisa in due ere: l&rsquo;era classica, in cui la comunicazione tra le parti era basata su un segreto condiviso (una chiave), e l&rsquo;era moderna, in cui la comunicazione è basata su una chiave pubblica ed una chiave privata, entrambe utilizzabili per criptare e decriptare il messaggio (ovvero per rendere comprensibile o meno il messaggio).</p>
+<p>Nell&rsquo;era classica la stessa chiave (segreta) era usata sia per cifrare che per decifrare il messaggio. L&rsquo;algoritmo di cifratura dei dati era basato principalmente sui cifrari, che indicavano come sostituire le lettere o le parole di un messaggio. I cifrari potevano essere molto semplici, come il cifrario di Cesare, o molto complessi, come il cifrario utilizzato nella macchina Enigma per la trasmissione delle informazioni durante la seconda guerra mondiale.</p>
+<p>Ad esempio, il cifrario di Cesare prevede la sostituzione di ogni lettera del messaggio con la lettera che si trova un certo numero di posizioni successive nell&rsquo;alfabeto. Il segreto consisteva quindi nel numero di posizioni da &ldquo;scorrere&rdquo;. Ipotizzando 2 posizioni di &ldquo;scorrimento&rdquo;, la lettera &ldquo;A&rdquo; era sostituita con la lettera &ldquo;C&rdquo;, la lettera &ldquo;B&rdquo; era sostituita con la lettera &ldquo;D&rdquo; e così via, rendendo il testo incomprensibile. Per rendere il testo nuovamente comprensibile, si &ldquo;scorreva&rdquo; dello stesso numero di posizioni ma in senso inverso, quindi la lettera &ldquo;D&rdquo; era sostituita con la lettera &ldquo;B&rdquo;, la lettera &ldquo;C&rdquo; era sostituita con la lettera &ldquo;A&rdquo; e così via. Se non si conosceva il numero segreto di posizioni, non si poteva rendere comprensibile il testo.</p>
+<p>Il punto debole di questi algoritmi &ldquo;classici&rdquo; consisteva proprio nella trasmissione della chiave segreta, poiché permetteva sia di decifrare il messaggio, sia di inviare messaggi cifrati sostituendosi all&rsquo;autore originale. Si passava dal problema di trasmettere il messaggio al problema di trasmettere la chiave segreta per leggere il messaggio.</p>
+<p>Il passaggio all&rsquo;era moderna è dovuto ai primi algoritmi basati sulla teoria dei numeri: l&rsquo;algoritmo RSA e lo scambio di chiavi Diffie-Hellman, che si basavano sul problema matematico della fattorizzazione in numeri primi. L&rsquo;algoritmo RSA usa una chiave privata ed una pubblica, una chiave serve a criptare i dati (e quindi renderli incomprensibili) e l&rsquo;altra chiave è utilizzata per decriptarli (e renderli di nuovo comprensibili). L&rsquo;algoritmo di scambio delle chiavi Diffie-Hellman consente a due entità di stabilire una chiave condivisa e segreta utilizzando un canale di comunicazione insicuro. Server e client arrivano a calcolare la stessa chiave indipendentemente uno dall&rsquo;altro, condividendo solo alcuni dati e mantenendo segreti altri.</p>
+<p>Il vantaggio rivoluzionario di questi algoritmi è che qualsiasi utente può tranquillamente pubblicare la propria chiave pubblica, in modo tale da permettere a terzi di cifrare i dati da trasmettere all&rsquo;utente, che poi utilizza la propria chiave privata per leggerli. Viceversa, l&rsquo;utente può utilizzare la chiave privata per trasmettere i dati a terzi, che utilizzano la chiave pubblica per leggerli. L&rsquo;algoritmo per cifrare e decifrare i messaggi non è segreto, ma pubblico.</p>
+<p>Rendere leggibile un messaggio criptato senza avere la chiave privata equivale a risolvere un problema matematico difficile da risolvere. Si ha quindi una prova matematica della impossibilità di lettura delle trasmissioni senza possedere la chiave privata, indipendentemente dal fatto che l&rsquo;algoritmo di cifratura sia pubblico.</p>
+<p>Oggi non si utilizza più il problema matematico della fattorizzazione in numeri primi, bensì l&rsquo;equazione delle curve ellittiche (dall&rsquo;inglese Equation of Elliptic Curve), che resta sempre di difficile risoluzione.</p>
+<p>Sempre basati sulla coppia di chiavi pubbliche e private, ci sono le autorità di certificazione che svolgono il ruolo di garanti dell&rsquo;identità di un utente e di smistamento delle chiavi tra gli utenti. Ad ogni utente viene rilasciato un certificato digitale che in pratica è una chiave pubblica. Utenti terzi che hanno necessità di verificare l&rsquo;identità e stabilire un canale sicuro di trasmissione con l&rsquo;utente contattano l&rsquo;autorità di certificazione per verificare il certificato dell&rsquo;utente e per ottenere la chiave pubblica dell&rsquo;utente.</p>
+<p>Introduciamo infine le tecniche di firma del messaggio, che non mirano a rendere incomprensibile un testo o un messaggio, ma hanno lo scopo di generare un codice alfanumerico, detto &ldquo;firma&rdquo;, a partire dal messaggio.</p>
+<p>Con le tecniche di firma, il messaggio viene trasmesso in chiaro, ed al messaggio viene aggiunta la &ldquo;firma&rdquo;, che garantisce il fatto che il messaggio non è contraffatto.</p>
+<p>Le tecniche di firma utilizzano un algoritmo noto per generare, partendo dal messaggio, un codice alfanumerico univoco (dall&rsquo;inglese hash) che poi viene firmato dalla chiave privata ed allegato al messaggio. Quando un utente vuole verificare che un messaggio non è contraffatto, decodifica la firma usando la chiave pubblica, poi verifica che il codice alfanumerico decrittato (hash) sia uguale al codice alfanumerico che si ottiene dal messaggio (poiché il messaggio è in chiaro). Se i due codici alfanumerici corrispondono, il messaggio è autentico.</p>
+<p>Una volta chiariti questi cenni di crittografia, si può descrivere il funzionamento basilare di SSH.</p>
+<h2 id="funzionamento-basilare-di-ssh">Funzionamento basilare di SSH</h2>
+<p>SSH funziona su modello client-server. Il server è in attesa di connessioni da parte dei client.</p>
+<p>Quando un client si collega, client e server negoziano la versione di protocollo SSH da utilizzare per la comunicazione. La lista di versioni supportate può essere visualizzata attraverso il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -Q protocol-version
+</code></pre></div><p>Stabilita la versione di protocollo da utilizzare, client e server negoziano una chiave segreta per criptare il canale di comunicazione. La negoziazione avviene attraverso un algoritmo per lo scambio delle chiavi (dall&rsquo;inglese Key EXchange), il più famoso è quello di scambio di chiavi Diffie-Hellman. Molti algoritmi aderiscono allo standard GSS-API (dall&rsquo;inglese Generic Security Service Application Program Interface). La lista di algoritmi per lo scambio delle chiavi può essere visualizzata attraverso i comandi seguenti:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -Q kex
+ssh -Q kex-gss
+</code></pre></div><p>Effettuato lo scambio delle chiavi, client e server creano un canale criptato utilizzando un algoritmo di crittografia simmetrico basato sulla chiave segreta scambiata precedentemente. La lista di algoritmi simmetrici (cha si basano sui cifrari) può essere visualizzata attraverso i comandi seguenti:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -Q cipher
-ssh -Q cipher-auth
-ssh -Q mac
-ssh -Q kex
-ssh -Q key
-</code></pre></div><h2 id="autenticazione-con-userpassword">Autenticazione con user/password</h2>
+</code></pre></div><p>Una volta creato il canale criptato di comunicazione, è necessario autenticare l&rsquo;utente all&rsquo;accesso del sistema. Questo può essere fatto con la classica richiesta di una password o dalla più moderna autenticazione basata sul fatto che l&rsquo;utente possiede la chiave privata che è associata alla chiave pubblica in possesso sul server. La lista di algoritmi asimmetrici (cha si basano sul possesso di chiave pubblica e privata) può essere visualizzata attraverso il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -Q key
+</code></pre></div><p>Aggiungiamo ancora gli algoritmi per firmare un file, la cui lista può essere visualizzata attraverso il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -Q sig
+</code></pre></div><p>Infine, aggiungiamo la lista di algoritmi basati su certificato, visualizzabile attraverso il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -Q key-cert
+</code></pre></div><p>Le funzionalità dello strumento SSH sono quindi le seguenti:</p>
+<ul>
+<li>autenticazione con user/pass (segreto condiviso tra client e server);</li>
+<li>autenticazione con chiave pubblica e privata (il client possiede la chiave privata ed il server quella pubblica);</li>
+<li>autenticazione con certificati (autorità di certificazione);</li>
+<li>generazione di un&rsquo;autorità di certificazione per la verifica dei certificati;</li>
+<li>firma dei messaggi (autenticità dei messaggi);</li>
+<li>creazione di proxy e reverse-proxy per la trasmissione di informazioni su canali sicuri;</li>
+</ul>
+<h2 id="autenticazione-con-userpassword">Autenticazione con user/password</h2>
 <p>L&rsquo;autenticazione con utente e password è demandata al sistema operativo.</p>
 <p>L&rsquo;utente fornisce un nome utente ed una password, il server SSH confronta tali dati con il database degli utenti del sistema operativo ed in caso di corrispondenza permette l&rsquo;accesso all&rsquo;utente.</p>
 <p>E' possibile abilitarla o disabilitarla modificando il file di configurazione del server SSH <code>/etc/ssh/sshd_config</code>, alla voce:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PasswordAuthentication yes <span style="color:#75715e"># yes or no</span>
-</code></pre></div><h2 id="autenticazione-e-cifratura-con-chiave-privatapubblica">Autenticazione e cifratura con chiave privata/pubblica</h2>
-<p>L&rsquo;autenticazione e cifratura con chiave privata/pubblica è impostata nel file di configurazione del server SSH <code>/etc/ssh/sshd_config</code> dalla voce seguente:</p>
+</code></pre></div><h2 id="autenticazione-con-chiave-privatapubblica">Autenticazione con chiave privata/pubblica</h2>
+<p>L&rsquo;autenticazione con chiave privata/pubblica è impostata nel file di configurazione del server SSH <code>/etc/ssh/sshd_config</code> dalla voce seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PubkeyAuthentication yes <span style="color:#75715e"># yes or no</span>
 </code></pre></div><p>Generalmente l&rsquo;utente ha una coppia di chiavi, una privata (id_rsa) ed una pubblica (id_rsa.pub), tipicamente memorizzate nei file:</p>
 <ul>
@@ -284,14 +307,14 @@ ssh -Q key
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -f $HOME/chiavi_ssh/id_rsa -q -N <span style="color:#e6db74">&#34;&#34;</span>
 </code></pre></div><p>Per cambiare la passphrase, si utilizza il comando seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -f $HOME/chiavi_ssh/id_rsa -p
-</code></pre></div><p>Per ottenere informazioni su una chiave, verificare l&rsquo;output del comando:</p>
+</code></pre></div><p>Le informazioni su una chiave possono essere recuperate attraverso il comando seguente, che si riporta insieme all&rsquo;output per semplicità descrittiva:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -l -f $HOME/chiavi_ssh/id_rsa
 
 <span style="color:#ae81ff">2048</span> SHA256: abacadaeaf1234567890 Comment <span style="color:#66d9ef">for</span> key xyz <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
 ^^^^   ^^^^^^^^^^^^^^^^^^^^^^^^       ^^^^^^^^^^       ^^^
  |__ Size   Fingerprint __|     Comment __|     Type __|
-</code></pre></div><h3 id="autorizzare-laccesso-di-un-client">Autorizzare l&rsquo;accesso di un client</h3>
-<p>Il file <code>$HOME/.ssh/authorized_keys</code> contiene l&rsquo;elenco di client a cui è permesso l&rsquo;accesso.</p>
+</code></pre></div><h3 id="autorizzare-laccesso-di-un-client-al-server">Autorizzare l&rsquo;accesso di un client al server</h3>
+<p>Il file <code>$HOME/.ssh/authorized_keys</code> contiene l&rsquo;elenco di client a cui è permesso l&rsquo;accesso al server.</p>
 <p>Per aggiungere l&rsquo;accesso di un client, è necessario copiare la chiave <strong>pubblica</strong> del client nel server, come di seguito:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id -i $HOME/chiavi_ssh/id_rsa.pub user@server
 </code></pre></div><p>A questo punto si può accedere al server specificando la chiave:</p>
@@ -348,6 +371,19 @@ ssh -Q key
 bob@example.net   valid-after=20180101,valid-before=20250101 ssh-ed25519 KEY..DA
 </code></pre></div><p>Creato questo file, è possibile verificare che il file sia stato firmato dall&rsquo;utente identificato dalla email specificata, utilizzando le opzioni <code>-Y verify</code> per indicare di verificare il file, <code>-f allowed_signers</code> per indicare l&rsquo;elenco di chiavi fidate, <code>-I alice@example.com</code> per indicare l&rsquo;identità da verificare, <code>-n</code> per indicare il namespace, <code>-s file_to_verify.sig</code> per indicare la firma digitale del file ed infine <code>file_to_verify</code> per indicare il file (in questo caso viene inviato sullo standard input), come di seguito:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -Y verify -f allowed_signers -I alice@example.com -n file -s file_to_verify.sig &lt; file_to_verify
+</code></pre></div><h2 id="copia-sicura-dei-file">Copia sicura dei file</h2>
+<p>SSH permette la creazione di un canale sicuro di comunicazione tra client e server che può essere utilizzato per inviare e ricevere file.</p>
+<p>Il comando utilizzato è <code>scp</code> (dall&rsquo;inglese &ldquo;secure copy&rdquo;), e prevede sia la copia di un file dal client al server che viceversa. La sintassi per specificare un file o una cartella sul server è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">user@host:[port][/path]
+</code></pre></div><p>Come si può notare, <code>user</code> è l&rsquo;utente che effettua l&rsquo;accesso sul server, <code>host</code> indica il nome o l&rsquo;indirizzo IP del server, <code>port</code> indica la porta sulla quale è in ascolto il processo e <code>path</code> indica il percorso del file da copiare o della cartella nella quale copiare il file.</p>
+<p>Il comando <code>scp</code> può quindi essere utilizzato per copiare un file presente su client nella cartella del server <code>/home/user/cartella</code> utilizzando la seguente sintassi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa file user@server:/home/user/cartella
+</code></pre></div><p>Viceversa, un file presente sul server nella cartella <code>/home/user/cartella/</code> può essere copiato nella cartella <code>cartella</code> del client con la seguente sintassi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa user@server:/home/user/cartella/file cartella
+</code></pre></div><p>Per copiare tutti i file presenti in una cartella si può utilizzare il carattere jolly <code>*</code>, come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa user@server:/home/user/cartella/* cartella
+</code></pre></div><p>Per copiare ricorsivamente tutti i file e le cartelle presenti in una specifica cartella si può utilizzare l&rsquo;opzione <code>-r</code>, come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -i $HOME/chiavi_ssh/id_rsa -r user@server:/home/user/cartella cartella
 </code></pre></div><h2 id="analisi-della-sicurezza">Analisi della sicurezza</h2>
 <p>Ci sono diverse debolezze nell&rsquo;interazione client server:</p>
 <ol>
