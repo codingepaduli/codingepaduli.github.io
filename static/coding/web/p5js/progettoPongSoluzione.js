@@ -38,17 +38,16 @@ function setup() {
 }
 
 function draw() {
-
-      frameRate(48);
+    frameRate(48);
 
     background(50,50,50);
 
     // frame rate
-    text(frameRate(), 30, 30);
+    // text(frameRate(), 30, 30);
 
     // draw the goals
     textSize(16);
-    text("P1: " + p1Goals, 150, 50);
+    text("P1: " + p1Goals, width-50, 20);
 
     // get the Y axe from the mouse
     let rectY = mouseY;
@@ -65,8 +64,12 @@ function draw() {
     rect(10,rectY,10,rectHeight);
 
     // the ball will bounce on the top and bottom borders
-    if (y < r || y + r > height) {
-        dy = -dy;
+    if (y < r) {
+        dy = 1;
+    }
+    
+    if (y + r > height) {
+        dy = -1;
     }
 
     // the ball will bounce on the right border
@@ -97,4 +100,16 @@ function draw() {
     // draw the ball
     fill(255, 204, 100);
     ellipse(x, y, d, d);
+    
+    // fullscreen rectangle
+    textSize(28);
+    text("[  ]", width - 60, height - 30);
+}
+
+// fullscreen when click
+function mousePressed() {
+  if (mouseX > width - 60 && mouseX < width - 30 && mouseY > height - 60 && mouseY < height - 30) {
+    let fs = fullscreen();
+    fullscreen(!fs);
+  }
 }

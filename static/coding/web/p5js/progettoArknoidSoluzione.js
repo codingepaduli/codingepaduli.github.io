@@ -41,6 +41,8 @@ let rectHeight;
 let d;
 let r;
 
+let deletedBalls;
+
 function preload() {
     console.info("displayWidth / displayHeight: " + displayWidth + " " + displayHeight);
     console.info("windowWidth / windowHeight: " + windowWidth + " " + windowHeight);
@@ -77,13 +79,22 @@ function draw() {
     strokeWeight(1);
     stroke(255, 204, 100);
 
+    deletedBalls = 0;
+
     // draw the others ball
     for (let i = 0; i<righePalline; i++) {
         for (let j = 0; j<colonnePalline; j++) {
             if (pallineX[i][j] != null && pallineY[i][j] != null) {
                 ellipse(pallineX[i][j], pallineY[i][j], d, d);
+            } else {
+                deletedBalls++;
             }
         }
+    }
+    
+    if (deletedBalls == righePalline * colonnePalline) {
+        text("WINNER", 50, 50);
+        noloop();
     }
 
     // get the Y axe from the mouse
@@ -100,30 +111,31 @@ function draw() {
     // draw my rectangle
     rect(10,rectY,10,rectHeight);
 
-    // the ball will bounce on the top and bottom borders
-    if (y < r || y + r > height) {
-        dy = -dy;
+    // the ball will bounce on the top border
+    if (y < r) {
+        dy = 1;
+    }
+    
+    // the ball will bounce on the bottom border
+    if (y + r > height) {
+        dy = -1;
     }
 
     // the ball will bounce on the right border
     if (x + r > width) {
-        dx = -dx;
+        dx = -1;
     }
 
     // the ball is in the limit
     if (x-r <= 20) {
         if (y >= rectY - r && y < rectY+rectHeight + r) {
-            // the ball will bounce on my rect, I win a point
-            // speed += 3;
-            p1Goals=p1Goals+1;
+        p1Goals=p1Goals+1;
         } else {
-            // speed -= 3;
-            // the ball will NOT bounce on my rect, I loose a point
             p1Goals=p1Goals-1;
         }
         // bounce out of the limit
         x = 2*20+r;
-        dx = -dx;
+        dx = 1;
     }
 
     // move
