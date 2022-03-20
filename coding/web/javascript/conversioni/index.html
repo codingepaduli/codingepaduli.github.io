@@ -226,24 +226,24 @@
 <div class="content post__content clearfix">
       <h1 id="identificazione-del-tipo-e-conversione-tra-tipi">Identificazione del tipo e conversione tra tipi</h1>
 <h2 id="parola-chiave-typeof-per-lidentificazione-del-tipo-di-dato">Parola chiave <code>typeof</code> per l&rsquo;identificazione del tipo di dato</h2>
-<p>E' possibile identificare il tipo di una variabile utilizzando la parola chiave <code>typeof</code>.</p>
+<p>E&rsquo; possibile identificare il tipo di una variabile utilizzando la parola chiave <code>typeof</code>.</p>
 <p>Supponendo di aver dichiarato le seguenti variabili:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;use strict&#39;</span>
-
-<span style="color:#75715e">// variabili primitive
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">naturalNumber</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">realNumber</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.5</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">toBeOrNotToBe</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">word</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;paragraph&#34;</span>;
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">undefinedThing</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">thing</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
-
-<span style="color:#75715e">// variabili wrapper
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">naturalNumberObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Number(<span style="color:#ae81ff">10</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">realNumberObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Number(<span style="color:#ae81ff">10.5</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">toBeOrNotToBeObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Boolean(<span style="color:#66d9ef">true</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">wordObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(<span style="color:#e6db74">&#34;paragraph&#34;</span>);
-</code></pre></div><p>Il codice necessario ad individuare i tipi di dato delle variabili dichiarate è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#e6db74">&#39;use strict&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// variabili primitive
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">naturalNumber</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">realNumber</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">toBeOrNotToBe</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">word</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;paragraph&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">undefinedThing</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">thing</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// variabili wrapper
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">naturalNumberObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Number(<span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">realNumberObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Number(<span style="color:#ae81ff">10.5</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">toBeOrNotToBeObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Boolean(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">wordObj</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(<span style="color:#e6db74">&#34;paragraph&#34;</span>);
+</span></span></code></pre></div><p>Il codice necessario ad individuare i tipi di dato delle variabili dichiarate è il seguente:</p>
 <ul>
 <li><code>typeof naturalNumber;</code>     // restituisce <code>number</code></li>
 <li><code>typeof realNumber;</code>        // restituisce <code>number</code></li>
@@ -261,59 +261,59 @@
 <h2 id="conversioni-tra-tipi">Conversioni tra tipi</h2>
 <h3 id="conversioni-da-stringa-a-numero">Conversioni da stringa a numero</h3>
 <p>Per convertire dati dal formato stringa al formato intero, si usa l&rsquo;istruzione <code>parseInt()</code>, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">parseInt(<span style="color:#e6db74">&#34;123.45&#34;</span>)   <span style="color:#75715e">// restituisce 123
-</span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;123.45KG&#34;</span>) <span style="color:#75715e">// restituisce 123
-</span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;aaaa&#34;</span>)     <span style="color:#75715e">// restituisce NaN
-</span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;0.1e6&#34;</span>)    <span style="color:#75715e">// restituisce 0 perchè legge solo il numero intero 0
-</span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;0x77&#34;</span>)     <span style="color:#75715e">// restituisce 119 (= 7*16 + 7)
-</span></code></pre></div><p>E' possibile convertire la stringa in un numero con una base specifica, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">parseInt(<span style="color:#e6db74">&#34;ZR&#34;</span>, <span style="color:#ae81ff">36</span>) <span style="color:#75715e">// restituisce 1289 (= 35*36 + 29)
-</span></code></pre></div><p>Per convertire dati dal formato stringa al formato float, si usa l&rsquo;istruzione <code>parseFloat()</code>, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">parseFloat(<span style="color:#e6db74">&#34;.3&#34;</span>)    <span style="color:#75715e">// restituisce 0.3
-</span><span style="color:#75715e"></span>parseFloat(<span style="color:#e6db74">&#34;0.1e6&#34;</span>) <span style="color:#75715e">// restituisce 100000
-</span></code></pre></div><p>Per i numeri decimali, non è prevista la conversione del numero in una base specifica.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>parseInt(<span style="color:#e6db74">&#34;123.45&#34;</span>)   <span style="color:#75715e">// restituisce 123
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;123.45KG&#34;</span>) <span style="color:#75715e">// restituisce 123
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;aaaa&#34;</span>)     <span style="color:#75715e">// restituisce NaN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;0.1e6&#34;</span>)    <span style="color:#75715e">// restituisce 0 perchè legge solo il numero intero 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>parseInt(<span style="color:#e6db74">&#34;0x77&#34;</span>)     <span style="color:#75715e">// restituisce 119 (= 7*16 + 7)
+</span></span></span></code></pre></div><p>E&rsquo; possibile convertire la stringa in un numero con una base specifica, come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>parseInt(<span style="color:#e6db74">&#34;ZR&#34;</span>, <span style="color:#ae81ff">36</span>) <span style="color:#75715e">// restituisce 1289 (= 35*36 + 29)
+</span></span></span></code></pre></div><p>Per convertire dati dal formato stringa al formato float, si usa l&rsquo;istruzione <code>parseFloat()</code>, come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>parseFloat(<span style="color:#e6db74">&#34;.3&#34;</span>)    <span style="color:#75715e">// restituisce 0.3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>parseFloat(<span style="color:#e6db74">&#34;0.1e6&#34;</span>) <span style="color:#75715e">// restituisce 100000
+</span></span></span></code></pre></div><p>Per i numeri decimali, non è prevista la conversione del numero in una base specifica.</p>
 <h2 id="conversione-da-numero-a-stringa">Conversione da numero a stringa</h2>
 <p>Per quanto concerne la conversione di un numero in formato stringa, è possibile utilizzare il metodo <code>toString()</code> dei tipi numerici, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringX</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>();
-</code></pre></div><p>E' possibile convertire il numero in una base specificata passando come argomento al metodo <code>toString()</code> la base in cui si vuole convertire il numero.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringX</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>();
+</span></span></code></pre></div><p>E&rsquo; possibile convertire il numero in una base specificata passando come argomento al metodo <code>toString()</code> la base in cui si vuole convertire il numero.</p>
 <p>Ad esempio, per la conversione in binario, ottale ed esadecimale si usa il seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x2</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>).<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">2</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x8</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">8</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x16</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">16</span>);
-</code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
-<pre tabindex="0"><code class="language-output" data-lang="output">x2 = &quot;1010&quot;
-x8 = &quot;12&quot;
-x16 = &quot;a&quot;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x2</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>).<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x8</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">8</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x16</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">16</span>);
+</span></span></code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">x2 = &#34;1010&#34;
+x8 = &#34;12&#34;
+x16 = &#34;a&#34;
 </code></pre><p>Nel caso di numeri negativi, si può effettuare una conversione in complemento a 2, utilizzando il seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">xC2</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toString</span>()
-</code></pre></div><p>Il numero è convertito in una stringa rappresentata da 32 bit:</p>
-<pre tabindex="0"><code class="language-output" data-lang="output">xC2 = &quot;11111111111111111111111111111111&quot;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">xC2</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toString</span>()
+</span></span></code></pre></div><p>Il numero è convertito in una stringa rappresentata da 32 bit:</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">xC2 = &#34;11111111111111111111111111111111&#34;
 </code></pre><p>Per la conversione in formato esponenziale si utilizza il metodo <code>toExponential()</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.4</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">z</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123456789.123456</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringX</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toExponential</span>();
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y</span>.<span style="color:#a6e22e">toExponential</span>();
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringW</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">toExponential</span>();
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>();
-</code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
-<pre tabindex="0"><code class="language-output" data-lang="output">&quot;1e+0&quot;
-&quot;1.4e+0&quot;
-&quot;1.4e+1&quot;
-&quot;1.2346e+8&quot;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.4</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">z</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123456789.123456</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringX</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">toExponential</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y</span>.<span style="color:#a6e22e">toExponential</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringW</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">toExponential</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>();
+</span></span></code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">&#34;1e+0&#34;
+&#34;1.4e+0&#34;
+&#34;1.4e+1&#34;
+&#34;1.2346e+8&#34;
 </code></pre><p>Si può passare al metodo il parametro opzionale indicante il numero di cifre decimali da utilizzare per la mantissa, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">z</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123456789.123456</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">2</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">8</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">16</span>);
-</code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
-<pre tabindex="0"><code class="language-output" data-lang="output">&quot;1.23e+8&quot;
-&quot;1.23456789e+8&quot;
-&quot;1.2345678912345600e+8&quot;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">z</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123456789.123456</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">8</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">stringZ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">z</span>.<span style="color:#a6e22e">toExponential</span>(<span style="color:#ae81ff">16</span>);
+</span></span></code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">&#34;1.23e+8&#34;
+&#34;1.23456789e+8&#34;
+&#34;1.2345678912345600e+8&#34;
 </code></pre>
     </div>
   </article>

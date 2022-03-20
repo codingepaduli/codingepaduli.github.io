@@ -38,5 +38,6 @@ function draw() {
 
     fill('light green');
     textSize(16);
-    text(`Color components [red: ${red}, green: ${green}, blue: ${blue} ]`, 50, 50);
+    text('Color components: ', 20, 30);
+    text(`red: ${red}, green: ${green}, blue: ${blue}`, 20, 50);
 }

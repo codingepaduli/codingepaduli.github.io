@@ -239,9 +239,9 @@
 </ul>
 <h3 id="creazione-file-cartelle-e-collegamenti">Creazione file, cartelle e collegamenti</h3>
 <p>La creazione di un file o una cartella avviene con la CmdLet <code>New-Item</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item [-Path] &lt;String[]&gt; -Name &lt;String&gt;
-    [-ItemType &lt;String&gt;] [-Value &lt;Object&gt;] [-Force]
-</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-Item [-Path] &lt;String[]&gt; -Name &lt;String&gt;
+</span></span><span style="display:flex;"><span>    [-ItemType &lt;String&gt;] [-Value &lt;Object&gt;] [-Force]
+</span></span></code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
 <ul>
 <li>
 <p><code>Path</code>: indica il percorso in cui creare il file o la cartella;</p>
@@ -272,22 +272,22 @@
 </ul>
 <p>Esempi d&rsquo;uso:</p>
 <p>Per creare un file di nome &ldquo;nuovo.txt&rdquo; nella locazione di lavoro corrente si usa quindi il seguente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;file&#34;</span>
-</code></pre></div><p>Per creare un file di nome &ldquo;nuovo.txt&rdquo; alla locazione &ldquo;/&rdquo; si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -Path <span style="color:#e6db74">&#34;/&#34;</span> -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;file&#34;</span>
-</code></pre></div><p>Per creare un file di nome &ldquo;nuovo.txt&rdquo; alla locazione &ldquo;/&rdquo; e con il contenuto iniziale &ldquo;nuovo file&rdquo; si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -Path <span style="color:#e6db74">&#34;/&#34;</span> -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;file&#34;</span> -Value <span style="color:#e6db74">&#34;nuovo file&#34;</span>
-</code></pre></div><p>Per creare una cartella, si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;Directory&#34;</span>
-</code></pre></div><p>Per creare un collegamento simbolico, si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">New-Item -ItemType <span style="color:#e6db74">&#34;SymbolicLink&#34;</span> -Name <span style="color:#e6db74">&#34;link&#34;</span> -Value <span style="color:#e6db74">&#34;nuovo.txt&#34;</span>
-</code></pre></div><p>Per una descrizione accurata della CommandLet, si rimanda alla guida online.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-Item -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;file&#34;</span>
+</span></span></code></pre></div><p>Per creare un file di nome &ldquo;nuovo.txt&rdquo; alla locazione &ldquo;/&rdquo; si usa il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-Item -Path <span style="color:#e6db74">&#34;/&#34;</span> -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;file&#34;</span>
+</span></span></code></pre></div><p>Per creare un file di nome &ldquo;nuovo.txt&rdquo; alla locazione &ldquo;/&rdquo; e con il contenuto iniziale &ldquo;nuovo file&rdquo; si usa il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-Item -Path <span style="color:#e6db74">&#34;/&#34;</span> -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;file&#34;</span> -Value <span style="color:#e6db74">&#34;nuovo file&#34;</span>
+</span></span></code></pre></div><p>Per creare una cartella, si usa il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-Item -Name <span style="color:#e6db74">&#34;nuovo.txt&#34;</span> -ItemType <span style="color:#e6db74">&#34;Directory&#34;</span>
+</span></span></code></pre></div><p>Per creare un collegamento simbolico, si usa il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-Item -ItemType <span style="color:#e6db74">&#34;SymbolicLink&#34;</span> -Name <span style="color:#e6db74">&#34;link&#34;</span> -Value <span style="color:#e6db74">&#34;nuovo.txt&#34;</span>
+</span></span></code></pre></div><p>Per una descrizione accurata della CommandLet, si rimanda alla guida online.</p>
 <h3 id="eliminazione-di-file-cartelle-e-collegamenti">Eliminazione di file, cartelle e collegamenti</h3>
 <p>La rimozione di un file, una cartella o un collegamento avviene con il CmdLet <code>Remove-Item</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Item [-Path] &lt;String[]&gt; [-Filter &lt;String&gt;]
-    [-Include &lt;String[]&gt;] [-Exclude &lt;String[]&gt;]
-    [-Recurse] [-Force]
-</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Remove-Item [-Path] &lt;String[]&gt; [-Filter &lt;String&gt;]
+</span></span><span style="display:flex;"><span>    [-Include &lt;String[]&gt;] [-Exclude &lt;String[]&gt;]
+</span></span><span style="display:flex;"><span>    [-Recurse] [-Force]
+</span></span></code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
 <ul>
 <li>
 <p><code>Path</code>: indica il percorso in cui eliminare file o cartelle;</p>
@@ -309,27 +309,27 @@
 </li>
 </ul>
 <p>Esempio d&rsquo;uso:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Item -Path <span style="color:#e6db74">&#34;C:\Test\hidden-RO-file.txt&#34;</span>
-</code></pre></div><p>Per eliminare una cartella vuota si esegue il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Item -Path <span style="color:#e6db74">&#34;C:\Test\&#34;</span>
-</code></pre></div><p>Nel caso la cartella non fosse vuota, il comando chiederebbe conferma all&rsquo;utente della cancellazione di tutte le voci contenute.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Remove-Item -Path <span style="color:#e6db74">&#34;C:\Test\hidden-RO-file.txt&#34;</span>
+</span></span></code></pre></div><p>Per eliminare una cartella vuota si esegue il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Remove-Item -Path <span style="color:#e6db74">&#34;C:\Test\&#34;</span>
+</span></span></code></pre></div><p>Nel caso la cartella non fosse vuota, il comando chiederebbe conferma all&rsquo;utente della cancellazione di tutte le voci contenute.</p>
 <p>Per eliminare in maniera ricorsiva una cartella con tutte le sottocartelle ed i file contenuti si esegue il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Remove-Item -Path <span style="color:#e6db74">&#34;C:\Test\&#34;</span> -Recurse
-</code></pre></div><h3 id="rinominare-file-o-cartella">Rinominare file o cartella</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Remove-Item -Path <span style="color:#e6db74">&#34;C:\Test\&#34;</span> -Recurse
+</span></span></code></pre></div><h3 id="rinominare-file-o-cartella">Rinominare file o cartella</h3>
 <p>Per rinominare un file o una cartella si usa il CmdLet <code>Rename-Item</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Rename-Item [-Path] &lt;String&gt; [-NewName] &lt;String&gt; [-Force]
-</code></pre></div><p>I parametri indicati nella precedente sintassi hanno il seguente significato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Rename-Item [-Path] &lt;String&gt; [-NewName] &lt;String&gt; [-Force]
+</span></span></code></pre></div><p>I parametri indicati nella precedente sintassi hanno il seguente significato:</p>
 <ul>
 <li><code>Path</code>: indica il percorso in cui testare file o cartelle;</li>
 <li><code>NewName</code>: indica il nuovo nome da assegnare;</li>
 <li><code>Force</code>: forza la rinominazione di un file nascosto o di sola lettura;</li>
 </ul>
 <p>Esempio d&rsquo;uso:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Rename-Item -Path <span style="color:#e6db74">&#34;daily_file.txt&#34;</span> -NewName <span style="color:#e6db74">&#34;monday_file.txt&#34;</span>
-</code></pre></div><h3 id="spostare-file-o-cartelle">Spostare file o cartelle</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Rename-Item -Path <span style="color:#e6db74">&#34;daily_file.txt&#34;</span> -NewName <span style="color:#e6db74">&#34;monday_file.txt&#34;</span>
+</span></span></code></pre></div><h3 id="spostare-file-o-cartelle">Spostare file o cartelle</h3>
 <p>Per spostare un file o una cartella si usa il CmdLet <code>Move-Item</code> che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Move-Item [-Path] &lt;String[]&gt; [[-Destination] &lt;String&gt;] [-Force]
-</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Move-Item [-Path] &lt;String[]&gt; [[-Destination] &lt;String&gt;] [-Force]
+</span></span></code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
 <ul>
 <li>
 <p><code>Path</code>: indica il file o la cartella da spostare;</p>
@@ -342,11 +342,11 @@
 </li>
 </ul>
 <p>Esempio d&rsquo;uso:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Move-Item -Path <span style="color:#e6db74">&#34;C:\test.txt&#34;</span> -Destination <span style="color:#e6db74">&#34;E:\Temp\tst.txt&#34;</span>
-</code></pre></div><h3 id="copiare-file-o-cartelle">Copiare file o cartelle</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Move-Item -Path <span style="color:#e6db74">&#34;C:\test.txt&#34;</span> -Destination <span style="color:#e6db74">&#34;E:\Temp\tst.txt&#34;</span>
+</span></span></code></pre></div><h3 id="copiare-file-o-cartelle">Copiare file o cartelle</h3>
 <p>Per copiare un file o una cartella si usa il CmdLet <code>Copy-Item</code> che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Copy-Item [-Path] &lt;String[]&gt; [[-Destination] &lt;String&gt;] [-Force]
-</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Copy-Item [-Path] &lt;String[]&gt; [[-Destination] &lt;String&gt;] [-Force]
+</span></span></code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
 <ul>
 <li>
 <p><code>Path</code>: indica il file o la cartella da spostare;</p>
@@ -359,22 +359,22 @@
 </li>
 </ul>
 <p>Esempio d&rsquo;uso:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Copy-Item -Path <span style="color:#e6db74">&#34;C:\test.txt&#34;</span> -Destination <span style="color:#e6db74">&#34;E:\Temp\tst.txt&#34;</span>
-</code></pre></div><h3 id="accesso-al-file-o-alla-cartella">Accesso al file o alla cartella</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Copy-Item -Path <span style="color:#e6db74">&#34;C:\test.txt&#34;</span> -Destination <span style="color:#e6db74">&#34;E:\Temp\tst.txt&#34;</span>
+</span></span></code></pre></div><h3 id="accesso-al-file-o-alla-cartella">Accesso al file o alla cartella</h3>
 <p>Per accedere al file o alla cartella indicata nel percorso si usa il CmdLet <code>Get-Item</code> che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Item [-Path] &lt;String[]&gt; [-Force]
-</code></pre></div><p>I parametri indicati nella precedente sintassi hanno il seguente significato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Item [-Path] &lt;String[]&gt; [-Force]
+</span></span></code></pre></div><p>I parametri indicati nella precedente sintassi hanno il seguente significato:</p>
 <ul>
 <li><code>Path</code>: indica il percorso del file o della cartella a cui accedere;</li>
 <li><code>Force</code>: forza l&rsquo;accesso ad un file nascosto o di sola lettura;</li>
 </ul>
 <p>Esempio d&rsquo;uso:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Item -Path <span style="color:#e6db74">&#34;C:\test.txt&#34;</span>
-</code></pre></div><h3 id="accesso-ai-file-e-cartelle-contenute-in-un-percorso">Accesso ai file e cartelle contenute in un percorso</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Item -Path <span style="color:#e6db74">&#34;C:\test.txt&#34;</span>
+</span></span></code></pre></div><h3 id="accesso-ai-file-e-cartelle-contenute-in-un-percorso">Accesso ai file e cartelle contenute in un percorso</h3>
 <p>Per accedere ai file e cartelle contenute in un percorso si usa il CmdLet <code>Get-ChildItem</code> che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-ChildItem [-Path] &lt;String[]&gt; [-Recurse] [-Depth &lt;uint32&gt;]
-    [-FollowSymlink] [-Directory] [<span style="color:#f92672">-File</span>] [-Hidden] [-ReadOnly]
-</code></pre></div><p>I parametri indicati nella precedente sintassi hanno il seguente significato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-ChildItem [-Path] &lt;String[]&gt; [-Recurse] [-Depth &lt;uint32&gt;]
+</span></span><span style="display:flex;"><span>    [-FollowSymlink] [-Directory] [<span style="color:#f92672">-File</span>] [-Hidden] [-ReadOnly]
+</span></span></code></pre></div><p>I parametri indicati nella precedente sintassi hanno il seguente significato:</p>
 <ul>
 <li><code>Path</code>: indica il percorso del file o della cartella a cui accedere;</li>
 <li><code>Recurse</code>: effettua un accesso ricorsivo a tutti i file e cartelle contenuti nel percorso indicato e ne restituisce tutti i file e cartelle trovati;</li>
@@ -386,8 +386,8 @@
 <li><code>ReadOnly</code>: indica di restituire solo i file di sola lettura;</li>
 </ul>
 <p>Esempio d&rsquo;uso:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-ChildItem -Path <span style="color:#e6db74">&#34;C:\test&#34;</span>
-</code></pre></div><p>L&rsquo;output prodotto è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-ChildItem -Path <span style="color:#e6db74">&#34;C:\test&#34;</span>
+</span></span></code></pre></div><p>L&rsquo;output prodotto è il seguente:</p>
 <pre tabindex="0"><code class="language-output" data-lang="output">Directory: C:\Test
 
 Mode                LastWriteTime         Length Name

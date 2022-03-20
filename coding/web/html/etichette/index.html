@@ -225,7 +225,7 @@
     </header>
 <div class="content post__content clearfix">
       <h1 id="il-linguaggio-html">Il linguaggio HTML</h1>
-<p>Il linguaggio <abbr title="HyperText Markup Language"><strong>HTML</strong></abbr> e' un linguaggio di etichettatura (in inglese Markup) degli ipertesti (in inglese HyperText), ha lo scopo di strutturare i documenti da pubblicare sul web.</p>
+<p>Il linguaggio <abbr title="HyperText Markup Language"><strong>HTML</strong></abbr> e&rsquo; un linguaggio di etichettatura (in inglese Markup) degli ipertesti (in inglese HyperText), ha lo scopo di strutturare i documenti da pubblicare sul web.</p>
 <p>Le <strong>etichette</strong> (in inglese Markup o TAG) sono dei segnaposto, indicano
 l&rsquo;inizio e la fine di un elemento della pagina web, ad esempio inizio e fine di un titolo, di un&rsquo;immagine, di un video, di una tabella&hellip;</p>
 <p>Da sottolineare che il linguaggio HTML non è un linguaggio di programmazione, ma solo un linguaggio di &ldquo;formattazione&rdquo; delle pagine web, dato che usa le etichette per indicare dove iniziano e finiscono gli elementi. Il linguaggio HTML definisce solo la <strong>struttura</strong> di un ipertesto, non la grafica, né le azioni o le elaborazioni da eseguire.</p>
@@ -237,7 +237,7 @@ l&rsquo;inizio e la fine di un elemento della pagina web.</p>
 <code>h1</code> è l&rsquo;etichetta del titolo,
 <code>p</code> è l&rsquo;etichetta del paragrafo,
 <code>mark</code> è l&rsquo;etichetta per il testo evidenziato.</p>
-<p>E' importante comprendere che, quando si parla di un&rsquo;etichetta, in realtà si sottintende il riferimento a due etichette: l&rsquo;etichetta di inizio (o apertura) e l&rsquo;etichetta di fine (o chiusura).</p>
+<p>E&rsquo; importante comprendere che, quando si parla di un&rsquo;etichetta, in realtà si sottintende il riferimento a due etichette: l&rsquo;etichetta di inizio (o apertura) e l&rsquo;etichetta di fine (o chiusura).</p>
 <p>Ad esempio,
 <code>h1</code> è l&rsquo;etichetta del titolo, quindi si sottintende il riferimento all&rsquo;etichetta di inizio del titolo e l&rsquo;etichetta di fine del titolo; Allo stesso modo,
 <code>p</code> è l&rsquo;etichetta del paragrafo, quindi si sottintende il riferimento all&rsquo;etichetta di inizio del paragrafo e l&rsquo;etichetta di fine del paragrafo; Ancora,
@@ -262,15 +262,15 @@ di chiusura <code>&lt;/html&gt;</code> indica la fine del documento HTML);</p>
 apertura <code>&lt;body&gt;</code> indica l&rsquo;inizio dei contenuti e l&rsquo;etichetta
 di chiusura <code>&lt;/body&gt;</code> indica la fine dei contenuti). Questa etichetta deve essere inserita nell&rsquo;etichetta <code>html</code>.</p>
 <p>La pagina HTML risultante  (ancora incompleta) è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!doctype html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-  &lt;<span style="color:#f92672">body</span>&gt;
-    <span style="color:#75715e">&lt;!-- contenuti della pagina html --&gt;</span>
-    &lt;<span style="color:#f92672">h1</span>&gt;Titolo pagina web&lt;/<span style="color:#f92672">h1</span>&gt;
-    &lt;<span style="color:#f92672">p</span>&gt;paragrafo della pagina web.&lt;/<span style="color:#f92672">p</span>&gt;
-  &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><p>Si fa notare nuovamente che tutte le etichette nell&rsquo;esempio riportato sono prima aperte e
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- contenuti della pagina html --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;Titolo pagina web&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;paragrafo della pagina web.&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>Si fa notare nuovamente che tutte le etichette nell&rsquo;esempio riportato sono prima aperte e
 poi chiuse.</p>
 <p>Sempre dall&rsquo;esempio precedente, si nota che le etichette possono essere inserite (innestate) l&rsquo;una dentro l&rsquo;altra, come avviene per i contenuti della pagina web presentata (il titolo ed il paragrafo) che si trovano nell&rsquo;etichetta <code>body</code> , che a sua volta è posizionata nell&rsquo;etichetta <code>html</code>.</p>
 <h2 id="dom">DOM</h2>
@@ -281,11 +281,11 @@ poi chiuse.</p>
 <p>Da questi nodi di primo livello si estendono i nodi di secondo livello, ovvero le etichette contenute nelle etichette di primo livello, e cosi via per i successivi livelli.</p>
 <p>Le foglie dell&rsquo;albero sono le etichette che non posseggono contenuti.</p>
 <p>Un esempio di rappresentazione della pagina web illustrata in precedenza, secondo il modello DOM è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">html
-└── body
-    ├── h1
-    └── p
-</code></pre></div><p>Data la struttura gerarchica, è possibile stabilire delle relazioni tra gli elementi. Un elemento che contiene altri elementi è detto elemento padre, e di conseguenza gli elementi contenuti in quel nodo sono detti figli. Gli elementi che si trovano nello stesso livello si dicono fratelli, e cosí via con le altre relazioni.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>html
+</span></span><span style="display:flex;"><span>└── body
+</span></span><span style="display:flex;"><span>    ├── h1
+</span></span><span style="display:flex;"><span>    └── p
+</span></span></code></pre></div><p>Data la struttura gerarchica, è possibile stabilire delle relazioni tra gli elementi. Un elemento che contiene altri elementi è detto elemento padre, e di conseguenza gli elementi contenuti in quel nodo sono detti figli. Gli elementi che si trovano nello stesso livello si dicono fratelli, e cosí via con le altre relazioni.</p>
 <h2 id="indentazione">Indentazione</h2>
 <p>L&rsquo;indentazione è una caratteristica che migliora la leggibilità del codice e permette di rilevare gli errori più rapidamente.</p>
 <p>Indentare il codice significa inserire un determinato nunero di spazi all&rsquo;inizio di ogni riga, in maniera proporzionale al livello dell&rsquo;etichetta presente sulla riga.</p>
@@ -297,17 +297,17 @@ poi chiuse.</p>
 <p>La presenza di <strong>commenti</strong> è praticamente d&rsquo;obbligo, poiché questi rappresentano informazioni aggiuntive e promemoria che chiariscono le intenzioni del programmatore.</p>
 <p>I commenti si scrivono tra i caratteri <code>&lt;!--</code> e <code>--&gt;</code>, l&rsquo;unica attenzione da porre è che non devono essere presenti spazi tra i caratteri indicati. Un commento può occupare più righe.</p>
 <p>Di seguito, un esempio di commento multilinea:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- commento relativo i
-</span><span style="color:#75715e">     contenuti della
-</span><span style="color:#75715e">     pagina html --&gt;</span>
-</code></pre></div><h2 id="etichette-obsolete">Etichette obsolete</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- commento relativo i
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     contenuti della
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     pagina html --&gt;</span>
+</span></span></code></pre></div><h2 id="etichette-obsolete">Etichette obsolete</h2>
 <p>Alcune etichette sono state &ldquo;cancellate&rdquo; dalle specifiche HTML e non devono più essere utilizzate. Queste etichette sono dette <strong>obsolete</strong>.</p>
 <p>Il termine <strong>obsoleto</strong>, nel linguaggio tecnico, è utilizzato per indicare tecnologie antiquate e quindi in disuso, magari perché non più competitive rispetto ad altre basate su idee più avanzate.</p>
 <p>Il termine significa anche &ldquo;logorato&rdquo;, e lo si utilizza soprattutto quando si parla di <strong>obsolescenza programmata</strong>, ovvero quella odiosa strategia commerciale utilizzata per rendere logoro, e quindi inutilizzabile, un prodotto dopo un certo tempo di utilizzo.</p>
 <p>Di seguito, un esempio di etichette obsolete che è possibile trovare in qualche pagina web non aggiornata:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">acronym</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;as soon as possible&#34;</span>&gt;ASAP&lt;/<span style="color:#f92672">acronym</span>&gt; --&gt;
-&lt;<span style="color:#f92672">big</span>&gt;This text is big&lt;/<span style="color:#f92672">big</span>&gt;
-</code></pre></div><p>Gli strumenti di validazione del codice HTML aiutano a rilevare, e quindi sostituire, le etichette obsolete.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">acronym</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;as soon as possible&#34;</span>&gt;ASAP&lt;/<span style="color:#f92672">acronym</span>&gt; --&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">big</span>&gt;This text is big&lt;/<span style="color:#f92672">big</span>&gt;
+</span></span></code></pre></div><p>Gli strumenti di validazione del codice HTML aiutano a rilevare, e quindi sostituire, le etichette obsolete.</p>
 
     </div>
   </article>

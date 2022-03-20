@@ -231,15 +231,18 @@
 <p>Il sistema di coordinate <strong>cartesiane</strong>, tipicamente usato da librerie di grafica computerizzata 2D, è caratterizzato dagli assi X ed Y che si intersecano nell&rsquo;angolo in alto a sinistra dell&rsquo;area da disegno. In tale estremità si trova, quindi, l&rsquo;origine degli assi, rappresentata dal punto di coordinate (0,0).</p>
 <p>La particolarità di questo sistema di coordinate è l&rsquo;asse Y invertito, cioè i valori positivi sono in basso ed i negativi in alto. Solo i punti che hanno entrambe le coordinate (x, y) con valore positivo saranno disegnati nell&rsquo;area da disegno.</p>
 <p>Di seguito si mostrano le differenze tra il classico sistema cartesiano e la variante utilizzata in p5.js:</p>
-<p><img src="https://p5js.org/assets/learn/coordinate-system-and-shapes/images/drawing-03.svg" alt="p5.js - Sistema di coordinate" title="p5.js - Sistema di coordinate"></p>
+<p><img src="/static/coding/web/p5js/basics_axes-in-math-and-p5js.png" alt="p5.js - Differenza tra i due sistemi di coordinate" title="p5.js - Differenza tra i due sistemi di coordinate"></p>
 <h3 id="misurazione-angoli">Misurazione angoli</h3>
 <p>In ambito matematico, gli angoli sono tipicamente espressi mediante due differenti unità di misura: il <strong>grado d&rsquo;arco</strong> (detto anche grado sessagesimale) ed il <strong>radiante</strong>, che fa parte del <strong>sistema internazionale di unità di misura</strong>.</p>
 <p>Un grado d&rsquo;arco è la misura dell&rsquo;angolo che si ha in corrispondenza di un arco di circonferenza che misura 1/360 della circonferenza di un cerchio.</p>
 <p>Un radiante è la misura dell&rsquo;angolo che si ha in corrispondenza di un arco di circonferenza di lunghezza pari al raggio.</p>
-<!-- TODO da sistemare documentazione sugli angoli -->
-<p>Una caratteristica importante della libreria p5.js è che gli angoli sono misurati seguendo un <strong>senso orario</strong>. Il programmatore può esprimere le grandezze angolari in gradi d&rsquo;arco o radianti, anche se in alcune casistiche è possibile utilizzare esclusivamente valori espressi in radianti.</p>
-<p>Possiamo fare un&rsquo;analogia con il quadrante di un orologio per misurare gli angoli. Ponendo la lancetta delle ore sempre sul numero tre (ore 3) ed utilizzando la lancetta dei minuti per definire l&rsquo;ampiezza dell&rsquo;angolo, il classico valore <strong>novanta gradi</strong> sull&rsquo;orologio non corrisponde alle ore <strong>3.00</strong> come ci aspetterebbe, ma corrisponde alle ore <strong>3.30</strong>. Allo stesso modo, un angolo di <strong>zero gradi</strong> corrisponde alle ore <strong>3.15</strong>, un angolo di <strong>quarantacinque gradi</strong> corrisponde alle ore <strong>3.22</strong> circa, un angolo di <strong>centottanta gradi d&rsquo;arco</strong> corrisponde alle ore <strong>3.45</strong>.</p>
-<!-- TODO aggiungere immagine degli orologi -->
+<p>Una caratteristica importante da considerare nella misurazione degli angoli è che, nel sistema di coordinate utilizzato, l&rsquo;asse Y è invertito e quindi gli angoli sono misurati seguendo un <strong>senso orario</strong>.</p>
+<p>Per facilitare la comprensione, possiamo fare un&rsquo;analogia con il quadrante di un orologio, sul quale utilizziamo la lancetta delle ore come riferimento e la lancetta dei minuti per misurare l&rsquo;angolo.</p>
+<p>Ponendo inizialmente sul numero tre entrambe le lancette (quindi a 3 ore e 15 minuti) definiamo un primo angolo, di grandezza zero (sia in gradi che in radianti).</p>
+<p>Man mano che la lancetta dei minuti ruota in <strong>senso orario</strong>, la dimensione dell&rsquo;angolo aumenta. Alle ore <strong>3.30</strong> corrisponde la misura di <strong>novanta gradi</strong> (e non alle ore <strong>3.00</strong> come ci aspetterebbe). Un angolo di <strong>quarantacinque gradi</strong> corrisponde alle ore <strong>3.22</strong> circa, un angolo di <strong>centottanta gradi d&rsquo;arco</strong> corrisponde alle ore <strong>3.45</strong> e così via.</p>
+<p><img src="/static/coding/web/p5js/basics-angle-on-clock-clockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
+<p>Per completezza, riportiamo anche le immagini degli orologi con le misurazioni degli angoli prese utilizzando il senso <strong>antiorario</strong>, in modo da avere chiara la differenza.</p>
+<p><img src="/static/coding/web/p5js/basics-angle-on-clock-counterclockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
 <h2 id="api">API</h2>
 <p>Per poter utilizzare correttamente la libreria p5.js, è necessario conoscere l&rsquo;interfaccia esposta dalla libreria stessa.</p>
 <p>Il termine <strong>interfaccia</strong>, nelle discipline tecniche, indica l&rsquo;area (la &ldquo;faccia&rdquo;) esposta da un sistema, al fine di potervi interagire. Un esempio sono le interfacce grafiche di Microsoft Windows, che permettono di interagire con i calcolatori, oppure le interfacce vocali di iPhone ed Android, con &ldquo;Siri&rdquo; ed il famoso &ldquo;OK Google&rdquo;, che permettono di interagire con gli smartphone.</p>
@@ -349,27 +352,27 @@
 </ul>
 <h4 id="esempio-di-documentazione-delle-funzioni">Esempio di documentazione delle funzioni</h4>
 <p>Un esempio di documentazione di una funzione è quello della documentazione della funzione <code>createCanvas</code>. Nella documentazione è descritto che questa funzione ha il compito di creare l&rsquo;area da disegno nella quale poi disegnare. La sintassi, ovvero la firma, è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: createCanvas(w, h)
-</code></pre></div><p>I parametri formali sono <code>w</code> ed <code>h</code> e sono entrambi obbligatori, dato che non sono riportati tra parentesi quadre. La documentazione dei parametri riporta:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Parameters:
-    w    Number: width of the canvas
-    h    Number: height of the canvas
-</code></pre></div><p>Quindi il parametro formale <code>w</code> è un numero e rappresenta la larghezza dell&rsquo;area da disegno. Il parametro formale <code>h</code> è un numero e rappresenta l&rsquo;altezza dell&rsquo;area da disegno.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: createCanvas(w, h)
+</span></span></code></pre></div><p>I parametri formali sono <code>w</code> ed <code>h</code> e sono entrambi obbligatori, dato che non sono riportati tra parentesi quadre. La documentazione dei parametri riporta:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    w    Number: width of the canvas
+</span></span><span style="display:flex;"><span>    h    Number: height of the canvas
+</span></span></code></pre></div><p>Quindi il parametro formale <code>w</code> è un numero e rappresenta la larghezza dell&rsquo;area da disegno. Il parametro formale <code>h</code> è un numero e rappresenta l&rsquo;altezza dell&rsquo;area da disegno.</p>
 <p>Un secondo esempio di documentazione di una funzione è quello della documentazione della funzione <code>background</code>. Nella documentazione è descritto che questa funzione ha il compito di disegnare uno sfondo colorato nell&rsquo;area da disegno. La sintassi, ovvero la firma, è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax:
-    background(gray, [a])
-    background(v1, v2, v3, [a])
-</code></pre></div><p>Come si nota, si può creare lo sfondo usando una delle due firme. La prima firma crea uno sfondo grigio, la seconda crea uno sfondo colorato.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax:
+</span></span><span style="display:flex;"><span>    background(gray, [a])
+</span></span><span style="display:flex;"><span>    background(v1, v2, v3, [a])
+</span></span></code></pre></div><p>Come si nota, si può creare lo sfondo usando una delle due firme. La prima firma crea uno sfondo grigio, la seconda crea uno sfondo colorato.</p>
 <p>I parametri formali per la prima firma sono <code>gray</code> ed <code>a</code>, il primo obbligatorio, il secondo facoltativo, dato che è riportato tra parentesi quadre.</p>
 <p>I parametri formali per la seconda firma sono <code>v1</code>, <code>v2</code>, <code>v3</code> ed <code>a</code>, i primi tre obbligatori, il quarto facoltativo, dato che è riportato tra parentesi quadre.</p>
 <p>La documentazione dei parametri riporta:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Parameters:
-    gray   Number: specifies a value between white and black
-    v1     Number: red or hue value (depending on the current color mode)
-    v2     Number: green or saturation value (depending on the current color mode)
-    v3     Number: blue or brightness value (depending on the current color mode)
-    a      Number: opacity of the background relative to current color range (default is 0-255) (Optional)
-</code></pre></div><p>Quindi il parametro formale <code>gray</code> è un numero e rappresenta la quantità di grigio per colorare l&rsquo;area da disegno.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    gray   Number: specifies a value between white and black
+</span></span><span style="display:flex;"><span>    v1     Number: red or hue value (depending on the current color mode)
+</span></span><span style="display:flex;"><span>    v2     Number: green or saturation value (depending on the current color mode)
+</span></span><span style="display:flex;"><span>    v3     Number: blue or brightness value (depending on the current color mode)
+</span></span><span style="display:flex;"><span>    a      Number: opacity of the background relative to current color range (default is 0-255) (Optional)
+</span></span></code></pre></div><p>Quindi il parametro formale <code>gray</code> è un numero e rappresenta la quantità di grigio per colorare l&rsquo;area da disegno.
 I parametri formali <code>v1</code>, <code>v2</code>, <code>v3</code> sono numerici e rappresentano la quantità di colore da applicare.
 Il parametro formale <code>a</code> è un numero e rappresenta la quantità di trasparenza del colore.</p>
 <p>Si rimanda al capitolo sui colori per una spiegazione più dettagliata di questi parametri. In questo paragrafo, l&rsquo;attenzione è focalizzata sulla documentazione dei parametri.</p>
@@ -405,69 +408,69 @@ Il parametro formale <code>a</code> è un numero e rappresenta la quantità di t
 <ul>
 <li>un riferimento alla libreria <code>p5.js</code>, definito tramite l&rsquo;etichetta <code>script</code>, come nel seguente esempio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><ul>
 <li>un riferimento alla libreria <code>p5.sound.min.js</code>, definito tramite l&rsquo;etichetta <code>script</code>, come nel seguente esempio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.sound.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.sound.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><ul>
 <li>un riferimento al codice JavaScript realizzato, definito tramite l&rsquo;etichetta <code>script</code>, come nel seguente esempio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sketch.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sketch.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><ul>
 <li>un riferimento allo stile della pagina, definito tramite l&rsquo;etichetta <code>link</code>, come nel seguente esempio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;
-</code></pre></div><p>In questo contesto, non entreremo nei dettagli del linguaggio HTML che è alla base di una pagina web, e nemmeno nei dettagli del linguaggio CSS necessario a definire gli stili, ma focalizzeremo l&rsquo;attenzione sulla struttura del progetto.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;
+</span></span></code></pre></div><p>In questo contesto, non entreremo nei dettagli del linguaggio HTML che è alla base di una pagina web, e nemmeno nei dettagli del linguaggio CSS necessario a definire gli stili, ma focalizzeremo l&rsquo;attenzione sulla struttura del progetto.</p>
 <p>Come si nota, i riferimenti non indicano un percorso assoluto, per cui i quattro file devono essere presenti nella stessa cartella della pagina web <code>index.html</code>, in caso contrario possono essere generati degli errori ed il lavoro realizzato non verrà mostrato.</p>
 <p>Il vantaggio di usare questa struttura basata su una cartella permette allo sviluppatore di lavorare senza bisogno di un collegamento ad internet. Inoltre, più lavori possono condividere le stesse librerie e gli stessi stili.</p>
 <h3 id="progetto-in-un-singolo-file">Progetto in un singolo file</h3>
 <p>Nel caso sia necessario, è possibile racchiudere tutto il lavoro in un singolo file. Invece di utilizzare dei riferimenti ad altri file, si può scegliere di caricare le librerie necessarie da una risorsa presente su web, utilizzando un indirizzo assoluto, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p>In questo modo, le librerie saranno scaricate da internet all&rsquo;apertura della pagina web.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>In questo modo, le librerie saranno scaricate da internet all&rsquo;apertura della pagina web.</p>
 <p>Lo stile, invece, può essere incluso direttamente nella pagina web, all&rsquo;interno delle etichette di stile:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">style</span>&gt;
-    <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
-    <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
-&lt;/<span style="color:#f92672">style</span>&gt;
-</code></pre></div><p>Allo stesso modo, il programma realizzato, magari tramite l&rsquo;editor online, deve essere incluso nelle etichette <code>script</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-        <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-    }
-
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-        <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-        <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
-    }
-&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p>L&rsquo;esempio completo della pagina web è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-    &lt;<span style="color:#f92672">head</span>&gt;
-        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
-        &lt;<span style="color:#f92672">style</span>&gt;
-            <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
-            <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
-        &lt;/<span style="color:#f92672">style</span>&gt;
-    &lt;/<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">body</span>&gt;
-        &lt;<span style="color:#f92672">script</span>&gt;
-            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-                <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-            }
-
-            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-                <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-                <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
-            }
-        &lt;/<span style="color:#f92672">script</span>&gt;
-    &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h3 id="struttura-del-programma">Struttura del programma</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span></code></pre></div><p>Allo stesso modo, il programma realizzato, magari tramite l&rsquo;editor online, deve essere incluso nelle etichette <code>script</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>L&rsquo;esempio completo della pagina web è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h3 id="struttura-del-programma">Struttura del programma</h3>
 <p>Sia che si lavori con una singola pagina web, sia che si utilizzi l&rsquo;editor online, sia che si organizzi il progetto in più file separati, nel codice devono sempre essere dichiarati i due blocchi principali <code>setup</code> e <code>draw</code>.</p>
 <p>Le istruzioni contenute nel blocco <code>setup</code> sono eseguite una sola volta e servono ad impostare gli strumenti e le condizioni iniziali. In particolare, è in questo blocco che si invoca la funzione <code>createCanvas</code> necessaria alla creazione dell&rsquo;area da disegno, poiché l&rsquo;area da disegno deve essere creata una volta sola.</p>
 <p>Le istruzioni contenute nel blocco <code>draw</code> sono eseguite ciclicamente e servono a ridisegnare continuamente l&rsquo;area di lavoro.</p>
@@ -476,75 +479,75 @@ Il parametro formale <code>a</code> è un numero e rappresenta la quantità di t
 <p>In precedenza abbiamo detto che una funzione identifica un frammento di codice che svolge uno specifico compito, ha una firma formata dal nome e, tra parentesi tonde, dai parametri formali.</p>
 <p>Quando il programmatore realizza che deve svolgere un compito già svolto da una funzione conosciuta, può delegare tale compito a questa funzione. Tecnicamente si dice che si <strong>invoca</strong> una funzione quando si vuole indicare che viene utilizzata una funzione. Per poterla invocare, il programmatore verifica sulla documentazione la firma della funzione, in particolare prendendo nota del nome e dei parametri formali.</p>
 <p>Se nella firma della funzione non sono presenti parametri formali, la funzione viene invocata semplicemente utilizzando la firma (il nome seguito da parentesi tonde):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">funzione</span>()
-</code></pre></div><p>Se invece nella firma della funzione sono presenti parametri formali, allora ad ogni parametro formale si deve sostituire un valore. I valori assegnati prendono il nome di <strong>parametri attuali</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">funzione</span>()
+</span></span></code></pre></div><p>Se invece nella firma della funzione sono presenti parametri formali, allora ad ogni parametro formale si deve sostituire un valore. I valori assegnati prendono il nome di <strong>parametri attuali</strong>.</p>
 <p>In questo caso, per invocare una funzione, bisogna semplicemente scrivere il nome seguito da parentesi tonda aperta, la lista di parametri attuali, e la parentesi chiusa.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">funzione</span>(<span style="color:#a6e22e">p1</span>, <span style="color:#a6e22e">p2</span>, ...)
-</code></pre></div><p>Ad esempio, volendo creare un&rsquo;area da disegno di larghezza 600 ed altezza 400, il primo passo consiste nel verificare sulla documentazione la firma della funzione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: createCanvas(w, h)
-
-Parameters:
-    w    Number: width of the canvas
-    h    Number: height of the canvas
-</code></pre></div><p>A questo punto, sostituiamo al parametro formale <code>w</code> (che indica la larghezza dell&rsquo;area da disegno) il valore <code>600</code> ed al parametro formale <code>h</code> (che indica l&rsquo;altezza dell&rsquo;area da disegno) il valore <code>400</code>, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">600</span>, <span style="color:#ae81ff">400</span>);
-</code></pre></div><p>Nello stesso esempio, per creare un cerchio con centro alle coordinate (100, 150) e con diametro 50, verifichiamo sulla documentazione la firma della funzione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Syntax: circle(x, y, diameter)
-
-Parameters:
-    x           Number: x-coordinate of the centre of the circle.
-    y           Number: y-coordinate of the centre of the circle.
-    diameter    Number: diameter of the circle.
-</code></pre></div><p>Sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del centro del cerchio) il valore <code>100</code>, al parametro formale <code>y</code> (che indica la coordinata y del centro del cerchio) il valore <code>150</code> ed al parametro formale <code>diameter</code> il valore <code>50</code>, quindi invochiamo la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
-</code></pre></div><p>Queste istruzioni devono essere inserite o nel blocco <code>setup</code> oppure nel blocco <code>draw</code>. Ad esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
-}
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-
-}
-</code></pre></div><p>Il risultato è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">funzione</span>(<span style="color:#a6e22e">p1</span>, <span style="color:#a6e22e">p2</span>, ...)
+</span></span></code></pre></div><p>Ad esempio, volendo creare un&rsquo;area da disegno di larghezza 600 ed altezza 400, il primo passo consiste nel verificare sulla documentazione la firma della funzione:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: createCanvas(w, h)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    w    Number: width of the canvas
+</span></span><span style="display:flex;"><span>    h    Number: height of the canvas
+</span></span></code></pre></div><p>A questo punto, sostituiamo al parametro formale <code>w</code> (che indica la larghezza dell&rsquo;area da disegno) il valore <code>600</code> ed al parametro formale <code>h</code> (che indica l&rsquo;altezza dell&rsquo;area da disegno) il valore <code>400</code>, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">600</span>, <span style="color:#ae81ff">400</span>);
+</span></span></code></pre></div><p>Nello stesso esempio, per creare un cerchio con centro alle coordinate (100, 150) e con diametro 50, verifichiamo sulla documentazione la firma della funzione:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: circle(x, y, diameter)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    x           Number: x-coordinate of the centre of the circle.
+</span></span><span style="display:flex;"><span>    y           Number: y-coordinate of the centre of the circle.
+</span></span><span style="display:flex;"><span>    diameter    Number: diameter of the circle.
+</span></span></code></pre></div><p>Sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del centro del cerchio) il valore <code>100</code>, al parametro formale <code>y</code> (che indica la coordinata y del centro del cerchio) il valore <code>150</code> ed al parametro formale <code>diameter</code> il valore <code>50</code>, quindi invochiamo la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span></code></pre></div><p>Queste istruzioni devono essere inserite o nel blocco <code>setup</code> oppure nel blocco <code>draw</code>. Ad esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/p5js/basics01.png" alt="p5.js - Primo esempio" title="p5.js - Primo esempio"></p>
 <p>Alcune operazioni, invece, devono essere effettuate una sola volta, come ad esempio la creazione dell&rsquo;area da disegno, per cui è <strong>errato</strong> invocare la funzione <code>createCanvas()</code> all&rsquo;interno del blocco <code>draw()</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-    <span style="color:#75715e">// ERRORE
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-}
-</code></pre></div><h2 id="posizionamento-dellarea-da-disegno">Posizionamento dell&rsquo;area da disegno</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ERRORE
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="posizionamento-dellarea-da-disegno">Posizionamento dell&rsquo;area da disegno</h2>
 <p>L&rsquo;area da disegno è generalmente posizionata alla fine della pagina web, è possibile però spostarla all&rsquo;interno di un altro elemento HTML. Lo spostamento è effettuato invocando la funzione <code>parent</code>, la quale prevede come argomento un identificativo (<code>id</code>) dell&rsquo;elemento HTML in cui si vuole spostare l&rsquo;area da disegno.</p>
 <p>Supponiamo, ad esempio, di avere una pagina HTML contenente un paragrafo il cui identificativo è <code>area</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;area&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
-&lt;<span style="color:#f92672">p</span>&gt;altro paragrafo&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p>Per spostare l&rsquo;area da disegno all&rsquo;interno del paragrafo, si utilizza la funzione <code>parent</code> con argomento <code>area</code> (identificativo del paragrafo), come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">parent</span>(<span style="color:#e6db74">&#39;area&#39;</span>);
-</code></pre></div><h2 id="modalità-di-esecuzione-globale-e-di-istanza">Modalità di esecuzione globale e di istanza</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;area&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;altro paragrafo&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span></code></pre></div><p>Per spostare l&rsquo;area da disegno all&rsquo;interno del paragrafo, si utilizza la funzione <code>parent</code> con argomento <code>area</code> (identificativo del paragrafo), come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">parent</span>(<span style="color:#e6db74">&#39;area&#39;</span>);
+</span></span></code></pre></div><h2 id="modalità-di-esecuzione-globale-e-di-istanza">Modalità di esecuzione globale e di istanza</h2>
 <p>Gli esempi proposti dichiarano variabili e funzioni da disegno nel contesto globale della pagina web, quindi questa modalità di lavoro è detta <strong>modalità globale</strong>. Dato che il contesto globale è unico, si è vincolati all&rsquo;esecuzione di un unico lavoro nella pagina web.</p>
 <p>Una modalità più avanzata di lavoro è la <strong>modalità di istanza</strong>, in cui le variabili e le funzioni da disegno sono dichiarate in un contesto specifico dato da una sorta di oggetto, detto <strong>closure</strong>. Dato che possono essere create più istanze di questi oggetti, è possibile dichiarare più contesti di esecuzione, ognuno legato alla singola istanza, per cui nella pagina web possono essere eseguiti più lavori.</p>
 <p>Essendo comunque un argomento avanzato, nei capitoli seguenti sarà sempre utilizzata la modalità globale. Solo per completezza, si riporta un esempio di lavoro realizzato utilizzando la modalità di istanza.</p>
 <p>Elemento HTML che conterrà l&rsquo;area da disegno:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idElementoHTML&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p>Dichiarazione delle variabili e delle funzioni da disegno in modalità di istanza:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lavoro</span> <span style="color:#f92672">=</span> ( <span style="color:#a6e22e">sketch</span> ) =&gt; {
-
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
-
-  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">setup</span> <span style="color:#f92672">=</span> () =&gt; {
-    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">200</span>);
-  };
-
-  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">draw</span> <span style="color:#f92672">=</span> () =&gt; {
-    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>);
-    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>);
-    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">rect</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">50</span>);
-  };
-};
-</code></pre></div><p>Creazione ed esecuzione dell&rsquo;area da disegno definita nell&rsquo;istanza <code>lavoro</code> ed inclusione della stessa nell&rsquo;elemento HTML <code>sketch</code> definito in precedenza:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myp5</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">p5</span>(<span style="color:#a6e22e">lavoro</span>, <span style="color:#e6db74">&#39;idElementoHTML&#39;</span>);
-</code></pre></div><p>Si fa notare come entrambi le funzioni <code>draw</code> e <code>setup</code> siano definite all&rsquo;interno dell&rsquo;oggetto <code>sketch</code>, attraverso la sintassi <code>sketch.setup</code> e <code>sketch.draw</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idElementoHTML&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span></code></pre></div><p>Dichiarazione delle variabili e delle funzioni da disegno in modalità di istanza:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lavoro</span> <span style="color:#f92672">=</span> ( <span style="color:#a6e22e">sketch</span> ) =&gt; {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">setup</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">200</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">draw</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">rect</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Creazione ed esecuzione dell&rsquo;area da disegno definita nell&rsquo;istanza <code>lavoro</code> ed inclusione della stessa nell&rsquo;elemento HTML <code>sketch</code> definito in precedenza:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myp5</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">p5</span>(<span style="color:#a6e22e">lavoro</span>, <span style="color:#e6db74">&#39;idElementoHTML&#39;</span>);
+</span></span></code></pre></div><p>Si fa notare come entrambi le funzioni <code>draw</code> e <code>setup</code> siano definite all&rsquo;interno dell&rsquo;oggetto <code>sketch</code>, attraverso la sintassi <code>sketch.setup</code> e <code>sketch.draw</code>.</p>
 <p>Si fa notare, inoltre, che entrambe le funzioni sono dichiarate come funzioni <strong>lambda</strong> al fine di non sovrascrivere il contesto dell&rsquo;oggetto <code>sketch</code>.</p>
 <p>Come già detto, sono argomenti avanzati, per cui non saranno utilizzati nei prossimi capitoli.</p>
 

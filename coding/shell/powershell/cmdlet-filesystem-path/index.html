@@ -255,7 +255,7 @@ PS /home/user &gt;
 </code></pre><p>Il percorso indica, all&rsquo;interno dell&rsquo;unita <code>c:</code> la cartella <code>utenti</code>. In questo caso non è stato indicato un file, ma una cartella.</p>
 <h2 id="percorsi-relativi-ed-assoluti">Percorsi relativi ed assoluti</h2>
 <p>PowerShell utilizza il simbolo <code>.</code> per indicare la cartella corrente e <code>..</code> per indicare la cartella precedente.</p>
-<p>E' importante sottolineare che questi simboli sono relativi al percorso, non alla cartella di lavoro.</p>
+<p>E&rsquo; importante sottolineare che questi simboli sono relativi al percorso, non alla cartella di lavoro.</p>
 <p>Il sistema operativo si occupa della risoluzione dei percorsi contenenti i simboli <code>.</code> e <code>..</code> trasformandoli in percorsi assoluti.</p>
 <h3 id="primo-esempio-risoluzione-percorso">Primo esempio risoluzione percorso</h3>
 <p>Prendendo ad esempio il percorso:</p>
@@ -323,26 +323,26 @@ PS /home/user &gt;
 </ul>
 <h3 id="impostare-la-cartella-di-lavoro-corrente">Impostare la cartella di lavoro corrente</h3>
 <p>L&rsquo;impostazione della cartella di lavoro corrente avviene con la CmdLet <code>Set-Location</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Location [[-Path] &lt;String&gt;]
-</code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-Location [[-Path] &lt;String&gt;]
+</span></span></code></pre></div><p>I parametri indicati nella sintassi hanno il seguente significato:</p>
 <ul>
 <li><code>Path</code>: il percorso della cartella da impostare come cartella corrente;</li>
 </ul>
 <p>Esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Location -Path <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
-</code></pre></div><p>E' possibile usare l&rsquo;alias <code>cd</code>, noto su tutti i sistemi operativi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cd <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
-</code></pre></div><h3 id="ottenere-la-cartella-di-lavoro-corrente">Ottenere la cartella di lavoro corrente</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-Location -Path <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
+</span></span></code></pre></div><p>E&rsquo; possibile usare l&rsquo;alias <code>cd</code>, noto su tutti i sistemi operativi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cd <span style="color:#e6db74">&#34;c:\utenti\prof&#34;</span>
+</span></span></code></pre></div><h3 id="ottenere-la-cartella-di-lavoro-corrente">Ottenere la cartella di lavoro corrente</h3>
 <p>Per visualizzare o ottenere la cartella di lavoro corrente si utilizza la CmdLet <code>Get-Location</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location
-</code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Location
-</code></pre></div><p>E' possibile usare l&rsquo;alias <code>pwd</code>, noto sui sistemi Gnu/Linux, Unix e Mac.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">pwd
-</code></pre></div><h3 id="verifica-esistenza-o-correttezza-sintattica-dei-percorsi">Verifica esistenza o correttezza sintattica dei percorsi</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Location
+</span></span></code></pre></div><p>Esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Location
+</span></span></code></pre></div><p>E&rsquo; possibile usare l&rsquo;alias <code>pwd</code>, noto sui sistemi Gnu/Linux, Unix e Mac.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>pwd
+</span></span></code></pre></div><h3 id="verifica-esistenza-o-correttezza-sintattica-dei-percorsi">Verifica esistenza o correttezza sintattica dei percorsi</h3>
 <p>La verifica dell&rsquo;esistenza o della correttezza sintattica di uno o più percorsi avviene con la CmdLet <code>Test-Path</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path  [-Path] &lt;String[]&gt; [-PathType &lt;TestPathType&gt;] [-IsValid]
-</code></pre></div><p>Questo CmdLet restituisce un valore <strong>booleano</strong> che, se affermativo, indica l&rsquo;esistenza o la correttezza sintattica di tutti i percorsi indicati, se negativo, indica l&rsquo;inesistenza o l&rsquo;errata sintassi di uno dei percorsi indicato.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Test-Path  [-Path] &lt;String[]&gt; [-PathType &lt;TestPathType&gt;] [-IsValid]
+</span></span></code></pre></div><p>Questo CmdLet restituisce un valore <strong>booleano</strong> che, se affermativo, indica l&rsquo;esistenza o la correttezza sintattica di tutti i percorsi indicati, se negativo, indica l&rsquo;inesistenza o l&rsquo;errata sintassi di uno dei percorsi indicato.</p>
 <p>I parametri indicati nella sintassi hanno il seguente significato:</p>
 <ul>
 <li>
@@ -367,17 +367,17 @@ PS /home/user &gt;
 </li>
 </ul>
 <p>Per verificare l&rsquo;esistenza di una cartella, si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;C:\test&#34;</span>
-</code></pre></div><p>Per verificare che la stringa indicata nel percorso sia corretta sintatticamente, si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;/test&#34;</span> -IsValid
-</code></pre></div><p>Per verificare che il file indicato esista e sia effettivamente un file, si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Test-Path -Path <span style="color:#e6db74">&#34;file.txt&#34;</span> -PathType <span style="color:#e6db74">&#34;leaf&#34;</span>
-</code></pre></div><h3 id="ottenere-la-lista-di-drive-disponibili">Ottenere la lista di drive disponibili</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Test-Path -Path <span style="color:#e6db74">&#34;C:\test&#34;</span>
+</span></span></code></pre></div><p>Per verificare che la stringa indicata nel percorso sia corretta sintatticamente, si usa il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Test-Path -Path <span style="color:#e6db74">&#34;/test&#34;</span> -IsValid
+</span></span></code></pre></div><p>Per verificare che il file indicato esista e sia effettivamente un file, si usa il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Test-Path -Path <span style="color:#e6db74">&#34;file.txt&#34;</span> -PathType <span style="color:#e6db74">&#34;leaf&#34;</span>
+</span></span></code></pre></div><h3 id="ottenere-la-lista-di-drive-disponibili">Ottenere la lista di drive disponibili</h3>
 <p>Per visualizzare o ottenere la lista di drive disponibili nel sistema si utilizza la CmdLet <code>Get-PSDrive</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSDrive
-</code></pre></div><p>Esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-PSDrive
-</code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-PSDrive
+</span></span></code></pre></div><p>Esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-PSDrive
+</span></span></code></pre></div><p>Output:</p>
 <pre tabindex="0"><code class="language-output" data-lang="output">Name           Used (GB)     Free (GB) Provider      Root
 ----           ---------     --------- --------      ----
 Alias                                  Alias

@@ -228,24 +228,24 @@
 <p>Gli <strong>script</strong> sono programmi scritti in linguaggio JavaScript che vengono inclusi in una pagina web ed eseguiti sul browser dell&rsquo;utente che visita la pagina.</p>
 <p>Essendo JavaScript un linguaggio interpretato, gli script non sono sottoposti al processo di compilazione prima dell&rsquo;inclusione in una pagina web. Questo comporta la possibilità della presenza di errori nel codice.</p>
 <p>Come per gli altri linguaggi di programmazione, il codice sorgente è fatto di <strong>istruzioni</strong>. Per istruzioni si intendono <strong>comandi</strong> impartiti ad un <strong>esecutore</strong>. Nel caso di JavaScript, l&rsquo;esecutore dei comandi è il browser, e, nello specifico, <strong>l&rsquo;interprete</strong> (un componente software interno al browser).</p>
-<p>Le istruzioni di un programma JavaScript sono eseguite dall'<strong>interprete</strong> man mano che la pagina web viene &ldquo;letta&rdquo; dal browser, quindi l&rsquo;ordine in cui il codice JavaScript è scritto nella pagina web è di primaria importanza. Nel caso sia presente un errore nel codice, in fase di esecuzione l&rsquo;errore viene ignorato, quando possibile, oppure, in caso contrario, l&rsquo;esecuzione termina appena si tenta di eseguire l&rsquo;istruzione' errata (le istruzioni successive non sono eseguite, bloccando l&rsquo;elaborazione in corso).</p>
+<p>Le istruzioni di un programma JavaScript sono eseguite dall&rsquo;<strong>interprete</strong> man mano che la pagina web viene &ldquo;letta&rdquo; dal browser, quindi l&rsquo;ordine in cui il codice JavaScript è scritto nella pagina web è di primaria importanza. Nel caso sia presente un errore nel codice, in fase di esecuzione l&rsquo;errore viene ignorato, quando possibile, oppure, in caso contrario, l&rsquo;esecuzione termina appena si tenta di eseguire l&rsquo;istruzione&rsquo; errata (le istruzioni successive non sono eseguite, bloccando l&rsquo;elaborazione in corso).</p>
 <p>In JavaScript sono presenti due modalità di esecuzione degli script:</p>
 <ul>
 <li><strong>sloppy</strong>: una modalità che permette che alcuni errori non vengano segnalati, ma ignorati silenziosamente, portando a malfunzionamenti non semplici da individuare; Questa modalità è quella applicata in maniera predefinita;</li>
 <li><strong>strict</strong>: una modalità che segnala tutti gli errori e che rende più rigida e chiara l&rsquo;esecuzione degli script. Per attivarla, è necessario inserire, all&rsquo;inizio di ogni script e di ogni funzione, la seguente istruzione:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;use strict&#34;</span>;
-</code></pre></div><p>Come per la scrittura di pagine web, anche per la stesura di programmi JavaScript si consiglia di configurare correttamente il proprio editor di testo o il proprio strumento di sviluppo, oppure, di utilizzare soluzioni a più ampio raggio come
-<a href="/coding/tools/editorconfig/" title="Link ad EditorConfig su Wikipedia">EditorConfig</a> <!-- TODO: impostare il link a Wikipedia -->,
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use strict&#34;</span>;
+</span></span></code></pre></div><p>Come per la scrittura di pagine web, anche per la stesura di programmi JavaScript si consiglia di configurare correttamente il proprio editor di testo o il proprio strumento di sviluppo, oppure, di utilizzare soluzioni a più ampio raggio come
+<a href="/coding/tools/editorconfig/" title="Link ad EditorConfig su Wikipedia">EditorConfig</a> &lt;!&ndash; TODO: impostare il link a Wikipedia &ndash;&gt;,
 in modo da poter condividere le impostazioni di codifica (e di scrittura dei documenti di testo) con l&rsquo;intero gruppo di lavoro o nell&rsquo;intera azienda.</p>
 <p>Ancor di più, si consiglia l&rsquo;uso di strumenti per la verifica del codice sorgente, in modo da individuare e correggere eventuali errori non rilevati dal programmatore.</p>
 <h2 id="primi-script-sintassi-ed-esecuzione">Primi script, sintassi ed esecuzione</h2>
 <h3 id="messaggi-allutente-con-alert">Messaggi all&rsquo;utente con <code>alert()</code></h3>
 <p>L&rsquo;istruzione più conosciuta di JavaScript è <code>alert()</code>, che permette di mostrare un messaggio all&rsquo;utente, come nell&rsquo;esempio di seguito:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;use strict&#34;</span>;
-
-<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World!!&#34;</span>);
-</code></pre></div><h3 id="uso-del-punto-e-virgola">Uso del punto e virgola</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use strict&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World!!&#34;</span>);
+</span></span></code></pre></div><h3 id="uso-del-punto-e-virgola">Uso del punto e virgola</h3>
 <p>Il <strong>punto e virgola</strong> viene utilizzato per identificare la fine di un’istruzione, per cui ogni istruzione deve terminare con un carattere <code>;</code>.</p>
 <p>Non tutto il codice è composto da istruzioni, esistono blocchi e strutture che non sono considerate istruzioni e, quindi, non prevedono la terminazione con il carattere di fine istruzione <code>;</code>.</p>
 <p>Si ponga quindi attenzione all&rsquo;inserimento di questo carattere.</p>
@@ -254,17 +254,17 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 <p>I commenti sono delle note, delle spiegazioni che il programmatore inserisce per descrivere e documentare parti di codice. In fase di esecuzione, i commenti sono completamente ignorati.</p>
 <p>JavaScript permette di commentare il codice su una sola riga utilizzando il simbolo <code>//</code> seguito dal commento, mentre i commenti su più righe includono i commenti tra i caratteri <code>/*</code> e <code>*/</code>.</p>
 <p>Un esempio di script che fa uso di commenti è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#e6db74">&#39;use strict&#39;</span>;
-
-<span style="color:#75715e">// commento su una rigida
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">/*
-</span><span style="color:#75715e">  commento su
-</span><span style="color:#75715e">  più righe
-</span><span style="color:#75715e">*/</span>
-<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World!!&#34;</span>);
-</code></pre></div><h3 id="inserimento-di-uno-script-in-pagina-web">Inserimento di uno script in pagina web</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;use strict&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// commento su una rigida
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  commento su
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  più righe
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World!!&#34;</span>);
+</span></span></code></pre></div><h3 id="inserimento-di-uno-script-in-pagina-web">Inserimento di uno script in pagina web</h3>
 <p>Per inserire uno script in una pagina web esistono diverse possibilità:</p>
 <ul>
 <li>inserire uno script <strong>inline</strong> ovvero nei tag HTML che ne permettono la possibilità;</li>
@@ -274,26 +274,26 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 <h4 id="inserimento-script-inline">Inserimento script inline</h4>
 <p>Per inserire uno script <strong>inline</strong>, lo si può allegare ai tag HTML, ove previsto dalle specifiche;</p>
 <p>Si supponga, ad esempio, di voler associare al <code>click</code> su un pulsante, realizzato tramite l&rsquo;etichetta <code>button</code>, uno script (composto da una sola istruzione) <code>alert('Script contenuto inline');</code>. Il codice risultante sarà il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;Script contenuto inline&#39;);&#34;</span>&gt;
-</code></pre></div><p>Si nota che nella stessa riga di codice è presente sia il codice HTML sia il codice JavaScript (inline).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;Script contenuto inline&#39;);&#34;</span>&gt;
+</span></span></code></pre></div><p>Si nota che nella stessa riga di codice è presente sia il codice HTML sia il codice JavaScript (inline).</p>
 <h4 id="inserimento-script-nella-pagina-html">Inserimento script nella pagina HTML</h4>
 <p>Può essere difficoltoso e inopportuno, per questioni di leggibilità del codice, inserire script complessi in modalità <strong>inline</strong>. L&rsquo;etichetta <code>script</code> è ideata proprio allo scopo di contenere codice JavaScript. Di seguito un esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#e6db74">&#34;use strict&#34;</span>;
-
-  <span style="color:#75715e">// messaggio all&#39;utente
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;script contenuto nella pagina web&#34;</span>);
-<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
-</code></pre></div><h4 id="inserimento-script-in-un-file-esterno">Inserimento script in un file esterno</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;use strict&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// messaggio all&#39;utente
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;script contenuto nella pagina web&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span></code></pre></div><h4 id="inserimento-script-in-un-file-esterno">Inserimento script in un file esterno</h4>
 <p>Generalmente è consigliato separare il codice HTML dal codice JavaScript, per cui, rispetto alla pagina web, il codice JavaScript è contenuto in un file esterno, tipicamente con estensione <code>.js</code>.  Per includere nella pagina web uno script contenuto in un file esterno, si utilizza il tag <code>script</code>, specificando nell&rsquo;attributo <code>src</code> il percorso o l&rsquo;indirizzo del file esterno.</p>
 <p>Di seguito un esempio di un primo file specificato mediante un percorso relativo ed un secondo file specificato mediante un percorso assoluto (un indirizzo web):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;file.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
-<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;www.google.com/javascript/file.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
-</code></pre></div><p>I file esterni ovviamente conterranno gli script, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;use strict&#34;</span>;
-
-<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;script contenuto in un file esterno&#34;</span>);
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;file.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;www.google.com/javascript/file.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span></code></pre></div><p>I file esterni ovviamente conterranno gli script, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use strict&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;script contenuto in un file esterno&#34;</span>);
+</span></span></code></pre></div>
     </div>
   </article>
 </main>
