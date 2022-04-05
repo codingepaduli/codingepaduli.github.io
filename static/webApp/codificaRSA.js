@@ -60,7 +60,7 @@ function congruenteSuccessivo() {
     let e = BigInt(coprimoString);
     let f = (p-1n) * (q-1n);
 
-    let d = generaCongruente(e, e, f); // congruente partendo da 1
+    let d = generaCongruente(e, e, f); // congruente partendo da e
 
     if (d != -1n) {
       document.getElementById("congruente").value = d;
