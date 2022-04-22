@@ -98,6 +98,7 @@ function codificaMessaggio() {
 
   // converto ogni carattere in codice ascii (numerico)
   let values = [];
+  let asciiCode = null;
   for (let c of chars) {
       asciiCode = BigInt(c.charCodeAt(0) - 96);
       values.push(asciiCode);
@@ -148,7 +149,6 @@ function codificaMessaggio() {
 
 function calcolaChiavi() {
   // input
-  let message = document.getElementById("messaggio").value;
   let pString = document.getElementById("p").value;
   let qString = document.getElementById("q").value;
 

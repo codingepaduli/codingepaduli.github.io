@@ -91,10 +91,10 @@ function draw() {
             }
         }
     }
-    
+
     if (deletedBalls == righePalline * colonnePalline) {
         text("WINNER", 50, 50);
-        noloop();
+        noLoop();
     }
 
     // get the Y axe from the mouse
@@ -115,7 +115,7 @@ function draw() {
     if (y < r) {
         dy = 1;
     }
-    
+
     // the ball will bounce on the bottom border
     if (y + r > height) {
         dy = -1;

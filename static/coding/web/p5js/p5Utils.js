@@ -24,7 +24,7 @@ function arrow(x1, y1, x2, y2) {
 function arrowArc(x, y, d, start, stop, clockWise = true, arrowOnStart = false, arrowOnStop = true) {
     push(); // Start a new drawing state
 
-    r=d/2;
+    let r=d/2;
 
     noFill();
 
@@ -65,12 +65,12 @@ function drawGridPoints(centerX, centerY, gridStep) {
     }
 }
 
-function drawAxes(centerX, centerY, gridStep) {
+function drawAxes(centerX, centerY) {
     arrow(0, centerY, width, centerY);
     arrow(centerX, 0, centerX, height);
 }
 
-function drawMathAxes(centerX, centerY, gridStep) {
+function drawMathAxes(centerX, centerY) {
     arrow(0, centerY, width, centerY);
     arrow(centerX, height, centerX, 0);
 }

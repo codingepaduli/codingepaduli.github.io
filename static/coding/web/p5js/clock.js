@@ -73,7 +73,7 @@ function draw() {
     text("Angolo di 360 gradi", 340, 350+80);
 
     // counterclockwise arc
-    counterclockwise = false;
+    var counterclockwise = false;
     drawClock(80, 700, 120, 3, 15-7.5, null, counterclockwise);
     text("Angolo di 45 gradi", 20, 700+80);
 

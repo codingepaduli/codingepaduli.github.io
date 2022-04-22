@@ -8,18 +8,9 @@
     <language>it-IT</language>
     <lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/interesting/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
-    </item>
-    
-    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
@@ -28,10 +19,19 @@
     <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
     </item>
     
     <item>
