@@ -6,7 +6,43 @@
     <description>Recent content in coding on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 03 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>p5.js Lez. 04.8 - Soluzione progetto Acchiappapalline</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</guid>
+      <description>Implementazione di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.7 - Progetto Acchiappapalline</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</guid>
+      <description>Sviluppo di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.6 - Soluzione progetto Snake</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
+      <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</guid>
+      <description>Implementazione di un videogioco in stile &amp;lsquo;snake&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.5 - Progetto Snake</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</guid>
+      <description>Sviluppo di un videogioco in stile &amp;lsquo;snake&amp;rsquo;</description>
+    </item>
+    
     <item>
       <title>SSH</title>
       <link>http://codingepaduli.github.io/coding/tools/ssh/</link>

@@ -10,10 +10,28 @@
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+    </item>
+    
+    <item>
+      <title>App su F-Droid</title>
+      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
+      <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
+      <description>Set di link relativi alle app su F-Droid</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
     </item>
     
     <item>
@@ -23,24 +41,6 @@
       
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
-    </item>
-    
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
-    </item>
-    
-    <item>
-      <title>App su F-Droid</title>
-      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
-      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
-      <description>Set di link relativi alle app su F-Droid</description>
     </item>
     
   </channel>

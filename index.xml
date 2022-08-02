@@ -10,10 +10,64 @@
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+    </item>
+    
+    <item>
+      <title>App su F-Droid</title>
+      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
+      <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
+      <description>Set di link relativi alle app su F-Droid</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.8 - Soluzione progetto Acchiappapalline</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</guid>
+      <description>Implementazione di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.7 - Progetto Acchiappapalline</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</guid>
+      <description>Sviluppo di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.6 - Soluzione progetto Snake</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
+      <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</guid>
+      <description>Implementazione di un videogioco in stile &amp;lsquo;snake&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.5 - Progetto Snake</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</guid>
+      <description>Sviluppo di un videogioco in stile &amp;lsquo;snake&amp;rsquo;</description>
     </item>
     
     <item>
@@ -23,15 +77,6 @@
       
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
-    </item>
-    
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
     </item>
     
     <item>
@@ -248,15 +293,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/funzioni/</guid>
       <description>Funzioni</description>
-    </item>
-    
-    <item>
-      <title>App su F-Droid</title>
-      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
-      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
-      <description>Set di link relativi alle app su F-Droid</description>
     </item>
     
     <item>
