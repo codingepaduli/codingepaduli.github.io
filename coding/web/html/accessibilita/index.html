@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 8 - Accessibilità - Coding e Paduli</title>
+
+    <meta name="description" content="HTML Lez. 8 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&#39;uso di tecnologie assistive">
+        <meta property="og:title" content="HTML Lez. 8 - Accessibilità" />
+<meta property="og:description" content="HTML Lez. 8 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&#39;uso di tecnologie assistive" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/accessibilita/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2022-08-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-17T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 8 - Accessibilità"/>
+<meta name="twitter:description" content="HTML Lez. 8 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&#39;uso di tecnologie assistive"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding e tools</a></li>
+
+      <li><a href="/interesting/">Interessanti</a></li>
+
+      <li><a href="/opensource/">Open Source</a></li>
+
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-08-17T00:00:00Z">17-08-2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="accessibilità-a11y">Accessibilità (a11y)</h1>
+<p>Nello sviluppo delle applicazioni software e dei siti web un&rsquo;attenzione particolare va agli utenti con disabilità.</p>
+<h2 id="disturbi-e-disabilità">Disturbi e disabilità</h2>
+<p>Gli utenti di un sito web possono essere personne affette da:</p>
+<ul>
+<li>disturbi psichici e psichiatrici: disturbi d&rsquo;ansia, disturbi del tono dell&rsquo;umore e disturbi di personalità;</li>
+<li>disabilità intellettiva (ex ritardo mentale) un alterato funzionamento del sistema nervoso centrale di grado lieve, moderato, grave o molto grave;</li>
+<li>disturbi dello spettro autistico;</li>
+<li>disturbi specifici del linguaggio, compormettono lo sviluppo del linguaggio in assenza di un problema neurologico, sensoriale, intellettivo o affettivo;</li>
+<li>disturbi specifici dell&rsquo;apprendimento: difficoltà specifiche nella lettura (dislessia), scrittura (disortografia) e calcolo (discalculia).</li>
+<li>disturbi motori: incapacità o limitazione nell&rsquo;uso di arti o del corpo.</li>
+<li>disturbi visivi: perdita totale (cecità) o compromissione parziale (ipovisione);</li>
+<li>disturbi dell&rsquo;udito: perdita totale (sordità) o compromissione leggera, moderata, severa o profonda dell&rsquo;udito;</li>
+</ul>
+<p>Le persone affette da questi disturbi sviluppano disabilità, ovvero incapacità o limitazione nello svolgere attività essenziali per la vita quotidiana.</p>
+<p>Bisogna ricordare che le disabilità possono essere anche temporanee, come può essere per una persona che è nel periodo di convalescenza dovuto ad un&rsquo;operazione chirurgica o ad una malattia.</p>
+<h2 id="leggi-normative-standard-e-linee-guida-per-laccessibilità-digitale">Leggi, normative, standard e linee guida per l&rsquo;accessibilità digitale</h2>
+<p>La Costituzione Italiana afferma con l&rsquo;art.3 tra i Principi Fondamentali che <strong>tutti i cittadini hanno pari dignità sociale</strong> e che <strong>è compito della Repubblica rimuovere gli ostacoli di ordine economico e sociale, che, limitando di fatto la libertà e l&rsquo;eguaglianza dei cittadini, impediscono il pieno sviluppo della persona umana e l&rsquo;effettiva partecipazione di tutti i lavoratori all&rsquo;organizzazione politica, economica e sociale del Paese</strong>.</p>
+<p>Il diritto all&rsquo;accessibilità si fonda quindi sulla Costituzione ed è associato alla possibilità anche per persone con ridotta o impedita capacità sensoriale, motoria o psichica, ossia affette da disabilità sia temporanea che stabile, di accedere e muoversi autonomamente in ambienti fisici (per cui si parla di accessibilità fisica), di fruire e accedere autonomamente a contenuti culturali (nel qual caso si parla di accessibilità culturale) o di fruire dei sistemi informatici e delle risorse a disposizione tipicamente attraverso l&rsquo;uso di tecnologie assistive o tramite il rispetto di requisiti di accessibilità dei prodotti <a href="https://it.wikipedia.org/wiki/Accessibilit%C3%A0_(design)">citazione da wikipedia</a>.</p>
+<p>Il concetto di accessibilità, nel tempo, è stato esteso anche ai ai siti web ed ai servizi digitali.</p>
+<p>Un software o un sito web non è di per se accessibile solo perchè l&rsquo;utente usufruisce di tecnologie assistive, ma deve seguire gli standard e le linee guida indicate a livello internazionale. Queste linee guida permettono all&rsquo;utente l&rsquo;accesso alle informazioni e l&rsquo;uso delle funzionalità fornite per mezzo delle tecnologie assistive di cui fa uso.</p>
+<p>Tra gli standard e le linee guida relative l&rsquo;accessibilità riportiamo:</p>
+<ul>
+<li><a href="https://www.w3.org/WAI/tutorials/">Web Accessibility Initiative (WAI)</a>: Gruppi di lavoro del W3C che si occupano di stilare linee guida, relazioni tecniche e documentazione riguardante la realizzazione di creazioni digitali che siano accessibili;</li>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a>: Linee guida per la realizzazione di contenuti e siti web più accessibili;</li>
+<li><a href="https://www.w3.org/TR/wai-aria-1.1/">Accessible Rich Internet Applications (WAI-ARIA)</a>: Uno standard che definisce le informazioni semantiche da inserire nelle etichette degli ipertesti al fine di poter essere accessibili attraverso tecnologie assistive;</li>
+</ul>
+<p>In particolare è la legge Stanca del 2004 che stabilisce l&rsquo;accessibilità degli strumenti informatici anche per i soggetti disabili, obbligando per legge i siti dell&rsquo;amministrazione pubblica e dei fornitori di servizi pubblici a seguire le linee guida WCAG versione 1.0 del 1999.</p>
+<p>Nel 2018 con il Decreto Legislativo No.106 l&rsquo;Italia recepisce le direttive della Comunità Europea (atte a migliorare l&rsquo;accessibilità di siti e app per smartphone per il settore pubblico di ogni paese membro dell&rsquo;Unione Europea) ed aggiorna le linee guida di riferimento per l&rsquo;accessibilità, indicando le WCAG versione 2.0 pubblicate nel 2008.</p>
+<p>La novità di questa direttiva è che le amministrazioni hanno l&rsquo;obbligo di pubblicare e aggiornano periodicamente la Dichiarazione di accessibilità, in cui si attesta lo stato di conformità di ciascun sito e applicazione mobile ai requisiti di accessibilità.</p>
+<p>In alcuni casi, però, le leggi italiane non sono le uniche a cui riferirsi. Se si considera che molti servizi (come Sky, Facebook, Twitter) sono forniti a livello mondiale, allora per questi servizi è necessario rispettare anche le leggi delle nazioni in cui si offre il servizio. Tra le tante leggi citiamo:</p>
+<ul>
+<li>Americans with Disabilities Act (U.S.A) e Section 508;</li>
+<li>Equality Act (U.K.);</li>
+<li>European Accessibility Act (2019) e Standard Europeo UNI EN-301549;</li>
+</ul>
+<p>Anche le leggi nazionali di questi paesi prendono come riferimento gli standard e le linee guida internazionali relative l&rsquo;accessibilità (WCAG, WAI-ARIA).</p>
+<h2 id="tecnologie-assistive">Tecnologie assistive</h2>
+<p>In ambito informatico, le disabilitá comportano delle difficoltà parziali o una completa impossibilità ad usare mouse e/o tastiera e a visualizzare i contenuti su uno schermo, che sia quello dello smartphone o del computer o della smart-TV.</p>
+<p>Numerose tecnologie assistive vanno a supporto dell&rsquo;utente consentendogli di utilizzare i dispositivi, le applicazioni ed i siti web. Tra le tecnologie assistive riportiamo:</p>
+<ul>
+<li>i lettori dello schermo (screen-reader), che permettono ad un utente con disabilità visive di navigare tra i contenuti dell&rsquo;applicazione e della pagina web, leggendoli ad alta voce. Tra gli screen reader ricordiamo <a href="https://www.nvaccess.org/">NonVisual Desktop Access (NVDA)</a> e <a href="https://www.freedomscientific.com/products/software/jaws/">Job Access With Speech (JAWS)</a> per Windows, <a href="https://help.gnome.org/users/orca/stable/index.html.en#getting_started">Orca</a> per Linux, TalkBack per Android, VoiceOver per Mac e iOS;</li>
+<li>lenti di ingrandimento: permettono di ingrandire di una determinata percentuale una porzione dello schermo, in modo da favorire la visione dei contenuti;</li>
+<li>i sistemi di riconoscimento ottico dei caratteri (OCR): permettono la conversione in digitale o la lettura ad alta voce del testo scritto su un foglio di carta;</li>
+<li>sistemi di dettatura (o trascrizione del parlato) ed assistenti vocali: permettono l&rsquo;interazione attraverso la voce, in particolare per l&rsquo;ascolto e la dettatura del testo (o per la trascrizione di messaggi vocali);</li>
+<li>sistemi di amplificazione dei suoni (anche auricolari): permettono di amplificare i suoni per facilitare l&rsquo;ascolto;</li>
+<li>tastiere con caratteri ingranditi o tastiere tattili: hanno tasti con caratteri stampati ad una dimensione maggiore o con lettere in rilievo che permettono di capire su quale tasto si è poggiati, inoltre hanno tasti aggiuntivi per aumentare il numero di funzionalità disponibili;</li>
+<li>sistemi di puntamento: sono un alternativa al mouse e permettono di utilizzare gli occhi, la testa o il corpo per muovere il puntatore del mouse;</li>
+</ul>
+<h2 id="linee-guida-wcag">Linee guida WCAG</h2>
+<p>Le linee guida WCAG si riferiscono in generale a tutti i contenuti multimediali e sono d&rsquo;utilità per qualsiasi lavoro digitale si possa realizzare.</p>
+<p>Nel principale documento delle WCAG, ora alla versione 2, troviamo tre livelli:</p>
+<ul>
+<li>il primo livello descrive i principi, che sono qualità base che rendono accessibile un sito web;</li>
+<li>il secondo livello descrive le linee guida da seguire durante la pianificazione e la progettazione di un sito web, un&rsquo;applicazione o un documento per far si che sia accessibile;</li>
+<li>il terzo livello indica i criteri di successo per verificare che i principi e le linee guida siano stati seguiti.</li>
+</ul>
+<h3 id="principi">Principi</h3>
+<p>I principi sono:</p>
+<ul>
+<li>&ldquo;Percepibile&rdquo;: Gli utenti devono poter percepire informazioni e componenti (tabelle, liste, immagini, grafici, &hellip;). Questo principio assicura che le persone disabili possano vedere il contenuto o avere alternative disponibili nel caso in cui ne abbiano bisogno, come un testo che descriva un&rsquo;immagine o un sottotitolo ad un video;</li>
+<li>&ldquo;Operabile&rdquo;: I componenti dell&rsquo;interfaccia utente e la navigazione devono essere utilizzabili. Questo principio consente agli utenti di utilizzare la loro tecnologia preferita per gestire il prodotto digitale, ad esempio navigare nelle slide di una presentazione o tra i capitoli di un documento (senza dover scorrere tutte le slide o pagine);</li>
+<li>&ldquo;Comprensibile&rdquo;: Le informazioni e il funzionamento dell&rsquo;interfaccia utente devono essere comprensibili. Questo principio combina l&rsquo;assicurarsi che il contenuto sia facile da capire e che si possa interagire con il prodotto digitale in modo comprensibile, ad esempio durante la compilazione di un modulo o durante la visione di un video;</li>
+<li>&ldquo;Robusto&rdquo;: Il contenuto deve essere sufficientemente robusto da poter essere interpretabile da uomini, software e macchine, comprese le tecnologie assistive. Questo principio, molto tecnico, sottolinea quanto sia importante un&rsquo;attenta progettazione e realizzazione (da interpretarsi come un buon codice sorgente in ambito software) per realizzare un prodotto accessibile.</li>
+</ul>
+<h3 id="linee-guida">Linee guida</h3>
+<p>Per ogni principio sono descritte delle linee guida che forniscono avvisi più specifici per le differenti situazioni. Di seguito si riportano le linee guida di ogni principio.</p>
+<p>Linee guida del primo principio:</p>
+<ol>
+<li>&ldquo;fornire una descrizione alternativa per ogni contenuto non testuale&rdquo; <!-- braille, voce, simboli or linguaggio semplificato -->;</li>
+<li>&ldquo;fornire una descrizione alternativa per i media audio e video&rdquo; <!-- ad esempio i sottotitoli -->;</li>
+<li>&ldquo;permettere la presentazione di contenuti in diversi modi (ad esempio layout più semplice) senza perdere informazioni o struttura <!-- ad esempio utilizzando la "modalità di lettura" o consentendo qualsiasi orientamento o risoluzione del dispositivo -->;</li>
+<li>&ldquo;Rendi più facile per gli utenti vedere e ascoltare i contenuti, inclusa la distinzione del primo piano dallo sfondo. Evita l&rsquo;uso di un solo colore o dei colori a basso contrasto per testo, informazioni ed elementi dell&rsquo;interfaccia utente&rdquo; <!-- ad esempio ingrandire il testo -->;</li>
+</ol>
+<p>Linee guida del secondo principio:</p>
+<ol>
+<li>&ldquo;Make all functionality available from a keyboard&rdquo;;</li>
+<li>&ldquo;Fornire agli utenti abbastanza tempo per leggere e/o interagire con i contenuti&rdquo; <!-- Se basati sul tempo, fornire un modo per aumentare il limite di tempo -->;</li>
+<li>&ldquo;Non mostrare i contenuti in una modalità che è noto possa causare reazioni fisiche o crisi <!-- come contenuti lampeggianti o animazioni -->;</li>
+<li>&ldquo;Fornire un modo che possa aiutare gli utenti a navigare tra i contenuti, a trovarli e a determinare in quale punto è l&rsquo;utente&rdquo; <!-- Avere un titolo di pagina, il focus per la tastiera visibile, una suddivisione in capitoli e paragrafi realizzata correttamente -->;</li>
+<li>&ldquo;Rendere facile per gli utenti utilizzare alcune funzionalità utilizzando altri dispositivi di input oltre alla tastiera&rdquo; <!-- si pensi agli input vocali o tramite tastiere braille -->;</li>
+</ol>
+<p>Linee guida del terzo principio:</p>
+<ol>
+<li>&ldquo;Rendere i contenuti testuali leggibili e comprensibili&rdquo; <!-- traduzione, spiegazione degli acronimi, corretta pronuncia, ... -->;</li>
+<li>&ldquo;Far si che le pagine siano visualizte e che operino secondo una modalità che l&rsquo;utente si possa aspettare&rdquo; <!-- Un pulsante ed un campo di input devono sembrare tali, e non avere forme strane o poco intuitive -->;</li>
+<li>&ldquo;Aiutare gli utenti ad evitare e correggere gli errori&rdquo; <!-- i contenuti siano descritti in un modo utile, si possano evitare ed identificare errori (con formato dato, ora, controllo ortografico) e fornire suggerimenti -->;</li>
+</ol>
+<p>Linee guida del quarto principio:</p>
+<ol>
+<li>&ldquo;Massimizzare la compatibilità con le tecnologie correnti, icluso le tecnologie assistive. Scrivere codice conforme (valido) assicurandosi che nomi, ruoli e proprietà degli elementi dell&rsquo;interfaccia grafica siano chiari;</li>
+</ol>
+<h3 id="conformità">Conformità</h3>
+<p>La conformità attesta che il sito web segue tutte le linee guida delle WCAG e che tutti i criteri di successo applicabili sono soddisfatti.</p>
+<p>I criteri di successo delle WCAG possono avere uno dei tre livelli: <strong>A</strong>, <strong>Doppia-A</strong> e <strong>Tripla-A</strong>.</p>
+<p>Il livello più basso, A, garantisce l&rsquo;accessibilità di base. Se raggiungi questo livello, non stai escludendo attivamente la maggior parte delle persone disabili.</p>
+<p>Il secondo livello, Double-A, garantisce l&rsquo;accessibilità per la maggior parte delle persone con disabilità. Questo è il livello richiesto dalla maggior parte delle leggi e delle politiche. Per raggiungerlo, è necessario confermare tutti i criteri di successo che sono di livello A e Double-A.</p>
+<p>Il terzo livello, Triple-A, sono difficili da raggiungere, ma può avere senso offrire funzionalità che rientrano in questo livello di conformità.</p>
+<p>Di seguito si riportano alcuni criteri di successo:</p>
+<ul>
+<li>&ldquo;Audio e immagini dell&rsquo;elemento video hanno una trascrizione (Level AAA)&rdquo;;</li>
+<li>&ldquo;Il contenuto dell&rsquo;elemento audio ha un&rsquo;alternativa testuale  (Level A)&rdquo;;</li>
+<li>&ldquo;L&rsquo;elemento audio o video evita la riproduzione automatica dell&rsquo;audio (video muto) (Level A)&rdquo;;</li>
+<li>&ldquo;L&rsquo;elemento scorrevole è accessibile da tastiera (Level AAA)&rdquo;.</li>
+</ul>
+<h2 id="wai-aria">WAI-ARIA</h2>
+<p>La WAI fornisce le linee guida conosciute come &ldquo;Accessible Rich Internet Applications&rdquo; (ARIA), che definiscono le informazioni semantiche da inserire nelle etichette degli ipertesti, in particolare nelle pagine HTML e negli elementi SVG, al fine di poter essere accessibili attraverso tecnologie assistive.</p>
+<p>Per informazioni semantiche si intendono quelle che indicano il ruolo di una determinata etichetta, lo stato o le relazioni con le altre etichette. Ad esempio un menu di navigazione può essere strutturato come una lista a due o tre livelli, ed una determinata voce può essere visibile all&rsquo;utente, mentre le altre no. Queste informazioni possono essere molto utili per indirizzare il &ldquo;comportamento&rdquo; delle tecnologie assistive, ma non è possibile fornirle utilizzando il solo codice HTML. Le linee guida vanno proprio a standardizzare queste informazioni e a definire in che modo devono essere inserite nel codice HTML.</p>
+<p>Molte etichette del linguaggio HTML hanno già un informazione semantica, ad esempio l&rsquo;etichetta del titolo <code>h1</code> indica l&rsquo;inizio e la fine del titolo, l&rsquo;etichetta dei collegamenti <code>a</code> indica l&rsquo;inizio e la fine del collegamento, e come queste molte altre. Per inserire un titolo o un collegamento nella pagina non è necessario indicare che il ruolo dell&rsquo;elemento è &ldquo;titolo&rdquo; o &ldquo;collegamento&rdquo;, è la stessa etichetta a sottointendere questo ruolo.</p>
+<p>In molti altri casi, invece, si usano le etichette per creare elementi più complessi, come una sezione per la ricerca (filtri compresi) o una visualizzazione dei contenuti basata su schede (come le schede di navigazione di un browser). In questo caso, dobbiamo associare all&rsquo;etichetta il ruolo, in modo da indicare alle tecnologie assistive il ruolo svolto dall&rsquo;etichetta, quindi associamo il ruolo &ldquo;sezione per la ricerca&rdquo; o il ruolo &ldquo;lista di schede&rdquo;;</p>
+<p>Le linee guida riportano una lunga serie di ruoli che si possono associare alle etichette, tra le tante troviamo &ldquo;menubar&rdquo; (barra dei menu), &ldquo;menu&rdquo;, &ldquo;menuitem&rdquo; (voce del menù), &ldquo;search&rdquo; (una sezione per la ricerca, filtri compresi) , &ldquo;tree&rdquo; (struttura ad albero), &ldquo;treeitem&rdquo; (voce della struttura ad albero), &ldquo;tab&rdquo; (schede), &ldquo;banner&rdquo; e tanti altri.</p>
+<p>Le linee guida inoltre indicano per ogni ruolo un elenco di attributi (o proprietà) che il ruolo possiede. Ad esempio un menù può essere disabilitato, una sezione per la ricerca può essere nascosta, un banner pubblicitario può essere legato ad un popup (finestra a comparsa).</p>
+<p>I ruoli vanno indicati con l&rsquo;attributo HTML <code>role</code> la cui sintassi è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">etichetta</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nome_ruolo&#34;</span>&gt;
+</span></span></code></pre></div><p>Gli attributi (o proprietà) che il ruolo possiede sono indicati con gli attributi HTML che iniziano per <code>aria-PR</code> dove <code>PR</code> è il nome della proprietà da indicare. La sintassi è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">etichetta</span> <span style="color:#a6e22e">aria-PR</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valore&#34;</span>&gt;
+</span></span></code></pre></div><h3 id="esempio-di-applicazione-delle-linee-guida-aria">Esempio di applicazione delle linee guida ARIA</h3>
+<p>Supponendo che lo sviluppatore crei un componente con tre schede (tab) in modo tale che quando si clicca su una viene visualizzato uno dei tre pannelli. Supponiamo che il codice HTML usato per sviluppare tale componente sia il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;active&#34;</span>&gt;Tab 1&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Tab 2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Tab 3&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;panels&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;active-panel&#34;</span>&gt; … &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span>&gt; … &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span>&gt; … &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>Le tecnologie assistive non hanno modo di interpretare il codice HTML e estrapolare che la lista indica delle schede e che i pannelli siano legati alle schede. Per fornire queste informazioni alle tecnologie assistive, è necessario che sia lo sviluppatore a fornirle indicandole opportunamente come di seguito:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tablist&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tab&#34;</span> <span style="color:#a6e22e">aria-selected</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-posinset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;active&#34;</span>&gt;Tab 1&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tab&#34;</span> <span style="color:#a6e22e">aria-selected</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">aria-posinset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;Tab 2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tab&#34;</span> <span style="color:#a6e22e">aria-selected</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">aria-posinset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span>&gt;Tab 3&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;panels&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tabpanel&#34;</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;active-panel&#34;</span>&gt; … &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tabpanel&#34;</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt; … &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tabpanel&#34;</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt; … &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>Come si può notare, la lista è descritta con il ruolo ARIA &ldquo;lista di schede&rdquo; ed ogni elemento della lista è descritto con il ruolo ARIA &ldquo;scheda&rdquo;. Ogni scheda ha gli attributi ARIA che indicano la posizione e se è selezionata o meno. Anche gli articoli sono descritti con il ruolo ARIA &ldquo;pannello della scheda&rdquo; e l&rsquo;attributo ARIA che indica se nascosto o meno. Tutte queste informazioni aggiuntive permettono all&rsquo;utente che fa uso di tecnologie assistive la gestione corretta delle schede realizzate nella pagina web.</p>
+<p>Un altro comportamento su cui porre attenzione è la scelta del componente su cui interagire. In genere l&rsquo;utente clicca su un componente e questo riceve il focus. Quando un componente riceve il focus, da la possibilità all&rsquo;utente di interagirvi. Ad esempio quando si clicca su un campo di input, questo riceve il focus e quindi l&rsquo;utente può inserire un valore.</p>
+<p>Agli utenti che non utilizzano il mouse viene fornita in alternativa la possibilità di selezionare i componenti uno per volta utilizzando l&rsquo;apposito pulsante della tastiera (in genere il tasto &ldquo;TAB&rdquo;).</p>
+<p>Lo sviluppatore può indicare quali componenti vuole che ricevano il focus, aggiungendo nel codice HTML di questi componenti l&rsquo;attributo HTML <code>tabindex=&quot;0&quot;</code>.</p>
+<p>Riprendendo l&rsquo;esempio del componente per la visualizzare in schede, per applicare il focus alle tre schede si può integrare il codice HTML come di seguito:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tablist&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tab&#34;</span> <span style="color:#a6e22e">aria-selected</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">aria-posinset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;active&#34;</span> &gt;Tab 1&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tab&#34;</span> <span style="color:#a6e22e">aria-selected</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">aria-posinset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>&gt;Tab 2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tab&#34;</span> <span style="color:#a6e22e">aria-selected</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">aria-posinset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>&gt;Tab 3&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;panels&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tabpanel&#34;</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;active-panel&#34;</span>&gt; … &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tabpanel&#34;</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt; … &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tabpanel&#34;</span> <span style="color:#a6e22e">aria-hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt; … &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><!-- TODO 
+
+, quindi l utente si deve avvalere della tastiera per navigare e di uno strumento di screen reader che possa leggere ad alta voce gli elementi sui quali naviga.
+
+la percezione di una pagina web per un utente non vedente è completamente diversa dalla percezione che abbiamo noi, dato che gli strumenti di sintesi vocale descrivono gli elementi uno per volta quindi, l utente non ha un quadro di insieme ma ho una lista di elementi sui quali può spostarsi.
+
+-->
+<h3 id="framework-css-e-per-app">Framework CSS e per app</h3>
+<p>I siti web e le app difficilmente utilizzano dei componenti dell&rsquo;interfaccia costruiti da zero, piuttosto si basano sempre più su dei framework che forniscono linee guida, componenti precostruiti e strumenti che permettono il disegno di interfacce grafiche secondo le &ldquo;best practice&rdquo; internazionali.</p>
+<p>Il vantaggio nell&rsquo;usare questi framework consiste appunto nel poter costruire un interfaccia grafica che supporti diversi temi di colore, che si adatti dinamicamente alle caratteristiche del dispositivo utilizzato, sia esso desktop, tablet o telefono cellulare, che fornisca allo sviluppatore una vasta gamma di componenti grafici precostruiti che seguono gli standard e linee guida per l&rsquo;accessibilità, che tengono conto delle preferenze utente, come le indicazione di un maggiore contrasto dei colori o di una minimizzazione delle animazioni e degli effetti di movimento utilizzati dal sito web o dall&rsquo;app o le indicazioni e tanti altri vantaggi ancora;</p>
+<p>Tra i framework più utilizzati riportiamo <a href="https://getbootstrap.com/">Bootstrap</a>, progettato inizialmente da Twitter nel 2011 per la costruzione di pagine web, <a href="https://material.io/">Material Design</a> sviluppato da Google nel 2014 per la costruzione di app per android e per la costruzione di pagine web, <a href="https://developer.apple.com/design/">Human Interface</a> per la costruzione di app per iOS, macOS e tutti gli altri dispositivi Apple.</p>
+<p>Adottare un framework che rispetti i requisiti di accessibilità è sicuramente un buon inizio per far si che il prodotto da realizzare sia accessibile, ma comunque le scelte di progettazione delle interfacce possono portare alla realizzazione di un prodotto non accessibile.</p>
+<p>Dato che i componenti grafici forniti da questi framework sono generici e personalizzabili, è compito del grafico realizzare delle interfacce che rispettino i requisiti di accessibilità ed è compito dello sviluppatore implementare i requisiti di accessibilità per la specifica piattaforma di sviluppo (partendo dalle interfacce realizzate dal grafico).</p>
+<h2 id="strumenti-di-validazione-dellaccessibilità">Strumenti di validazione dell&rsquo;accessibilità</h2>
+<p>Una volta realizzato il sito web, è necessario effettuare dei test di accessibilità. Gli strumenti automatici possono verificare solo alcune caratteristiche del codice HTML, ma non sono in grado di valutare le scelte grafiche, per cui si consiglia sempre di integrare questi strumenti con dei test effettuati attraverso le tecnologie assistive, in particolare usando screen reader e tastiera.</p>
+<p>Tra gli strumenti più utilizzati, troviamo:</p>
+<ul>
+<li><a href="https://github.com/GoogleChrome/lighthouse">Lighthouse</a></li>
+<li><a href="https://www.deque.com/axe/">Axe (Deque Systems Inc.)</a></li>
+<li><a href="https://wave.webaim.org/">Wave (Utah State University)</a></li>
+</ul>
+<p>Tutti questi strumenti sono capaci di rilevare una buona parte di attributi mancanti nel codice HTML.</p>
+<p>Wave dev tool è un estensione che si può installare nel browser e permette di visualizzare tutti i problemi di accessibilità della pagina web. Una volta installato ed eseguito, riporta un riepilogo di tutti i problemi riscontrati.</p>
+<p>Di seguito riportiamo un esempio reali di analisi dell&rsquo;accessibilità della home page del sito &ldquo;ilfattoquotidiano.it&rdquo;. Nella sezione di sinistra si può visualizzare il riepilogo degli errori riscontrati.</p>
+<p><img src="/static/coding/web/html/accessibility-wave-summary.png" alt="Wave - Riepilogo" title="Il riepilogo riporta gli errori, gli elementi con un contrasto non sufficiente, la struttura della pagina vista attraverso le tecnologie assistive ed i problemi specifici rispetto a WAI-ARIA"></p>
+<p>Nella sezione di dettaglio si ha un elenco degli errori di accessibilità.</p>
+<p><img src="/static/coding/web/html/accessibility-wave-error-details.png" alt="Wave - Sezione degli errori" title="Tra gli errori notiamo quelli di testo alternativo alle immagini mancante, quelli di collegamenti senza URL, errori di contrasto, ecc...">.</p>
+<p>Nella sezione relativa alla struttura, si può visualizzare la struttura della pagina vista da uno screen reader, e cioè come una lista di elementi a cui accedere uno per volta.</p>
+<p><img src="/static/coding/web/html/accessibility-wave-structure.png" alt="Wave - Sezione struttura" title="La struttura è fatta dalle varie sezioni del linguaggio HTML (etichette di navigazione, sezione, articoli) e ovviamente dai titoli dal primo all'ultimo livello">.</p>
+<p>Nella sezione relativa al contrasto, troviamo gli elementi con contrasto non sufficiente.</p>
+<p><img src="/static/coding/web/html/accessibility-wave-contrast.png" alt="Wave - Sezione contrasto" title="Gli elementi con un contrasto non sufficiente sono riportati indicando il colore di primo piano, il colore di sfondo e la proporzione di contrasto">.</p>
+<p>Lighthouse non è uno strumento specifico per l&rsquo;accessibilità, però fornisce anche questa funzionalità e permette di valutare gli errori più elementari.</p>
+<p><img src="/static/coding/web/html/accessibility-lighthouse-report.png" alt="Lighthouse - Report" title="Lighthouse fornisce un indice di valutazione dell'accessibilità del sito, seguito da un riepilogo degli errori riscontrati">.</p>
+
+    </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="https://www.w3.org/WAI/tutorials/" style="font-weight: 700; color: #e22d30;">Web Accessibility Initiative (WAI)</a>: Gruppi di lavoro del W3C che si occupano di stilare linee guida, relazioni tecniche e documentazione riguardante la realizzazione di creazioni digitali che siano accessibili</p><p><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" style="font-weight: 700; color: #e22d30;">Web Content Accessibility Guidelines (WCAG)</a>: Linee guida per la realizzazione di contenuti e siti web più accessibili</p><p><a href="https://www.w3.org/TR/wai-aria-1.1/" style="font-weight: 700; color: #e22d30;">Accessible Rich Internet Applications (WAI-ARIA)</a>: Uno standard che definisce le informazioni semantiche da inserire nelle etichette degli ipertesti al fine di poter essere accessibili attraverso tecnologie assistive</p>
+  </article>
+</main>
+
+
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/codificaunicode/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">HTML Lez. 07 - Codifica UTF-8, HTML entities ed emoji</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2022 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

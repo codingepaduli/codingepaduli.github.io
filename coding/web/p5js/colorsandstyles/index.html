@@ -260,7 +260,7 @@
 <p>Il modello <strong>RGB</strong> è un modello di colori <strong>additivo</strong>, esprime i colori come somma di colori &ldquo;primari&rdquo;, che in questo modello sono il Rosso, il Verde ed il Blu.</p>
 <p>E&rsquo; un modello additivo perché quando questi tre colori primari sono miscelati insieme, (cioè se l&rsquo;intero spettro visibile arriva all&rsquo;occhio umano), il colore percepito è il bianco. Se nessuna parte dello spettro visibile arriva all&rsquo;occhio umano, c&rsquo;è il &ldquo;buio&rdquo; che è percepito come colore nero.</p>
 <p>Ogni altro colore è definito come una somma delle quantità dei tre colori elencati.</p>
-<p><img src="https://p5js.org/assets/learn/color/rgb.jpg" alt="p5.js - Modello di colori RGB" title="p5.js - Modello di colori RGB"></p>
+<p><img src="/static/coding/web/p5js/colors_and_styles_rgb.png" alt="p5.js - Modello di colori RGB" title="p5.js - Modello di colori RGB"></p>
 <p>Su questo modello di colori è basato un modello computerizzato, chiamato appunto modello RGB. In questo modello computerizzato, la quantità applicabile per ogni colore primario va da 0 (zero) a 255, quindi un colore lo si può esprimere come una terna di quantità (<strong>r</strong>, <strong>g</strong>, <strong>b</strong>), in cui <strong>r</strong> è la quantità di rosso, <strong>g</strong> è la quantità di verde e <strong>b</strong> è la quantità di blu.</p>
 <p>Come ci si può aspettare, in questo modello:</p>
 <ul>
@@ -280,17 +280,17 @@
 <p>Il colore ciano è il colore complementare al rosso, ovvero il colore che si ottiene sottraendo il colore rosso dalla luce bianca.</p>
 <p>Il colore magenta è il colore complementare al verde, ovvero il colore che si ottiene sottraendo il colore verde dalla luce bianca.</p>
 <p>Il colore giallo è il colore complementare al viola, ovvero il colore che si ottiene sottraendo il colore viola dalla luce bianca.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/CMYK_subtractive_color_mixing.svg/300px-CMYK_subtractive_color_mixing.svg.png" alt="p5.js - Modello di colori CMYK" title="p5.js - Modello di colori CMYK"></p>
+<p><img src="/static/coding/web/p5js/colors_and_styles_cymk.png" alt="p5.js - Modello di colori CMYK" title="p5.js - Modello di colori CMYK"></p>
 <p>Dato che miscelando ciano, magenta e giallo si ottiene un colore molto scuro (il modello è sottrattivo), ma non un vero e proprio nero, in questo modello si è aggiunto il colore nero per completare lo spettro di colori visibili.</p>
 <p>Anche per questo modello, il problema principale consiste nel fatto che non è intuitivo indicare le quantità dei colori primari necessari per ottenere un qualsiasi altro colore, come il viola, il marrone o il celeste.</p>
 <p>In p5.js non esiste un modello computerizzato che ci permette di usare il modello di colori <strong>CMYK</strong>.</p>
 <h2 id="modello-di-colori-hsb">Modello di colori HSB</h2>
 <p>Il modello Hue-Saturation-Brightness è un modello computerizzato, non basato su concetti fisici ma su trasformazioni matematiche, ed è utilizzato al fine di rendere più intuitivo la definizione di un colore. In questo modello, ogni colore è definito nel seguente spazio curvo:</p>
-<p><img src="https://p5js.org/assets/learn/color/hsb.png" alt="p5.js - Modello di colori HSB" title="p5.js - Modello di colori HSB"></p>
+<p><img src="/static/coding/web/p5js/colors_and_styles_hsb.png" alt="p5.js - Modello di colori HSB" title="p5.js - Modello di colori HSB"></p>
 <p>L&rsquo;angolo definisce la tonalità del colore, detta anche tinta. Quindi troviamo la tonalità rossa a 0 gradi, la tonalità verde a 120 gradi e la tonalità blu a 240 gradi, e nel mezzo tutte le altre sfumature di tonalità di colori.</p>
 <p>La saturazione indica quanto forte o, al contrario, pallida si vuole la tonalità di colore. Saturazioni forti rendono la tonalità di colore molto accesa, saturazioni deboli la rendono vicina ad un colore bianco.</p>
 <p>La brillantezza indica quanto luminosa si vuole la tonalità di colore.</p>
-<p>Ogni colore è, quindi, definito come una combinazione delle tre componenti elencate. Il valore applicabile per ogni componente va da 0 (zero) a 255, quindi un colore lo si può esprimere come una terna di quantità (<strong>h</strong>, <strong>s</strong>, <strong>b</strong>), in cui <strong>h</strong> è il valore che esprime la tonalità, <strong>s</strong> è il valore che indica la saturazione e <strong>b</strong> è il valore che definisce la brillantezza.</p>
+<p>Ogni colore è, quindi, definito come una combinazione delle tre componenti elencate. Il valore applicabile per la tonalità va da 0 (zero) a 360, mentre per saturazione e brillantezza vanno da da 0 (zero) a 100, quindi un colore lo si può esprimere come una terna di quantità (<strong>h</strong>, <strong>s</strong>, <strong>b</strong>), in cui <strong>h</strong> è il valore che esprime la tonalità, <strong>s</strong> è il valore che indica la saturazione e <strong>b</strong> è il valore che definisce la brillantezza.</p>
 <p>Come ci si può aspettare, una volta scelta la tonalità, ad esempio il rosso, è facile ottenere un rosso forte e carico impostando valori alti di saturazione e brillantezza; viceversa, è altrettanto intuitivo ottenere un colore rosa scuro (che è un rosso pallido) impostando valori bassi di saturazione e brillantezza.</p>
 <h2 id="impostare-il-modello-di-colori">Impostare il modello di colori</h2>
 <p>Solo i modelli <code>RGB</code> ed <code>HSB</code> sono implementati dalla libreria p5.js.</p>

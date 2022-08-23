@@ -8,6 +8,24 @@
     <language>it-IT</language>
     <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>HTML Lez. 8 - Accessibilità</title>
+      <link>http://codingepaduli.github.io/coding/web/html/accessibilita/</link>
+      <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/accessibilita/</guid>
+      <description>HTML Lez. 8 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&amp;rsquo;uso di tecnologie assistive</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
+    
+    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
@@ -23,15 +41,6 @@
       
       <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
       <description>Set di link relativi alle app su F-Droid</description>
-    </item>
-    
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
     </item>
     
     <item>

@@ -3,30 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/interesting/educational/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/categories/coding/</loc>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/html/</loc>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/html/accessibilita/</loc>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/web/</loc>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/interesting/</loc>
+    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
+    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/educational/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/fdroidapp/</loc>
     <lastmod>2022-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
-    <lastmod>2022-06-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/coding/</loc>
-    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
     <lastmod>2022-05-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</loc>
-    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/web/</loc>
     <lastmod>2022-05-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</loc>
@@ -241,9 +247,6 @@
   </url><url>
     <loc>http://codingepaduli.github.io/coding/tools/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/html/</loc>
-    <lastmod>2019-08-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/html/codificaunicode/</loc>
     <lastmod>2019-08-05T00:00:00+00:00</lastmod>
