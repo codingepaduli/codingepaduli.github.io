@@ -6,7 +6,7 @@
     <description>Recent content in coding on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 17 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML Lez. 8 - Accessibilità</title>
       <link>http://codingepaduli.github.io/coding/web/html/accessibilita/</link>
@@ -14,6 +14,105 @@
       
       <guid>http://codingepaduli.github.io/coding/web/html/accessibilita/</guid>
       <description>HTML Lez. 8 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&amp;rsquo;uso di tecnologie assistive</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 07 - Codifica UTF-8, HTML entities ed emoji</title>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode/</guid>
+      <description>HTML Lez. 07 - Codifica UTF-8 delle pagine web, HTML entities ed emoji</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 06 - Validazione del codice HTML</title>
+      <link>http://codingepaduli.github.io/coding/web/html/validazione/</link>
+      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/validazione/</guid>
+      <description>HTML Lez. 06 - Validazione del codice HTML</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 05 - Metadati</title>
+      <link>http://codingepaduli.github.io/coding/web/html/metadati/</link>
+      <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/metadati/</guid>
+      <description>HTML Lez. 05 - Metadati: Informazioni relative ad una pagina web</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 04 - Etichette con attributi</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tagattributes/</link>
+      <pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tagattributes/</guid>
+      <description>HTML Lez. 04 - Etichette che richiedono l&amp;rsquo;uso di attributi</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 03 - Etichette per la formattazione del testo</title>
+      <link>http://codingepaduli.github.io/coding/web/html/tagtesto/</link>
+      <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/tagtesto/</guid>
+      <description>HTML Lez. 03 - Etichette per la formattazione del testo</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 02 - Etichette (tag)</title>
+      <link>http://codingepaduli.github.io/coding/web/html/etichette/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/etichette/</guid>
+      <description>HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 01 - Introduzione</title>
+      <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
+      <description>HTML Lez. 01 - Introduzione al linguaggio HTML</description>
+    </item>
+    
+    <item>
+      <title>Esercizi di AI - 01 Riconoscimento mano</title>
+      <link>http://codingepaduli.github.io/coding/web/mediapipe/handsmodel_exe/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/mediapipe/handsmodel_exe/</guid>
+      <description>Esercizi di AI - 01 Riconoscimento mano</description>
+    </item>
+    
+    <item>
+      <title>Esercizi di AI - 03 Riconoscimento posa</title>
+      <link>http://codingepaduli.github.io/coding/web/mediapipe/posemodel_exe/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/mediapipe/posemodel_exe/</guid>
+      <description>Esercizi di AI - 03 Riconoscimento posa</description>
+    </item>
+    
+    <item>
+      <title>Lezioni su mediapipe</title>
+      <link>http://codingepaduli.github.io/coding/web/mediapipe/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/mediapipe/</guid>
+      <description>Lezioni su mediapipe per il riconoscimento della posa e della mano</description>
+    </item>
+    
+    <item>
+      <title>mediapipe</title>
+      <link>http://codingepaduli.github.io/coding/web/linkmediapipe/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/linkmediapipe/</guid>
+      <description>Lezioni su mediapipe nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/mediapipe&#39;&gt;mediapipe&lt;/a&gt;</description>
     </item>
     
     <item>
@@ -485,42 +584,6 @@
     </item>
     
     <item>
-      <title>HTML Lez. 07 - Codifica UTF-8, HTML entities ed emoji</title>
-      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode/</link>
-      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode/</guid>
-      <description>HTML Lez. 07 - Codifica UTF-8 delle pagine web, HTML entities ed emoji</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 06 - Validazione del codice HTML</title>
-      <link>http://codingepaduli.github.io/coding/web/html/validazione/</link>
-      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/validazione/</guid>
-      <description>HTML Lez. 06 - Validazione del codice HTML</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 05 - Metadati</title>
-      <link>http://codingepaduli.github.io/coding/web/html/metadati/</link>
-      <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/metadati/</guid>
-      <description>HTML Lez. 05 - Metadati: Informazioni relative ad una pagina web</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 04 - Etichette con attributi</title>
-      <link>http://codingepaduli.github.io/coding/web/html/tagattributes/</link>
-      <pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/tagattributes/</guid>
-      <description>HTML Lez. 04 - Etichette che richiedono l&amp;rsquo;uso di attributi</description>
-    </item>
-    
-    <item>
       <title>Coding e tools</title>
       <link>http://codingepaduli.github.io/coding/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
@@ -536,33 +599,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/</guid>
       <description>Lezioni di programmazione sulle diverse Tecnologie Web</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 03 - Etichette per la formattazione del testo</title>
-      <link>http://codingepaduli.github.io/coding/web/html/tagtesto/</link>
-      <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/tagtesto/</guid>
-      <description>HTML Lez. 03 - Etichette per la formattazione del testo</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 02 - Etichette (tag)</title>
-      <link>http://codingepaduli.github.io/coding/web/html/etichette/</link>
-      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/etichette/</guid>
-      <description>HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 01 - Introduzione</title>
-      <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
-      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
-      <description>HTML Lez. 01 - Introduzione al linguaggio HTML</description>
     </item>
     
     <item>

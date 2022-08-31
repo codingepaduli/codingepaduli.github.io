@@ -53,15 +53,6 @@
     </item>
     
     <item>
-      <title>Tecnologie Web</title>
-      <link>http://codingepaduli.github.io/coding/web/</link>
-      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/</guid>
-      <description>Lezioni di programmazione sulle diverse Tecnologie Web</description>
-    </item>
-    
-    <item>
       <title>HTML Lez. 03 - Etichette per la formattazione del testo</title>
       <link>http://codingepaduli.github.io/coding/web/html/tagtesto/</link>
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
@@ -86,6 +77,15 @@
       
       <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
       <description>HTML Lez. 01 - Introduzione al linguaggio HTML</description>
+    </item>
+    
+    <item>
+      <title>Tecnologie Web</title>
+      <link>http://codingepaduli.github.io/coding/web/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/</guid>
+      <description>Lezioni di programmazione sulle diverse Tecnologie Web</description>
     </item>
     
     <item>
