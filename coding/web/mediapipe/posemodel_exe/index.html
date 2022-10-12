@@ -226,19 +226,19 @@
 <div class="content post__content clearfix">
       <h1 id="riconoscimeto-posa">Riconoscimeto posa</h1>
 <h2 id="doesnt-work-on-firefox-why">(doesn&rsquo;t work on Firefox, why?)</h2>
-<p><img src="https://google.github.io/mediapipe/images/mobile/pose_tracking_full_body_landmarks.png" alt="Pose landmarks (punti di riferimento della posa)"></p>
+<p><img src="https://mediapipe.dev/images/mobile/pose_tracking_full_body_landmarks.png" alt="Pose landmarks (punti di riferimento della posa)"></p>
 <div class="container">
     <div id="handsModel"></div>
     <video class="input_video"></video>
 </div>
-  <script>
-      
+<script>
+
     let canvas = null;
     let videoElement;
     let camera;
     let pose;
     let results;
-    
+
     function onResults(risultati) {
         results = risultati;
         console.info("risultati letti");
@@ -246,7 +246,7 @@
 
     function setup() {
         console.info("setup canvas");
-        
+
         let canvasNode = document.querySelector('#handsModel');
         let cw = canvasNode.parentNode.clientWidth;
         canvas = createCanvas(640, 480).parent('handsModel');
@@ -277,7 +277,7 @@
             width: 1280,
             height: 720
         });
-        
+
         camera.start();
         console.info("end setup")
     }
@@ -289,11 +289,10 @@
             //image(results.image, 0, 0);
         }
 
-        
         fill("white");
         strokeWeight(1);
         let poseData = [];
-        if (results === undefined || results.poseLandmarks === undefined || 
+        if (results === undefined || results.poseLandmarks === undefined ||
                 results.poseLandmarks.length === undefined || results.poseLandmarks.length == 0) {
             background("black");
             text("VUOTO", 30, 30);
@@ -303,20 +302,19 @@
             background("green");
             text("PIENO", 30, 30);
         }
-        
+
         if (poseData !== undefined) {
             console.info(poseData[0].x * 640 + " - " + poseData[0].y * 480, 60, 60);
-            
+
             strokeWeight(5);
             stroke("white");
             for (let i=0; i<poseData.length; i++) {
                 point(poseData[i].x * 640, poseData[i].y * 480);
             }
         }
-        
+
     }
-  </script><blockquote>
-</blockquote>
+</script>
 
     </div>
   </article>
@@ -329,10 +327,16 @@
 
 
 <nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/mediapipe/posemodelskeletonized_exe/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">Esercizi di AI - 04 Scheletrizzazione della posa</p>
+		</a>
+	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/mediapipe/handsmodel_exe/" rel="next">
+		<a class="pager__link" href="/coding/web/mediapipe/handsmodelskeletonized_exe/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">Esercizi di AI - 01 Riconoscimento mano</p>
+			<p class="pager__title">Esercizi di AI - 02 Scheletrizzazione mano</p>
 		</a>
 	</div>
 </nav>

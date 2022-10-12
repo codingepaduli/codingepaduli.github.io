@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Esercizi di AI - 04 Scheletrizzazione della posa - Coding e Paduli</title>
+
+    <meta name="description" content="Esercizi di AI - 04 Scheletrizzazione della posa">
+        <meta property="og:title" content="Esercizi di AI - 04 Scheletrizzazione della posa" />
+<meta property="og:description" content="Esercizi di AI - 04 Scheletrizzazione della posa" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/mediapipe/posemodelskeletonized_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2022-08-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-30T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="Esercizi di AI - 04 Scheletrizzazione della posa"/>
+<meta name="twitter:description" content="Esercizi di AI - 04 Scheletrizzazione della posa"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding e tools</a></li>
+
+      <li><a href="/interesting/">Interessanti</a></li>
+
+      <li><a href="/opensource/">Open Source</a></li>
+
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-08-30T00:00:00Z">30-08-2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/mediapipe/" rel="category">mediapipe</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="scheletrizzazione-della-posa">Scheletrizzazione della posa</h1>
+<h2 id="doesnt-work-on-firefox-why">(doesn&rsquo;t work on Firefox, why?)</h2>
+<p><img src="https://mediapipe.dev/images/mobile/pose_tracking_full_body_landmarks.png" alt="Pose landmarks (punti di riferimento della posa)"></p>
+<div class="container">
+    <div id="handsModel"></div>
+    <video class="input_video"></video>
+</div>
+<script>
+
+    let canvas = null;
+    let videoElement;
+    let camera;
+    let pose;
+    let results;
+
+    function onResults(risultati) {
+        results = risultati;
+        console.info("risultati letti");
+    }
+
+    let headImg;
+    let bodyImg;
+    let rightHandImg;
+    let leftHandImg;
+    function preload() {
+        headImg = loadImage('/static/coding/web/mediapipe/Head.png');
+        bodyImg = loadImage('/static/coding/web/mediapipe/Body.png');
+        rightHandImg = loadImage('/static/coding/web/mediapipe/rightHand.png');
+        leftHandImg = loadImage('/static/coding/web/mediapipe/leftHand.png');
+        console.info("immagini precaricate");
+    }
+
+    function setup() {
+        console.info("setup canvas");
+
+        let canvasNode = document.querySelector('#handsModel');
+        let cw = canvasNode.parentNode.clientWidth;
+        canvas = createCanvas(640, 480).parent('handsModel');
+        canvas.class('output_canvas');
+        background("black");
+
+        console.info("setup hands model");
+        const videoElement = document.getElementsByClassName('input_video')[0];
+
+        const pose = new Pose({locateFile: (file) => {
+            return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
+        }});
+        pose.setOptions({
+            modelComplexity: 1,
+            smoothLandmarks: true,
+            enableSegmentation: false,
+            smoothSegmentation: true,
+            minDetectionConfidence: 0.5,
+            minTrackingConfidence: 0.5
+        });
+        pose.onResults(onResults);
+
+        console.info("setup camera")
+        const camera = new Camera(videoElement, {
+            onFrame: async () => {
+                await pose.send({image: videoElement});
+            },
+            width: 1280,
+            height: 720
+        });
+
+        camera.start();
+        console.info("end setup")
+    }
+
+    function draw() {
+
+        if (results !== undefined && results.image !== undefined) {
+            //console.dir(results.image);
+            //image(results.image, 0, 0);
+        }
+
+        fill("white");
+        strokeWeight(1);
+        let poseData = [];
+        if (results === undefined || results.poseLandmarks === undefined ||
+                results.poseLandmarks.length === undefined || results.poseLandmarks.length == 0) {
+            background("black");
+            text("VUOTO", 30, 30);
+            poseData = undefined;
+        } else {
+            poseData = results.poseLandmarks;
+            background("green");
+            text("PIENO", 30, 30);
+        }
+
+        if (poseData !== undefined) {
+            console.info(poseData[0].x * 640 + " - " + poseData[0].y * 480, 60, 60);
+
+            strokeWeight(5);
+            stroke("white");
+            for (let i=0; i<poseData.length; i++) {
+                point(poseData[i].x * 640, poseData[i].y * 480);
+            }
+
+            // draw the head
+            headTopLeftX = poseData[8].x * 640;
+            headTopLeftY = poseData[6].y * 480;
+            headWidth = poseData[7].x * 640 - poseData[8].x * 640;
+            headHeight = poseData[10].y * 480 - poseData[6].y * 480;
+            image(headImg, headTopLeftX - headWidth/2, headTopLeftY - headHeight, headWidth*2, headHeight*3);
+
+            // draw the body
+            bodyTopLeftX = poseData[12].x * 640;
+            bodyTopLeftY = poseData[12].y * 480;
+            bodyWidth = poseData[11].x * 640 - poseData[12].x * 640;
+            bodyHeight = poseData[24].y * 480 - poseData[12].y * 480;
+            image(bodyImg, bodyTopLeftX, bodyTopLeftY, bodyWidth, bodyHeight);
+
+            // draw the right hand
+            rightHandTopLeftX = poseData[20].x * 640;
+            rightHandTopLeftY = poseData[20].y * 480;
+            rightHandWidth = poseData[20].x * 640 - poseData[18].x * 640;
+            rightHandHeight = poseData[16].y * 480 - poseData[20].y * 480;
+            image(rightHandImg, rightHandTopLeftX, rightHandTopLeftY, 4*rightHandWidth, 2*rightHandHeight);
+
+            // draw the left hand
+            leftHandTopLeftX = poseData[19].x * 640;
+            leftHandTopLeftY = poseData[19].y * 480;
+            leftHandWidth = poseData[17].x * 640 - poseData[19].x * 640;
+            leftHandHeight = poseData[15].y * 480 - poseData[19].y * 480;
+            image(leftHandImg, leftHandTopLeftX, leftHandTopLeftY, 4*leftHandWidth, 2*leftHandHeight);
+        }
+
+    }
+</script>
+
+    </div>
+  </article>
+</main>
+
+
+
+<script src="/static/js/p5-1.2.0-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d/control_utils_3d.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/mediapipe/posemodel_exe/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">Esercizi di AI - 03 Riconoscimento posa</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2022 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

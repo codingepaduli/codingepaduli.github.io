@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>p5.js Lez. 02.1 - Esercizi di grafica 2D - Coding e Paduli</title>
+
+    <meta name="description" content="Esercizi di grafica 2D">
+        <meta property="og:title" content="p5.js Lez. 02.1 - Esercizi di grafica 2D" />
+<meta property="og:description" content="Esercizi di grafica 2D" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2020-09-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-12T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="p5.js Lez. 02.1 - Esercizi di grafica 2D"/>
+<meta name="twitter:description" content="Esercizi di grafica 2D"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding e tools</a></li>
+
+      <li><a href="/interesting/">Interessanti</a></li>
+
+      <li><a href="/opensource/">Open Source</a></li>
+
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-12T00:00:00Z">12-09-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="esercizi-di-grafica-2d">Esercizi di grafica 2D</h1>
+<h2 id="questionario">Questionario</h2>
+<p>La funzione <code>createCanvas(a, b)</code> serve a creare:</p>
+<ol>
+<li>l&rsquo;area da disegno di larghezza ed altezza indicate rispettivamente dai parametri <code>a</code> e <code>b</code>;</li>
+<li>l&rsquo;area da disegno di altezza e larghezza indicate rispettivamente dai parametri <code>a</code> e <code>b</code>;</li>
+<li>una pagina web di altezza e larghezza indicate rispettivamente dai parametri <code>a</code> e <code>b</code>;</li>
+<li>un sistema di coordinate di altezza e larghezza indicate rispettivamente dai parametri <code>a</code> e <code>b</code>;</li>
+</ol>
+<p>La funzione <code>line</code> serve a disegnare una linea nell&rsquo;area da disegno. Questa funzione prevede:</p>
+<ol>
+<li>un solo parametro;</li>
+<li>due parametri;</li>
+<li>tre parametri;</li>
+<li>quattro parametri;</li>
+</ol>
+<p>La funzione <code>circle</code> serve a disegnare un cerchio nell&rsquo;area da disegno. Questa funzione prevede:</p>
+<ol>
+<li>un solo parametro indicante il diametro del cerchio;</li>
+<li>due parametri indicanti larghezza ed altezza del cerchio;</li>
+<li>tre parametri indicanti il punto in cui disegnare il cerchio ed il raggio del cerchio;</li>
+<li>quattro parametri indicanti il punto in cui disegnare il cerchio, il raggio ed il diametro del cerchio;</li>
+</ol>
+<p>La funzione <code>rect</code> serve a disegnare un rettangolo nell&rsquo;area da disegno. Questa funzione prevede:</p>
+<ol>
+<li>un solo parametro indicante il punto in cui disegnare il rettangolo;</li>
+<li>due parametri indicanti larghezza ed altezza del rettangolo;</li>
+<li>tre parametri indicanti il punto in cui disegnare il rettangolo e la dimensione del rettangolo;</li>
+<li>quattro parametri indicanti il punto in cui disegnare il rettangolo, larghezza ed altezza del rettangolo;</li>
+</ol>
+<p>La funzione <code>triangle</code> serve a disegnare un triangolo nell&rsquo;area da disegno. Questa funzione prevede:</p>
+<ol>
+<li>tre parametri indicanti i punti in cui disegnare i vertici del rettangolo;</li>
+<li>quattro parametri indicanti il punto in cui disegnare il rettangolo, la base e l&rsquo;altezza del rettangolo;</li>
+<li>cinque parametri indicanti i punti in cui disegnare i vertici del rettangolo, la base e l&rsquo;altezza del rettangolo;</li>
+<li>sei parametri indicanti i punti in cui disegnare i vertici del rettangolo;</li>
+</ol>
+<h2 id="calcolo-delle-coordinate">Calcolo delle coordinate</h2>
+<p>Dati i punti indicati nella figura in calce ed un&rsquo;area da disegno delle dimensioni di 1000 punti per 1000 punti, calcolare le coordinate dei punti A, B, C, &hellip;, P, Q ed R indicati nella figura. Indicare i punti di partenza e di arrivo delle linee indicate nella figura in calce.</p>
+<p><img src="/static/coding/web/p5js/graphics-primitives_exe_tris.png" alt="p5.js - Calcolo delle coordinate del tris" title="p5.js - Calcolo delle coordinate del tris "></p>
+<h2 id="disegno-di-un-campo-di-calcio">Disegno di un campo di calcio</h2>
+<p>Utilizzando le funzioni grafiche conosciute, disegnare un campo di calcio grande quanto tutta l&rsquo;area da disegno e con margine dai bordi di 20 punti;</p>
+<p><img src="/static/coding/web/p5js/graphics-primitives_exe_soccer.png" alt="p5.js - Esercizio di disegno di un campo di calcio" title="p5.js - Disegno di un campo di calcio "></p>
+<h2 id="disegno-della-rosa-dei-venti">Disegno della rosa dei venti</h2>
+<p>Utilizzando le funzioni grafiche conosciute e, le variabili <code>width</code> ed <code>height</code> messe a disposizione dalla libreria p5.js, disegnare la rosa dei venti, composta da:</p>
+<ul>
+<li>Un quadrato con una distanza di 40 punti da tutti i bordi dell&rsquo;area da disegno;</li>
+<li>Un cerchio inscritto nel quadrato.</li>
+<li>Le due diagonali del quadrato;</li>
+<li>Il disegno del diametro del cerchio sia in orizzontale che in verticale.</li>
+</ul>
+<p><img src="/static/coding/web/p5js/graphics-primitives_exe_rosa_venti.png" alt="p5.js - Esercizio di disegno della rosa dei venti" title="p5.js - Disegno della rosa dei venti"></p>
+<h2 id="esercizi-sugli-angoli">Esercizi sugli angoli</h2>
+<p>Data una circonferenza di diametro a scelta dello studente, utilizzando la funzione <code>arc</code>, disegnare gli archi di circonferenza aventi le seguenti ampiezze: 30, 45, 60, 90, 180, 270 e 360 gradi. Sotto ogni arco, aggiungere un testo indicante l&rsquo;ampiezza dell&rsquo;arco.
+Dato che la funzione <code>arc</code> disegna gli archi misurando gli angoli in senso orario, disegnare gli archi di circonferenza della stessa ampiezza indicata in precedenza, simulando però che gli archi siano disegnati misurando gli angoli in senso antiorario. Anche per questo punto, sotto ogni arco deve essere aggiunto un testo indicante l&rsquo;ampiezza dell&rsquo;arco.</p>
+<p><img src="/static/coding/web/p5js/graphics-primitives_exe_angoli.png" alt="p5.js - Esercizio sugli angoli" title="p5.js - Esercizio sugli angoli"></p>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/p5js/graphicsprimitives/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">p5.js Lez. 02 - Primitive grafiche</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/p5js/colorsandstyles/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">p5.js Lez. 03 - Colori e stili</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2022 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

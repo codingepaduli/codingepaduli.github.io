@@ -17,12 +17,30 @@
     </item>
     
     <item>
+      <title>Esercizi di AI - 02 Scheletrizzazione mano</title>
+      <link>http://codingepaduli.github.io/coding/web/mediapipe/handsmodelskeletonized_exe/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/mediapipe/handsmodelskeletonized_exe/</guid>
+      <description>Esercizi di A2 - 01 Scheletrizzazione mano</description>
+    </item>
+    
+    <item>
       <title>Esercizi di AI - 03 Riconoscimento posa</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/posemodel_exe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/posemodel_exe/</guid>
       <description>Esercizi di AI - 03 Riconoscimento posa</description>
+    </item>
+    
+    <item>
+      <title>Esercizi di AI - 04 Scheletrizzazione della posa</title>
+      <link>http://codingepaduli.github.io/coding/web/mediapipe/posemodelskeletonized_exe/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/mediapipe/posemodelskeletonized_exe/</guid>
+      <description>Esercizi di AI - 04 Scheletrizzazione della posa</description>
     </item>
     
   </channel>

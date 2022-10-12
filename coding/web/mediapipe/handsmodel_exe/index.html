@@ -230,19 +230,18 @@
   <a href="https://github.com/google/mediapipe/issues/2704">https://github.com/google/mediapipe/issues/2704</a>  
   devo sperare in un aggiornamento delle librerie 
 -->
-<p><img src="https://google.github.io/mediapipe/images/mobile/hand_landmarks.png" alt="Hands landmarks (punti di riferimento della mano)"></p>
+<p><img src="https://mediapipe.dev/images/mobile/hand_landmarks.png" alt="Hands landmarks (punti di riferimento della mano)"></p>
 <div class="container">
     <div id="handsModel"></div>
     <video class="input_video"></video>
 </div>
 <script>
-      
     let canvas = null;
     let videoElement;
     let camera;
     let hands;
     let results;
-    
+
     function onResults(risultati) {
         results = risultati;
         console.info("risultati letti");
@@ -250,7 +249,7 @@
 
     function setup() {
         console.info("setup canvas");
-        
+
         let canvasNode = document.querySelector('#handsModel');
         let cw = canvasNode.parentNode.clientWidth;
         canvas = createCanvas(640, 480).parent('handsModel');
@@ -279,7 +278,7 @@
             width: 1280,
             height: 720
         });
-        
+
         camera.start();
         console.info("end setup")
     }
@@ -302,12 +301,12 @@
         } else {
             mano0 = results.multiHandLandmarks[0];
             background("green");
-            text("PIENO", 30, 30);           
+            text("PIENO", 30, 30);
         }
 
         if (mano0 !== undefined && mano0[0] !== undefined ) {
             console.info(mano0[0].x * 640 + " - " + mano0[0].y * 480, 60, 60);
-            
+
             strokeWeight(5);
             stroke("white");
             for (let i=0; i<mano0.length; i++) {
@@ -315,8 +314,7 @@
             }
         }
     }
-</script><blockquote>
-</blockquote>
+</script>
 
     </div>
   </article>
@@ -330,9 +328,9 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/mediapipe/posemodel_exe/" rel="prev">
+		<a class="pager__link" href="/coding/web/mediapipe/handsmodelskeletonized_exe/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">Esercizi di AI - 03 Riconoscimento posa</p>
+			<p class="pager__title">Esercizi di AI - 02 Scheletrizzazione mano</p>
 		</a>
 	</div>
 </nav>

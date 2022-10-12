@@ -231,7 +231,7 @@
 <p>Il sistema di coordinate <strong>cartesiane</strong>, tipicamente usato da librerie di grafica computerizzata 2D, è caratterizzato dagli assi X ed Y che si intersecano nell&rsquo;angolo in alto a sinistra dell&rsquo;area da disegno. In tale estremità si trova, quindi, l&rsquo;origine degli assi, rappresentata dal punto di coordinate (0,0).</p>
 <p>La particolarità di questo sistema di coordinate è l&rsquo;asse Y invertito, cioè i valori positivi sono in basso ed i negativi in alto. Solo i punti che hanno entrambe le coordinate (x, y) con valore positivo saranno disegnati nell&rsquo;area da disegno.</p>
 <p>Di seguito si mostrano le differenze tra il classico sistema cartesiano e la variante utilizzata in p5.js:</p>
-<p><img src="/static/coding/web/p5js/basics_axes-in-math-and-p5js.png" alt="p5.js - Differenza tra i due sistemi di coordinate" title="p5.js - Differenza tra i due sistemi di coordinate"></p>
+<p><img src="/static/coding/web/p5js/intro-axes-in-math-and-p5js.png" alt="p5.js - Differenza tra i due sistemi di coordinate" title="p5.js - Differenza tra i due sistemi di coordinate"></p>
 <h3 id="misurazione-angoli">Misurazione angoli</h3>
 <p>In ambito matematico, gli angoli sono tipicamente espressi mediante due differenti unità di misura: il <strong>grado d&rsquo;arco</strong> (detto anche grado sessagesimale) ed il <strong>radiante</strong>, che fa parte del <strong>sistema internazionale di unità di misura</strong>.</p>
 <p>Un grado d&rsquo;arco è la misura dell&rsquo;angolo che si ha in corrispondenza di un arco di circonferenza che misura 1/360 della circonferenza di un cerchio.</p>
@@ -240,9 +240,9 @@
 <p>Per facilitare la comprensione, possiamo fare un&rsquo;analogia con il quadrante di un orologio, sul quale utilizziamo la lancetta delle ore come riferimento e la lancetta dei minuti per misurare l&rsquo;angolo.</p>
 <p>Ponendo inizialmente sul numero tre entrambe le lancette (quindi a 3 ore e 15 minuti) definiamo un primo angolo, di grandezza zero (sia in gradi che in radianti).</p>
 <p>Man mano che la lancetta dei minuti ruota in <strong>senso orario</strong>, la dimensione dell&rsquo;angolo aumenta. Alle ore <strong>3.30</strong> corrisponde la misura di <strong>novanta gradi</strong> (e non alle ore <strong>3.00</strong> come ci aspetterebbe). Un angolo di <strong>quarantacinque gradi</strong> corrisponde alle ore <strong>3.22</strong> circa, un angolo di <strong>centottanta gradi d&rsquo;arco</strong> corrisponde alle ore <strong>3.45</strong> e così via.</p>
-<p><img src="/static/coding/web/p5js/basics-angle-on-clock-clockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
+<p><img src="/static/coding/web/p5js/intro-angle-on-clock-clockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
 <p>Per completezza, riportiamo anche le immagini degli orologi con le misurazioni degli angoli prese utilizzando il senso <strong>antiorario</strong>, in modo da avere chiara la differenza.</p>
-<p><img src="/static/coding/web/p5js/basics-angle-on-clock-counterclockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
+<p><img src="/static/coding/web/p5js/intro-angle-on-clock-counterclockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
 <h2 id="api">API</h2>
 <p>Per poter utilizzare correttamente la libreria p5.js, è necessario conoscere l&rsquo;interfaccia esposta dalla libreria stessa.</p>
 <p>Il termine <strong>interfaccia</strong>, nelle discipline tecniche, indica l&rsquo;area (la &ldquo;faccia&rdquo;) esposta da un sistema, al fine di potervi interagire. Un esempio sono le interfacce grafiche di Microsoft Windows, che permettono di interagire con i calcolatori, oppure le interfacce vocali di iPhone ed Android, con &ldquo;Siri&rdquo; ed il famoso &ldquo;OK Google&rdquo;, che permettono di interagire con gli smartphone.</p>
@@ -378,7 +378,7 @@ Il parametro formale <code>a</code> è un numero e rappresenta la quantità di t
 <p>Si rimanda al capitolo sui colori per una spiegazione più dettagliata di questi parametri. In questo paragrafo, l&rsquo;attenzione è focalizzata sulla documentazione dei parametri.</p>
 <h2 id="editor-online-per-p5js">Editor online per p5.js</h2>
 <p>Il punto di partenza, per iniziare velocemente ad esplorare le potenzialità della libreria p5.js, è sicuramente l&rsquo;editor presente sul sito web <a href="https://editor.p5js.org" title="Editor online di p5.js">https://editor.p5js.org</a>, che si presenta con la seguente interfaccia grafica:</p>
-<p><img src="/static/coding/web/p5js/basics-p5-js-editor.png" alt="p5.js - Editor online" title="p5.js - Editor online"></p>
+<p><img src="/static/coding/web/p5js/intro-p5-js-editor.png" alt="p5.js - Editor online" title="p5.js - Editor online"></p>
 <p>L&rsquo;interfaccia grafica presenta i tipici componenti di un ambiente di sviluppo:</p>
 <ul>
 <li>la barra dei menù, con a sinistra i classici menu per salvare il progetto, accedere alla guida, mentre a destra troviamo i pulsanti per effettuare il login o la registrazione;</li>
@@ -389,9 +389,9 @@ Il parametro formale <code>a</code> è un numero e rappresenta la quantità di t
 <li>la console per visualizzare i messaggi di informazione, di avviso e di errore.</li>
 </ul>
 <p>Effettuando il login, utilizzando un servizio esterno tra quelli proposti oppure procedendo alla registrazione, è possibile gestire i propri progetti, le proprie collezioni ed utilizzare altre funzionalità non consentite all&rsquo;utente non registrato. La barra dei menù, in alto a destra, riporta il nome utente e le diverse aree a cui l&rsquo;utente può accedere. Il menù File, appena si salva il progetto, si arricchisce di nuove voci che permettono di duplicare il progetto, condividerlo o aggiungerlo ad una collezione.</p>
-<p><img src="/static/coding/web/p5js/basics-p5-js-editor-logged-in.png" alt="p5.js - Editor online" title="p5.js - Editor online con i menù visualizzati dopo il login"></p>
+<p><img src="/static/coding/web/p5js/intro-p5-js-editor-logged-in.png" alt="p5.js - Editor online" title="p5.js - Editor online con i menù visualizzati dopo il login"></p>
 <p>Cliccando sulla voce di menu &ldquo;share&rdquo; presente nel menù &ldquo;File&rdquo;, si apre una finestra di dialogo contenente 4 opzioni, come da immagine seguente:</p>
-<p><img src="/static/coding/web/p5js/basics-p5-js-editor-logged-in-sharing.png" alt="p5.js - Editor online" title="p5.js - Editor online - finestra di dialogo per la condivisione progetto"></p>
+<p><img src="/static/coding/web/p5js/intro-p5-js-editor-logged-in-sharing.png" alt="p5.js - Editor online" title="p5.js - Editor online - finestra di dialogo per la condivisione progetto"></p>
 <p>Le voci visualizzate nell&rsquo;immagine sono:</p>
 <ul>
 <li>&ldquo;Embed&rdquo;: contiene il codice HTML per includere il lavoro in una pagina esterna;</li>
@@ -400,7 +400,7 @@ Il parametro formale <code>a</code> è un numero e rappresenta la quantità di t
 <li>&ldquo;Edit&rdquo;: contiene un collegamento che permette di aprire il progetto per modificarlo.</li>
 </ul>
 <p>Nell&rsquo;area personale è possibile gestire i propri progetti e le proprie collezioni. Il menù contestuale ad ogni progetto permette di gestire le varie azioni sul progetto, come da immagine seguente:</p>
-<p><img src="/static/coding/web/p5js/basics-p5-js-editor-logged-in-projects.png" alt="p5.js - Editor online" title="p5.js - Editor online - finestra di dialogo per la condivisione progetto"></p>
+<p><img src="/static/coding/web/p5js/intro-p5-js-editor-logged-in-projects.png" alt="p5.js - Editor online" title="p5.js - Editor online - finestra di dialogo per la condivisione progetto"></p>
 <h2 id="struttura-del-progetto">Struttura del progetto</h2>
 <p>L&rsquo;editor online è di grande utilità per iniziare, tuttavia si può voler lavorare in modalità &ldquo;off-line&rdquo; (senza internet, quindi senza utilizzare l&rsquo;editor online) oppure si può voler realizzare una pagina web che contenga il lavoro realizzato, in modo tale da poterla inglobare in un proprio sito web. Per le casistiche elencate e per altre eventuali casistiche, è necessario conoscere la composizione del progetto realizzato o da realizzare.</p>
 <p>Dato che un progetto può essere scaricato dall&rsquo;editor online, partiamo proprio dalla descrizione del file scaricato. Si tratta di un archivio compresso, come si può notare dall&rsquo;estensione &ldquo;.zip&rdquo;. Estraendo questo archivio in una cartella vuota, notiamo che vengono generati alcuni file:</p>
@@ -510,7 +510,7 @@ Il parametro formale <code>a</code> è un numero e rappresenta la quantità di t
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
-<p><img src="/static/coding/web/p5js/basics01.png" alt="p5.js - Primo esempio" title="p5.js - Primo esempio"></p>
+<p><img src="/static/coding/web/p5js/intro-first-exercise.png" alt="p5.js - Primo esempio" title="p5.js - Primo esempio"></p>
 <p>Alcune operazioni, invece, devono essere effettuate una sola volta, come ad esempio la creazione dell&rsquo;area da disegno, per cui è <strong>errato</strong> invocare la funzione <code>createCanvas()</code> all&rsquo;interno del blocco <code>draw()</code>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ERRORE
@@ -560,15 +560,15 @@ Il parametro formale <code>a</code> è un numero e rappresenta la quantità di t
 
 
 
-<script src="/static/js/p5-1.2.0-min.js"></script><script src="/static/coding/web/p5js/Example02.js"></script><script src="/static/coding/web/p5js/basics.js"></script>
+
 
 
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/p5js/graphicsprimitives/" rel="next">
+		<a class="pager__link" href="/coding/web/p5js/intro_exe/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">p5.js Lez. 02 - Primitive grafiche</p>
+			<p class="pager__title">p5.js Lez. 01.1 - Esercizi iniziali</p>
 		</a>
 	</div>
 </nav>

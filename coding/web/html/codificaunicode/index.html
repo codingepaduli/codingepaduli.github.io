@@ -224,25 +224,43 @@
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="codifica-utf-8-html-entities-ed-emoji">Codifica UTF-8, HTML entities ed emoji</h1>
-<p>É importante che il documento HTML sia salvato con codifica
-<a href="https://it.wikipedia.org/wiki/UTF-8" title="Link ad UTF-8 su Wikipedia">UTF-8</a>,
-in modo tale da poter inserire nel documento qualsiasi carattere o simbolo, dall&rsquo;alfabeto cinese a quello arabo, dalle lingue morte come latino e greco ai simboli matematici, alle figure geometriche, fino agli emoticons ed emoji.</p>
-<p>La codifica UTF-8 deriva dal sistema
-<a href="https://it.m.wikipedia.org/wiki/Unicode" title="Link ad Unicode su Wikipedia">Unicode</a>,
-che assegna un numero univoco ad ogni carattere di ogni lingua, ad ogni simbolo e ad ogni emoticons o emoji che può essere rappresentato in un documento.</p>
-<p>Per il salvataggio dei file nella codifica UTF-8 è necessario configurare correttamente il proprio editor di testo o il proprio strumento di sviluppo.</p>
-<!-- TODO: impostare il link a Wikipedia -->
-<p>Una soluzione a più ampio raggio consiste nel configurare strumenti quali
-<a href="/coding/tools/editorconfig/" title="Link ad EditorConfig su Wikipedia">EditorConfig</a>,
-in modo da poter condividere le impostazioni di codifica (e di scrittura dei documenti di testo) con l&rsquo;intero gruppo di lavoro o nell&rsquo;intera azienda.</p>
+      <h1 id="codifica-unicode">Codifica Unicode</h1>
+<p>Nelle prime fasi dello sviluppo di internet le comunicazioni, all&rsquo;incirca del 1963, le comunicazioni si avvalevano del codice ASCII a 7 bit che si basa su 95 caratteri stampabili, come i numeri, lettere ed i simboli di punteggiatura, e dai restanti caratteri di controllo, come l&rsquo;invio a capo, che servivano a controllare le telescriventi dell&rsquo;epoca.</p>
+<p>Il codice ASCII non era un vero e proprio standard in quanto con l&rsquo;estendersi della rete internet molte nazioni iniziarono ad adattarlo per includere quei caratteri che non facevano parte dell&rsquo;alfabeto USA, ad esempio il Canada sostituì alcuni caratteri con quelli francesi, la Gran Bretagna aggiunse il simbolo della sterlina. Nel mondo iniziarono ad adottare delle codifiche simili all&rsquo;ASCII, ad esempio in India si utilizzo la codifica ISCII mentre in Vietnam la codifica VISCII.</p>
+<p>Nel tentativo di utilizzare una codifica dei caratteri che comprendesse più caratteri possibili, si crearono diversi standard, come la codifica ASCII a 8 bit e successive codifiche ISO prima a 12 bit, poi a 16 e così via. Vi furono notevoli problemi di incompatibilità a causa dei vari adattamenti dei codici delle varie nazioni.</p>
+<p>Nel tentativo di realizzare un sistema che potesse codificare qualsiasi carattere esistente, di qualsiasi alfabeto, nacque il consorzio Unicode, un&rsquo;organizzazione che aveva lo scopo di coordinare questi lavori.</p>
+<p>Nacque quindi nel 1991 la prima versione del sistema Unicode, un sistema di codifica dei caratteri progettato per supportare a livello internazionale lo scambio, l&rsquo;elaborazione e la visualizzazione dei testi scritti in linguaggi diversi, compresi i linguaggi tecnici delle varie discipline e le lingue morte. La parte visuale come ad esempio la dimensione del carattere, la forma, lo stile, eccetera, non fanno parte delle specifiche Unicode.</p>
+<p>Il sistema Unicode assegna ad ogni carattere, numero, segno di punteggiatura o segno diacritico <strong>un numero univoco in formato esadecimale</strong>, che può essere utilizzato sia per identificare il carattere, sia per la trasmissione o l&rsquo;elaborazione. Per distinguere il fatto che si fa riferimento ad un codice Unicode, questo numero identificativo viene indicato nella forma <strong>U+numero</strong>, ad esempio <strong>U+01A2</strong>.</p>
+<p>Attualmente il codice Unicode prevede 17 piani di codifica, ma solo 3 sono utilizzati e sono i seguenti:</p>
+<ol>
+<li>piano multilinguistico base (BMP) con caratteri identificati nell&rsquo;intervallo da U+00000 ad U+0​FFFF;</li>
+<li>piano multilinguistico supplementare (SMP) con caratteri identificati nell&rsquo;intervallo da U+10000 ad U+1FFFF;</li>
+<li>piano del codici ideografici supplementari (SIP) con caratteri identificati nell&rsquo;intervallo da U+20000 ad U+2FFFF.</li>
+</ol>
+<p>Il BMP contiene quasi tutti i sistemi di scrittura utilizzati, come l&rsquo;arabo, il cirillico, l&rsquo;esperanto, il greco, il latino, il mongolo, il thailandese, il persiano, il fenicio, il runico, la scrittura cuneiforme e tanti altri sistemi di scrittura. Per ogni sistema di scrittura sono presenti i nomi (con annesso significato) di ogni carattere, il corrispondente codice numerico assegnato e le possibili varianti del carattere.</p>
+<p>Ad esempio per il sistema di scrittura latino, si ha:</p>
+<p><img src="/static/coding/web/html/unicode-basic-latin.png" alt="Specifiche Unicode del sistema latino" title="Le Specifiche Unicode associano ad ogni carattere del sistema latino un codice univoco"></p>
+<p>Nel dettaglio sono riportati i nomi (con annesso significato) di ogni carattere e le possibili varianti, come ad esempio la lettera &ldquo;C&rdquo; che come variante ha il simbolo dei gradi centigradi:</p>
+<p><img src="/static/coding/web/html/unicode-basic-latin-details.png" alt="Specifiche Unicode del sistema latino in dettaglio" title="Le Specifiche Unicode indicano il nome di ogni carattere e le possibili varianti"></p>
+<h2 id="utf-8-utf-16-e-utf-32">UTF-8 UTF-16 e UTF-32</h2>
+<p>Il sistema Unicode utilizza 32 bit per codificare un carattere ed è tipicamente indicato con il nome <strong>UTF-32</strong> (Unicode Transformation Format, 32 bit). La lunghezza in bit di ogni carattere è fissa ed è di 4 byte.</p>
+<p>Lo svantaggio nell&rsquo;utilizzare la codifica UTF-32 è che un messaggio trasmesso con questa codifica è 4 volte più grande dello stesso messaggio trasmesso con codifica ASCII. Lo stesso discorso vale per la memorizzazione, che richiede il quadruplo della dimensione necessaria.</p>
+<p>Per ovviare a questa problematica, sono nati due sistemi che prevedono la codifica dei caratteri Unicode in sequenze di bit di lunghezza variabile:</p>
+<ul>
+<li><strong>UTF-8</strong> (Unicode Transformation Format, 8 bit) usa una lunghezza da 1 a 4 byte;</li>
+<li><strong>UTF-16</strong> (Unicode Transformation Format, 16 bit) usa una lunghezza da 2 a 4 byte.</li>
+</ul>
+<p>Dato che la maggior parte dei caratteri utilizzatati si trova nel piano multilinguistico base (BMP),codificando ogni carattere non con 32 bit, ma con 16 bit, si ottiene un risparmio considerevole. Nel caso nel messaggio siano presenti caratteri non appartenenti al BMP, allora questi saranno codificati con una lunghezza maggiore. Nel caso di caratteri latini, questi avranno una lunghezza media di 8 bit, con un notevole risparmio.</p>
+<p>É importante che il documento HTML sia salvato con codifica UTF-8 in modo tale da poter inserire nel documento qualsiasi carattere o simbolo, dall&rsquo;alfabeto cinese a quello arabo, dalle lingue morte come latino e greco ai simboli matematici, alle figure geometriche, fino agli emoticons ed emoji.</p>
+<p><strong>Senza la codifica giusta, molti caratteri potrebbero non essere visualizzati nella pagina web</strong>.</p>
 <p>Una volta che le pagine web sono state salvate con la codifica giusta, è necessario indicarla nelle informazioni della pagina, all&rsquo;interno dell&rsquo;etichetta <code>head</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
-</span></span></code></pre></div><p><strong>Senza la codifica giusta, molti caratteri potrebbero non essere visualizzati nella pagina web</strong>.</p>
-<p>In alcuni casi, però, è necessario evitare di scrivere direttamente questi caratteri nel documento, ed utilizzare, invece, delle rappresentazioni alternative, che utilizzino i codici numerici decimali o esadecimali del sistema Unicode, oppure, i codici mnemonici chiamati &ldquo;HTML entities&rdquo;.</p>
-<p>Gli HTML entities sono dei codici mnemonici che vengono associati ad alcuni caratteri. La specifica delle HTML entities si trova al link <a href="https://html.spec.whatwg.org/multipage/entities.json" title="Link alla lista di HTML entities">https://html.spec.whatwg.org/multipage/entities.json</a>. Tra le varie HTML entities elencate, troviamo ad esempio:</p>
+</span></span></code></pre></div><h2 id="html-entities-ed-emoji">HTML entities ed emoji</h2>
+<p>Talvolta può capitare che i documenti debbano essere memorizzati in una codifica non Unicode oppure che l&rsquo;uso di alcuni caratteri possa essere non consentito, quindi ci si deve affidare a rappresentazioni alternative per poterli includere.</p>
+<p>Per quanto riguarda le pagine web, è stata progettata una rappresentazione alternativa, detta &ldquo;HTML entities&rdquo;, dei caratteri più comuni che è al tempo stesso anche più intuitiva.</p>
+<p>Le HTML entities codificano un carattere associandogli un codice mnemonico. La specifica delle HTML entities si trova al link <a href="https://html.spec.whatwg.org/multipage/entities.json" title="Link alla lista di HTML entities">https://html.spec.whatwg.org/multipage/entities.json</a>. Tra le varie HTML entities elencate, troviamo ad esempio:</p>
 <ul>
 <li>gt = greater than, ovvero il simbolo di maggiore (&gt;);</li>
 <li>lt = lower than, ovvero il simbolo di minore (&lt;);</li>
@@ -252,19 +270,23 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 <li>apos = apostrophe, ovvero il simbolo di apostrofo (');</li>
 <li>… ;</li>
 </ul>
-<p>Questi codici devono essere usati tra il simbolo <code>&amp;</code> ed il simbolo <code>;</code>, come negli esempi <code>&amp;minus;</code> (con risultato − <!-- − -->) ed <code>&amp;amp;</code> (con risultato &amp; <!-- & -->).</p>
-<p>La rappresentazione mediante codice numerico decimale permette di inserire i caratteri o i simboli usando il corrispondente codice decimale, che deve essere inserito tra il simbolo <code>&amp;#</code> ed il simbolo <code>;</code>. Si può usare anche il codice numerico esadecimale, che va inserito tra il simbolo <code>&amp;#x</code> ed il simbolo <code>;</code>.</p>
-<p>Ad esempio, la lettera greca Δ <!-- Δ --> è associata al codice numerico decimale 916 ed al codice numerico esadecimale 394, quindi possiamo scrivere questo carattere o con la notazione decimale <code>&amp;#916;</code> (con risultato Δ) oppure con quella esadecimale <code>&amp;#x394;</code> (con risultato Δ).</p>
-<p>Altro esempio, il simbolo dell&rsquo;euro € <!-- € --> è associato al codice numerico decimale 8364 ed al codice numerico esadecimale 20AC, quindi possiamo scrivere questo carattere o con la notazione decimale <code>&amp;#8364;</code> (con risultato €) oppure con quella esadecimale <code>&amp;#x20AC;</code> (con risultato €).</p>
+<p>Questi codici mnemonici devono essere sempre inseriti tra il simbolo <code>&amp;</code> ed il simbolo <code>;</code>, come negli esempi <code>&amp;minus;</code> (con risultato − <!-- − -->) ed <code>&amp;amp;</code> (con risultato &amp; <!-- & -->).</p>
+<p>Questa rappresentazione è stata poi estesa per permettere anche l&rsquo;inserimento di un qualsiasi carattere Unicode, utilizzando il codice numerico associato al carattere sia in decimale che in esadecimale.</p>
+<p>La rappresentazione di un carattere Unicode attraverso questo schema prevede che il codice numerico espresso in decimale sia inserito tra il simbolo <code>&amp;#</code> ed il simbolo <code>;</code>.</p>
+<p>Se invece si vuole utilizzare il codice numerico del carattere espresso in esadecimale, allora deve essere inserito tra il simbolo <code>&amp;#x</code> ed il simbolo <code>;</code>.</p>
+<p>Ad esempio, la lettera greca Δ <!-- Δ --> è associata al codice numerico decimale 916 ed al codice numerico esadecimale 394, quindi possiamo scrivere questo carattere sia con la notazione decimale <code>&amp;#916;</code> (con risultato Δ) sia con quella esadecimale <code>&amp;#x394;</code> (con risultato Δ).</p>
+<p>Altro esempio, il simbolo dell&rsquo;euro € <!-- € --> è associato al codice numerico decimale 8364 ed al codice numerico esadecimale 20AC, quindi possiamo scrivere questo carattere sia con la notazione decimale <code>&amp;#8364;</code> (con risultato €) sia con quella esadecimale <code>&amp;#x20AC;</code> (con risultato €).</p>
 <p>Anche gli emoticons e gli
 <a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" title="Link alle specifiche degli emoji">emoji</a>
-fanno parte della specifica Unicode, per cui o li si scrive nel documento &ldquo;cosi come sono&rdquo; o li si può includere attraverso &ldquo;HTML entities&rdquo; o attraverso rappresentazione con codice decimale/esadecimale.</p>
-<p>Ad esempio, l&rsquo;emoji &ldquo;rolling on the floor laughing&rdquo; (rotola sul pavimento ridendo) è associata al codice numerico esadecimale 1F923, quindi possiamo scrivere questo carattere con la notazione esadecimale <code>&amp;#x1F923;</code> (con risultato 🤣 <!-- 🤣 -->).</p>
+fanno parte della specifica Unicode, per cui se la codifica del documento lo permette li si scrive direttamente, altrimenti li si include attraverso &ldquo;HTML entities&rdquo; (se presenti) o attraverso rappresentazione con codice decimale/esadecimale.</p>
+<p><img src="/static/coding/web/html/unicode-emoji.png" alt="Specifiche Unicode per gli emoji" title="Le Specifiche Unicode associano ad ogni emoji un codice univoco, un nome (con annesso significato) e visualizzano le possibili varianti"></p>
+<p>Ad esempio, l&rsquo;emoji &ldquo;smiling face with halo&rdquo; (faccia sorridente con aureola) è associata al codice numerico esadecimale 1F607, quindi possiamo scrivere questo carattere sia con la notazione decimale <code>&amp;#128519;</code> (con risultato 😇) sia con la notazione esadecimale <code>&amp;#x1F607;</code> (con risultato 😇 <!-- 😇 -->).</p>
+<p>Allo stesso modo, l&rsquo;emoji &ldquo;rolling on the floor laughing&rdquo; (rotolando sul pavimento a ridere) è associata al codice numerico esadecimale 1F923, quindi possiamo scrivere questo carattere sia con la notazione decimale <code>&amp;#129315;</code> (con risultato 🤣) sia con la notazione esadecimale <code>&amp;#x1F923;</code> (con risultato 🤣 <!-- 🤣 -->).</p>
 
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="http://codingepaduli.github.io/coding/tools/editorconfig/" style="font-weight: 700; color: #e22d30;">EditorConfig</a>: Articolo per la configurazione di Editorconfig</p><p><a href="https://richardjharris.github.io/unicode-in-five-minutes.html" style="font-weight: 700; color: #e22d30;">Unicode In Five Minutes</a>: A description of five minutes about Unicode</p><p><a href="https://www.branah.com/unicode-converter" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicodes and text converter</a>: A tool to convert between Unicode and plain text</p><p><a href="https://r12a.github.io/app-conversion/" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicode code converter</a>: Another tool to convert between Unicode and plain text</p><p><a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" style="font-weight: 700; color: #e22d30;">Emoji Chart, v12.0</a>: A full list of Emoji</p>
+      <p><a href="http://codingepaduli.github.io/coding/tools/editorconfig/" style="font-weight: 700; color: #e22d30;">EditorConfig</a>: Articolo per la configurazione di Editorconfig</p><p><a href="https://www.branah.com/unicode-converter" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicodes and text converter</a>: A tool to convert between Unicode and plain text</p><p><a href="https://r12a.github.io/app-conversion/" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicode code converter</a>: Another tool to convert between Unicode and plain text</p><p><a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" style="font-weight: 700; color: #e22d30;">Emoji Chart, v12.0</a>: A full list of Emoji</p>
   </article>
 </main>
 

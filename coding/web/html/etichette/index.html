@@ -278,21 +278,21 @@ poi chiuse.</p>
 <p>In questo modello gerarchico, ogni etichetta della pagina web (il documento ipertestuale) è detta <strong>nodo</strong> ed ha una posizione ben definita all&rsquo;interno di un albero (tipica struttura gerarchica).</p>
 <p>La radice dell&rsquo;albero è l&rsquo;etichetta <code>html</code>, dato che al suo interno sono presenti tutti gli elementi della pagina web.</p>
 <p>Dalla radice si estendono poi i nodi di &ldquo;primo livello&rdquo;, ovvero tutte le etichette contenute nell&rsquo;etichetta <code>html</code>.</p>
-<p>Da questi nodi di primo livello si estendono i nodi di secondo livello, ovvero le etichette contenute nelle etichette di primo livello, e cosi via per i successivi livelli.</p>
+<p>Da questi nodi di primo livello si estendono i nodi di secondo livello, ovvero le etichette contenute nelle etichette di primo livello, e così via per i successivi livelli.</p>
 <p>Le foglie dell&rsquo;albero sono le etichette che non posseggono contenuti.</p>
 <p>Un esempio di rappresentazione della pagina web illustrata in precedenza, secondo il modello DOM è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>html
 </span></span><span style="display:flex;"><span>└── body
 </span></span><span style="display:flex;"><span>    ├── h1
 </span></span><span style="display:flex;"><span>    └── p
-</span></span></code></pre></div><p>Data la struttura gerarchica, è possibile stabilire delle relazioni tra gli elementi. Un elemento che contiene altri elementi è detto elemento padre, e di conseguenza gli elementi contenuti in quel nodo sono detti figli. Gli elementi che si trovano nello stesso livello si dicono fratelli, e cosí via con le altre relazioni.</p>
+</span></span></code></pre></div><p>Data la struttura gerarchica, è possibile stabilire delle relazioni tra gli elementi. Un elemento che contiene altri elementi è detto elemento padre, e di conseguenza gli elementi contenuti in quel nodo sono detti figli. Gli elementi che si trovano nello stesso livello si dicono fratelli, e così via con le altre relazioni.</p>
 <h2 id="indentazione">Indentazione</h2>
 <p>L&rsquo;indentazione è una caratteristica che migliora la leggibilità del codice e permette di rilevare gli errori più rapidamente.</p>
-<p>Indentare il codice significa inserire un determinato nunero di spazi all&rsquo;inizio di ogni riga, in maniera proporzionale al livello dell&rsquo;etichetta presente sulla riga.</p>
+<p>Indentare il codice significa inserire un determinato numero di spazi all&rsquo;inizio di ogni riga, in maniera proporzionale al livello dell&rsquo;etichetta presente sulla riga.</p>
 <p>Ad esempio, per l&rsquo;etichetta radice <code>html</code> non sono previsti spazi di indentazione, dato che è a livello zero.</p>
 <p>Per l&rsquo;etichetta di primo livello <code>body</code>, è necessario aggiungere quattro spazi prima dell&rsquo;etichetta stessa.</p>
-<p>Per le etichette di secondo livello è necessario aggiungere otto spazi, per quelle di terzo livello sono necessari dodici, e cosí via..</p>
-<p>Se si riguarda il codice riportato nell&rsquo;esempio prededente, si può vedere che è indentato. Alcuni editor di testo permettono di indentare il documento in maniera automatica.</p>
+<p>Per le etichette di secondo livello è necessario aggiungere otto spazi, per quelle di terzo livello sono necessari dodici, e così via..</p>
+<p>Se si riguarda il codice riportato nell&rsquo;esempio precedente, si può vedere che è indentato. Alcuni editor di testo permettono di indentare il documento in maniera automatica.</p>
 <h2 id="commenti">Commenti</h2>
 <p>La presenza di <strong>commenti</strong> è praticamente d&rsquo;obbligo, poiché questi rappresentano informazioni aggiuntive e promemoria che chiariscono le intenzioni del programmatore.</p>
 <p>I commenti si scrivono tra i caratteri <code>&lt;!--</code> e <code>--&gt;</code>, l&rsquo;unica attenzione da porre è che non devono essere presenti spazi tra i caratteri indicati. Un commento può occupare più righe.</p>

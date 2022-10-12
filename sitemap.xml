@@ -27,7 +27,25 @@
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2022-08-30T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/educational/</loc>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/interesting/</loc>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/others/</loc>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/webapp/qrcodegenerator/</loc>
+    <lastmod>2022-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/webapp/</loc>
+    <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/coding/</loc>
     <lastmod>2022-08-30T00:00:00+00:00</lastmod>
@@ -35,7 +53,13 @@
     <loc>http://codingepaduli.github.io/coding/web/mediapipe/handsmodel_exe/</loc>
     <lastmod>2022-08-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/mediapipe/handsmodelskeletonized_exe/</loc>
+    <lastmod>2022-08-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://codingepaduli.github.io/coding/web/mediapipe/posemodel_exe/</loc>
+    <lastmod>2022-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/mediapipe/posemodelskeletonized_exe/</loc>
     <lastmod>2022-08-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/mediapipe/</loc>
@@ -52,15 +76,6 @@
   </url><url>
     <loc>http://codingepaduli.github.io/categories/html/</loc>
     <lastmod>2022-08-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/interesting/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/educational/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/fdroidapp/</loc>
     <lastmod>2022-06-28T00:00:00+00:00</lastmod>
@@ -80,16 +95,10 @@
     <loc>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</loc>
     <lastmod>2022-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/interesting/others/</loc>
-    <lastmod>2022-04-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/webapp/codificarsa/</loc>
     <lastmod>2022-03-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/webapp/breakingrsa/</loc>
-    <lastmod>2022-03-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/webapp/</loc>
     <lastmod>2022-03-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/tools/ssh/</loc>
@@ -131,7 +140,7 @@
     <loc>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</loc>
     <lastmod>2020-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/p5js/basics_exe/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/linkp5js/</loc>
@@ -142,6 +151,9 @@
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/intro_exe/</loc>
+    <lastmod>2020-09-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/intro/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>

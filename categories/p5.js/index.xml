@@ -126,10 +126,10 @@
     
     <item>
       <title>p5.js Lez. 02.1 - Esercizi di grafica 2D</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/basics_exe/</link>
+      <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/p5js/basics_exe/</guid>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</guid>
       <description>Esercizi di grafica 2D</description>
     </item>
     
@@ -149,6 +149,15 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/</guid>
       <description>Lezioni di programmazione sulla libreria grafica p5.js</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 01.1 - Esercizi iniziali</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/intro_exe/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/intro_exe/</guid>
+      <description>Esercizi iniziali</description>
     </item>
     
     <item>

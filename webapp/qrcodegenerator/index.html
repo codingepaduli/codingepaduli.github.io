@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QR Code Generator - Coding e Paduli</title>
+
+    <meta name="description" content="Generare un codice QR quadrato (modello 2)">
+        <meta property="og:title" content="QR Code Generator" />
+<meta property="og:description" content="Generare un codice QR quadrato (modello 2)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/webapp/qrcodegenerator/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="webApp" />
+<meta property="article:published_time" content="2022-09-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-27T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="QR Code Generator"/>
+<meta name="twitter:description" content="Generare un codice QR quadrato (modello 2)"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding e tools</a></li>
+
+      <li><a href="/interesting/">Interessanti</a></li>
+
+      <li><a href="/opensource/">Open Source</a></li>
+
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-09-27T00:00:00Z">27-09-2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/webapp/" rel="category">webApp</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="qr-codes---specifiche-tecniche">QR Codes - Specifiche tecniche</h1>
+<p>Il codice QR è un codice a barre bidimensionale inventato dalla compagnia Denso Wave per tracciare le componenti coinvolte nel processo manifatturiero della Toyota. Il nome &ldquo;QR&rdquo; è l&rsquo;abbreviazione dell&rsquo;inglese Quick Response (&ldquo;risposta rapida&rdquo;), che sottolinea la rapida decodifica del contenuto. La società Denso Wave, pur conservando i diritti di brevetto, ha permesso l&rsquo;uso del codice QR con licenza libera.</p>
+<p>Rispetto ai vecchi codici a barre, che potevano essere letti scorrendo il dispositivo solo seguendo una sola angolazione, i codici QR permettono la lettura da più angoli ed inoltre permettono di memorizzare molte più informazioni. L&rsquo;utilizzo si è diffuso soprattutto perché permettono agli utenti di acquisire informazioni come indirizzi web e contatti telefonici attraverso una semplice azione dello smartphone.</p>
+<h2 id="versione-del-qr-code">Versione del QR Code</h2>
+<p>Nel 2000 il codice QR è stato approvato come Standard internazionale, in cui si definiva un primo modello del classico formato quadrato. I successivi aggiornamenti hanno portato alla definizione di un secondo modello, sempre relativo al classico formato quadrato, che è quello attualmente utilizzato e che prevede 40 possibili dimensioni, identificate da un numero di versione che va da 1 a 40.</p>
+<p>In numero di versione indica la dimensione del quadrato, che si ottiene attraverso la formula <strong>17+4*numVersione</strong>.</p>
+<p>La versione 1 è un quadrato di 21x21 moduli (punti), la versione 2 è un quadrato di 25 x 25 moduli (punti), mentre la versione 40 è un quadrato di 177x177 moduli (punti). Da specifiche tecniche, deve essere applicato un margine vuoto di almeno 4 punti intorno al codice QR.</p>
+<p>Un codice QR deve contenere tre pattern di ricerca che identificano i due angoli in alto e l&rsquo;angolo in basso a sinistra. Il pattern di ricerca è caratterizzato da un quadrato nero largo 7 punti che ingloba un quadrato bianco di 5 punti che a sua volta ingloba un terzo quadrato bianco largo di 3 punti.</p>
+<p>Oltre ai pattern di ricerca, un codice QR deve contenere, a seconda dalla versione, un certo numero di pattern di allineamento che consentono al lettore di allineare l&rsquo;immagine. I pattern di allineamento sono definiti da un quadrato nero largo 5 punti che ingloba un quadrato bianco di 3 punti che a sua volta ingloba un terzo quadrato bianco largo di 1 punto.</p>
+<h3 id="algoritmo-di-posizionamento-dei-pattern-di-allineamento">Algoritmo di posizionamento dei pattern di allineamento</h3>
+<p>Il codice QR in versione 1 non prevede pattern di allineamento; Per le versioni dalla 2 alla 40, l&rsquo;algoritmo di posizionamento dei pattern di allineamento è il seguente:</p>
+<ol>
+<li>E&rsquo; necessario calcolare il numero di intervalli in cui suddividere il codice QR, utilizzando la formula <strong>Math.floor(version / 7) +1</strong>, dove <strong>version</strong> è la versione del codice QR;</li>
+<li>Se il numero di intervalli è maggiore di 1, bisogna calcolare il passo, ovvero ogni quanti punti inserire un pattern di allineamento, utilizzando la formula <strong>(dimensione-7 - 6) / numeroIntervalli</strong>, dove <strong>dimensione</strong> è la dimensione del codice QR per la versione utilizzata e <strong>numeroIntervalli</strong> consiste nel numero di intervalli calcolati al punto 1; Se non è maggiore di uno, il centro dell&rsquo;unico punto di allineamento è (<strong>dimensione-7</strong>, <strong>dimensione-7</strong>)</li>
+<li>Se il passo è un numero decimale deve essere approssimato all&rsquo;intero successivo. Se il numero risultante è dispari, deve essere incrementato di 1.</li>
+<li>Ottenuto il passo, si generano le coppie di coordinate che rappresentano il centro dei punti di allineamento, secondo la formula <strong>(dimensione-7 - step i, dimensione-7 - step j</strong>, con <strong>i</strong> e <strong>j</strong> libere di variare; Se una coordinata è inferiore a 6, la sostituisce con il valore 10, inoltre si devono escludere quelle che si sovrappongono graficamente ai tre pattern di ricerca.</li>
+</ol>
+<p>Ad esempio, il codice QR versione 3 ha dimensione 29 per 29 punti, il numero di intervalli si calcola con Math.floor(3/7) +1, ovvero 1; Dato che non è maggiore di 1, il centro dell&rsquo;unico punto di allineamento è (29-7, 29-7);</p>
+<p>Altro esempio, il codice QR versione 15 ha dimensione 77 per 77 punti, il numero di intervalli si calcola con Math.floor(15/7) +1, ovvero 3;
+Dato che è maggiore di 1, calcoliamo il passo con (77-7-6) / 3 = 21.3, che si arrotonda a 22;
+A questo punto generano le coppie di coordinate con i=0, ovvero (70, 70), (70, 48), (70, 26), (70, 4), con i=1, ovvero (48, 70), (48, 48), (48, 26), (48, 4), con i=2, ovvero (26, 70), (26, 48), (26, 26), (26, 4) ed infine con i=3, ovvero(4, 70), (4, 48), (4, 26), (4, 4).</p>
+<p>Si escludono le coordinate (4, 4), (4, 70) e (70, 4) perchè si sovrappongono ai pattern di ricerca, e si sostituiscono le coordinate con valore inveriore a 10 con il valore 6, ottenendo le seguenti coordinate:</p>
+<p><img src="/static/webApp/qrCodes-alignmentPattern.png" alt="Pattern di ricerca ed allineamento" title="Posizionamento dei Pattern di ricerca ed allineamento"></p>
+<h2 id="codifica-dei-dati">Codifica dei dati</h2>
+<p>Una caratteristica importante dei codici QR riguarda la codifica dei dati. Attualmente sono supportate diverse codifiche tra cui:</p>
+<ul>
+<li>la codifica binaria che prevede la conversione dei dati secondo lo standard ISO 8859-1, e quindi poi la suddivisione del risultato in gruppi da 8 bit con l&rsquo;eventuale aggiunta di bit di completamento;</li>
+<li>la codifica alfanumerica che utilizza una tabella di 44 caratteri, ad ognuno le quali è associato un numero, per convertire le coppie di caratteri in bit con l&rsquo;eventuale aggiunta di bit di completamento;</li>
+<li>la codifica numerica che prevede per ogni tripla di numeri una conversione a lunghezza variabile di massimo 11 bit.</li>
+<li>la codifica kanji per codificare gli ideogrammi cinesi giapponesi e simili.</li>
+</ul>
+<h2 id="correzione-degli-errori">Correzione degli errori</h2>
+<p>I codici QR contengono anche una sezione che contiene dei bit di correzione degli errori. Questi permettono di leggere le informazioni del codice QR anche se questo in alcuni punti è danneggiato, ad esempio a causa di lievi graffi, o deteriorato, cosa che può avvenire se affisso all&rsquo;esterno.</p>
+<p>Esistono diversi livelli di correzione degli errori che permettono di recuperare più o meno dati a seconda proprio del livello. Ogni livello è identificato da un codice.</p>
+<p>Il codice di correzione degli errori può essere uno dei seguenti:</p>
+<table>
+<thead>
+<tr>
+<th>Error Correction Level</th>
+<th>Bits</th>
+<th>Integer Equivalent</th>
+<th>restored data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L</td>
+<td>01</td>
+<td>1</td>
+<td>7%</td>
+</tr>
+<tr>
+<td>M</td>
+<td>00</td>
+<td>0</td>
+<td>14%</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>11</td>
+<td>3</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>H</td>
+<td>10</td>
+<td>2</td>
+<td>30%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="schema-di-mascheramento">Schema di mascheramento</h2>
+<p>Lo schema di mascheramento indica una formula utilizzata per indicare se deve essere invertito il colore di un bit.</p>
+<h2 id="evoluzioni-successive">Evoluzioni successive</h2>
+<p>I codici QR si sono evoluti nel tempo con i seguenti formati:</p>
+<ul>
+<li>Micro QR, versione ridotta del codice QR, utilizzata tipicamente sulle schede elettroniche che hanno una superficie ridotta, e contiene meno informazioni rispetto al classico formato quadrato.</li>
+<li>rMQR, versione rettangolare che ha il vantaggio di poter essere applicata in orizzontale o verticale su superfici lunghe e strette, contiene più informazioni rispetto al classico formato quadrato;</li>
+<li>SQRC, versione che contiene informazioni crittografate che possono essere lette solo da chi possiede un dispositivo con la chiave di lettura configurata;</li>
+<li>Frame QR, una versione simile al classico formato quadrato che contiene un&rsquo;immagine sul codice QR.</li>
+</ul>
+<p><img src="/static/webApp/qrCodes-types.png" alt="Vari tipi di codici QR" title="Vari tipi di codici QR"></p>
+<h3 id="qr-code-generator">QR Code Generator</h3>
+<form>
+    <fieldset>
+        <label for="dati">Dati da codificare nel QR Code</label>
+        <input id="dati" type="text" placeholder='Dati da codificare'>
+    </fieldset>
+    <fieldset>
+        <label for="q">Codifica da utilizzare: </label>
+        <select id="codifica">
+            <option value="numerica (0001)" disabled>numerica (0001)</option>
+            <option value="alfanumerica (0010)">alfanumerica (0010)</option>
+            <option value="byte (0100)" disabled>byte (0100)</option>
+            <option value="kanji" disabled>kanji (1000)</option>
+            <option value="ECI" disabled>ECI (0111)</option>
+        </select>
+    </fieldset>
+     <fieldset>
+        <label for="datiCodificati">Dati codificati:</label>
+        <input id="datiCodificati" type="text">
+    </fieldset>
+    <fieldset>
+        <label for="qrVersion">QR version</label>
+        <input id="qrVersion" type="number" value="1" min="1" max="40" placeholder='Versione del QR Code da utilizzare'>
+    </fieldset>
+    <fieldset>
+        <label for="errorLevel">Error Correction Level</label>
+        <select id="errorLevel">
+            <option value="L">L (7%)</option>
+            <option value="M">M (15%)</option>
+            <option value="Q">Q (25%)</option>
+            <option value="L">3: (x+y) % 3 == 0</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <label for="maskPattern">Motivo di masking</label>
+        <select id="maskPattern">
+            <option value="0">0: (x+y) % 2 == 0</option>
+            <option value="1">1: x % 2 == 0</option>
+            <option value="2">2: y % 3 == 0</option>
+            <option value="3">3: (x+y) % 3 == 0</option>
+            <option value="4">4: (Math.floor(x/2)+Math.floor(y/3)) % 2 == 0</option>
+            <option value="5">5: ((x*y) % 2) + ((x*y) % 3) == 0</option>
+            <option value="6">6: ((x*y) % 2) + ((x*y) % 3) % 2 == 0</option>
+            <option value="7">7: ((x+y) % 2) + ((x*y) % 3) % 2 == 0</option>
+        </select>
+    </fieldset>
+</form>
+<div id="qrCode">
+</div>
+<!--
+<table id="codifica">
+    <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 20%;">
+    </colgroup>
+    <tr>
+        <th>B</th>
+        <th>B^2</th>
+        <th class="big">A^2 = B^2 - N</th>
+        <th>sqrt(A^2)</th>
+        <th class="big">A</th>
+    </tr>
+</table>
+
+<style>
+    table {
+        width:100%;
+        table-layout: fixed;
+    }
+    th {
+        background-color: #04AA6D;
+        color: white;
+    }
+    td * {
+        overflow-wrap: break-word;
+        display:inline-block;
+    }
+</style>
+
+-->
+
+    </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="https://www.thonky.com/qr-code-tutorial/mask-patterns" style="font-weight: 700; color: #e22d30;">QR Codes</a>: L&#39;algoritmo per la generazione del codice QR</p>
+  </article>
+</main>
+
+
+
+<script src="/static/js/p5-1.2.0-min.js"></script><script src="/static/webApp/qrCodeGenerator.js"></script>
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/webapp/codificarsa/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">Codifica RSA</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2022 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
