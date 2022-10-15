@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HTML Lez. 02 - Etichette (tag) - Coding e Paduli</title>
+    <title>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Coding e Paduli</title>
 
-    <meta name="description" content="HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag">
-        <meta property="og:title" content="HTML Lez. 02 - Etichette (tag)" />
-<meta property="og:description" content="HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag" />
+    <meta name="description" content="HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag">
+        <meta property="og:title" content="HTML Lez. 02 - Il linguaggio HTML e le etichette (tag)" />
+<meta property="og:description" content="HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/etichette/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
 <meta property="article:published_time" content="2019-07-16T00:00:00+00:00" />
@@ -18,8 +18,8 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="HTML Lez. 02 - Etichette (tag)"/>
-<meta name="twitter:description" content="HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag"/>
+<meta name="twitter:title" content="HTML Lez. 02 - Il linguaggio HTML e le etichette (tag)"/>
+<meta name="twitter:description" content="HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag"/>
 
 
 
@@ -224,15 +224,11 @@
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="il-linguaggio-html">Il linguaggio HTML</h1>
+      <h1 id="il-linguaggio-html-e-le-etichette">Il linguaggio HTML e le etichette</h1>
 <p>Il linguaggio <abbr title="HyperText Markup Language"><strong>HTML</strong></abbr> e&rsquo; un linguaggio di etichettatura (in inglese Markup) degli ipertesti (in inglese HyperText), ha lo scopo di strutturare i documenti da pubblicare sul web.</p>
+<p>Non è un linguaggio di programmazione, ma solo di definizione della <strong>struttura</strong> di un ipertesto, dato che usa dei segnaposto per indicare dove iniziano e finiscono gli elementi.</p>
 <p>Le <strong>etichette</strong> (in inglese Markup o TAG) sono dei segnaposto, indicano
 l&rsquo;inizio e la fine di un elemento della pagina web, ad esempio inizio e fine di un titolo, di un&rsquo;immagine, di un video, di una tabella&hellip;</p>
-<p>Da sottolineare che il linguaggio HTML non è un linguaggio di programmazione, ma solo un linguaggio di &ldquo;formattazione&rdquo; delle pagine web, dato che usa le etichette per indicare dove iniziano e finiscono gli elementi. Il linguaggio HTML definisce solo la <strong>struttura</strong> di un ipertesto, non la grafica, né le azioni o le elaborazioni da eseguire.</p>
-<p>Gli stili grafici della pagina web sono scritti in linguaggio CSS, che indica stili e colori da utilizzare. Le azioni, le interazioni e l&rsquo;elaborazione dei dati contenuti della pagina web sono scritti con linguaggi di programmazione come JavaScript.</p>
-<h2 id="etichette-tag">Etichette (tag)</h2>
-<p>Le <strong>etichette</strong> (in inglese Markup o TAG) sono dei segnaposto, indicano
-l&rsquo;inizio e la fine di un elemento della pagina web.</p>
 <p>Ogni etichetta ha un nome, ad esempio
 <code>h1</code> è l&rsquo;etichetta del titolo,
 <code>p</code> è l&rsquo;etichetta del paragrafo,
@@ -252,9 +248,16 @@ l&rsquo;etichetta di inizio del titolo è <code>&lt;h1&gt;</code> e l&rsquo;etic
 l&rsquo;etichetta di inizio paragrafo è <code>&lt;p&gt;</code> e l&rsquo;etichetta di fine paragrafo è <code>&lt;/p&gt;</code>, quindi, il paragrafo in HTML sarà scritto tra le due etichette usando il codice: <code>&lt;p&gt;paragrafo&lt;/p&gt;</code>;
 l&rsquo;etichetta di inizio testo evidenziato è <code>&lt;mark&gt;</code> e l&rsquo;etichetta di fine testo evidenziato è <code>&lt;/mark&gt;</code>, quindi, il testo evidenziato in HTML sarà scritto tra le due etichette usando il codice: <code>&lt;mark&gt;testo evidenziato&lt;/mark&gt;</code>;</p>
 <p><strong>L&rsquo;etichetta di chiusura non è sempre prevista, esistono delle eccezioni di cui tenere conto.</strong></p>
-<h2 id="prima-pagina-web">Prima pagina web</h2>
+<h2 id="etichette-con-attributi">Etichette con attributi</h2>
+<p>Le etichette possono avere una lista di <strong>attributi</strong> che forniscono informazioni aggiuntive all&rsquo;etichetta.</p>
+<p>Gli attributi devono essere aggiunti esclusivamente nelle etichette di apertura, non nelle etichette di chiusura, e devono essere separati l&rsquo;uno dall&rsquo;altro da uno spazio.</p>
+<p>Ogni attributo è una coppia <strong>nome=&lsquo;valore&rsquo;</strong>. La regola di scrittura indica il nome dell&rsquo;attributo seguito da un carattere <code>=</code> e poi dal valore, che deve essere sempre racchiuso da apici singoli o doppi.</p>
+<p>Riepilogando, la sintassi delle etichette con attributi è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">etichetta</span> <span style="color:#a6e22e">nome1</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valore1&#34;</span> <span style="color:#a6e22e">nome2</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valore2&#34;</span> <span style="color:#960050;background-color:#1e0010">...</span> &gt;
+</span></span><span style="display:flex;"><span>    contenuti etichetta
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">etichetta</span>&gt;
+</span></span></code></pre></div><h2 id="prima-pagina-web">Prima pagina web</h2>
 <p>Un&rsquo;indicazione fondamentale che deve essere inserita <strong>nella prima riga</strong> della pagina web (del file HTML) è la dichiarazione del &ldquo;tipo di documento&rdquo;: si deve indicare che il documento è scritto in HTML, utilizzando il codice <code>&lt;!doctype html&gt;</code> (&ldquo;doctype&rdquo; è l&rsquo;abbreviazione di &ldquo;document type&rdquo;, che tradotto significa &ldquo;tipo di documento&rdquo;, quindi si dichiara che il tipo di documento è &ldquo;HTML&rdquo;).</p>
-<p>Si precisa che non si tratta di un&rsquo;etichetta, è una dichiarazione, per cui <strong>non necessita di un&rsquo;etichetta di chiusura</strong>;</p>
 <p>Dopo la dichiarazione del tipo di documento, deve iniziare il documento web vero e proprio. L&rsquo;etichetta <code>html</code> delimita l&rsquo;intera pagina web (l&rsquo;etichetta di
 apertura <code>&lt;html&gt;</code> indica l&rsquo;inizio del documento HTML e l&rsquo;etichetta
 di chiusura <code>&lt;/html&gt;</code> indica la fine del documento HTML);</p>
@@ -263,7 +266,7 @@ apertura <code>&lt;body&gt;</code> indica l&rsquo;inizio dei contenuti e l&rsquo
 di chiusura <code>&lt;/body&gt;</code> indica la fine dei contenuti). Questa etichetta deve essere inserita nell&rsquo;etichetta <code>html</code>.</p>
 <p>La pagina HTML risultante  (ancora incompleta) è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;it&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- contenuti della pagina html --&gt;</span>
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;Titolo pagina web&lt;/<span style="color:#f92672">h1</span>&gt;
@@ -308,6 +311,26 @@ poi chiuse.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">acronym</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;as soon as possible&#34;</span>&gt;ASAP&lt;/<span style="color:#f92672">acronym</span>&gt; --&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">big</span>&gt;This text is big&lt;/<span style="color:#f92672">big</span>&gt;
 </span></span></code></pre></div><p>Gli strumenti di validazione del codice HTML aiutano a rilevare, e quindi sostituire, le etichette obsolete.</p>
+<h2 id="lattributo-lang-delletichetta-html">L&rsquo;attributo <code>lang</code> dell&rsquo;etichetta <code>html</code></h2>
+<p>L&rsquo;etichetta <code>html</code> prevede l&rsquo;attributo <code>lang</code>, che serve ad indicare il &ldquo;Codice di lingua IETF&rdquo; della pagina web.</p>
+<p>Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata la lingua in una determinata regione di uno stato. Ad esempio, la pagina web può essere scritta in &ldquo;francese-belga&rdquo;, una varietà del francese parlato dai francofoni del Belgio, con differenze fonetiche. Oppure, può essere scritta in bielorusso con alfabeto cirillico, o ancora bielorusso con alfabeto latino. O anche, russo, scritto in alfabeto cirillico e parlato in Bielorussia. Il codice IETF è composto principalmente da tre parti, la prima obbligatoria, le rimanenti facoltative:</p>
+<ol>
+<li>il codice del linguaggio, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_639-1" title="Link a Wikipedia per lo standard ISO 639-1">ISO 639-1</a>;</li>
+<li>il codice del nome della scrittura, espresso secondo lo standard <a href="https://en.wikipedia.org/wiki/ISO_15924" title="Link a Wikipedia per lo standard ISO 15924">ISO 15924</a>;</li>
+<li>il codice del paese, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_3166" title="Link a Wikipedia per lo standard ISO 3166">ISO 3166</a>.</li>
+</ol>
+<p>L&rsquo;indicazione della lingua corretta aiuta gli strumenti di traduzione e quelli di lettura ad alta voce del testo nella corretta interpretazione del testo.</p>
+<p>Le pagine web in italiano, non avendo particolari complicazioni di linguaggio, devono avere l&rsquo;etichetta di apertura <code>&lt;html lang=&quot;it&quot;&gt;</code>.</p>
+<p>Possono esservi casi in cui un particolare contenuto è scritto in un linguaggio differente rispetto al resto della pagina web. In questi casi, l&rsquo;attributo <code>lang</code> può essere usato per indicare il linguaggio utilizzato per lo specifico contenuto.</p>
+<p>Di seguito visualizziamo un esempio in cui la pagina web è in italiano, ma un paragrafo è in spagnolo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;it&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;…&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;Informazioni in italiano&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;es&#34;</span>&gt;Información para hispanohablantes&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>Nell&rsquo;esempio appena visto, l&rsquo;indicazione aggiuntiva del paragrafo con lingua differente aiuta enormemente sia gli strumenti di traduzione, sia gli strumenti di lettura ad alta voce a leggere e tradurre correttamente il testo spagnolo.</p>
 
     </div>
   </article>
@@ -323,13 +346,13 @@ poi chiuse.</p>
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/web/html/intro/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">HTML Lez. 01 - Introduzione</p>
+			<p class="pager__title">HTML Lez. 01 - Il World Wide Web</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/html/tagtesto/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">HTML Lez. 03 - Etichette per la formattazione del testo</p>
+			<p class="pager__title">HTML Lez. 03 - Formattazione carattere, liste e tabelle</p>
 		</a>
 	</div>
 </nav>

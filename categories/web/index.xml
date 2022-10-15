@@ -8,12 +8,12 @@
     <language>it-IT</language>
     <lastBuildDate>Tue, 30 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>HTML Lez. 8 - Accessibilità</title>
+      <title>HTML Lez. 08 - Accessibilità</title>
       <link>http://codingepaduli.github.io/coding/web/html/accessibilita/</link>
       <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/accessibilita/</guid>
-      <description>HTML Lez. 8 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&amp;rsquo;uso di tecnologie assistive</description>
+      <description>HTML Lez. 08 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&amp;rsquo;uso di tecnologie assistive</description>
     </item>
     
     <item>
@@ -44,39 +44,39 @@
     </item>
     
     <item>
-      <title>HTML Lez. 04 - Etichette con attributi</title>
-      <link>http://codingepaduli.github.io/coding/web/html/tagattributes/</link>
-      <pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate>
+      <title>HTML Lez. 04 - Multimedialità e interattività</title>
+      <link>http://codingepaduli.github.io/coding/web/html/immagini/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/html/tagattributes/</guid>
-      <description>HTML Lez. 04 - Etichette che richiedono l&amp;rsquo;uso di attributi</description>
+      <guid>http://codingepaduli.github.io/coding/web/html/immagini/</guid>
+      <description>HTML Lez. 04 - Etichette per audio, video, immagini e collegamenti a risorse esterne</description>
     </item>
     
     <item>
-      <title>HTML Lez. 03 - Etichette per la formattazione del testo</title>
+      <title>HTML Lez. 03 - Formattazione carattere, liste e tabelle</title>
       <link>http://codingepaduli.github.io/coding/web/html/tagtesto/</link>
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/tagtesto/</guid>
-      <description>HTML Lez. 03 - Etichette per la formattazione del testo</description>
+      <description>HTML Lez. 03 - Etichette per la formattazione carattere, per la creazione di liste e di tabelle</description>
     </item>
     
     <item>
-      <title>HTML Lez. 02 - Etichette (tag)</title>
+      <title>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag)</title>
       <link>http://codingepaduli.github.io/coding/web/html/etichette/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/etichette/</guid>
-      <description>HTML Lez. 02 - Etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
+      <description>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
     </item>
     
     <item>
-      <title>HTML Lez. 01 - Introduzione</title>
+      <title>HTML Lez. 01 - Il World Wide Web</title>
       <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
-      <description>HTML Lez. 01 - Introduzione al linguaggio HTML</description>
+      <description>HTML Lez. 01 - Il World Wide Web</description>
     </item>
     
     <item>
