@@ -8,25 +8,7 @@
     <language>it-IT</language>
     <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/coding/web/p5js/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>p5.js Lez. 04.8 - Soluzione progetto Acchiappapalline</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</link>
-      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</guid>
-      <description>Implementazione di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 04.7 - Progetto Acchiappapalline</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</link>
-      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</guid>
-      <description>Sviluppo di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 04.6 - Soluzione progetto Snake</title>
+      <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
       
@@ -35,7 +17,7 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 04.5 - Progetto Snake</title>
+      <title>p5.js Lez. 07.7 - Progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
@@ -44,16 +26,7 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 05 - Accesso ai pixel di un&#39;immagine</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</link>
-      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/pixelaccess/</guid>
-      <description>Accesso ai pixel di un&amp;rsquo;immagine con la libreria grafica p5.js</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 04.4 - Soluzione progetto Arknoid</title>
+      <title>p5.js Lez. 07.6 - Soluzione progetto Arknoid</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -62,7 +35,7 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 04.3 - Progetto Arknoid</title>
+      <title>p5.js Lez. 07.5 - Progetto Arknoid</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -71,7 +44,7 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 04.2 - Soluzione progetto Pong</title>
+      <title>p5.js Lez. 07.4 - Soluzione progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -80,7 +53,7 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 04.1 - Progetto Pong</title>
+      <title>p5.js Lez. 07.3 - Progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -89,12 +62,39 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 04 - Interattività ed animazioni</title>
+      <title>p5.js Lez. 07.2 - Soluzione progetto Acchiappapalline</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</guid>
+      <description>Implementazione di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 07.1 - Progetto Acchiappapalline</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</guid>
+      <description>Sviluppo di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05 - Interattività ed animazioni</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/interactivity/</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/interactivity/</guid>
       <description>Interazione con l&amp;rsquo;utente attraverso le periferiche di input ed output ed animazioni realizzate usando le variabili</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04 - Suoni ed immagini</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</guid>
+      <description>Suoni ed immagini</description>
     </item>
     
     <item>

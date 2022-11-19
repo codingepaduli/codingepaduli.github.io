@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>p5.js Lez. 04 - Suoni ed immagini - Coding e Paduli</title>
+
+    <meta name="description" content="Suoni ed immagini">
+        <meta property="og:title" content="p5.js Lez. 04 - Suoni ed immagini" />
+<meta property="og:description" content="Suoni ed immagini" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/soundsandimages/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2020-09-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-11T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="p5.js Lez. 04 - Suoni ed immagini"/>
+<meta name="twitter:description" content="Suoni ed immagini"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding e tools</a></li>
+
+      <li><a href="/interesting/">Interessanti</a></li>
+
+      <li><a href="/opensource/">Open Source</a></li>
+
+      <li><a href="/webapp/">WebApp</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-11T00:00:00Z">11-09-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="suoni-ed-immagini">Suoni ed immagini</h1>
+<p>Il cervello umano interpreta come <strong>suono</strong> la variazione di pressione dell&rsquo;aria generata da un corpo in oscillazione e percepita attraverso l&rsquo;orecchio.</p>
+<p>In un programma, suoni ed immagini sono gestiti come risorse esterne salvate sotto forma di file. Quando il programma viene eseguito, queste risorse devono essere caricate in memoria.</p>
+<p>In questa fase, si può incorrere in alcune problematiche, ad esempio le risorse possono essere non accessibili (perché spostate o cancellate) oppure è necessario un certo intervallo di tempo affinché siano trasmesse attraverso la rete (che può essere lenta o temporaneamente non disponibile).</p>
+<p>Per questo motivo, la fase di caricamento delle risorse viene eseguita prima delle fasi di avvio del programma, in modo da gestire eventuali problemi mostrando dei messaggi di errore all&rsquo;utente.</p>
+<p>In ambiente <code>p5.js</code> la fase di caricamento delle risorse è gestita dalla <code>preload</code>, che viene eseguita prima delle funzioni <code>setup</code>e <code>draw</code>.</p>
+<p>La gestione dei suoni non è inclusa nella libreria <code>p5.js</code>, ma fa parte della libreria esterna <code>p5.sound.js</code>. Per includere entrambe le librerie nella pagina web, sono necessarie le seguenti istruzioni:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><h2 id="caricamento-di-unimmagine">Caricamento di un&rsquo;immagine</h2>
+<p>Per caricare in memoria un&rsquo;immagine dobbiamo specificare il percorso ed il formato dell&rsquo;immagine. Il percorso può essere assoluto o relativo. I formati validi sono <code>JPG</code> e <code>PNG</code>.</p>
+<p>La funzione progettata per caricare un&rsquo;immagine è <code>loadImage</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: loadImage(path)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    path     String: Path of the image to be loaded
+</span></span></code></pre></div><p>Il parametro formale <code>path</code> è obbligatorio e rappresenta il percorso dell&rsquo;immagine.</p>
+<p>Per caricare in memoria l&rsquo;immagine <code>image.png</code>, sostituiamo al parametro formale <code>path</code> (che indica il percorso) il valore <code>image.png</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadImage</span>(<span style="color:#e6db74">&#39;image.png&#39;</span>);
+</span></span></code></pre></div><h2 id="caricamento-di-file-audio">Caricamento di file audio</h2>
+<p>Per caricare in memoria un file audio dobbiamo specificare il percorso ed il formato del file audio. Il percorso può essere assoluto o relativo. I formati validi sono <code>WAV</code>, <code>MP3</code>, <code>OGG</code> e <code>M4A/AAC</code>.</p>
+<p>La funzione progettata per caricare un file audio è <code>loadSound</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: loadSound(path)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    path     String: Path to the sound file
+</span></span></code></pre></div><p>Il parametro formale <code>path</code> è obbligatorio e rappresenta il percorso del file audio.</p>
+<p>Per caricare in memoria il file audio <code>beatbox.mp3</code>, sostituiamo al parametro formale <code>path</code> (che indica il percorso) il valore <code>beatbox.mp3</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">sound</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;beatbox.mp3&#39;</span>);
+</span></span></code></pre></div><h2 id="esempio-caricamento-risorse">Esempio caricamento risorse</h2>
+<p>Di seguito un esempio di caricamento delle risorse:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sound</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">img</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">preload</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sound</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;assets/beatbox.mp3&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadImage</span>(<span style="color:#e6db74">&#39;assets/image.png&#39;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="visualizzare-unimmagine">Visualizzare un&rsquo;immagine</h2>
+<p>Un&rsquo;immagine viene visualizzata tipicamente in un&rsquo;area rettangolare. Si può scegliere di creare l&rsquo;area rettangolare con le stesse dimensioni dell&rsquo;immagine o di specificare le dimensioni dell&rsquo;area rettangolare nella quale disegnare l&rsquo;immagine, ingrandendo o restringendo l&rsquo;immagine di conseguenza.</p>
+<p>La funzione progettata per visualizzare l&rsquo;immagine è <code>image</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: image(img, x, y, [width], [height])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    img    Image: the image to display
+</span></span><span style="display:flex;"><span>    x      Number: the x-coordinate of the top-left corner of the image
+</span></span><span style="display:flex;"><span>    y      Number: the y-coordinate of the top-left corner of the image
+</span></span><span style="display:flex;"><span>    width  Number: the width to draw the image (Optional)
+</span></span><span style="display:flex;"><span>    height Number: the height to draw the image (Optional)
+</span></span></code></pre></div><p>Il parametro formale <code>img</code> è obbligatorio e rappresenta la variabile nella quale è stata caricata l&rsquo;immagine. I parametri formali <code>x</code> ed <code>y</code> sono le coordinate dell&rsquo;angolo in alto a sinistra nel quale iniziare a disegnare l&rsquo;area rettangolare dell&rsquo;immagine. I parametri formali <code>width</code> ed <code>height</code> sono facoltativi, in quanto indicati tra parentesi quadre, ed indicano le dimensioni dell&rsquo;area rettangolare nella quale disegnare l&rsquo;immagine, ingrandendola o riducendola.</p>
+<p>Per creare un&rsquo;area rettangolare con vertice in alto a sinistra nel punto (80, 140), sostituiamo al parametro formale <code>img</code> la variabile che contiene l&rsquo;immagine caricata in memoria, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>80</code>, al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>140</code>, al parametro formale <code>width</code> (che indica la base) il valore <code>80</code> ed al parametro formale <code>height</code> (che indica l&rsquo;altezza) il valore <code>20</code>, quindi invochiamo la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">image</span>(<span style="color:#a6e22e">img</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>);
+</span></span></code></pre></div><p>Nel caso si voglia visualizzare solo una parte dell&rsquo;immagine, questa funzione ci permette di ritagliarla. Ci permette anche di aggiungere uno spiazzamento rispetto al quale disegnare l&rsquo;immagine nell&rsquo;area rettangolare. Per la descrizione di queste funzionalità più avanzate si rimanda alla documentazione ufficiale.</p>
+<h2 id="salvare-in-un-file-limmagine-disegnata-nellarea-da-disegno">Salvare in un file l&rsquo;immagine disegnata nell&rsquo;area da disegno</h2>
+<p>L&rsquo;immagine disegnata nell&rsquo;area da disegno può essere salvata in un file.</p>
+<p>La funzione progettata per salvare l&rsquo;immagine è <code>saveCanvas</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: saveCanvas(nomeFile, estensione)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    filename   String: the filename
+</span></span><span style="display:flex;"><span>    ext        String: the extension
+</span></span></code></pre></div><p>Il parametro formale <code>filename</code> rappresenta il nome del file nel quale salvare l&rsquo;immagine presente nel canvas. Il parametro formale <code>extension</code> rappresenta l&rsquo;estensione del file, le uniche estensioni valide sono <code>&quot;png&quot;</code> oppure <code>&quot;jpg&quot;</code>.</p>
+<p>Per salvare nel file <code>immagine.jpg</code> l&rsquo;immagine presente nell&rsquo;area da disegno, sostituiamo al parametro formale <code>filename</code> (che indica il nome) il valore <code>immagine</code> ed al parametro formale <code>ext</code> (che indica l&rsquo;estensione del file) il valore <code>jpg</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">saveCanvas</span>(<span style="color:#e6db74">&#39;immagine&#39;</span>, <span style="color:#e6db74">&#39;jpg&#39;</span>);
+</span></span></code></pre></div><h2 id="gestione-file-audio-come-oggetti">Gestione file audio come oggetti</h2>
+<p>I file audio sono trattati come oggetti, quindi per poterli gestire è necessario accennare alcuni concetti di programmazione ad oggetti. In particolare, un oggetto è dotato di metodi, che sono funzioni invocabili attraverso una sintassi detta &ldquo;dot notation&rdquo;, leggermente differente da quella utilizzata fino ad ora.</p>
+<p>Per invocare un metodo, la sintassi da utilizzare prevede di indicare prima l&rsquo;oggetto audio, poi inserire il carattere &ldquo;punto&rdquo; (in inglese &ldquo;dot&rdquo;, da cui il nome &ldquo;dot notation&rdquo;), e poi scrivere la funzione con i parametri attuali.</p>
+<p>Nelle successive descrizioni delle operazioni applicabili su un file audio, si supporrà di aver caricato in memoria il file audio, tramite la funzione <code>loadSound</code> descritta in precedenza, e di aver salvato l&rsquo;oggetto nella variabile di nome <code>sound</code>.</p>
+<h3 id="riproduzione-singola-di-un-file-audio">Riproduzione singola di un file audio</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per riprodurre una sola volta il file audio si utilizza il metodo <code>play</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: play()
+</span></span></code></pre></div><p>Il metodo non prevede parametri. Per riprodurre il file audio, si può invocare il metodo <code>play</code> sull&rsquo;oggetto <code>sound</code> come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">play</span>();
+</span></span></code></pre></div><h3 id="riproduzione-continua-un-file-audio">Riproduzione continua un file audio</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per riprodurre in continuazione il file audio si utilizza il metodo <code>loop</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: loop()
+</span></span></code></pre></div><p>Il metodo non prevede parametri. Per riprodurre continuamente il file audio, si può invocare il metodo <code>loop</code> sull&rsquo;oggetto <code>sound</code> come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">loop</span>();
+</span></span></code></pre></div><h3 id="impostazione-del-volume-di-riproduzione">Impostazione del volume di riproduzione</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per impostare il volume di riproduzione si utilizza il metodo <code>setVolume</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>setVolume(volume)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    volume    Number: Volume (amplitude) between 0.0 and 1.0
+</span></span></code></pre></div><p>Il parametro formale è <code>volume</code>, che rappresenta il volume di riproduzione del file ed è rappresentato da un numero compreso tra <code>0</code> (muto) e <code>1</code> (massimo volume),</p>
+<p>Per impostare al massimo volume la riproduzione del file audio, si può invocare il metodo <code>setVolume</code> sull&rsquo;oggetto <code>sound</code>, sostituiamo al parametro formale <code>volume</code> (che indica il volume di riproduzione) il valore <code>1</code> (il volume massimo), come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">setVolume</span>(<span style="color:#ae81ff">1</span>); <span style="color:#75715e">// MUTE
+</span></span></span></code></pre></div><h3 id="fermare-la-riproduzione-un-file-audio">Fermare la riproduzione un file audio</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per fermare la riproduzione di un file audio si utilizza il metodo <code>stop</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: stop()
+</span></span></code></pre></div><p>Il metodo non prevede parametri. Per fermare la riproduzione del file audio, si può invocare il metodo <code>stop</code> sull&rsquo;oggetto <code>sound</code> come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">stop</span>();
+</span></span></code></pre></div><h3 id="mettere-in-pausa-la-riproduzione-un-file-audio">Mettere in pausa la riproduzione un file audio</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per mettere in pausa la riproduzione di un file audio si utilizza il metodo <code>pause</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: pause()
+</span></span></code></pre></div><p>Il metodo non prevede parametri. Per fermare la riproduzione del file audio, si può invocare il metodo <code>pause</code> sull&rsquo;oggetto <code>sound</code> come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">pause</span>();
+</span></span></code></pre></div><h3 id="verificare-se-il-file-audio-è-in-corso-di-riproduzione-singola">Verificare se il file audio è in corso di riproduzione singola</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per verificare se un file è in corso di riproduzione singola si utilizza il metodo <code>isPlaying</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: isPlaying()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns
+</span></span><span style="display:flex;"><span>    Boolean: true if an audio file is playing, false if not (i.e. paused or stopped).
+</span></span></code></pre></div><p>Il metodo non prevede parametri, ma restituisce un valore booleano che assume valore <code>true</code> se il file è in corso di riproduzione e valore <code>false</code> in caso contrario. Questo valore può essere salvato in una variabile.</p>
+<p>Per verificare se il file audio è in corso di riproduzione singola, si può invocare il metodo <code>isPlaying</code> sull&rsquo;oggetto <code>sound</code> come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">playing</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">isPlaying</span>();
+</span></span></code></pre></div><h3 id="verificare-se-il-file-audio-è-in-corso-di-riproduzione-continua">Verificare se il file audio è in corso di riproduzione continua</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per verificare se il file audio è in corso di riproduzione continua si utilizza il metodo <code>isLooping</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: isLooping()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns
+</span></span><span style="display:flex;"><span>    Boolean: true if an audio file is looping, false if not (i.e. paused or stopped).
+</span></span></code></pre></div><p>Il metodo non prevede parametri, ma restituisce un valore booleano che assume valore <code>true</code> se il file è in corso di riproduzione continua e valore <code>false</code> in caso contrario. Questo valore può essere salvato in una variabile.</p>
+<p>Per verificare se il file audio è in corso di riproduzione continua, si può invocare il metodo <code>isLooping</code> sull&rsquo;oggetto <code>sound</code> come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">looping</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">isLooping</span>();
+</span></span></code></pre></div><h3 id="verificare-se-il-file-audio-è-in-pausa">Verificare se il file audio è in pausa</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per verificare se il file audio è in pausa si utilizza il metodo <code>isPaused</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: isPaused()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns
+</span></span><span style="display:flex;"><span>    Boolean: true if an audio file is paused, false if not.
+</span></span></code></pre></div><p>Il metodo non prevede parametri, ma restituisce un valore booleano che assume valore <code>true</code> se il file è in pausa e valore <code>false</code> in caso contrario. Questo valore può essere salvato in una variabile.</p>
+<p>Per verificare se il file audio è in pausa, si può invocare il metodo <code>isPaused</code> sull&rsquo;oggetto <code>sound</code> come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">paused</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">isPaused</span>();
+</span></span></code></pre></div><h3 id="ottenere-la-durata-del-file-audio">Ottenere la durata del file audio</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per ottenere la durata di un file audio si utilizza il metodo <code>duration</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: duration()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns
+</span></span><span style="display:flex;"><span>    Number: The duration of the soundFile in seconds.
+</span></span></code></pre></div><p>Il metodo non prevede parametri, ma restituisce un valore numerico che indica la durata in secondi del file audio. Questo valore può essere salvato in una variabile.</p>
+<p>Per ottenere la durata del file audio, si può invocare il metodo <code>duration</code> sull&rsquo;oggetto <code>sound</code> come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">duration</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">duration</span>();
+</span></span></code></pre></div><h3 id="ottenere-il-tempo-corrente-di-riproduzione-del-file-audio">Ottenere il tempo corrente di riproduzione del file audio</h3>
+<p>Partendo dalla variabile <code>sound</code>, che rappresenta l&rsquo;oggetto audio caricato in memoria come descritto in precedenza, per ottenere il tempo corrente di riproduzione di un file audio si utilizza il metodo <code>currentTime</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: currentTime()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns
+</span></span><span style="display:flex;"><span>    Number: The currentTime of the soundFile in seconds.
+</span></span></code></pre></div><p>Il metodo non prevede parametri, ma restituisce un valore numerico che indica il tempo corrente di riproduzione del file audio ed è espresso in secondi. Questo valore può essere salvato in una variabile.</p>
+<p>Per ottenere il tempo corrente di riproduzione del file audio, si può invocare il metodo <code>currentTime</code> sull&rsquo;oggetto <code>sound</code> come nell&rsquo;esempio seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">duration</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">currentTime</span>();
+</span></span></code></pre></div><!-- TODO  aggiungere descrizione dei metodi
+    channels()
+    sampleRate()
+-->
+
+    </div>
+  </article>
+</main>
+
+
+
+<script src="/static/js/p5-1.2.0-min.js"></script><script src="/static/js/p5.sound-1.2.0-min.js"></script>
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/p5js/colorsandstyles_exe/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">p5.js Lez. 03.1 - Esercizi di grafica 2D a colori</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/p5js/interactivity/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">p5.js Lez. 05 - Interattività ed animazioni</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2022 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
