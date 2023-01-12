@@ -34,7 +34,7 @@ function draw() {
     let red = pixel[0];
     let green = pixel[1];
     let blue = pixel[2];
-    let alpha = pixel[3] / 255;
+    // FIXME let alpha = pixel[3] / 255;
 
     fill('light green');
     textSize(16);

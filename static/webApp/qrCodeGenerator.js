@@ -53,7 +53,7 @@ function drawMaskPattern(startX, startY, size, maskPattern) {
             
             if (draw) {
             //if ( (x+y) % 3 == 0) {
-                maskPatternMatrix[x][y] = 1
+                maskPatternMatrix[x][y] = 1;
                 stroke('red');
                 point(startX+x, startY+y);
             } else {
@@ -188,7 +188,7 @@ function calculateAllAlignmentPatterns(centerY, version) {
 
             let step = (stop - start) / numIntervals;
             
-            stepFixed = Math.ceil(step);
+            let stepFixed = Math.ceil(step);
             
             if (stepFixed % 2 == 1) stepFixed++;
 

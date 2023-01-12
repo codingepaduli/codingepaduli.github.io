@@ -7,6 +7,8 @@ function setup() {
 function draw() {
   background(255, 255, 255);
 
+  let radius; // alias of saturation
+
   // circle position and width
   let centerX = 250;
   let centerY = 200;
@@ -20,8 +22,8 @@ function draw() {
     for (let saturation = 0; saturation < maxRadius; saturation ++) {
 
         radius = saturation;
-        let x = centerX + radius * cos(hue)
-        let y = centerY - radius/2 * sin(hue)
+        let x = centerX + radius * cos(hue);
+        let y = centerY - radius/2 * sin(hue);
         stroke(hue, saturation, 100);
         point (x, y);
     }
@@ -32,8 +34,8 @@ function draw() {
   for (let hue = 180; hue < 270; hue += 0.25) {
     for (let bright = 0; bright < 100; bright ++) {
         radius = saturation;
-        let x = centerX + radius * cos(hue)
-        let y = centerY - radius/2 * sin(hue)
+        let x = centerX + radius * cos(hue);
+        let y = centerY - radius/2 * sin(hue);
         stroke(hue, saturation, 100 - bright);
         point (x, y+bright);
     }
@@ -42,8 +44,8 @@ function draw() {
   let hue = 0;
   for (let saturation = 0; saturation < maxRadius; saturation ++) {
     for (let bright = 0; bright < 100; bright ++) {
-        x = saturation;
-        y = bright;
+        let x = saturation;
+        let y = bright;
         stroke(hue, saturation, 100 - bright);
         point (centerX + x, centerY + y);
     }

@@ -23,7 +23,6 @@ function getRandomInt(min, max) {
 }
 
 const snakeColor = new Colore(0, 255, 0);
-const labirintColor = new Colore(255, 0, 0);
 const preyColor = new Colore(0, 0, 255);
 
 const diameter = 20;

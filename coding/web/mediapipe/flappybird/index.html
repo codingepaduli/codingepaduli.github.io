@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Esercizi di AI - 01 Riconoscimento mano - Coding e Paduli</title>
+    <title>Esercizi di AI - 05 Flappy Bird - Coding e Paduli</title>
 
-    <meta name="description" content="Esercizi di AI - 01 Riconoscimento mano">
-        <meta property="og:title" content="Esercizi di AI - 01 Riconoscimento mano" />
-<meta property="og:description" content="Esercizi di AI - 01 Riconoscimento mano" />
+    <meta name="description" content="Esercizi di AI - 05 Flappy Bird">
+        <meta property="og:title" content="Esercizi di AI - 05 Flappy Bird" />
+<meta property="og:description" content="Esercizi di AI - 05 Flappy Bird" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingepaduli.github.io/coding/web/mediapipe/handsmodel_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2022-08-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-08-30T00:00:00+00:00" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/mediapipe/flappybird/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-01-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-06T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="Esercizi di AI - 01 Riconoscimento mano"/>
-<meta name="twitter:description" content="Esercizi di AI - 01 Riconoscimento mano"/>
+<meta name="twitter:title" content="Esercizi di AI - 05 Flappy Bird"/>
+<meta name="twitter:description" content="Esercizi di AI - 05 Flappy Bird"/>
 
 
 
@@ -219,27 +219,22 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-08-30T00:00:00Z">30-08-2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/mediapipe/" rel="category">mediapipe</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-01-06T00:00:00Z">06-01-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/mediapipe/" rel="category">mediapipe</a>
 	</span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="riconoscimento-mano">Riconoscimento mano</h1>
-<h2 id="doesnt-work-on-firefox-why">(doesn&rsquo;t work on Firefox, why?)</h2>
-<!-- L'errore su Firefox sembra simile a questo 
-  <a href="https://github.com/google/mediapipe/issues/2704">https://github.com/google/mediapipe/issues/2704</a>  
-  devo sperare in un aggiornamento delle librerie 
--->
-<p><img src="https://mediapipe.dev/images/mobile/hand_landmarks.png" alt="Hands landmarks (punti di riferimento della mano)"></p>
+      <h1 id="flappy-bird">Flappy Bird</h1>
 <div class="container">
-    <div id="handsModel"></div>
+    <div id="flappyBird"></div>
     <video class="input_video"></video>
 </div>
 <script>
+
     let canvas = null;
     let videoElement;
     let camera;
-    let hands;
+    let pose;
     let results;
 
     function onResults(risultati) {
@@ -250,30 +245,32 @@
     function setup() {
         console.info("setup canvas");
 
-        let canvasNode = document.querySelector('#handsModel');
+        let canvasNode = document.querySelector('#flappyBird');
         let cw = canvasNode.parentNode.clientWidth;
-        canvas = createCanvas(640, 480).parent('handsModel');
+        canvas = createCanvas(640, 480).parent('flappyBird');
         canvas.class('output_canvas');
         background("black");
 
         console.info("setup hands model");
         const videoElement = document.getElementsByClassName('input_video')[0];
 
-        const hands = new Hands({locateFile: (file) => {
-            return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
+        const pose = new Pose({locateFile: (file) => {
+            return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
         }});
-        hands.setOptions({
-            maxNumHands: 2,
+        pose.setOptions({
             modelComplexity: 1,
+            smoothLandmarks: true,
+            enableSegmentation: true,
+            smoothSegmentation: true,
             minDetectionConfidence: 0.5,
             minTrackingConfidence: 0.5
         });
-        hands.onResults(onResults);
+        pose.onResults(onResults);
 
         console.info("setup camera")
         const camera = new Camera(videoElement, {
             onFrame: async () => {
-                await hands.send({image: videoElement});
+                await pose.send({image: videoElement});
             },
             width: 1280,
             height: 720
@@ -283,36 +280,81 @@
         console.info("end setup")
     }
 
+    let circleY = 25;
+    let rectX1 = 50;
+    let rectX2 = 250;
+    let rectX3 = 450;
+    let rectY1 = 300;
+    let rectY2 = 200;
+    let rectY3 = 100;
+
+    let leftAndRightUpStep1 = false;
+    let leftAndRightUpStep2 = false;
+    let leftArmY = 0;
+    let rightArmY = 0;
+
     function draw() {
-
-        if (results !== undefined && results.image !== undefined) {
-            //console.dir(results.image);
-            //image(results.image, 0, 0);
-        }
-
         fill("white");
         strokeWeight(1);
-        let mano0 = [];
-        if (results === undefined || results.multiHandLandmarks === undefined ||
-                results.multiHandLandmarks.length === undefined || results.multiHandLandmarks.length == 0) {
+        let poseData = [];
+        if (results === undefined || results.poseLandmarks === undefined ||
+                results.poseLandmarks.length === undefined || results.poseLandmarks.length == 0) {
             background("black");
             text("VUOTO", 30, 30);
-            mano0 = undefined;
+            poseData = undefined;
         } else {
-            mano0 = results.multiHandLandmarks[0];
+            poseData = results.poseLandmarks;
             background("green");
             text("PIENO", 30, 30);
+
+            text("braccia SU: " + leftAndRightUpStep1, 30, 50);
+            text("braccia GIU: " + leftAndRightUpStep2, 30, 70);
         }
 
-        if (mano0 !== undefined && mano0[0] !== undefined ) {
-            console.info(mano0[0].x * 640 + " - " + mano0[0].y * 480, 60, 60);
+        if (poseData !== undefined) {
+            console.info(poseData[0].x * 640 + " - " + poseData[0].y * 480, 60, 60);
 
             strokeWeight(5);
             stroke("white");
-            for (let i=0; i<mano0.length; i++) {
-                point(mano0[i].x * 640, mano0[i].y * 480);
+            for (let i=0; i<poseData.length; i++) {
+                point(poseData[i].x * 640, poseData[i].y * 480);
             }
+
+            fill('blue');
+            circle(40, circleY, 50);
+
+            fill('green');
+            rect(rectX1, rectY1, 20, width - rectY1);
+            rect(rectX2, rectY2, 20, width - rectY2);
+            rect(rectX3, rectY3, 20, width - rectY3);
+
+            leftHandY = poseData[19].y * 480;
+            rightHandY = poseData[20].y * 480;
+
+            // braccia su
+            if (leftAndRightUpStep1 === false && leftHandY < 100 && rightHandY < 100 ) {
+                leftAndRightUpStep1 = true;
+            }
+
+            // braccia giu
+            if (leftAndRightUpStep2 === false && leftAndRightUpStep1 === true && leftHandY > 400 && rightHandY > 400 ) {
+                leftAndRightUpStep2 = true;
+            }
+
+            // flap
+            if (leftAndRightUpStep1 === true && leftAndRightUpStep2 === true && leftAndRightUpStep1 === true && leftAndRightUpStep2 === true) {
+                circleY = circleY - 60;
+                leftAndRightUpStep1 = false;
+                leftAndRightUpStep2 = false;
+            }
+
+            circleY ++;
+
+            rectX1 = rectX1 > 0 ? rectX1-1 : width;
+            rectX2 = rectX2 > 0 ? rectX2-1 : width;
+            rectX3 = rectX3 > 0 ? rectX3-1 : width;
         }
+
     }
 </script>
 
@@ -323,20 +365,14 @@
 
 
 <script src="/static/js/p5-1.2.0-min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d/control_utils_3d.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d/control_utils_3d.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script><script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
 
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/mediapipe/handsmodelskeletonized_exe/" rel="prev">
+		<a class="pager__link" href="/coding/web/mediapipe/handsmodel_exe/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">Esercizi di AI - 02 Scheletrizzazione mano</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/mediapipe/flappybird/" rel="next">
-			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">Esercizi di AI - 05 Flappy Bird</p>
+			<p class="pager__title">Esercizi di AI - 01 Riconoscimento mano</p>
 		</a>
 	</div>
 </nav>

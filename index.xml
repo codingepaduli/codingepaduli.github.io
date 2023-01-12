@@ -8,6 +8,15 @@
     <language>it-IT</language>
     <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>La nascita del computer e delle telecomunicazioni</title>
+      <link>http://codingepaduli.github.io/coding/storia/</link>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/storia/</guid>
+      <description>La nascita del computer e delle telecomunicazioni</description>
+    </item>
+    
+    <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
@@ -224,6 +233,24 @@
     </item>
     
     <item>
+      <title>Esercizi di AI - 05 Flappy Bird</title>
+      <link>http://codingepaduli.github.io/coding/web/mediapipe/flappybird/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/mediapipe/flappybird/</guid>
+      <description>Esercizi di AI - 05 Flappy Bird</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
+    
+    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>
@@ -239,15 +266,6 @@
       
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
-    </item>
-    
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
     </item>
     
     <item>

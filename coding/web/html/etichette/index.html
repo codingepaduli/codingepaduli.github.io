@@ -273,8 +273,7 @@ di chiusura <code>&lt;/body&gt;</code> indica la fine dei contenuti). Questa eti
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;paragrafo della pagina web.&lt;/<span style="color:#f92672">p</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
-</span></span></code></pre></div><p>Si fa notare nuovamente che tutte le etichette nell&rsquo;esempio riportato sono prima aperte e
-poi chiuse.</p>
+</span></span></code></pre></div><p>Si fa notare nuovamente che tutte le etichette nell&rsquo;esempio riportato sono prima aperte e poi chiuse.</p>
 <p>Sempre dall&rsquo;esempio precedente, si nota che le etichette possono essere inserite (innestate) l&rsquo;una dentro l&rsquo;altra, come avviene per i contenuti della pagina web presentata (il titolo ed il paragrafo) che si trovano nell&rsquo;etichetta <code>body</code> , che a sua volta è posizionata nell&rsquo;etichetta <code>html</code>.</p>
 <h2 id="dom">DOM</h2>
 <p>Esiste un modello che descrive la struttura della pagina web come una struttura gerarchica: il DOM (dall&rsquo;inglese Document Object Model), utilizzato soprattutto in un contesto che tratta di JavaScript, ma molto ricorrente anche quando si parla di HTML.</p>
@@ -311,26 +310,25 @@ poi chiuse.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">acronym</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;as soon as possible&#34;</span>&gt;ASAP&lt;/<span style="color:#f92672">acronym</span>&gt; --&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">big</span>&gt;This text is big&lt;/<span style="color:#f92672">big</span>&gt;
 </span></span></code></pre></div><p>Gli strumenti di validazione del codice HTML aiutano a rilevare, e quindi sostituire, le etichette obsolete.</p>
-<h2 id="lattributo-lang-delletichetta-html">L&rsquo;attributo <code>lang</code> dell&rsquo;etichetta <code>html</code></h2>
-<p>L&rsquo;etichetta <code>html</code> prevede l&rsquo;attributo <code>lang</code>, che serve ad indicare il &ldquo;Codice di lingua IETF&rdquo; della pagina web.</p>
-<p>Il &ldquo;Codice di lingua IETF&rdquo; identifica come viene scritta e parlata la lingua in una determinata regione di uno stato. Ad esempio, la pagina web può essere scritta in &ldquo;francese-belga&rdquo;, una varietà del francese parlato dai francofoni del Belgio, con differenze fonetiche. Oppure, può essere scritta in bielorusso con alfabeto cirillico, o ancora bielorusso con alfabeto latino. O anche, russo, scritto in alfabeto cirillico e parlato in Bielorussia. Il codice IETF è composto principalmente da tre parti, la prima obbligatoria, le rimanenti facoltative:</p>
+<h2 id="lattributo-lang-per-indicare-la-lingua">L&rsquo;attributo <code>lang</code> per indicare la lingua</h2>
+<p>E&rsquo; praticamente obbligatorio indicare nella pagina web la lingua utilizzata, così da aiutare gli strumenti di traduzione e quelli di lettura ad alta voce del testo nella corretta interpretazione e pronuncia delle frasi.</p>
+<p>La lingua deve essere indicata utilizzando il &ldquo;Codice di lingua IETF&rdquo;, che identifica come viene scritta e parlata la lingua in una determinata regione di una nazione.</p>
+<p>Ad esempio, la pagina web può essere scritta in &ldquo;francese-belga&rdquo;, una varietà del francese parlato dai francofoni del Belgio, con differenze fonetiche. Oppure, può essere scritta in bielorusso con alfabeto cirillico, o ancora bielorusso con alfabeto latino. O anche, russo, scritto in alfabeto cirillico e parlato in Bielorussia. Il codice IETF è composto principalmente da tre parti, la prima obbligatoria, le rimanenti facoltative:</p>
 <ol>
 <li>il codice del linguaggio, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_639-1" title="Link a Wikipedia per lo standard ISO 639-1">ISO 639-1</a>;</li>
 <li>il codice del nome della scrittura, espresso secondo lo standard <a href="https://en.wikipedia.org/wiki/ISO_15924" title="Link a Wikipedia per lo standard ISO 15924">ISO 15924</a>;</li>
 <li>il codice del paese, espresso secondo lo standard <a href="https://it.wikipedia.org/wiki/ISO_3166" title="Link a Wikipedia per lo standard ISO 3166">ISO 3166</a>.</li>
 </ol>
-<p>L&rsquo;indicazione della lingua corretta aiuta gli strumenti di traduzione e quelli di lettura ad alta voce del testo nella corretta interpretazione del testo.</p>
-<p>Le pagine web in italiano, non avendo particolari complicazioni di linguaggio, devono avere l&rsquo;etichetta di apertura <code>&lt;html lang=&quot;it&quot;&gt;</code>.</p>
-<p>Possono esservi casi in cui un particolare contenuto è scritto in un linguaggio differente rispetto al resto della pagina web. In questi casi, l&rsquo;attributo <code>lang</code> può essere usato per indicare il linguaggio utilizzato per lo specifico contenuto.</p>
-<p>Di seguito visualizziamo un esempio in cui la pagina web è in italiano, ma un paragrafo è in spagnolo:</p>
+<p>Una volta identificato il codice di lingua IETF più appropriato, questo deve essere inserito nell&rsquo;attributo <code>lang</code> dell&rsquo;etichetta <code>html</code>. Per le pagine web in italiano, il codice è <code>it</code>, quindi l&rsquo;etichetta di apertura della pagina web è <code>&lt;html lang=&quot;it&quot;&gt;</code>.</p>
+<p>Possono esservi casi in cui un qualsiasi elemento è scritto in un linguaggio differente rispetto alla pagina web. Anche in questi casi è consigliato indicare per ogni elemento la lingua utilizzata, inserendola nell&rsquo;attributo <code>lang</code> dell&rsquo;etichetta relativa all&rsquo;elemento.</p>
+<p>Di seguito visualizziamo un esempio in cui la pagina web è in italiano, ma un paragrafo è in spagnolo, l&rsquo;attributo <code>lang</code> è associato sia alla pagina web per indicare che è in italiano, sia al paragrafo per indicare che è in spagnolo:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;it&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;…&lt;/<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;Informazioni in italiano&lt;/<span style="color:#f92672">p</span>&gt;
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;es&#34;</span>&gt;Información para hispanohablantes&lt;/<span style="color:#f92672">p</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
-</span></span></code></pre></div><p>Nell&rsquo;esempio appena visto, l&rsquo;indicazione aggiuntiva del paragrafo con lingua differente aiuta enormemente sia gli strumenti di traduzione, sia gli strumenti di lettura ad alta voce a leggere e tradurre correttamente il testo spagnolo.</p>
+</span></span></code></pre></div><p>L&rsquo;indicazione della lingua italiana per la pagina web e l&rsquo;indicazione aggiuntiva del paragrafo in lingua spagnola aiuta enormemente sia gli strumenti di traduzione, sia gli strumenti di lettura ad alta voce a leggere correttamente il testo, sia e tradurlo correttamente in un altra lingua.</p>
 
     </div>
   </article>
@@ -370,7 +368,7 @@ poi chiuse.</p>
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2022 Coding e Paduli.
+			&copy; 2023 Coding e Paduli.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

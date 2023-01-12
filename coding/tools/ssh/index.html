@@ -223,6 +223,32 @@
 	</span>
 </div></div>
     </header>
+<details class="post__toc toc">
+    <summary class="toc__title">Indice</summary>
+    <div class="toc__menu">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cenni-di-crittografia">Cenni di crittografia</a></li>
+    <li><a href="#funzionamento-basilare-di-ssh">Funzionamento basilare di SSH</a></li>
+    <li><a href="#autenticazione-con-credenziali">Autenticazione con credenziali</a>
+      <ul>
+        <li><a href="#configurazione-ed-autorizzazione-con-credenziali">Configurazione ed autorizzazione con credenziali</a></li>
+      </ul>
+    </li>
+    <li><a href="#autenticazione-con-chiave-privatapubblica">Autenticazione con chiave privata/pubblica</a>
+      <ul>
+        <li><a href="#configurazione-ed-autorizzazione-con-chiave-privatapubblica">Configurazione ed autorizzazione con chiave privata/pubblica</a></li>
+        <li><a href="#memorizzare-la-passphrase-usando-lagente-ssh">Memorizzare la passphrase usando l&rsquo;agente SSH</a></li>
+      </ul>
+    </li>
+    <li><a href="#eseguire-comandi-tramite-ssh">Eseguire comandi tramite SSH</a></li>
+    <li><a href="#firmare-e-verificare-file-con-ssh">Firmare e verificare file con SSH</a></li>
+    <li><a href="#copia-sicura-dei-file">Copia sicura dei file</a></li>
+    <li><a href="#analisi-della-sicurezza">Analisi della sicurezza</a></li>
+  </ul>
+</nav>
+    </div>
+</details>
 <div class="content post__content clearfix">
       <h1 id="ssh">SSH</h1>
 <p>SSH (Secure SHell) è uno strumento per l&rsquo;amministrazione di una macchina da remoto. Fornisce i meccanismi per autenticare l&rsquo;utente sulla macchina remota e per creare un canale di comunicazione criptato sul quale far viaggiare input e output.</p>
@@ -234,12 +260,12 @@
 <ul>
 <li><code>apt install openssh-server</code></li>
 </ul>
-<p>File di configurazione su client:</p>
+<p>File di configurazione dei client per collegarsi ai server SSH:</p>
 <ul>
 <li><code>/etc/ssh/ssh_config</code></li>
 <li>files in <code>/etc/ssh/ssh_config.d/*.conf</code></li>
 </ul>
-<p>File di configurazione su server:</p>
+<p>File di configurazione del demone SSH:</p>
 <ul>
 <li><code>/etc/ssh/sshd_config</code></li>
 <li>files in <code>/etc/ssh/sshd_config.d/*.conf</code></li>
@@ -285,11 +311,34 @@
 <li>firma dei messaggi (autenticità dei messaggi);</li>
 <li>creazione di proxy e reverse-proxy per la trasmissione di informazioni su canali sicuri;</li>
 </ul>
-<h2 id="autenticazione-con-userpassword">Autenticazione con user/password</h2>
-<p>L&rsquo;autenticazione con utente e password è demandata al sistema operativo.</p>
-<p>L&rsquo;utente fornisce un nome utente ed una password, il server SSH confronta tali dati con il database degli utenti del sistema operativo ed in caso di corrispondenza permette l&rsquo;accesso all&rsquo;utente.</p>
-<p>E&rsquo; possibile abilitarla o disabilitarla modificando il file di configurazione del server SSH <code>/etc/ssh/sshd_config</code>, alla voce:</p>
+<h2 id="autenticazione-con-credenziali">Autenticazione con credenziali</h2>
+<p>SSH utilizza il sistema <strong>PAM</strong> come sistema principale di autenticazione degli utenti attraverso le credenziali. Il sistema PAM ha vari moduli che definiscono le strategie di autenticazione e può essere configurato attraverso i file <code>/etc/pam.conf</code> e <code>/etc/pam.d/sshd</code>.</p>
+<p>Sono due le principali strategie di autenticazione degli utenti che accedono ad un server SSH.</p>
+<p>La prima richiede che l&rsquo;utente inserisca il nome utente e la password per l&rsquo;accesso al sistema.</p>
+<p>E&rsquo; possibile abilitare o disabilitare questa strategia di autenticazione modificando il file di configurazione del server SSH <code>/etc/ssh/sshd_config</code>, alla voce:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PasswordAuthentication yes <span style="color:#75715e"># yes or no</span>
+</span></span></code></pre></div><p>La seconda richiede che l&rsquo;utente risponda ad una serie di domande e solo nel caso in cui tutte le risposte siano corrette l&rsquo;utente è autenticato. Questo meccanismo permette di applicare strategie di autenticazione come quelle basate ad esempio sulla verifica in due passaggi, in cui oltre ad utente e password viene richiesto un codice di verifica inviato su smartphone o su email o generato con applicazioni OTP.</p>
+<p>E&rsquo; possibile abilitare o disabilitare questo sistema di autenticazione modificando il file di configurazione del server SSH <code>/etc/ssh/sshd_config</code>, alla voce:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>KbdInteractiveAuthentication yes <span style="color:#75715e"># yes or no</span>
+</span></span></code></pre></div><p>Nelle vecchie versioni di SSH, questo valore era chiamato <code>ChallengeResponseAuthentication</code> e se si trova ancora presente nei file di configurazione è solo per compatibilità a ritroso.</p>
+<h3 id="configurazione-ed-autorizzazione-con-credenziali">Configurazione ed autorizzazione con credenziali</h3>
+<p>Si può scegliere se permettere l&rsquo;autenticazione degli utenti senza password, impostando nella configurazione l&rsquo;opzione:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PermitEmptyPasswords no <span style="color:#75715e"># yes or no</span>
+</span></span></code></pre></div><p>Per questioni di sicurezza l&rsquo;accesso ai server dovrebbe avvenire utilizzando un utente senza permessi amministrativi, per poi utilizzare i metodi del sistema stesso per diventare amministratore. E&rsquo; l&rsquo;amministratore di sistema a scegliere il metodo di accesso consentito, assegnando alla proprietà <code>PermitRootLogin</code> uno dei seguenti valori:</p>
+<ul>
+<li><code>prohibit-password</code> permette l&rsquo;accesso come amministratore solo attraverso una chiave pubblica o un certificato, ma non con una password perché con un attacco brute-force si potrebbe riuscire ad accedere al sistema;</li>
+<li><code>no</code> permette l&rsquo;accesso solo agli utenti non amministratori;</li>
+<li><code>yes</code> permette l&rsquo;accesso anche come amministratore;</li>
+<li><code>forced-commands-only</code> permette di lanciare i comandi come amministratore, ma non di effettuare l&rsquo;accesso. I comandi eseguibili devono essere configurati in SSH.</li>
+</ul>
+<p>L&rsquo;impostazione consigliata è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PermitRootLogin no
+</span></span></code></pre></div><p>Si può indicare gli utenti ai quali permettere l&rsquo;accesso al server attraverso l&rsquo;opzione:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AllowUser username1 username2
+</span></span></code></pre></div><p>In ambienti in cui spesso si modificano gli utenti che hanno i permessi di accesso ai server, piuttosto che effettuare continue modifiche ai file di configurazione, può essere utile garantire l&rsquo;accesso ad un intero gruppo e quindi aggiungere o rimuovere gli utenti dal gruppo. L&rsquo;opzione per tale scelta è:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AllowGroup group1 group2
+</span></span></code></pre></div><p>Al salvataggio della configurazione deve essere poi riavviato il sistema o il servizio SSH, con il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl reload ssh
 </span></span></code></pre></div><h2 id="autenticazione-con-chiave-privatapubblica">Autenticazione con chiave privata/pubblica</h2>
 <p>L&rsquo;autenticazione con chiave privata/pubblica è impostata nel file di configurazione del server SSH <code>/etc/ssh/sshd_config</code> dalla voce seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PubkeyAuthentication yes <span style="color:#75715e"># yes or no</span>
@@ -313,7 +362,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">2048</span> SHA256: abacadaeaf1234567890 Comment <span style="color:#66d9ef">for</span> key xyz <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>^^^^   ^^^^^^^^^^^^^^^^^^^^^^^^       ^^^^^^^^^^       ^^^
 </span></span><span style="display:flex;"><span> |__ Size   Fingerprint __|     Comment __|     Type __|
-</span></span></code></pre></div><h3 id="autorizzare-laccesso-di-un-client-al-server">Autorizzare l&rsquo;accesso di un client al server</h3>
+</span></span></code></pre></div><h3 id="configurazione-ed-autorizzazione-con-chiave-privatapubblica">Configurazione ed autorizzazione con chiave privata/pubblica</h3>
 <p>Il file <code>$HOME/.ssh/authorized_keys</code> contiene l&rsquo;elenco di client a cui è permesso l&rsquo;accesso al server.</p>
 <p>Per aggiungere l&rsquo;accesso di un client, è necessario copiare la chiave <strong>pubblica</strong> del client nel server, come di seguito:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-copy-id -i $HOME/chiavi_ssh/id_rsa.pub user@server
@@ -389,9 +438,9 @@
 <ol>
 <li>
 <p>Quando il client si collega per la priva volta al server, il server invia al client la propria impronta digitale, quindi l&rsquo;utente deve verificarla ed accettarla per proseguire la connessione. Questa impronta digitale viene salvata nel file <code>./ssh/known_hosts</code>. L&rsquo;utente, per pigrizia, non verifica mai l&rsquo;impronta digitale e sceglie di fidarsi sempre;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>The authenticity of host xxx can<span style="color:#e6db74">&#39;&#39;</span>t be established.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>The authenticity of host xxx can&#39;&#39;t be established.
 </span></span><span style="display:flex;"><span>RSA key fingerprint is SHA256:4fdsanfMfazsbfMadfas
-</span></span><span style="display:flex;"><span>Are you sure you want to <span style="color:#66d9ef">continue</span> connecting <span style="color:#f92672">(</span>yes/no<span style="color:#f92672">)</span>?
+</span></span><span style="display:flex;"><span>Are you sure you want to continue connecting (yes/no)?
 </span></span></code></pre></div></li>
 <li>
 <p>La chiave pubblica dell&rsquo;utente deve essere inviata al server (per poter autenticare l&rsquo;utente), che la memorizza nel file <code>.ssh/authorized_keys</code>. E&rsquo; problematico inviare la chiave pubblica al server senza connessione sicura, soprattutto se non si ha una password di accesso (il client non ha SSH, dato che ancora non è possibile stabilire una connessione col server). Inoltre le mille chiavi accumulate nel file <code>.ssh/authorized_keys</code> sono ingestibili.</p>
@@ -438,7 +487,7 @@
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2022 Coding e Paduli.
+			&copy; 2023 Coding e Paduli.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

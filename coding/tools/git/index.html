@@ -402,11 +402,12 @@
 <!-- markdown-link-check-disable-next-line -->
 <p><a href="https://gitlab.com/codingepaduli/gitmergetutorial.git" title="GitLab - URL completo del Repository">https://gitlab.com/codingepaduli/gitmergetutorial.git</a></p>
 <h3 id="clonazione-repository">Clonazione repository</h3>
-<p>Una volta creato il repository remoto, bisogna prendere nota dell&rsquo;indirizzo web dello stesso per poi procedere alla clonazione. E&rsquo; importante indicare anche la chiave SSH da utilizzare, che tipicamente si trova nella cartella <code>~/.ssh/id_ed25519</code>. Il comado di clonazione è il seguente comando:</p>
+<p>Una volta creato il repository remoto, bisogna prendere nota dell&rsquo;indirizzo web dello stesso per poi procedere alla clonazione. E&rsquo; importante indicare anche la chiave SSH da utilizzare, che tipicamente si trova nella cartella <code>~/.ssh/id_ed25519</code>. Il comando di clonazione è il seguente comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone git@github.com:progetto-git/progetto-git.github.io.git --config core.sshCommand<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ssh -i ~/.ssh/id_ed25519&#34;</span>
 </span></span></code></pre></div><p>Si può verificare che il repository locale ha un riferimento al repository remoto, accedendo alla cartella creata ed utilizzando, al suo interno, il comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote -v
-</span></span></code></pre></div><h3 id="prima-configurazione-del-repository">Prima configurazione del repository</h3>
+</span></span></code></pre></div><h2 id="gestione-del-repository">Gestione del repository</h2>
+<h3 id="prima-configurazione-del-repository">Prima configurazione del repository</h3>
 <p>Git ha 3 livelli di configurazione:</p>
 <ul>
 <li>configurazione di sistema, su linux si trova in <code>/etc/gitconfig</code>, su Windows si trova in <code>\Git\mingw64\etc\gitconfig</code>;</li>
@@ -494,7 +495,7 @@
 <li>modified: modificati rispetto all&rsquo;ultimo commit;</li>
 <li>unmodified: non modificati rispetto all&rsquo;ultimo commit;</li>
 </ul>
-<p>Prima di poter committare il file <code>file1.txt</code>, questo deve essere nuovamente aggiunto all&rsquo;area di &ldquo;staging&rdquo;. I comandi per l&rsquo;aggiunta e per il commit sono i seguenti:</p>
+<p>Prima di poter effettuare il commit del file <code>file1.txt</code>, questo deve essere nuovamente aggiunto all&rsquo;area di &ldquo;staging&rdquo;. I comandi per l&rsquo;aggiunta e per il commit sono i seguenti:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add file1.txt
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Primo commit&#34;</span>
 </span></span></code></pre></div><p>A questo punto il commit è stato completato ed è stata salvata la nuova versione del repository locale. Per visualizzare la lista di commit e relative versioni del repository locale, si utilizza il comando:</p>
@@ -549,8 +550,8 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push gitlab main
 </span></span><span style="display:flex;"><span>git pull gitlab main
 </span></span></code></pre></div><p>Si nota che in questo caso viene sincronizzato il ramo di sviluppo principale <strong>main</strong>.</p>
-<h2 id="branches">Branches</h2>
-<h3 id="modalità-di-lavoro-con-i-branches">Modalità di lavoro con i Branches</h3>
+<h2 id="gestione-di-più-rami-di-sviluppo">Gestione di più rami di sviluppo</h2>
+<h3 id="modalità-di-lavoro-con-più-rami">Modalità di lavoro con più rami</h3>
 <p>Il repository principale ha un ramo di sviluppo principale chiamato <strong>main</strong> o <strong>master</strong>, ma sul repository possono essere creati anche altri rami di sviluppo chiamati <strong>branches</strong>, che costituiscono la modalità comune di lavoro con Git.</p>
 <p>Tipicamente sul repository vengono creati diversi branches (rami di sviluppo) per le diverse funzionalità da sviluppare, e su ogni singolo branch (ramo) viene sviluppata una singola funzionalità da parte di uno o più sviluppatori del team.</p>
 <p>Gli sviluppatori che lavorano su un singolo branch creano quindi la prima versione della funzionalità da sviluppare effettuando il primo commit, poi gli sviluppi proseguono e viene creata la seconda versione con un secondo commit, poi la terza versione a cui corrisponde un terzo commit, e cosi via.</p>
@@ -567,12 +568,14 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git switch git-merge
 </span></span></code></pre></div><p>Esiste anche l&rsquo;opzione per creare e spostarsi sul nuovo ramo, utilizzando il comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git switch -c git-merge
-</span></span></code></pre></div><p>Git aggiunge i file alla staging area ed effettua il commit sul branch correntemente selezionato, i comandi di aggiunta e commit sono quelli già visti in precedenza, che per comodità si riportano nuovamente di seguito:</p>
+</span></span></code></pre></div><p>Quando si effettua il passaggio da un ramo all&rsquo;altro, lo sviluppatore dovrebbe accertarsi di lasciare il ramo pulito.</p>
+<p>Se nella cartella di lavoro ci sono file tracciati dei quali non è stato effettuato il commit oppure file non tracciati, quando si effettua lo switch, questi file vengono comunque lasciati nella cartella di lavoro, creando un&rsquo;incongruenza, dato che non appartengono al ramo selezionato.</p>
+<p>I comandi di aggiunta e commit sono quelli già visti in precedenza, solo che questa volta il commit viene legato al nuovo ramo. Ad esempio:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add file.txt
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;aggiunto file.txt&#34;</span>
 </span></span></code></pre></div><p>Per visualizzare la lista di commit nei vari branches del repository, si è gia visto di utilizzare il comando di log con grafico:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#34;%h %s&#34;</span> --graph
-</span></span></code></pre></div><h3 id="sincronizzazione-dei-branches-tra-locale-e-remoto">Sincronizzazione dei branches tra locale e remoto</h3>
+</span></span></code></pre></div><h3 id="sincronizzazione-dei-rami-tra-locale-e-remoto">Sincronizzazione dei rami tra locale e remoto</h3>
 <p>Quando si crea un branch in locale, si deve ricordare che il repository remoto non ne possiede una copia, e quindi un&rsquo;azione di sincronizzazione genera errore. Per indicare di creare un branch anche in remoto ed al contempo sincronizzare il branch, si utilizza il comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push --set-upstream origin git-merge
 </span></span></code></pre></div><p>In remoto è possibile che siano stati creati o cancellati branch, quindi è necessario sincronizzare repository locale e remoto per poter avere disponibili tutti i branch.</p>
@@ -582,7 +585,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git fetch --prune
 </span></span></code></pre></div><h3 id="merge-dei-rami-in-modalità-a-linea-di-comando">Merge dei rami in modalità a linea di comando</h3>
 <p>Quando si vuole effettuare la fusione del ramo &ldquo;git-merge&rdquo; con il ramo &ldquo;main&rdquo;, da linea di comando bisogna spostarsi sul ramo di sviluppo principale <strong>main</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git swich main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git switch main
 </span></span></code></pre></div><p>Effettuato ciò, si può effettuare la fusione del ramo &ldquo;git-merge&rdquo;, eseguendo il comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git merge git-merge
 </span></span></code></pre></div><p>L&rsquo;output indica che l&rsquo;operazione è stata eseguita:</p>
@@ -616,7 +619,35 @@
 <p><img src="/static/coding/tools/GitHub-MergePullRequest-step3.png" alt="GitHub - Merge della Pull Request - passo 3" title="GitHub - Merge Pull Request - passo 3"></p>
 <p>Completata l&rsquo;operazione, la pull request risulta correttamente fusa nel ramo di sviluppo indicato.</p>
 <p><img src="/static/coding/tools/GitHub-MergePullRequest-step4.png" alt="GitHub - Merge della Pull Request - passo 4" title="GitHub - Merge della Pull Request - passo 4"></p>
-<h2 id="contribuire-ad-altri-progetti">Contribuire ad altri progetti</h2>
+<h2 id="aree-di-lavoro-worktree">Aree di lavoro (worktree)</h2>
+<p>E&rsquo; già stato menzionato in precedenza che quando si effettua il passaggio da un ramo all&rsquo;altro, lo sviluppatore dovrebbe accertarsi di lasciare il ramo pulito, al fine di evitare incongruenze dovute a file che non appartengono al ramo su cui si passa.</p>
+<p>Ci sono situazioni in cui sopravviene l&rsquo;urgenza di modificare un ramo mentre si sta lavorando su un altro ramo alla modifica di molti file. In questa situazione, effettuare un operazione di commit di un lavoro incompleto (e magari non funzionante) è fuori questione. Il passaggio al ramo che necessita la correzione non è assolutamente consigliato, perchè tutti i file modificati verrebbero spostati nel ramo nel quale ci si sposta, creando incongruenza. Si potrebbe pensare di conservare i file modificati nella stashing area, ma esiste un alternativa.</p>
+<p>Esiste la possibilità di creare una copia del ramo desiderato in una cartella differente e lavorare in quella cartella, lasciando la cartella attuale inalterata. Il comando <code>git worktree</code> si occupa di creare le varie copie, permettendo di avere più cartelle in contemporanea, ognuna su un ramo differente o con uno stato differente.</p>
+<p>E&rsquo; da tenere a mente che queste copie possono essere cancellate automaticamente dopo un certo tempo, quindi si consiglia di leggere la documentazione per trattare copie che si vuol conservare per lunghi periodi.</p>
+<p>Ad esempio, per creare nella cartella &ldquo;..progetto-git-worktree&rdquo; uno spazio di lavoro &ldquo;progetto-worktree&rdquo; partendo dal ramo &ldquo;main&rdquo;, si utilizza il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git worktree add -b progetto-worktree ../progetto-git-worktree main
+</span></span></code></pre></div><p>A questo punto, si possono visualizzare gli spazi di lavoro con il seguente comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>git worktree list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/SVN/progetto-git.github.io  d8c1b27 [main]
+</span></span><span style="display:flex;"><span>/SVN/progetto-git-worktree   1c0b453 [progetto-worktree]
+</span></span></code></pre></div><p>Si sottolinea che &ldquo;progetto-worktree&rdquo; è il nome dello spazio di lavoro ma è anche il ramo &ldquo;progetto-worktree&rdquo;, come si può vedere dal comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>git branch --list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  git-merge
+</span></span><span style="display:flex;"><span>* main
+</span></span><span style="display:flex;"><span>+ progetto-worktree
+</span></span></code></pre></div><p>La situazione consigliata è quella di avere una sola copia per ramo, anche se è possibile forzare questo meccanismo. Se si prova ad effettuare lo switch dal ramo &ldquo;main&rdquo; verso il ramo &ldquo;progetto-worktree&rdquo; si ottiene il seguente messaggio di errore:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>git switch progetto-worktree
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fatal: Il checkout di &#39;progetto-worktree&#39; è già stato eseguito in &#39;/SVN/progetto-git-worktree&#39;
+</span></span></code></pre></div><p>Una volta che il lavoro è stato svolto sul ramo &ldquo;progetto-worktree&rdquo;, si consiglia di rimuoverlo e di pulire i riferimenti con i comandi</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git worktree remove progetto-worktree
+</span></span><span style="display:flex;"><span>git worktree prune
+</span></span></code></pre></div><p>Nota: in caso di errori, si può provare ad indicare il percorso completo della cartella:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git worktree remove /SVN/progetto-git-worktree
+</span></span><span style="display:flex;"><span>git worktree prune
+</span></span></code></pre></div><h2 id="contribuire-ad-altri-progetti">Contribuire ad altri progetti</h2>
 <p>Git permette di contribuire ai progetti esterni (di altri sviluppatori, anche sconosciuti) inviando sui loro repository delle pull request contenenti le proprie modifiche.</p>
 <p>Per questioni di sicurezza, però, non è possibile inviare lavoro su un repository che non è il proprio. Dato che si vuole apportare una modifica ad un repository di cui non si possiede la titolarità, è necessaria un&rsquo;operazione preliminare: la <strong>fork</strong>. Con questa operazione, si effettua una copia del repository dello sviluppatore e di questa copia si è titolari.</p>
 <p>Per contribuire al repository dell&rsquo;altro sviluppatore si effettuata la fork e la clonazione del repository, sul quale si apporteranno le modifiche, e quindi si crea una pull request tra il proprio repository ed il repository dell&rsquo;altro sviluppatore.</p>
@@ -739,7 +770,7 @@
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2022 Coding e Paduli.
+			&copy; 2023 Coding e Paduli.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
