@@ -287,15 +287,6 @@
     </item>
     
     <item>
-      <title>mediapipe</title>
-      <link>http://codingepaduli.github.io/coding/web/linkmediapipe/</link>
-      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/linkmediapipe/</guid>
-      <description>Lezioni su mediapipe nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/mediapipe&#39;&gt;mediapipe&lt;/a&gt;</description>
-    </item>
-    
-    <item>
       <title>SSH</title>
       <link>http://codingepaduli.github.io/coding/tools/ssh/</link>
       <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
@@ -329,15 +320,6 @@
       
       <guid>http://codingepaduli.github.io/coding/tools/cron/</guid>
       <description>Cron e Crontab, strumenti per la schedulazione di un task con una specifica ricorrenza.</description>
-    </item>
-    
-    <item>
-      <title>p5.js</title>
-      <link>http://codingepaduli.github.io/coding/web/linkp5js/</link>
-      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/linkp5js/</guid>
-      <description>Lezioni sulla libreria grafica p5.js nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/p5js&#39;&gt;p5.js&lt;/a&gt;</description>
     </item>
     
     <item>
@@ -449,15 +431,6 @@
     </item>
     
     <item>
-      <title>PowerShell</title>
-      <link>http://codingepaduli.github.io/coding/shell/linkpowershell/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/shell/linkpowershell/</guid>
-      <description>Lezioni sulla programmazione di script in PowerShell nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/powershell&#39;&gt;PowerShell&lt;/a&gt;</description>
-    </item>
-    
-    <item>
       <title>JavaScript Lez. 04 - Identificazione del tipo e conversioni tra tipi</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/conversioni/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
@@ -482,15 +455,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/primi_script/</guid>
       <description>Introduzione alle prime istruzioni di JavaScript</description>
-    </item>
-    
-    <item>
-      <title>JavaScript</title>
-      <link>http://codingepaduli.github.io/coding/web/linkjavascript/</link>
-      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/linkjavascript/</guid>
-      <description>Lezioni sul linguaggio JavaScript nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/javascript&#39;&gt;JavaScript&lt;/a&gt;</description>
     </item>
     
     <item>
@@ -557,15 +521,6 @@
     </item>
     
     <item>
-      <title>HTML</title>
-      <link>http://codingepaduli.github.io/coding/web/linkhtml/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/linkhtml/</guid>
-      <description>Lezioni sul linguaggio HTML nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/html&#39;&gt;HTML&lt;/a&gt;</description>
-    </item>
-    
-    <item>
       <title>PowerShell</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
@@ -576,38 +531,11 @@
     
     <item>
       <title>Shell</title>
-      <link>http://codingepaduli.github.io/coding/link-shell/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/link-shell/</guid>
-      <description>Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell&#39;&gt;Shell&lt;/a&gt;</description>
-    </item>
-    
-    <item>
-      <title>Shell</title>
       <link>http://codingepaduli.github.io/coding/shell/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/shell/</guid>
       <description>Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script</description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>http://codingepaduli.github.io/coding/link-tools/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/link-tools/</guid>
-      <description>Strumenti di lavoro e risorse per il programmatore nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/tools&#39;&gt;Tools&lt;/a&gt;</description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>http://codingepaduli.github.io/coding/link-web/</link>
-      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/link-web/</guid>
-      <description>Corsi di programmazione web nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web&#39;&gt;Web&lt;/a&gt;</description>
     </item>
     
     <item>

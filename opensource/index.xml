@@ -8,6 +8,15 @@
     <language>it-IT</language>
     <lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/opensource/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Debian GNU/Linux</title>
+      <link>http://codingepaduli.github.io/opensource/debian/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/opensource/debian/</guid>
+      <description>Debian GNU/Linux, il sistema operativo universale e completamente Libero</description>
+    </item>
+    
+    <item>
       <title>DavX e Fruux</title>
       <link>http://codingepaduli.github.io/opensource/davx_e_fruux/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>

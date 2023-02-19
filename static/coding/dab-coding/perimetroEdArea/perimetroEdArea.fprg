@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-05 07:47:57 PM"/>
+        <attribute name="created" value="YWRtaW47SU5GTy1ET0M7MjAyMy0wMS0xODsiMTE6MjI6MDMgIjsyMjYx"/>
+        <attribute name="edited" value="YWRtaW47SU5GTy1ET0M7MjAyMy0wMS0xODsiMDE6MzY6NTEgIjsxOzIzNzY="/>
+        <attribute name="edited" value="aW87TEFQVE9QQ0U7MjAyMy0wMi0wNTswNzo0Nzo1NyBQTTszOzIyMTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Autore ____ Data 2023-02-05&#13;&#10;&#13;&#10;Programma che, a partire da un numero D inserito dall'utente, calcola l'area ed il perimetro del quadrato di lato D, l'area e la circonferenza del cerchio di raggio D e l'area ed il perimetro del triangolo equilatero di lato D.&#13;&#10;&#13;&#10;Input D&#13;&#10;Elaborazione ed Output: areaQuadrato, perimetroQuadrato, areaCerchio, circonferezaCercio, areaTriangoloEq, perimetroTriangoloEq"/>
+            <declare name="D" type="Real" array="False" size=""/>
+            <declare name="areaQuadrato, perimetroQuadrato, areaCerchio, circonferenzaCerchio, areaTriangoloEq, perimetroTriangoloEq" type="Real" array="False" size=""/>
+            <output expression="&quot;Inserisci il valore di D&quot;" newline="True"/>
+            <input variable="D"/>
+            <assign variable="areaQuadrato" expression="D*D"/>
+            <assign variable="perimetroQuadrato" expression="D * 4"/>
+            <assign variable="areaCerchio" expression="3.14 * D * D"/>
+            <assign variable="circonferenzaCerchio" expression="2 * 3.14 * D"/>
+            <assign variable="areaTriangoloEq" expression="SQRT(3/4) * D * D"/>
+            <assign variable="perimetroTriangoloEq" expression="D * 3"/>
+            <output expression="&quot;L'area del quadrato &#232; &quot; &amp; areaQuadrato &amp; &quot; ed il perimetro &#232; &quot; &amp; perimetroQuadrato" newline="True"/>
+            <output expression="&quot; L'area del cerchio &#232; &quot; &amp; areaCerchio &amp; &quot; e la circonferenza &#232; &quot; &amp; circonferenzaCerchio" newline="True"/>
+            <output expression="&quot;L'area del triangolo equilatero &#232; &quot; &amp; areaTriangoloEq &amp; &quot; ed il perimetro &#232; &quot; &amp; perimetroTriangoloEq" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

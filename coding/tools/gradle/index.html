@@ -228,6 +228,49 @@
       <h1 id="gradle">Gradle</h1>
 <p><a href="https://gradle.org/" title="Sito web di Gradle">Gradle</a> è un sistema open source per automatizzare le fasi di compilazione, test, pacchettizzazione, deploy e tutte le altre fasi di sviluppo.</p>
 <p>Nel corso di questo articolo si descriveranno i concetti fondamentali (validi per qualsiasi tipo di progetto) e si utilizzerà Gradle per la gestione di un progetto Java.</p>
+<h2 id="installazione-di-gradle-su-windows">Installazione di Gradle su Windows</h2>
+<p>Gradle è un software Java.</p>
+<p>L&rsquo;ambiente di esecuzione di Java è la Java Virtual Machine, di solito è installata su buona parte dei computer. Per verificare che sia già installata è possibile lanciare il comando <code>java --version</code>. Se viene indicata la versione, allora la JVM è correttamente installato.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java --version
+</span></span><span style="display:flex;"><span>java version <span style="color:#e6db74">&#34;17.0.6+10&#34;</span>
+</span></span></code></pre></div><p>L&rsquo;ambiente di sviluppo di Java è il Java Development Kit, per verificare che la Java Development Kit sia installata correttamente, da linea di comando è possibile lanciare il comando <code>javac -version</code>. Se viene indicata la versione, allora il Java Development Kit è correttamente installato.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>javac -version
+</span></span><span style="display:flex;"><span>javac 17.0.6
+</span></span></code></pre></div><p>Se il Java Development Kit non è installato, lo si può scaricare ed installare dal sito <a href="https://adoptium.net/">https://adoptium.net/</a></p>
+<p>Una volta installato il Java Development Kit, si può proseguire nell&rsquo;installazione di Gradle.</p>
+<p>Per installare Gradle dal gestore pacchetti Choco, si può eseguire il comando da powershell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>choco install gradle
+</span></span></code></pre></div><!--
+
+winget-cli non è supportato ancora
+
+Per installare Gradle dal gestore pacchetti winget-cli, si può eseguire il comando da powershell:
+
+```bash
+winget-cli install gradle
+```
+
+-->
+<p>Se non si ha un gestore pacchetti, si può scaricare Gradle dal sito ufficiale. Non è previsto un pacchetto di installazione, per cui è necessario scaricare il pacchetto compresso <code>gradle-8.0-bin.zip</code> ed estrarlo in una cartella a piacere, come <code>c:\gradle</code>;</p>
+<p>A questo punto, è necessario configurare il percorso nelle variabili d&rsquo;ambiente del sistema operativo. Cliccare con il secondo tasto sull&rsquo;icona del sistema e scegliere la voce di menu &ldquo;Proprietà di sistema&rdquo;.</p>
+<p><img src="/static/coding/tools/Gradle-windows-config-00-variabili-ambiente.png" alt="Windows - Configurare variabili ambiente"></p>
+<p>Cliccare sulla voce di menu &ldquo;Impostazioni di sistema avanzate&rdquo;.</p>
+<p><img src="/static/coding/tools/Gradle-windows-config-01-variabili-ambiente.png" alt="Windows - Configurare variabili ambiente"></p>
+<p>Cliccare sul pulsante &ldquo;Variabili d&rsquo;ambiente&rdquo;.</p>
+<p><img src="/static/coding/tools/Gradle-windows-config-02-variabili-ambiente.png" alt="Windows - Configurare variabili ambiente"></p>
+<p>Nel caso non sia presente la variabile d&rsquo;ambiente <code>JAVA_HOME</code>, crearne una che punti alla cartella dove è installato Java:</p>
+<ul>
+<li>il nome della variabile deve essere <code>JAVA_HOME</code>;</li>
+<li>il valore della variabile deve puntare alla cartella di installazione del JDK.</li>
+</ul>
+<p><img src="/static/coding/tools/Gradle-windows-config-03-java-home.png" alt="Windows - Variabile d&amp;rsquo;ambiente JAVA_HOME"></p>
+<p>Allo stesso modo, è necessario creare una variabile d&rsquo;ambiente che punti all&rsquo;eseguibile Gradle. L&rsquo;installazione con gestore pacchetti crea automaticamente la variabile, mentre l&rsquo;installazione manuale prevede che sia l&rsquo;utente a crearla:</p>
+<ul>
+<li>il nome della variabile deve essere <code>GRADLE_HOME</code>;</li>
+<li>il valore della variabile deve puntare alla cartella di installazione di Gradle.</li>
+</ul>
+<p><img src="/static/coding/tools/Gradle-windows-config-04-gradle-home.png" alt="Windows - Variabile d&amp;rsquo;ambiente GRADLE_HOME"></p>
+<!-- TODO aggiungere gradle alla variabile PATH ?? -->
 <h2 id="gestione-progetto-con-gradle">Gestione progetto con Gradle</h2>
 <h3 id="creazione-progetto-java">Creazione progetto Java</h3>
 <p>Il comando da utilizzare per creare un nuovo progetto è:</p>
@@ -247,6 +290,11 @@
 </span></span><span style="display:flex;"><span>  4: Kotlin
 </span></span><span style="display:flex;"><span>  5: Swift
 </span></span><span style="display:flex;"><span>Enter selection (default: Java) [1..5] 3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Split functionality across multiple project?
+</span></span><span style="display:flex;"><span>  1: no - only one application project
+</span></span><span style="display:flex;"><span>  2: yes - application and library project
+</span></span><span style="display:flex;"><span>Enter selection (default: no) [1..2] 1
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Select build script DSL:
 </span></span><span style="display:flex;"><span>  1: Groovy
@@ -481,7 +529,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>Supponendo di avere le dipendenze appena citate nel nostro progetto personale, se dovessimo esponesse una firma del tipo:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getResponseCode</span><span style="color:#f92672">(</span>HttpResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ClientProtocolException <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">    </span><span style="color:#f92672">...</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><p>allora il consumatore che utilizza il nostro progetto riuscirebbe a compilare ed eseguire il suo progetto perchè la libreria <code>httpclient</code> è visibile e quindi gli oggetti <code>HttpResponse</code> e <code>ClientProtocolException</code> sarebbero riconducibili alla libreria <code>httpclient</code>.</p>
 <p>Se invece, ancora facendo riferimento all&rsquo;esempio corrente, dovessimo esporre una firma del tipo:</p>

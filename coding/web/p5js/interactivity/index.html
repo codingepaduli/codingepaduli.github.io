@@ -230,8 +230,12 @@
 <p>Il continuo ridisegnare l&rsquo;area da disegno, gestito dalla libreria grafica, unito alla possibilità di modificare lo stato dei vari oggetti grafici, come la posizione ed il colore, permette lo sviluppo di animazioni con una semplicità notevole.</p>
 <p>L&rsquo;unione delle caratteristiche precedentemente elencate permette al programmatore di poter sfruttare tutta la propria creatività e fantasia per realizzare applicazioni multimediali ed interattive con una notevole semplicità.</p>
 <p>Di seguito vengono descritte le principali funzionalità di base che permettono di gestire lo stato e interagire con i principali dispositivi, rimandando alla documentazione ufficiale gli approfondimenti dei concetti avanzati.</p>
+<h2 id="dimensioni-area-da-disegno-e-finestra">Dimensioni area da disegno e finestra</h2>
+<p>Quando il programmatore definisce le dimensioni dell&rsquo;area da disegno, utilizzando la funzione <code>createCanvas</code>, la larghezza e l&rsquo;altezza dell&rsquo;area da disegno vengono memorizzate automaticamente nelle rispettive variabili <code>width</code> ed <code>height</code>.</p>
+<p>Le dimensioni della larghezza e dell&rsquo;altezza della finestra corrente sono invece memorizzate nelle variabili <code>windowWidth</code> e <code>windowHeight</code>.</p>
+<p>Queste variabili sono dichiarate automaticamente, quindi non necessitano di una dichiarazione da parte del programmatore, e possono essere utilizzate per adattare i contenuti alla grandezza dello schermo, che può variare da dispositivo a dispositivo.</p>
+<p>Dato che l&rsquo;utente può ruotare lo schermo con tablet e smartphone, la variabile <code>deviceOrientation</code> indica se lo schermo è orientato in orizzontale o verticale;</p>
 <h2 id="aggiornamento-area-da-disegno">Aggiornamento area da disegno</h2>
-<p>Quando il programmatore definisce le dimensioni dell&rsquo;area da disegno, utilizzando la funzione <code>createCanvas</code>, la larghezza e l&rsquo;altezza dell&rsquo;area da disegno vengono memorizzate automaticamente nelle rispettive variabili <code>width</code> ed <code>height</code>. Queste variabili sono dichiarate automaticamente, quindi non necessitano di una dichiarazione da parte del programmatore, e sono continuamente aggiornate ad ogni cambiamento delle dimensioni dell&rsquo;area.</p>
 <p>L&rsquo;area da disegno viene ridisegnata con una frequenza misurata in fotogrammi per secondo (in inglese frame per second), il cui acronimo è noto ai video-giocatori con la sigla &ldquo;fps&rdquo;); Una frequenza elevata permette una visione più fluida dell&rsquo;animazione generata o del filmato riprodotto, ma richiede una maggiore potenza di elaborazione.</p>
 <p>Il primo fotogramma dell&rsquo;area da disegno è disegnato eseguendo le istruzioni contenute nella funzione <code>setup</code>, che è eseguita una sola volta. Le istruzioni contenute nella funzione <code>draw</code> sono eseguite ciclicamente per generare i fotogrammi successivi, in modo da ridisegnare continuamente l&rsquo;area di lavoro. Per ottenere la frequenza di ridisegno, si può utilizzare la funzione <code>frameRate()</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">freq</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">frameRate</span>();
@@ -360,6 +364,9 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
     </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="https://bleuje.com/tutorials/" style="font-weight: 700; color: #e22d30;">Animations with Processing</a>: Create animation based on loop from periodic function and offset, noise propagation and replacement technique with Processing</p>
   </article>
 </main>
 

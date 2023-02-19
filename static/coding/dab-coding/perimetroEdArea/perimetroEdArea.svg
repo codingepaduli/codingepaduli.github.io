@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by Flowgorithm 3.4.1 (http://flowgorithm.org) -->
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1612" height="4914">
+	<rect x="0" y="0" width="1612" height="4914" fill="#FFFFFF"/>
+	<g>
+		<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,208 546,806"/>
+		<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,4628 546,4691"/>
+		<polygon fill="#404040" stroke="none" points="546,4706 560,4680 531,4680"/>
+		<g>
+			<path fill="#F0D0FF" stroke="#9070A0" stroke-width="3" stroke-dasharray="none" d="M 442,104 A 52 52, 0, 0 0, 442 208 L 650,208 A 52 52, 0, 0 0, 650 104 Z"/>
+			<text x="546" y="122" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+				<tspan x="546" dy="52" unicode-bidi="embed">Inizio</tspan>
+			</text>
+		</g>
+		<g>
+			<path fill="#F0D0FF" stroke="#9070A0" stroke-width="3" stroke-dasharray="none" d="M 442,4706 A 52 52, 0, 0 0, 442 4810 L 650,4810 A 52 52, 0, 0 0, 650 4706 Z"/>
+			<text x="546" y="4724" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+				<tspan x="546" dy="52" unicode-bidi="embed">Fine</tspan>
+			</text>
+		</g>
+		<g>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,806 546,1389"/>
+			<polygon fill="#404040" stroke="none" points="546,1404 560,1378 531,1378"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,1534 546,1597"/>
+			<polygon fill="#404040" stroke="none" points="546,1612 560,1586 531,1586"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,2002 546,2065"/>
+			<polygon fill="#404040" stroke="none" points="546,2080 560,2054 531,2054"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,2184 546,2247"/>
+			<polygon fill="#404040" stroke="none" points="546,2262 560,2236 531,2236"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,2366 546,2429"/>
+			<polygon fill="#404040" stroke="none" points="546,2444 560,2418 531,2418"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,2548 546,2611"/>
+			<polygon fill="#404040" stroke="none" points="546,2626 560,2600 531,2600"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,2730 546,2793"/>
+			<polygon fill="#404040" stroke="none" points="546,2808 560,2782 531,2782"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,2912 546,2975"/>
+			<polygon fill="#404040" stroke="none" points="546,2990 560,2964 531,2964"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,3146 546,3209"/>
+			<polygon fill="#404040" stroke="none" points="546,3224 560,3198 531,3198"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,3380 546,3443"/>
+			<polygon fill="#404040" stroke="none" points="546,3458 560,3432 531,3432"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,3562 546,3625"/>
+			<polygon fill="#404040" stroke="none" points="546,3640 560,3614 531,3614"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,3900 546,3963"/>
+			<polygon fill="#404040" stroke="none" points="546,3978 560,3952 531,3952"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="546,4238 546,4301"/>
+			<polygon fill="#404040" stroke="none" points="546,4316 560,4290 531,4290"/>
+			<g>
+				<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="7,14" points="546,806 676,806"/>
+				<g>
+					<path fill="#FFFFFF" stroke="#606060" stroke-width="3" stroke-dasharray="6,6" d="M 676,286 L 676,1326 L 1508,1326 L 1508,286 Z"/>
+					<text x="1092" y="304" fill="#606060" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+						<tspan x="1092" dy="52" unicode-bidi="embed">Autore ____ Data</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> 2023-02-05&#13;</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"></tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed">&#13;</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed">Programma che, a partire da un numero</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> D inserito dall'utente, calcola l'area ed il</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> perimetro del quadrato di lato D, l'area</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> e la circonferenza del cerchio di raggio</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> D e l'area ed il perimetro del triangolo</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> equilatero di lato</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> D.&#13;</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"></tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed">&#13;</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed">Input</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> D&#13;</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed">Elaborazione ed Output: areaQuadrato,</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> perimetroQuadrato, areaCerchio,</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> circonferezaCercio, areaTriangoloEq,</tspan>
+						<tspan x="1092" dy="52" unicode-bidi="embed"> perimetroTriangoloEq</tspan>
+					</text>
+				</g>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 338,1404 L 338,1534 L 754,1534 L 754,1404 Z"/>
+				<polyline fill="none" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" points="338,1430 754,1430"/>
+				<polyline fill="none" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" points="364,1404 364,1534"/>
+				<text x="559" y="1448" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="559" dy="52" unicode-bidi="embed">Dichiara D: Reale</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 208,1612 L 208,2002 L 884,2002 L 884,1612 Z"/>
+				<polyline fill="none" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" points="208,1638 884,1638"/>
+				<polyline fill="none" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" points="234,1612 234,2002"/>
+				<text x="559" y="1656" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="559" dy="52" unicode-bidi="embed">Dichiara areaQuadrato,</tspan>
+					<tspan x="559" dy="52" unicode-bidi="embed"> perimetroQuadrato,</tspan>
+					<tspan x="559" dy="52" unicode-bidi="embed"> areaCerchio,</tspan>
+					<tspan x="559" dy="52" unicode-bidi="embed"> circonferenzaCerchio,</tspan>
+					<tspan x="559" dy="52" unicode-bidi="embed"> areaTriangoloEq,</tspan>
+					<tspan x="559" dy="52" unicode-bidi="embed"> perimetroTriangoloEq: Reale</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 234,2080 L 182,2184 L 858,2184 L 910,2080 Z"/>
+				<text x="546" y="2098" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">Scrivi &quot;Inserisci il valore di D&quot;</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#C0E0FF" stroke="#6080A0" stroke-width="3" stroke-dasharray="none" d="M 442,2262 L 390,2366 L 650,2366 L 702,2262 Z"/>
+				<text x="546" y="2280" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">Leggi D</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 312,2444 L 312,2548 L 780,2548 L 780,2444 Z"/>
+				<text x="546" y="2462" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">areaQuadrato = D*D</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 234,2626 L 234,2730 L 858,2730 L 858,2626 Z"/>
+				<text x="546" y="2644" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">perimetroQuadrato = D * 4</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 234,2808 L 234,2912 L 858,2912 L 858,2808 Z"/>
+				<text x="546" y="2826" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">areaCerchio = 3.14 * D * D</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 260,2990 L 260,3146 L 832,3146 L 832,2990 Z"/>
+				<text x="546" y="3008" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">circonferenzaCerchio = 2 *</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> 3.14 * D</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 234,3224 L 234,3380 L 858,3380 L 858,3224 Z"/>
+				<text x="546" y="3242" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">areaTriangoloEq = SQRT(3/4)</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> * D * D</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 208,3458 L 208,3562 L 884,3562 L 884,3458 Z"/>
+				<text x="546" y="3476" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">perimetroTriangoloEq = D * 3</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 234,3640 L 104,3900 L 858,3900 L 988,3640 Z"/>
+				<text x="546" y="3658" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">Scrivi &quot;L'area del quadrato &#232;</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> &quot; &amp; areaQuadrato &amp; &quot; ed il</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> perimetro &#232; &quot; &amp;</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> perimetroQuadrato</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 260,3978 L 130,4238 L 832,4238 L 962,3978 Z"/>
+				<text x="546" y="3996" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">Scrivi &quot; L'area del cerchio &#232;</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> &quot; &amp; areaCerchio &amp; &quot; e la</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> circonferenza &#232; &quot; &amp;</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> circonferenzaCerchio</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 260,4316 L 104,4628 L 832,4628 L 988,4316 Z"/>
+				<text x="546" y="4334" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="546" dy="52" unicode-bidi="embed">Scrivi &quot;L'area del triangolo</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> equilatero &#232; &quot; &amp;</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> areaTriangoloEq &amp; &quot; ed il</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> perimetro &#232; &quot; &amp;</tspan>
+					<tspan x="546" dy="52" unicode-bidi="embed"> perimetroTriangoloEq</tspan>
+				</text>
+			</g>
+		</g>
+	</g>
+</svg>

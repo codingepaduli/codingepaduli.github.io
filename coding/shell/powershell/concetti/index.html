@@ -309,11 +309,11 @@ Variable             ShouldProcess                 {Variable}
 <p>Le pipeline, identificate dal carattere <code>|</code>, permettono di collegare due comandi.</p>
 <p>Collegati in pipeline, il risultato di un comando precedente viene inviato in input ad un successivo comando che lo elabora. A sua volta, questo risultato prodotto può essere inviato, sempre tramite pipeline, ad un ulteriore comando che lo elabora.</p>
 <p>Il risultato è una complessa catena di comandi, detta appunto pipeline, che si presenta in questo modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Command-1 | Command-2 | Command-3
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Command-<span style="color:#ae81ff">1</span> | Command-<span style="color:#ae81ff">2</span> | Command-<span style="color:#ae81ff">3</span>
 </span></span></code></pre></div><h2 id="variabili">Variabili</h2>
 <p>Le variabili sono spazi di memoria in cui vengono memorizzate delle informazioni. Hanno un nome ed un tipo associato, ad esempio tipo numerico, tipo booleano o tipo &ldquo;stringa&rdquo;. PowerShell utilizza le variabili per memorizzare informazioni sull&rsquo;utente, sull&rsquo;ambiente di esecuzione, ecc&hellip;</p>
 <p>L&rsquo;utente può creare le proprie variabili per memorizzare dati e preferenze. Ad esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$variabileNumerica = 2;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$variabileNumerica = <span style="color:#ae81ff">2</span>;
 </span></span><span style="display:flex;"><span>$variabileTestuale = <span style="color:#e6db74">&#34;2&#34;</span>;
 </span></span></code></pre></div><p>Dato che PowerShell è basato su oggetti, una variabile può contenere un oggetto ed è possibile accedere ai campi ed ai metodi dell&rsquo;oggetto.</p>
 <p>Per i dettagli relativI ad un tipo di dato, si rimanda alla documentazione del <code>.Net Framework</code>.</p>
