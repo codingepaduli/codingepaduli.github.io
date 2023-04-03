@@ -78,7 +78,16 @@
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2023-02-17T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/educational/</loc>
+    <lastmod>2023-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/interesting/</loc>
+    <lastmod>2023-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
+    <lastmod>2023-04-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/opensource/debian/</loc>
     <lastmod>2023-02-17T00:00:00+00:00</lastmod>
@@ -88,12 +97,6 @@
   </url><url>
     <loc>http://codingepaduli.github.io/categories/software/</loc>
     <lastmod>2023-02-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/educational/</loc>
-    <lastmod>2023-02-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/interesting/</loc>
-    <lastmod>2023-02-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/coding/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
@@ -106,9 +109,6 @@
   </url><url>
     <loc>http://codingepaduli.github.io/categories/web/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
-    <lastmod>2022-11-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/others/</loc>
     <lastmod>2022-11-18T00:00:00+00:00</lastmod>
@@ -152,7 +152,7 @@
     <loc>http://codingepaduli.github.io/webapp/breakingrsa/</loc>
     <lastmod>2022-03-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/ssh/</loc>
+    <loc>http://codingepaduli.github.io/tools/ssh/</loc>
     <lastmod>2021-11-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/tools/</loc>
@@ -161,10 +161,10 @@
     <loc>http://codingepaduli.github.io/coding/web/javascript/math/</loc>
     <lastmod>2021-08-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/anacron/</loc>
+    <loc>http://codingepaduli.github.io/tools/anacron/</loc>
     <lastmod>2021-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/cron/</loc>
+    <loc>http://codingepaduli.github.io/tools/cron/</loc>
     <lastmod>2021-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/linkp5js/</loc>
@@ -179,7 +179,7 @@
     <loc>http://codingepaduli.github.io/coding/web/javascript/dom/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/git/</loc>
+    <loc>http://codingepaduli.github.io/tools/git/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/opensource/davx_e_fruux/</loc>
@@ -239,19 +239,19 @@
     <loc>http://codingepaduli.github.io/coding/web/javascript/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/gradle/</loc>
+    <loc>http://codingepaduli.github.io/tools/gradle/</loc>
     <lastmod>2020-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/vagrant/</loc>
+    <loc>http://codingepaduli.github.io/tools/vagrant/</loc>
     <lastmod>2020-03-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/aqemu/</loc>
+    <loc>http://codingepaduli.github.io/tools/aqemu/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/macchinevirtuali/</loc>
+    <loc>http://codingepaduli.github.io/tools/macchinevirtuali/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/virtualbox/</loc>
+    <loc>http://codingepaduli.github.io/tools/virtualbox/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/linkhtml/</loc>
@@ -264,9 +264,6 @@
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/shell/</loc>
-    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/coding/link-tools/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/link-web/</loc>
@@ -299,16 +296,16 @@
     <loc>http://codingepaduli.github.io/interesting/</loc>
     <lastmod>2019-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/editorconfig/</loc>
+    <loc>http://codingepaduli.github.io/tools/editorconfig/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/tools/</loc>
+    <loc>http://codingepaduli.github.io/tools/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/</loc>
+    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/home/</loc>

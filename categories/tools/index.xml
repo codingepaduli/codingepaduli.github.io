@@ -9,37 +9,37 @@
     <lastBuildDate>Wed, 03 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SSH</title>
-      <link>http://codingepaduli.github.io/coding/tools/ssh/</link>
+      <link>http://codingepaduli.github.io/tools/ssh/</link>
       <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/ssh/</guid>
+      <guid>http://codingepaduli.github.io/tools/ssh/</guid>
       <description>SSH, uno strumento per l&amp;rsquo;amministrazione di una macchina da remoto</description>
     </item>
     
     <item>
       <title>Anacron ed Anacrontab</title>
-      <link>http://codingepaduli.github.io/coding/tools/anacron/</link>
+      <link>http://codingepaduli.github.io/tools/anacron/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/anacron/</guid>
+      <guid>http://codingepaduli.github.io/tools/anacron/</guid>
       <description>Anacron ed Anacrontab, strumenti per la schedulazione di un task con una specifica ricorrenza.</description>
     </item>
     
     <item>
       <title>Cron e Crontab</title>
-      <link>http://codingepaduli.github.io/coding/tools/cron/</link>
+      <link>http://codingepaduli.github.io/tools/cron/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/cron/</guid>
+      <guid>http://codingepaduli.github.io/tools/cron/</guid>
       <description>Cron e Crontab, strumenti per la schedulazione di un task con una specifica ricorrenza.</description>
     </item>
     
     <item>
       <title>Introduzione a Git</title>
-      <link>http://codingepaduli.github.io/coding/tools/git/</link>
+      <link>http://codingepaduli.github.io/tools/git/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/git/</guid>
+      <guid>http://codingepaduli.github.io/tools/git/</guid>
       <description>Git - Un sistema per il controllo di versione distribuito</description>
     </item>
     
@@ -90,64 +90,64 @@
     
     <item>
       <title>Gradle</title>
-      <link>http://codingepaduli.github.io/coding/tools/gradle/</link>
+      <link>http://codingepaduli.github.io/tools/gradle/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/gradle/</guid>
+      <guid>http://codingepaduli.github.io/tools/gradle/</guid>
       <description>Gradle è un sistema open source per automatizzare le fasi di compilazione, test, pacchettizzazione, deploy e tutte le altre fasi di sviluppo</description>
     </item>
     
     <item>
       <title>Vagrant</title>
-      <link>http://codingepaduli.github.io/coding/tools/vagrant/</link>
+      <link>http://codingepaduli.github.io/tools/vagrant/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/vagrant/</guid>
+      <guid>http://codingepaduli.github.io/tools/vagrant/</guid>
       <description>Vagrant, uno strumento open-source per la creazione e la gestione di ambiente virtualizzato attraverso un workflow, seguendo la metodologia DevOps.</description>
     </item>
     
     <item>
       <title>AQemu</title>
-      <link>http://codingepaduli.github.io/coding/tools/aqemu/</link>
+      <link>http://codingepaduli.github.io/tools/aqemu/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/aqemu/</guid>
+      <guid>http://codingepaduli.github.io/tools/aqemu/</guid>
       <description>AQemu, uno strumento open-source per la creazione di macchine virtuali.</description>
     </item>
     
     <item>
       <title>Macchine Virtuali</title>
-      <link>http://codingepaduli.github.io/coding/tools/macchinevirtuali/</link>
+      <link>http://codingepaduli.github.io/tools/macchinevirtuali/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/macchinevirtuali/</guid>
+      <guid>http://codingepaduli.github.io/tools/macchinevirtuali/</guid>
       <description>Macchine virtuali, cosa sono, che vantaggi e svantaggi presentano.</description>
     </item>
     
     <item>
       <title>VirtualBox</title>
-      <link>http://codingepaduli.github.io/coding/tools/virtualbox/</link>
+      <link>http://codingepaduli.github.io/tools/virtualbox/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/virtualbox/</guid>
+      <guid>http://codingepaduli.github.io/tools/virtualbox/</guid>
       <description>VirtualBox, uno strumento open-source per la creazione di macchine virtuali.</description>
     </item>
     
     <item>
       <title>EditorConfig</title>
-      <link>http://codingepaduli.github.io/coding/tools/editorconfig/</link>
+      <link>http://codingepaduli.github.io/tools/editorconfig/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/editorconfig/</guid>
+      <guid>http://codingepaduli.github.io/tools/editorconfig/</guid>
       <description>EditorConfig, uno strumento per condividere le stesse impostazioni di stile e codifica tra gli sviluppatori che lavorano sullo stesso progetto con vari editors e IDEs</description>
     </item>
     
     <item>
-      <title>Tools di sviluppo</title>
-      <link>http://codingepaduli.github.io/coding/tools/</link>
+      <title>Tools</title>
+      <link>http://codingepaduli.github.io/tools/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/tools/</guid>
+      <guid>http://codingepaduli.github.io/tools/</guid>
       <description>Tools di sviluppo</description>
     </item>
     

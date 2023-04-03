@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VirtualBox - Coding e Paduli</title>
+
+    <meta name="description" content="VirtualBox, uno strumento open-source per la creazione di macchine virtuali.">
+        <meta property="og:title" content="VirtualBox" />
+<meta property="og:description" content="VirtualBox, uno strumento open-source per la creazione di macchine virtuali." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/tools/virtualbox/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="tools" />
+<meta property="article:published_time" content="2020-03-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-15T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="VirtualBox"/>
+<meta name="twitter:description" content="VirtualBox, uno strumento open-source per la creazione di macchine virtuali."/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-15T00:00:00Z">15-03-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="virtualbox">VirtualBox</h1>
+<p>VirtualBox è uno software open-source per la gestione di macchine virtuali.</p>
+<p>All&rsquo;avvio si presenta con un&rsquo;interfaccia molto semplice, che permette di gestire le preferenze, l&rsquo;importazione, l&rsquo;esportazione, la creazione e l&rsquo;aggiunta di macchine virtuali.</p>
+<p><img src="/static/coding/tools/VirtualBox-Welcome.png" alt="VirtualBox - Welcome Page" title="VirtualBox - Welcome Page"></p>
+<p>Il processo di creazione di una macchina virtuale è molto semplice, è necessario inserire un nome per la macchina virtuale, indicare in quale cartella salvarla, selezionare il tipo di macchina virtuale ed il sistema operativo che deve ospitare:</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Step1.png" alt="VirtualBox - Creazione Virtual Machine - passo 1" title="VirtualBox - Creazione Virtual Machine - passo 1"></p>
+<p>Il passo successivo richiede la selezione della quantità di memoria che la macchina ospitante può dedicare alla macchina virtuale:</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Step2.png" alt="VirtualBox - Creazione Virtual Machine - passo 2" title="VirtualBox - Creazione Virtual Machine - passo 2"></p>
+<p>Il terzo passo richiede la creazione di un nuovo disco fisso o la selezione di un disco fisso esistente per la macchina virtuale:</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Step3.png" alt="VirtualBox - Creazione Virtual Machine - passo 3" title="VirtualBox - Creazione Virtual Machine - passo 3"></p>
+<p>Il quarto passo richiede la scelta della dimensione del disco fisso e il percorso in cui salvarlo. E&rsquo; necessario scegliere anche il tipo di formato con cui salvare il disco fisso, ma questa scelta dipende dal tipo di software che vogliamo usare per leggere questo disco fisso.
+Nel caso si usino più programmi per la gestione di macchine virtuali, allora la scelta deve ricadere su un formato compatibile per tutti, in modo da poter leggere il disco virtuale da una qualsiasi macchina virtuale eseguita da un qualsiasi programma di gestione.
+La scelta dell&rsquo;allocazione dinamica è utile quando si vuole che il disco fisso, posizionato al percorso specificato, sia archiviato man mano che il disco della macchina virtuale si riempie. L&rsquo;alternativa è creare subito un file della dimensione indicata, anche se il disco fisso della macchina virtuale è vuoto o occupa una quantità inferiore di spazio, e quindi si sceglie di utilizzare inutilmente spazio sul disco della macchina ospitante.</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Step4.png" alt="VirtualBox - Creazione Virtual Machine - passo 4" title="VirtualBox - Creazione Virtual Machine - passo 4"></p>
+<p>Al termine di tutti questi passi, Cliccando su pulsante &ldquo;crea&rdquo; la macchina virtuale viene creata.
+In realtà, al passo 1, cliccando su modalità esperta, si potevano inserire tutte queste informazioni in un&rsquo;unica volta:</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-StepExpert.png" alt="VirtualBox - Creazione Virtual Machine - modalità esperto" title="VirtualBox - Creazione Virtual Machine - modalità esperto"></p>
+<p>Nella schermata principale vengono quindi visualizzate le varie macchine virtuali, tra cui quella appena creata. Cliccando su una macchina virtuale vengono visualizzati i dettagli, dalle informazioni generali a quelle software a quelle delle varie (virtualizzate) componenti hardware. Troviamo quindi informazioni sul sistema, sulle componenti audio, video e di rete, sui dispositivi di archiviazione e sulle cartelle condivise con il sistema ospitante.</p>
+<p><img src="/static/coding/tools/VirtualBox-NewVM-Created.png" alt="VirtualBox - Virtual Machine creata" title="VirtualBox - Virtual Machine creata"></p>
+<p>Le informazioni visualizzate sono modificabili. Cliccando su un&rsquo;opzione si apre la corrispondente finestra di dialogo per modificarla, mostrando le opzioni alternative o permettendo di modificare il valore presente.</p>
+<p>La macchina virtuale è stata creata, quindi le componenti hardware sono presenti (in forma virtuale). E&rsquo; necessario indicare il software, in particolare il Sistema Operativo da eseguire quando si avvia la macchina virtuale.</p>
+<p>E&rsquo; necessario prestare particolare attenzione in questa fase: nel caso si avvi la macchina virtuale senza scegliere l&rsquo;archivio contenente il sistema operativo, allora si otterrà l&rsquo;errore: &ldquo;No Bootable medium found&rdquo; che tradotto indica &ldquo;nessun dispositivo avviabile&rdquo;, cioè manca il sistema operativo e quindi la macchina virtuale non può avviarsi.</p>
+<p><img src="/static/coding/tools/VirtualBox-VM-StartError.png" alt="VirtualBox - Avvio Virtual Machine errato" title="VirtualBox - Avvio Virtual Machine errato"></p>
+<p>E&rsquo; necessario configurare la macchina virtuale per avviare il Sistema Operativo:</p>
+<ul>
+<li>se il sistema operativo è stato masterizzato su CD-ROM, si clicca nella sezione &ldquo;Archiviazione&rdquo; sul controller IDE / ATA e si seleziona l&rsquo;avvio dal lettore ottico della macchina ospitante (host);</li>
+<li>se il sistema operativo è stato scaricato e salvato sul disco fisso, allora è necessario cliccare nella sezione &ldquo;Archiviazione&rdquo; sul controller IDE / ATA e selezionare la voce &ldquo;Scegli un file dal disco&rdquo; e quindi indicare il percorso in cui si trova il file contenente il sistema operativo scaricato;</li>
+</ul>
+<p><img src="/static/coding/tools/VirtualBox-VM-StartFromCdOrISO.png" alt="VirtualBox - Avvio Virtual Machine da CD" title="VirtualBox - Avvio Virtual Machine da CD"></p>
+<p><img src="/static/coding/tools/VirtualBox-VM-StartFromCdOrISO2.png" alt="VirtualBox - Avvio Virtual Machine da CD" title="VirtualBox - Avvio Virtual Machine da CD"></p>
+<p>Configurato correttamente il sistema operativo, la macchina virtuale si avvia, il sistema operativo viene eseguito e quindi l&rsquo;utente può interagirvi:</p>
+<p><img src="/static/coding/tools/VirtualBox-VM-Start.png" alt="VirtualBox - Avvio Virtual Machine" title="VirtualBox - Avvio Virtual Machine"></p>
+<p>Cliccando sulla macchina virtuale, viene fornita l&rsquo;indicazione che il puntatore del mouse non sarà più disponibile nella macchina ospitante perchè sarà catturato dalla macchina virtuale. Per riaverlo disponibile, è necessario premere la combinazione di tasti indicata dal messaggio:</p>
+<p><img src="/static/coding/tools/VirtualBox-VM-StartCatchPointer.png" alt="VirtualBox - Cattura del puntatore del mouse" title="VirtualBox - Cattura del puntatore del mouse"></p>
+<p>Alla chiusura della macchina virtuale viene chiesto se:</p>
+<ul>
+<li>spegnere la macchina, quindi il sistema operativo termina l&rsquo;esecuzione.</li>
+<li>salvare lo stato della macchina virtuale, quindi il sistema operativo resta in esecuzione e, all&rsquo;apertura della macchina virtuale, il sistema operativo riprendera l&rsquo;esecuzione dal punto salvato.</li>
+</ul>
+<p><img src="/static/coding/tools/VirtualBox-VM-Shutdown.png" alt="VirtualBox - Shutdown Virtual Machine" title="VirtualBox - Shutdown Virtual Machine"></p>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/tools/editorconfig/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">EditorConfig</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/tools/macchinevirtuali/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">Macchine Virtuali</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

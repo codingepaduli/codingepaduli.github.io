@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Anacron ed Anacrontab - Coding e Paduli</title>
+
+    <meta name="description" content="Anacron ed Anacrontab, strumenti per la schedulazione di un task con una specifica ricorrenza.">
+        <meta property="og:title" content="Anacron ed Anacrontab" />
+<meta property="og:description" content="Anacron ed Anacrontab, strumenti per la schedulazione di un task con una specifica ricorrenza." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/tools/anacron/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="tools" />
+<meta property="article:published_time" content="2021-01-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-15T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="Anacron ed Anacrontab"/>
+<meta name="twitter:description" content="Anacron ed Anacrontab, strumenti per la schedulazione di un task con una specifica ricorrenza."/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-01-15T00:00:00Z">15-01-2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="schedulazione-task-ricorrenti-con-anacron-ed-anacrontab">Schedulazione task ricorrenti con anacron ed anacrontab</h1>
+<p>Cron e anacron permettono la schedulazione di un task utente con una specifica ricorrenza, ad esempio giornaliera o mensile. Per la scrittura dei task da eseguire, ci si avvale di due programmi: <strong>crontab</strong> ed <strong>anacrontab</strong>.</p>
+<p>Anacron permette la gestione di task solo per l&rsquo;utente root. Non prevede l&rsquo;esecuzione per gli utenti classici, ma tale gestione la si può simulare tramite cron.</p>
+<p>Oltre ad eseguire i task schedulati, anacron si occupa di avviare, appena possibile, i task che non sono stati eseguiti (perché magari nel momento in cui dovevano essere eseguiti, il computer era spento). Da notare, però, che anacron esegue i task una volta sola, non importa quante volte siano stati &ldquo;saltati&rdquo;. Ad esempio, se un task deve essere eseguito ogni giorno, ma viene saltato per 4 giorni perché il computer è spento, quando si accende il computer sarà eseguito, appena possibile, una sola volta.</p>
+<h2 id="configurazione-di-anacron">Configurazione di anacron</h2>
+<p>Per verificare lo stato del servizio anacron, eseguire come utente root i comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status anacron.service
+</span></span><span style="display:flex;"><span>systemctl status anacron.timer
+</span></span></code></pre></div><p>Sia l&rsquo;amministratore, sia le applicazioni di sistema possono inserire i propri task nelle cartelle:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/etc/cron.daily/
+</span></span><span style="display:flex;"><span>/etc/cron.weekly/
+</span></span><span style="display:flex;"><span>/etc/cron.monthly/
+</span></span></code></pre></div><p>Queste directory sono configurate perché siano utilizzate da anacron. Nel file <code>/etc/crontab</code> si trovano, appunto, i comandi che indicano l&rsquo;esecuzione di anacron sulle cartelle citate. Inoltre, anacron legge la lista di job dalla cartella:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/etc/anacrontab
+</span></span></code></pre></div><p>Ogni task eseguito prevede l&rsquo;invio dell&rsquo;output tramite una mail destinata all&rsquo;utente. Le email sono memorizzate nella cartella:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/spool/mail/
+</span></span></code></pre></div><p><strong>Su alcune distribuzioni, anacron esegue i task solo se il pc è collegato alla rete elettrica</strong>. Per verificare ciò, si può leggere il file della propria distribuzione, che su Debian è <code>/usr/share/doc/anacron/README.Debian</code>.</p>
+<h3 id="configurazione-di-anacron-con-alimentazione-da-batteria">Configurazione di anacron con alimentazione da batteria</h3>
+<p>Per abilitare l&rsquo;esecuzione dei task anche quando il pc è collegato alla batteria:</p>
+<ul>
+<li>Su SysVinit occorre cambiare impostazioni nel file <code>/etc/default/anacron</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#a6e22e">ANACRON_RUN_ON_BATTERY_POWER</span><span style="color:#f92672">=</span><span style="color:#e6db74">yes</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>Su systemd, occorre seguire i seguenti passi a partire:</p>
+<ol>
+<li>creare la directory <code>anacron.service.d</code> dentro la directory <code>/etc/systemd/system/</code>;</li>
+<li>inserire all&rsquo;interno della directory creata il file <code>on-ac.conf</code>;</li>
+<li>inserire il contenuto del file:</li>
+</ol>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Unit]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ConditionACPower</span><span style="color:#f92672">=</span>
+</span></span></code></pre></div><p>In caso anacron non esegua i task perché non abilitato quando il computer funziona a batteria, il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status anacron.service
+</span></span></code></pre></div><p>visualizza il messaggio di &lsquo;failed&rsquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Condition: start failed at &#39;Tue 2020-09-29 08:31:19&#39; - ConditionACPower=true was not met
+</span></span></code></pre></div><h2 id="comando-anacron-per-lamministratore">Comando anacron per l&rsquo;amministratore</h2>
+<p>Per verificare la validità di un file, ad esempio <code>/etc/anacrontab</code>, contenente la lista di job da eseguire:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>anacron -T -t /etc/anacrontab <span style="color:#75715e"># -T = test</span>
+</span></span></code></pre></div><p>Per forzare <strong>l&rsquo;immediata</strong> esecuzione di un job indicato in un file, e non in background, ma in &ldquo;foregraund&rdquo;, in modo da poter visualizzare l&rsquo;output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>anacron -f -d -n -t /etc/anacrontab <span style="color:#75715e"># -f = force, -d = display, -n = now</span>
+</span></span></code></pre></div><h2 id="sintassi-regole-di-anacron">Sintassi regole di anacron</h2>
+<p>I tast di anacron giornalieri, settimanali, mensili ed annuali sono programmati per essere eseguiti secondo la sintassi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>period (days)  delay (minutes)  job-id  job
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>period</code></td>
+<td>il numero di giorni dopo il quale ripetere il job, oppure <code>@weekly</code></td>
+</tr>
+<tr>
+<td><code>delay</code></td>
+<td>il numero di minuti che devono passare dall&rsquo;avvio per eseguire il job, in modo da evitare che si accavallino;</td>
+</tr>
+<tr>
+<td><code>job-id</code></td>
+<td>l&rsquo;identificatore del job (solo i caratteri <code>[a-zA-Z0-9]</code> e &ldquo;underscore&rdquo; <code>_</code>)</td>
+</tr>
+<tr>
+<td><code>job</code></td>
+<td>il comando da eseguire</td>
+</tr>
+</tbody>
+</table>
+<p>Un esempio di job schedulato è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>1    1    log-job    /bin/date &#34;+\%F-\%T - anacron executed&#34; &gt;&gt; $HOME/login.txt
+</span></span></code></pre></div><h2 id="abilitare-anacrontab-per-lutente-comune">Abilitare anacrontab per l&rsquo;utente comune</h2>
+<p>Per abilitare anacrontab in user mode per l&rsquo;utente &ldquo;io&rdquo; occorre seguire i seguenti passi:</p>
+<ul>
+<li>
+<p>Selezionare l&rsquo;editor per editare i task, aggiungendo al file <code>.profile</code> una riga in cui si specifica la variabile:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/usr/bin/micro&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Creare il file con i task da eseguire <code>/var/spool/anacron/anacrontabs/io</code></p>
+</li>
+<li>
+<p>Creare l&rsquo;alias <code>anacrontab-e='micro /var/spool/anacron/anacrontabs/io'</code></p>
+</li>
+<li>
+<p>Creare la cartella in cui anacron segna i task eseguiti e da eseguire <code>$HOME/.anacron/spool</code></p>
+</li>
+<li>
+<p>Creare la regola di cron per richiamare anacron ogni ora con <code>crontab -e</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>@hourly /usr/sbin/anacron -s -t /var/spool/anacron/anacrontabs/io -S $HOME/.anacron/spool
+</span></span></code></pre></div></li>
+</ul>
+<p>Lo script completo è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>mkdir -p $HOME/.anacron/spool
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># needs root permission</span>
+</span></span><span style="display:flex;"><span>mkdir -p /var/spool/anacron/anacrontabs/
+</span></span><span style="display:flex;"><span>touch /var/spool/anacron/anacrontabs/$USER
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># set user &#34;io&#34; and group &#34;crontab&#34; to the file</span>
+</span></span><span style="display:flex;"><span>chown $USER:crontab /var/spool/anacron/anacrontabs/$USER
+</span></span></code></pre></div><p>Si può anche scegliere di non utilizzare <code>/var/spool</code> e di creare i file nella cartella utente, regolando di conseguenza il comando di cron precedentemente mostrato.</p>
+<h3 id="redirezione-output">Redirezione output</h3>
+<p>Aggiungendo una redirezione, l&rsquo;output del task finisce nel file di log, come con la regola:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>1    1    log-job   /bin/date &#34;+\%F-\%T - Cron started&#34; &gt;&gt; /root/login.txt
+</span></span></code></pre></div><p>E&rsquo; possibile redirezionare il log ed evitare che la mail venga inviata, con la regola:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>1    1    log-job   /bin/date &#34;+\%F-\%T - Cron started&#34; &gt;&gt; /root/login.txt 2&gt;&amp;1
+</span></span></code></pre></div><p>E&rsquo; possibile verificare il valore delle variabili con le redirezioni:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/bin/echo $PATH &gt; /root/path.txt
+</span></span><span style="display:flex;"><span>/usr/bin/env &gt; /root/allEvnVars.txt
+</span></span></code></pre></div>
+    </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="https://opensource.com/article/17/11/how-use-cron-linux" style="font-weight: 700; color: #e22d30;">How to use cron and anacron in Linux</a>: Scheduling tasks with cron, crontab and anacron</p><p><a href="https://opensource.com/article/20/7/systemd-timers" style="font-weight: 700; color: #e22d30;">Use systemd timers instead of cronjobs</a>: Use systemd timers instead of cronjobs</p><p><a href="https://opensource.com/article/20/7/systemd-calendar-timespans" style="font-weight: 700; color: #e22d30;">Analyzing systemd calendar and timespans</a>: Analyzing systemd calendar and timespans</p><p><a href="https://linux.101hacks.com/unix/anacron/" style="font-weight: 700; color: #e22d30;">Linux Anacron Command Example for Background Jobs</a>: Linux Anacron Command Example for Background Jobs</p>
+  </article>
+</main>
+
+
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/tools/cron/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">Cron e Crontab</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/tools/ssh/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">SSH</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
