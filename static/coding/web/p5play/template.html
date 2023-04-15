@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <title>Modello di pagina web per p5play</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1/lib/addons/p5.sound.min.js"></script>
+    <script src="https://p5play.org/v3/planck.min.js"></script>
+    <script src="https://p5play.org/v3/p5play.js"></script>
+  </head>
+  <body>
+    <h1>Modello di pagina web per p5play</h1>
+    <script>
+        function setup() {
+            new Canvas(250, 250);
+            let sprite = new Sprite();
+            sprite.x = 20;
+            sprite.y = 30;
+            sprite.width = 15;
+            sprite.height = 35;
+            sprite.color = 'yellow';
+            sprite.stroke = 'red';
+            sprite.textColor = 'blue';
+            sprite.textSize = 40;
+            sprite.text = "S";
+            sprite.rotation = 45;
+        }
+
+        function draw() {
+            background('black');
+        }
+    </script>
+  </body>
+</html>

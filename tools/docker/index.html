@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Docker Engine e Podman - Coding e Paduli</title>
+
+    <meta name="description" content="Docker Engine e Podman - Strumenti per gestire i container">
+        <meta property="og:title" content="Docker Engine e Podman" />
+<meta property="og:description" content="Docker Engine e Podman - Strumenti per gestire i container" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/tools/docker/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="tools" />
+<meta property="article:published_time" content="2022-06-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-02T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="Docker Engine e Podman"/>
+<meta name="twitter:description" content="Docker Engine e Podman - Strumenti per gestire i container"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-06-13T00:00:00Z">13-06-2022</time>
+	<time class="meta__text" datetime="2023-04-02T00:00:00Z">(Ultima modifica: 02-04-2023)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>
+	</span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="docker-engine-e-podman">Docker Engine e Podman</h1>
+<p>Il principio di utilizzo dei container è molto semplice:</p>
+<ul>
+<li>Si scarica l&rsquo;immagine del container;</li>
+<li>Si crea un container (o anche più di uno) a partire dall&rsquo;immagine;</li>
+<li>Si esegue un processo all&rsquo;interno del container creato (comunemente si dice che si esegue il container).</li>
+</ul>
+<p>Questi tre passi si eseguono con i seguenti comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker pull hello-world  <span style="color:#75715e"># Scarica l&#39;immagine hello-world</span>
+</span></span><span style="display:flex;"><span>docker run hello-world   <span style="color:#75715e"># Esegue il container</span>
+</span></span></code></pre></div><p>Il primo comando scarica l&rsquo;immagine <code>hello-world</code>.</p>
+<p>Il secondo comando crea il container a partire dall&rsquo;immagine <code>hello-world</code> ed esegue il processo nel container.</p>
+<h2 id="definizioni">Definizioni</h2>
+<p>I <strong>container</strong> sono degli ambienti isolati in cui le applicazioni vengono eseguite.</p>
+<p>Grazie all&rsquo;isolamento delle risorse (CPU, memoria, I/O a blocchi, rete), il sistema operativo sottostante crea una sorta di ambiente &ldquo;virtuale&rdquo; isolato in cui il container viene eseguito e solo con questo ambiente &ldquo;virtuale&rdquo; isolato il container può interagire.</p>
+<p>La differenza rispetto ad una macchina virtuale è notevole, perché i container non sono composti da un sistema operativo separato. Questo implica minor memoria e minor consumo della CPU per eseguire un processo su un container rispetto ad una macchina virtuale. Inoltre sul container non sono necessari antivirus o operazioni di aggiornamento del sistema operativo come per una macchina virtuale.</p>
+<p>Un <strong>pod</strong> rappresenta un&rsquo;istanza eseguibile di un&rsquo;applicazione e permette la distribuzione e gestione delle applicazioni in un ambiente cloud. Può essere composto da uno o più container che condividono le risorse di memoria, di rete (come le porte esposte) e di archiviazione (come i volumi) e che sono schedulati insieme per l&rsquo;esecuzione o l&rsquo;attesa. Avviare o fermare un pod consiste nell&rsquo;avviare o fermare tutti i container contenuti nel pod. Un pod ha un container vuoto che non fa altro che prendere possesso del namespaces associato e permettere la connessione agli altri container del pod.</p>
+<p>Gli <strong>orchestratori</strong> sono software che permettono di effettuare la distribuzione (il deploy) e la gestione di migliaia di container. Tra gli orchestratori più famosi troviamo Kubernetes, OpenShift, Nomad e LXD.</p>
+<p>I <strong>service registry</strong> ed i <strong>service discovery service</strong> sono software che permettono la comunicazione tra migliaia di container, in particolare permettono ad un container di conoscere il servizio (eseguito in un container) al quale inviare la richiesta.</p>
+<p>I servizi di <strong>monitoring</strong> permettono di monitorare la rete, i log files, le web requests ed i database utilizzati dai container, possono prevedere dei report ed inviare notifiche di alert. Tra questi software troviamo Grafana, Graphite, InfluxDB, Prometheus.</p>
+<h2 id="programmi-di-gestione-dei-container">Programmi di gestione dei container</h2>
+<p><a href="%22https://www.docker.com/%22">Docker Engine</a> e <a href="%22https://podman.io/%22">Podman</a> sono strumenti a linea di comando per la gestione dei container. Podman e Docker Engine sono compatibili, anche se differiscono in alcuni concetti.</p>
+<p><a href="https://github.com/jesseduffield/lazydocker">lazydocker</a> è un&rsquo;interfaccia per terminale che permette di gestire i container.</p>
+<p><a href="https://www.portainer.io/">Portainer</a> è un&rsquo;interfaccia web che permette di gestire l&rsquo;intero cloud, sia esso Kubernetes, Docker, Swarm and Nomad.</p>
+<p>Docker Engine è una tecnologia client/server, quindi un demone in background con i permessi di amministratore gestisce tutti i container, mentre la linea di comando interagisce con il server (demone).</p>
+<p>Docker Desktop realizza una virtual machine (necessaria su Windows e su Mac, ma creata anche su Linux per far si che gli utenti abbiano la stessa esperienza d&rsquo;uso) nella quale è in esecuzione Docker Engine. Inoltre fornisce l&rsquo;interfaccia grafica per gestire Docker Engine.</p>
+<p>Podman è definito rootless perché gestisce i container come processi dell&rsquo;utente, quindi non necessita dei permessi di amministrazione. Non richiede la presenza di un server ed inoltre permette la gestione dei pod.</p>
+<p>Podman Desktop è l&rsquo;interfaccia grafica di Podman.</p>
+<h2 id="gestione-delle-immagini">Gestione delle immagini</h2>
+<p>Le immagini rappresentano un ambiente isolato, con tutte le risorse necessarie all&rsquo;esecuzione del container, come il filesystem, i dispositivi di rete, le configurazioni necessarie, &hellip;</p>
+<p>Le immagini sono tipicamente scaricabili da <a href="https://hub.docker.com/">Docker Hub</a>, ne esistono di infiniti tipi, alcune con l&rsquo;ambiente di sviluppo <code>python3</code> installato, altre con gli strumenti di controllo della sicurezza, altre con programmi di elaborazione immagini e così via.</p>
+<p>Per scaricare l&rsquo;immagine <code>hello-world</code> si può eseguire il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image pull hello-world
+</span></span></code></pre></div><p>Per visualizzare le immagini installate:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image ls
+</span></span></code></pre></div><p>Per cancellare l&rsquo;immagine <code>hello-world</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image rm hello-world
+</span></span></code></pre></div><p>Un&rsquo;immagine è composta da diversi layer, che vengono scaricati quando si scarica l&rsquo;immagine la prima volta o quando si aggiorna l&rsquo;immagine. Per visualizzare e cancellare questi layer si usano i comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image ls -f dangling<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>docker images purge        <span style="color:#75715e"># notare &#34;images&#34; al plurale</span>
+</span></span></code></pre></div><h2 id="gestione-container">Gestione container</h2>
+<p>Utilizzando l&rsquo;immagine <code>httpd:alpine</code>, per creare un nuovo container assegnandogli un nome comprensibile, ad esempio <code>httpd-container</code>, eseguiamo il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container create --name <span style="color:#e6db74">&#34;httpd-container&#34;</span> httpd:alpine
+</span></span></code></pre></div><p>Per avviare, stoppare, mettere in pausa (non consuma CPU, ma è in memoria), riprendere dalla pausa, rinominare ed infine eliminare un container, si utilizzano i seguenti comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container start   httpd-container
+</span></span><span style="display:flex;"><span>docker container stop    httpd-container
+</span></span><span style="display:flex;"><span>docker container restart httpd-container
+</span></span><span style="display:flex;"><span>docker container pause   httpd-container
+</span></span><span style="display:flex;"><span>docker container unpause httpd-container
+</span></span><span style="display:flex;"><span>docker container rename  httpd-container httpd-container2
+</span></span><span style="display:flex;"><span>docker container rm      httpd-container
+</span></span></code></pre></div><p>Per poter visualizzare i container creati e la relativa immagine, si usa il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container ls -a
+</span></span></code></pre></div><p><strong>TIPS</strong>: Il comando per rimuovere tutti i container in stato &ldquo;exit&rdquo; (-q stampa solo un ID del container):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rm <span style="color:#66d9ef">$(</span>docker container ls --size -a --filter  <span style="color:#e6db74">&#34;status=exited&#34;</span> -q<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><h3 id="opzioni-di-creazione-del-container">Opzioni di creazione del container</h3>
+<p>Nella creazione del container possono essere utilizzate le seguenti opzioni:</p>
+<ul>
+<li><code>-t</code> (<code>--tty</code>) alloca uno pseudo-terminale al processo (utile per l&rsquo;output colorato);</li>
+<li><code>-w &quot;workingDir&quot;</code> indica la directory di lavoro;</li>
+<li><code>-e VARIABLE=VALUE</code> crea nel container una variabile d&rsquo;ambiente con uno specifico valore;</li>
+<li><code>--entrypoint path/to/run</code> indica il comando da eseguire quando si avvia il container. Si può specificare un valore vuoto <code>&quot;&quot;</code> per sovrascrivere un eventuale valore predefinito;</li>
+<li><code>-p &quot;port:containerPort&quot;</code> associa una porta locale ad una del container;</li>
+<li><code>--restart &quot;policy&quot;;</code> controlla se il container deve avviarsi automaticamente all&rsquo;uscita (exit) o quando si effettua il restart di Docker. Valori validi per la policy sono: <code>no</code> (never), <code>on-failure</code> (exit code &gt; 0), <code>unless-stopped</code> (not manually stopped), <code>always</code>;</li>
+<li><code>-v &quot;volume:containerPath&quot;</code> monta una directory (chiamata volume) all&rsquo;interno del container (deprecata, usa l&rsquo;opzione <code>-m</code>);</li>
+<li><code>--mount &quot;type=bind,source=sourcePath,target=targetPath&quot;</code> monta una directory (chiamata volume) all&rsquo;interno del container (new, use <code>--mount</code>, NOT <code>-v</code>);</li>
+<li><code>-u $(id -u):$(id -g)</code> esegue il container come utente non-root, con i permessi dell&rsquo;utente e del gruppo indicati;</li>
+</ul>
+<h3 id="esecuzione-in-modalità-attached-e-detached">Esecuzione in modalità &ldquo;attached&rdquo; e &ldquo;detached&rdquo;</h3>
+<p>I comandi di <code>start</code> e <code>run</code> permettono l&rsquo;esecuzione del container. La differenza è che il comando <code>start</code> avvia un container gia esistente, mentre il comando di <code>run</code> crea un container partendo da un&rsquo;immagine e poi esegue il container.</p>
+<p>Il comando di <code>exec</code> permette di eseguire un comando all&rsquo;interno di un container gia esistente.</p>
+<p>I container ed i comandi da eseguire nei container possono essere lanciati sia in modalità &ldquo;attached&rdquo;, sia &ldquo;detached&rdquo;, ovvero collegando il proprio terminale collegato agli standard input, output ed errore del container. Le opzioni per lanciare in modalità &ldquo;attached&rdquo; o &ldquo;detached&rdquo; un comando sono le seguenti:</p>
+<ul>
+<li><code>-i</code> (<code>--interactive</code>) tiene lo standard input del container aperto, anche se non in &ldquo;attached&rdquo;;</li>
+<li><code>-a</code> (<code>--attach</code>) collega lo standard input, output ed errore del container al terminale;</li>
+<li><code>-d</code> (<code>--detach</code>) esegue il comando o il container in background;</li>
+</ul>
+<p>Quando un container è eseguito im modalità &ldquo;attached&rdquo;, premendo la combinazione di tasti <code>CTRL-C</code> non si effettua il &ldquo;detach&rdquo;, ma a tutti gli effetti si stoppa il container. Per effettuare il &ldquo;detach&rdquo; si può indicare la combinazione di tasti con l&rsquo;opzione <code>--detach-keys=&quot;ctrl-a,a&quot;</code>, purtroppo non sempre funziona. Al contrario, per riportare in primo piano un container in esecuzione in background, si usa il comando <code>attach</code>.</p>
+<p>Dato che queste opzioni non sono sempre disponibili in contemporanea, ma solo l&rsquo;una o l&rsquo;altra, di seguito riportiamo alcuni esempi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container start --attach --detach-keys<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ctrl-a,a&#34;</span> <span style="color:#e6db74">&#34;httpd-container5&#34;</span>
+</span></span><span style="display:flex;"><span>docker container run  --detach -p <span style="color:#e6db74">&#34;8006:80&#34;</span>  --name <span style="color:#e6db74">&#34;httpd-container5&#34;</span> httpd:alpine
+</span></span><span style="display:flex;"><span>docker container exec --detach <span style="color:#e6db74">&#34;httpd-container5&#34;</span> ls
+</span></span><span style="display:flex;"><span>docker container attach <span style="color:#e6db74">&#34;httpd-container5&#34;</span>
+</span></span></code></pre></div><p>Dato che il comando run crea, esegue il container ed al termine del compito lo stoppa, si può scegliere anche di distruggere il container con l&rsquo;opzione <code>--rm</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run  --rm --name <span style="color:#e6db74">&#34;httpd-container&#34;</span> httpd:alpine
+</span></span></code></pre></div><p>In alcuni casi, può essere utile creare uno pseudo-terminale sul container, per favorire la colorazione del testo, utilizzando l&rsquo;opzione <code>--tty</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container exec --tty <span style="color:#e6db74">&#34;httpd-container5&#34;</span> ls
+</span></span></code></pre></div><h3 id="entrypoint">Entrypoint</h3>
+<p>Quando si parla di esecuzione di un container, si sottintende l&rsquo;esecuzione di un comando (che sia &ldquo;hello-world&rdquo; o un processo demone &ldquo;https&rdquo; in ascolto su una porta) che è specificato in fase di creazione dell&rsquo;immagine. Questo comando può essere sovrascritto con l&rsquo;opzione <code>--entrypoint</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run --name npm  --entrypoint <span style="color:#e6db74">&#34;/usr/local/bin/npm&#34;</span> node
+</span></span><span style="display:flex;"><span>docker container run --name hugo --entrypoint <span style="color:#e6db74">&#34;&#34;</span> node bash -l -c <span style="color:#e6db74">&#34;/usr/bin/pandoc-default --version&#34;</span>
+</span></span><span style="display:flex;"><span>docker container run --name hugo --entrypoint <span style="color:#e6db74">&#34;&#34;</span> node bash
+</span></span></code></pre></div><h2 id="container-inspection">Container inspection</h2>
+<p>Per poter ispezionare un container, guardando i processi in esecuzione, la configurazione e le statistiche in tempo reale, si usano i comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container top     httpd-container
+</span></span><span style="display:flex;"><span>docker container inspect httpd-container
+</span></span><span style="display:flex;"><span>docker container stats   httpd-container
+</span></span></code></pre></div><h2 id="logs">Logs</h2>
+<p>E&rsquo; possibile visualizzare i logs di un container che è in esecuzione in background utilizzando il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker logs httpd-container
+</span></span></code></pre></div><h2 id="volumi">Volumi</h2>
+<p>I volumi sono semplicemente cartelle locali montate nel container (comando mount).</p>
+<p>Per visualizzare e rimuovere i volumi si usano i comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume ls
+</span></span><span style="display:flex;"><span>docker volume rm volumeID
+</span></span></code></pre></div><p>Per visualizzare e rimuovere tutti i volumi non più collegati ad alcun container, si usa il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume ls -f dangling<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>docker volume prune
+</span></span></code></pre></div><h3 id="il-problema-dei-permessi-nei-volumi">Il problema dei permessi nei volumi</h3>
+<p>I container non hanno un sistema operativo, e quindi non hanno un kernel, ma sono dei semplici processi che girano sul kernel della macchina ospitante in un ambiente isolato.</p>
+<p>Quando la macchina ospitante ed i container condividono delle cartelle (bind mounts), i file creati all&rsquo;interno del container sono visibili alla macchina ospitante e viceversa. Questa condivisione porta ad un punto dolente: l&rsquo;appartenenza dei file ad un utente o un gruppo ed i relativi permessi di accesso.</p>
+<p>Facciamo alcuni esempi:</p>
+<ol>
+<li>Quando un container viene eseguito come utente <strong>root</strong>, tutti i file creati appartengono all&rsquo;utente root. Se questi file vengono creati in una cartella condivisa con la macchina ospitante, l&rsquo;utente della macchina ospitante non può accedere a questi file;</li>
+<li>Quando un file viene creato da un processo che gira come utente <strong>x</strong> (ad esempio da Apache che gira come utente www-data), i file creati da quel processo appartengono all&rsquo;utente <strong>x</strong> (nell&rsquo;esempio di Apache questi file appartengono all&rsquo;utente www-data). Se questi file vengono creati in una cartella condivisa con la macchina ospitante, l&rsquo;utente della macchina ospitante non può accedere a questi file;</li>
+<li>Quando creo un file in una cartella condivisa col container, il file avrà i permessi dell&rsquo;utente presente sulla macchina ospitante. Potenzialmente, un processo in esecuzione come utente x non può accedere a questi file che appartengono all&rsquo;utente presente sulla macchina ospitante;</li>
+<li>Quando creo un&rsquo;immagine per un container (a partire da un Dockerfile), i file che copio nel container possono non essere accessibili all&rsquo;utente del container che li deve utilizzare.</li>
+</ol>
+<p>Le soluzioni ai punti indicati in precedenza sono:</p>
+<ol>
+<li>eseguire sempre il container come utente non root, impostando a linea di comando l&rsquo;opzione <code>-u USERID:GROUPID</code>;</li>
+<li>Se sul container un processo è in esecuzione come utente <strong>x</strong> e gruppo <strong>y</strong> si consiglia di aggiungere anche sulla macchina ospitante l&rsquo;utente che esegue il container al gruppo <strong>y</strong>, in modo da rendere accessibile il file all&rsquo;utente che esegue il container;</li>
+<li>Se sulla macchina ospitante un file appartiene all&rsquo;utente <strong>x</strong> e gruppo <strong>y</strong> e questo file è condiviso con un container che ha bisogno di accedervi con l&rsquo;utente <strong>w</strong> e gruppo <strong>z</strong>, si consiglia di aggiungere anche sul container il gruppo <strong>y</strong> e di aggiungere l&rsquo;utente <strong>w</strong> al gruppo <strong>y</strong>, in modo da rendere accessibile il file all&rsquo;utente <strong>w</strong>;</li>
+<li>Nel Dockerfile è sempre utile specificare l&rsquo;utente col quale eseguire il container e dare a questo utente il permesso di accesso ai file copiati durante la creazione dell&rsquo;immagine, utilizzando i classici comandi Linux <code>chown</code> e <code>chmod</code>.</li>
+</ol>
+<h2 id="network">Network</h2>
+<p>Docker permette di collegare i container in una o più reti.</p>
+<p>Per creare una rete si utilizza il comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create rete_lan
+</span></span></code></pre></div><p>Per gestire le reti si utilizzano i comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker network ls
+</span></span><span style="display:flex;"><span>docker network rm <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker network inspect <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Per collegare e scollegare i container dalla rete si usano i comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network connect <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CONTAINER_NAME<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker network disconnect <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CONTAINER_NAME<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h2 id="pulizia">Pulizia</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker system prune --volumes
+</span></span></code></pre></div><h2 id="pods">Pods</h2>
+<p>Per creare, avviare, stoppare, mettere in pausa (non consuma CPU, ma è in memoria), riprendere dalla pausa, riavviare, visualizzare lo stato, visualizzare i log ed infine eliminare un pod, si utilizzano i seguenti comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pod create --name nome_pod
+</span></span><span style="display:flex;"><span>podman pod  start        nome_pod
+</span></span><span style="display:flex;"><span>podman pod  stop         nome_pod
+</span></span><span style="display:flex;"><span>podman pod  pause        nome_pod
+</span></span><span style="display:flex;"><span>podman pod  unpause      nome_pod
+</span></span><span style="display:flex;"><span>podman pod  restart      nome_pod
+</span></span><span style="display:flex;"><span>podman pod  ps           nome_pod
+</span></span><span style="display:flex;"><span>podman pod  logs         nome_pod
+</span></span><span style="display:flex;"><span>podman pod  rm           nome_pod
+</span></span></code></pre></div><p>Per aggiungere o rimuovere un container in un pod si utilizzano i seguenti comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pod add  nome_pod  nome_container
+</span></span><span style="display:flex;"><span>podman pod rm   nome_pod  nome_container
+</span></span></code></pre></div><p>E&rsquo; possibile visualizzare i pod creati con il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pod ls
+</span></span></code></pre></div><p>E&rsquo; possibile creare un file YAML di definizione con la sintassi richiesta da Kubernetes a partire dal pod creato, usando il seguente comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman generate kube my-pod &gt;&gt; my-pod.yaml
+</span></span></code></pre></div><p>Questo comando è ancora in fase beta, per cui può generare numerose variabili d&rsquo;ambiente che necessitano di pulizia.</p>
+<p>Una volta che si ha il file YAML di definizione (con la sintassi richiesta da Kubernetes), si può creare il pod con il seguente comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman play kube ./my-pod.yaml
+</span></span></code></pre></div><h2 id="docker-compose">Docker compose</h2>
+<p>Il Dockerfile è pensato per creare un&rsquo;immagine, non un container, quindi non bisogna confonderlo con &ldquo;docker-compose&rdquo;.</p>
+<p>Il comando docker-compose permette di gestire più container con lo stesso comando, infatti si parla di applicazioni multi-container. Il file <code>compose.yaml</code> descrive i vari container ed indica per ogni container il nome da assegnare, le porte da aprire, i volumi da montare, il comando da eseguire, ecc&hellip;</p>
+<p>La gestione di più container (specificati nel file compose.yaml) è simile alla gestione del singolo container, per cui di seguito si riportano i comandi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose -f compose.yaml up
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml up -d
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml down
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml start   <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml stop    <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml pause   <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml unpause <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml restart <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml exec    <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>command<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml logs    <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml top     <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Alcuni modelli per installare le configurazioni più utilizzate sono i seguenti:</p>
+<ul>
+<li>LAMP (Linux, Apache, MariaDB e PHP) + PhpMyAdmin : <a href="/static/coding/tools/dockerfiles/lamp-docker-compose.yml">composer.yml</a></li>
+</ul>
+<h2 id="docker-swarm">Docker Swarm</h2>
+<p>Verificare se swarm è attivo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker system info | grep -i <span style="color:#e6db74">&#34;swarm&#34;</span>
+</span></span></code></pre></div><p>Inizializzare swarm:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker swarm init
+</span></span></code></pre></div><!--
+
+## Creazione di immagini
+
+Esistono 2 formati di immagine: quelle di Docker e quelle OCI.
+
+Le immagini Docker sono basate su un formato proprietario e sono eseguite principalmente in un ambiente Docker come Docker Swarn. Sono create a partire da un file ``Dockerfile`` che descrive il processo di creazione dell'immagine.
+
+Le immagini OCI (Open Container Initiative) sono basate su uno standard aperto e pubblico e sono progettate per essere utilizzate in qualsiasi runtime di container che supporti lo standard OCI.
+
+Nonostante la differenza, gli orchestratori come Kubernetes e Nomad sono in grado di eseguire immagini Docker.
+
+Un dockerfile è un documento che descrive come costruire un immagine.
+
+```bash
+FROM python:3.9-slim
+
+# ARG consente di definire parametri che possono essere
+# passati al Dockerfile durante la creazione dell'immagine
+ARG MY_ENV=production
+ENV MY_ENV $MY_ENV
+
+# Creo un gruppo 'app' ed un utente appartenente al gruppo 'app'
+RUN addgroup -S app && adduser -S app -G app --home /home/app
+
+# Creo una directory e imposto i permessi per l'utente app
+RUN mkdir -p /app
+RUN chown -R myuser:myuser /app
+
+# Uso l'utente per eseguire i processi
+USER app
+
+# Imposto la directory di lavoro
+WORKDIR /app
+
+# Copio tutti i file da . in /app
+COPY --chown=app:app  . /app
+
+# Installo le dipendenze
+RUN pip3 install -r requirements.txt
+
+# Eseguo il comando
+CMD [ "python3", "app.py" ]
+```
+
+Per costruire un immagine a partire dal Dockerfile:
+
+```bash
+docker build -t my-app:1.0 .
+```
+
+-->
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/tools/ssh/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">SSH</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -8,6 +8,15 @@
     <language>it-IT</language>
     <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Docker Engine e Podman</title>
+      <link>http://codingepaduli.github.io/tools/docker/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/tools/docker/</guid>
+      <description>Docker Engine e Podman - Strumenti per gestire i container</description>
+    </item>
+    
+    <item>
       <title>SSH</title>
       <link>http://codingepaduli.github.io/tools/ssh/</link>
       <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
