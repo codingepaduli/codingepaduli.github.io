@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JavaScript - Coding e Paduli</title>
+    <title>p5.js Lez. 04.1 - Progetto Fattoria Animali - Coding e Paduli</title>
 
-    <meta name="description" content="Lezioni sul linguaggio JavaScript">
-        <meta property="og:title" content="JavaScript" />
-<meta property="og:description" content="Lezioni sul linguaggio JavaScript" />
+    <meta name="description" content="Sviluppo del progetto fattoria degli animali">
+        <meta property="og:title" content="p5.js Lez. 04.1 - Progetto Fattoria Animali" />
+<meta property="og:description" content="Sviluppo del progetto fattoria degli animali" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingepaduli.github.io/coding/web/linkjavascript/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2020-04-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-01T00:00:00+00:00" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettofattoriaanimali_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-04-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-20T00:00:00+00:00" />
 
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="JavaScript"/>
-<meta name="twitter:description" content="Lezioni sul linguaggio JavaScript"/>
+<meta name="twitter:title" content="p5.js Lez. 04.1 - Progetto Fattoria Animali"/>
+<meta name="twitter:description" content="Sviluppo del progetto fattoria degli animali"/>
 
 
 
@@ -221,18 +221,77 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-04-01T00:00:00Z">01-04-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/" rel="category">Categories</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-04-20T00:00:00Z">20-04-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
 	</span>
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
         Tempo di lettura 1 minuto 
-        ( 7 parole)
+        ( 155 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <p>Lezioni sul linguaggio JavaScript nella sezione <a href='/coding/web/javascript'>JavaScript</a>.</p>
+      <h1 id="progetto-fattoria-degli-animali">Progetto fattoria degli animali</h1>
+<p>Si sviluppi il progetto &ldquo;fattoria degli animali&rdquo; utilizzando la libreria grafica <code>p5.js</code> e la libreria dei suoni <code>p5.sound.js</code> per il disegno e la riproduzione degli oggetti necessari. I requisiti funzionali del progetto sono i seguenti:</p>
+<ol>
+<li>L&rsquo;area da disegno deve avere una dimensione impostata a proprio piacimento, ma comunque adatta alla pagina web;</li>
+<li>Prima dell&rsquo;avvio, nella funzione <code>preload()</code> devono essere caricati in memoria i suoni e le immagini da utilizzare;</li>
+<li>Devono essere visualizzati almeno 16 animali differenti, disposti in maniera non sovrapposta secondo le proprie preferenze;</li>
+<li>Quando l&rsquo;utente clicca su un animale, deve essere visualizzato il nome e riprodotto il verso dell&rsquo;animale;</li>
+<li>Se è in corso la riproduzione del verso di un animale, non deve essere possibile riprodurne un&rsquo;altro.</li>
+</ol>
+<p>Di seguito, un&rsquo;immagine del gioco da realizzare.</p>
+<p><img src="/static/coding/web/p5js/sounds_and_images_exe_farm.png" alt="p5.js - progetto fattoria degli animali" title="p5.js - progetto fattoria degli animali"></p>
+<!-- markdownlint-disable MD009 MD036 -->
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esercizio</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>Totale Punti</td>
+</tr>
+<tr>
+<td>Max punti</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>Punti</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cognome ______________ Nome ______________ Classe __________ Data __________</strong></p>
+<!-- markdownlint-enable MD009 MD036 -->
 
     </div>
   </article>
@@ -246,15 +305,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/linkhtml/" rel="prev">
+		<a class="pager__link" href="/coding/web/p5js/soundsandimages/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">HTML</p>
+			<p class="pager__title">p5.js Lez. 04 - Suoni ed immagini</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/linkp5js/" rel="next">
+		<a class="pager__link" href="/coding/web/p5js/progettomemory_exe/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">p5.js</p>
+			<p class="pager__title">p5.js Lez. 04.2 - Gioco Memory</p>
 		</a>
 	</div>
 </nav>

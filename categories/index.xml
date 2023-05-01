@@ -6,7 +6,34 @@
     <description>Recent content in Categories on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sun, 02 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>coding</title>
+      <link>http://codingepaduli.github.io/categories/coding/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>p5.js</title>
+      <link>http://codingepaduli.github.io/categories/p5.js/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/p5.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>http://codingepaduli.github.io/categories/web/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/web/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>interesting</title>
       <link>http://codingepaduli.github.io/categories/interesting/</link>
@@ -35,29 +62,11 @@
     </item>
     
     <item>
-      <title>coding</title>
-      <link>http://codingepaduli.github.io/categories/coding/</link>
-      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/categories/coding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>mediapipe</title>
       <link>http://codingepaduli.github.io/categories/mediapipe/</link>
       <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/mediapipe/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>http://codingepaduli.github.io/categories/web/</link>
-      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/categories/web/</guid>
       <description></description>
     </item>
     
@@ -85,15 +94,6 @@
       <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>p5.js</title>
-      <link>http://codingepaduli.github.io/categories/p5.js/</link>
-      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/categories/p5.js/</guid>
       <description></description>
     </item>
     

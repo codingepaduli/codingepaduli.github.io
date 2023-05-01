@@ -35,6 +35,12 @@
     <loc>http://codingepaduli.github.io/coding/web/p5js/interactivity/</loc>
     <lastmod>2020-09-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/progettomemory_exe/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/progettofattoriaanimali_exe/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</loc>
     <lastmod>2020-09-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -81,7 +87,16 @@
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2023-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/coding/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/web/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/educational/</loc>
     <lastmod>2023-04-02T00:00:00+00:00</lastmod>
@@ -101,16 +116,10 @@
     <loc>http://codingepaduli.github.io/categories/software/</loc>
     <lastmod>2023-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/coding/</loc>
-    <lastmod>2023-04-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/coding/web/mediapipe/flappybird/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/mediapipe/</loc>
-    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/web/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/others/</loc>
@@ -148,9 +157,6 @@
   </url><url>
     <loc>http://codingepaduli.github.io/categories/tools/</loc>
     <lastmod>2023-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
-    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/webapp/codificarsa/</loc>
     <lastmod>2022-03-19T00:00:00+00:00</lastmod>

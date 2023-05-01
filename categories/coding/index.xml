@@ -6,7 +6,7 @@
     <description>Recent content in coding on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Fri, 06 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>La nascita del computer e delle telecomunicazioni</title>
       <link>http://codingepaduli.github.io/coding/storia/</link>
@@ -104,6 +104,24 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/interactivity/</guid>
       <description>Interazione con l&amp;rsquo;utente attraverso le periferiche di input ed output ed animazioni realizzate usando le variabili</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.2 - Gioco Memory</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettomemory_exe/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettomemory_exe/</guid>
+      <description>Sviluppo del gioco Memory</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.1 - Progetto Fattoria Animali</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettofattoriaanimali_exe/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettofattoriaanimali_exe/</guid>
+      <description>Sviluppo del progetto fattoria degli animali</description>
     </item>
     
     <item>
