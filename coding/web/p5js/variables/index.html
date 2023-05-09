@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>p5.js Lez. 04 - Variabili - Coding e Paduli</title>
+
+    <meta name="description" content="Usare le variabili per creare animazioni e memorizzare lo stato">
+        <meta property="og:title" content="p5.js Lez. 04 - Variabili" />
+<meta property="og:description" content="Usare le variabili per creare animazioni e memorizzare lo stato" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/variables/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-05-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-02T00:00:00+00:00" />
+
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="p5.js Lez. 04 - Variabili"/>
+<meta name="twitter:description" content="Usare le variabili per creare animazioni e memorizzare lo stato"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-05-02T00:00:00Z">02-05-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 16 minuti 
+        ( 3297 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="variabili">Variabili</h1>
+<p>Le variabili sono spazi di memoria in cui vengono memorizzate delle informazioni. Hanno un nome ed un tipo associato.</p>
+<p>In processing sono tipicamente utilizzate per memorizzare immagini, suoni, frasi o valori numerici, come le coordinate ed il diametro di un cerchio o il colore di un rettangolo.</p>
+<p>L&rsquo;istruzione che il programmatore utilizza in un programma per creare una variabile è l&rsquo;istruzione di <strong>dichiarazione di variabile</strong>, che assegna un nome ed un tipo di dato alla variabile e la <strong>alloca</strong> in memoria.</p>
+<p>La dichiarazione avviene con la parola chiave <code>let</code> seguita dai nomi delle variabili separate da virgola. Un esempio è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">d</span>;
+</span></span></code></pre></div><p>E&rsquo; possibile assegnare un valore iniziale alle variabili utilizzando l’operatore di assegnazione <code>=</code> seguito dal valore.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>;
+</span></span></code></pre></div><p>Quando in una variabile si vuole memorizzare una frase, è necessario che questa sia racchiusa tra doppi apici.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">frase</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">nome</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span></code></pre></div><p>In processing le variabili sono dichiarate ad inizio del programma. Di seguito un esempio completo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">150</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">frase</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello world!&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">d</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">frase</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="istruzione-di-input-prompt">Istruzione di input <code>prompt</code></h2>
+<p>In programmazione le funzioni di input sono quelle funzioni che permettono ad un programma di ricevere dati dall&rsquo;esterno. Le funzioni di input permettono all&rsquo;utente di inserire in input i dati che il programma utilizza per effettuare calcoli.</p>
+<p>La funzione progettata allo scopo è <code>prompt</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: prompt(msg)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    msg    String: message to show
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Return:
+</span></span><span style="display:flex;"><span>    the input value
+</span></span></code></pre></div><p>Il parametro <code>msg</code> è un messaggio alfanumerico da visualizzare all&rsquo;utente, per cui deve essere inserito tra doppi apici.</p>
+<p>Il valore inserito dall&rsquo;utente può essere memorizzato all&rsquo;interno di una variabile.</p>
+<p>Un esempio d&rsquo;uso della funzione, che in questo caso memorizza l&rsquo;input dell&rsquo;utente nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;inserisci un valore&#34;</span>);
+</span></span></code></pre></div><p>Dato che questa funzione blocca il programma in attesa di un input dell&rsquo;utente, deve essere utilizzata nella funzione <code>setup</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">150</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">frase</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;inserisci il diametro&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">frase</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;inserisci una frase&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">d</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">frase</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">30</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="input-di-un-numero-intero">Input di un numero intero</h3>
+<p>L&rsquo;input dell&rsquo;utente può essere una qualsiasi sequenza di caratteri alfanumerici. Quando si necessita di un input numerico intero allora lo si deve convertire al formato intero con la funzione <code>parseInt</code>, che ha la seguente sintassi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: parseInt(str)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  str    String: the string to convert to integer type
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Return:
+</span></span><span style="display:flex;"><span>  Number: the converted number
+</span></span></code></pre></div><p>Il parametro <code>str</code> rappresenta la stringa da convertire in numero.</p>
+<p>Il valore convertito può essere memorizzato all&rsquo;interno di una variabile.</p>
+<p>Un esempio di input numerico intero, che viene memorizzato nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;inserisci un numero&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">x</span>);
+</span></span></code></pre></div><h3 id="input-di-un-numero-decimale">Input di un numero decimale</h3>
+<p>Quando si necessita di un input numerico decimale allora si deve convertire l&rsquo;input dell&rsquo;utente al formato decimale con la funzione <code>parseFloat</code>, che ha la seguente sintassi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: parseFloat(str)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  str    String: the string to convert to float type
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Return:
+</span></span><span style="display:flex;"><span>  Number: the converted number
+</span></span></code></pre></div><p>Il parametro <code>str</code> rappresenta la stringa da convertire in numero.</p>
+<p>Il valore convertito può essere memorizzato all&rsquo;interno di una variabile.</p>
+<p>Un esempio di input numerico decimale, che viene memorizzato nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;inserisci un numero&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> parseFloat(<span style="color:#a6e22e">x</span>);
+</span></span></code></pre></div><h2 id="istruzione-di-output-text">Istruzione di output <code>text</code></h2>
+<p>In programmazione le funzioni di output sono quelle funzioni che producono un risultato visibile all&rsquo;utente o al sistema in cui viene eseguito il programma. Le funzioni di output determinano cosa viene stampato a schermo, mostrato su un&rsquo;interfaccia utente o salvato in un file.</p>
+<p>La funzione <code>text</code> è un esempio di funzione di output, infatti è utilizzata per visualizzare testo o variabili in output nell&rsquo;area da disegno, inserendo come primo parametro della funzione la variabile da mostrare e specificando come successivi parametri le coordinate in cui si desidera visualizzare il testo.</p>
+<p>Ad esempio, se si vuole visualizzare il valore della variabile <code>j</code> nell&rsquo;area da disegno, si può utilizzare la seguente istruzione:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">j</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">50</span>);
+</span></span></code></pre></div><p>In questo caso, il primo parametro attuale è la variabile <code>j</code>, i successivi parametri attuali sono le coordinate <code>10</code> e <code>50</code>.</p>
+<h2 id="assegnazione-di-un-valore-casuale">Assegnazione di un valore casuale</h2>
+<p>E&rsquo; possibile assegnare ad una variabile un numero pseudo-casuale compreso in un certo range numerico. Per generare numeri casuali all&rsquo;interno di un range specifico, bisogna utilizzare la funzione <code>random()</code>, che ha la seguente sintassi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: random([min], [max])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  min    Number: the lower bound (inclusive) (Optional)
+</span></span><span style="display:flex;"><span>  max    Number: the upper bound (exclusive) (Optional)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Return:
+</span></span><span style="display:flex;"><span>  Number: the random number
+</span></span></code></pre></div><p>Il parametro <code>min</code> rappresenta il valore minimo da generare (incluso), il parametro <code>max</code> rappresenta il valore massimo da generare (escluso).</p>
+<p>Il valore generato dalla funzione può essere memorizzato all&rsquo;interno di una variabile.</p>
+<p>Un esempio d&rsquo;uso della funzione che genera un valore casuale, memorizzato nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">random</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>);
+</span></span></code></pre></div><p>In questo caso, alla variabile <code>x</code> viene assegnato un numero casuale compreso tra <code>10,0000</code> (incluso) e <code>19,9999</code> (il valore <code>20</code> è escluso).</p>
+<h2 id="calcolo-della-distanza-tra-due-punti">Calcolo della distanza tra due punti</h2>
+<p>Il calcolo della distanza tra due punti del piano è un&rsquo;operazione fondamentale per verificare se due figure collidono.</p>
+<p>Il teorema di Pitagora permette una visualizzazione grafica molto intuitiva della formula utilizzata per calcolare la distanza tra due punti (x1, y1) ed (x2, y2). Sul famoso triangolo rettangolo, la base è calcolata dalla differenza tra le ascisse dei due punti, quindi (x2-x1), mentre l&rsquo;altezza è calcolata come differenza tra le ordinate dei due punti, quindi (y2-y1). L&rsquo;ipotenusa è quindi calcolata con la nota formula: &ldquo;radice quadrata della somma tra il quadrato della base e il quadrato dell&rsquo;altezza&rdquo;.</p>
+<p><img src="/static/coding/web/p5js/distanzaPunti.png" alt="p5.js - Distanza tra due punti" title="p5.js - Distanza tra due punti"></p>
+<p>La funzione <code>dist</code> calcola la distanza tra due punti, ha la seguente sintassi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: dist(x1, y1, x2, y2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  x1    Number: x-coordinate of the first point
+</span></span><span style="display:flex;"><span>  y1    Number: y-coordinate of the first point
+</span></span><span style="display:flex;"><span>  x2    Number: x-coordinate of the second point
+</span></span><span style="display:flex;"><span>  y2    Number: y-coordinate of the second point
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Return:
+</span></span><span style="display:flex;"><span>  Number: the distance
+</span></span></code></pre></div><p>I parametri <code>x1</code> e <code>y1</code> rappresentano le coordinate x ed y del primo punto, i parametri <code>x1</code> e <code>y1</code> rappresentano le coordinate x ed y del secondo punto.</p>
+<p>La distanza calcolata dalla funzione può essere memorizzata all&rsquo;interno di una variabile.</p>
+<p>Un esempio d&rsquo;uso della funzione che calcola la distanza, memorizzata nella variabile <code>distance</code> (da dichiarare), è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">distance</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dist</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">500</span>, <span style="color:#ae81ff">100</span>);
+</span></span></code></pre></div><h2 id="variabili-dello-stato-del-mouse">Variabili dello stato del mouse</h2>
+<p>L&rsquo;input del mouse è gestito in maniera completamente trasparente per il programmatore. Lo stato del dispositivo, rappresentato dalle coordinate X ed Y del cursore e dall&rsquo;ultimo pulsante del mouse cliccato, è memorizzato nelle variabili <code>mouseX</code>, <code>mouseY</code> e <code>mouseButton</code>. Queste variabili sono dichiarate automaticamente, quindi non necessitano di una dichiarazione da parte del programmatore, e sono continuamente aggiornate ad ogni ridisegno dell&rsquo;area.</p>
+<p>Allo stesso modo, nella variabile <code>mouseIsPressed</code> è automaticamente memorizzato il fatto che un (qualsiasi) pulsante del mouse sia stato cliccato o meno, per cui questa variabile può assumere valore <code>true</code> o <code>false</code>. Si deve prestare particolare attenzione a questa variabile, dato che al click assume valore <code>true</code>, ma appena il click termina, assume immediatamente valore <code>false</code>.</p>
+<p>Per quanto riguarda la variabile <code>mouseButton</code>, l&rsquo;ultimo pulsante cliccato può essere identificato da una delle seguenti costanti:</p>
+<ul>
+<li><code>LEFT</code>: indica che l&rsquo;ultimo pulsante cliccato è il pulsante sinistro del mouse;</li>
+<li><code>RIGHT</code>: indica che l&rsquo;ultimo pulsante cliccato è il pulsante destro del mouse;</li>
+<li><code>CENTER</code>: indica che l&rsquo;ultimo pulsante cliccato è il pulsante centrale del mouse.</li>
+</ul>
+<h2 id="gestire-il-click-del-mouse">Gestire il click del mouse</h2>
+<p>Il click del mouse è un evento tipicamente utilizzato per interagire con l&rsquo;utente. Si può utilizzare per selezionare un&rsquo;opzione da un menu, per rendere un gioco interattivo o creare un&rsquo;esperienza interattiva.</p>
+<p>In Processing quando viene rilevato il click, viene invocata la funzione <code>mousePressed</code> (e quindi viene eseguito il codice presente all&rsquo;interno), sempre che questa funzione sia stata definita dall&rsquo;utente.</p>
+<p>Un utilizzo classico della funzione è memorizzare le coordinate X ed Y a cui è avvenuto il click del mouse. Per memorizzare queste due coordinate è necessario dichiarare due variabili che chiameremo <code>clickX</code> e <code>clickY</code> e che inizializzeremo per comodità al valore <code>0</code>.</p>
+<p>Inoltre è necessario ricordare che le coordinate del mouse sono continuamente memorizzate nelle variabili <code>mouseX</code> e <code>mouseY</code> e che non è necessario dichiararle.</p>
+<p>Al click del mouse quindi andremo a salvare nelle variabili <code>clickX</code> e <code>clickY</code> i valori delle variabili <code>mouseX</code> e <code>mouseY</code>.</p>
+<p>Di seguito un esempio completo in cui vengono visualizzate le coordinate dell&rsquo;ultimo click del mouse.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">clickX</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">clickY</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">clickX</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">30</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">clickY</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mousePressed</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">clickX</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseX</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">clickY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseY</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="variabili-dello-stato-della-tastiera">Variabili dello stato della tastiera</h2>
+<p>L&rsquo;input della tastiera è gestito in maniera completamente trasparente per il programmatore. Lo stato del dispositivo, rappresentato dal tasto premuto e dal codice ASCII del tasto premuto, è memorizzato nelle variabili <code>key</code> e <code>keyCode</code>. Queste variabili sono dichiarate automaticamente, quindi non necessitano di una dichiarazione da parte del programmatore, ed il relativo valore resta disponibile in memoria fino a quando un nuovo pulsante viene cliccato.</p>
+<p>La differenza tra le due variabili è che la prima si usa per ottenere solo caratteri alfanumerici e di punteggiatura, la seconda variabile si usa per ottenere il codice del tasto, e non si limita ai caratteri alfanumerici e di punteggiatura, ma comprende tutti i tasti, ad esempio il tasto &ldquo;invio&rdquo;, il tasto di cancellazione, i tasti corrispondenti alle frecce, e tutti gli altri.</p>
+<p>Sempre in maniera trasparente al programmatore, nella variabile <code>keyIsPressed</code> è automaticamente memorizzato il fatto che un (qualsiasi) tasto sia stato cliccato o meno, per cui questa variabile può assumere valore <code>true</code> o <code>false</code>. Si deve prestare particolare attenzione a questa variabile, dato che alla pressione di un tasto, assume valore <code>true</code> ma, appena il tasto premuto viene lasciato, assume immediatamente valore <code>false</code>.</p>
+<h2 id="variabili-dello-stato-dello-schermo">Variabili dello stato dello schermo</h2>
+<p>Quando il programmatore definisce le dimensioni dell&rsquo;area da disegno, utilizzando la funzione <code>createCanvas</code>, la larghezza e l&rsquo;altezza dell&rsquo;area da disegno vengono memorizzate automaticamente nelle rispettive variabili <code>width</code> ed <code>height</code>.</p>
+<p>Le dimensioni della larghezza e dell&rsquo;altezza della finestra corrente sono invece memorizzate nelle variabili <code>windowWidth</code> e <code>windowHeight</code>.</p>
+<p>Queste variabili sono dichiarate automaticamente, quindi non necessitano di una dichiarazione da parte del programmatore, e possono essere utilizzate per adattare i contenuti alla grandezza dello schermo, che può variare da dispositivo a dispositivo.</p>
+<p>Dato che l&rsquo;utente può ruotare lo schermo con tablet e smartphone, la variabile <code>deviceOrientation</code> indica se lo schermo è orientato in orizzontale o verticale.</p>
+<h2 id="animazioni">Animazioni</h2>
+<p>Le animazioni sono basate principalmente sul cambiamento dello stato di uno o più oggetti grafici. Il continuo ridisegnare l&rsquo;area da disegno, gestito dalla libreria grafica, unito alla possibilità di modificare lo stato dei vari oggetti grafici, come la posizione ed il colore, permette lo sviluppo di animazioni con una semplicità notevole.</p>
+<p>Per realizzare il movimento di una figura basta spostare, nel corso del tempo, la posizione della figura e la si vedrà muovere. Per realizzare un passaggio dal giorno alla notte basta cambiare, nel corso del tempo, il colore del cielo da azzurro a blu notte e si vedrà calare la notte.</p>
+<p>Per poter effettuare un cambiamento di stato di un oggetto, è necessario memorizzare lo stato dell&rsquo;oggetto in una variabile. Se un oggetto deve muoversi solo sull&rsquo;asse X, è necessario memorizzare in una variabile la posizione X dell&rsquo;oggetto stesso. Se, invece, l&rsquo;oggetto deve muoversi su entrambi gli assi X ed Y, è necessario memorizzare in una variabile la posizione X, in una seconda variabile la posizione Y. Se è il colore che deve cambiare, le componenti del colore devono essere memorizzate ognuna in una variabile (nel modello RGB la quantità di rosso deve essere memorizzata in una variabile, la quantità di verde in una seconda variabile ed, infine, la quantità di blu in una terza variabile).</p>
+<p>Una volta memorizzato lo stato dell&rsquo;oggetto in una o più variabili, si può realizzare il movimento cambiando il valore di queste variabili.</p>
+<h3 id="esempio-di-movimento-di-un-cerchio">Esempio di movimento di un cerchio</h3>
+<p>Partiamo dal disegno di un cerchio, realizzato attraverso il codice seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span></code></pre></div><p>Per far muovere il cerchio verso destra (quindi lungo l&rsquo;asse X), è necessario memorizzare in una variabile, che chiameremo <code>x</code>, la posizione iniziale della coordinata X del cerchio.</p>
+<p>La dichiarazione della variabile può avvenire prima delle due funzioni <code>setup</code> e <code>draw</code>, mediante la classica dichiarazione:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span></code></pre></div><p>Per realizzare il movimento del cerchio verso destra, è necessario incrementare il valore della variabile <code>x</code> ad ogni operazione di ridisegno dell&rsquo;area di lavoro. Ricordando che l&rsquo;aggiornamento dell&rsquo;area di lavoro avviene nella funzione <code>draw</code>, allora si intuisce facilmente che sia il disegno del cerchio, sia l&rsquo;operazione di incremento della variabile <code>x</code> devono essere inserite all&rsquo;interno di questa funzione.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+</span></span></code></pre></div><p>L&rsquo;esempio completo è di seguito riportato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>E&rsquo; interessante notare che se l&rsquo;istruzione di incremento <code>x = x + 1</code> la si pone nella funzione <code>setup</code> invece che nella funzione <code>draw</code>, questo incremento viene eseguito una sola volta, quindi il cerchio resta immobile.</p>
+<p>Altra cosa interessante da notare, è che se si cancella l&rsquo;istruzione per disegnare lo sfondo (<code>background</code>), allora la vecchia posizione del cerchio non sarà &ldquo;pulita&rdquo; e nell&rsquo;area da disegno rimarrà una &ldquo;scia&rdquo; dovuta a tutte le precedenti posizioni occupate dal cerchio, come nella seguente immagine;</p>
+<p><img src="/static/coding/web/p5js/interactivity01.png" alt="p5.js - Esempio dell&amp;rsquo;animazione senza il disegno dello sfondo" title="p5.js - Esempio dell'animazione senza il disegno dello sfondo"></p>
+<h3 id="esempio-di-movimento-del-cerchio-con-il-mouse">Esempio di movimento del cerchio con il mouse</h3>
+<p>Partiamo dal disegno di un cerchio, realizzato attraverso il codice seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span></code></pre></div><p>Per poter muovere il cerchio attraverso il mouse (quindi lungo l&rsquo;asse X ed Y), è necessario memorizzare in una variabile, che chiameremo <code>x</code>, la posizione della coordinata X del cerchio ed in una seconda variabile, che chiameremo <code>y</code>, la posizione della coordinata Y del cerchio. Dato che non sappiamo ancora la posizione del mouse, possiamo inizializzare le due variabili con il valore zero, mediante la classica dichiarazione:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span></code></pre></div><p>Per poter muovere il cerchio attraverso il mouse, è necessario assegnare alla variabile <code>x</code> la posizione X del mouse, che è memorizzata a sua volta nella variabile mouseX; Allo stesso modo, è necessario assegnare alla variabile <code>y</code> la posizione Y del mouse, che è memorizzata nella variabile mouseY;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseX</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseY</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#ae81ff">50</span>);
+</span></span></code></pre></div><p>L&rsquo;esempio completo è di seguito riportato:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseX</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseY</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>L&rsquo;utente può quindi spostare il cerchio utilizzando il mouse, come nella seguente immagine:</p>
+<p><img src="/static/coding/web/p5js/interactivity02.png" alt="p5.js - Esempio di spostamento del cerchio utilizzando il mouse" title="p5.js - Esempio di spostamento del cerchio utilizzando il mouse"></p>
+<h2 id="tecnica-della-variabile-contatore">Tecnica della variabile contatore</h2>
+<p>La <strong>tecnica della variabile contatore</strong> è un modello molto utilizzato nella scrittura degli algoritmi e consiste nell&rsquo;utilizzare una variabile per contare il numero di volte in cui è eseguita una determinata azione o avviene un determinato evento.</p>
+<p>Per implementare questa tecnica è necessario:</p>
+<ol>
+<li>dichiarare una variabile numerica contatore;</li>
+<li>inizializzarla al valore numerico da cui far partire il contatore (generalmente zero o uno);</li>
+<li>Ogni volta che viene eseguita l&rsquo;azione o si verifica l&rsquo;evento, la variabile contatore deve essere incrementata di uno.</li>
+</ol>
+<p>Di questa tecnica esiste la variante dell&rsquo;incremento anticipato, in cui il contatore viene incrementato di 1 <strong>prima</strong> che venga eseguita l&rsquo;azione o che si verifichi l&rsquo;evento.</p>
+<h3 id="esempio-di-conteggio-delle-figure">Esempio di conteggio delle figure</h3>
+<p>Di seguito, un esempio completo d&rsquo;applicazione della variabile contatore per numerare i cerchi disegnati.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// dichiaro la variabile contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">contatore</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// inizializzo la variabile contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ogni volta che disegno un cerchio
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// incremento la variabile contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">contatore</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">contatore</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">150</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">contatore</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">150</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">contatore</span>, <span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">150</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img src="/static/coding/web/p5js/variables_counter_post.png" alt="p5.js - Esempio di applicazione della variabile contatore" title="p5.js - Esempio di applicazione della variabile contatore"></p>
+<h3 id="esempio-di-conteggio-pre-incrementato-delle-figure">Esempio di conteggio pre-incrementato delle figure</h3>
+<p>Di seguito, un esempio completo d&rsquo;applicazione della variabile contatore con incremento anticipato per numerare i cerchi disegnati.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// dichiaro la variabile contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">contatore</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// inizializzo la variabile contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// incremento la variabile contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// prima di disegnare i cerchi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">contatore</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">contatore</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">150</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">contatore</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">150</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">contatore</span>, <span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">150</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img src="/static/coding/web/p5js/variables_counter_pre.png" alt="p5.js - Esempio di applicazione della variabile contatore" title="p5.js - Esempio di applicazione della variabile contatore"></p>
+<h3 id="esempio-del-conteggio-dei-click-del-mouse">Esempio del conteggio dei click del mouse</h3>
+<p>Di seguito, un esempio completo d&rsquo;applicazione della variabile contatore  per contare il numero di click del mouse.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">clickX</span>, <span style="color:#a6e22e">clickY</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Dichiaro ed inizializzo 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// la variabile contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">clickX</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">30</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">clickY</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">contatore</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">70</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// gestisco il click del mouse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mousePressed</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">clickX</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseX</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">clickY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseY</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ad ogni click, incremento il contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contatore</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In questo esempio si rileva il click del mouse e ad ogni click si incrementa il conteggio. Si ricorda che, come spiegato nei paragrafi precedenti, al click del mouse vengono eseguite le istruzioni presenti all&rsquo;interno della funzione <code>mousePressed</code>.</p>
+<p>Per poter contare il numero di click è quindi necessario che l&rsquo;incremento del contatore sia inserito all&rsquo;interno di questa funzione.</p>
+<p><img src="/static/coding/web/p5js/variables_counter_click.png" alt="p5.js - Esempio di applicazione della variabile contatore" title="p5.js - Esempio di applicazione della variabile contatore"></p>
+<h2 id="tecnica-della-variabile-accumulatore">Tecnica della variabile accumulatore</h2>
+<p>La <strong>tecnica della variabile accumulatore</strong> consiste nell&rsquo;utilizzare una variabile nella quale accumulare il valore di una serie di dati, man mano che questi si presentano, in modo da poter utilizzare il valore totale alla fine.</p>
+<p>Per implementare questa tecnica è necessario:</p>
+<ol>
+<li>dichiarare una variabile numerica accumulatore;</li>
+<li>inizializzarla al valore numerico opportuno (generalmente zero o uno);</li>
+<li>Ogni volta che si presenta un dato, lo si somma o sottrae al valore presente nell&rsquo;accumulatore.</li>
+</ol>
+<h3 id="esempio-di-somma-di-4-numeri-casuali">Esempio di somma di 4 numeri casuali</h3>
+<p>Di seguito, un esempio completo d&rsquo;applicazione della variabile accumulatore per sommare i numeri generati casualmente dal computer.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// dichiaro la variabile accumulatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">accumulatore</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num1</span>, <span style="color:#a6e22e">num2</span>, <span style="color:#a6e22e">num3</span>, <span style="color:#a6e22e">num4</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// inizializzo la variabile accumulatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ogni volta che viene generato un numero casuale
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// lo accumulo nella variabile accumulatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">num1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">random</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num1</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">random</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num2</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">random</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num3</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">random</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num4</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">32</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">accumulatore</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In questo esempio, le istruzioni per la generazione dei numeri casuali sono inserite nella funzione <code>setup</code> in modo tale da essere eseguite una volta sola. Ogni volta che un numero casuale viene generato, viene sommato nella variabile accumulatore.</p>
+<p><img src="/static/coding/web/p5js/variables_accumulator_random.png" alt="p5.js - Esempio di applicazione della variabile accumulatore" title="p5.js - Esempio di applicazione della variabile accumulatore"></p>
+<h3 id="esempio-di-somma-di-4-numeri-in-input">Esempio di somma di 4 numeri in input</h3>
+<p>Di seguito, un esempio completo d&rsquo;applicazione della variabile accumulatore per sommare i numeri inseriti dall&rsquo;utente.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// dichiaro la variabile accumulatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">accumulatore</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num1</span>, <span style="color:#a6e22e">num2</span>, <span style="color:#a6e22e">num3</span>, <span style="color:#a6e22e">num4</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// inizializzo la variabile accumulatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ogni volta che l&#39;utente inserisce un input
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// lo si converte in numerico decimale
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// e accumulato nella variabile accumulatore
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">num1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;Inserisci un valore:&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num1</span> <span style="color:#f92672">=</span> parseFloat(<span style="color:#a6e22e">num1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num1</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;Inserisci un valore:&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num2</span> <span style="color:#f92672">=</span> parseFloat(<span style="color:#a6e22e">num2</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num2</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;Inserisci un valore:&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num3</span> <span style="color:#f92672">=</span> parseFloat(<span style="color:#a6e22e">num3</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num3</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;Inserisci un valore:&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">num4</span> <span style="color:#f92672">=</span> parseFloat(<span style="color:#a6e22e">num4</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">accumulatore</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num4</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">32</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">accumulatore</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In questo esempio, le istruzioni per l&rsquo;input dell&rsquo;utente (dato che sono bloccanti) sono inserite nella funzione <code>setup</code> in modo tale da essere eseguite una volta sola. Ogni volta che l&rsquo;utente inserisce un valore, viene sommato nella variabile accumulatore.</p>
+<p><img src="/static/coding/web/p5js/variables_accumulator_prompt.png" alt="p5.js - Esempio di applicazione della variabile accumulatore" title="p5.js - Esempio di applicazione della variabile accumulatore"></p>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/p5js/colorsandstyles_exe/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">p5.js Lez. 03.1 - Esercizi di grafica 2D a colori</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/p5js/progettofattoriaanimali_exe/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">p5.js Lez. 05.1 - Progetto Fattoria Animali</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
