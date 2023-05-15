@@ -6,7 +6,7 @@
     <description>Recent content in web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
@@ -80,21 +80,21 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 05 - Suoni ed immagini</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</link>
-      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</guid>
-      <description>Suoni ed immagini</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 05.2 - Gioco Memory</title>
+      <title>p5.js Lez. 05.3 - Gioco Memory</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettomemory_exe/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettomemory_exe/</guid>
       <description>Sviluppo del gioco Memory</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05.2 - Gioco Indovina Chi</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoindovinachi_exe/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoindovinachi_exe/</guid>
+      <description>Sviluppo del gioco Indovina Chi</description>
     </item>
     
     <item>
@@ -104,6 +104,15 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettofattoriaanimali_exe/</guid>
       <description>Sviluppo del progetto fattoria degli animali</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05 - Suoni ed immagini</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</guid>
+      <description>Suoni ed immagini</description>
     </item>
     
     <item>
