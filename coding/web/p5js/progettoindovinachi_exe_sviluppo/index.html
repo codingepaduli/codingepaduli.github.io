@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>p5.js Lez. 05.2 - Gioco Indovina Chi - Coding e Paduli</title>
+    <title>p5.js Lez. 05.3 - Fasi di sviluppo del gioco Indovina Chi - Coding e Paduli</title>
 
-    <meta name="description" content="Sviluppo del gioco Indovina Chi">
-        <meta property="og:title" content="p5.js Lez. 05.2 - Gioco Indovina Chi" />
-<meta property="og:description" content="Sviluppo del gioco Indovina Chi" />
+    <meta name="description" content="Fasi di sviluppo del gioco Indovina Chi">
+        <meta property="og:title" content="p5.js Lez. 05.3 - Fasi di sviluppo del gioco Indovina Chi" />
+<meta property="og:description" content="Fasi di sviluppo del gioco Indovina Chi" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettoindovinachi_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettoindovinachi_exe_sviluppo/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
 <meta property="article:published_time" content="2023-05-15T00:00:00+00:00" />
 <meta property="article:modified_time" content="2023-05-15T00:00:00+00:00" />
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="p5.js Lez. 05.2 - Gioco Indovina Chi"/>
-<meta name="twitter:description" content="Sviluppo del gioco Indovina Chi"/>
+<meta name="twitter:title" content="p5.js Lez. 05.3 - Fasi di sviluppo del gioco Indovina Chi"/>
+<meta name="twitter:description" content="Fasi di sviluppo del gioco Indovina Chi"/>
 
 
 
@@ -225,91 +225,33 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 2 minuti 
-        ( 215 parole)
+        Tempo di lettura 1 minuto 
+        ( 190 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="gioco-indovina-chi">Gioco Indovina Chi</h1>
-<p>Si sviluppi il gioco &ldquo;Indovina Chi&rdquo; utilizzando la libreria grafica <code>p5.js</code> e la libreria dei suoni <code>p5.sound.js</code> per il disegno e la riproduzione degli oggetti necessari. I requisiti funzionali del progetto sono i seguenti:</p>
-<ol>
-<li>
-<p>L&rsquo;area da disegno deve avere una dimensione impostata a proprio piacimento, ma comunque adatta alla pagina web;</p>
-</li>
-<li>
-<p>Prima dell&rsquo;avvio del gioco, nella funzione <code>preload()</code> devono essere caricati in memoria le immagini di almeno 8 cantanti differenti ed una canzone per ogni cantante;</p>
-</li>
-<li>
-<p>All&rsquo;avvio del gioco, devono essere visualizzati tutti i cantanti e deve essere riprodotta una canzone scelta casualmente tra quelle disponibili;</p>
-</li>
-<li>
-<p>L&rsquo;utente deve indovinare a chi appartiene la canzone cliccando sull&rsquo;immagine del cantante corrispondente; Se indovina il cantante viene visualizzato un messaggio di vittoria;</p>
-</li>
-<li>
-<p>Punti aggiuntivi:</p>
-<ol>
-<li>Aggiungere il punteggio, che all&rsquo;avvio del gioco è pari a zero;</li>
-<li>Quando l&rsquo;utente indovina il cantante guadagna un punto, in caso contrario lo perde;</li>
-<li>Quando l&rsquo;utente indovina il cantante, la canzone in riproduzione deve essere stoppata e deve essere scelta un&rsquo;altra canzone da riprodurre.</li>
-</ol>
-</li>
-</ol>
-<p>Di seguito, un&rsquo;immagine di un gioco simile, in cui bisogna indovinare lo strumento a partire dal suono che genera.</p>
+      <h1 id="fasi-di-sviluppo-del-gioco-indovina-chi">Fasi di sviluppo del gioco Indovina Chi</h1>
+<p><strong>Primo step:</strong> caricare immagini e suoni in memoria e visualizzare le immagini nell&rsquo;area da disegno, come nell&rsquo;immagine in calce.</p>
+<p><strong>Secondo step:</strong> Nella funzione <code>setup</code> creare un array di canzoni (l&rsquo;array deve contenere tutte le variabili delle canzoni). Ad esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">sceltaSuoni</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">SuonoGue</span>, <span style="color:#a6e22e">SuonoLazza</span>, <span style="color:#a6e22e">SuonoEmis</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">SuonoNoyz</span>, <span style="color:#a6e22e">SuonoSalmo</span>, <span style="color:#a6e22e">SuonoLilTjay</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">SuonoLilBaby</span>, <span style="color:#a6e22e">SuonoMarracash</span>, <span style="color:#a6e22e">SuonoFuture</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">SuonoErnia</span>, <span style="color:#a6e22e">SuonoKidYugi</span>, <span style="color:#a6e22e">SuonoCapo</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">SuonoShiva</span>, <span style="color:#a6e22e">SuonoDrake</span>, <span style="color:#a6e22e">SuonoDonToliver</span>];
+</span></span></code></pre></div><p>All&rsquo;avvio del programma deve essere scelta una canzone casuale utilizzando la funzione <code>random</code> e passando come parametro l&rsquo;array di canzoni, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">suonoRandom</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">random</span>(<span style="color:#a6e22e">sceltaSuoni</span>);
+</span></span></code></pre></div><p>Infine, la canzone casuale scelta dal computer deve essere <strong>riprodotta</strong>.</p>
+<p><strong>Terzo step:</strong> Quando l&rsquo;utente seleziona un cantante cliccandoci su, deve essere salvata in una variabile <code>suonoScelto</code> la canzone associata al cantante selezionato.</p>
+<p><strong>Quarto step:</strong> Sempre al click del mouse, se la canzone casuale scelta dal computer e la canzone scelta dall&rsquo;utente (salvata nella variabile <code>suonoScelto</code>) sono uguali, allora il punteggio aumenta di 1.</p>
+<p><strong>Quinto step:</strong> Sempre al click del mouse:</p>
+<ul>
+<li>la canzone casuale viene stoppata;</li>
+<li>si sceglie una nuova canzone casuale (come al punto 2);</li>
+<li>si riproduce la nuova canzone casuale;</li>
+<li>si annulla la scelta del cantante (<code>suonoScelto = null;</code>).</li>
+</ul>
 <p><img src="/static/coding/web/p5js/progettoIndovinaChi.png" alt="p5.js - gioco indovina chi" title="p5.js - gioco indovina chi"></p>
-<!-- markdownlint-disable MD009 MD036 -->
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Esercizio</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-<td>6</td>
-<td>7</td>
-<td>Totale Punti</td>
-</tr>
-<tr>
-<td>Max punti</td>
-<td>1</td>
-<td>1</td>
-<td>2</td>
-<td>2</td>
-<td>1</td>
-<td>2</td>
-<td>2</td>
-<td></td>
-</tr>
-<tr>
-<td>Punti</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Cognome ______________ Nome ______________ Classe __________ Data __________</strong></p>
-<!-- markdownlint-enable MD009 MD036 -->
 
     </div>
   </article>
@@ -323,15 +265,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/p5js/progettofattoriaanimali_exe/" rel="prev">
+		<a class="pager__link" href="/coding/web/p5js/progettoindovinachi_exe/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">p5.js Lez. 05.1 - Progetto Fattoria Animali</p>
+			<p class="pager__title">p5.js Lez. 05.2 - Gioco Indovina Chi</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/p5js/progettoindovinachi_exe_sviluppo/" rel="next">
+		<a class="pager__link" href="/coding/web/p5js/progettomemory_exe/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">p5.js Lez. 05.3 - Fasi di sviluppo del gioco Indovina Chi</p>
+			<p class="pager__title">p5.js Lez. 05.4 - Gioco Memory</p>
 		</a>
 	</div>
 </nav>

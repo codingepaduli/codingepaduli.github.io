@@ -98,12 +98,21 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 05.3 - Gioco Memory</title>
+      <title>p5.js Lez. 05.4 - Gioco Memory</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettomemory_exe/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettomemory_exe/</guid>
       <description>Sviluppo del gioco Memory</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05.3 - Fasi di sviluppo del gioco Indovina Chi</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoindovinachi_exe_sviluppo/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoindovinachi_exe_sviluppo/</guid>
+      <description>Fasi di sviluppo del gioco Indovina Chi</description>
     </item>
     
     <item>
@@ -269,6 +278,15 @@
     </item>
     
     <item>
+      <title>App su F-Droid</title>
+      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
+      <description>Set di link relativi alle app su F-Droid</description>
+    </item>
+    
+    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
@@ -365,15 +383,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/linkmediapipe/</guid>
       <description>Lezioni su mediapipe nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/mediapipe&#39;&gt;mediapipe&lt;/a&gt;</description>
-    </item>
-    
-    <item>
-      <title>App su F-Droid</title>
-      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
-      <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
-      <description>Set di link relativi alle app su F-Droid</description>
     </item>
     
     <item>
