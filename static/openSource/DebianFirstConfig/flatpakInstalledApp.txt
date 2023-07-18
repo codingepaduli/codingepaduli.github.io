@@ -1,0 +1,46 @@
+# generated from the command
+# flatpak list --app | sed "s/\/x86_64.*//g" > installedApp.txt
+# flatpak list --app --columns=application > installedApp.txt
+
+cc.arduino.IDE2
+com.calibre_ebook.calibre
+com.dosbox_x.DOSBox-X
+# com.github.johnfactotum.Foliate
+# com.github.marktext.marktext
+# com.github.optyfr.JRomManager
+com.github.jeromerobert.pdfarranger
+com.github.tchx84.Flatseal
+com.nextcloud.desktopclient.nextcloud
+# com.ozmartians.VidCutter
+com.transmissionbt.Transmission
+com.vscodium.codium
+# com.zettlr.Zettlr
+# eu.scarpetta.PDFMixTool
+# im.pidgin.Pidgin
+# io.atom.Atom
+# io.github.peazip.PeaZip
+# io.dbeaver.DBeaverCommunity
+# io.mpv.Mpv
+me.kozec.syncthingtk
+# net.christianbeier.Gromit-MPX
+# org.audacityteam.Audacity
+# org.avidemux.Avidemux
+# org.filezillaproject.Filezilla
+# org.gnome.Evince
+# org.gnome.baobab
+# org.gnome.gedit
+# org.gnome.meld
+# org.goldendict.GoldenDict
+# org.gottcode.Tanglet
+# org.inkscape.Inkscape
+# org.kde.kdenlive
+org.chromium.Chromium
+org.kde.kolourpaint
+org.kde.marble
+org.libreoffice.LibreOffice
+org.mozilla.firefox
+# org.nextcloud.Nextcloud ## deprecated name
+# org.nomacs.ImageLounge
+org.processing.processingide
+# org.remmina.Remmina
+org.videolan.VLC

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>p5.js Lez. 07.12 - Fasi di sviluppo del gioco Acchiappapalline - Coding e Paduli</title>
+
+    <meta name="description" content="Fasi di sviluppo di un videogioco in stile &#39;acchiappapalline&#39;">
+        <meta property="og:title" content="p5.js Lez. 07.12 - Fasi di sviluppo del gioco Acchiappapalline" />
+<meta property="og:description" content="Fasi di sviluppo di un videogioco in stile &#39;acchiappapalline&#39;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_sviluppo/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-07-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-14T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="p5.js Lez. 07.12 - Fasi di sviluppo del gioco Acchiappapalline"/>
+<meta name="twitter:description" content="Fasi di sviluppo di un videogioco in stile &#39;acchiappapalline&#39;"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 15px 30px;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-07-14T00:00:00Z">14-07-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 2 minuti 
+        ( 223 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="fasi-di-sviluppo-del-gioco-acchiappapalline">Fasi di sviluppo del gioco Acchiappapalline</h1>
+<p>Si sviluppi un videogioco in stile &ldquo;acchiappapalline&rdquo;, utilizzando la libreria grafica p5.js per il disegno degli oggetti necessari. Le fasi da seguire sono le seguenti:</p>
+<p>Fase 1: dichiara le variabili <code>x1</code>, <code>y1</code> e <code>d1</code> che rappresentano le coordinate della pallina ed il diametro, quindi disegna una pallina, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">d1</span>);
+</span></span></code></pre></div><p>Fase 2: se la coordinata <code>y1</code> della pallina è maggiore di <code>400</code>, allora imposta la coordinata <code>y1</code> al valore <code>0</code> altrimenti incrementala di <code>10</code>. Verificare che la pallina si muova verso il basso e poi raggiunto il fondo ricompaia in alto.</p>
+<p>Fase 3: disegna un rettangolo sulla parte inferiore dell&rsquo;area da disegno e fa sì che si muova solo verso destra o verso sinistra con il mouse.</p>
+<p>Fase 4: calcola la distanza <code>d1</code> della pallina con il rettangolo.</p>
+<p>Fase 5: Se la pallina tocca il rettangolo, cioè se la distanza <code>d1</code> è minore del raggio della pallina, allora riporta la pallina su impostando <code>y1</code> al valore <code>0</code>.</p>
+<p>Fase 6: Gestire il punteggio con questa regola: se il rettangolo acchiappa la pallina, allora l&rsquo;utente guadagna un punto. Se la pallina esce dal bordo e viene riportata in alto allora l&rsquo;utente perde un punto.</p>
+<p>Fase 7: provare ad aggiungere altre palline ripetendo le fasi da 1 a 6.
+Di seguito, un&rsquo;immagine del gioco da realizzare.</p>
+<p><img src="/static/coding/web/p5js/colors_and_styles_exe_acchiappapalline_01.png" alt="p5.js - progetto acchiappapalline" title="p5.js - progetto acchiappapalline"></p>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/p5js/progettoacchiappapalline_exe/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">p5.js Lez. 07.1 - Progetto Acchiappapalline</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/p5js/progettoacchiappapalline_exe_soluzione/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">p5.js Lez. 07.2 - Soluzione progetto Acchiappapalline</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -89,12 +89,30 @@
     </item>
     
     <item>
+      <title>p5.js Lez. 07.12 - Fasi di sviluppo del gioco Acchiappapalline</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_sviluppo/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_sviluppo/</guid>
+      <description>Fasi di sviluppo di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
+    </item>
+    
+    <item>
       <title>p5.js Lez. 07.1 - Progetto Acchiappapalline</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</guid>
       <description>Sviluppo di un videogioco in stile &amp;lsquo;acchiappapalline&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05.5 - Gioco Morra Cinese</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese/</guid>
+      <description>Sviluppo del gioco Morra Cinese (sasso carta forbici)</description>
     </item>
     
     <item>
@@ -125,12 +143,21 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 05.1 - Progetto Fattoria Animali</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettofattoriaanimali_exe/</link>
+      <title>p5.js Lez. 05.2 - Soluzione del progetto &#34;parco zoologico&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe_soluzione/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe_soluzione/</guid>
+      <description>Soluzione del progetto &amp;ldquo;parco zoologico&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05.1 - Progetto &#34;parco zoologico&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettofattoriaanimali_exe/</guid>
-      <description>Sviluppo del progetto fattoria degli animali</description>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe/</guid>
+      <description>Sviluppo del progetto &amp;ldquo;parco zoologico&amp;rdquo;</description>
     </item>
     
     <item>
@@ -278,18 +305,9 @@
     </item>
     
     <item>
-      <title>App su F-Droid</title>
-      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
-      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
-      <description>Set di link relativi alle app su F-Droid</description>
-    </item>
-    
-    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
@@ -298,10 +316,19 @@
     <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
+    </item>
+    
+    <item>
+      <title>App su F-Droid</title>
+      <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
+      <description>Set di link relativi alle app su F-Droid</description>
     </item>
     
     <item>
