@@ -6,7 +6,7 @@
     <description>Recent content in p5.js on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/p5.js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/p5.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
@@ -62,12 +62,30 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 05.2 - Gioco Indovina Chi</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettoindovinachi_exe/</link>
-      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      <title>p5.js Lez. 05.12 - Soluzione del progetto &#34;complemento a 1&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_soluzione/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoindovinachi_exe/</guid>
-      <description>Sviluppo del gioco Indovina Chi</description>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_soluzione/</guid>
+      <description>Soluzione del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05.11 - Fasi di sviluppo del progetto &#34;complemento a 1&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_sviluppo/</link>
+      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_sviluppo/</guid>
+      <description>Fasi di sviluppo del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05.10 - Progetto &#34;complemento a 1&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</guid>
+      <description>Requisiti del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
     </item>
     
     <item>

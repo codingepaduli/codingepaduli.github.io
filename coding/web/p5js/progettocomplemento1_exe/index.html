@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>p5.js Lez. 05.9 - Soluzione del progetto &#34;acchiappapalline&#34; - Coding e Paduli</title>
+    <title>p5.js Lez. 05.10 - Progetto &#34;complemento a 1&#34; - Coding e Paduli</title>
 
-    <meta name="description" content="Soluzione del progetto &#34;acchiappapalline&#34;">
-        <meta property="og:title" content="p5.js Lez. 05.9 - Soluzione del progetto &#34;acchiappapalline&#34;" />
-<meta property="og:description" content="Soluzione del progetto &#34;acchiappapalline&#34;" />
+    <meta name="description" content="Requisiti del progetto &#34;complemento a 1&#34;">
+        <meta property="og:title" content="p5.js Lez. 05.10 - Progetto &#34;complemento a 1&#34;" />
+<meta property="og:description" content="Requisiti del progetto &#34;complemento a 1&#34;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2022-05-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-05-23T00:00:00+00:00" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2022-07-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-20T00:00:00+00:00" />
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="p5.js Lez. 05.9 - Soluzione del progetto &#34;acchiappapalline&#34;"/>
-<meta name="twitter:description" content="Soluzione del progetto &#34;acchiappapalline&#34;"/>
+<meta name="twitter:title" content="p5.js Lez. 05.10 - Progetto &#34;complemento a 1&#34;"/>
+<meta name="twitter:description" content="Requisiti del progetto &#34;complemento a 1&#34;"/>
 
 
 
@@ -220,20 +220,83 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-05-23T00:00:00Z">23-05-2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-07-20T00:00:00Z">20-07-2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
 	</span>
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
         Tempo di lettura 1 minuto 
-        ( 9 parole)
+        ( 194 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="soluzione-progetto-acchiappapalline">Soluzione progetto &ldquo;acchiappapalline&rdquo;</h1>
-<p>Di seguito, l&rsquo;implementazione del progetto &ldquo;acchiappapalline&rdquo;.</p>
-<div id="acchiappapalline"></div>
+      <h1 id="progetto-complemento-a-1">Progetto &ldquo;complemento a 1&rdquo;</h1>
+<p>Si sviluppi il progetto &ldquo;complemento a 1&rdquo;, utilizzando la libreria grafica <code>p5.js</code> e la libreria dei suoni <code>p5.sound.js</code> per il disegno e la riproduzione degli oggetti necessari. I requisiti funzionali del progetto sono i seguenti:</p>
+<ol>
+<li>Il rettangolo di gioco deve avere una dimensione adatta alla pagina web; I colori e gli stili sono a scelta dello studente;</li>
+<li>All&rsquo;avvio del programma, l&rsquo;utente deve poter inserire uno alla volta i valori di 8 bit;</li>
+<li>Inseriti i valori degli 8 bit, questi vengono visualizzati partendo da sinistra con quello più significativo (MSB = Most significative bit) e procedendo verso destra per terminare con il meno significativo (LSB = Last significative bit) all&rsquo;estremo destro;</li>
+<li>Inseriti i valori degli 8 bit, per ogni bit viene calcolato il complemento ad uno;</li>
+<li>Per ogni bit visualizzato, visualizzare sotto ogni bit il complemento ad uno calcolato;</li>
+<li>Calcolare il valore decimale dei bit inseriti;</li>
+<li>Calcolare il valore decimale dei bit in complemento ad 1;</li>
+</ol>
+<p>Di seguito, un&rsquo;immagine del progetto da realizzare.</p>
+<p><img src="/static/coding/web/p5js/progettoComplemento1.png" alt="p5.js - progetto complemento a 1" title="p5.js - progetto complemento a 1"></p>
+<!-- markdownlint-disable MD009 MD036 -->
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esercizio</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>Totale Punti</td>
+</tr>
+<tr>
+<td>Max punti</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>Punti</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cognome ______________ Nome ______________ Classe __________ Data __________</strong></p>
+<!-- markdownlint-enable MD009 MD036 -->
 
     </div>
   </article>
@@ -241,21 +304,21 @@
 
 
 
-<script src="/static/js/p5-1.2.0-min.js"></script><script src="/static/js/p5.sound-1.2.0-min.js"></script><script src="/static/coding/web/p5js/progettoAcchiappapalline.js"></script>
+
 
 
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/p5js/progettoacchiappapalline_exe_sviluppo/" rel="prev">
+		<a class="pager__link" href="/coding/web/p5js/progettoacchiappapalline_exe_soluzione/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">p5.js Lez. 05.8 - Fasi di sviluppo del progetto &#34;acchiappapalline&#34;</p>
+			<p class="pager__title">p5.js Lez. 05.9 - Soluzione del progetto &#34;acchiappapalline&#34;</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/p5js/progettocomplemento1_exe/" rel="next">
+		<a class="pager__link" href="/coding/web/p5js/progettocomplemento1_exe_sviluppo/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">p5.js Lez. 05.10 - Progetto &#34;complemento a 1&#34;</p>
+			<p class="pager__title">p5.js Lez. 05.11 - Fasi di sviluppo del progetto &#34;complemento a 1&#34;</p>
 		</a>
 	</div>
 </nav>
