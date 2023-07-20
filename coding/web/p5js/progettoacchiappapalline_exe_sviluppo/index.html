@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>p5.js Lez. 07.12 - Fasi di sviluppo del gioco Acchiappapalline - Coding e Paduli</title>
+    <title>p5.js Lez. 05.8 - Fasi di sviluppo del progetto &#34;acchiappapalline&#34; - Coding e Paduli</title>
 
-    <meta name="description" content="Fasi di sviluppo di un videogioco in stile &#39;acchiappapalline&#39;">
-        <meta property="og:title" content="p5.js Lez. 07.12 - Fasi di sviluppo del gioco Acchiappapalline" />
-<meta property="og:description" content="Fasi di sviluppo di un videogioco in stile &#39;acchiappapalline&#39;" />
+    <meta name="description" content="Fasi di sviluppo del progetto &#34;acchiappapalline&#34;">
+        <meta property="og:title" content="p5.js Lez. 05.8 - Fasi di sviluppo del progetto &#34;acchiappapalline&#34;" />
+<meta property="og:description" content="Fasi di sviluppo del progetto &#34;acchiappapalline&#34;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_sviluppo/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
 <meta property="article:published_time" content="2023-07-14T00:00:00+00:00" />
@@ -17,8 +17,8 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="p5.js Lez. 07.12 - Fasi di sviluppo del gioco Acchiappapalline"/>
-<meta name="twitter:description" content="Fasi di sviluppo di un videogioco in stile &#39;acchiappapalline&#39;"/>
+<meta name="twitter:title" content="p5.js Lez. 05.8 - Fasi di sviluppo del progetto &#34;acchiappapalline&#34;"/>
+<meta name="twitter:description" content="Fasi di sviluppo del progetto &#34;acchiappapalline&#34;"/>
 
 
 
@@ -226,21 +226,21 @@
     
 	<span class="meta__text">
         Tempo di lettura 2 minuti 
-        ( 223 parole)
+        ( 246 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="fasi-di-sviluppo-del-gioco-acchiappapalline">Fasi di sviluppo del gioco Acchiappapalline</h1>
-<p>Si sviluppi un videogioco in stile &ldquo;acchiappapalline&rdquo;, utilizzando la libreria grafica p5.js per il disegno degli oggetti necessari. Le fasi da seguire sono le seguenti:</p>
+      <h1 id="fasi-di-sviluppo-del-progetto-acchiappapalline">Fasi di sviluppo del progetto &ldquo;acchiappapalline&rdquo;</h1>
+<p>Si sviluppi il progetto &ldquo;acchiappapalline&rdquo;, utilizzando la libreria grafica <code>p5.js</code> per il disegno degli oggetti necessari. Le fasi da seguire sono le seguenti:</p>
 <p>Fase 1: dichiara le variabili <code>x1</code>, <code>y1</code> e <code>d1</code> che rappresentano le coordinate della pallina ed il diametro, quindi disegna una pallina, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">d1</span>);
 </span></span></code></pre></div><p>Fase 2: se la coordinata <code>y1</code> della pallina è maggiore di <code>400</code>, allora imposta la coordinata <code>y1</code> al valore <code>0</code> altrimenti incrementala di <code>10</code>. Verificare che la pallina si muova verso il basso e poi raggiunto il fondo ricompaia in alto.</p>
 <p>Fase 3: disegna un rettangolo sulla parte inferiore dell&rsquo;area da disegno e fa sì che si muova solo verso destra o verso sinistra con il mouse.</p>
 <p>Fase 4: calcola la distanza <code>d1</code> della pallina con il rettangolo.</p>
-<p>Fase 5: Se la pallina tocca il rettangolo, cioè se la distanza <code>d1</code> è minore del raggio della pallina, allora riporta la pallina su impostando <code>y1</code> al valore <code>0</code>.</p>
-<p>Fase 6: Gestire il punteggio con questa regola: se il rettangolo acchiappa la pallina, allora l&rsquo;utente guadagna un punto. Se la pallina esce dal bordo e viene riportata in alto allora l&rsquo;utente perde un punto.</p>
-<p>Fase 7: provare ad aggiungere altre palline ripetendo le fasi da 1 a 6.
+<p>Fase 5: Se la pallina tocca il rettangolo, cioè se la distanza <code>d1</code> è minore del raggio della pallina, allora riporta la pallina su impostando <code>y1</code> al valore <code>0</code> ed assegna alla variabile <code>x1</code> un nuovo valore casuale (maggiore di <code>0</code> e inferiore alla larghezza dell&rsquo;area da disegno) per far si che si sposti verso destra o sinistra;</p>
+<p>Fase 6: Gestire il punteggio con questa regola: se l&rsquo;utente &ldquo;acchiappa&rdquo; la pallina, allora guadagna un punto. Se la pallina esce dal bordo e viene riportata in alto allora l&rsquo;utente perde un punto.</p>
+<p>Fase 7: Aggiungere altre palline ripetendo le fasi da 1 a 6.
 Di seguito, un&rsquo;immagine del gioco da realizzare.</p>
 <p><img src="/static/coding/web/p5js/colors_and_styles_exe_acchiappapalline_01.png" alt="p5.js - progetto acchiappapalline" title="p5.js - progetto acchiappapalline"></p>
 
@@ -258,13 +258,13 @@ Di seguito, un&rsquo;immagine del gioco da realizzare.</p>
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/web/p5js/progettoacchiappapalline_exe/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">p5.js Lez. 07.1 - Progetto Acchiappapalline</p>
+			<p class="pager__title">p5.js Lez. 05.7 - Progetto &#34;acchiappapalline&#34;</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/p5js/progettoacchiappapalline_exe_soluzione/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">p5.js Lez. 07.2 - Soluzione progetto Acchiappapalline</p>
+			<p class="pager__title">p5.js Lez. 05.9 - Soluzione del progetto &#34;acchiappapalline&#34;</p>
 		</a>
 	</div>
 </nav>
