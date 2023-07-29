@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="UtentePC9"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-07-24 09:44:31 PM"/>
+        <attribute name="created" value="VXRlbnRlUEM5O1RJTkYyLVBDOTsyMDIzLTAxLTEwOyIwODozNzo0NiAiOzI2Mjk="/>
+        <attribute name="edited" value="VXRlbnRlUEM5O1RJTkYyLVBDOTsyMDIzLTAxLTEwOyIwOTowMTozNCAiOzE7MjcyNg=="/>
+        <attribute name="edited" value="aW87REVCSUFOLUxBUFRPUDsyMDIzLTA3LTI0OzA5OjQ0OjMxIFBNOzU7MjU0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Autore: _____  Data: 2023-03-26&#13;&#10;&#13;&#10;Realizzare un programma che permetta di risolvere un equazione di secondo grado ax^2 + bx + c = 0 con delta=b*b-4ac.&#13;&#10;&#13;&#10;Visualizzare il delta ed in caso sia maggiore di zero o uguale a zero, calcolare le soluzioni x1 e x2"/>
+            <declare name="a, b, c, delta, x1, x2" type="Real" array="False" size=""/>
+            <output expression="&quot;Inserisci i coefficienti a, b, c&quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <assign variable="delta" expression="b*b-4*a*c"/>
+            <output expression="&quot;delta: &quot; &amp; delta" newline="True"/>
+            <if expression="delta&lt;0">
+                <then>
+                    <output expression="&quot;l'equazione ammette 2 soluzioni immaginarie&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="delta&gt;0">
+                        <then>
+                            <output expression="&quot;l' equazione ammette 2 soluzioni reali e distinte&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="delta==0">
+                        <then>
+                            <output expression="&quot;l' equazione ammette 2 soluzioni reali e coincidenti&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="x1" expression="(-b -Sqrt(delta))/(2*a)"/>
+                    <assign variable="x2" expression="(-b +Sqrt(delta))/(2*a)"/>
+                    <output expression="x1" newline="True"/>
+                    <output expression="x2" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

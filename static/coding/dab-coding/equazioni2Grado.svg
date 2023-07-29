@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by Flowgorithm 3.4.2 (http://flowgorithm.org) -->
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="2548" height="4966">
+	<rect x="0" y="0" width="2548" height="4966" fill="#FFFFFF"/>
+	<g>
+		<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,208 1430,650"/>
+		<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,4680 1430,4743"/>
+		<polygon fill="#404040" stroke="none" points="1430,4758 1444,4732 1415,4732"/>
+		<g>
+			<path fill="#F0E0FF" stroke="#9070A0" stroke-width="3" stroke-dasharray="none" d="M 1326,104 A 52 52, 0, 0 0, 1326 208 L 1534,208 A 52 52, 0, 0 0, 1534 104 Z"/>
+			<text x="1430" y="122" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+				<tspan x="1430" dy="52" unicode-bidi="embed">Inizio</tspan>
+			</text>
+		</g>
+		<g>
+			<path fill="#F0E0FF" stroke="#9070A0" stroke-width="3" stroke-dasharray="none" d="M 1326,4758 A 52 52, 0, 0 0, 1326 4862 L 1534,4862 A 52 52, 0, 0 0, 1534 4758 Z"/>
+			<text x="1430" y="4776" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+				<tspan x="1430" dy="52" unicode-bidi="embed">Fine</tspan>
+			</text>
+		</g>
+		<g>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,650 1430,1077"/>
+			<polygon fill="#404040" stroke="none" points="1430,1092 1444,1066 1415,1066"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,1274 1430,1337"/>
+			<polygon fill="#404040" stroke="none" points="1430,1352 1444,1326 1415,1326"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,1508 1430,1571"/>
+			<polygon fill="#404040" stroke="none" points="1430,1586 1444,1560 1415,1560"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,1690 1430,1753"/>
+			<polygon fill="#404040" stroke="none" points="1430,1768 1444,1742 1415,1742"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,1872 1430,1935"/>
+			<polygon fill="#404040" stroke="none" points="1430,1950 1444,1924 1415,1924"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,2054 1430,2117"/>
+			<polygon fill="#404040" stroke="none" points="1430,2132 1444,2106 1415,2106"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,2236 1430,2299"/>
+			<polygon fill="#404040" stroke="none" points="1430,2314 1444,2288 1415,2288"/>
+			<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1430,2418 1430,2481"/>
+			<polygon fill="#404040" stroke="none" points="1430,2496 1444,2470 1415,2470"/>
+			<g>
+				<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="7,14" points="1430,650 1560,650"/>
+				<g>
+					<path fill="#FFFFFF" stroke="#606060" stroke-width="3" stroke-dasharray="6,6" d="M 1560,286 L 1560,1014 L 2444,1014 L 2444,286 Z"/>
+					<text x="2002" y="304" fill="#606060" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+						<tspan x="2002" dy="52" unicode-bidi="embed">Autore: _____ </tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed"> Data: 2023-03-26&#13;</tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed"></tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed">&#13;</tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed">Realizzare un programma che permetta</tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed"> di risolvere un equazione di secondo</tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed"> grado ax^2 + bx + c = 0 con delta=b*b</tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed">-4ac.&#13;</tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed"></tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed">&#13;</tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed">Visualizzare il delta ed in caso sia</tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed"> maggiore di zero o uguale a zero,</tspan>
+						<tspan x="2002" dy="52" unicode-bidi="embed"> calcolare le soluzioni x1 e x2</tspan>
+					</text>
+				</g>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 1144,1092 L 1144,1274 L 1716,1274 L 1716,1092 Z"/>
+				<polyline fill="none" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" points="1144,1118 1716,1118"/>
+				<polyline fill="none" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" points="1170,1092 1170,1274"/>
+				<text x="1443" y="1136" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="1443" dy="52" unicode-bidi="embed">Dichiara a, b, c, delta, x1,</tspan>
+					<tspan x="1443" dy="52" unicode-bidi="embed"> x2: Reale</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 1118,1352 L 1040,1508 L 1742,1508 L 1820,1352 Z"/>
+				<text x="1430" y="1370" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="1430" dy="52" unicode-bidi="embed">Scrivi &quot;Inserisci i coefficienti</tspan>
+					<tspan x="1430" dy="52" unicode-bidi="embed"> a, b, c&quot;</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#C0E0FF" stroke="#6080A0" stroke-width="3" stroke-dasharray="none" d="M 1326,1586 L 1274,1690 L 1534,1690 L 1586,1586 Z"/>
+				<text x="1430" y="1604" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="1430" dy="52" unicode-bidi="embed">Leggi a</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#C0E0FF" stroke="#6080A0" stroke-width="3" stroke-dasharray="none" d="M 1326,1768 L 1274,1872 L 1534,1872 L 1586,1768 Z"/>
+				<text x="1430" y="1786" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="1430" dy="52" unicode-bidi="embed">Leggi b</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#C0E0FF" stroke="#6080A0" stroke-width="3" stroke-dasharray="none" d="M 1326,1950 L 1274,2054 L 1534,2054 L 1586,1950 Z"/>
+				<text x="1430" y="1968" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="1430" dy="52" unicode-bidi="embed">Leggi c</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 1222,2132 L 1222,2236 L 1638,2236 L 1638,2132 Z"/>
+				<text x="1430" y="2150" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="1430" dy="52" unicode-bidi="embed">delta = b*b-4*a*c</tspan>
+				</text>
+			</g>
+			<g>
+				<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 1170,2314 L 1118,2418 L 1690,2418 L 1742,2314 Z"/>
+				<text x="1430" y="2332" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="1430" dy="52" unicode-bidi="embed">Scrivi &quot;delta: &quot; &amp; delta</tspan>
+				</text>
+			</g>
+			<g>
+				<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1560,2574 1872,2574 1872,2689"/>
+				<polygon fill="#404040" stroke="none" points="1872,2704 1886,2678 1857,2678"/>
+				<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1872,2860 1872,4654 1470,4654"/>
+				<polygon fill="#404040" stroke="none" points="1456,4654 1481,4668 1481,4639"/>
+				<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="1300,2574 494,2574 494,2689"/>
+				<polygon fill="#404040" stroke="none" points="494,2704 508,2678 479,2678"/>
+				<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="494,4550 494,4654 1389,4654"/>
+				<polygon fill="#404040" stroke="none" points="1404,4654 1378,4639 1378,4668"/>
+				<g>
+					<path fill="#FFD0D0" stroke="#A07070" stroke-width="3" stroke-dasharray="none" d="M 1430,2496 L 1274,2574 L 1430,2652 L 1586,2574 Z"/>
+					<text x="1430" y="2540" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+						<tspan x="1430" dy="52" unicode-bidi="embed">delta&lt;0</tspan>
+					</text>
+				</g>
+				<g>
+					<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 1560,2704 L 1482,2860 L 2184,2860 L 2262,2704 Z"/>
+					<text x="1872" y="2722" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+						<tspan x="1872" dy="52" unicode-bidi="embed">Scrivi &quot;l'equazione ammette 2</tspan>
+						<tspan x="1872" dy="52" unicode-bidi="embed"> soluzioni immaginarie&quot;</tspan>
+					</text>
+				</g>
+				<g>
+					<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="494,3198 494,3261"/>
+					<polygon fill="#404040" stroke="none" points="494,3276 508,3250 479,3250"/>
+					<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="494,3822 494,3885"/>
+					<polygon fill="#404040" stroke="none" points="494,3900 508,3874 479,3874"/>
+					<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="494,4004 494,4067"/>
+					<polygon fill="#404040" stroke="none" points="494,4082 508,4056 479,4056"/>
+					<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="494,4186 494,4249"/>
+					<polygon fill="#404040" stroke="none" points="494,4264 508,4238 479,4238"/>
+					<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="494,4368 494,4431"/>
+					<polygon fill="#404040" stroke="none" points="494,4446 508,4420 479,4420"/>
+					<g>
+						<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="624,2782 962,2782 962,2897"/>
+						<polygon fill="#404040" stroke="none" points="962,2912 976,2886 947,2886"/>
+						<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="962,3068 962,3172 534,3172"/>
+						<polygon fill="#404040" stroke="none" points="520,3172 545,3186 545,3157"/>
+						<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="364,2782 182,2782 182,3172 453,3172"/>
+						<polygon fill="#404040" stroke="none" points="468,3172 442,3157 442,3186"/>
+						<g>
+							<path fill="#FFD0D0" stroke="#A07070" stroke-width="3" stroke-dasharray="none" d="M 494,2704 L 338,2782 L 494,2860 L 650,2782 Z"/>
+							<text x="494" y="2748" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+								<tspan x="494" dy="52" unicode-bidi="embed">delta&gt;0</tspan>
+							</text>
+						</g>
+						<g>
+							<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 624,2912 L 546,3068 L 1300,3068 L 1378,2912 Z"/>
+							<text x="962" y="2930" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+								<tspan x="962" dy="52" unicode-bidi="embed">Scrivi &quot;l' equazione ammette 2</tspan>
+								<tspan x="962" dy="52" unicode-bidi="embed"> soluzioni reali e distinte&quot;</tspan>
+							</text>
+						</g>
+						<g>
+						</g>
+						<ellipse cx="494" cy="3172" rx="26" ry="26" fill="#FFD0D0" stroke="#A07070" stroke-width="3"/>
+						<text x="728" y="2696" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+							<tspan x="728" dy="52" unicode-bidi="embed">Vero</tspan>
+						</text>
+						<text x="260" y="2696" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+							<tspan x="260" dy="52" unicode-bidi="embed">Falso</tspan>
+						</text>
+					</g>
+					<g>
+						<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="650,3380 962,3380 962,3521"/>
+						<polygon fill="#404040" stroke="none" points="962,3536 976,3510 947,3510"/>
+						<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="962,3692 962,3796 534,3796"/>
+						<polygon fill="#404040" stroke="none" points="520,3796 545,3810 545,3781"/>
+						<polyline fill="none" stroke="#404040" stroke-width="7" stroke-dasharray="none" points="338,3380 156,3380 156,3796 453,3796"/>
+						<polygon fill="#404040" stroke="none" points="468,3796 442,3781 442,3810"/>
+						<g>
+							<path fill="#FFD0D0" stroke="#A07070" stroke-width="3" stroke-dasharray="none" d="M 494,3276 L 312,3380 L 494,3484 L 676,3380 Z"/>
+							<text x="494" y="3346" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+								<tspan x="494" dy="52" unicode-bidi="embed">delta==0</tspan>
+							</text>
+						</g>
+						<g>
+							<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 624,3536 L 546,3692 L 1300,3692 L 1378,3536 Z"/>
+							<text x="962" y="3554" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+								<tspan x="962" dy="52" unicode-bidi="embed">Scrivi &quot;l' equazione ammette 2</tspan>
+								<tspan x="962" dy="52" unicode-bidi="embed"> soluzioni reali e coincidenti&quot;</tspan>
+							</text>
+						</g>
+						<g>
+						</g>
+						<ellipse cx="494" cy="3796" rx="26" ry="26" fill="#FFD0D0" stroke="#A07070" stroke-width="3"/>
+						<text x="754" y="3294" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+							<tspan x="754" dy="52" unicode-bidi="embed">Vero</tspan>
+						</text>
+						<text x="234" y="3294" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+							<tspan x="234" dy="52" unicode-bidi="embed">Falso</tspan>
+						</text>
+					</g>
+					<g>
+						<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 182,3900 L 182,4004 L 806,4004 L 806,3900 Z"/>
+						<text x="494" y="3918" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+							<tspan x="494" dy="52" unicode-bidi="embed">x1 = (-b -Sqrt(delta))/(2*a)</tspan>
+						</text>
+					</g>
+					<g>
+						<path fill="#FFFFD0" stroke="#A0A070" stroke-width="3" stroke-dasharray="none" d="M 182,4082 L 182,4186 L 806,4186 L 806,4082 Z"/>
+						<text x="494" y="4100" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+							<tspan x="494" dy="52" unicode-bidi="embed">x2 = (-b +Sqrt(delta))/(2*a)</tspan>
+						</text>
+					</g>
+					<g>
+						<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 364,4264 L 312,4368 L 624,4368 L 676,4264 Z"/>
+						<text x="494" y="4282" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+							<tspan x="494" dy="52" unicode-bidi="embed">Scrivi x1</tspan>
+						</text>
+					</g>
+					<g>
+						<path fill="#D0FFD0" stroke="#70A070" stroke-width="3" stroke-dasharray="none" d="M 364,4446 L 312,4550 L 624,4550 L 676,4446 Z"/>
+						<text x="494" y="4464" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+							<tspan x="494" dy="52" unicode-bidi="embed">Scrivi x2</tspan>
+						</text>
+					</g>
+				</g>
+				<ellipse cx="1430" cy="4654" rx="26" ry="26" fill="#FFD0D0" stroke="#A07070" stroke-width="3"/>
+				<text x="1664" y="2488" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="1664" dy="52" unicode-bidi="embed">Vero</tspan>
+				</text>
+				<text x="1196" y="2488" fill="#000000" font-family="Tahoma" font-size="32pt" text-anchor="middle" direction="ltr">
+					<tspan x="1196" dy="52" unicode-bidi="embed">Falso</tspan>
+				</text>
+			</g>
+		</g>
+	</g>
+</svg>
