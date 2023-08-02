@@ -231,7 +231,8 @@
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <script type="text/javascript" src="/static/webApp/breakingRSA.js"></script>
+      <!-- markdownlint-disable MD033 -->
+<script type="text/javascript" src="/static/webApp/breakingRSA.js"></script>
 <h1 id="rompere-la-codifica-rsa">Rompere la codifica RSA</h1>
 <p>Partiamo dal fatto che l&rsquo;algoritmo RSA genera una chiave pubblica ed una chiave privata partendo da due numeri primi: <strong>p</strong> e <strong>q</strong>. La chiave pubblica è composta dalla coppia di numeri (E, N), dove N = p * q.</p>
 <p>F è il toziente di N, che per le proprietà moltiplicativa è dato dal toziente di <strong>p</strong> moltiplicato il toziente di <strong>q</strong>. Per un numero primo <strong>a</strong>, il toziente è <strong>a-1</strong>, quindi F = (p-1)(q-1).</p>
@@ -288,6 +289,7 @@
         display:inline-block;
     }
 </style>
+<!-- markdownlint-enable MD033 -->
 
     </div>
   </article>

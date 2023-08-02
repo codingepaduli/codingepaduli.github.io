@@ -6,7 +6,7 @@
     <description>Recent content in web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Thu, 20 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
@@ -176,6 +176,33 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</guid>
       <description>Suoni ed immagini</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.6 - Soluzione del progetto &#34;Sistema Solare&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_soluzione/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_soluzione/</guid>
+      <description>Soluzione del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.5 - Fasi di sviluppo del progetto &#34;Sistema Solare&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_sviluppo/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_sviluppo/</guid>
+      <description>Fasi di sviluppo del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 04.4 - Progetto &#34;Sistema Solare&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</guid>
+      <description>Requisiti del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
     </item>
     
     <item>

@@ -15,19 +15,19 @@ function draw() {
     // ogni volta che disegno un cerchio
     // incremento la variabile contatore
     circle(100, 150, 50);
-    text(contatore, 100, 150)
+    text(contatore, 100, 150);
     contatore = contatore + 1;
 
     circle(150, 150, 50);
-    text(contatore, 150, 150)
+    text(contatore, 150, 150);
     contatore = contatore + 1;
 
     circle(200, 150, 50);
-    text(contatore, 200, 150)
+    text(contatore, 200, 150);
     contatore = contatore + 1;
 
     circle(250, 150, 50);
-    text(contatore, 250, 150)
+    text(contatore, 250, 150);
     contatore = contatore + 1;
 
     saveCanvas(canvas, 'variables_counter_post', 'png');

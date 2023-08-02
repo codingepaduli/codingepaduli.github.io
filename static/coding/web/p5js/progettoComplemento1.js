@@ -91,7 +91,7 @@ function setup() {
 function draw() {
   background(220);
   
-  fill(255, 0, 0)
+  fill(255, 0, 0);
   textSize(28);
 
   text("Bit iniziali - Decimale", 60, 40);

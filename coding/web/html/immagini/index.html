@@ -473,12 +473,14 @@ nell&rsquo;attributo <code>usemap</code> del tag <code>img</code>, come nel segu
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;145&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;126&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Planets&#34;</span> <span style="color:#a6e22e">usemap</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#planetmap&#34;</span> /&gt;
 </span></span></code></pre></div><p>Cliccare su uno dei pianeti per collegarsi sulla pagina corrispondente
 al pianeta scelto.</p>
+<!-- markdownlint-disable MD033 -->
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png" width="145" height="126" alt="Planets" usemap="#planetmap" />
 <map name="planetmap">
     <area shape="rect" coords="0,0,82,126" alt="Terra" title="Terra" href="https://it.wikipedia.org/wiki/Terra" />
     <area shape="circle" coords="90,58,3" alt="Mercury" title="Mercury" href="https://it.wikipedia.org/wiki/Mercurio_(astronomia)" />
     <area shape="circle" coords="124,58,8" alt="Venus" title="Venus" href="https://it.m.wikipedia.org/wiki/Venere_(astronomia)" />
 </map>
+<!-- markdownlint-enable MD033 -->
 <p>Le immagini possono essere caricate su richiesta utilizzando le tecniche
 di <strong>lazy loading</strong>, ovvero le immagini che si trovano in aree non
 visibili (l&rsquo;utente deve scorrere la pagina o deve cliccare qualche area
@@ -495,7 +497,9 @@ valore &ldquo;eager&rdquo; o &ldquo;lazy&rdquo;, come nell&rsquo;esempio seguent
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;145&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;126&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Planets&#34;</span> <span style="color:#a6e22e">loading</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lazy&#34;</span> /&gt;`
 </span></span></code></pre></div><p>che da il seguente risultato (in ambiente web si nota il caricamento &ldquo;su richiesta&rdquo;):</p>
+<!-- markdownlint-disable MD033 -->
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png" width="145" height="126" alt="Planets" loading="lazy">
+<!-- markdownlint-enable MD033 -->
 <p>Ricapitolando quindi gli attributi del tag img, abbiamo:</p>
 <ul>
 <li><code>src</code> per indicare l&rsquo;URL dell&rsquo;<strong>unica</strong> immagine da mostrare;</li>
@@ -534,9 +538,11 @@ a quando l&rsquo;utente arriva a visualizzare il contenuto;</li>
 <p>Il valore <code>optimum</code> sta semplicemente ad indicare quale intervallo è quello gradito.</p>
 <p>Il browser adatta lo stile grafico del componente basandosi sul valore <code>value</code> da mostrare e sul valore <code>optimum</code> gradito.</p>
 <p>Se il valore da mostrare <code>value</code> si trova nello stesso intervallo del valore gradito <code>optimum</code>, allora il componente viene visualizzato in verde. Se invece i due valori si trovano in due intervalli adiacenti, il componente viene visualizzato in giallo, altrimenti in rosso.</p>
+<!-- markdownlint-disable MD033 -->
 <p><meter min="12" low="18" high="30" max="35" value="32" optimum="16"> Esame superato.</meter></p>
 <p><meter min="12" low="18" high="30" max="35" value="32" optimum="24"> Esame superato.</meter></p>
 <p><meter min="12" low="18" high="30" max="35" value="32" optimum="34"> Esame superato.</meter></p>
+<!-- markdownlint-enable MD033 -->
 
     </div>
       <hr>

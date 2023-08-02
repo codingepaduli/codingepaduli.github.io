@@ -52,13 +52,13 @@ function draw() {
   fill('red');
   textSize(24);
   textStyle(BOLD);
-  text("Indovina lo strumento", 30, 30)
+  text("Indovina lo strumento", 30, 30);
   
   // text("click a coordinate: " + clickX + " " + clickY, 30, 150);
   
   fill('#F44336');
   textSize(48);
-  text("Hai Vinto!!", 30, 500)
+  text("Hai Vinto!!", 30, 500);
 }
 
 function mousePressed() {
@@ -66,7 +66,7 @@ function mousePressed() {
   clickY = mouseY;
   
   if (clickX > 200) {
-    cipcip.play();
+    // cipcip.play();
   }
 }
 

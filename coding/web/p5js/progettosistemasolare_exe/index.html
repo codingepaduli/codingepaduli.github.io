@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Codifica RSA - Coding e Paduli</title>
+    <title>p5.js Lez. 04.4 - Progetto &#34;Sistema Solare&#34; - Coding e Paduli</title>
 
-    <meta name="description" content="Codifica e decodifica RSA di un messaggio.">
-        <meta property="og:title" content="Codifica RSA" />
-<meta property="og:description" content="Codifica e decodifica RSA di un messaggio." />
+    <meta name="description" content="Requisiti del progetto &#34;Sistema Solare&#34;">
+        <meta property="og:title" content="p5.js Lez. 04.4 - Progetto &#34;Sistema Solare&#34;" />
+<meta property="og:description" content="Requisiti del progetto &#34;Sistema Solare&#34;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingepaduli.github.io/webapp/codificarsa/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="webApp" />
-<meta property="article:published_time" content="2022-03-19T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-03-19T00:00:00+00:00" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-08-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-02T00:00:00+00:00" />
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="Codifica RSA"/>
-<meta name="twitter:description" content="Codifica e decodifica RSA di un messaggio."/>
+<meta name="twitter:title" content="p5.js Lez. 04.4 - Progetto &#34;Sistema Solare&#34;"/>
+<meta name="twitter:description" content="Requisiti del progetto &#34;Sistema Solare&#34;"/>
 
 
 
@@ -220,100 +220,83 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-03-19T00:00:00Z">19-03-2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/webapp/" rel="category">webApp</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-08-02T00:00:00Z">02-08-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
 	</span>
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 1 minuto 
-        ( 86 parole)
+        Tempo di lettura 2 minuti 
+        ( 232 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <!-- markdownlint-disable MD033 -->
-<script type="text/javascript" src="/static/webApp/codificaRSA.js"></script>
-<h1>Codifica e decodifica RSA</h1>
-<form>
-    <fieldset>
-        <label for="p">Scegli il numero primo "p"</label>
-        <input id="p" type="number" min="1" step="1" value="11"required placeholder='Inserisci  il numero primo "p"'>
-    </fieldset>
-    <fieldset>
-        <label for="q">Scegli il numero primo "q"</label>
-        <input id="q" type="number" min="1" step="1" value="7" required placeholder='Inserisci  il numero primo "q"'>
-    </fieldset>
-    <fieldset>
-        <input type="button" value="Calcola chiave pubblica e privata" onclick="calcolaChiavi()">
-    </fieldset>
-    <fieldset>
-        <label for="n">n = p * q</label>
-        <input id="n" type="number">
-    </fieldset>
-    <fieldset>
-        <label for="f">f = (p-1) * (q-1)</label>
-        <input id="f" type="number">
-    </fieldset>
-    <fieldset>
-        <label for="coprimo">e (coprimo di f) =</label>
-        <input id="coprimo" type="number" min="1" step="1">
-    </fieldset>
-    <fieldset>
-        <label for="congruente">d (con d * e ed 1 congruenti modulo f) =</label>
-        <input id="congruente" type="number" min="1" step="1">
-        <input type="button" value="calcola congruente successivo" onclick="congruenteSuccessivo()">
-    </fieldset>
-    <fieldset>
-        <label for="pubblica">chiave pubblica (e, n)</label>
-        <input id="pubblicaE" type="number">
-        <input id="pubblicaN" type="number">
-    </fieldset>
-    <fieldset>
-        <label for="privata">chiave privata (d, n)</label>
-        <input id="privataD" type="number">
-        <input id="privataN" type="number">
-    </fieldset>
-    <fieldset>
-        <label for="messaggio">Inserisci il messaggio da criptare:</label>
-        <input id="messaggio" type="text" value="strana zavorra" required placeholder="Inserisci il messaggio da criptare">
-    </fieldset>
-    <fieldset>
-        <input type="button" value="Codifica messaggio con la chiave privata" onclick="codificaMessaggio()">
-    </fieldset>
-</form>
-<table id="codifica">
-    <colgroup>
-        <col span="1" style="width: 5%;">
-        <col span="1" style="width: 5%;">
-        <col span="1" style="width: 20%;">
-        <col span="1" style="width: 10%;">
-        <col span="1" style="width: 50%;">
-        <col span="1" style="width: 10%;">
-    </colgroup>
-    <tr>
-        <th>carattere</th>
-        <th>codice ascii</th>
-        <th class="big">codifica step 1 (codice ascii ^ e)</th>
-        <th>codifica step 2 (codice ascii ^ e % n)</th>
-        <th class="big">decodifica step 1 (numeroCodificato ^ d)</th>
-        <th>decodifica step 2 (numeroCodificato ^ d % n)</th>
-    </tr>
+      <h1 id="progetto-sistema-solare">Progetto &ldquo;Sistema Solare&rdquo;</h1>
+<p>Si sviluppi il progetto &ldquo;Sistema Solare&rdquo;, utilizzando la libreria grafica <code>p5.js</code> e la libreria dei suoni <code>p5.sound.js</code> per il disegno e la riproduzione degli oggetti necessari. I requisiti funzionali del progetto sono i seguenti:</p>
+<ol>
+<li>L&rsquo;area da disegno deve avere una dimensione adatta alla pagina web; I colori e gli stili sono a scelta dello studente; Il Sole deve essere posizionato al centro dell&rsquo;area da disegno, coordinate e diametro devono essere memorizzati in opportune variabili;</li>
+<li>Per il pianeta &ldquo;Terra&rdquo; dichiarare le opportune variabili per il nome, le coordinate, il diametro, la distanza dal Sole e l&rsquo;angolo rispetto al Sole; L&rsquo;angolo va inizializzato al valore zero;</li>
+<li>In base all&rsquo;angolo e alla distanza del pianeta, calcolare le coordinate (x, y) e quindi disegnare il pianeta;</li>
+<li>Verificare che il pianeta sia visibile nell&rsquo;area da disegno e che sia allineato orizzontalmente rispetto al Sole;</li>
+<li>Incrementare l&rsquo;angolo rispetto al Sole e verificare che il pianeta ruoti intorno al Sole;</li>
+<li>Seguendo i passi dal 2 al 5, disegnare gli altri pianeti del Sistema Solare;</li>
+<li>Seguendo i passi dal 2 al 5 e prendendo di riferimento il pianeta Terra anziché il Sole, disegnare la Luna e verificare che ruoti intorno alla Terra;</li>
+</ol>
+<p>Di seguito, un&rsquo;immagine del progetto da realizzare.</p>
+<p><img src="/static/coding/web/p5js/progettoSistemaSolare.png" alt="p5.js - progetto Sistema Solare" title="p5.js - progetto Sistema Solare"></p>
+<!-- markdownlint-disable MD009 MD036 -->
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esercizio</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>Totale Punti</td>
+</tr>
+<tr>
+<td>Max punti</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>1.5</td>
+<td>1.5</td>
+<td></td>
+</tr>
+<tr>
+<td>Punti</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
 </table>
-<style>
-    table {
-        width:100%;
-        table-layout: fixed;
-    }
-    th {
-        background-color: #04AA6D;
-        color: white;
-    }
-    td * {
-        overflow-wrap: break-word;
-        display:inline-block;
-    }
-</style>
-<!-- markdownlint-enable MD033 -->
+<p><strong>Cognome ______________ Nome ______________ Classe __________ Data __________</strong></p>
+<!-- markdownlint-enable MD009 MD036 -->
 
     </div>
   </article>
@@ -327,15 +310,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/webapp/breakingrsa/" rel="prev">
+		<a class="pager__link" href="/coding/web/p5js/progettoorologio_exe_soluzione/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">Rompere la codifica RSA</p>
+			<p class="pager__title">p5.js Lez. 04.3 - Soluzione del progetto &#34;orologio analogico&#34;</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/webapp/qrcodegenerator/" rel="next">
+		<a class="pager__link" href="/coding/web/p5js/progettosistemasolare_exe_sviluppo/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">QR Code Generator</p>
+			<p class="pager__title">p5.js Lez. 04.5 - Fasi di sviluppo del progetto &#34;Sistema Solare&#34;</p>
 		</a>
 	</div>
 </nav>
