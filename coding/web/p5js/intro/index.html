@@ -225,48 +225,213 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 16 minuti 
-        ( 3372 parole)
+        Tempo di lettura 17 minuti 
+        ( 3412 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="introduzione-alla-libreria-grafica-p5js">Introduzione alla libreria grafica p5.js</h1>
-<p><a href="https://p5js.org" title="Sito web di p5.js">p5.js</a> è una libreria grafica open-source, focalizzata al coding in JavaScript in un contesto creativo e multimediale. Questa libreria è, di fatto, anche un &ldquo;porting&rdquo; della piattaforma <a href="https://processing.org/" title="Sito web di processing">Processing</a> in ambiente web, per cui, sia Processing, sia questa libreria, sono supportati dalla <a href="https://processingfoundation.org" title="Sito web della Processing Foundation">Processing Foundation</a>, una comunità interessata alla creazione artistica di contenuti mediante tecnologie web.</p>
-<p>Esistono inoltre numerose estensioni che aggiungono strumenti per la gestione audio, per la gestione grafica in 3 dimensioni, per la gestione della geo-localizzazione, delle mappe, della webcam, per l&rsquo;applicazione di algoritmi di intelligenza artificiale e per la comunicazione con diversi dispositivi basati su micro-controllore, come Arduino.</p>
-<h2 id="sistema-di-coordinate">Sistema di coordinate</h2>
-<p>Il sistema di coordinate <strong>cartesiane</strong>, tipicamente usato da librerie di grafica computerizzata 2D, è caratterizzato dagli assi X ed Y che si intersecano nell&rsquo;angolo in alto a sinistra dell&rsquo;area da disegno. In tale estremità si trova, quindi, l&rsquo;origine degli assi, rappresentata dal punto di coordinate (0,0).</p>
-<p>La particolarità di questo sistema di coordinate è l&rsquo;asse Y invertito, cioè i valori positivi sono in basso ed i negativi in alto. Solo i punti che hanno entrambe le coordinate (x, y) con valore positivo saranno disegnati nell&rsquo;area da disegno.</p>
-<p>Di seguito si mostrano le differenze tra il classico sistema cartesiano e la variante utilizzata in p5.js:</p>
-<p><img src="/static/coding/web/p5js/intro-axes-in-math-and-p5js.png" alt="p5.js - Differenza tra i due sistemi di coordinate" title="p5.js - Differenza tra i due sistemi di coordinate"></p>
-<h3 id="misurazione-angoli">Misurazione angoli</h3>
-<p>In ambito matematico, gli angoli sono tipicamente espressi mediante due differenti unità di misura: il <strong>grado d&rsquo;arco</strong> (detto anche grado sessagesimale) ed il <strong>radiante</strong>, che fa parte del <strong>sistema internazionale di unità di misura</strong>.</p>
-<p>Un grado d&rsquo;arco è la misura dell&rsquo;angolo che si ha in corrispondenza di un arco di circonferenza che misura 1/360 della circonferenza di un cerchio.</p>
-<p>Un radiante è la misura dell&rsquo;angolo che si ha in corrispondenza di un arco di circonferenza di lunghezza pari al raggio.</p>
-<p>Una caratteristica importante da considerare nella misurazione degli angoli è che, nel sistema di coordinate utilizzato, l&rsquo;asse Y è invertito e quindi gli angoli sono misurati seguendo un <strong>senso orario</strong>.</p>
-<p>Per facilitare la comprensione, possiamo fare un&rsquo;analogia con il quadrante di un orologio, sul quale utilizziamo la lancetta delle ore come riferimento e la lancetta dei minuti per misurare l&rsquo;angolo.</p>
-<p>Ponendo inizialmente sul numero tre entrambe le lancette (quindi a 3 ore e 15 minuti) definiamo un primo angolo, di grandezza zero (sia in gradi che in radianti).</p>
-<p>Man mano che la lancetta dei minuti ruota in <strong>senso orario</strong>, la dimensione dell&rsquo;angolo aumenta. Alle ore <strong>3.30</strong> corrisponde la misura di <strong>novanta gradi</strong> (e non alle ore <strong>3.00</strong> come ci aspetterebbe). Un angolo di <strong>quarantacinque gradi</strong> corrisponde alle ore <strong>3.22</strong> circa, un angolo di <strong>centottanta gradi d&rsquo;arco</strong> corrisponde alle ore <strong>3.45</strong> e così via.</p>
-<p><img src="/static/coding/web/p5js/intro-angle-on-clock-clockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
-<p>Per completezza, riportiamo anche le immagini degli orologi con le misurazioni degli angoli prese utilizzando il senso <strong>antiorario</strong>, in modo da avere chiara la differenza.</p>
-<p><img src="/static/coding/web/p5js/intro-angle-on-clock-counterclockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
+      <h1 id="processing-e-p5js">Processing e p5.js</h1>
+<p><a href="https://processing.org/" title="Sito web di processing">Processing</a> non è un linguaggio o un ambiente di sviluppo software, ma è un approccio orientato alle arti per apprendere, insegnare e realizzare lavori con il coding, in un contesto creativo e multimediale. I progetti sono supportati dalla <a href="https://processingfoundation.org" title="Sito web della Processing Foundation">Processing Foundation</a>, una comunità interessata alla creazione artistica di contenuti mediante tecnologie web.</p>
+<p>Questi progetti comprendono numerose estensioni e strumenti per la gestione audio, per la gestione grafica in 3 dimensioni, per la gestione della geo-localizzazione, delle mappe, della webcam, per l&rsquo;applicazione di algoritmi di intelligenza artificiale e per la comunicazione con diversi dispositivi, come Arduino (e quindi basati su micro-controllore) o RaspBerry. Attualmente i progetti principali sono:</p>
+<ul>
+<li><a href="https://p5js.org" title="Sito web di p5.js">p5.js</a> è un progetto open-source focalizzato al coding in JavaScript in ambiente web.</li>
+<li><a href="https://openprocessing.org/" title="Sito web di OpenProcessing">OpenProcessing</a> è un progetto open-source focalizzato al coding in JavaScript in ambiente web.</li>
+<li><a href="https://processing.org/" title="Sito web di processing">Processing IDE</a> l&rsquo;ambiente di sviluppo per realizzare progetti in Java, Python, Android, Wiring (per Arduino e migliaia di altri micro-controllori) e p5.js.</li>
+</ul>
+<p>Questo manuale si focalizza sullo sviluppo di progetti in JavaScript, utilizzando uno dei tre ambienti sopra indicati;</p>
+<h2 id="ambiente-di-sviluppo-p5jsorg">Ambiente di sviluppo p5js.org</h2>
+<p>Il punto di partenza, per iniziare velocemente ad esplorare le potenzialità della libreria p5.js, è sicuramente l&rsquo;editor presente sul sito web <a href="https://editor.p5js.org" title="Editor online di p5.js">https://editor.p5js.org</a>, che si presenta con la seguente interfaccia grafica:</p>
+<p><img src="/static/coding/web/p5js/intro-p5-js-editor.png" alt="p5.js - Editor online" title="p5.js - Editor online"></p>
+<p>L&rsquo;interfaccia grafica presenta i tipici componenti di un ambiente di sviluppo:</p>
+<ul>
+<li>la barra dei menù, con a sinistra i classici menu per salvare il progetto, accedere alla guida, mentre a destra troviamo i pulsanti per effettuare il login o la registrazione;</li>
+<li>la barra dei pulsanti, contenente i pulsanti per avviare e fermare il proprio lavoro, la casella di scelta per aggiornare automaticamente l&rsquo;area di lavoro mentre si scrive il codice, la casella di testo nella quale inserire il nome del progetto ed, infine, il pulsante delle impostazioni;</li>
+<li>l&rsquo;area di progetto, contenente i file che compongono il progetto;</li>
+<li>l&rsquo;area del codice, per la modifica del codice relativo al file selezionato nell&rsquo;area di progetto;</li>
+<li>l&rsquo;area di anteprima, per visualizzare il lavoro realizzato;</li>
+<li>la console per visualizzare i messaggi di informazione, di avviso e di errore.</li>
+</ul>
+<p>Effettuando il login, utilizzando un servizio esterno tra quelli proposti oppure procedendo alla registrazione, è possibile gestire i propri progetti, le proprie collezioni ed utilizzare altre funzionalità non consentite all&rsquo;utente non registrato. La barra dei menù, in alto a destra, riporta il nome utente e le diverse aree a cui l&rsquo;utente può accedere. Il menù File, appena si salva il progetto, si arricchisce di nuove voci che permettono di duplicare il progetto, condividerlo o aggiungerlo ad una collezione.</p>
+<p><img src="/static/coding/web/p5js/intro-p5-js-editor-logged-in.png" alt="p5.js - Editor online" title="p5.js - Editor online con i menù visualizzati dopo il login"></p>
+<p>Nell&rsquo;area personale è possibile gestire i propri progetti e le proprie collezioni. Il menù contestuale ad ogni progetto permette di gestire le varie azioni sul progetto, come da immagine seguente:</p>
+<p><img src="/static/coding/web/p5js/intro-p5-js-editor-logged-in-projects.png" alt="p5.js - Editor online" title="p5.js - Editor online - finestra di dialogo per la condivisione progetto"></p>
+<h2 id="ambiente-di-sviluppo-openprocessingorg">Ambiente di sviluppo openprocessing.org</h2>
+<p>L&rsquo;ambiente di sviluppo di openprocessing si presenta con la seguente interfaccia grafica:</p>
+<p><img src="/static/coding/web/p5js/intro-openprocessing.png" alt="openprocessing.org - Home page" title="openprocessing.org - Home page"></p>
+<p>Cliccando sulla voce &ldquo;Crea Sketch&rdquo; nel menu proposto si passa all&rsquo;editor online che si presenta con la seguente interfaccia grafica:</p>
+<p><img src="/static/coding/web/p5js/intro-openprocessing-editor.png" alt="openprocessing.org - Editor online" title="openprocessing.org - Editor online"></p>
+<p>L&rsquo;interfaccia grafica presenta i tipici componenti di un ambiente di sviluppo:</p>
+<ul>
+<li>la barra dei pulsanti, contenente i pulsanti per visualizzare l&rsquo;area di esecuzione del proprio lavoro e per visualizzare l&rsquo;area del codice, più il pulsante per salvare il proprio lavoro;</li>
+<li>la barra con le schede dei file, contenente i file che compongono il progetto, il pulsante per impostare la modalità di visualizzazione dell&rsquo;area di esecuzione e dell&rsquo;area del codice ed il pulsante per le impostazioni di configurazione del progetto;</li>
+<li>l&rsquo;area del codice, per la modifica del codice relativo al file selezionato nella barra delle schede dei file;</li>
+<li>l&rsquo;area di esecuzione del lavoro realizzato, che è visualizzabile quando si clicca il pulsante di &ldquo;play&rdquo; presente nella barra dei pulsanti;</li>
+<li>la console per visualizzare i messaggi di informazione, di avviso e di errore.</li>
+</ul>
+<p>Il pulsante per le impostazioni di configurazione del progetto permette di visualizzare l&rsquo;area di configurazione':</p>
+<p><img src="/static/coding/web/p5js/intro-openprocessing-config-editor.png" alt="openprocessing.org - Configurazione editor" title="openprocessing.org - Configurazione editor"></p>
+<p>L&rsquo;area di configurazione presenta:</p>
+<ul>
+<li>La versione di processing da utilizzare, al momento la 1.7;</li>
+<li>Il tipo di progetto (se uno sketch di &lsquo;<code>p5.js</code>&rsquo;, un progetto web con i file HTML, CSS e JavaScript, oppure se utilizzare i vecchi progetti di processing che sono oramai in disuso);</li>
+<li>La protezione dai cicli infiniti (per evitare che l&rsquo;ambiente si blocchi in caso di ciclo infinito);</li>
+<li>La configurazione delle caratteristiche dell&rsquo;editor, come la dimensione del carattere, la modalità di visualizzazione dell&rsquo;area di esecuzione e dell&rsquo;area del codice e così via.</li>
+</ul>
+<p>Una volta effettuata la registrazione ed effettuato l&rsquo;accesso al sito, dall&rsquo;editor è possibile salvare i propri lavori cliccando sull&rsquo;apposito pulsante. I dati da inserire sono di chiara interpretazione, dal nome alla descrizione all&rsquo;immagine di anteprima da mostrare (per sceglierne una è necessario cliccare sull&rsquo;immagine). La schermata di salvataggio è la seguente:</p>
+<p><img src="/static/coding/web/p5js/intro-openprocessing-save.png" alt="openprocessing.org - Utente loggato - salvataggio sketch" title="openprocessing.org - Utente loggato - salvataggio sketch"></p>
+<p>I progetti salvati possono essere visualizzati nella pagina dell&rsquo;utente, come nella schermata di seguito:</p>
+<p><img src="/static/coding/web/p5js/intro-openprocessing-logged-list.png" alt="openprocessing.org - Utente loggato - lista sketch" title="openprocessing.org - Utente loggato - lista sketch"></p>
+<h2 id="ambiente-di-sviluppo-processing-ide">Ambiente di sviluppo Processing IDE</h2>
+<p>L&rsquo;ambiente di sviluppo Processing IDE deve essere scaricato ed installato nel sistema. All&rsquo;avvio è mostrata la seguente schermata:</p>
+<p><img src="/static/coding/web/p5js/intro-processing.png" alt="Processing IDE" title="Processing IDE"></p>
+<p>L&rsquo;interfaccia grafica presenta i tipici componenti di un ambiente di sviluppo:</p>
+<ul>
+<li>la barra dei menù, con i vari menù contestuali;</li>
+<li>la barra dei pulsanti, contenente i pulsanti per eseguire e stoppare il proprio lavoro, il pulsante di debug ed il pulsante per scegliere il linguaggio di programmazione da utilizzare. Come si nota, il linguaggio Java è la scelta predefinita;</li>
+<li>la barra con le schede dei file, contenente i file che compongono il progetto;</li>
+<li>l&rsquo;area del codice, per la modifica del codice relativo al file selezionato nella barra delle schede dei file;</li>
+<li>l&rsquo;area di esecuzione del lavoro realizzato, che è visualizzabile quando si clicca il pulsante di &ldquo;play&rdquo; presente nella barra dei pulsanti;</li>
+<li>la console per visualizzare i messaggi di informazione, di avviso e di errore.</li>
+</ul>
+<p>Per abilitare lo sviluppo di progetti con <code>p5.js</code> è necessario cliccare sul pulsante per scegliere il linguaggio di programmazione e poi scegliere la voce per la gestione dei linguaggi.</p>
+<p><img src="/static/coding/web/p5js/intro-processing-modes-menu.png" alt="Processing IDE - Menù linguaggi" title="Processing IDE - Menù linguaggi"></p>
+<p>Viene visualizzato l&rsquo;elenco di linguaggi che si possono aggiungere, cliccando sul tasto di installazione.</p>
+<p><img src="/static/coding/web/p5js/intro-processing-modes-list.png" alt="Processing IDE - Elenco linguaggi" title="Processing IDE - Elenco linguaggi"></p>
+<p>Una volta installato un linguaggio, questo compare nel menù dei linguaggi.</p>
+<h3 id="funzionalità-audio-in-processing-ide">Funzionalità audio in Processing IDE</h3>
+<p>Un progetto web con p5.js nell&rsquo;ambiente Processing IDE non include tutte le funzionalità che quindi devono essere aggiunte manualmente. Le funzionalità audio sono una di queste, l&rsquo;utente deve aggiungerle navigando nel menù &ldquo;Sketch&rdquo;, passando per il sotto-menù &ldquo;Importa librerie&rdquo; e quindi cliccando sulla voce &ldquo;p5 sound&rdquo; come indicato nell&rsquo;immagine seguente:</p>
+<p><img src="/static/coding/web/p5js/intro-processing-sound-import-library.png" alt="Processing IDE - Includere la libreria dei suoni" title="Processing IDE - Includere la libreria dei suoni"></p>
+<p>A questo punto è necessario aggiornare la pagina web navigando nel menù &ldquo;p5.js&rdquo; e quindi cliccando sulla voce &ldquo;Recreate index&rdquo;, come nell&rsquo;immagine seguente:</p>
+<p><img src="/static/coding/web/p5js/intro-processing-sound-recreate-index.png" alt="Processing IDE - Ricrea la pagina web" title="Processing IDE - Ricrea la pagina web"></p>
+<p>A questo punto è necessario verificare che la libreria sia stata effettivamente importata, verificando che nella pagina web sia presente la libreria <code>p5.sound.js</code>, come nell&rsquo;immagine seguente:</p>
+<p><img src="/static/coding/web/p5js/intro-processing-sound-imported.png" alt="Processing IDE - Libreria importata" title="Processing IDE - Libreria importata"></p>
+<h2 id="struttura-di-un-progetto-web-con-p5js">Struttura di un progetto web con p5.js</h2>
+<p>Un progetto web con p5.js è composto dai seguenti files:</p>
+<ul>
+<li>Il file <code>index.html</code> è la pagina web (scritta in linguaggio HTML);</li>
+<li>Il file <code>p5.js</code> è la libreria che permette l&rsquo;esecuzione dei progetti;</li>
+<li>Il file <code>p5.sound.js</code> è la libreria che permette la riproduzione e la gestione dei suoni;</li>
+<li>Il file <code>style.css</code> è il file che contiene gli stili della pagina web, come i colori, la dimensione degli oggetti, ecc..</li>
+<li>Il file <code>sketch.js</code> che rappresenta il progetto realizzato dall&rsquo;utente.</li>
+</ul>
+<p>Dato che il progetto viene mostrato in una pagina web, è la pagina web <code>index.html</code> a dover contenere i riferimenti a tutti gli altri file. Questi riferimenti possono essere di tre tipi:</p>
+<ul>
+<li><strong>Riferimenti assoluti</strong>: E&rsquo; l&rsquo;approccio è utilizzato negli ambienti web di openprocessing e di p5.js. I file <code>p5.js</code>, <code>p5.sound.js</code> sono presenti su un sito internet, quindi la pagina web <code>index.html</code> li individua attraverso un indirizzo completo, come nel seguente esempio:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><ul>
+<li><strong>Riferimenti relativi</strong>: E&rsquo; l&rsquo;approccio utilizzato sia da Processing IDE, sia quando si lavora sul proprio computer senza accesso ad internet. I file <code>p5.js</code>, <code>p5.sound.js</code> devono essere salvati nella cartella del proprio progetto (o in una sotto-cartella), quindi la pagina web <code>index.html</code> li individua attraverso un indirizzo relativo. I file <code>sketch.js</code> e <code>style.css</code> sono sempre individuati con indirizzo relativo, come nel seguente esempio:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sketch.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;
+</span></span></code></pre></div><ul>
+<li><strong>Codice in pagina</strong>: Gli stili grafici (contenuti nel file <code>style.css</code>) ed il file di progetto (contenuti nel file <code>sketch.js</code>) possono essere inclusi direttamente nella pagina, quindi questi file non sono presenti nella cartella di progetto perché sono scritti direttamente nella pagina web, come nel seguente esempio:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><h3 id="progetto-in-una-cartella-in-ambiente-locale">Progetto in una cartella in ambiente locale</h3>
+<p>Nel caso sia necessario, è possibile creare un progetto web in una nuova cartella (da creare sul proprio computer) e lavorare senza nessun ambiente di sviluppo. Per far ciò è necessario;</p>
+<ol>
+<li>
+<p>scaricare le librerie <code>p5.js</code> e <code>p5.sound.js</code> e gli stili grafici <code>style.css</code> da salvare nella cartella;</p>
+</li>
+<li>
+<p>creare il file di progetto <code>sketch.js</code> con il codice da scrivere;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">    </span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>creare una nuova pagina web <code>index.html</code> con il contenuto seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;it&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;Sketch&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Riferimenti --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sketch.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div></li>
+</ol>
+<p>Il contenuto della cartella è il seguente:</p>
+<p><img src="/static/coding/web/p5js/intro-project-folder.png" alt="Progetto in una cartella" title="Progetto in una cartella"></p>
+<h3 id="progetto-in-un-unico-file-html">Progetto in un unico file HTML</h3>
+<p>E&rsquo; possibile creare un unico file HTML (da creare sul proprio computer) e lavorare senza nessun ambiente di sviluppo, indicando un riferimento assoluto alle librerie <code>p5.js</code> e <code>p5.sound.js</code> ed inglobando gli stili grafici ed il codice di progetto come codice in pagina, come nella pagina web seguente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;Sketch&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Riferimenti --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Progetto p5.js --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h3 id="struttura-del-programma">Struttura del programma</h3>
+<p>Sia che si lavori con una singola pagina web, sia che si utilizzi l&rsquo;editor online, sia che si organizzi il progetto in più file separati, nel codice devono sempre essere dichiarati i due blocchi principali <code>setup</code> e <code>draw</code>.</p>
+<p>Le istruzioni contenute nel blocco <code>setup()</code> sono eseguite una sola volta e servono ad impostare gli strumenti e le condizioni iniziali.</p>
+<p>Le istruzioni contenute nel blocco <code>draw()</code> sono eseguite ciclicamente e servono a ridisegnare continuamente l&rsquo;area di lavoro.</p>
+<p>Come si può notare dagli esempi precedenti, sia il blocco <code>setup()</code> sia il blocco <code>draw()</code> sono delimitati dalle parentesi graffe <code>{</code> e <code>}</code>, che indicano l&rsquo;inizio e la fine del blocco.</p>
+<p>All&rsquo;interno del blocco vanno le istruzioni per disegnare. In particolare, è nel blocco <code>setup()</code> che si invoca la funzione <code>createCanvas()</code> necessaria alla creazione dell&rsquo;area da disegno, poiché l&rsquo;area da disegno deve essere creata una volta sola.</p>
 <h2 id="api">API</h2>
 <p>Per poter utilizzare correttamente la libreria p5.js, è necessario conoscere l&rsquo;interfaccia esposta dalla libreria stessa.</p>
-<p>Il termine <strong>interfaccia</strong>, nelle discipline tecniche, indica l&rsquo;area (la &ldquo;faccia&rdquo;) esposta da un sistema, al fine di potervi interagire. Un esempio sono le interfacce grafiche di Microsoft Windows, che permettono di interagire con i calcolatori, oppure le interfacce vocali di iPhone ed Android, con &ldquo;Siri&rdquo; ed il famoso &ldquo;OK Google&rdquo;, che permettono di interagire con gli smartphone.</p>
+<p>Il termine <strong>interfaccia</strong>, nelle discipline tecniche, indica l&rsquo;area (la &ldquo;faccia&rdquo;) esposta da un sistema, al fine di potervi interagire. Un esempio sono le interfacce grafiche di Microsoft Windows, che permettono di interagire con i calcolatori, oppure le interfacce vocali di iPhone ed Android, con &ldquo;Siri&rdquo; ed &ldquo;OK Google&rdquo;, che permettono di interagire con gli smartphone.</p>
 <p>Nello sviluppo di applicazioni, le interfacce esposte da librerie e linguaggi di programmazione, e quindi anche dalla libreria p5.js, prendono il nome di <strong>Application Programming Interface</strong> (API).</p>
 <p>Le API espongono strutture, funzioni, costanti e tanti altri elementi che il programmatore può usare per realizzare la propria applicazione.</p>
-<p>Le API sono sempre accompagnate dalla documentazione, che descrive cosa rappresenta una determinata costante oppure come utilizzare una determinata funzione.</p>
-<p>Le <strong>costanti</strong>, nell&rsquo;ambito informatico come nell&rsquo;ambito matematico, sono dei valori che non variano nel tempo, ed ai quali è associato un nome, come ad esempio la costante fisica <strong>c</strong> che definisce la velocità della luce nel vuoto pari a 299792458 m/s. Per conoscere il nome, il compito e la descrizione di una costante è necessario consultare la documentazione.</p>
-<p>Le <strong>funzioni</strong> in ambito informatico sono delle istruzioni particolari che identificano un frammento di codice che svolge uno specifico compito, come il disegno di un cerchio o la creazione dell&rsquo;area da disegno. Una caratteristica peculiare delle funzioni è che permettono allo sviluppatore di riutilizzare frammenti di codice scritti da altri programmatori.</p>
-<p>Una funzione è definita da un <strong>nome</strong>, come ad esempio la funzione logaritmo, che nelle formule matematiche viene definita dal simbolo <code>log</code>, oppure la funzione coseno, che nelle formule matematiche viene definita dal simbolo <code>cos</code>.</p>
-<p>Le funzioni possono prevedere dei <strong>parametri</strong> necessari alla realizzazione del compito. Ad esempio, per creare l&rsquo;area da disegno abbiamo bisogno di due parametri, la larghezza e l&rsquo;altezza dell&rsquo;area da creare. Per disegnare un cerchio abbiamo bisogno di tre parametri, le coordinate x ed y del centro ed il raggio del cerchio.</p>
-<p>Alcuni parametri possono essere obbligatori, altri facoltativi, e tipicamente sono elencati prima quelli obbligatori e poi, tra parentesi quadre, quelli facoltativi.</p>
-<p>Per conoscere il nome, il compito ed i parametri obbligatori o facoltativi di una funzione, è necessario consultare la documentazione.</p>
-<p>I parametri indicati nella documentazione sono detti <strong>parametri formali</strong> e, come si vedrà nel capitolo relativo alla creazione di funzioni, sono definiti dallo sviluppatore autore della funzione.</p>
-<p>Il nome della funzione insieme alla lista dei parametri formali riportata tra parentesi tonde formano la <strong>firma della funzione</strong>.</p>
-<h3 id="documentazione-delle-api">Documentazione delle API</h3>
-<p>La documentazione delle API della libreria p5.js si può consultare sul sito web della libreria stessa, all&rsquo;indirizzo <a href="https://p5js.org/reference/" title="Documentazione di p5.js">https://p5js.org/reference/</a>.</p>
-<p>La documentazione è organizzata per aree di interesse, tra le varie categorie troviamo:</p>
+<p>La documentazione delle API descrive cosa rappresenta e come utilizzare ogni singolo oggetto esposto, come ad esempio una costante o una funzione, ed è consultabile all&rsquo;indirizzo <a href="https://p5js.org/reference/" title="Documentazione di p5.js">https://p5js.org/reference/</a>.</p>
+<p>La documentazione è organizzata per aree di interesse, come si può vedere nell&rsquo;immagine seguente:</p>
+<p><img src="/static/coding/web/p5js/intro-api-references.png" alt="p5.js - API" title="p5.js - API"></p>
+<p>Nella tabella seguente è riportata la descrizione delle varie categorie:</p>
 <table>
 <thead>
 <tr>
@@ -342,14 +507,9 @@
 </tbody>
 </table>
 <p>Ogni categoria mostra le costanti e le funzioni disponibili, con un link alla documentazione specifica.</p>
+<h3 id="documentazione-delle-costanti">Documentazione delle costanti</h3>
+<p>Le <strong>costanti</strong>, nell&rsquo;ambito informatico come nell&rsquo;ambito matematico, sono dei valori che non variano nel tempo, ed ai quali è associato un nome, come ad esempio la costante fisica <strong>c</strong> che definisce la velocità della luce nel vuoto pari a 299792458 m/s. Per conoscere il nome, il compito e la descrizione di una costante è necessario consultare la documentazione.</p>
 <p>Ogni costante è documentata indicando uno o più esempi d&rsquo;uso, il nome, la descrizione ed il valore.</p>
-<p>La documentazione di ogni funzione riporta:</p>
-<ul>
-<li>uno o più esempi d&rsquo;uso;</li>
-<li>la descrizione del compito svolto;</li>
-<li>la sintassi d&rsquo;uso, ovvero la firma della funzione. Ogni parametro formale, obbligatorio o facoltativo, è ulteriormente chiarito con l&rsquo;indicazione del tipo e della descrizione.</li>
-</ul>
-<h4 id="esempio-di-documentazione-delle-costanti">Esempio di documentazione delle costanti</h4>
 <p>Un esempio di documentazione delle costanti è quello della documentazione della costante <code>PI</code>. Nella descrizione si legge che questa costante rappresenta la costante matematica <strong>pi greco</strong>, che definisce il rapporto tra la lunghezza della circonferenza e quella del suo diametro. Il nome di questa costante è <code>PI</code> ed il valore associato è 3.14159265358979323846&hellip;</p>
 <p>Nella documentazione sono definite anche le seguenti costanti:</p>
 <ul>
@@ -357,7 +517,20 @@
 <li><code>HALF_PI</code>, che rappresenta la metà del valore della costante <code>PI</code>, con valore associato 1.57079632679489661923&hellip;</li>
 <li><code>QUARTER_PI</code>, che rappresenta un quarto del valore della costante <code>PI</code>, con valore associato 0.7853982&hellip;</li>
 </ul>
-<h4 id="esempio-di-documentazione-delle-funzioni">Esempio di documentazione delle funzioni</h4>
+<h3 id="documentazione-delle-funzioni">Documentazione delle funzioni</h3>
+<p>Le <strong>funzioni</strong> in ambito informatico sono delle istruzioni particolari che identificano un frammento di codice che svolge uno specifico compito, come il disegno di un cerchio o la creazione dell&rsquo;area da disegno. Una caratteristica peculiare delle funzioni è che permettono allo sviluppatore di riutilizzare frammenti di codice scritti da altri programmatori.</p>
+<p>Una funzione è definita da un <strong>nome</strong>, come ad esempio la funzione logaritmo, che nelle formule matematiche viene definita dal simbolo <code>log</code>, oppure la funzione coseno, che nelle formule matematiche viene definita dal simbolo <code>cos</code>.</p>
+<p>Le funzioni possono prevedere dei <strong>parametri</strong> necessari alla realizzazione del compito. Ad esempio, per creare l&rsquo;area da disegno abbiamo bisogno di due parametri, la larghezza e l&rsquo;altezza dell&rsquo;area da creare. Per disegnare un cerchio abbiamo bisogno di tre parametri, le coordinate x ed y del centro ed il raggio del cerchio.</p>
+<p>Alcuni parametri possono essere obbligatori, altri facoltativi, e tipicamente sono elencati prima quelli obbligatori e poi, tra parentesi quadre, quelli facoltativi.</p>
+<p>Per conoscere il nome, il compito ed i parametri obbligatori o facoltativi di una funzione, è necessario consultare la documentazione.</p>
+<p>I parametri indicati nella documentazione sono detti <strong>parametri formali</strong> e, come si vedrà nel capitolo relativo alla creazione di funzioni, sono definiti dallo sviluppatore autore della funzione.</p>
+<p>Il nome della funzione insieme alla lista dei parametri formali riportata tra parentesi tonde formano la <strong>firma della funzione</strong>.</p>
+<p>La documentazione di ogni funzione riporta:</p>
+<ul>
+<li>uno o più esempi d&rsquo;uso;</li>
+<li>la descrizione del compito svolto;</li>
+<li>la sintassi d&rsquo;uso, ovvero la firma della funzione. Ogni parametro formale, obbligatorio o facoltativo, è ulteriormente chiarito con l&rsquo;indicazione del tipo e della descrizione.</li>
+</ul>
 <p>Un esempio di documentazione di una funzione è quello della documentazione della funzione <code>createCanvas</code>. Nella documentazione è descritto che questa funzione ha il compito di creare l&rsquo;area da disegno nella quale poi disegnare. La sintassi, ovvero la firma, è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: createCanvas(w, h)
 </span></span></code></pre></div><p>I parametri formali sono <code>w</code> ed <code>h</code> e sono entrambi obbligatori, dato che non sono riportati tra parentesi quadre. La documentazione dei parametri riporta:</p>
@@ -365,127 +538,27 @@
 </span></span><span style="display:flex;"><span>    w    Number: width of the canvas
 </span></span><span style="display:flex;"><span>    h    Number: height of the canvas
 </span></span></code></pre></div><p>Quindi il parametro formale <code>w</code> è un numero e rappresenta la larghezza dell&rsquo;area da disegno. Il parametro formale <code>h</code> è un numero e rappresenta l&rsquo;altezza dell&rsquo;area da disegno.</p>
-<p>Un secondo esempio di documentazione di una funzione è quello della documentazione della funzione <code>background</code>. Nella documentazione è descritto che questa funzione ha il compito di disegnare uno sfondo colorato nell&rsquo;area da disegno. La sintassi, ovvero la firma, è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax:
-</span></span><span style="display:flex;"><span>    background(gray, [a])
-</span></span><span style="display:flex;"><span>    background(v1, v2, v3, [a])
-</span></span></code></pre></div><p>Come si nota, si può creare lo sfondo usando una delle due firme. La prima firma crea uno sfondo grigio, la seconda crea uno sfondo colorato.</p>
-<p>I parametri formali per la prima firma sono <code>gray</code> ed <code>a</code>, il primo obbligatorio, il secondo facoltativo, dato che è riportato tra parentesi quadre.</p>
-<p>I parametri formali per la seconda firma sono <code>v1</code>, <code>v2</code>, <code>v3</code> ed <code>a</code>, i primi tre obbligatori, il quarto facoltativo, dato che è riportato tra parentesi quadre.</p>
-<p>La documentazione dei parametri riporta:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Parameters:
-</span></span><span style="display:flex;"><span>    gray   Number: specifies a value between white and black
-</span></span><span style="display:flex;"><span>    v1     Number: red or hue value (depending on the current color mode)
-</span></span><span style="display:flex;"><span>    v2     Number: green or saturation value (depending on the current color mode)
-</span></span><span style="display:flex;"><span>    v3     Number: blue or brightness value (depending on the current color mode)
-</span></span><span style="display:flex;"><span>    a      Number: opacity of the background relative to current color range (default is 0-255) (Optional)
-</span></span></code></pre></div><p>Quindi il parametro formale <code>gray</code> è un numero e rappresenta la quantità di grigio per colorare l&rsquo;area da disegno.
-I parametri formali <code>v1</code>, <code>v2</code>, <code>v3</code> sono numerici e rappresentano la quantità di colore da applicare.
-Il parametro formale <code>a</code> è un numero e rappresenta la quantità di trasparenza del colore.</p>
-<p>Si rimanda al capitolo sui colori per una spiegazione più dettagliata di questi parametri. In questo paragrafo, l&rsquo;attenzione è focalizzata sulla documentazione dei parametri.</p>
-<h2 id="editor-online-per-p5js">Editor online per p5.js</h2>
-<p>Il punto di partenza, per iniziare velocemente ad esplorare le potenzialità della libreria p5.js, è sicuramente l&rsquo;editor presente sul sito web <a href="https://editor.p5js.org" title="Editor online di p5.js">https://editor.p5js.org</a>, che si presenta con la seguente interfaccia grafica:</p>
-<p><img src="/static/coding/web/p5js/intro-p5-js-editor.png" alt="p5.js - Editor online" title="p5.js - Editor online"></p>
-<p>L&rsquo;interfaccia grafica presenta i tipici componenti di un ambiente di sviluppo:</p>
-<ul>
-<li>la barra dei menù, con a sinistra i classici menu per salvare il progetto, accedere alla guida, mentre a destra troviamo i pulsanti per effettuare il login o la registrazione;</li>
-<li>la barra dei pulsanti, contenente i pulsanti per avviare e fermare il proprio lavoro, la casella di scelta per aggiornare automaticamente l&rsquo;area di lavoro mentre si scrive il codice, la casella di testo nella quale inserire il nome del progetto ed, infine, il pulsante delle impostazioni;</li>
-<li>l&rsquo;area di progetto, contenente i file che compongono il progetto;</li>
-<li>l&rsquo;area del codice, per la modifica del codice relativo al file selezionato nell&rsquo;area di progetto;</li>
-<li>l&rsquo;area di anteprima, per visualizzare il lavoro realizzato;</li>
-<li>la console per visualizzare i messaggi di informazione, di avviso e di errore.</li>
-</ul>
-<p>Effettuando il login, utilizzando un servizio esterno tra quelli proposti oppure procedendo alla registrazione, è possibile gestire i propri progetti, le proprie collezioni ed utilizzare altre funzionalità non consentite all&rsquo;utente non registrato. La barra dei menù, in alto a destra, riporta il nome utente e le diverse aree a cui l&rsquo;utente può accedere. Il menù File, appena si salva il progetto, si arricchisce di nuove voci che permettono di duplicare il progetto, condividerlo o aggiungerlo ad una collezione.</p>
-<p><img src="/static/coding/web/p5js/intro-p5-js-editor-logged-in.png" alt="p5.js - Editor online" title="p5.js - Editor online con i menù visualizzati dopo il login"></p>
-<p>Cliccando sulla voce di menu &ldquo;share&rdquo; presente nel menù &ldquo;File&rdquo;, si apre una finestra di dialogo contenente 4 opzioni, come da immagine seguente:</p>
-<p><img src="/static/coding/web/p5js/intro-p5-js-editor-logged-in-sharing.png" alt="p5.js - Editor online" title="p5.js - Editor online - finestra di dialogo per la condivisione progetto"></p>
-<p>Le voci visualizzate nell&rsquo;immagine sono:</p>
-<ul>
-<li>&ldquo;Embed&rdquo;: contiene il codice HTML per includere il lavoro in una pagina esterna;</li>
-<li>&ldquo;Present&rdquo;: contiene un collegamento ad un&rsquo;immagine di presentazione del progetto, visualizzabile cliccando sul pulsante associato;</li>
-<li>&ldquo;Fullscreen&rdquo;: contiene un collegamento che permette di aprire in modalità &ldquo;schermo intero&rdquo; l&rsquo;area di anteprima;</li>
-<li>&ldquo;Edit&rdquo;: contiene un collegamento che permette di aprire il progetto per modificarlo.</li>
-</ul>
-<p>Nell&rsquo;area personale è possibile gestire i propri progetti e le proprie collezioni. Il menù contestuale ad ogni progetto permette di gestire le varie azioni sul progetto, come da immagine seguente:</p>
-<p><img src="/static/coding/web/p5js/intro-p5-js-editor-logged-in-projects.png" alt="p5.js - Editor online" title="p5.js - Editor online - finestra di dialogo per la condivisione progetto"></p>
-<h2 id="struttura-del-progetto">Struttura del progetto</h2>
-<p>L&rsquo;editor online è di grande utilità per iniziare, tuttavia si può voler lavorare in modalità &ldquo;off-line&rdquo; (senza internet, quindi senza utilizzare l&rsquo;editor online) oppure si può voler realizzare una pagina web che contenga il lavoro realizzato, in modo tale da poterla inglobare in un proprio sito web. Per le casistiche elencate e per altre eventuali casistiche, è necessario conoscere la composizione del progetto realizzato o da realizzare.</p>
-<p>Dato che un progetto può essere scaricato dall&rsquo;editor online, partiamo proprio dalla descrizione del file scaricato. Si tratta di un archivio compresso, come si può notare dall&rsquo;estensione &ldquo;.zip&rdquo;. Estraendo questo archivio in una cartella vuota, notiamo che vengono generati alcuni file:</p>
-<p>Il file <code>index.html</code> è semplicemente una pagina HTML vuota nella quale sono presenti:</p>
-<ul>
-<li>un riferimento alla libreria <code>p5.js</code>, definito tramite l&rsquo;etichetta <code>script</code>, come nel seguente esempio:</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div><ul>
-<li>un riferimento alla libreria <code>p5.sound.min.js</code>, definito tramite l&rsquo;etichetta <code>script</code>, come nel seguente esempio:</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.sound.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div><ul>
-<li>un riferimento al codice JavaScript realizzato, definito tramite l&rsquo;etichetta <code>script</code>, come nel seguente esempio:</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sketch.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div><ul>
-<li>un riferimento allo stile della pagina, definito tramite l&rsquo;etichetta <code>link</code>, come nel seguente esempio:</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;
-</span></span></code></pre></div><p>In questo contesto, non entreremo nei dettagli del linguaggio HTML che è alla base di una pagina web, e nemmeno nei dettagli del linguaggio CSS necessario a definire gli stili, ma focalizzeremo l&rsquo;attenzione sulla struttura del progetto.</p>
-<p>Come si nota, i riferimenti non indicano un percorso assoluto, per cui i quattro file devono essere presenti nella stessa cartella della pagina web <code>index.html</code>, in caso contrario possono essere generati degli errori ed il lavoro realizzato non verrà mostrato.</p>
-<p>Il vantaggio di usare questa struttura basata su una cartella permette allo sviluppatore di lavorare senza bisogno di un collegamento ad internet. Inoltre, più lavori possono condividere le stesse librerie e gli stessi stili.</p>
-<h3 id="progetto-in-un-singolo-file">Progetto in un singolo file</h3>
-<p>Nel caso sia necessario, è possibile racchiudere tutto il lavoro in un singolo file. Invece di utilizzare dei riferimenti ad altri file, si può scegliere di caricare le librerie necessarie da una risorsa presente su web, utilizzando un indirizzo assoluto, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div><p>In questo modo, le librerie saranno scaricate da internet all&rsquo;apertura della pagina web.</p>
-<p>Lo stile, invece, può essere incluso direttamente nella pagina web, all&rsquo;interno delle etichette di stile:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
-</span></span></code></pre></div><p>Allo stesso modo, il programma realizzato, magari tramite l&rsquo;editor online, deve essere incluso nelle etichette <code>script</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">    </span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div><p>L&rsquo;esempio completo della pagina web è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">style</span>&gt;
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">style</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">    </span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
-</span></span></code></pre></div><h3 id="struttura-del-programma">Struttura del programma</h3>
-<p>Sia che si lavori con una singola pagina web, sia che si utilizzi l&rsquo;editor online, sia che si organizzi il progetto in più file separati, nel codice devono sempre essere dichiarati i due blocchi principali <code>setup</code> e <code>draw</code>.</p>
-<p>Le istruzioni contenute nel blocco <code>setup</code> sono eseguite una sola volta e servono ad impostare gli strumenti e le condizioni iniziali. In particolare, è in questo blocco che si invoca la funzione <code>createCanvas</code> necessaria alla creazione dell&rsquo;area da disegno, poiché l&rsquo;area da disegno deve essere creata una volta sola.</p>
-<p>Le istruzioni contenute nel blocco <code>draw</code> sono eseguite ciclicamente e servono a ridisegnare continuamente l&rsquo;area di lavoro.</p>
-<p>Come si può notare dagli esempi precedenti, le istruzioni di entrambi i blocchi sono racchiuse tra le parentesi graffe <code>{</code> e <code>}</code>, che indicano l&rsquo;inizio e la fine del blocco.</p>
-<h3 id="invocare-le-funzioni">Invocare le funzioni</h3>
-<p>In precedenza abbiamo detto che una funzione identifica un frammento di codice che svolge uno specifico compito, ha una firma formata dal nome e, tra parentesi tonde, dai parametri formali.</p>
-<p>Quando il programmatore realizza che deve svolgere un compito già svolto da una funzione conosciuta, può delegare tale compito a questa funzione. Tecnicamente si dice che si <strong>invoca</strong> una funzione quando si vuole indicare che viene utilizzata una funzione. Per poterla invocare, il programmatore verifica sulla documentazione la firma della funzione, in particolare prendendo nota del nome e dei parametri formali.</p>
-<p>Se nella firma della funzione non sono presenti parametri formali, la funzione viene invocata semplicemente utilizzando la firma (il nome seguito da parentesi tonde):</p>
+<h2 id="sistema-di-coordinate">Sistema di coordinate</h2>
+<p>Il sistema di coordinate <strong>cartesiane</strong>, tipicamente usato da librerie di grafica computerizzata 2D, è caratterizzato dagli assi X ed Y che si intersecano nell&rsquo;angolo in alto a sinistra dell&rsquo;area da disegno. In tale estremità si trova, quindi, l&rsquo;origine degli assi, rappresentata dal punto di coordinate (0,0).</p>
+<p>La particolarità di questo sistema di coordinate è l&rsquo;asse Y invertito, cioè i valori positivi sono in basso ed i negativi in alto. Solo i punti che hanno entrambe le coordinate (x, y) con valore positivo saranno disegnati nell&rsquo;area da disegno.</p>
+<p>Di seguito si mostrano le differenze tra il classico sistema cartesiano e la variante utilizzata in p5.js:</p>
+<p><img src="/static/coding/web/p5js/intro-axes-in-math-and-p5js.png" alt="p5.js - Differenza tra i due sistemi di coordinate" title="p5.js - Differenza tra i due sistemi di coordinate"></p>
+<h3 id="misurazione-angoli">Misurazione angoli</h3>
+<p>In ambito matematico, gli angoli sono tipicamente espressi mediante due differenti unità di misura: il <strong>grado d&rsquo;arco</strong> (detto anche grado sessagesimale) ed il <strong>radiante</strong>, che fa parte del <strong>sistema internazionale di unità di misura</strong>.</p>
+<p>Un grado d&rsquo;arco è la misura dell&rsquo;angolo che si ha in corrispondenza di un arco di circonferenza che misura 1/360 della circonferenza di un cerchio.</p>
+<p>Un radiante è la misura dell&rsquo;angolo che si ha in corrispondenza di un arco di circonferenza di lunghezza pari al raggio.</p>
+<p>Una caratteristica importante da considerare nella misurazione degli angoli è che, nel sistema di coordinate utilizzato, l&rsquo;asse Y è invertito e quindi gli angoli sono misurati seguendo un <strong>senso orario</strong>.</p>
+<p>Per facilitare la comprensione, possiamo fare un&rsquo;analogia con il quadrante di un orologio, sul quale utilizziamo la lancetta delle ore come riferimento e la lancetta dei minuti per misurare l&rsquo;angolo.</p>
+<p>Ponendo inizialmente sul numero tre entrambe le lancette (quindi a 3 ore e 15 minuti) definiamo un primo angolo, di grandezza zero (sia in gradi che in radianti).</p>
+<p>Man mano che la lancetta dei minuti ruota in <strong>senso orario</strong>, la dimensione dell&rsquo;angolo aumenta. Alle ore <strong>3.30</strong> corrisponde la misura di <strong>novanta gradi</strong> (e non alle ore <strong>3.00</strong> come ci aspetterebbe). Un angolo di <strong>quarantacinque gradi</strong> corrisponde alle ore <strong>3.22</strong> circa, un angolo di <strong>centottanta gradi d&rsquo;arco</strong> corrisponde alle ore <strong>3.45</strong> e così via.</p>
+<p><img src="/static/coding/web/p5js/intro-angle-on-clock-clockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
+<p>Per completezza, riportiamo anche le immagini degli orologi con le misurazioni degli angoli prese utilizzando il senso <strong>antiorario</strong>, in modo da avere chiara la differenza.</p>
+<p><img src="/static/coding/web/p5js/intro-angle-on-clock-counterclockwise.png" alt="p5.js - Angoli rappresentati su orologio" title="p5.js - Angoli rappresentati su orologio"></p>
+<h2 id="invocare-le-funzioni">Invocare le funzioni</h2>
+<p>In precedenza abbiamo detto che una funzione identifica un frammento di codice che svolge uno specifico compito, generalmente descritto nella documentazione. Una funzione ha una firma formata dal nome e, tra parentesi tonde, dai parametri formali.</p>
+<p>Tecnicamente si dice che si <strong>invoca</strong> una funzione quando il programmatore la utilizza per svolgere un determinato compito (o una sua parte).
+Piuttosto che scrivere un nuovo frammento di codice per eseguire il compito, invoca la funzione delegando a questa il compito da svolgere.</p>
+<p>Per invocare una funzione esistente, il programmatore verifica sulla documentazione la firma della funzione. Se nella firma non sono presenti parametri formali, la funzione può essere invocata semplicemente utilizzando la firma (il nome seguito da parentesi tonde):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">funzione</span>()
 </span></span></code></pre></div><p>Se invece nella firma della funzione sono presenti parametri formali, allora ad ogni parametro formale si deve sostituire un valore. I valori assegnati prendono il nome di <strong>parametri attuali</strong>.</p>
 <p>In questo caso, per invocare una funzione, bisogna semplicemente scrivere il nome seguito da parentesi tonda aperta, la lista di parametri attuali, e la parentesi chiusa.</p>
@@ -523,45 +596,8 @@ Il parametro formale <code>a</code> è un numero e rappresenta la quantità di t
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ERRORE
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="posizionamento-dellarea-da-disegno">Posizionamento dell&rsquo;area da disegno</h2>
-<p>L&rsquo;area da disegno è generalmente posizionata alla fine della pagina web, è possibile però spostarla all&rsquo;interno di un altro elemento HTML. Lo spostamento è effettuato invocando la funzione <code>parent</code>, la quale prevede come argomento un identificativo (<code>id</code>) dell&rsquo;elemento HTML in cui si vuole spostare l&rsquo;area da disegno.</p>
-<p>Supponiamo, ad esempio, di avere una pagina HTML contenente un paragrafo il cui identificativo è <code>area</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;area&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;altro paragrafo&lt;/<span style="color:#f92672">p</span>&gt;
-</span></span></code></pre></div><p>Per spostare l&rsquo;area da disegno all&rsquo;interno del paragrafo, si utilizza la funzione <code>parent</code> con argomento <code>area</code> (identificativo del paragrafo), come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>).<span style="color:#a6e22e">parent</span>(<span style="color:#e6db74">&#39;area&#39;</span>);
-</span></span></code></pre></div><h2 id="modalità-di-esecuzione-globale-e-di-istanza">Modalità di esecuzione globale e di istanza</h2>
-<p>Gli esempi proposti dichiarano variabili e funzioni da disegno nel contesto globale della pagina web, quindi questa modalità di lavoro è detta <strong>modalità globale</strong>. Dato che il contesto globale è unico, si è vincolati all&rsquo;esecuzione di un unico lavoro nella pagina web.</p>
-<p>Una modalità più avanzata di lavoro è la <strong>modalità di istanza</strong>, in cui le variabili e le funzioni da disegno sono dichiarate in un contesto specifico dato da una sorta di oggetto, detto <strong>closure</strong>. Dato che possono essere create più istanze di questi oggetti, è possibile dichiarare più contesti di esecuzione, ognuno legato alla singola istanza, per cui nella pagina web possono essere eseguiti più lavori.</p>
-<p>Essendo comunque un argomento avanzato, nei capitoli seguenti sarà sempre utilizzata la modalità globale. Solo per completezza, si riporta un esempio di lavoro realizzato utilizzando la modalità di istanza.</p>
-<p>Elemento HTML che conterrà l&rsquo;area da disegno:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;idElementoHTML&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
-</span></span></code></pre></div><p>Dichiarazione delle variabili e delle funzioni da disegno in modalità di istanza:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lavoro</span> <span style="color:#f92672">=</span> ( <span style="color:#a6e22e">sketch</span> ) =&gt; {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">setup</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">200</span>);
-</span></span><span style="display:flex;"><span>  };
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">draw</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sketch</span>.<span style="color:#a6e22e">rect</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">50</span>);
-</span></span><span style="display:flex;"><span>  };
-</span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><p>Creazione ed esecuzione dell&rsquo;area da disegno definita nell&rsquo;istanza <code>lavoro</code> ed inclusione della stessa nell&rsquo;elemento HTML <code>sketch</code> definito in precedenza:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myp5</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">p5</span>(<span style="color:#a6e22e">lavoro</span>, <span style="color:#e6db74">&#39;idElementoHTML&#39;</span>);
-</span></span></code></pre></div><p>Si fa notare come entrambi le funzioni <code>draw</code> e <code>setup</code> siano definite all&rsquo;interno dell&rsquo;oggetto <code>sketch</code>, attraverso la sintassi <code>sketch.setup</code> e <code>sketch.draw</code>.</p>
-<p>Si fa notare, inoltre, che entrambe le funzioni sono dichiarate come funzioni <strong>lambda</strong> al fine di non sovrascrivere il contesto dell&rsquo;oggetto <code>sketch</code>.</p>
-<p>Come già detto, sono argomenti avanzati, per cui non saranno utilizzati nei prossimi capitoli.</p>
-
+</span></span></code></pre></div>
     </div>
-      <hr>
-      <h2>Riferimenti</h2>
-      <p><a href="https://gabrielgambetta.com/computer-graphics-from-scratch/introduction.html" style="font-weight: 700; color: #e22d30;">Computer Graphics from scratch</a>: Computer Graphics from scratch (for 3D rendering)</p><p><a href="https://github.com/processing/p5.js/wiki/Global-and-instance-mode" style="font-weight: 700; color: #e22d30;">p5js.org - Global and instance mode</a>: In global mode you declaring everything in the global context, in instance mode you declaring everything as an object instance.</p>
   </article>
 </main>
 

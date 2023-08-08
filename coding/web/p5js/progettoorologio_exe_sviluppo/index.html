@@ -225,8 +225,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 2 minuti 
-        ( 282 parole)
+        Tempo di lettura 3 minuti 
+        ( 464 parole)
     </span>
 </div></div>
     </header>
@@ -243,7 +243,11 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">hour</span>();
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minute</span>();
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">second</span>();
-</span></span></code></pre></div><p>Fase 4: dichiarare tre variabili <code>hGradi</code>, <code>mGradi</code> e <code>sGradi</code> che rappresentino la corrispondenza in gradi sessagesimali di un&rsquo;ora, di un minuto e di un secondo. Per effettuare ciò è necessario ricordare che le lancette partono dalle ore <code>12</code> mentre i gradi si misurano dall&rsquo;angolo <code>0°</code> che si trova quando la lancetta si posa sul numero <code>3</code> del quadrante. Per creare la corrispondenza tra le due misure è necessario sottrarre a tutte e tre le variabili il valore di <code>90°</code>.</p>
+</span></span></code></pre></div><p>Fase 4: E&rsquo; necessario calcolare di quanti gradi deve essere spostata la lancetta delle ore quando si passa da un&rsquo;ora alla successiva, tenendo presente che la circonferenza è di 360 gradi e sul quadrante dell&rsquo;orologio sono presenti 12 ore. Il calcolo può essere salvato in una nuova variabile <code>gradiDeltaOre</code> da dichiarare. Un calcolo simile deve essere fatto per i minuti ed i secondi, per cui saranno necessarie anche le variabili <code>gradiDeltaMinuti</code> e <code>gradiDeltaSecondi</code>;</p>
+<p><img src="/static/coding/web/p5js/progettoOrologio-proporzione.png" alt="p5.js - rapporto ore - proporzione" title="p5.js - rapporto ore - proporzione"></p>
+<p>Calcolato lo spostamento in gradi per ogni ora, è necessario calcolare lo spostamento per il numero di ore indicato dal sistema (e già memorizzato nella variabile <code>h</code>). A <code>3</code> ore corrisponde uno spostamento di tre volte il valore di <code>gradiDeltaOre</code>, a 5 ore corrisponde uno spostamento di cinque volte il valore di <code>gradiDeltaOre</code> e cosi via. Un calcolo simile deve essere fatto per i minuti ed i secondi. Sarà quindi necessario dichiarare le variabili <code>hGradi</code>, <code>mGradi</code> e <code>sGradi</code> per memorizzare questo calcolo.</p>
+<p><img src="/static/coding/web/p5js/progettoOrologio-spostamento.png" alt="p5.js - rapporto ore - spostamento" title="p5.js - rapporto ore - spostamento"></p>
+<p>E&rsquo; necessario infine ricordare che le lancette partono dalle ore <code>12</code> e procedono in senso orario, mentre gli angoli in <code>p5.js</code> si misurano prendendo come riferimento l&rsquo;angolo <code>0°</code> (che si trova quando la lancetta si posa sul numero <code>3</code> del quadrante) ed effettuando una rotazione in senso orario. Per creare la corrispondenza tra le ore e gli angoli, è necessario effettuare una correzione di un angolo retto, sottraendo alle variabili <code>hGradi</code>, <code>mGradi</code> e <code>sGradi</code> il valore di <code>90°</code> (come a dire la lancetta delle <code>3</code> si riporta indietro di <code>90°</code> e quindi si trova sulle ore <code>12</code> e da questa lancetta si inizia a misurare l&rsquo;angolo).</p>
 <p>Fase 5: dichiarare tre variabili <code>rh</code>, <code>rm</code> e <code>rs</code>, che rappresentano la lunghezza della lancetta delle ore, dei minuti e dei secondi. Per ognuna scegliere un valore tale che <code>rh &lt; rm &lt; rs</code>.</p>
 <p>Fase 6: disegnare la lancetta delle ore che ha il punto di origine nel centro del quadrante <code>x, y</code> ed il punto di fine in posizione:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">pXFineLancettaOre</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">rh</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">hGradi</span>)
