@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/tools/virtualbox/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="tools" />
 <meta property="article:published_time" content="2020-03-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-09T00:00:00+00:00" />
 
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
@@ -24,6 +24,8 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
     
 
     <link rel="icon" href="/favicon.ico">
@@ -132,7 +134,7 @@
       color: white;
     }
     .my_navbar li {
-      padding: 15px 30px;
+      padding: 0.8rem 1.5rem;
       list-style: none;
       text-transform: uppercase;
       justify-content: center;
@@ -220,53 +222,58 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-15T00:00:00Z">15-03-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-15T00:00:00Z">15-03-2020</time>
+	<time class="meta__text" datetime="2023-08-09T00:00:00Z">(Ultima modifica: 09-08-2023)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">tools</a>
 	</span>
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
         Tempo di lettura 4 minuti 
-        ( 721 parole)
+        ( 743 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="virtualbox">VirtualBox</h1>
 <p>VirtualBox è uno software open-source per la gestione di macchine virtuali.</p>
-<p>All&rsquo;avvio si presenta con un&rsquo;interfaccia molto semplice, che permette di gestire le preferenze, l&rsquo;importazione, l&rsquo;esportazione, la creazione e l&rsquo;aggiunta di macchine virtuali.</p>
-<p><img src="/static/coding/tools/VirtualBox-Welcome.png" alt="VirtualBox - Welcome Page" title="VirtualBox - Welcome Page"></p>
+<p>All&rsquo;avvio si presenta con un&rsquo;interfaccia molto semplice, che permette di gestire le preferenze, l&rsquo;importazione, l&rsquo;esportazione, la creazione e l&rsquo;aggiunta di macchine virtuali. Di seguito un&rsquo;immagine con il menù &ldquo;Strumenti&rdquo; visibile:</p>
+<p><img src="/static/coding/tools/VirtualBox7-welcome.png" alt="VirtualBox - Welcome Page" title="VirtualBox - Welcome Page"></p>
+<h2 id="configurazione-tasto-host">Configurazione Tasto HOST</h2>
 <p>La prima cosa da fare all&rsquo;avvio consiste nel configurare il tasto &ldquo;HOST&rdquo;, utilizzato durante l&rsquo;esecuzione dalle macchine virtuali per l&rsquo;acquisizione ed il rilascio di tastiera e mouse. Nel menù &ldquo;File&rdquo;, cliccando la voce &ldquo;Preferenze&rdquo; e poi scegliendo la sezione &ldquo;Immissione&rdquo; si può selezionare la combinazione di tasti per simulare la pressione del tasto &ldquo;HOST&rdquo;.</p>
 <p><img src="/static/coding/tools/VirtualBox-Config-Host-key.png" alt="VirtualBox - Configurazione tasto Host" title="VirtualBox - Configurazione tasto Host"></p>
+<p>E&rsquo; utile memorizzare o scrivere la combinazione di tasti scelta per il tasto HOST, dato che quando si avvia una macchina virtuale e questa acquisisce le periferiche di input (mouse e tastiera), per rilasciarle è necessario premere il tasto HOST (la combinazione di tasti scelta).</p>
+<h2 id="creazione-guidata-nuova-macchina-virtuale">Creazione guidata nuova macchina virtuale</h2>
 <p>Il processo di creazione di una macchina virtuale è molto semplice, è necessario inserire un nome per la macchina virtuale, indicare in quale cartella salvarla, selezionare il tipo di macchina virtuale ed il sistema operativo che deve ospitare:</p>
-<p><img src="/static/coding/tools/VirtualBox-NewVM-Step1.png" alt="VirtualBox - Creazione Virtual Machine - passo 1" title="VirtualBox - Creazione Virtual Machine - passo 1"></p>
+<p><img src="/static/coding/tools/VirtualBox7-NewVM-step1.png" alt="VirtualBox - Creazione macchina virtuale - passo 1" title="VirtualBox - Creazione macchina virtuale - passo 1"></p>
 <p>Il passo successivo richiede la selezione della quantità di memoria che la macchina ospitante può dedicare alla macchina virtuale:</p>
-<p><img src="/static/coding/tools/VirtualBox-NewVM-Step2.png" alt="VirtualBox - Creazione Virtual Machine - passo 2" title="VirtualBox - Creazione Virtual Machine - passo 2"></p>
-<p>Il terzo passo richiede la creazione di un nuovo disco fisso o la selezione di un disco fisso esistente per la macchina virtuale:</p>
-<p><img src="/static/coding/tools/VirtualBox-NewVM-Step3.png" alt="VirtualBox - Creazione Virtual Machine - passo 3" title="VirtualBox - Creazione Virtual Machine - passo 3"></p>
-<p>Il quarto passo richiede la scelta della dimensione del disco fisso e il percorso in cui salvarlo. E&rsquo; necessario scegliere anche il tipo di formato con cui salvare il disco fisso, ma questa scelta dipende dal tipo di software che vogliamo usare per leggere questo disco fisso.
-Nel caso si usino più programmi per la gestione di macchine virtuali, allora la scelta deve ricadere su un formato compatibile per tutti, in modo da poter leggere il disco virtuale da una qualsiasi macchina virtuale eseguita da un qualsiasi programma di gestione.
-La scelta dell&rsquo;allocazione dinamica è utile quando si vuole che il disco fisso, posizionato al percorso specificato, sia archiviato man mano che il disco della macchina virtuale si riempie. L&rsquo;alternativa è creare subito un file della dimensione indicata, anche se il disco fisso della macchina virtuale è vuoto o occupa una quantità inferiore di spazio, e quindi si sceglie di utilizzare inutilmente spazio sul disco della macchina ospitante.</p>
-<p><img src="/static/coding/tools/VirtualBox-NewVM-Step4.png" alt="VirtualBox - Creazione Virtual Machine - passo 4" title="VirtualBox - Creazione Virtual Machine - passo 4"></p>
-<p>Al termine di tutti questi passi, Cliccando su pulsante &ldquo;crea&rdquo; la macchina virtuale viene creata.
-In realtà, al passo 1, cliccando su modalità esperta, si potevano inserire tutte queste informazioni in un&rsquo;unica volta:</p>
-<p><img src="/static/coding/tools/VirtualBox-NewVM-StepExpert.png" alt="VirtualBox - Creazione Virtual Machine - modalità esperto" title="VirtualBox - Creazione Virtual Machine - modalità esperto"></p>
+<p><img src="/static/coding/tools/VirtualBox7-NewVM-step2.png" alt="VirtualBox - Creazione macchina virtuale - passo 2" title="VirtualBox - Creazione macchina virtuale - passo 2"></p>
+<p>Il terzo passo richiede la creazione di un nuovo disco fisso o la selezione di un disco fisso esistente per la macchina virtuale. La scelta dell&rsquo;allocazione dinamica è utile quando si vuole che il file rappresentante il disco fisso sia scritto man mano che il disco della macchina virtuale si riempie. L&rsquo;alternativa è creare subito un file della dimensione indicata, anche se il disco fisso della macchina virtuale è vuoto o occupa una quantità inferiore di spazio, utilizzando inutilmente spazio sul disco della macchina ospitante:</p>
+<p><img src="/static/coding/tools/VirtualBox7-NewVM-step3.png" alt="VirtualBox - Creazione macchina virtuale - passo 3" title="VirtualBox - Creazione macchina virtuale - passo 3"></p>
+<p>Al termine di tutti questi passi, viene mostrato un riepilogo della macchina virtuale che sarà creata:</p>
+<p><img src="/static/coding/tools/VirtualBox7-NewVM-step4.png" alt="VirtualBox - Creazione macchina virtuale - passo 4" title="VirtualBox - Creazione macchina virtuale - passo 4"></p>
+<h2 id="creazione-nuova-macchina-virtuale-in-modalità-esperta">Creazione nuova macchina virtuale in modalità esperta</h2>
+<p>La creazione di una macchina virtuale in modalità esperta permette di inserire tutte le informazioni della macchina virtuale in un&rsquo;unica volta.</p>
+<p>In questa modalità è possibile scegliere il percorso ed il tipo di formato con cui salvare il disco fisso, scelta che dipende dai programmi utilizzati per la gestione di macchine virtuali.</p>
+<p>Nel caso il disco debba essere utilizzato da più software per la gestione dei dischi virtuali, allora la scelta deve ricadere su un formato compatibile.</p>
+<p><img src="/static/coding/tools/VirtualBox7-NewVM-step-expert.png" alt="VirtualBox - Creazione macchina virtuale - modalità esperto" title="VirtualBox - Creazione macchina virtuale - modalità esperto"></p>
+<h2 id="creazione-macchina-virtuale-da-immagine-iso">Creazione macchina virtuale da immagine ISO</h2>
+<p>Si può creare una macchina virtuale a partire da un&rsquo;immagine ISO. In questo caso, si può anche procedere ad un&rsquo;istallazione supervisionata, ovvero automatica, senza necessità dell&rsquo;intervento dell&rsquo;utente.</p>
+<p><img src="/static/coding/tools/VirtualBox7-NewVmFromISO-expert.png" alt="VirtualBox - Creazione macchina virtuale da immagine ISO" title="VirtualBox - Creazione macchina virtuale da immagine ISO"></p>
+<h2 id="descrizione-macchina-virtuale">Descrizione macchina virtuale</h2>
 <p>Nella schermata principale vengono quindi visualizzate le varie macchine virtuali, tra cui quella appena creata. Cliccando su una macchina virtuale vengono visualizzati i dettagli, dalle informazioni generali a quelle software a quelle delle varie (virtualizzate) componenti hardware. Troviamo quindi informazioni sul sistema, sulle componenti audio, video e di rete, sui dispositivi di archiviazione e sulle cartelle condivise con il sistema ospitante.</p>
-<p><img src="/static/coding/tools/VirtualBox-NewVM-Created.png" alt="VirtualBox - Virtual Machine creata" title="VirtualBox - Virtual Machine creata"></p>
+<p>La macchina virtuale creata è visualizzata e descritta in dettaglio nella seguente immagine:</p>
+<p><img src="/static/coding/tools/VirtualBox7-NewVM-created.png" alt="VirtualBox - macchina virtuale creata" title="macchina virtuale creata"></p>
 <p>Le informazioni visualizzate sono modificabili. Cliccando su un&rsquo;opzione si apre la corrispondente finestra di dialogo per modificarla, mostrando le opzioni alternative o permettendo di modificare il valore presente.</p>
-<p>La macchina virtuale è stata creata, quindi le componenti hardware sono presenti (in forma virtuale). E&rsquo; necessario indicare il software, in particolare il Sistema Operativo da eseguire quando si avvia la macchina virtuale.</p>
-<p>E&rsquo; necessario prestare particolare attenzione in questa fase: nel caso si avvi la macchina virtuale senza scegliere l&rsquo;archivio contenente il sistema operativo, allora si otterrà l&rsquo;errore: &ldquo;No Bootable medium found&rdquo; che tradotto indica &ldquo;nessun dispositivo avviabile&rdquo;, cioè manca il sistema operativo e quindi la macchina virtuale non può avviarsi.</p>
+<h2 id="selezione-sistema-operativo">Selezione Sistema Operativo</h2>
+<p>Creata la macchina virtuale, è necessario indicare il software, in particolare il Sistema Operativo da eseguire quando si avvia la macchina virtuale.</p>
+<p>E&rsquo; necessario prestare particolare attenzione in questa fase: nel caso si avvi la macchina virtuale senza scegliere il sistema operativo, allora si otterrà l&rsquo;errore: &ldquo;No Bootable medium found&rdquo; che tradotto indica &ldquo;nessun dispositivo avviabile&rdquo;, cioè manca il sistema operativo.</p>
 <p><img src="/static/coding/tools/VirtualBox-VM-StartError.png" alt="VirtualBox - Avvio Virtual Machine errato" title="VirtualBox - Avvio Virtual Machine errato"></p>
-<p>E&rsquo; necessario configurare la macchina virtuale per avviare il Sistema Operativo:</p>
-<ul>
-<li>se il sistema operativo è stato masterizzato su CD-ROM, si clicca nella sezione &ldquo;Archiviazione&rdquo; sul controller IDE / ATA e si seleziona l&rsquo;avvio dal lettore ottico della macchina ospitante (host);</li>
-<li>se il sistema operativo è stato scaricato e salvato sul disco fisso, allora è necessario cliccare nella sezione &ldquo;Archiviazione&rdquo; sul controller IDE / ATA e selezionare la voce &ldquo;Scegli un file dal disco&rdquo; e quindi indicare il percorso in cui si trova il file contenente il sistema operativo scaricato;</li>
-</ul>
-<p><img src="/static/coding/tools/VirtualBox-VM-StartFromCdOrISO.png" alt="VirtualBox - Avvio Virtual Machine da CD" title="VirtualBox - Avvio Virtual Machine da CD"></p>
-<p><img src="/static/coding/tools/VirtualBox-VM-StartFromCdOrISO2.png" alt="VirtualBox - Avvio Virtual Machine da CD" title="VirtualBox - Avvio Virtual Machine da CD"></p>
+<p>E&rsquo; necessario configurare la macchina virtuale per avviare il Sistema Operativo, navigando nella sezione &ldquo;Archiviazione&rdquo; e cliccando sul controller IDE / ATA. Si può scegliere di utilizzare il lettore ottico della macchina ospitante (host), si può utilizzare un&rsquo;immagine ISO o utilizzare un disco virtuale esistente.</p>
+<p><img src="/static/coding/tools/VirtualBox7-SelectSO.png" alt="VirtualBox - Selezione Sistema Operativo" title="VirtualBox - Selezione Sistema Operativo"></p>
 <p>Configurato correttamente il sistema operativo, la macchina virtuale si avvia, il sistema operativo viene eseguito e quindi l&rsquo;utente può interagirvi:</p>
-<p><img src="/static/coding/tools/VirtualBox-VM-Start.png" alt="VirtualBox - Avvio Virtual Machine" title="VirtualBox - Avvio Virtual Machine"></p>
-<p>Cliccando sulla macchina virtuale, viene fornita l&rsquo;indicazione che il puntatore del mouse non sarà più disponibile nella macchina ospitante perché sarà catturato dalla macchina virtuale. Per riaverlo disponibile, è necessario premere la combinazione di tasti indicata dal messaggio:</p>
-<p><img src="/static/coding/tools/VirtualBox-VM-StartCatchPointer.png" alt="VirtualBox - Cattura del puntatore del mouse" title="VirtualBox - Cattura del puntatore del mouse"></p>
+<p><img src="/static/coding/tools/VirtualBox7-VM-start.png" alt="VirtualBox - Avvio Virtual Machine" title="VirtualBox - Avvio Virtual Machine"></p>
+<p>Cliccando sulla macchina virtuale, viene fornita l&rsquo;indicazione che il puntatore del mouse non sarà più disponibile nella macchina ospitante perché sarà catturato dalla macchina virtuale. Per riaverlo disponibile, è necessario premere il tasto HOST, ovvero la combinazione di tasti indicata dal messaggio:</p>
+<p><img src="/static/coding/tools/VirtualBox7-VM-StartCatchPointer.png" alt="VirtualBox - Cattura del puntatore del mouse" title="VirtualBox - Cattura del puntatore del mouse"></p>
 <p>Alla chiusura della macchina virtuale viene chiesto se:</p>
 <ul>
 <li>spegnere la macchina, quindi il sistema operativo termina l&rsquo;esecuzione.</li>
@@ -277,8 +284,6 @@ In realtà, al passo 1, cliccando su modalità esperta, si potevano inserire tut
     </div>
   </article>
 </main>
-
-
 
 
 
