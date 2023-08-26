@@ -240,15 +240,15 @@
 <h2 id="installazione-di-gradle-su-windows">Installazione di Gradle su Windows</h2>
 <p>Gradle è un software Java.</p>
 <p>L&rsquo;ambiente di esecuzione di Java è la Java Virtual Machine, di solito è installata su buona parte dei computer. Per verificare che sia già installata è possibile lanciare il comando <code>java --version</code>. Se viene indicata la versione, allora la JVM è correttamente installato.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java --version
-</span></span><span style="display:flex;"><span>java version <span style="color:#e6db74">&#34;17.0.6+10&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java --version
+</span></span><span style="display:flex;"><span>java version <span style="color:#009c00">&#34;17.0.6+10&#34;</span>
 </span></span></code></pre></div><p>L&rsquo;ambiente di sviluppo di Java è il Java Development Kit, per verificare che la Java Development Kit sia installata correttamente, da linea di comando è possibile lanciare il comando <code>javac -version</code>. Se viene indicata la versione, allora il Java Development Kit è correttamente installato.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>javac -version
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>javac -version
 </span></span><span style="display:flex;"><span>javac 17.0.6
 </span></span></code></pre></div><p>Se il Java Development Kit non è installato, lo si può scaricare ed installare dal sito <a href="https://adoptium.net/">https://adoptium.net/</a></p>
 <p>Una volta installato il Java Development Kit, si può proseguire nell&rsquo;installazione di Gradle.</p>
 <p>Per installare Gradle dal gestore pacchetti Choco, si può eseguire il comando da powershell:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>choco install gradle
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>choco install gradle
 </span></span></code></pre></div><!--
 
 winget-cli non è supportato ancora
@@ -283,9 +283,9 @@ winget-cli install gradle
 <h2 id="gestione-progetto-con-gradle">Gestione progetto con Gradle</h2>
 <h3 id="creazione-progetto-java">Creazione progetto Java</h3>
 <p>Il comando da utilizzare per creare un nuovo progetto è:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradle init
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradle init
 </span></span></code></pre></div><p>Attraverso una procedura guidata, all&rsquo;utente vengono chieste le opzioni sulle quali creare un progetto:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Select type of project to generate:
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Select type of project to generate:
 </span></span><span style="display:flex;"><span>  1: basic
 </span></span><span style="display:flex;"><span>  2: application
 </span></span><span style="display:flex;"><span>  3: library
@@ -327,32 +327,32 @@ winget-cli install gradle
 <li>aggiornare manualmente la voce <code>distributionUrl</code> presente nel file <code>gradle/wrapper/gradle-wrapper.properties</code>;</li>
 <li>ricreare il &ldquo;wrapper&rdquo; presente nel progetto, specificando la versione di Gradle desiderata, utilizzando il comando:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./gradlew wrapper --gradle-version 6.8.3
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./gradlew wrapper --gradle-version 6.8.3
 </span></span></code></pre></div><h3 id="primi-task">Primi task</h3>
 <p>Creato il progetto, è possibile eseguire, nella cartella principale di progetto, i seguenti task (utilizzando il wrapper di gradle):</p>
 <ul>
 <li>Task di pulizia (cancella la cartella <code>build</code>):</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  gradlew clean
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  gradlew clean
 </span></span></code></pre></div><ul>
 <li>Task di compilazione dei sorgenti Java, di creazione del pacchetto &ldquo;jar&rdquo; e di creazione dei pacchetti da distribuire:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  gradlew build
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  gradlew build
 </span></span></code></pre></div><ul>
 <li>Task di esecuzione dell&rsquo;applicazione Java:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  gradlew run
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  gradlew run
 </span></span></code></pre></div><ul>
 <li>Task per la generezione della documentazione dei sorgenti:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  gradlew javadoc
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  gradlew javadoc
 </span></span></code></pre></div><p>Si possono anche eseguire più task con un singolo comando. Per pulire la cartella di &ldquo;lavoro&rdquo; <code>build</code>, eseguire la compilazione, creare i pacchetti da distribuire ed eseguire l&rsquo;applicazione, è possibile, sempre nella cartella principale di progetto, eseguire il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew clean build javadoc run
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew clean build javadoc run
 </span></span></code></pre></div><p>Tutti i file prodotti vengono memorizzati nella cartella <code>build</code>.</p>
 <p>Per una descrizione più dettagliata dei task da utilizzare in un progetto Java, si rimanda ai capitoli successivi.</p>
 <h3 id="struttura-progetto">Struttura progetto</h3>
 <p>I file creati in un progetto Gradle sono i seguenti:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>example
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>example
 </span></span><span style="display:flex;"><span>├── build.gradle
 </span></span><span style="display:flex;"><span>├── gradle
 </span></span><span style="display:flex;"><span>│   └── wrapper
@@ -406,17 +406,17 @@ winget-cli install gradle
 <p>Ogni plugin fornisce determinate funzionalità, come la pulizia del progetto, l&rsquo;integrazione di tools, la gestione dei reports, la pubblicazione su portali esterni, e così via. Ad esempio, il plugin <code>java</code> fornisce le funzionalità tipiche di un progetto Java, come la compilazione, la creazione di un pacchetto jar, e cosi via.</p>
 <p>E&rsquo; possibile aggiungere più plugin allo stesso progetto.</p>
 <p>Una volta scelti i plugin <strong>core</strong> adatti al progetto, questi devono essere specificati nel file <code>build.gradle</code>, includendoli nella sezione <code>plugins</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;nome_plugin_core&#39;</span><span style="color:#f92672">,</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;nome_altro_plugin_core&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;nome_plugin_core&#39;</span>,
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;nome_altro_plugin_core&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>I plugin non core, scelti quindi dal portale, devono essere indicati inserendo nome e versione, come da esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;nome_plugin_core&#39;</span><span style="color:#f92672">,</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;nome_altro_plugin_core&#39;</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;plugin_non_core&#39;</span> version <span style="color:#e6db74">&#39;0.4.1&#39;</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;altro_plugin_non_core&#39;</span> version <span style="color:#e6db74">&#39;1.2.1&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;nome_plugin_core&#39;</span>,
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;nome_altro_plugin_core&#39;</span>
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;plugin_non_core&#39;</span> version <span style="color:#009c00">&#39;0.4.1&#39;</span>
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;altro_plugin_non_core&#39;</span> version <span style="color:#009c00">&#39;1.2.1&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Alcuni plugin &ldquo;core&rdquo; meritano di essere menzionati:</p>
 <ul>
 <li>
@@ -426,21 +426,21 @@ winget-cli install gradle
 <p>Il Base Plugin permette la pulizia e la pacchettizzazione del progetto. Fornisce i vari task quali <code>clean</code> e <code>build</code>. Deve essere configurato nell&rsquo;apposita sezione:</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      id <span style="color:#e6db74">&#39;base&#39;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  plugins {
+</span></span><span style="display:flex;"><span>      id <span style="color:#009c00">&#39;base&#39;</span>
+</span></span><span style="display:flex;"><span>  }
 </span></span></code></pre></div><ul>
 <li>Il Project Report Plugin abilita funzionalità basilari per la gestione dei report di progetto. Fornisce il task <code>projectReport</code>. Deve essere configurato nell&rsquo;apposita sezione:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      id <span style="color:#e6db74">&#39;project-report&#39;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  plugins {
+</span></span><span style="display:flex;"><span>      id <span style="color:#009c00">&#39;project-report&#39;</span>
+</span></span><span style="display:flex;"><span>  }
 </span></span></code></pre></div><h3 id="task">Task</h3>
 <p>I task sono le azioni che è possibile effettuare su un progetto. Ogni plugin importato rende disponibili nuovi <code>task</code> sul progetto, anche se è sempre possibile crearne dei nuovi.</p>
 <p>Per visualizzare una lista di task disponibili in un progetto, dalla cartella principale del progetto è necessario lanciare:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew tasks
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew tasks
 </span></span></code></pre></div><p>Dato che molti task sono importati specificando un plugin, se non fosse presente l&rsquo;indicazione del plugin, Gradle utilizzerebbe il plugin di <code>init</code>. In questo caso, utilizzando il comando <code>gradlew tasks</code> per visualizzare i task disponibili sul progetto, si otterrebbe il seguente elenco:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>gradlew tasks
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>gradlew tasks
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Build Setup tasks
 </span></span><span style="display:flex;"><span>-----------------
@@ -453,23 +453,23 @@ winget-cli install gradle
 </span></span><span style="display:flex;"><span>tasks - Displays the tasks runnable from root project &#39;example&#39;.
 </span></span><span style="display:flex;"><span>...
 </span></span></code></pre></div><p>Per eseguire dei task, dalla cartella principale del progetto è necessario eseguire il comando <code>gradlew</code> passando i vari task come parametri:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew task1 task2 task3
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew task1 task2 task3
 </span></span></code></pre></div><p>E&rsquo; possibile crearne di personalizzati, aggiungendoli al file <code>build.gradle</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>task<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    doLast <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        println <span style="color:#e6db74">&#34;Hello world!&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>task(<span style="color:#009c00">&#39;hello&#39;</span>) {
+</span></span><span style="display:flex;"><span>    doLast {
+</span></span><span style="display:flex;"><span>        println <span style="color:#009c00">&#34;Hello world!&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Per eseguire il task creato, è necessario eseguire il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew hello
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew hello
 </span></span></code></pre></div><p>L&rsquo;output del comando è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Hello world!
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Hello world!
 </span></span></code></pre></div><p>Oltre ai task personalizzati aggiunti al progetto, è possibile comunque invocare i task messi a disposizione dai plugin configurati nel progetto.</p>
 <p>Gradle non esegue i task secondo l&rsquo;ordine presente sulla linea di comando, ma crea un proprio piano di esecuzione dei task. Per visualizzarlo, è necessario aggiungere il flag <code>--dry-run</code> alla linea di comando.</p>
 <p>Ad esempio, per visualizzare il piano di esecuzione dei task per il comando <code>build</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew build --dry-run
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew build --dry-run
 </span></span></code></pre></div><p>L&rsquo;output prodotto, per un progetto Java, è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>:compileJava SKIPPED
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>:compileJava SKIPPED
 </span></span><span style="display:flex;"><span>:processResources SKIPPED
 </span></span><span style="display:flex;"><span>:classes SKIPPED
 </span></span><span style="display:flex;"><span>:jar SKIPPED
@@ -502,22 +502,22 @@ winget-cli install gradle
 <ul>
 <li>dipendenza da moduli (pubblicati sui repository, tipo Maven Central o Ivy). Si può usare nella seguente forma:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  dependencies <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      nomeConfigurazione: <span style="color:#e6db74">&#39;org.hibernate:hibernate:3.0.5&#39;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  dependencies {
+</span></span><span style="display:flex;"><span>      nomeConfigurazione: <span style="color:#009c00">&#39;org.hibernate:hibernate:3.0.5&#39;</span>
+</span></span><span style="display:flex;"><span>  }
 </span></span></code></pre></div><ul>
 <li>dipendenza da file presenti su disco. Si può usare nella seguente forma:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  dependencies <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      nomeConfigurazione: files<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;libs/lang.jar&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;libs/log4j.jar&#39;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>      nomeConfigurazione: fileTree<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;tools&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> include <span style="color:#e6db74">&#39;*.exe&#39;</span> <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  dependencies {
+</span></span><span style="display:flex;"><span>      nomeConfigurazione: files(<span style="color:#009c00">&#39;libs/lang.jar&#39;</span>, <span style="color:#009c00">&#39;libs/log4j.jar&#39;</span>)
+</span></span><span style="display:flex;"><span>      nomeConfigurazione: fileTree(<span style="color:#009c00">&#39;tools&#39;</span>) { include <span style="color:#009c00">&#39;*.exe&#39;</span> }
+</span></span><span style="display:flex;"><span>  }
 </span></span></code></pre></div><ul>
 <li>dipendenza tra progetti, da usare nella seguente forma:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  dependencies <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      nomeConfigurazione <span style="color:#a6e22e">project</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:shared&#39;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>  dependencies {
+</span></span><span style="display:flex;"><span>      nomeConfigurazione <span style="color:#c34e00">project</span>(<span style="color:#009c00">&#39;:shared&#39;</span>)
+</span></span><span style="display:flex;"><span>  }
 </span></span></code></pre></div><p>Un concetto chiave sul quale Gradle basa la risoluzione delle dipendenze è la prospettiva con cui il produttore ed il consumatore vedono il progetto.</p>
 <p>La prospettiva del produttore è quella di chi si occupa di costruire il progetto e quindi fa uso di tutte le librerie necessarie per la compilazione, l&rsquo;esecuzione ed i test.</p>
 <p>La prospettiva del consumatore invece è quella di usare un progetto o una libreria come dipendenza, in modo tale da poter compilare o eseguire il suo prodotto.</p>
@@ -532,24 +532,24 @@ winget-cli install gradle
 </ul>
 <p>Il motivo per cui una dipendenza deve essere visibile al consumatore è che un&rsquo;interfaccia o una classe del proprio progetto rendono visibile  al consumatore una classe, un&rsquo;istanza o un oggetto definito all&rsquo;interno della dipendenza stessa.</p>
 <p>Un esempio d&rsquo;uso delle dipendenze quindi può essere il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>dependencies <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    api <span style="color:#e6db74">&#39;org.apache.httpcomponents:httpclient:4.5.7&#39;</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;org.apache.commons:commons-lang3:3.5&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>dependencies {
+</span></span><span style="display:flex;"><span>    api <span style="color:#009c00">&#39;org.apache.httpcomponents:httpclient:4.5.7&#39;</span>
+</span></span><span style="display:flex;"><span>    implementation <span style="color:#009c00">&#39;org.apache.commons:commons-lang3:3.5&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Supponendo di avere le dipendenze appena citate nel nostro progetto personale, se dovessimo esponesse una firma del tipo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getResponseCode</span><span style="color:#f92672">(</span>HttpResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ClientProtocolException <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">    </span><span style="color:#f92672">...</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#00f">int</span> <span style="color:#c34e00">getResponseCode</span>(HttpResponse response) <span style="color:#00f">throws</span> ClientProtocolException {
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>allora il consumatore che utilizza il nostro progetto riuscirebbe a compilare ed eseguire il suo progetto perchè la libreria <code>httpclient</code> è visibile e quindi gli oggetti <code>HttpResponse</code> e <code>ClientProtocolException</code> sarebbero riconducibili alla libreria <code>httpclient</code>.</p>
 <p>Se invece, ancora facendo riferimento all&rsquo;esempio corrente, dovessimo esporre una firma del tipo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getCode</span><span style="color:#f92672">(</span>BitField bitField<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ContextedException <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#00f">int</span> <span style="color:#c34e00">getCode</span>(BitField bitField) <span style="color:#00f">throws</span> ContextedException {
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>allora il consumatore che utilizza il nostro progetto riscontrerebbe errori di compilazione ed esecuzione dato che la libreria <code>commons-lang3</code> non è visibile al consumatore e quindi gli oggetti <code>BitField</code> e  <code>ContextedException</code> sarebbero sconosciuti.</p>
 <p>Per visualizzare le dipendenze di tutte le configurazioni:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew -q dependencies
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew -q dependencies
 </span></span></code></pre></div><p>Per visualizzare le dipendenze di una singola configurazione</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew -q dependencies --configuration api
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gradlew -q dependencies --configuration api
 </span></span></code></pre></div><h2 id="scelta-ed-uso-dei-plugin-per-lambiente-java">Scelta ed uso dei plugin per l&rsquo;ambiente Java</h2>
 <h3 id="plugin-per-java">Plugin per Java</h3>
 <p>Per configurare il progetto come &ldquo;progetto Java&rdquo;, bisogna aggiungere uno dei plugin Java messi a disposizione da Gradle . In questo modo Gradle viene configurato per l&rsquo;uso di tutti i task e di tutte le configurazioni relativi alla compilazione del codice Java, come visto nei capitoli precedenti.</p>
@@ -654,16 +654,16 @@ winget-cli install gradle
 <p>la lista di parametri da utilizzare quando si esegue l&rsquo;applicazione;</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;application&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;application&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>applicationName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;my-app&#39;</span>
+</span></span><span style="display:flex;"><span>applicationName = <span style="color:#009c00">&#39;my-app&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>application <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    mainClass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;org.gradle.sample.Main&#39;</span>
-</span></span><span style="display:flex;"><span>    applicationDefaultJvmArgs <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;-Dlanguage=en&#39;</span><span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>application {
+</span></span><span style="display:flex;"><span>    mainClass = <span style="color:#009c00">&#39;org.gradle.sample.Main&#39;</span>
+</span></span><span style="display:flex;"><span>    applicationDefaultJvmArgs = [<span style="color:#009c00">&#39;-Dlanguage=en&#39;</span>]
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Le configurazioni di dipendenza di questo plugin sono ereditate dal plugin <code>java</code>.</p>
 <h3 id="plugin-java-library">Plugin <code>java-library</code></h3>
 <p>Il plugin <code>java-library</code> estende il plugin <code>java</code> e serve a facilitare la creazione di una libreria che deve essere &ldquo;consumata&rdquo; da altre applicazioni.</p>
@@ -678,9 +678,9 @@ winget-cli install gradle
 </li>
 </ul>
 <p>La configurazione del proprio progetto per l&rsquo;uso del plugin prevede la sola dichiarazione del plugin:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;java-library&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;java-library&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="plugin-war">Plugin <code>war</code></h3>
 <p>Il plugin <code>war</code> estende il plugin <code>java</code> e serve a facilitare la creazione di un&rsquo;applicazione web. L&rsquo;applicazione viene impacchettata come file &ldquo;war&rdquo;, e la generazione del file &ldquo;jar&rdquo; (ereditata dal plugin <code>java</code>) viene disabilitata.</p>
 <p>I task che il plugin mette a disposizione sono:</p>
@@ -698,9 +698,9 @@ winget-cli install gradle
 </ul>
 <p>Queste due configurazioni rappresentano dipendenze che non saranno aggiunte al pacchetto &ldquo;war&rdquo;.</p>
 <p>La configurazione del proprio progetto per l&rsquo;uso del plugin prevede la sola dichiarazione del plugin:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;war&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;war&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="plugin-gretty">Plugin <code>gretty</code></h3>
 <p>Gretty è un plugin che serve ad automatizzare ulteriormente la gestione del progetto. Permette di scaricare automaticamente il server, di avviarlo, riavviarlo e stopparlo, ed ancora di effettuare il deploy dell&rsquo;applicazione web sul server.</p>
 <p>I task che il plugin mette a disposizione sono molteplici, ma gli essenziali sono:</p>
@@ -710,18 +710,18 @@ winget-cli install gradle
 </ul>
 <p>Questo plugin non prevede configurazioni di dipendenza.</p>
 <p>La configurazione del proprio progetto per l&rsquo;uso del plugin prevede la dichiarazione del plugin e la scelta delle opzioni relative al server:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;org.gretty&#39;</span> version <span style="color:#e6db74">&#39;3.0.1&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;org.gretty&#39;</span> version <span style="color:#009c00">&#39;3.0.1&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>gretty <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    servletContainer <span style="color:#e6db74">&#39;jetty9.4&#39;</span>
-</span></span><span style="display:flex;"><span>    httpPort <span style="color:#ae81ff">8080</span>
-</span></span><span style="display:flex;"><span>    contextPath <span style="color:#e6db74">&#39;/web&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>gretty {
+</span></span><span style="display:flex;"><span>    servletContainer <span style="color:#009c00">&#39;jetty9.4&#39;</span>
+</span></span><span style="display:flex;"><span>    httpPort 8080
+</span></span><span style="display:flex;"><span>    contextPath <span style="color:#009c00">&#39;/web&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Una scelta opinabile riguarda il salvataggio dei log del server nella cartella &ldquo;home&rdquo; dell&rsquo;utente. Per cambiare tale scelta, si utilizzano le seguenti proprietà:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>    // logging configuration
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>    // logging configuration
 </span></span><span style="display:flex;"><span>    logDir &#34;${buildDir}/log&#34; // pay attention to double quote
 </span></span><span style="display:flex;"><span>    logFileName &#39;calcolatrice&#39;
 </span></span><span style="display:flex;"><span>    loggingLevel &#39;TRACE&#39;     // (loggingLevel &#39;ALL&#39;, &#39;DEBUG&#39;, &#39;ERROR&#39;, &#39;INFO&#39;, &#39;OFF&#39;, &#39;TRACE&#39;, &#39;WARN&#39;)
@@ -733,141 +733,141 @@ winget-cli install gradle
 <li><code>eclipse</code>: Crea i file <code>.project</code>, <code>.classpath</code> e <code>.settings/org.eclipse.jdt.core.prefs</code>.</li>
 </ul>
 <p>La configurazione del proprio progetto per l&rsquo;uso del plugin prevede la sola dichiarazione del plugin:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;eclipse-wtp&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    id <span style="color:#009c00">&#39;eclipse-wtp&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="esempio-completo-per-applicazioni-java">Esempio completo per applicazioni Java</h2>
 <p>Di seguito un esempio completo per la gestione di un&rsquo;applicazione Java con Gradle:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// add support for building a Java application.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;application&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// add support for generating project&#39;s reports.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;project-report&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// add support for Eclipse IDE.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;eclipse-wtp&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// add support for building a Java application.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    id <span style="color:#009c00">&#39;application&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// add support for generating project&#39;s reports.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    id <span style="color:#009c00">&#39;project-report&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// add support for Eclipse IDE.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    id <span style="color:#009c00">&#39;eclipse-wtp&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// all these tasks to execute by default.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// To get a complete list, run ./gradle run --dry-run
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>defaultTasks <span style="color:#e6db74">&#39;clean&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;compileJava&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;jar&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;assemble&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;compileTestJava&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;test&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;build&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;eclipse&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;javadoc&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;projectReport&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;run&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// all these tasks to execute by default.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// To get a complete list, run ./gradle run --dry-run
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>defaultTasks <span style="color:#009c00">&#39;clean&#39;</span>, <span style="color:#009c00">&#39;compileJava&#39;</span>, <span style="color:#009c00">&#39;jar&#39;</span>, <span style="color:#009c00">&#39;assemble&#39;</span>, <span style="color:#009c00">&#39;compileTestJava&#39;</span>, <span style="color:#009c00">&#39;test&#39;</span>, <span style="color:#009c00">&#39;build&#39;</span>, <span style="color:#009c00">&#39;eclipse&#39;</span>, <span style="color:#009c00">&#39;javadoc&#39;</span>, <span style="color:#009c00">&#39;projectReport&#39;</span>, <span style="color:#009c00">&#39;run&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>repositories <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Use jcenter for resolving dependencies.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// You can declare any Maven/Ivy/file repository here.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    jcenter<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>repositories {
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// Use jcenter for resolving dependencies.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#f00;font-style:italic">// You can declare any Maven/Ivy/file repository here.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    jcenter()
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>group <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;groupID&#39;</span>
-</span></span><span style="display:flex;"><span>version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0.1.0&#39;</span>
-</span></span><span style="display:flex;"><span>description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Java application&#34;</span>
+</span></span><span style="display:flex;"><span>group = <span style="color:#009c00">&#39;groupID&#39;</span>
+</span></span><span style="display:flex;"><span>version = <span style="color:#009c00">&#39;0.1.0&#39;</span>
+</span></span><span style="display:flex;"><span>description = <span style="color:#009c00">&#34;Java application&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>dependencies <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// These dependencies are NOT exported to consumers.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    implementation <span style="color:#e6db74">&#39;org.apache.commons:commons-math3:3.6.1&#39;</span>
+</span></span><span style="display:flex;"><span>dependencies {
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// These dependencies are NOT exported to consumers.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    implementation <span style="color:#009c00">&#39;org.apache.commons:commons-math3:3.6.1&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// This dependency is used by Gradle.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    implementation <span style="color:#e6db74">&#39;com.google.guava:guava:28.1-jre&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// This dependency is used by Gradle.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    implementation <span style="color:#009c00">&#39;com.google.guava:guava:28.1-jre&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// These dependencies are only used for unit test
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    testImplementation <span style="color:#e6db74">&#39;junit:junit:4.12&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// These dependencies are only used for unit test
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    testImplementation <span style="color:#009c00">&#39;junit:junit:4.12&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>jar <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    manifest <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        attributes<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Implementation-Title&#39;</span><span style="color:#f92672">:</span> project<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">,</span>
-</span></span><span style="display:flex;"><span>                   <span style="color:#e6db74">&#39;Implementation-Version&#39;</span><span style="color:#f92672">:</span> project<span style="color:#f92672">.</span><span style="color:#a6e22e">version</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>jar {
+</span></span><span style="display:flex;"><span>    manifest {
+</span></span><span style="display:flex;"><span>        attributes(<span style="color:#009c00">&#39;Implementation-Title&#39;</span>: project.name,
+</span></span><span style="display:flex;"><span>                   <span style="color:#009c00">&#39;Implementation-Version&#39;</span>: project.version)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>application <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Define the main class for the application.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    mainClass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;j2se.main.MainClass&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>application {
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// Define the main class for the application.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    mainClass = <span style="color:#009c00">&#39;j2se.main.MainClass&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Si nota che è stato aggiunto sia il plugin <code>application</code> per la gestione e l&rsquo;esecuzione di un progetto Java, sia il plugin <code>project-report</code> per la creazione dei report di progetto, sia il plugin <code>eclipse</code> per gestire il progetto con Eclipse IDE.</p>
 <p>E stata definita la lista (quasi completa) di task che si desidera vengano lanciati di default, sono state configurate delle voci da aggiungere al file <code>Manifest.mf</code> del pacchetto &ldquo;jar&rdquo; ed è indicata la classe Java che contiene il metodo &ldquo;main&rdquo; da eseguire per lanciare l&rsquo;applicazione.</p>
 <h2 id="esempio-completo-per-applicazioni-web-in-java">Esempio completo per applicazioni web in Java</h2>
 <p>Di seguito un esempio completo per la gestione di un&rsquo;applicazione web Java con Gradle:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// add support for building a Java application.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;war&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// add support for generating project&#39;s reports.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;project-report&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// add support for Eclipse IDE.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;eclipse-wtp&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// add support for managing the servlet containers.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    id <span style="color:#e6db74">&#39;org.gretty&#39;</span> version <span style="color:#e6db74">&#39;3.0.1&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// add support for building a Java application.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    id <span style="color:#009c00">&#39;war&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// add support for generating project&#39;s reports.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    id <span style="color:#009c00">&#39;project-report&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// add support for Eclipse IDE.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    id <span style="color:#009c00">&#39;eclipse-wtp&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// add support for managing the servlet containers.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    id <span style="color:#009c00">&#39;org.gretty&#39;</span> version <span style="color:#009c00">&#39;3.0.1&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// all these tasks to execute by default.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#75715e">// To get a complete list, run ./gradle run --dry-run
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>defaultTasks <span style="color:#e6db74">&#39;clean&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;war&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;eclipse&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;appStart&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// all these tasks to execute by default.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span> <span style="color:#f00;font-style:italic">// To get a complete list, run ./gradle run --dry-run
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>defaultTasks <span style="color:#009c00">&#39;clean&#39;</span>, <span style="color:#009c00">&#39;war&#39;</span>, <span style="color:#009c00">&#39;eclipse&#39;</span>, <span style="color:#009c00">&#39;appStart&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>repositories <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Use jcenter for resolving dependencies.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// You can declare any Maven/Ivy/file repository here.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    jcenter<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>repositories {
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// Use jcenter for resolving dependencies.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#f00;font-style:italic">// You can declare any Maven/Ivy/file repository here.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    jcenter()
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>group <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;j2ee&#39;</span>
-</span></span><span style="display:flex;"><span>version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0.1.0&#39;</span>
-</span></span><span style="display:flex;"><span>description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Applicazione web.&#34;</span>
+</span></span><span style="display:flex;"><span>group = <span style="color:#009c00">&#39;j2ee&#39;</span>
+</span></span><span style="display:flex;"><span>version = <span style="color:#009c00">&#39;0.1.0&#39;</span>
+</span></span><span style="display:flex;"><span>description = <span style="color:#009c00">&#34;Applicazione web.&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>dependencies <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;jstl:jstl:1.2&#39;</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;org.eclipse.jetty:jetty-annotations:9.4.20.v20190813&#39;</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;org.eclipse.jetty:jetty-servlets:9.4.20.v20190813&#39;</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;javax:javaee-api:8.0&#39;</span>
+</span></span><span style="display:flex;"><span>dependencies {
+</span></span><span style="display:flex;"><span>    implementation <span style="color:#009c00">&#39;jstl:jstl:1.2&#39;</span>
+</span></span><span style="display:flex;"><span>    implementation <span style="color:#009c00">&#39;org.eclipse.jetty:jetty-annotations:9.4.20.v20190813&#39;</span>
+</span></span><span style="display:flex;"><span>    implementation <span style="color:#009c00">&#39;org.eclipse.jetty:jetty-servlets:9.4.20.v20190813&#39;</span>
+</span></span><span style="display:flex;"><span>    implementation <span style="color:#009c00">&#39;javax:javaee-api:8.0&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// This dependency is used by the application.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    implementation <span style="color:#e6db74">&#39;com.google.guava:guava:28.1-jre&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// This dependency is used by the application.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    implementation <span style="color:#009c00">&#39;com.google.guava:guava:28.1-jre&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Use JUnit test framework
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    testImplementation <span style="color:#e6db74">&#39;junit:junit:4.12&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// Use JUnit test framework
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    testImplementation <span style="color:#009c00">&#39;junit:junit:4.12&#39;</span>
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>gretty <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    servletContainer <span style="color:#e6db74">&#39;jetty9.4&#39;</span>
-</span></span><span style="display:flex;"><span>    httpPort <span style="color:#ae81ff">8080</span>
-</span></span><span style="display:flex;"><span>    contextPath <span style="color:#e6db74">&#39;/web&#39;</span>
+</span></span><span style="display:flex;"><span>gretty {
+</span></span><span style="display:flex;"><span>    servletContainer <span style="color:#009c00">&#39;jetty9.4&#39;</span>
+</span></span><span style="display:flex;"><span>    httpPort 8080
+</span></span><span style="display:flex;"><span>    contextPath <span style="color:#009c00">&#39;/web&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// logging configuration
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    logDir <span style="color:#e6db74">&#34;${buildDir}/log&#34;</span> <span style="color:#75715e">// pay attention to double quote
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    logFileName <span style="color:#e6db74">&#39;calcolatrice&#39;</span>
-</span></span><span style="display:flex;"><span>    loggingLevel <span style="color:#e6db74">&#39;TRACE&#39;</span>     <span style="color:#75715e">// (loggingLevel &#39;ALL&#39;, &#39;DEBUG&#39;, &#39;ERROR&#39;, &#39;INFO&#39;, &#39;OFF&#39;, &#39;TRACE&#39;, &#39;WARN&#39;)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// logging configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    logDir <span style="color:#009c00">&#34;${buildDir}/log&#34;</span> <span style="color:#f00;font-style:italic">// pay attention to double quote
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    logFileName <span style="color:#009c00">&#39;calcolatrice&#39;</span>
+</span></span><span style="display:flex;"><span>    loggingLevel <span style="color:#009c00">&#39;TRACE&#39;</span>     <span style="color:#f00;font-style:italic">// (loggingLevel &#39;ALL&#39;, &#39;DEBUG&#39;, &#39;ERROR&#39;, &#39;INFO&#39;, &#39;OFF&#39;, &#39;TRACE&#39;, &#39;WARN&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Si nota che è stato aggiunto sia il plugin <code>war</code> per la gestione di un&rsquo;applicazione web in Java, sia il plugin <code>project-report</code> per la creazione dei report di progetto, sia il plugin <code>eclipse</code> per gestire il progetto con Eclipse IDE, sia il plugin <code>org.gretty</code> per la gestione del servletContainer.</p>
 <p>E stata definita la lista di task che si desidera vengano lanciati di default, sono state configurate le opzioni relative al server da avviare per deployare ed eseguire l&rsquo;applicazione.</p>
 <h3 id="esempio-di-file-srcmainwebappweb-infwebxml-per-chiamate-cors">Esempio di file src/main/webapp/WEB-INF/web.xml per chiamate CORS</h3>
 <p>Per abilitare le chiamate CORS (Cross-Origin resource sharing) sul server Jetty, è necessario aggiungere al progetto il seguente file di configurazione <code>src/main/webapp/WEB-INF/web.xml</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;web-app</span> <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://java.sun.com/xml/ns/javaee&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:web=</span><span style="color:#e6db74">&#34;http://java.sun.com/xml/ns/javaee&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://java.sun.com/xml/ns/javaee
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;3.0&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;filter&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;filter-name&gt;</span>cross-origin<span style="color:#f92672">&lt;/filter-name&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;filter-class&gt;</span>org.eclipse.jetty.servlets.CrossOriginFilter<span style="color:#f92672">&lt;/filter-class&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;init-param&gt;</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&lt;param-name&gt;</span>allowedOrigins<span style="color:#f92672">&lt;/param-name&gt;</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&lt;param-value&gt;</span>*<span style="color:#f92672">&lt;/param-value&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;/init-param&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;init-param&gt;</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&lt;param-name&gt;</span>allowedMethods<span style="color:#f92672">&lt;/param-name&gt;</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&lt;param-value&gt;</span>GET,POST,OPTIONS,DELETE,PUT,HEAD<span style="color:#f92672">&lt;/param-value&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;/init-param&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;init-param&gt;</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&lt;param-name&gt;</span>allowedHeaders<span style="color:#f92672">&lt;/param-name&gt;</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&lt;param-value&gt;</span>origin, content-type, accept, authorization<span style="color:#f92672">&lt;/param-value&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;/init-param&gt;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;/filter&gt;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;filter-mapping&gt;</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&lt;filter-name&gt;</span>cross-origin<span style="color:#f92672">&lt;/filter-name&gt;</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&lt;url-pattern&gt;</span>*<span style="color:#f92672">&lt;/url-pattern&gt;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;/filter-mapping&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/web-app&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;web-app xmlns:xsi=<span style="color:#009c00">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+</span></span><span style="display:flex;"><span>  xmlns=<span style="color:#009c00">&#34;http://java.sun.com/xml/ns/javaee&#34;</span>
+</span></span><span style="display:flex;"><span>  xmlns:web=<span style="color:#009c00">&#34;http://java.sun.com/xml/ns/javaee&#34;</span>
+</span></span><span style="display:flex;"><span>  xsi:schemaLocation=<span style="color:#009c00">&#34;http://java.sun.com/xml/ns/javaee
+</span></span></span><span style="display:flex;"><span><span style="color:#009c00">  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&#34;</span>
+</span></span><span style="display:flex;"><span>  version=<span style="color:#009c00">&#34;3.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;filter&gt;
+</span></span><span style="display:flex;"><span>     &lt;filter-name&gt;cross-origin&lt;/filter-name&gt;
+</span></span><span style="display:flex;"><span>     &lt;filter-class&gt;org.eclipse.jetty.servlets.CrossOriginFilter&lt;/filter-class&gt;
+</span></span><span style="display:flex;"><span>     &lt;init-param&gt;
+</span></span><span style="display:flex;"><span>         &lt;param-name&gt;allowedOrigins&lt;/param-name&gt;
+</span></span><span style="display:flex;"><span>         &lt;param-value&gt;*&lt;/param-value&gt;
+</span></span><span style="display:flex;"><span>     &lt;/init-param&gt;
+</span></span><span style="display:flex;"><span>     &lt;init-param&gt;
+</span></span><span style="display:flex;"><span>         &lt;param-name&gt;allowedMethods&lt;/param-name&gt;
+</span></span><span style="display:flex;"><span>         &lt;param-value&gt;GET,POST,OPTIONS,DELETE,PUT,HEAD&lt;/param-value&gt;
+</span></span><span style="display:flex;"><span>     &lt;/init-param&gt;
+</span></span><span style="display:flex;"><span>     &lt;init-param&gt;
+</span></span><span style="display:flex;"><span>         &lt;param-name&gt;allowedHeaders&lt;/param-name&gt;
+</span></span><span style="display:flex;"><span>         &lt;param-value&gt;origin, content-type, accept, authorization&lt;/param-value&gt;
+</span></span><span style="display:flex;"><span>     &lt;/init-param&gt;
+</span></span><span style="display:flex;"><span>   &lt;/filter&gt;
+</span></span><span style="display:flex;"><span>   &lt;filter-mapping&gt;
+</span></span><span style="display:flex;"><span>       &lt;filter-name&gt;cross-origin&lt;/filter-name&gt;
+</span></span><span style="display:flex;"><span>       &lt;url-pattern&gt;*&lt;/url-pattern&gt;
+</span></span><span style="display:flex;"><span>   &lt;/filter-mapping&gt;
+</span></span><span style="display:flex;"><span>&lt;/web-app&gt;
 </span></span></code></pre></div><p>Come si nota, il filtro <code>org.eclipse.jetty.servlets.CrossOriginFilter</code>, a cui è stato assegnato il nome <code>cross-origin</code>, abilita le richieste:</p>
 <ul>
 <li>effettuate attraverso HTTP <strong>GET, POST, OPTIONS, DELETE, PUT, HEAD</strong>, (come indicato in <code>allowedMethods</code>);</li>

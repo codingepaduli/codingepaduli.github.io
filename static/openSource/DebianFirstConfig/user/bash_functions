@@ -1,0 +1,406 @@
+# shellcheck shell=bash
+#
+# From the bash manual page: For almost every purpose
+# aliases are superseded by shell functions.
+
+## See the Bash-Builtins like "alias" and "declare" at:
+## https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins
+
+# In order to avoid a function calls itself, you can specify
+# to execute the original command. Example: to call the 'clear'
+# command insede a function "clear", you need to use:
+#   command clear;
+
+# Show the rows -rw------- 1 io casa 15491 2023-08-17 14:35 file
+# Usage: ll
+ll() {
+  ls -l --time-style long-iso "$@"
+}
+export -f ll
+
+#alias la='ls -A' # show hidden files BUT NOT "." and ".."
+#alias lc='ls -C' # show quoted file name (between aphostrophe)
+#alias lh='ls --human' # bytes measured as human readable
+#alias lt='ls -t' # sort by last modification
+#alias lx='ls -X' # sort by extension
+#alias lx='ls -R' # list recursively
+
+# Use stat file for file information (instead of ls file)
+# Options:
+##  %a access right (octal) | %A access right (human readable)
+##  %s total size (in bytes)
+##  %F file type
+##  %n file name      | %N quoted file name with dereference if symbolic link
+##  %u user ID        | %U user name
+##  %g group ID       | %G group name
+# Usage: stat file.txt
+stat() {
+  command stat --printf="%U %G %s %n \n" "$@"
+}
+export -f stat
+
+# clear screen
+# Usage: cls
+cls() {
+  clear;
+}
+export -f cls
+
+# clear screen
+# Usage: clear
+clear() {
+  timeout 2 cmatrix -u 2;
+  command clear;
+}
+export -f clear
+
+# extract tar files (tar -C ./myfolder -xvf file.tar)
+# Usage: untar file.txt.tar
+untar() {
+  tar -xvf "$@"
+}
+export -f untar
+
+# extract compressed zip files (tar -C ./myfolder -zxvf file.tar.gz)
+# Usage: untar file.txt.zip
+untarz() {
+  tar -zxvf "$@"
+}
+export -f untarz
+
+# test the checksum for sha and md5 files
+# BUG md5sum's option --quiet and --warn are incompatible
+# https://lists.gnu.org/r/bug-coreutils/2010-10/msg00104.html
+# Usage: shacheck file.txt.sha
+shacheck() {
+  shasum --quiet -a 512 --check "$@"
+}
+export -f shacheck
+
+# Usage: md5check file.txt.md5
+md5check() {
+  md5sum --quiet --check "$@"
+}
+export -f md5check
+
+# elimina con wipe (sovrascrive N volte, f=force no confirmation, r=recoursive, i=verbose mode, q=quick wipe)
+# Usage: wipe file.txt
+wipe() {
+  command wipe -friq "$@"
+}
+export -f wipe
+
+# TLDR
+# Usage: tldr ls
+tldr() {
+  tldr-py find "$@"
+}
+export -f tldr
+
+# cancella e salva (clear and write) la history dei comandi del terminale
+# Usage: clearhistory
+clearhistory() {
+  history -c -w
+}
+export -f clearhistory
+
+# show all the services (use restart to restart all)
+# Usage: services
+services() {
+  systemctl status "$@"
+}
+export -f services
+
+# show the distro's info, the cpu, the mounted devices and the memory status
+# Usage: computer
+computer() {
+  lsb_release -a
+  lscpu
+  df -h
+  free -h
+}
+export -f computer
+
+# show the computer space 
+## -h human readable
+## -d nested directories to show
+## -t treshold in byte (smaller files will be excluded)
+# Usage: homespace
+homespace() {
+  du -h -d 2 -t 9999 | sort -h
+}
+export -f homespace
+
+# Show user defined functions
+# Usage: userDefined
+userDefined() {
+  declare -F
+}
+export -f userDefined
+
+########################
+#         ufw          #
+########################
+
+# Show denied connections
+# Usage: ufwDeniedConnectionsLog
+ufwDeniedConnectionsLog() {
+  grep --invert-match "UFW ALLOW" "/var/log/ufw.log"
+}
+export -f ufwDeniedConnectionsLog
+
+########################
+#      network         #
+########################
+
+# resume a download if something go wrong
+# Usage: wget https://google.it
+wget() {
+  command wget -c "$@"
+}
+export -f wget
+
+# ping only 5 times
+# Usage: ping https://google.it
+ping() {
+    command ping -c 5 "$@"
+}
+export -f ping
+
+# On windows: tracepath -b twitter.com
+# Usage: traceroute https://google.it
+traceroute() {
+    command traceroute "$@"
+}
+export -f traceroute
+
+# display the ports # (TU=TPC/UDP, L=show LISTEN state, PN=Process id/process Name)
+ports() {
+    netstat -tulpn
+}
+export -f ports
+
+# show all sockets (A=all; L=listening; T=TCP; P=related process)
+socketStatus() {
+    ss -plat
+}
+export -f socketStatus
+
+# display the interfaces, the status and the ip
+interfaceList() {
+    ip -br -c address
+}
+export -f interfaceList
+
+# display the interfaces, the status and the ip
+interfaceList2() {
+    nmcli device status
+}
+export -f interfaceList2
+
+# Show the network manager
+showNetworkManager() {
+    nmtui
+}
+export -f showNetworkManager
+
+# Set the hostname: hostnamectl set-hostname host.domain.org
+setHostnameControl() {
+    hostnamectl 'set-hostname'
+}
+export -f setHostnameControl
+
+interfaceWifiUp() {
+    ip link set wlan0 up
+}
+export -f interfaceWifiUp
+
+interfaceWifiDown() {
+    ip link set wlan0 down
+}
+export -f interfaceWifiDown
+
+interfaceEthUp() {
+    ip link set eth0 up
+}
+export -f interfaceEthUp
+
+interfaceEthDown() {
+    ip link set eth0 down
+}
+export -f interfaceEthDown
+
+interfaceLoAddAddress() {
+    ip address add 127.0.0.2/16 dev lo
+}
+export -f interfaceLoAddAddress
+
+interfaceLoRemoveAddress() {
+    ip address delete 127.0.0.2/16 dev lo
+}
+export -f interfaceLoRemoveAddress
+
+interfaceEthArpOn() {
+    ip link set dev eth0 arp on
+}
+export -f interfaceEthArpOn
+
+interfaceEthArpOff() {
+    ip link set dev eth0 arp off
+}
+export -f interfaceEthArpOff
+
+ipRoutingTable() {
+    ip route
+}
+export -f ipRoutingTable
+
+# scan ports 22,80,443 on network from 192.168.1.0 to 192.168.1.255
+# Options:
+#   -L      List all targets in the network
+#   -O      Operation System Detection
+#   -p      list of ports to test
+#   -sV	    detect software version for each port
+scanNetwork() {
+    nmap -p 22,80,443  192.168.1.0-255
+}
+export -f scanNetwork
+
+########################
+#          Git         #
+########################
+
+# See the log format: https://devhints.io/git-log-format
+# https://github.com/git/git/blob/56d268bafff7538f82c01d3c9c07bdc54b2993b1/Documentation/pretty-formats.txt
+
+gitLog() {
+    git log --pretty="format:%h %G? %cn %ce %s" --graph --decorate --abbrev-commit --all  "$@"
+}
+export -f gitLog
+
+gitLogFiles() {
+    git log --pretty=oneline --decorate --abbrev-commit --name-only "$@"
+}
+export -f gitLogFiles
+
+# search a string in the repository
+# -n show line number
+# -i search ignorecase
+# --untracked search in tracked (committed) and untracked files
+gitGrep() {
+    git grep --untracked -n -i "$@"
+}
+export -f gitGrep
+
+########################
+#         SVN          #
+########################
+
+# Revert recursively tracked files from current directory
+svnRevertDirectory() {
+    svn revert -R ./*
+}
+export -f svnRevertDirectory
+
+# Remove recursively untracked files from current directory
+svnRemoveUntrackedFiles() {
+    svn status | grep ^\? | cut -c9- | xargs -d \\n rm -r
+}
+export -f svnRemoveUntrackedFiles
+
+############################
+# VNC server on SSH tunnel #
+############################
+
+# Xvnc is both a vnc and X server. Each time you start a server, it will create 
+#    a new "display" and starts listening on the following ports:
+#    VNC server "display 0" will listen on TCP ports 5800, 5900 and 6000
+#    VNC server "display 1" will listen on TCP ports 5801, 5901 and 6001
+# The ports are for:
+#    5800+N - Java-based vncviewer (VNC client connection over HTTP protocol);
+#    5900+N - VNC Client Port (VNC client connection over RemoteFrameBuffer RFB protocol);
+#    6000+N - X Server port (port 6001 is to allows X applications to connect to the VNC server).
+# check open ports with 'netstat -nalp | grep vnc'
+
+# Options:
+#   -rfbport:      The port to listen for VNC Client connections;
+#   -httpport      The port for HTTP connections (needed with rfbport)
+#   -localhost:    Only allow loopback connections from localhost;
+#   -nolisten tcp: Disable X Server connections on TCP port;
+
+# see 'man Xvnc' and 'man Xserver' for more info. 
+
+vncserverStart () {
+    vncserver -geometry 1360x730 -rfbport 10901 -httpport 10901 -nolisten tcp -localhost
+}
+export -f vncserverStart
+
+vncserverStop () {
+    vncserver  -kill :1
+}
+export -f vncserverStop
+
+vncTunnel () {
+    ssh -L 5901:127.0.0.1:5901 -C -N -l io 172.20.10.3
+}
+export -f vncTunnel
+
+############################
+# FileSystem Usermode FUSE #
+############################
+
+# Show the real devices mounted
+# Usage: mountedDevices
+mountedDevices() {
+    findmnt --df --options rw --real --type ext2,ext3,ext4,ntfs # --noheadings
+}
+
+mountPhone() {
+    jmtpfs "$HOME/Documenti/Phone"
+}
+export -f mountPhone
+
+montaPhone() {
+    mountPhone
+}
+export -f montaPhone
+
+umountPhone() {
+    fusermount -u "$HOME/Documenti/Phone"
+}
+export -f umountPhone
+
+smontaPhone() {
+    umountPhone
+}
+export -f smontaPhone
+
+########################
+# Beautiful interfaces #
+########################
+
+# see '/etc/boxes/boxes-config' file or run 'boxes -l' for a list of shapes
+# make (or remove with -r option) a boxes with alignment (-a) centered and with shape (-d) dog.
+boxes() {
+    command boxes -d dog -a c "$@"
+}
+export -f boxes
+
+# see '/usr/share/cowsay directory' for a list of shapes
+# make a cowsay shape with shape (-f) ghostbusters.
+cowsay() {
+    command cowsay -f ghostbusters "$@"
+}
+export -f cowsay
+
+# 	draw an input text with colors
+lolcat() {
+    command lolcat "$@"
+}
+export -f lolcat
+
+# 	draw a matrix (the film) screensaver)
+cmatrix() {
+    cls
+}
+export -f cmatrix

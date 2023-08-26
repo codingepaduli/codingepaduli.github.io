@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 23 minuti 
-        ( 4740 parole)
+        Tempo di lettura 26 minuti 
+        ( 5379 parole)
     </span>
 </div></div>
     </header>
@@ -262,10 +262,12 @@
       </ul>
     </li>
     <li><a href="#generare-la-coppia-di-chiavi-pubblicaprivata">Generare la coppia di chiavi pubblica/privata</a></li>
+    <li><a href="#ricavare-la-fingerprint-di-una-chiave">Ricavare la fingerprint di una chiave</a></li>
     <li><a href="#memorizzare-la-passphrase-usando-lagente-ssh">Memorizzare la passphrase usando l&rsquo;agente SSH</a></li>
     <li><a href="#firmare-e-verificare-file-con-ssh">Firmare e verificare file con SSH</a></li>
     <li><a href="#copia-sicura-dei-file">Copia sicura dei file</a></li>
     <li><a href="#ssh-filesystem">SSH filesystem</a></li>
+    <li><a href="#server-trust-e-file-known_hosts">Server trust e file .known_hosts</a></li>
     <li><a href="#ssh-tunneling-port-forwarding">SSH Tunneling (Port forwarding)</a></li>
   </ul>
 </nav>
@@ -316,29 +318,29 @@
 <h2 id="funzionamento-basilare-di-ssh">Funzionamento basilare di SSH</h2>
 <p>SSH funziona su modello client-server. Il server è in attesa di connessioni da parte dei client.</p>
 <p>Quando un client si collega, client e server negoziano la versione di protocollo SSH da utilizzare per la comunicazione. La lista di versioni supportate può essere visualizzata attraverso il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q protocol-version
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q protocol-version
 </span></span></code></pre></div><p>Stabilita la versione di protocollo da utilizzare, client e server negoziano una chiave segreta per criptare il canale di comunicazione. La negoziazione avviene attraverso un algoritmo per lo scambio delle chiavi (dall&rsquo;inglese Key EXchange), il più famoso è quello di scambio di chiavi Diffie-Hellman. Molti algoritmi aderiscono allo standard GSS-API (dall&rsquo;inglese Generic Security Service Application Program Interface). La lista di algoritmi per lo scambio delle chiavi può essere visualizzata attraverso i comandi seguenti:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q kex
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q kex
 </span></span><span style="display:flex;"><span>ssh -Q kex-gss
 </span></span></code></pre></div><p>Effettuato lo scambio delle chiavi, client e server creano un canale criptato utilizzando un algoritmo di crittografia simmetrico basato sulla chiave segreta scambiata precedentemente. La lista di algoritmi simmetrici (cha si basano sui cifrari) può essere visualizzata attraverso i comandi seguenti:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q cipher
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q cipher
 </span></span></code></pre></div><p>Una volta creato il canale criptato di comunicazione, è necessario autenticare l&rsquo;utente all&rsquo;accesso del sistema. Esistono molte strategie di autenticazione che possono essere configurate, dalla classica richiesta di credenziali (username e password) alla più moderna autenticazione basata su chiave pubblica/privata a quella basata su certificati.</p>
 <p>La lista degli algoritmi simmetrici (cha si basano su username e password) utilizzati per autenticare un utente può essere visualizzata attraverso il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q cipher-auth
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q cipher-auth
 </span></span></code></pre></div><p>La lista degli algoritmi asimmetrici (cha si basano sul possesso di chiave pubblica e privata) utilizzati per autenticare un utente può essere visualizzata attraverso il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q key
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q key
 </span></span></code></pre></div><p>La lista degli algoritmi basati su certificato utilizzati per autenticare un utente può essere visualizzata attraverso il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q key-cert
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q key-cert
 </span></span></code></pre></div><p>Aggiungiamo ancora gli algoritmi per firmare un file, la cui lista può essere visualizzata attraverso il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q sig
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -Q sig
 </span></span></code></pre></div><h2 id="analisi-della-sicurezza">Analisi della sicurezza</h2>
 <p>Ci sono diverse debolezze nell&rsquo;interazione client server con SSH:</p>
 <ol>
 <li>
 <p>Quando il client si collega per la priva volta al server, il server invia al client la propria impronta digitale, quindi l&rsquo;utente deve verificarla ed accettarla per proseguire la connessione. Questa impronta digitale viene salvata nel file <code>./ssh/known_hosts</code>. L&rsquo;utente, per pigrizia, non verifica mai l&rsquo;impronta digitale e sceglie di fidarsi sempre;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>The authenticity of host xxx can&#39;&#39;t be established.
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>The authenticity of host xxx can&#39;&#39;t be established.
 </span></span><span style="display:flex;"><span>RSA key fingerprint is SHA256:4fdsanfMfazsbfMadfas
-</span></span><span style="display:flex;"><span>Are you sure you want to continue connecting (yes/no)?
+</span></span><span style="display:flex;"><span>Are you sure you want to continue connecting (yes/no/[fingerprint])?
 </span></span></code></pre></div></li>
 <li>
 <p>L&rsquo;accesso al server con utente e password è insicuro perché la password può essere indovinata con algoritmi di brute-force o basati su dizionario.</p>
@@ -356,14 +358,14 @@
 <h2 id="installare-il-server-ssh">Installare il server SSH</h2>
 <p>Il server SSH permette di accettare connessioni dai client su una porta di sistema, tipicamente la 22, ed autenticare gli utenti utilizzando la strategia più opportuna.</p>
 <p>L&rsquo;installazione del server SSH avviene con il seguente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install openssh-server
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install openssh-server
 </span></span></code></pre></div><p>I file di configurazione utilizzati dal demone SSH si trovano nelle seguenti posizioni:</p>
 <ul>
 <li><code>/etc/ssh/sshd_config</code></li>
 <li>files in <code>/etc/ssh/sshd_config.d/*.conf</code></li>
 </ul>
 <p>Ad ogni cambio di configurazione è necessario riavviare il server SSH con il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart sshd
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart sshd
 </span></span></code></pre></div><h3 id="configurare-lautenticazione-utente">Configurare l&rsquo;autenticazione utente</h3>
 <p>Le strategie di autenticazione dell&rsquo;utente vanno indicate nei file di configurazione del server. Le principali sono le seguenti:</p>
 <ul>
@@ -372,11 +374,11 @@
 <li><code>publickey</code> (autenticazione con chiave privata/pubblica) utilizza una coppia di chiavi pubblica/privata per autenticare l&rsquo;utente;</li>
 </ul>
 <p>Si può scegliere anche di applicare più di una strategia di autenticazione. Scelte quelle adatte, devono essere inserite nella seguente voce del file di configurazione.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>AuthenticationMethods &#34;publickey,password,keyboard-interactive&#34; # una o più
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>AuthenticationMethods &#34;publickey,password,keyboard-interactive&#34; # una o più
 </span></span></code></pre></div><h4 id="autenticazione-con-password">Autenticazione con password</h4>
 <p>Questa strategia di autenticazione richiede che l&rsquo;utente inserisca il nome utente e la password per l&rsquo;accesso al sistema.</p>
 <p>E&rsquo; possibile abilitare o disabilitare questa strategia di autenticazione indicandola nel file di configurazione del server SSH alla voce <code>AuthenticationMethods</code> e poi abilitando la voce:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PasswordAuthentication yes <span style="color:#75715e"># yes or no</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PasswordAuthentication yes <span style="color:#f00;font-style:italic"># yes or no</span>
 </span></span></code></pre></div><h4 id="autenticazione-interattiva">Autenticazione interattiva</h4>
 <p>Questa strategia di autenticazione richiede che l&rsquo;utente risponda ad una serie di domande e solo nel caso in cui tutte le risposte siano corrette l&rsquo;utente è autenticato. Questo meccanismo permette di applicare strategie di autenticazione come quelle basate ad esempio sulla verifica in due passaggi, in cui oltre ad utente e password viene richiesto un codice di verifica inviato su smartphone o su email o generato con applicazioni OTP.</p>
 <p>Come sistema principale di autenticazione degli utenti questa strategia di autenticazione utilizza il sistema <strong>PAM</strong> che ha vari moduli che definiscono le strategie di autenticazione come ad esempio:</p>
@@ -387,13 +389,13 @@
 </ul>
 <p>Configurato il sistema PAM, SSH può essere configurato per utilizzare PAM come sistema di autenticazione degli utenti, configurando il file <code>/etc/pam.conf</code> e <code>/etc/pam.d/sshd</code>.</p>
 <p>E&rsquo; possibile abilitare o disabilitare questa strategia di autenticazione indicandola nel file di configurazione del server SSH alla voce <code>AuthenticationMethods</code> e poi abilitando le voci:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>UsePAM yes <span style="color:#75715e"># yes or no</span>
-</span></span><span style="display:flex;"><span>KbdInteractiveAuthentication yes <span style="color:#75715e"># yes or no</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>UsePAM yes <span style="color:#f00;font-style:italic"># yes or no</span>
+</span></span><span style="display:flex;"><span>KbdInteractiveAuthentication yes <span style="color:#f00;font-style:italic"># yes or no</span>
 </span></span></code></pre></div><p>Nelle vecchie versioni di SSH, questo valore era chiamato <code>ChallengeResponseAuthentication</code> e se si trova ancora presente nei file di configurazione è solo per compatibilità a ritroso.</p>
 <h4 id="autenticazione-con-chiave-privatapubblica">Autenticazione con chiave privata/pubblica</h4>
 <p>Questa strategia di autenticazione richiede che l&rsquo;utente utilizzi la propria chiave privata per autenticarsi sul server (sul quale ha pubblicato la propria chiave pubblica).</p>
 <p>E&rsquo; possibile abilitare o disabilitare questa strategia di autenticazione indicandola nel file di configurazione del server SSH alla voce <code>AuthenticationMethods</code> e poi abilitando la voce:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PubkeyAuthentication yes <span style="color:#75715e"># yes or no</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PubkeyAuthentication yes <span style="color:#f00;font-style:italic"># yes or no</span>
 </span></span></code></pre></div><p>Generalmente l&rsquo;utente ha una coppia di chiavi, una privata ed una pubblica, rispettivamente memorizzate nei file:</p>
 <ul>
 <li><code>~/.ssh/id_ed25519</code></li>
@@ -404,7 +406,7 @@
 <p>Per generare la chiave pubblica e privata, vedere il capitolo dedicato.</p>
 <h3 id="configurazioni-opzionali-dellautorizzazione-con-credenziali">Configurazioni opzionali dell&rsquo;autorizzazione con credenziali</h3>
 <p>Si può scegliere se permettere l&rsquo;autenticazione degli utenti senza password, impostando nella configurazione l&rsquo;opzione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PermitEmptyPasswords no <span style="color:#75715e"># yes or no</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PermitEmptyPasswords no <span style="color:#f00;font-style:italic"># yes or no</span>
 </span></span></code></pre></div><p>Per questioni di sicurezza l&rsquo;accesso ai server dovrebbe avvenire utilizzando un utente senza permessi amministrativi, per poi utilizzare i metodi del sistema stesso per diventare amministratore. E&rsquo; l&rsquo;amministratore di sistema a scegliere il metodo di accesso consentito, assegnando alla proprietà <code>PermitRootLogin</code> uno dei seguenti valori:</p>
 <ul>
 <li><code>prohibit-password</code> permette l&rsquo;accesso come amministratore solo attraverso una chiave pubblica o un certificato, ma non con una password perché con un attacco brute-force si potrebbe riuscire ad accedere al sistema;</li>
@@ -413,13 +415,13 @@
 <li><code>forced-commands-only</code> permette di lanciare i comandi come amministratore, ma non di effettuare l&rsquo;accesso. I comandi eseguibili devono essere configurati in SSH.</li>
 </ul>
 <p>L&rsquo;impostazione consigliata è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PermitRootLogin no
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PermitRootLogin no
 </span></span></code></pre></div><p>Si può indicare gli utenti ai quali permettere l&rsquo;accesso al server attraverso l&rsquo;opzione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AllowUser username1 username2
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AllowUser username1 username2
 </span></span></code></pre></div><p>In ambienti in cui spesso si modificano gli utenti che hanno i permessi di accesso ai server, piuttosto che effettuare continue modifiche ai file di configurazione, può essere utile garantire l&rsquo;accesso ad un intero gruppo e quindi aggiungere o rimuovere gli utenti dal gruppo. L&rsquo;opzione per tale scelta è:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AllowGroup group1 group2
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AllowGroup group1 group2
 </span></span></code></pre></div><p>Al salvataggio della configurazione deve essere poi riavviato il sistema o il servizio SSH, con il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl reload sshd
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl reload sshd
 </span></span></code></pre></div><h3 id="configurazioni-opzionali-dellautorizzazione-con-chiave-privatapubblica">Configurazioni opzionali dell&rsquo;autorizzazione con chiave privata/pubblica</h3>
 <p>Il file <code>$HOME/.ssh/authorized_keys</code>, memorizzato sul server, contiene l&rsquo;elenco di tutte le chiavi pubbliche che (accoppiate con le chiavi private) garantiscono l&rsquo;accesso al server da parte degli utenti.</p>
 <!--
@@ -437,19 +439,19 @@ ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
 
 -->
 <p>Nel caso l&rsquo;utente non sia autorizzato ad accedere attraverso la chiave pubblica, verificare che la cartella <code>.ssh</code> abbia i permessi <code>700</code> (<code>rwx</code> solo per il proprietario), verificare che il file <code>$HOME/.ssh/authorized_keys</code> abbia i permessi <code>600</code> e verificare che nel file di configurazione del server <code>/etc/ssh/sshd_config</code> si stia leggendo il file <code>authorized_keys</code> corretto:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AuthorizedKeysFile  .ssh/authorized_keys
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AuthorizedKeysFile  .ssh/authorized_keys
 </span></span></code></pre></div><p>Al salvataggio della configurazione deve essere poi riavviato il sistema o il servizio SSH, con il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl reload sshd
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl reload sshd
 </span></span></code></pre></div><h2 id="installazione-ed-uso-del-client-ssh">Installazione ed uso del client SSH</h2>
 <p>Il client SSH permette di collegarsi al server, autenticarsi ed utilizzare la shell di sistema.</p>
 <p>L&rsquo;installazione del client SSH avviene con il seguente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install openssh-client
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install openssh-client
 </span></span></code></pre></div><p>Il comando per l&rsquo;accesso ad un server è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh user@192.168.1.50
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh user@192.168.1.50
 </span></span></code></pre></div><p>E&rsquo; possibile effettuare il debug utilizzando le opzioni seguenti:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -vvv user@192.168.1.50
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -vvv user@192.168.1.50
 </span></span></code></pre></div><p>Dall&rsquo;output di debug si possono notare le seguenti informazioni relative all&rsquo;autenticazione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>debug1: Connecting to 192.168.1.50 [192.168.1.50] port 22.
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>debug1: Connecting to 192.168.1.50 [192.168.1.50] port 22.
 </span></span><span style="display:flex;"><span>debug1: identity file        .ssh/id_ecdsa     type -1
 </span></span><span style="display:flex;"><span>debug1: identity file        .ssh/id_ed25519   type 3
 </span></span><span style="display:flex;"><span>debug1: Authenticating to 192.168.1.50:22 as &#39;user&#39;
@@ -460,9 +462,9 @@ ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
 </span></span><span style="display:flex;"><span>debug1: Server accepts key:  .ssh/id_ed25519 ED25519 SHA256:123456
 </span></span><span style="display:flex;"><span>debug1: Authentication succeeded (publickey).
 </span></span></code></pre></div><p>E&rsquo; possibile specificare la porta alla quale connettersi e la chiave privata da utilizzare per l&rsquo;autenticazione al server con le opzioni seguenti:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i $HOME/chiavi_ssh/id_ed25519 -p <span style="color:#ae81ff">22</span> user@server
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i $HOME/chiavi_ssh/id_ed25519 -p 22 user@server
 </span></span></code></pre></div><p>Dato che l&rsquo;uso di una chiave privata prevede l&rsquo;inserimento di una passphrase, per evitare che questa sia chiesta più e più volte all&rsquo;utente si può utilizzare l&rsquo;opzione seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -o <span style="color:#e6db74">&#34;AddKeysToAgent=yes&#34;</span> io@192.168.1.50
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -o <span style="color:#009c00">&#34;AddKeysToAgent=yes&#34;</span> io@192.168.1.50
 </span></span></code></pre></div><p>Questa opzione memorizza la password in sessione la prima volta che viene chiesta, quindi evita le successive richieste di inserimento fino al termine della sessione o fino al riavvio.</p>
 <h3 id="configurazione-del-client-ssh">Configurazione del client SSH</h3>
 <p>I file di configurazione utilizzati dal client si trovano nelle seguenti posizioni:</p>
@@ -472,12 +474,12 @@ ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
 </ul>
 <p>Gli utenti possono creare il proprio file di configurazione <code>$HOME/.ssh/config</code>. Questi file di configurazione sono utilizzati anche per gli altri programmi come <code>scp</code> , <code>sftp</code> e <code>rsync</code>.</p>
 <p>Lo script per la creazione del file e dei permessi adatti è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p ~/.ssh
-</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">700</span> ~/.ssh
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p ~/.ssh
+</span></span><span style="display:flex;"><span>chmod 700 ~/.ssh
 </span></span><span style="display:flex;"><span>touch ~/.ssh/config
-</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">600</span> ~/.ssh/config
+</span></span><span style="display:flex;"><span>chmod 600 ~/.ssh/config
 </span></span></code></pre></div><p>Il file di configurazione client ha è organizzato in sezioni, ogni sezione è relativa alla configurazione di un singolo host, infine c&rsquo;è la sezione comune a tutti gli host. La sintassi è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Host hostname1
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Host hostname1
 </span></span><span style="display:flex;"><span>    SSH_OPTION value
 </span></span><span style="display:flex;"><span>    SSH_OPTION value
 </span></span><span style="display:flex;"><span>
@@ -487,14 +489,14 @@ ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
 </span></span><span style="display:flex;"><span>Host *
 </span></span><span style="display:flex;"><span>    SSH_OPTION value
 </span></span></code></pre></div><p>Un esempio di configurazione della connessione ad un host, indicando il nome utente, la porta ed il nome dominio è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Host github
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Host github
 </span></span><span style="display:flex;"><span>    HostName github.com
 </span></span><span style="display:flex;"><span>    User john
 </span></span><span style="display:flex;"><span>    Port 1234
 </span></span></code></pre></div><p>Con questa configurazione, si può utilizzare il seguente comando per collegarsi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh github
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh github
 </span></span></code></pre></div><p>Un esempio di configurazione della connessione ad un host, indicando la chiave privata, la porta, l&rsquo;utente, il nome dominio, l&rsquo;opzione per memorizzare la passphrase ed il livello di log desiderato è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Host server
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Host server
 </span></span><span style="display:flex;"><span>    HostName 192.168.1.10
 </span></span><span style="display:flex;"><span>    User server
 </span></span><span style="display:flex;"><span>    Port 7654
@@ -502,7 +504,7 @@ ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
 </span></span><span style="display:flex;"><span>    AddKeysToAgent yes
 </span></span><span style="display:flex;"><span>    LogLevel INFO
 </span></span></code></pre></div><p>Un esempio di configurazione della connessione a differenti host con una sezione comune tra gli host è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Host server
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Host server
 </span></span><span style="display:flex;"><span>    HostName 192.168.1.10
 </span></span><span style="display:flex;"><span>    User admin
 </span></span><span style="display:flex;"><span>    IdentityFile ~/.ssh/server.key
@@ -517,14 +519,14 @@ ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
 </span></span><span style="display:flex;"><span>    AddKeysToAgent yes
 </span></span><span style="display:flex;"><span>    LogLevel INFO
 </span></span></code></pre></div><p>Le opzioni inserite nel file di configurazione possono essere anche passate a linea di comando con l&rsquo;opzione <code>-o</code> in forma <code>chiave=valore</code>. In caso siano già presenti in un file di configurazione, le opzioni passate a linea di comando hanno priorità e quindi sovrascrivono quelle contenute nei file. Un esempio è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -o <span style="color:#e6db74">&#34;AddKeysToAgent=yes&#34;</span> github
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -o <span style="color:#009c00">&#34;AddKeysToAgent=yes&#34;</span> github
 </span></span></code></pre></div><h3 id="eseguire-comandi-tramite-ssh">Eseguire comandi tramite SSH</h3>
 <p>E&rsquo; possibile inviare dei comandi al server specificandoli come parametro.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh user@machine.local <span style="color:#e6db74">&#39;COMANDO&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh user@machine.local <span style="color:#009c00">&#39;COMANDO&#39;</span>
 </span></span></code></pre></div><p>E&rsquo; importante notare che il parametro è composto da una intera stringa, che poi viene eseguita sul server con il comando <code>sh -c COMANDO</code>. Inoltre, la shell del client risolve eventuali variabili ed espressioni prima che SSH possa inviare il comando al server per l&rsquo;esecuzione.</p>
 <p>Questi due passaggi non sono sempre ovvi e portano a degli errori che possono sembrare strani.</p>
 <p>Ad esempio il comando <code>ssh user@machine.local bash -lc &quot;cd /tmp;pwd&quot;</code> intuitivamente dovrebbe avere come output <code>/tmp</code> ma invece ha come output la cartella <code>/home/user</code> dell&rsquo;utente <code>user</code>. Il fatto si spiega analizzando il comando che viene eseguito sul server:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh -c bash -lc cd /tmp;pwd
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh -c bash -lc cd /tmp;pwd
 </span></span></code></pre></div><p>Come si può notare, in questo comando sono coinvolte due shell, la prima è <code>sh</code>, la seconda è <code>bash</code>. I doppi apici sono stati persi perché SSH prende i tre parametri <code>bash</code> <code>-lc</code> e <code>&quot;cd /tmp;pwd&quot;</code> e crea il comando da passare al server <code>bash -lc cd /tmp;pwd</code>.</p>
 <p>Sul server si fa quindi accesso come utente <code>user</code> e sono eseguiti i seguenti comandi:</p>
 <ol>
@@ -532,90 +534,178 @@ ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
 <li>successivamente la prima shell esegue, sempre nella cartella corrente <code>$HOME</code> dell&rsquo;utente <code>user</code>, il secondo comando <code>pwd</code> che stampa a video <code>/home/user</code>.</li>
 </ol>
 <p>E&rsquo; sempre consigliato quindi utilizzare gli apici singoli o doppi per racchiudere il comando da inviare, come nell&rsquo;esempio di seguito:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh user@machine.local <span style="color:#e6db74">&#39;bash -lc &#34;cd /tmp;pwd&#34;&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh user@machine.local <span style="color:#009c00">&#39;bash -lc &#34;cd /tmp;pwd&#34;&#39;</span>
 </span></span></code></pre></div><p>Per osservare il lavoro che la shell svolge nella risoluzione di variabili ed espressioni, supponiamo di voler stampare la home dell&rsquo;utente.</p>
 <p>Se si vuole accedere sul server per poi scrivere a video la cartella home dell&rsquo;utente, si usa il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh prof@localhost <span style="color:#e6db74">&#39;bash -lc &#34;cd $HOME;pwd&#34;&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh prof@localhost <span style="color:#009c00">&#39;bash -lc &#34;cd $HOME;pwd&#34;&#39;</span>
 </span></span></code></pre></div><p>L&rsquo;output, come ci si aspetta, è la cartella dell&rsquo;utente <code>prof</code>, dato che la variabile <code>$HOME</code> non è risolta immediatamente, perché il comando è tra apici singoli, e solo quando il comando è inviato al server viene risolta, per cui l&rsquo;output risultante è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/home/prof
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/home/prof
 </span></span></code></pre></div><p>Se si vuole invece ricavare la cartella home dell&rsquo;utente <code>user</code> per inviarla al server, si usa il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh prof@localhost <span style="color:#e6db74">&#34;bash -lc \&#34;cd </span>$HOME<span style="color:#e6db74">;pwd\&#34;&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh prof@localhost <span style="color:#009c00">&#34;bash -lc \&#34;cd </span>$HOME<span style="color:#009c00">;pwd\&#34;&#34;</span>
 </span></span></code></pre></div><p>Dato che la variabile <code>$HOME</code> è risolta prima di inviare il comando al server, perché questa volta tra apici doppi, la shell sostituisce a questa variabile il percorso della cartella dell&rsquo;utente <code>user</code> che esegue il comando ssh. Successivamente il comando è inviato al server e, una volta eseguito, genera l&rsquo;output seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/home/user
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/home/user
 </span></span></code></pre></div><p>Un&rsquo;altra attenzione da porre quando i comandi sono passati come argomento, è che non sono legati ad una sessione, quindi anche se si interrompe la comunicazione, i processi avviati rimangono attivi sulla macchina server. Per ovviare a questo problema, si può legare il comando ad un terminale, e quando si verifica un problema, la chiusura del terminale causa la terminazione del processo eseguito da remoto. La creazione del terminale avviene specificando l&rsquo;opzione <code>-t</code>.</p>
 <h2 id="generare-la-coppia-di-chiavi-pubblicaprivata">Generare la coppia di chiavi pubblica/privata</h2>
 <p>Per generare la coppia di chiavi pubblica/privata, che vengono salvate nei file <code>id_ed25519.pub</code> e <code>id_ed25519</code> nella cartella <code>chiavi_ssh</code>, si utilizza il comando seguente (nota che l&rsquo;estensione <code>.pub</code> viene aggiunta automaticamente al nome del file che contiene la chiave pubblica):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -f $HOME/chiavi_ssh/id_ed25519 -C <span style="color:#e6db74">&#34;chiave per server A&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -f $HOME/chiavi_ssh/id_ed25519 -C <span style="color:#009c00">&#34;chiave per server A&#34;</span>
 </span></span></code></pre></div><p>Il commento, specificato nel comando precedente attraverso l&rsquo;opzione <code>-C</code> (maiuscola) può essere utile ad indicare lo scopo d&rsquo;uso o il server a cui è destinata una chiave. Si può cambiare utilizzando l&rsquo;opzione <code>-c -C commento</code> (minuscola e maiuscola)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -f $HOME/chiavi_ssh/id_ed25519 -c -C <span style="color:#e6db74">&#34;chiave per server B&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -f $HOME/chiavi_ssh/id_ed25519 -c -C <span style="color:#009c00">&#34;chiave per server B&#34;</span>
 </span></span></code></pre></div><p>La passphrase (frase di sblocco) viene richiesta, ma può essere omessa con le opzioni <code>-q -N &quot;&quot;</code> che indicano di non utilizzare una passphrase e di non richiederla quando si usa la chiave.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -f $HOME/chiavi_ssh/id_ed25519 -q -N <span style="color:#e6db74">&#34;&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -f $HOME/chiavi_ssh/id_ed25519 -q -N <span style="color:#009c00">&#34;&#34;</span>
 </span></span></code></pre></div><p>Per cambiare la passphrase, si utilizza il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -f $HOME/chiavi_ssh/id_ed25519 -p
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -f $HOME/chiavi_ssh/id_ed25519 -p
 </span></span></code></pre></div><p>Le informazioni su una chiave possono essere recuperate attraverso il comando seguente, che si riporta insieme all&rsquo;output per semplicità descrittiva:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -l -f $HOME/chiavi_ssh/id_ed25519
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -l -f $HOME/chiavi_ssh/id_ed25519
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2048</span> SHA256: abacadaeaf1234567890 Comment <span style="color:#66d9ef">for</span> key xyz <span style="color:#f92672">(</span>ed25519<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>2048 SHA256: abacadaeaf1234567890 Comment <span style="color:#00f">for</span> key xyz (ed25519)
 </span></span><span style="display:flex;"><span>^^^^   ^^^^^^^^^^^^^^^^^^^^^^^^       ^^^^^^^^^^       ^^^
 </span></span><span style="display:flex;"><span> |__ Size   Fingerprint __|     Comment __|     Type __|
 </span></span></code></pre></div><p>Si ricorda che la chiave pubblica serve ad autorizzare l&rsquo;accesso all&rsquo;utente e deve essere copiata sul server.</p>
-<h2 id="memorizzare-la-passphrase-usando-lagente-ssh">Memorizzare la passphrase usando l&rsquo;agente SSH</h2>
+<h2 id="ricavare-la-fingerprint-di-una-chiave">Ricavare la fingerprint di una chiave</h2>
+<p>Per recuperare la fingerprint di una chiave, si può passare la chiave al comando <code>ssh-keygen</code>, indicando l&rsquo;opzione <code>-l</code> per creare la fingerprint e l&rsquo;opzione <code>-f file</code> per indicare il file, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -l -f <span style="color:#009c00">&#34;.ssh/id_ed25519&#34;</span>
+</span></span></code></pre></div><p>Dall&rsquo;output seguente si può visualizzare l&rsquo;hash (detto anche fingerprint) della chiave, preceduto dalla dimensione <code>256</code> e dall&rsquo;algoritmo di hash <code>SHA256</code> e seguito dal nome del server e dal tipo di chiave <code>ECDSA</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>256 SHA256:HbW3g8zUjNSksFbq...xU Comment (ECDSA)
+</span></span></code></pre></div><p>Aggiungendo l&rsquo;opzione <code>-v</code> al comando, è possibile generare anche l&rsquo;artwork della chiave:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -l -v -f <span style="color:#009c00">&#34;.ssh/id_ed25519&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>256 SHA256:HbW3g8zUjNSksFbq...xU Comment (ECDSA)
+</span></span><span style="display:flex;"><span>+---[ECDSA 256]---+
+</span></span><span style="display:flex;"><span>|        .ooo=*BE+|
+</span></span><span style="display:flex;"><span>|        . XOoBB+o|
+</span></span><span style="display:flex;"><span>|         BB=*++o |
+</span></span><span style="display:flex;"><span>|        .= B=oo. |
+</span></span><span style="display:flex;"><span>|        S +.+oo  |
+</span></span><span style="display:flex;"><span>|         o     . |
+</span></span><span style="display:flex;"><span>|          .      |
+</span></span><span style="display:flex;"><span>|                 |
+</span></span><span style="display:flex;"><span>|                 |
+</span></span><span style="display:flex;"><span>+----[SHA256]-----+
+</span></span></code></pre></div><h2 id="memorizzare-la-passphrase-usando-lagente-ssh">Memorizzare la passphrase usando l&rsquo;agente SSH</h2>
 <p>L&rsquo;agente SSH si occupa di memorizzare la passphrase per tutta la durata della sessione SSH.</p>
 <p>Per verificare se l&rsquo;agente SSH gestisce già delle chiavi, eseguire il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add -l
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add -l
 </span></span></code></pre></div><p>Per affidargli una chiave, è necessario il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add $HOME/chiavi_ssh/id_ed25519
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add $HOME/chiavi_ssh/id_ed25519
 </span></span></code></pre></div><p>Per rimuovere una chiave è necessario il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add -d $HOME/chiavi_ssh/id_ed25519
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-add -d $HOME/chiavi_ssh/id_ed25519
 </span></span></code></pre></div><p>Quando una chiave viene aggiunta, è possibile effettuare il login automatico ad una shell, senza che sia richiesta la passphrase.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
 </span></span></code></pre></div><p>E&rsquo; possibile affidare automaticamente la chiave all&rsquo;agente, impostando la configurazione del client <code>/etc/ssh/ssh_config</code> con la voce seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AddKeysToAgent yes
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>AddKeysToAgent yes
 </span></span></code></pre></div><h2 id="firmare-e-verificare-file-con-ssh">Firmare e verificare file con SSH</h2>
 <p>E&rsquo; possibile firmare file, email e rami di git utilizzando SSH, e quindi anche verificare una firma.</p>
 <p>Lo strumento di firma di SSH utilizza tre namespace differenti, <code>email</code> è il namespace per la firma delle email, <code>file</code> è il namespace per la firma dei file e <code>git</code> è il namespace per la firma dei commit e dei tag di git.</p>
 <p>Il comando per la firma prevede quindi l&rsquo;opzione <code>-n</code> per indicare il namespace e l&rsquo;opzione <code>-Y sign</code> per indicare di firmare il file, l&rsquo;opzione <code>-f key</code> indica la chiave da utilizzare per firmare ed infine <code>file_to_sign</code> indica il file da firmare, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -Y sign -n file -f $HOME/chiavi_ssh/id_ed25519 file_to_sign
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -Y sign -n file -f $HOME/chiavi_ssh/id_ed25519 file_to_sign
 </span></span></code></pre></div><p>La firma produce un file firmato di nome <code>file_to_sign.sig</code>.</p>
 <p>Per verificare il file firmato, è necessario prima creare un elenco di chiavi di cui ci si fida, che sono legate all&rsquo;identità (generalmente l&rsquo;email). Questo file ha il seguente formato:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>email valid-after=YYYYMMDD,valid-before=YYYYMMDD chiave
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>email valid-after=YYYYMMDD,valid-before=YYYYMMDD chiave
 </span></span></code></pre></div><p>Un esempio di questo elenco è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>alice@example.com valid-after=20180101,valid-before=20250101 ssh-rsa ABCD..KEY
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>alice@example.com valid-after=20180101,valid-before=20250101 ssh-rsa ABCD..KEY
 </span></span><span style="display:flex;"><span>bob@example.net   valid-after=20180101,valid-before=20250101 ssh-ed25519 KEY..DA
 </span></span></code></pre></div><p>Creato questo file, è possibile verificare che il file sia stato firmato dall&rsquo;utente identificato dalla email specificata, utilizzando le opzioni <code>-Y verify</code> per indicare di verificare il file, <code>-f allowed_signers</code> per indicare l&rsquo;elenco di chiavi fidate, <code>-I alice@example.com</code> per indicare l&rsquo;identità da verificare, <code>-n</code> per indicare il namespace, <code>-s file_to_verify.sig</code> per indicare la firma digitale del file ed infine <code>file_to_verify</code> per indicare il file (in questo caso viene inviato sullo standard input), come di seguito:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -Y verify -f allowed_signers -I alice@example.com -n file -s file_to_verify.sig &lt; file_to_verify
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -Y verify -f allowed_signers -I alice@example.com -n file -s file_to_verify.sig &lt; file_to_verify
 </span></span></code></pre></div><h2 id="copia-sicura-dei-file">Copia sicura dei file</h2>
 <p>SSH permette la creazione di un canale sicuro di comunicazione tra client e server che può essere utilizzato per inviare e ricevere file.</p>
 <p>Il comando utilizzato è <code>scp</code> (dall&rsquo;inglese &ldquo;secure copy&rdquo;) e prevede sia la copia di un file dal client al server che viceversa. La sintassi per specificare un file o una cartella sul server è una delle seguenti:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>user@host:/path
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>user@host:/path
 </span></span><span style="display:flex;"><span>scp://user@host:port/path
 </span></span></code></pre></div><p>Come si può notare, <code>user</code> è l&rsquo;utente che effettua l&rsquo;accesso sul server, <code>host</code> indica il nome o l&rsquo;indirizzo IP del server, <code>port</code> indica la porta sulla quale è in ascolto il processo e <code>path</code> indica il percorso del file da copiare o della cartella nella quale copiare il file.</p>
 <p>Il comando <code>scp</code> può quindi essere utilizzato per copiare un file presente su client nella cartella del server <code>/home/user/cartella</code> utilizzando la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i $HOME/chiavi_ssh/id_ed25519 -P <span style="color:#ae81ff">22</span> file user@server:/home/user/cartella
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i $HOME/chiavi_ssh/id_ed25519 -P 22 file user@server:/home/user/cartella
 </span></span></code></pre></div><p>Viceversa, un file presente sul server nella cartella <code>/home/user/cartella/</code> può essere copiato nella cartella <code>cartella</code> del client con la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i $HOME/chiavi_ssh/id_ed25519 -P <span style="color:#ae81ff">22</span> user@server:/home/user/cartella/file cartella
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i $HOME/chiavi_ssh/id_ed25519 -P 22 user@server:/home/user/cartella/file cartella
 </span></span></code></pre></div><p>Per copiare tutti i file presenti in una cartella si può utilizzare il carattere jolly <code>*</code>, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i $HOME/chiavi_ssh/id_ed25519 -P <span style="color:#ae81ff">22</span> user@server:/home/user/cartella/* cartella
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i $HOME/chiavi_ssh/id_ed25519 -P 22 user@server:/home/user/cartella/* cartella
 </span></span></code></pre></div><p>Per copiare ricorsivamente tutti i file e le cartelle presenti in una specifica cartella si può utilizzare l&rsquo;opzione <code>-r</code>, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i $HOME/chiavi_ssh/id_ed25519 -P <span style="color:#ae81ff">22</span> -r user@server:/home/user/cartella cartella
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -i $HOME/chiavi_ssh/id_ed25519 -P 22 -r user@server:/home/user/cartella cartella
 </span></span></code></pre></div><h2 id="ssh-filesystem">SSH filesystem</h2>
 <p>Con SSH si può installare un driver che permette di montare una cartella remota come se fosse un disco locale.</p>
 <p>L&rsquo;installazione del filesystem SSH avviene con il seguente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get install sshfs
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get install sshfs
 </span></span></code></pre></div><p>Creare una cartella <code>/mnt/root</code> con il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mkdir /mnt/Remote
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mkdir /mnt/Remote
 </span></span></code></pre></div><p>Montare la cartella con il seguente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo sshfs -o allow_other,IdentityFile<span style="color:#f92672">=</span>/home/user/.ssh/id_ed25519 user@192.168.1.50:/home/user/Sync /mnt/Remote
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo sshfs -o allow_other,IdentityFile=/home/user/.ssh/id_ed25519 user@192.168.1.50:/home/user/Sync /mnt/Remote
 </span></span></code></pre></div><p>Per smontare la cartella, utilizzare il seguente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo umount /mnt/Remote
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo umount /mnt/Remote
+</span></span></code></pre></div><h2 id="server-trust-e-file-known_hosts">Server trust e file .known_hosts</h2>
+<p>Quando il client SSH si collega ad un server SSH, verifica se è un server fidato, controllando se è presente una voce relativa al server nel file <code>.ssh/.known_hosts</code>. Se non è presente, chiede all&rsquo;utente se fidarsi del server o meno, visualizzando il messaggio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>The authenticity of host xxx can&#39;&#39;t be established.
+</span></span><span style="display:flex;"><span>RSA key fingerprint is SHA256:4fdsanfMfazsbfMadfas
+</span></span><span style="display:flex;"><span>Are you sure you want to continue connecting (yes/no/[fingerprint])?
+</span></span></code></pre></div><p>Le chiavi per confermare l&rsquo;identità del server sono nella cartella <code>/etc/ssh/</code>, nella quale troviamo i seguenti file:</p>
+<ul>
+<li><code>ssh_host_ecdsa_key</code>e <code>ssh_host_ecdsa_key.pub</code></li>
+<li><code>ssh_host_ed25519_key</code> e <code>ssh_host_ed25519_key.pub</code></li>
+<li><code>ssh_host_rsa_key</code> e <code>ssh_host_rsa_key.pub</code></li>
+</ul>
+<p>Per verificare le chiavi pubbliche di un server, ad esempio <code>gitlab.com</code>, si può utilizzare il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keyscan -t ecdsa,ed25519,dsa gitlab.com
+</span></span></code></pre></div><p>Dall&rsquo;output seguente si possono vedere le chiavi precedute dal nome del server <code>gitlab.com</code> e dal tipo di chiave <code>ecdsa-sha2-nistp256</code>, <code>ssh-ed25519</code> e <code>ssh-dss</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span># gitlab.com:22 SSH-2.0-GitLab-SSHD
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gitlab.com ecdsa-sha2-nistp256 AAAAE2VjZHNhL...Y=
+</span></span><span style="display:flex;"><span>gitlab.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAA...f
+</span></span><span style="display:flex;"><span>gitlab.com ssh-dss AAAAB3NzaC1kc3MAAACBAMPK...6A==
+</span></span></code></pre></div><p>Facendo la stessa verifica su <code>github.com</code>, dall&rsquo;output si nota che non è presente una chiave per l&rsquo;algoritmo<code>dsa</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span># github.com:22 SSH-2.0-babeld-d815c248
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>github.com ecdsa-sha2-nistp256 AAAAE2VjZHNhL...g=
+</span></span><span style="display:flex;"><span>github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AA...l
+</span></span></code></pre></div><p>Per recuperare la fingerprint della chiave, si può utilizzare il comando <code>ssh-keygen</code> e, ricordando che il Linux lo standard input è indicato dal simbolo <code>-</code>, utilizzando lo standard input come file contenente la chiave:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keyscan -t ecdsa gitlab.com | ssh-keygen -l -f -
+</span></span></code></pre></div><p>Per aggiungere la chiave al file <code>.ssh/.known_hosts</code> si può utilizzare il redirezionamento dell&rsquo;output, come nel seguente comando:</p>
+<p>ssh-keyscan -t ecdsa gitlab.com &raquo; &ldquo;~/.ssh/.known_hosts&rdquo;</p>
+<p>Per verificare che una chiave sia presente nel file <code>.ssh/.known_hosts</code>, si può utilizzare il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -F github.com
+</span></span></code></pre></div><p>Per rimuovere una chiave presente nel file <code>.ssh/.known_hosts</code>, si può utilizzare il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -R github.com
+</span></span></code></pre></div><p>Per verificare a debug che la chiave sia letta dal file, si può utilizzare il comando seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -v -T git@gitlab.com
+</span></span></code></pre></div><p>L&rsquo;output mostra le seguenti righe:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>debug1: Authenticating to gitlab.com:22 as &#39;git&#39;
+</span></span><span style="display:flex;"><span>debug1: load_hostkeys: fopen ~/.ssh/known_hosts2: No such file
+</span></span><span style="display:flex;"><span>debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file
+</span></span><span style="display:flex;"><span>debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file
+</span></span><span style="display:flex;"><span>debug1: SSH2_MSG_KEXINIT sent
+</span></span><span style="display:flex;"><span>debug1: SSH2_MSG_KEXINIT received
+</span></span><span style="display:flex;"><span>debug1: kex: algorithm: curve25519-sha256
+</span></span><span style="display:flex;"><span>debug1: kex: host key algorithm: ssh-ed25519
+</span></span><span style="display:flex;"><span>debug1: kex: server-&gt;client cipher: chacha20-poly1305@openssh.com MAC: &lt;implicit&gt; compression: none
+</span></span><span style="display:flex;"><span>debug1: kex: client-&gt;server cipher: chacha20-poly1305@openssh.com MAC: &lt;implicit&gt; compression: none
+</span></span><span style="display:flex;"><span>debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+</span></span><span style="display:flex;"><span>debug1: SSH2_MSG_KEX_ECDH_REPLY received
+</span></span><span style="display:flex;"><span>debug1: Server host key: ssh-ed25519 SHA256:eUXGGm1YGsMAS7vkcx6JOJdOGHPem5gQp4taiCfCLB8
+</span></span><span style="display:flex;"><span> ...
+</span></span><span style="display:flex;"><span>The authenticity of host &#39;gitlab.com (172.65.251.78)&#39; can&#39;t be established.
+</span></span><span style="display:flex;"><span>ED25519 key fingerprint is SHA256:eUXGGm1YGsMAS7vkcx6JOJdOGHPem5gQp4taiCfCLB8.
+</span></span><span style="display:flex;"><span>This key is not known by any other names.
+</span></span><span style="display:flex;"><span>Are you sure you want to continue connecting (yes/no/[fingerprint])?
+</span></span></code></pre></div><p>Quando la chiave viene trovata, l&rsquo;output è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>debug1: Authenticating to gitlab.com:22 as &#39;git&#39;
+</span></span><span style="display:flex;"><span>debug1: load_hostkeys: fopen ~/.ssh/known_hosts2: No such file
+</span></span><span style="display:flex;"><span>debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file
+</span></span><span style="display:flex;"><span>debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file
+</span></span><span style="display:flex;"><span>debug1: SSH2_MSG_KEXINIT sent
+</span></span><span style="display:flex;"><span>debug1: SSH2_MSG_KEXINIT received
+</span></span><span style="display:flex;"><span>debug1: kex: algorithm: curve25519-sha256
+</span></span><span style="display:flex;"><span>debug1: kex: host key algorithm: ecdsa-sha2-nistp256
+</span></span><span style="display:flex;"><span>debug1: kex: server-&gt;client cipher: chacha20-poly1305@openssh.com MAC: &lt;implicit&gt; compression: none
+</span></span><span style="display:flex;"><span>debug1: kex: client-&gt;server cipher: chacha20-poly1305@openssh.com MAC: &lt;implicit&gt; compression: none
+</span></span><span style="display:flex;"><span>debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+</span></span><span style="display:flex;"><span>debug1: SSH2_MSG_KEX_ECDH_REPLY received
+</span></span><span style="display:flex;"><span>debug1: Server host key: ecdsa-sha2-nistp256 SHA256:HbW3g8zUjNSksFbqTiUWPWg2Bq1x8xdGUrliXFzSnUw
+</span></span><span style="display:flex;"><span>debug1: Host &#39;gitlab.com&#39; is known and matches the ECDSA host key.
+</span></span><span style="display:flex;"><span>debug1: Found key in ~/.ssh/known_hosts:2
 </span></span></code></pre></div><h2 id="ssh-tunneling-port-forwarding">SSH Tunneling (Port forwarding)</h2>
 <p>Con SSH si può permettere ai client di collegarsi su una porta di comunicazione di un primo server che, tramite un tunnel creato attraverso un canale SSH criptato, trasferisce i dati ad un secondo server.</p>
 <p>Questa tecnica permette ad un servizio che è in ascolto sull&rsquo;interfaccia locale o sull&rsquo;interfaccia di rete, e che quindi non è disponibile ai client che si collegano da remoto, di essere disponibile ai client remoti su un&rsquo;altra porta.</p>
 <p>I tunnel possono essere di due tipi: locali o remoti.</p>
 <p>Il <strong>local port forwarding</strong> permette di avere una porta remota disponibile localmente, quindi i client si collegano in locale per comunicare i dati con server remoto.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>ssh -L [&lt;LocalAddress&gt;]:&lt;LocalPort&gt;:&lt;RemoteHost&gt;:&lt;RemotePort&gt; sshUser@remoteServer
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>ssh -L [&lt;LocalAddress&gt;]:&lt;LocalPort&gt;:&lt;RemoteHost&gt;:&lt;RemotePort&gt; sshUser@remoteServer
 </span></span></code></pre></div><p>Il <strong>remote port forwarding</strong> permette di avere una porta locale disponibile su un server remoto, quindi i client si collegano al server remoto per comunicare i dati alla macchina locale.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>ssh -R [&lt;RemoteAddress&gt;]:&lt;RemotePort&gt;:&lt;LocalHost&gt;:&lt;LocalPort&gt; sshUser@remoteServer
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>ssh -R [&lt;RemoteAddress&gt;]:&lt;RemotePort&gt;:&lt;LocalHost&gt;:&lt;LocalPort&gt; sshUser@remoteServer
 </span></span></code></pre></div><p>Nel caso il RemoteAddress non sia l&rsquo;interfaccia <code>localhost</code>, allora la selezione dell&rsquo;indirizzo remoto deve essere abilitata nel file di configurazione del server alla voce <code>GatewayPorts</code> e prevede tre opzioni:</p>
 <ul>
 <li><code>yes</code> nel caso la porta remota sia resa disponibile sia in localhost che in rete locale che su internet;</li>

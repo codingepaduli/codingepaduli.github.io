@@ -303,10 +303,10 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <li>a destra dell&rsquo;operatore deve essere presente un valore o un&rsquo;espressione matematica.</li>
 </ul>
 <p>Due esempi di assegnazione sono i seguenti:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">6</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">y</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">y</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">x</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> y = 5;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x = 5 * (6 + y);
+</span></span><span style="display:flex;"><span>console.info(y);
+</span></span><span style="display:flex;"><span>console.info(x);
 </span></span></code></pre></div><p>Esistono molteplici operatori di assegnazione, che saranno trattati in dettaglio nei successivi paragrafi.</p>
 <h3 id="operatori-aritmetici">Operatori aritmetici</h3>
 <p>Gli operatori aritmetici, utilizzati per svolgere le operazioni aritmetiche di base, sono i seguenti:</p>
@@ -323,19 +323,19 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <li><code>--</code> decrementa il numero di una singola unità.</li>
 </ul>
 <p>Un esempio d&rsquo;uso degli operatori aritmetici è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.info(3 + 4);
+</span></span><span style="display:flex;"><span>console.info(3 - 4);
+</span></span><span style="display:flex;"><span>console.info(3 * 4);
+</span></span><span style="display:flex;"><span>console.info(3 / 4);
+</span></span><span style="display:flex;"><span>console.info(3 % 4);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">x1</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x1</span><span style="color:#f92672">++</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">x1</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x1</span><span style="color:#f92672">--</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">x1</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#f92672">-</span><span style="color:#a6e22e">x1</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x1 = 3 + 4 * 5;
+</span></span><span style="display:flex;"><span>console.info(x1);
+</span></span><span style="display:flex;"><span>x1++;
+</span></span><span style="display:flex;"><span>console.info(x1);
+</span></span><span style="display:flex;"><span>x1--;
+</span></span><span style="display:flex;"><span>console.info(x1);
+</span></span><span style="display:flex;"><span>console.info(-x1);
 </span></span></code></pre></div><h3 id="operatori-relazionali">Operatori relazionali</h3>
 <p>Gli operatori relazionali, utilizzati per valutare le relazioni tra i numeri, come quelle di maggioranza o di uguaglianza, sono i seguenti:</p>
 <ul>
@@ -352,16 +352,16 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <li><code>!==</code> relazione di disuguaglianza stretta (valore o tipo di dato differenti).</li>
 </ul>
 <p>Un esempio d&rsquo;uso degli operatori relazionali è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">4</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">4</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.info(3 &lt; 4);
+</span></span><span style="display:flex;"><span>console.info(3 == 4);
+</span></span><span style="display:flex;"><span>console.info(3 &gt; 4);
+</span></span><span style="display:flex;"><span>console.info(3 != 4);
+</span></span><span style="display:flex;"><span>console.info(4 &gt;= 4);
+</span></span><span style="display:flex;"><span>console.info(4 &lt;= 4);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x2</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">x2</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">x2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x2 = (3 &lt;= 5);
+</span></span><span style="display:flex;"><span>console.info(x2);
+</span></span><span style="display:flex;"><span>console.info(!x2);
 </span></span></code></pre></div><h3 id="operatori-logici">Operatori logici</h3>
 <p>Gli operatori logici permettono di lavorare con i valori di verità delle proposizioni logiche, ovvero con i valori <strong>vero</strong> o <strong>falso</strong>. Ad esempio la proposizione <code>3 &lt; 4</code> ha il valore <strong>vero</strong>. Gli operatori logici permettono quindi di congiungere, disgiungere o negare proposizioni, e sono di seguito elencati:</p>
 <ul>
@@ -370,15 +370,15 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <li><code>!</code> negazione logica NOT.</li>
 </ul>
 <p>Un esempio d&rsquo;uso degli operatori logici è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>( (<span style="color:#ae81ff">3</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">&amp;&amp;</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>) );
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>( (<span style="color:#ae81ff">3</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">||</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>) );
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>( <span style="color:#f92672">!</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>) );
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.info( (3 &lt; 4) &amp;&amp; (4 &lt; 5) );
+</span></span><span style="display:flex;"><span>console.info( (3 &lt; 4) || (4 &gt; 5) );
+</span></span><span style="display:flex;"><span>console.info( !(3 &lt; 4) );
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x3</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">&amp;&amp;</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">x3</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x3 = (3 &lt; 4) &amp;&amp; (4 &lt; 5);
+</span></span><span style="display:flex;"><span>console.info(x3);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x3</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>) <span style="color:#f92672">||</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">x3</span>);
+</span></span><span style="display:flex;"><span>x3 = (4 &gt; 5) || <span style="color:#00f">true</span>;
+</span></span><span style="display:flex;"><span>console.info(x3);
 </span></span></code></pre></div><h3 id="operatori-binari">Operatori binari</h3>
 <p>Gli operatori binari operano sulla rappresentazione binaria dei numeri e permettono le classiche operazioni disponibili nell&rsquo;algebra di Boole. Sono i seguenti:</p>
 <ul>
@@ -391,16 +391,16 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <li><code>&gt;&gt;&gt;</code> shift destro senza segno di n posizioni.</li>
 </ul>
 <p>Un esempio d&rsquo;uso degli operatori binari è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">5</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">|</span> <span style="color:#ae81ff">5</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">^</span> <span style="color:#ae81ff">5</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#f92672">~</span> <span style="color:#ae81ff">5</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">5</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">5</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">5</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.info(3 &amp; 5);
+</span></span><span style="display:flex;"><span>console.info(3 | 5);
+</span></span><span style="display:flex;"><span>console.info(3 ^ 5);
+</span></span><span style="display:flex;"><span>console.info(~ 5);
+</span></span><span style="display:flex;"><span>console.info(3 &lt;&lt; 5);
+</span></span><span style="display:flex;"><span>console.info(3 &gt;&gt; 5);
+</span></span><span style="display:flex;"><span>console.info(3 &gt;&gt;&gt; 5);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x4</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">x4</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x4 = 3 &amp; 5;
+</span></span><span style="display:flex;"><span>console.info(x4);
 </span></span></code></pre></div><h3 id="operatori-di-assegnazione">Operatori di assegnazione</h3>
 <p>Gli operatori di assegnazione si utilizzano per assegnare il valore o il risultato di un&rsquo;espressione ad una variabile. L&rsquo;elenco degli operatori di assegnazione è il seguente:</p>
 <ul>
@@ -418,18 +418,18 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <li><code>&gt;&gt;&gt;=</code>effettua l&rsquo;operazione di shift destro senza segno di n posizioni ed assegna il risultato alla variabile stessa.</li>
 </ul>
 <p>Un esempio d&rsquo;uso degli operatori di assegnazione è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x5</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">-=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">*=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">/=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">%=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">&amp;=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">|=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">^=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">&lt;&lt;=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">x5</span> <span style="color:#f92672">&gt;&gt;&gt;=</span> <span style="color:#ae81ff">5</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x5 = 5;
+</span></span><span style="display:flex;"><span>x5 += 5;
+</span></span><span style="display:flex;"><span>x5 -= 5;
+</span></span><span style="display:flex;"><span>x5 *= 5;
+</span></span><span style="display:flex;"><span>x5 /= 5;
+</span></span><span style="display:flex;"><span>x5 %= 5;
+</span></span><span style="display:flex;"><span>x5 &amp;= 5;
+</span></span><span style="display:flex;"><span>x5 |= 5;
+</span></span><span style="display:flex;"><span>x5 ^= 5;
+</span></span><span style="display:flex;"><span>x5 &lt;&lt;= 5;
+</span></span><span style="display:flex;"><span>x5 &gt;&gt;= 5;
+</span></span><span style="display:flex;"><span>x5 &gt;&gt;&gt;= 5;
 </span></span></code></pre></div><h2 id="libreria-matematica-math">Libreria matematica <code>Math</code></h2>
 <p>Ogni linguaggio di programmazione ha una libreria matematica che mette a disposizione del programmatore le funzioni che eseguono le operazioni matematiche piú comuni, come quelle logaritmiche, esponenziali, trigonometriche e di arrotondamento.</p>
 <p>Non è necessario riportare alla mente tutti i concetti matematici alla base delle suddette funzioni, corso di questo capitolo sarà illustrato solo come utilizzarle, lasciando poi al programmatore lo studio e l&rsquo;analisi del contesto in cui utilizzarle.</p>
@@ -467,7 +467,7 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <p>Come si può dedurre intuitivamente, l&rsquo;arrotondamento per eccesso del numero <code>2.13</code> ha come risultato <code>3</code>.</p>
 <p>Meno intuitivo è l&rsquo;arrotondamento per eccesso del numero <code>-2.13</code>, dato che come risultato si ottiene <code>-2</code>, e sulle prime può essere fonte di confusione.</p>
 <p>La funzione progettata per eseguire tale operazione è <code>ceil</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.ceil(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.ceil(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the real value
@@ -477,12 +477,12 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta il numero da arrotondare.</p>
 <p>Il valore restituito è il numero arrotondato. Può essere salvato in una variabile.</p>
 <p>Per effettuare un arrotondamento per eccesso del numero 3.14, sostituiamo al parametro formale <code>x</code> il valore <code>3.14</code>. Salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#ae81ff">3.14</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.ceil(3.14);
 </span></span></code></pre></div><p>L&rsquo;<strong>arrotondamento per difetto</strong> consiste nell&rsquo;associare ad un numero reale <code>x</code> al numero intero precedente.</p>
 <p>Come si può dedurre intuitivamente, l&rsquo;arrotondamento per difetto del numero <code>2.13</code> ha come risultato <code>2</code>.</p>
 <p>Meno intuitivo è l&rsquo;arrotondamento per difetto del numero <code>-2.13</code>, dato che come risultato si ottiene <code>-3</code>, e sulle prime può essere fonte di confusione.</p>
 <p>La funzione progettata per eseguire tale operazione è <code>floor</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.floor(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.floor(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the real value
@@ -492,12 +492,12 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta il numero da arrotondare.</p>
 <p>Il valore restituito è il numero arrotondato. Può essere salvato in una variabile.</p>
 <p>Per effettuare un arrotondamento per difetto del numero 3.14, sostituiamo al parametro formale <code>x</code> il valore <code>3.14</code>, ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#ae81ff">3.14</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.floor(3.14);
 </span></span></code></pre></div><p>L&rsquo;<strong>arrotondamento</strong> classico consiste nell&rsquo;associare ad un numero reale <code>x</code> il numero intero piú vicino, sia esso precedente o successivo.</p>
 <p>Come si può dedurre intuitivamente, l&rsquo;arrotondamento del numero <code>2.13</code> ha come risultato <code>2</code>, mentre l&rsquo;arrotondamento del numero <code>2.63</code> ha come risultato <code>3</code>.</p>
 <p>La situazione meno intuitiva si ha con il numero <code>2.50</code>, che tipicamente si arrotonda a <code>3</code>.</p>
 <p>La funzione progettata per eseguire tale operazione è <code>round</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.round(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.round(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the real value
@@ -507,11 +507,11 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta il numero da arrotondare.</p>
 <p>Il valore restituito è il numero arrotondato. Può essere salvato in una variabile.</p>
 <p>Per effettuare un arrotondamento per eccesso del numero 3.14, sostituiamo al parametro formale <code>x</code> il valore <code>3.14</code>, ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">3.14</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.round(3.14);
 </span></span></code></pre></div><p>L&rsquo;<strong>arrotondamento per troncamento</strong> consiste nell&rsquo;associare ad un numero reale <code>x</code> il numero intero che si ottiene togliendo tutte le cifre decimali.</p>
 <p>Come ci si può aspettare, l&rsquo;arrotondamento per troncamento del numero <code>-2.13</code> è <code>-2</code>, quello del numero <code>-2.83</code> è <code>-2</code>.</p>
 <p>La funzione progettata per eseguire tale operazione è <code>trunc</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.trunc(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.trunc(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the real value
@@ -521,23 +521,23 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta il numero da arrotondare.</p>
 <p>Il valore restituito è il numero arrotondato. Può essere salvato in una variabile.</p>
 <p>Per effettuare un arrotondamento per troncamento del numero 3.14, sostituiamo al parametro formale <code>x</code> il valore <code>3.14</code>, ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">trunc</span>(<span style="color:#ae81ff">3.14</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.trunc(3.14);
 </span></span></code></pre></div><h3 id="funzioni-per-la-generazione-di-un-numero-casuale">Funzioni per la generazione di un numero casuale</h3>
 <p>Spesso è necessario generare un numero casuale, per simulare tante casistiche reali, come il lancio di un dado.</p>
 <p>Il numero casuale puó essere vincolato ad un determinato insieme, come nel caso del lancio del dado, in cui i valori accettabili vanno da un minimo di uno ad un massimo di sei ed includono solo numeri interi, oppure può essere libero.</p>
 <!-- TODO aggiungi casistiche -->
 <p>La funzione progettata per eseguire tale operazione è <code>random</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.random(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.random(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Returns:
 </span></span><span style="display:flex;"><span>    Number: A floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive).
 </span></span></code></pre></div><p>Il valore restituito è un numero decimale casuale compreso tra zero (incluso) ed 1 (non incluso). Può essere salvato in una variabile.</p>
 <p>Per ottenere un numero casuale, invochiamo la funzione, salvando opzionalmente in una variabile <code>i</code> il risultato, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">random</span>();
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.random();
 </span></span></code></pre></div><h4 id="numero-casuale-con-limite-superiore">Numero casuale con limite superiore</h4>
 <p>Spesso si desidera un numero decimale casuale <code>x</code> compreso tra zero (incluso) ed un valore massimo <code>max</code> (non incluso) definito dal programmatore o dall&rsquo;utente.</p>
 <p>La via piú semplice consiste nel moltiplicare il numero casuale <code>x</code> per il valore <code>max</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">random</span>();
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = max * Math.random();
 </span></span></code></pre></div><p>Ad esempio, se il massimo desiderato è 5 (escluso), allora si possono avere, tra i tanti numeri casuali, i seguenti scenari:</p>
 <ol>
 <li>Il valore casuale <code>x</code> è <code>0</code>, moltiplicato per <code>5</code> fa sempre <code>0</code>;</li>
@@ -549,7 +549,7 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <h4 id="numero-casuale-con-limite-inferiore-e-superiore">Numero casuale con limite inferiore e superiore</h4>
 <p>Puó capitare che si desideri un numero decimale casuale <code>x</code> compreso tra un valore minimo <code>min</code> (incluso) ed un valore massimo <code>max</code> (non incluso) definiti dal programmatore o dall&rsquo;utente.</p>
 <p>La via piú semplice consiste nel moltiplicare il numero casuale <code>x</code> per il valore <code>max - min</code>, sommando poi il risultato al valore <code>min</code> come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">+</span> (<span style="color:#a6e22e">max</span><span style="color:#f92672">-</span><span style="color:#a6e22e">min</span>) <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">random</span>();
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = min + (max-min) * Math.random();
 </span></span></code></pre></div><p>Ad esempio, se il minimo desiderato è 3 (incluso) ed il massimo desiderato è 10 (escluso), allora, considerata la differenza che è <code>7</code>, si possono avere, tra i tanti numeri casuali, i seguenti scenari:</p>
 <ol>
 <li>Il valore casuale <code>x</code> è <code>0</code>, moltiplicato per <code>7</code> fa sempre <code>0</code>, che sommato a 3 restituisce il valore <code>3</code>;</li>
@@ -561,7 +561,7 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <h3 id="funzioni-per-il-calcolo-di-potenze-e-radici">Funzioni per il calcolo di potenze e radici</h3>
 <p>Non possono mancare le funzioni necessarie al calcolo di un numero elevato ad una certa potenza e quelle per il calcolo della radice quadrata o cubica di un numero.</p>
 <p>La funzione progettata per calcolare la potenza di un numero è <code>pow(x, y)</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.pow(x, n)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.pow(x, n)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the base value
@@ -573,9 +573,9 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <p>Il parametro formale <code>n</code> rappresenta l&rsquo;esponente della potenza.</p>
 <p>Il valore restituito è x elevato all&rsquo;ennesima potenza. Può essere salvato in una variabile.</p>
 <p>Per calcolare il valore di 2 elevato alla 20-esima potenza, sostituiamo al parametro formale <code>x</code> il valore <code>2</code>, al parametro formale <code>n</code> il valore <code>20</code>, ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">pow</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">20</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.pow(2, 20);
 </span></span></code></pre></div><p>La funzione progettata per calcolare la radice quadrata di un numero è <code>sqrt(x)</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.sqrt(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.sqrt(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the value
@@ -585,9 +585,9 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta il numero di cui calcolare la radice quadrata.</p>
 <p>Il valore restituito è la radice quadrata del numero <code>x</code>. Può essere salvato in una variabile.</p>
 <p>Per calcolare la radice quadrata di 16, sostituiamo al parametro formale <code>x</code> il valore <code>16</code>, ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">16</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.sqrt(16);
 </span></span></code></pre></div><p>La funzione progettata per calcolare la radice cubica di un numero è <code>cbrt(x)</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.cbrt(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.cbrt(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the value
@@ -597,11 +597,11 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta il numero di cui calcolare la radice cubica.</p>
 <p>Il valore restituito è la radice cubica del numero <code>x</code>. Può essere salvato in una variabile.</p>
 <p>Per calcolare la radice cubica di 16, sostituiamo al parametro formale <code>x</code> il valore <code>16</code>, ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">cbrt</span>(<span style="color:#ae81ff">16</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.cbrt(16);
 </span></span></code></pre></div><h3 id="funzioni-per-il-calcolo-di-esponenziali-e-logaritmi">Funzioni per il calcolo di esponenziali e logaritmi</h3>
 <p>Le funzioni per il calcolo di esponenziali e logaritmi generalmente lavorano in base <code>2</code>, in base <code>e</code> (numero di Eulero) ed in base <code>10</code>. Ricordiamo che è possibile calcolare il logaritmo di un numero a patto che questo sia maggiore di zero.</p>
 <p>La funzione progettata per calcolare l&rsquo;esponenziale in base <code>e</code> di un numero è <code>exp(x)</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.exp(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.exp(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the number
@@ -611,9 +611,9 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta l&rsquo;esponente. La base è il numero di Eulero <code>e</code>.</p>
 <p>Il valore restituito è l&rsquo;esponenziale <code>e^x</code>. Può essere salvato in una variabile.</p>
 <p>Per calcolare l&rsquo;esponenziale in base <code>e</code> elevato alla 20-esima potenza, sostituiamo al parametro formale <code>x</code> il valore <code>20</code> ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">exp</span>(<span style="color:#ae81ff">20</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.exp(20);
 </span></span></code></pre></div><p>La funzione progettata per calcolare il logaritmo in base <code>2</code> di un numero è <code>log2(x)</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.log2(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.log2(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the number
@@ -623,9 +623,9 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta il numero. La base è <code>2</code>.</p>
 <p>Il valore restituito è il logaritmo in base <code>2</code> di <code>x</code>. Può essere salvato in una variabile.</p>
 <p>Per calcolare il logaritmo in base <code>2</code> di <code>20</code>, sostituiamo al parametro formale <code>x</code> il valore <code>20</code> ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">log2</span>(<span style="color:#ae81ff">20</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.log2(20);
 </span></span></code></pre></div><p>La funzione progettata per calcolare il logaritmo in base <code>e</code> di un numero è <code>log(x)</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.log(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.log(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the number
@@ -635,9 +635,9 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta il numero. La base è <code>e</code>.</p>
 <p>Il valore restituito è il logaritmo naturale (in base <code>2</code>) di <code>x</code>. Può essere salvato in una variabile.</p>
 <p>Per calcolare il logaritmo naturale di <code>20</code>, sostituiamo al parametro formale <code>x</code> il valore <code>20</code> ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">20</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.log(20);
 </span></span></code></pre></div><p>La funzione progettata per calcolare il logaritmo in base <code>10</code> di un numero è <code>log10(x)</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.log10(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.log10(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the number
@@ -647,14 +647,14 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta il numero. La base è <code>10</code>.</p>
 <p>Il valore restituito è il logaritmo in base <code>10</code> di <code>x</code>. Può essere salvato in una variabile.</p>
 <p>Per calcolare il logaritmo in base <code>10</code> di <code>20</code>, sostituiamo al parametro formale <code>x</code> il valore <code>20</code> ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">log10</span>(<span style="color:#ae81ff">20</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.log10(20);
 </span></span></code></pre></div><h3 id="funzioni-trigonometriche">Funzioni trigonometriche</h3>
 <p>Le funzioni trigonometriche sono tutte definite sulla circonferenza goniometrica, che è centrata nell&rsquo;origine degli assi ed ha raggio pari ad 1.</p>
 <p>Le principali sono <strong>seno</strong> e <strong>coseno</strong>, che definiscono il rapporto fra la lunghezza dell&rsquo;ipotenusa e la lunghezza dei lati del triangolo che si forma sulla circonferenza goniometrica, quando è definito l&rsquo;angolo dell&rsquo;ipotenusa.</p>
 <!-- TODO disegnare il triangolo sulla circonferenza goniometrica -->
 <p>Una cosa importante da ricordare è che nelle funzioni trigonometriche gli angoli devono essere espressi in <strong>radianti</strong>.</p>
 <p>La funzione progettata per calcolare il seno di un angolo <code>x</code> è <code>sin(x)</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.sin(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.sin(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the angle
@@ -664,9 +664,9 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta l&rsquo;angolo, espresso in radianti.</p>
 <p>Il valore restituito è il seno di <code>x</code>, sempre ricordando che è calcolato sulla circonferenza unitaria, quindi con raggio <code>uno</code>.</p>
 <p>Per calcolare il seno dell&rsquo;angolo che misura <code>3</code> radianti, sostituiamo al parametro formale <code>x</code> il valore <code>3</code> ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sin</span>(<span style="color:#ae81ff">3</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.sin(3);
 </span></span></code></pre></div><p>La funzione progettata per calcolare il coseno di un angolo <code>x</code> è <code>cos(x)</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.cos(x)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.cos(x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x    Number: the angle
@@ -676,7 +676,7 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 </span></span></code></pre></div><p>Il parametro formale <code>x</code> rappresenta l&rsquo;angolo, espresso in radianti.</p>
 <p>Il valore restituito è il coseno di <code>x</code>, sempre ricordando che è calcolato sulla circonferenza unitaria, quindi con raggio <code>uno</code>.</p>
 <p>Per calcolare il coseno dell&rsquo;angolo che misura <code>3</code> radianti, sostituiamo al parametro formale <code>x</code> il valore <code>3</code> ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">cos</span>(<span style="color:#ae81ff">3</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.cos(3);
 </span></span></code></pre></div>
     </div>
       <hr>

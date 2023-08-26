@@ -242,8 +242,8 @@
 <li>Si esegue un processo all&rsquo;interno del container creato (comunemente si dice che si esegue il container).</li>
 </ul>
 <p>Questi tre passi si eseguono con i seguenti comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker pull hello-world  <span style="color:#75715e"># Scarica l&#39;immagine hello-world</span>
-</span></span><span style="display:flex;"><span>docker run hello-world   <span style="color:#75715e"># Esegue il container</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker pull hello-world  <span style="color:#f00;font-style:italic"># Scarica l&#39;immagine hello-world</span>
+</span></span><span style="display:flex;"><span>docker run hello-world   <span style="color:#f00;font-style:italic"># Esegue il container</span>
 </span></span></code></pre></div><p>Il primo comando scarica l&rsquo;immagine <code>hello-world</code>.</p>
 <p>Il secondo comando crea il container a partire dall&rsquo;immagine <code>hello-world</code> ed esegue il processo nel container.</p>
 <h2 id="definizioni">Definizioni</h2>
@@ -266,19 +266,19 @@
 <p>Le immagini rappresentano un ambiente isolato, con tutte le risorse necessarie all&rsquo;esecuzione del container, come il filesystem, i dispositivi di rete, le configurazioni necessarie, &hellip;</p>
 <p>Le immagini sono tipicamente scaricabili da <a href="https://hub.docker.com/">Docker Hub</a>, ne esistono di infiniti tipi, alcune con l&rsquo;ambiente di sviluppo <code>python3</code> installato, altre con gli strumenti di controllo della sicurezza, altre con programmi di elaborazione immagini e così via.</p>
 <p>Per scaricare l&rsquo;immagine <code>hello-world</code> si può eseguire il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image pull hello-world
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image pull hello-world
 </span></span></code></pre></div><p>Per visualizzare le immagini installate:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image ls
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image ls
 </span></span></code></pre></div><p>Per cancellare l&rsquo;immagine <code>hello-world</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image rm hello-world
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image rm hello-world
 </span></span></code></pre></div><p>Un&rsquo;immagine è composta da diversi layer, che vengono scaricati quando si scarica l&rsquo;immagine la prima volta o quando si aggiorna l&rsquo;immagine. Per visualizzare e cancellare questi layer si usano i comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image ls -f dangling<span style="color:#f92672">=</span>true
-</span></span><span style="display:flex;"><span>docker images purge        <span style="color:#75715e"># notare &#34;images&#34; al plurale</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image ls -f dangling=true
+</span></span><span style="display:flex;"><span>docker images purge        <span style="color:#f00;font-style:italic"># notare &#34;images&#34; al plurale</span>
 </span></span></code></pre></div><h2 id="gestione-container">Gestione container</h2>
 <p>Utilizzando l&rsquo;immagine <code>httpd:alpine</code>, per creare un nuovo container assegnandogli un nome comprensibile, ad esempio <code>httpd-container</code>, eseguiamo il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container create --name <span style="color:#e6db74">&#34;httpd-container&#34;</span> httpd:alpine
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container create --name <span style="color:#009c00">&#34;httpd-container&#34;</span> httpd:alpine
 </span></span></code></pre></div><p>Per avviare, stoppare, mettere in pausa (non consuma CPU, ma è in memoria), riprendere dalla pausa, rinominare ed infine eliminare un container, si utilizzano i seguenti comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container start   httpd-container
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container start   httpd-container
 </span></span><span style="display:flex;"><span>docker container stop    httpd-container
 </span></span><span style="display:flex;"><span>docker container restart httpd-container
 </span></span><span style="display:flex;"><span>docker container pause   httpd-container
@@ -286,9 +286,9 @@
 </span></span><span style="display:flex;"><span>docker container rename  httpd-container httpd-container2
 </span></span><span style="display:flex;"><span>docker container rm      httpd-container
 </span></span></code></pre></div><p>Per poter visualizzare i container creati e la relativa immagine, si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container ls -a
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container ls -a
 </span></span></code></pre></div><p><strong>TIPS</strong>: Il comando per rimuovere tutti i container in stato &ldquo;exit&rdquo; (-q stampa solo un ID del container):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rm <span style="color:#66d9ef">$(</span>docker container ls --size -a --filter  <span style="color:#e6db74">&#34;status=exited&#34;</span> -q<span style="color:#66d9ef">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rm <span style="color:#00f">$(</span>docker container ls --size -a --filter  <span style="color:#009c00">&#34;status=exited&#34;</span> -q<span style="color:#00f">)</span>
 </span></span></code></pre></div><h3 id="opzioni-di-creazione-del-container">Opzioni di creazione del container</h3>
 <p>Nella creazione del container possono essere utilizzate le seguenti opzioni:</p>
 <ul>
@@ -313,34 +313,34 @@
 </ul>
 <p>Quando un container è eseguito im modalità &ldquo;attached&rdquo;, premendo la combinazione di tasti <code>CTRL-C</code> non si effettua il &ldquo;detach&rdquo;, ma a tutti gli effetti si stoppa il container. Per effettuare il &ldquo;detach&rdquo; si può indicare la combinazione di tasti con l&rsquo;opzione <code>--detach-keys=&quot;ctrl-a,a&quot;</code>, purtroppo non sempre funziona. Al contrario, per riportare in primo piano un container in esecuzione in background, si usa il comando <code>attach</code>.</p>
 <p>Dato che queste opzioni non sono sempre disponibili in contemporanea, ma solo l&rsquo;una o l&rsquo;altra, di seguito riportiamo alcuni esempi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container start --attach --detach-keys<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ctrl-a,a&#34;</span> <span style="color:#e6db74">&#34;httpd-container5&#34;</span>
-</span></span><span style="display:flex;"><span>docker container run  --detach -p <span style="color:#e6db74">&#34;8006:80&#34;</span>  --name <span style="color:#e6db74">&#34;httpd-container5&#34;</span> httpd:alpine
-</span></span><span style="display:flex;"><span>docker container exec --detach <span style="color:#e6db74">&#34;httpd-container5&#34;</span> ls
-</span></span><span style="display:flex;"><span>docker container attach <span style="color:#e6db74">&#34;httpd-container5&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container start --attach --detach-keys=<span style="color:#009c00">&#34;ctrl-a,a&#34;</span> <span style="color:#009c00">&#34;httpd-container5&#34;</span>
+</span></span><span style="display:flex;"><span>docker container run  --detach -p <span style="color:#009c00">&#34;8006:80&#34;</span>  --name <span style="color:#009c00">&#34;httpd-container5&#34;</span> httpd:alpine
+</span></span><span style="display:flex;"><span>docker container exec --detach <span style="color:#009c00">&#34;httpd-container5&#34;</span> ls
+</span></span><span style="display:flex;"><span>docker container attach <span style="color:#009c00">&#34;httpd-container5&#34;</span>
 </span></span></code></pre></div><p>Dato che il comando run crea, esegue il container ed al termine del compito lo stoppa, si può scegliere anche di distruggere il container con l&rsquo;opzione <code>--rm</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run  --rm --name <span style="color:#e6db74">&#34;httpd-container&#34;</span> httpd:alpine
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run  --rm --name <span style="color:#009c00">&#34;httpd-container&#34;</span> httpd:alpine
 </span></span></code></pre></div><p>In alcuni casi, può essere utile creare uno pseudo-terminale sul container, per favorire la colorazione del testo, utilizzando l&rsquo;opzione <code>--tty</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container exec --tty <span style="color:#e6db74">&#34;httpd-container5&#34;</span> ls
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container exec --tty <span style="color:#009c00">&#34;httpd-container5&#34;</span> ls
 </span></span></code></pre></div><h3 id="entrypoint">Entrypoint</h3>
 <p>Quando si parla di esecuzione di un container, si sottintende l&rsquo;esecuzione di un comando (che sia &ldquo;hello-world&rdquo; o un processo demone &ldquo;https&rdquo; in ascolto su una porta) che è specificato in fase di creazione dell&rsquo;immagine. Questo comando può essere sovrascritto con l&rsquo;opzione <code>--entrypoint</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run --name npm  --entrypoint <span style="color:#e6db74">&#34;/usr/local/bin/npm&#34;</span> node
-</span></span><span style="display:flex;"><span>docker container run --name hugo --entrypoint <span style="color:#e6db74">&#34;&#34;</span> node bash -l -c <span style="color:#e6db74">&#34;/usr/bin/pandoc-default --version&#34;</span>
-</span></span><span style="display:flex;"><span>docker container run --name hugo --entrypoint <span style="color:#e6db74">&#34;&#34;</span> node bash
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run --name npm  --entrypoint <span style="color:#009c00">&#34;/usr/local/bin/npm&#34;</span> node
+</span></span><span style="display:flex;"><span>docker container run --name hugo --entrypoint <span style="color:#009c00">&#34;&#34;</span> node bash -l -c <span style="color:#009c00">&#34;/usr/bin/pandoc-default --version&#34;</span>
+</span></span><span style="display:flex;"><span>docker container run --name hugo --entrypoint <span style="color:#009c00">&#34;&#34;</span> node bash
 </span></span></code></pre></div><h2 id="container-inspection">Container inspection</h2>
 <p>Per poter ispezionare un container, guardando i processi in esecuzione, la configurazione e le statistiche in tempo reale, si usano i comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container top     httpd-container
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container top     httpd-container
 </span></span><span style="display:flex;"><span>docker container inspect httpd-container
 </span></span><span style="display:flex;"><span>docker container stats   httpd-container
 </span></span></code></pre></div><h2 id="logs">Logs</h2>
 <p>E&rsquo; possibile visualizzare i logs di un container che è in esecuzione in background utilizzando il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker logs httpd-container
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker logs httpd-container
 </span></span></code></pre></div><h2 id="volumi">Volumi</h2>
 <p>I volumi sono semplicemente cartelle locali montate nel container (comando mount).</p>
 <p>Per visualizzare e rimuovere i volumi si usano i comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume ls
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume ls
 </span></span><span style="display:flex;"><span>docker volume rm volumeID
 </span></span></code></pre></div><p>Per visualizzare e rimuovere tutti i volumi non più collegati ad alcun container, si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume ls -f dangling<span style="color:#f92672">=</span>true
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume ls -f dangling=true
 </span></span><span style="display:flex;"><span>docker volume prune
 </span></span></code></pre></div><h3 id="il-problema-dei-permessi-nei-volumi">Il problema dei permessi nei volumi</h3>
 <p>I container non hanno un sistema operativo, e quindi non hanno un kernel, ma sono dei semplici processi che girano sul kernel della macchina ospitante in un ambiente isolato.</p>
@@ -362,20 +362,20 @@
 <h2 id="network">Network</h2>
 <p>Docker permette di collegare i container in una o più reti.</p>
 <p>Per creare una rete si utilizza il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create rete_lan
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create rete_lan
 </span></span></code></pre></div><p>Per gestire le reti si utilizzano i comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create [NETWORK_NAME]
 </span></span><span style="display:flex;"><span>docker network ls
-</span></span><span style="display:flex;"><span>docker network rm <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>docker network inspect <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker network rm [NETWORK_NAME]
+</span></span><span style="display:flex;"><span>docker network inspect [NETWORK_NAME]
 </span></span></code></pre></div><p>Per collegare e scollegare i container dalla rete si usano i comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network connect <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CONTAINER_NAME<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>docker network disconnect <span style="color:#f92672">[</span>NETWORK_NAME<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CONTAINER_NAME<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network connect [NETWORK_NAME] [CONTAINER_NAME]
+</span></span><span style="display:flex;"><span>docker network disconnect [NETWORK_NAME] [CONTAINER_NAME]
 </span></span></code></pre></div><h2 id="pulizia">Pulizia</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker system prune --volumes
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker system prune --volumes
 </span></span></code></pre></div><h2 id="pods">Pods</h2>
 <p>Per creare, avviare, stoppare, mettere in pausa (non consuma CPU, ma è in memoria), riprendere dalla pausa, riavviare, visualizzare lo stato, visualizzare i log ed infine eliminare un pod, si utilizzano i seguenti comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pod create --name nome_pod
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pod create --name nome_pod
 </span></span><span style="display:flex;"><span>podman pod  start        nome_pod
 </span></span><span style="display:flex;"><span>podman pod  stop         nome_pod
 </span></span><span style="display:flex;"><span>podman pod  pause        nome_pod
@@ -385,39 +385,39 @@
 </span></span><span style="display:flex;"><span>podman pod  logs         nome_pod
 </span></span><span style="display:flex;"><span>podman pod  rm           nome_pod
 </span></span></code></pre></div><p>Per aggiungere o rimuovere un container in un pod si utilizzano i seguenti comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pod add  nome_pod  nome_container
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pod add  nome_pod  nome_container
 </span></span><span style="display:flex;"><span>podman pod rm   nome_pod  nome_container
 </span></span></code></pre></div><p>E&rsquo; possibile visualizzare i pod creati con il comando seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pod ls
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pod ls
 </span></span></code></pre></div><p>E&rsquo; possibile creare un file YAML di definizione con la sintassi richiesta da Kubernetes a partire dal pod creato, usando il seguente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman generate kube my-pod &gt;&gt; my-pod.yaml
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman generate kube my-pod &gt;&gt; my-pod.yaml
 </span></span></code></pre></div><p>Questo comando è ancora in fase beta, per cui può generare numerose variabili d&rsquo;ambiente che necessitano di pulizia.</p>
 <p>Una volta che si ha il file YAML di definizione (con la sintassi richiesta da Kubernetes), si può creare il pod con il seguente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman play kube ./my-pod.yaml
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman play kube ./my-pod.yaml
 </span></span></code></pre></div><h2 id="docker-compose">Docker compose</h2>
 <p>Il Dockerfile è pensato per creare un&rsquo;immagine, non un container, quindi non bisogna confonderlo con &ldquo;docker-compose&rdquo;.</p>
 <p>Il comando docker-compose permette di gestire più container con lo stesso comando, infatti si parla di applicazioni multi-container. Il file <code>compose.yaml</code> descrive i vari container ed indica per ogni container il nome da assegnare, le porte da aprire, i volumi da montare, il comando da eseguire, ecc&hellip;</p>
 <p>La gestione di più container (specificati nel file compose.yaml) è simile alla gestione del singolo container, per cui di seguito si riportano i comandi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose -f compose.yaml up
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose -f compose.yaml up
 </span></span><span style="display:flex;"><span>docker-compose -f compose.yaml up -d
 </span></span><span style="display:flex;"><span>docker-compose -f compose.yaml down
-</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml start   <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml stop    <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml pause   <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml unpause <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml restart <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml exec    <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>command<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml logs    <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml top     <span style="color:#f92672">[</span>service_name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml start   [service_name]
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml stop    [service_name]
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml pause   [service_name]
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml unpause [service_name]
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml restart [service_name]
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml exec    [service_name] [command]
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml logs    [service_name]
+</span></span><span style="display:flex;"><span>docker-compose -f compose.yaml top     [service_name]
 </span></span></code></pre></div><p>Alcuni modelli per installare le configurazioni più utilizzate sono i seguenti:</p>
 <ul>
 <li>LAMP (Linux, Apache, MariaDB e PHP) + PhpMyAdmin : <a href="/static/coding/tools/dockerfiles/lamp-docker-compose.yml">composer.yml</a></li>
 </ul>
 <h2 id="docker-swarm">Docker Swarm</h2>
 <p>Verificare se swarm è attivo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker system info | grep -i <span style="color:#e6db74">&#34;swarm&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker system info | grep -i <span style="color:#009c00">&#34;swarm&#34;</span>
 </span></span></code></pre></div><p>Inizializzare swarm:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker swarm init
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker swarm init
 </span></span></code></pre></div><!--
 
 ## Creazione di immagini

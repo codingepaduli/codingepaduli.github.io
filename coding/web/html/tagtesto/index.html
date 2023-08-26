@@ -238,9 +238,9 @@
 <p>Esistono 7 livelli di titolo, che servono a dividere il documento in più capitoli e sotto-capitoli, in modo da poter dare una struttura &ldquo;alberata&rdquo; al documento. Questi livelli sono espressi dalle etichette <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code> ed <code>h7</code>, anche se si consiglia l&rsquo;uso fino al terzo livello.</p>
 <p>Il titolo di primo livello è generato dall&rsquo;etichetta <code>h1</code>, che ha il simbolo di apertura <code>&lt;h1&gt;</code> ed il simbolo di chiusura <code>&lt;/h1&gt;</code>.</p>
 <p>Di seguito si riporta un esempio di codice per generare i titoli dei primi tre livelli:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt; Esempio di titolo di primo livello &lt;/<span style="color:#f92672">h1</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h2</span>&gt; Esempio di titolo di secondo livello &lt;/<span style="color:#f92672">h2</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h3</span>&gt; Esempio di titolo di terzo livello &lt;/<span style="color:#f92672">h3</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;h1&gt; Esempio di titolo di primo livello &lt;/h1&gt;
+</span></span><span style="display:flex;"><span>&lt;h2&gt; Esempio di titolo di secondo livello &lt;/h2&gt;
+</span></span><span style="display:flex;"><span>&lt;h3&gt; Esempio di titolo di terzo livello &lt;/h3&gt;
 </span></span></code></pre></div><p>che vengono poi trasformati dal browser come si vede di seguito:</p>
 <p><img src="/static/coding/web/html/tagTesto-title-examples.png" alt="Esempio di titoli"></p>
 <h2 id="formattazione-carattere">Formattazione carattere</h2>
@@ -278,26 +278,26 @@ quando il mouse si ferma sopra questo, come ad esempio questo acronimo
 l&rsquo;altra per creare le formattazioni di testo desiderate.</p>
 <p>Ad esempio, per generare un testo grassetto, evidenziato e sottolineato, come
 <strong><mark><ins>questo testo</ins></mark></strong> si usa il codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">strong</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">mark</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">ins</span>&gt;questo testo&lt;/<span style="color:#f92672">ins</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">mark</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">strong</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;strong&gt;
+</span></span><span style="display:flex;"><span>    &lt;mark&gt;
+</span></span><span style="display:flex;"><span>        &lt;ins&gt;questo testo&lt;/ins&gt;
+</span></span><span style="display:flex;"><span>    &lt;/mark&gt;
+</span></span><span style="display:flex;"><span>&lt;/strong&gt;
 </span></span></code></pre></div><p>Se si vuole che tutto il testo sia grassetto ed evidenziato, ma solo una parte del testo sia sottolineata, come
 <strong><mark>questo <ins>testo</ins></mark></strong> si usa il codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">strong</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">mark</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;strong&gt;
+</span></span><span style="display:flex;"><span>    &lt;mark&gt;
 </span></span><span style="display:flex;"><span>      questo
-</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">ins</span>&gt;testo&lt;/<span style="color:#f92672">ins</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">mark</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">strong</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;ins&gt;testo&lt;/ins&gt;
+</span></span><span style="display:flex;"><span>    &lt;/mark&gt;
+</span></span><span style="display:flex;"><span>&lt;/strong&gt;
 </span></span></code></pre></div><h2 id="liste-puntate-o-numerate">Liste puntate o numerate</h2>
 <p>L&rsquo;etichetta <code>ol</code> genera una lista numerata di elementi, analogamente l&rsquo;etichetta <code>ul</code> genera una lista di elementi non ordinata. Gli elementi della lista devono essere contenuti nell&rsquo;etichetta <code>li</code>.</p>
 <p>Ad esempio, il seguente codice genera la lista numerata (con numeri romani) di browser pessimi per la navigazione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ol</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;Internet Explorer&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;Safari&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ol</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;ol&gt;
+</span></span><span style="display:flex;"><span>    &lt;li&gt;Internet Explorer&lt;/li&gt;
+</span></span><span style="display:flex;"><span>    &lt;li&gt;Safari&lt;/li&gt;
+</span></span><span style="display:flex;"><span>&lt;/ol&gt;
 </span></span></code></pre></div><p>Entrambe le liste prevedono lo stile di numerazione, descritto dall&rsquo;attributo <code>type</code> (di recente sostituito dalla proprietà CSS <code>list-style-type</code>) che può avere uno dei seguenti valori:</p>
 <ul>
 <li><code>1</code> elementi della lista elencati con numeri latini;</li>
@@ -308,21 +308,21 @@ l&rsquo;altra per creare le formattazioni di testo desiderate.</p>
 <li><code>circle</code> elementi della lista elencati con dei cerchietti vuoti;</li>
 </ul>
 <p>Ad esempio, il seguente codice genera la lista numerata (con numeri romani) di browser pessimi per la navigazione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ol</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;I&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;Internet Explorer&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;Safari&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ol</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;ol type=<span style="color:#009c00">&#34;I&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;li&gt;Internet Explorer&lt;/li&gt;
+</span></span><span style="display:flex;"><span>    &lt;li&gt;Safari&lt;/li&gt;
+</span></span><span style="display:flex;"><span>&lt;/ol&gt;
 </span></span></code></pre></div><p>La lista viene visualizzata di seguito:</p>
 <ol type="I">
     <li>Internet Explorer</li>
     <li>Safari</li>
 </ol>
 <p>Altro esempio, il seguente codice genera la lista non ordinata di browser ottimi per la navigazione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;disc&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;Firefox&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;Chrome&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;Edge (Microsoft)&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;ul type=<span style="color:#009c00">&#34;disc&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;li&gt;Firefox&lt;/li&gt;
+</span></span><span style="display:flex;"><span>    &lt;li&gt;Chrome&lt;/li&gt;
+</span></span><span style="display:flex;"><span>    &lt;li&gt;Edge (Microsoft)&lt;/li&gt;
+</span></span><span style="display:flex;"><span>&lt;/ul&gt;
 </span></span></code></pre></div><p>La lista viene visualizzata di seguito:</p>
 <ul type="disc">
     <li>Firefox</li>
@@ -331,12 +331,12 @@ l&rsquo;altra per creare le formattazioni di testo desiderate.</p>
 </ul>
 <h2 id="etichette-per-le-definizioni-e-liste-di-definizioni">Etichette per le definizioni e liste di definizioni</h2>
 <p>Per indicare un termine del quale si vuole dare una definizione, si usa l&rsquo;etichetta <strong>dfn</strong>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">dfn</span>&gt;WWW&lt;/<span style="color:#f92672">dfn</span>&gt; sta per &#34;World wide web.
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;dfn&gt;WWW&lt;/dfn&gt; sta per &#34;World wide web.
 </span></span></code></pre></div><p>Quando si vuole creare una lista di definizioni si usano le etichette <code>dl</code>, <code>dt</code> e <code>dd</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">dl</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">dt</span>&gt;Firefox&lt;/<span style="color:#f92672">dt</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">dd</span>&gt;A free, open source, cross-platform, graphical web browser.&lt;/<span style="color:#f92672">dd</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">dl</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;dl&gt;
+</span></span><span style="display:flex;"><span>    &lt;dt&gt;Firefox&lt;/dt&gt;
+</span></span><span style="display:flex;"><span>    &lt;dd&gt;A free, open source, cross-platform, graphical web browser.&lt;/dd&gt;
+</span></span><span style="display:flex;"><span>&lt;/dl&gt;
 </span></span></code></pre></div><p>La lista viene visualizzata di seguito:</p>
 <dl>
     <dt>Firefox</dt>
@@ -352,21 +352,21 @@ l&rsquo;altra per creare le formattazioni di testo desiderate.</p>
 <li><code>rowspan</code> permette ad una cella di espandersi su più righe.</li>
 </ul>
 <p>Ad esempio, una tabella di 3 righe e 2 colonne viene generata dal seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: 5px solid green;&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">caption</span>&gt;Tabella con stile&lt;/<span style="color:#f92672">caption</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">th</span>&gt;header1&lt;/<span style="color:#f92672">th</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">th</span>&gt;header2&lt;/<span style="color:#f92672">th</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;data1&lt;/<span style="color:#f92672">td</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;$100&lt;/<span style="color:#f92672">td</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;data2&lt;/<span style="color:#f92672">td</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;$50&lt;/<span style="color:#f92672">td</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">table</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;table style=<span style="color:#009c00">&#34;border: 5px solid green;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;caption&gt;Tabella con stile&lt;/caption&gt;
+</span></span><span style="display:flex;"><span>    &lt;tr&gt;
+</span></span><span style="display:flex;"><span>        &lt;th&gt;header1&lt;/th&gt;
+</span></span><span style="display:flex;"><span>        &lt;th&gt;header2&lt;/th&gt;
+</span></span><span style="display:flex;"><span>    &lt;/tr&gt;
+</span></span><span style="display:flex;"><span>    &lt;tr&gt;
+</span></span><span style="display:flex;"><span>        &lt;td&gt;data1&lt;/td&gt;
+</span></span><span style="display:flex;"><span>        &lt;td&gt;$100&lt;/td&gt;
+</span></span><span style="display:flex;"><span>    &lt;/tr&gt;
+</span></span><span style="display:flex;"><span>    &lt;tr&gt;
+</span></span><span style="display:flex;"><span>        &lt;td&gt;data2&lt;/td&gt;
+</span></span><span style="display:flex;"><span>        &lt;td&gt;$50&lt;/td&gt;
+</span></span><span style="display:flex;"><span>    &lt;/tr&gt;
+</span></span><span style="display:flex;"><span>&lt;/table&gt;
 </span></span></code></pre></div><p>La tabella viene visualizzata di seguito:</p>
 <table style="border: 5px solid green;">
     <caption>Tabella con stile</caption>
@@ -384,21 +384,21 @@ l&rsquo;altra per creare le formattazioni di testo desiderate.</p>
     </tr>
 </table>
 <p>Volendo riportare un esempio di codice che preveda l&rsquo;espansione delle celle su più righe o colonne, possiamo creare una tabella di 3 righe e 2 colonne, in cui l&rsquo;ultima riga si espande su entrambe le colonne, mentre la prima cella in alto a sinistra occupa due righe:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border: 5px solid green;&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">caption</span>&gt;Tabella con stile&lt;/<span style="color:#f92672">caption</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">rowspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;Cella espansa su 2 righe grazie all&#39;attributo rowspan=&#34;2&#34; &lt;/<span style="color:#f92672">th</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;34£&lt;/<span style="color:#f92672">td</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!−− Cella mancante perché occupata dalla cella che si è espansa −−&gt;</span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;$100&lt;/<span style="color:#f92672">td</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;Cella espansa su 2 colonne, grazie all&#39;attributo colspan=&#34;2&#34;&lt;/<span style="color:#f92672">th</span>&gt;
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!−− Cella mancante perché occupata dalla cella che si è espansa −−&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">table</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;table style=<span style="color:#009c00">&#34;border: 5px solid green;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;caption&gt;Tabella con stile&lt;/caption&gt;
+</span></span><span style="display:flex;"><span>    &lt;tr&gt;
+</span></span><span style="display:flex;"><span>        &lt;th rowspan=<span style="color:#009c00">&#34;2&#34;</span>&gt;Cella espansa su 2 righe grazie all&#39;attributo rowspan=&#34;2&#34; &lt;/th&gt;
+</span></span><span style="display:flex;"><span>        &lt;td&gt;34£&lt;/td&gt;
+</span></span><span style="display:flex;"><span>    &lt;/tr&gt;
+</span></span><span style="display:flex;"><span>    &lt;tr&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#f00;font-style:italic">&lt;!−− Cella mancante perché occupata dalla cella che si è espansa −−&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;td&gt;$100&lt;/td&gt;
+</span></span><span style="display:flex;"><span>    &lt;/tr&gt;
+</span></span><span style="display:flex;"><span>    &lt;tr&gt;
+</span></span><span style="display:flex;"><span>        &lt;th colspan=<span style="color:#009c00">&#34;2&#34;</span>&gt;Cella espansa su 2 colonne, grazie all&#39;attributo colspan=&#34;2&#34;&lt;/th&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#f00;font-style:italic">&lt;!−− Cella mancante perché occupata dalla cella che si è espansa −−&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;/tr&gt;
+</span></span><span style="display:flex;"><span>&lt;/table&gt;
 </span></span></code></pre></div><p>La tabella viene visualizzata di seguito:</p>
 <table style="border: 5px solid green;">
     <caption>Tabella con stile</caption>

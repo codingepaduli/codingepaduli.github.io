@@ -251,15 +251,15 @@
 <li><code>onload</code>: la pagina web è stato caricata;</li>
 </ul>
 <p>Un esempio di codice che lega il click su un pulsante alla funzione JavaScript <code>alert</code> è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clicca&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;cliccato&#39;)&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;button&#34;</span> value=<span style="color:#009c00">&#34;clicca&#34;</span> onclick=<span style="color:#009c00">&#34;alert(&#39;cliccato&#39;)&#34;</span>&gt;
 </span></span></code></pre></div><p>Ovviamente le funzioni JavaScript possono essere definite dal programmatore, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">definitaDaUtente</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;questa è una funzione definita dal programmatore&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">function</span> definitaDaUtente() {
+</span></span><span style="display:flex;"><span>    alert(<span style="color:#009c00">&#39;questa è una funzione definita dal programmatore&#39;</span>);
 </span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clicca&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;definitaDaUtente()&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;button&#34;</span> value=<span style="color:#009c00">&#34;clicca&#34;</span> onclick=<span style="color:#009c00">&#34;definitaDaUtente()&#34;</span>&gt;
 </span></span></code></pre></div><p>La selezione di un elemento da uno script avviene attraverso le funzioni <code>document.querySelector</code> e <code>document.querySelectorAll</code>, che permettono di selezionare rispettivamente un&rsquo;elemento ed una collezione di elementi.</p>
 <p>Entrambe le funzioni prendono come parametro un <strong>selettore CSS</strong>, ovvero una stringa indicante l&rsquo;elemento o gli elementi da selezionare.</p>
 <p>Per un dettaglio completo sulla <strong>sintassi CSS</strong> si rimanda agli articoli successivi ed alle specifiche di ECMAScript. Al momento si descriveranno i 3 selettori principali:</p>
@@ -269,19 +269,19 @@
 <li><code>tag</code>: serve a selezionare gli elementi per tipo;</li>
 </ul>
 <p>Di seguito, il codice JavaScript che utilizza i selettori suddetti per selezionare gli elementi della pagina web di esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;titolo&#34;</span>&gt;Titolo&lt;/<span style="color:#f92672">h1</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo&#34;</span>&gt;Questo è un paragrafo&lt;/<span style="color:#f92672">p</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nome&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;h1 id=<span style="color:#009c00">&#34;titolo&#34;</span>&gt;Titolo&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo&#34;</span>&gt;Questo è un paragrafo&lt;/p&gt;
+</span></span><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;text&#34;</span> id=<span style="color:#009c00">&#34;nome&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tag1Titolo</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#titolo&#34;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tag1Paragrafo</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#paragrafo&#34;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tag1Nome</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#nome&#34;</span>);
+</span></span><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> tag1Titolo = document.querySelector(<span style="color:#009c00">&#34;#titolo&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> tag1Paragrafo = document.querySelector(<span style="color:#009c00">&#34;#paragrafo&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> tag1Nome = document.querySelector(<span style="color:#009c00">&#34;#nome&#34;</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tag2Titolo</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;h1&#34;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tag2Paragrafo</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;p&#34;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tag2Nome</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;input&#34;</span>);
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> tag2Titolo = document.querySelector(<span style="color:#009c00">&#34;h1&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> tag2Paragrafo = document.querySelector(<span style="color:#009c00">&#34;p&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> tag2Nome = document.querySelector(<span style="color:#009c00">&#34;input&#34;</span>);
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
 </span></span></code></pre></div><p>Come si può notare, agli elementi HTML è stato aggiunto un attributo ID per poterli selezionare attraverso il <strong>selettore CSS</strong> <code>#ID</code>. Quindi il selettore <code>#titolo</code> seleziona l&rsquo;elemento titolo, il selettore <code>#paragrafo</code> seleziona l&rsquo;elemento paragrafo ed il selettore <code>#nome</code> seleziona l&rsquo;elemento campo di input.</p>
 <p>Gli elementi HTML selezionati possiedono molte proprietà a cui è possibile fare accesso, tra le principali ci sono:</p>
 <ul>
@@ -291,27 +291,27 @@
 <li><code>value</code>: proprietà accessibile solo per i campi di input, restituisce il valore in formato stringa.</li>
 </ul>
 <p>Riprendendo l&rsquo;esempio precedente, è possibile scrivere nella console sia il contenuto che il valore degli elementi HTML, attraverso il seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;titolo&#34;</span>&gt;Titolo&lt;/<span style="color:#f92672">h1</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;paragrafo&#34;</span>&gt;Questo è un paragrafo&lt;/<span style="color:#f92672">p</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nome&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Inserisci il nome&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;h1 id=<span style="color:#009c00">&#34;titolo&#34;</span>&gt;Titolo&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo&#34;</span>&gt;Questo è un paragrafo&lt;/p&gt;
+</span></span><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;text&#34;</span> id=<span style="color:#009c00">&#34;nome&#34;</span> value=<span style="color:#009c00">&#34;Inserisci il nome&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">titolo</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#titolo&#34;</span>).<span style="color:#a6e22e">innerHTML</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">paragrafo</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#paragrafo&#34;</span>).<span style="color:#a6e22e">innerHTML</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">valoreInput</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#nome&#34;</span>).<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> titolo = document.querySelector(<span style="color:#009c00">&#34;#titolo&#34;</span>).innerHTML;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> paragrafo = document.querySelector(<span style="color:#009c00">&#34;#paragrafo&#34;</span>).innerHTML;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> valoreInput = document.querySelector(<span style="color:#009c00">&#34;#nome&#34;</span>).value;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">codiceHtmlTitolo</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#titolo&#34;</span>).<span style="color:#a6e22e">outerHTML</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">codiceHtmlParagrafo</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#paragrafo&#34;</span>).<span style="color:#a6e22e">outerHTML</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">codiceHtmlInput</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#nome&#34;</span>).<span style="color:#a6e22e">outerHTML</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> codiceHtmlTitolo = document.querySelector(<span style="color:#009c00">&#34;#titolo&#34;</span>).outerHTML;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> codiceHtmlParagrafo = document.querySelector(<span style="color:#009c00">&#34;#paragrafo&#34;</span>).outerHTML;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> codiceHtmlInput = document.querySelector(<span style="color:#009c00">&#34;#nome&#34;</span>).outerHTML;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">titolo</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">paragrafo</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">valoreInput</span>);
+</span></span><span style="display:flex;"><span>  console.info(titolo);
+</span></span><span style="display:flex;"><span>  console.info(paragrafo);
+</span></span><span style="display:flex;"><span>  console.info(valoreInput);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">codiceHtmlTitolo</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">codiceHtmlParagrafo</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#a6e22e">codiceHtmlInput</span>);
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  console.info(codiceHtmlTitolo);
+</span></span><span style="display:flex;"><span>  console.info(codiceHtmlParagrafo);
+</span></span><span style="display:flex;"><span>  console.info(codiceHtmlInput);
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
 </span></span></code></pre></div><p>L&rsquo;output prodotto è il seguente:</p>
 <pre tabindex="0"><code class="language-output" data-lang="output">Titolo
 Questo è un paragrafo

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Debian GNU/Linux 12 Bookworm - Coding e Paduli</title>
+
+    <meta name="description" content="Debian GNU/Linux 12 Bookworm, il sistema operativo universale e completamente Libero">
+        <meta property="og:title" content="Debian GNU/Linux 12 Bookworm" />
+<meta property="og:description" content="Debian GNU/Linux 12 Bookworm, il sistema operativo universale e completamente Libero" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/opensource/debian12/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="openSource" />
+<meta property="article:published_time" content="2023-08-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-12T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="Debian GNU/Linux 12 Bookworm"/>
+<meta name="twitter:description" content="Debian GNU/Linux 12 Bookworm, il sistema operativo universale e completamente Libero"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-08-12T00:00:00Z">12-08-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/open-source/" rel="category">open source</a>, <a class="meta__link" href="/categories/software/" rel="category">software</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 2 minuti 
+        ( 381 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="debian-gnulinux-12-bookworm">Debian GNU/Linux 12 Bookworm</h1>
+<p><a href="https://www.debian.org/">Debian GNU/Linux</a>, il sistema operativo universale e completamente Libero.</p>
+<p>Come per l&rsquo;installazione degli altri sistemi operativi, si consiglia di preparare una penna USB con <a href="https://www.ventoy.net/en/index.html">Ventoy</a>, un tool open source per creare una penna USB avviabile (bootable, ovvero capace di avviare il sistema).</p>
+<p>Effettuato ciò, scarichiamo il file ISO di Debian 12 Bookworm, lo copiamo sulla pennetta USB e quindi avviamo il computer dalla pennetta.</p>
+<p><img src="/static/openSource/Debian12/debian-live.png" alt="Menu principale"></p>
+<!-- TODO
+
+Di seguito le schermate ed i passi del processo di installazione.
+
+![Menu principale](/static/openSource/Debian12/debian-installer-00-steps.png)
+
+-->
+<h2 id="selezione-della-lingua">Selezione della lingua</h2>
+<p><img src="/static/openSource/Debian12/debian-installer-01-localechooser-languagelist.png" alt="Menu principale"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-02-localechooser-languagelist-translation-warn.png" alt="Avviso traduzione"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-03-localechooser-position.png" alt="Posizione"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-04-localechooser-keyboard-config.png" alt="Configurazione della tastiera"></p>
+<h2 id="configurazione-della-rete">Configurazione della rete</h2>
+<p><img src="/static/openSource/Debian12/debian-installer-10-netcfg-get-host.png" alt="Configurazione del dominio"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-11-netcfg-get-domain.png" alt="Configurazione del dominio"></p>
+<!-- TODO
+
+![Configurazione dell'interfaccia di rete](/static/openSource/Debian/debian-installer-06-netcfg-choose-interface.png)
+
+![Richiesta firmware](/static/openSource/Debian/debian-installer-07-netcfg-hw-detect-load-firmware.png)
+
+![Selezione rete wifi](/static/openSource/Debian/debian-installer-08-netcfg-wireless-essids-list.png)
+
+![Sicurezza rete wifi](/static/openSource/Debian/debian-installer-09-netcfg-wireless-security-type.png)
+
+![Password rete wifi](/static/openSource/Debian/debian-installer-10-netcfg-wireless-wpa.png)
+
+-->
+<h2 id="configurazione-utenti">Configurazione utenti</h2>
+<p><img src="/static/openSource/Debian12/debian-installer-20-root-password.png" alt="Password utente root"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-22-user-fullname.png" alt="Nome utente"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-23-user.png" alt="username"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-24-user-password.png" alt="Password utente"></p>
+<h2 id="gestione-dischi-e-partizioni">Gestione dischi e partizioni</h2>
+<p>Il Sistema Operativo gestisce i dispositivi di memorizzazione di massa del computer. La gestione può essere un&rsquo;operazione molto complessa, perché i dischi possono essere criptati, possono essere associati per formare un RAID (dall&rsquo;inglese &ldquo;Redundant Array of Independent Disks&rdquo; ovvero &ldquo;insieme ridondante di dischi indipendenti&rdquo;), possono essere situati in sistemi &ldquo;remoti&rdquo; e quindi accessibili solo tramite rete.</p>
+<p>Per questo motivo, il kernel non si occupa di rendere disponibili i dischi, ma carica in memoria un disco chiamato <code>initramfs</code> (initial ram file system) che contiene i driver necessari alla gestione dei dischi. Saranno poi gli altri programmi, esterni al kernel, che si occuperanno di renderli disponibili durante l&rsquo;avvio del sistema.</p>
+<p>Ogni disco può essere suddiviso in <strong>partizioni</strong>, ovvero unità logiche ed indipendenti di memorizzazione dati, gestite separatamente dal Sistema Operativo. Un disco contiene sempre almeno una partizione.</p>
+<p>L&rsquo;elenco delle partizioni di un disco è contenuto nella tabella delle partizioni, che si trova sempre nella parte iniziale del disco.</p>
+<p>In passato la tabella delle partizioni era contenuta nel <strong>MBR</strong> (dall&rsquo;inglese Master Boot Record), uno standard che limitava la dimensione dei dischi ad un massimo di due terabyte (TB).</p>
+<p>I dispositivi moderni invece memorizzano questa tabella nello standard <strong>GPT</strong> (dall&rsquo;inglese GUID Partition Table) e non hanno il limite di dimensione del disco a due terabyte.</p>
+<p>Ogni sistema operativo ha le sue &ldquo;regole&rdquo; per identificare un disco o una partizione.</p>
+<p>Windows identifica ogni partizione con una lettera dell&rsquo;unità. Quindi abbiamo le partizioni:</p>
+<ul>
+<li><code>c:</code></li>
+<li><code>d:</code></li>
+<li><code>e:</code></li>
+<li>&hellip;</li>
+</ul>
+<p>Linux identifica ogni disco con un file. Abbiamo quindi i dischi:</p>
+<ul>
+<li><code>/dev/sda</code></li>
+<li><code>/dev/sdb</code></li>
+<li><code>/dev/sdc</code></li>
+<li>&hellip;</li>
+</ul>
+<p>In ogni disco abbiamo poi le differenti partizioni, identificate a loro volta con un file. Abbiamo quindi:</p>
+<ul>
+<li>
+<p>Le partizioni del disco <code>/dev/sda</code>:</p>
+<ul>
+<li><code>/dev/sda1</code></li>
+<li><code>/dev/sda2</code></li>
+<li><code>/dev/sda3</code></li>
+<li>&hellip;</li>
+</ul>
+</li>
+<li>
+<p>Le partizioni del disco <code>/dev/sdb</code>:</p>
+<ul>
+<li><code>/dev/sdb1</code></li>
+<li><code>/dev/sdb2</code></li>
+<li><code>/dev/sdb3</code></li>
+<li>&hellip;</li>
+</ul>
+</li>
+</ul>
+<p><img src="/static/openSource/Debian12/debian-installer-30-partitioning.png" alt="Metodo di partizionamento"></p>
+<h3 id="partizionamento-manuale">Partizionamento manuale</h3>
+<p><img src="/static/openSource/Debian12/debian-installer-31-partitioning-setup-disk.png" alt="Partizionamento Disco"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-32-partitioning-setup-disk-confirm.png" alt="Conferma partizionamento Disco"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-33-partitioning-setup-partition.png" alt="Setup partizione"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-34-partitioning-filesystems-new.png" alt="Nuova partizione"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-35-partitioning-filesystems-size.png" alt="Dimensione partizione"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-36-partitioning-filesystems-type.png" alt="Tipo partizione"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-37-partitioning-filesystems-start.png" alt="Inizio partizione"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-38-partitioning-filesystems-ext4.png" alt="Default filesystem ext4"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-39-partitioning-filesystems-swap.png" alt="filesystem swap"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-40-partitioning-filesystems-complete.png" alt="filesystem swap"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-41-partitioning-setup-partition.png" alt="Setup partizione"></p>
+<!-- Add screenshot for other partitions -->
+<h2 id="configurazione-mirror-apt-per-aggiornamento-software">Configurazione mirror apt per aggiornamento software</h2>
+<p><img src="/static/openSource/Debian12/debian-installer-60-apt-setup-use-mirror.png" alt="Scelta mirror apt"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-61-apt-mirror-availables.png" alt="Lista mirror apt"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-62-apt-mirror-selection.png" alt="Scelta mirror apt"></p>
+<p><img src="/static/openSource/Debian12/debian-installer-63-apt-proxy-http.png" alt="Proxy Http per apt"></p>
+<!-- TODO
+
+## Popularity contest
+
+![Popularity contest](/static/openSource/Debian/debian-installer-50-popularity-contest.png)
+
+## Software selection
+
+![Software selection](/static/openSource/Debian/debian-installer-60-software-selection.png)
+
+## Esecuzione shell
+
+![Esecuzione shell](/static/openSource/Debian/debian-installer-70-utils-shell.png)
+
+-->
+<h2 id="fine-installazione">Fine installazione</h2>
+<p><img src="/static/openSource/Debian12/debian-installer-99-finished-and-reboot.png" alt="Fine"></p>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/opensource/debian/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">Debian GNU/Linux</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

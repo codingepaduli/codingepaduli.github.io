@@ -240,54 +240,54 @@
 <p>Anche gli amministratori possono utilizzare crontab, ed il corrispondente anacrontab, per gestire i task ricorrenti.</p>
 <h2 id="configurazione-di-cron-per-lamministratore">Configurazione di cron per l&rsquo;amministratore</h2>
 <p>Per verificare lo stato del servizio cron, eseguire come utente root il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status cron.service
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status cron.service
 </span></span></code></pre></div><p>Sia l&rsquo;amministratore, sia le applicazioni di sistema possono inserire i propri task nelle directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/etc/cron.d/
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/etc/cron.d/
 </span></span><span style="display:flex;"><span>/var/spool/cron
 </span></span></code></pre></div><p>Gli amministratori possono comunque utilizzare crontab per gestire i task ricorrenti. I task vengono raccolti nel file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/etc/crontab
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/etc/crontab
 </span></span></code></pre></div><h2 id="crontab">Crontab</h2>
 <p>Per autorizzare gli utenti all&rsquo;uso di crontab, creare (o modificare) il file <code>/etc/cron.allow</code> (utente proprietario <code>root</code> e gruppo proprietario <code>crontab</code>) ed inserire una riga per ogni utente autorizzato.</p>
 <p>Crontab si occupa di gestire il file in cui saranno indicati i task utente. Ogni file ha il nome dell&rsquo;utente che ha schedulato i task.</p>
 <p>Ogni utente abilitato ha il file dei task posizionato nella cartella:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/spool/cron/crontabs
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/spool/cron/crontabs
 </span></span></code></pre></div><p>Questo file deve essere modificato <strong>esclusivamente</strong> attraverso il comando <code>crontab -e</code>, poiché questo comando verifica la sintassi del file e riavvia il demone <code>cron.d</code>.</p>
 <p>Ogni task eseguito prevede l&rsquo;invio dell&rsquo;output tramite una mail destinata all&rsquo;utente. Le email sono memorizzate nella cartella:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/spool/mail/
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/spool/mail/
 </span></span></code></pre></div><h3 id="configurazione-primo-job-con-crontab">Configurazione primo job con crontab</h3>
 <p>Per schedulare un nuovo task, sono necessari i seguenti step:</p>
 <ol>
 <li>
 <p>Selezionare l&rsquo;editor per editare i task, aggiungendo al file <code>.profile</code> una riga in cui si specifica la variabile:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/usr/bin/micro&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export EDITOR=<span style="color:#009c00">&#34;/usr/bin/micro&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>Eseguire il comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crontab -e
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crontab -e
 </span></span></code></pre></div></li>
 <li>
 <p>Indicare le variabili <code>SHELL</code>, <code>PATH</code> ed eventualmente <code>MAILTO</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SHELL<span style="color:#f92672">=</span>/bin/bash
-</span></span><span style="display:flex;"><span>PATH<span style="color:#f92672">=</span>/usr/sbin:/usr/bin:/sbin:/bin:/root/bin:/bin
-</span></span><span style="display:flex;"><span>MAILTO<span style="color:#f92672">=</span>root@example.com
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SHELL=/bin/bash
+</span></span><span style="display:flex;"><span>PATH=/usr/sbin:/usr/bin:/sbin:/bin:/root/bin:/bin
+</span></span><span style="display:flex;"><span>MAILTO=root@example.com
 </span></span></code></pre></div></li>
 <li>
 <p>Inserire l&rsquo;espressione che indica l&rsquo;intervallo di ripetizione (da <a href="https://crontab.guru/">https://crontab.guru/</a>) seguito dal comando (percorso completo) da eseguire:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>@reboot /bin/date <span style="color:#e6db74">&#34;+\%F-\%T - Cron started&#34;</span> &gt;&gt; /home/io/login.txt 2&gt;&amp;<span style="color:#ae81ff">1</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>@reboot /bin/date <span style="color:#009c00">&#34;+\%F-\%T - Cron started&#34;</span> &gt;&gt; /home/io/login.txt 2&gt;&amp;1
 </span></span></code></pre></div></li>
 </ol>
 <p>Riavviando il sistema, l&rsquo;utente dovrebbe trovare nella propria cartella <code>/home/io</code> il file <code>login.txt</code> con la data e l&rsquo;ora di esecuzione del primo job schedulato.</p>
 <h2 id="rilevare-gli-errori">Rilevare gli errori</h2>
 <p>Nel caso un task non sia eseguito, si può cercare una traccia di eventuali errori riferiti a cron nei file seguenti:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep <span style="color:#e6db74">&#39;cron&#39;</span> /var/log/syslog
-</span></span><span style="display:flex;"><span>grep <span style="color:#e6db74">&#39;cron&#39;</span> /var/log/messages
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep <span style="color:#009c00">&#39;cron&#39;</span> /var/log/syslog
+</span></span><span style="display:flex;"><span>grep <span style="color:#009c00">&#39;cron&#39;</span> /var/log/messages
 </span></span></code></pre></div><p><strong>I commenti non sono ammessi sulla stella linea di un comando o di una variabile, poiché vengono interpretati come parte del comando o della variabile.</strong></p>
 <p><strong>Il carattere <code>%</code> è interpretato come <code>new line</code>, per poterlo utilizzare come carattere deve essere preceduto da un &ldquo;escape&rdquo; <code>\</code>.</strong></p>
 <p>Dato che l&rsquo;output di ogni task eseguito è salvato in una mail destinata all&rsquo;utente, eventuali messaggi di errore possono venire salvati nelle mail. Per una ricerca di questi errori, visualizzare i file presenti nella cartella:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/spool/mail/
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/spool/mail/
 </span></span></code></pre></div><h2 id="sintassi-di-schedulazione-di-cron">Sintassi di schedulazione di cron</h2>
 <p>La sintassi standard di una regola di cron è:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>minuto ora giornoMese mese giornoSettimana  job
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>minuto ora giornoMese mese giornoSettimana  job
 </span></span></code></pre></div><table>
 <thead>
 <tr>
@@ -393,43 +393,43 @@ Se l&rsquo;orario di esecuzione è alle 2:30 di notte, allora il task non sarà 
 </table>
 <h3 id="esempi-di-schedulazione">Esempi di schedulazione</h3>
 <p>Per lanciare il comando ogni giorno:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>@daily comando
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>@daily comando
 </span></span></code></pre></div><p>Per lanciare il comando ogni giorno alle 7.30:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>30 7 * * * comando
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>30 7 * * * comando
 </span></span></code></pre></div><p>Per lanciare il comando il giorno 1 ed il giorno 16 dei mesi che vanno da aprile a ottobre:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>26 * 1,16 4-10 * comando
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>26 * 1,16 4-10 * comando
 </span></span></code></pre></div><p>Per lanciare il comando nei mesi che vanno da aprile a ottobre, il giorno 1 ed il giorno 16 ma anche il lunedì dei mesi predetti:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>26 * 1,16 4-10 1 comando
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>26 * 1,16 4-10 1 comando
 </span></span></code></pre></div><p>Per lanciare il comando alla fine di ogni mese, dato che non c&rsquo;è l&rsquo;opzione, si può usare il giorno successivo, quindi il primo del mese, magari alle due di notte:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>0 2 1 * * comando
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>0 2 1 * * comando
 </span></span></code></pre></div><p>Si vuole lanciare il comando ogni 5 minuti delle ore lavorative (9-18), ma solo un&rsquo;ora si ed un&rsquo;ora no. Ricordando che la regola <code>A/B</code> viene eseguito solo quando il resto della divisione è zero, la si può sfruttare per specificare l&rsquo;esecuzione nelle ore pari, dato che solo le ore pari hanno resto zero, per cui l&rsquo;espressione <code>9-18/2</code> realizza quanto desiderato:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>*/5 9-18/2 * * * comando
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>*/5 9-18/2 * * * comando
 </span></span></code></pre></div><h3 id="redirezione-output">Redirezione output</h3>
 <p>Aggiungendo una redirezione, l&rsquo;output del task finisce nel file di log, come con la regola:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>@reboot /bin/date &#34;+\%F-\%T - Cron started&#34; &gt;&gt; /home/io/login.txt
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>@reboot /bin/date &#34;+\%F-\%T - Cron started&#34; &gt;&gt; /home/io/login.txt
 </span></span></code></pre></div><p>E&rsquo; possibile redirezionare il log ed evitare che la mail venga inviata, con la regola:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>@reboot /bin/date &#34;+\%F-\%T - Cron started&#34; &gt;&gt; /home/io/login.txt 2&gt;&amp;1
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>@reboot /bin/date &#34;+\%F-\%T - Cron started&#34; &gt;&gt; /home/io/login.txt 2&gt;&amp;1
 </span></span></code></pre></div><p>E&rsquo; possibile verificare il valore delle variabili con le redirezioni:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/bin/echo $PATH &gt; /root/path.txt
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>/bin/echo $PATH &gt; /root/path.txt
 </span></span><span style="display:flex;"><span>/usr/bin/env &gt; /root/allEvnVars.txt
 </span></span></code></pre></div><h2 id="errori-tipici">Errori tipici</h2>
 <p>Tutti i comandi devono terminare con una nuova linea.</p>
 <p>I caratteri speciali devono essere con escape (ad esempio il segno <code>%</code> deve essere scritto <code>\%</code> );</p>
 <p>Esegui gli script tramite la shell corretta indicandola con:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">#!/bin/bash
 </span></span></span></code></pre></div><p>oppure con</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;script.sh&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/bin/bash -c <span style="color:#009c00">&#34;script.sh&#34;</span>
 </span></span></code></pre></div><p>Se si hanno problemi di accesso o scrittura quando si esegue il comando <code>crontab -e</code>, allora controllare i permessi:</p>
 <p>Il comando crontab deve appartenere all&rsquo;utente root:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># set owner, group and permission on the command &#34;crontab&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f00;font-style:italic"># set owner, group and permission on the command &#34;crontab&#34;</span>
 </span></span><span style="display:flex;"><span>chown root:crontab /usr/bin/crontab
-</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">2755</span> /usr/bin/crontab          <span style="color:#75715e"># set the permission to -rwxr-sr-x</span>
+</span></span><span style="display:flex;"><span>chmod 2755 /usr/bin/crontab          <span style="color:#f00;font-style:italic"># set the permission to -rwxr-sr-x</span>
 </span></span></code></pre></div><p>La cartella <code>/var/spool/cron/crontabs</code> deve appartenere a <code>root</code> (permessi <code>rwx</code>), al gruppo <code>crontab</code> (permessi <code>ws</code>) e deve avere lo sticky bit (il permesso di esecuzione) impostato per tutti gli altri utenti. Per comprendere i permessi, ricordare che <code>T</code>=sticky bit senza permesso esecuzione, <code>t</code>=sticky bit con permesso esecuzione.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># set owner, group and permission on the spool folders</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f00;font-style:italic"># set owner, group and permission on the spool folders</span>
 </span></span><span style="display:flex;"><span>chown root:crontab /var/spool/cron/crontabs
-</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">1730</span> /var/spool/cron/crontabs  <span style="color:#75715e"># set the permission to drwx-wx--T</span>
+</span></span><span style="display:flex;"><span>chmod 1730 /var/spool/cron/crontabs  <span style="color:#f00;font-style:italic"># set the permission to drwx-wx--T</span>
 </span></span></code></pre></div><p>Se si hanno problemi a rimuovere lo sticky bit, usare la sintassi simbolica &ldquo;user meno S&rdquo; o &ldquo;others meno T&rdquo;:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod u-s /var/spool/cron/crontabs
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod u-s /var/spool/cron/crontabs
 </span></span></code></pre></div><p>I file interni alla cartella <code>/var/spool/cron/crontabs</code> devono appartenere ai rispettivi proprietari ed al gruppo <code>crontab</code> e devono avere il permesso di lettura e scrittura <code>rw</code> solo per il proprietario <code>-rw-------</code>, nessun altro permesso (al gruppo o altri) deve essere impostato, altrimenti i task vengono eseguiti in modalità insicura (messaggio &ldquo;INSECURE MODE (mode 0600 expected)&rdquo;).</p>
 
     </div>

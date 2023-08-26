@@ -321,34 +321,34 @@
 <ul>
 <li><strong>Riferimenti assoluti</strong>: E&rsquo; l&rsquo;approccio è utilizzato negli ambienti web di openprocessing e di p5.js. I file <code>p5.js</code>, <code>p5.sound.js</code> sono presenti su un sito internet, quindi la pagina web <code>index.html</code> li individua attraverso un indirizzo completo, come nel seguente esempio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/script&gt;
 </span></span></code></pre></div><ul>
 <li><strong>Riferimenti relativi</strong>: E&rsquo; l&rsquo;approccio utilizzato sia da Processing IDE, sia quando si lavora sul proprio computer senza accesso ad internet. I file <code>p5.js</code>, <code>p5.sound.js</code> devono essere salvati nella cartella del proprio progetto (o in una sotto-cartella), quindi la pagina web <code>index.html</code> li individua attraverso un indirizzo relativo. I file <code>sketch.js</code> e <code>style.css</code> sono sempre individuati con indirizzo relativo, come nel seguente esempio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sketch.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;p5.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;p5.sound.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;sketch.js&#34;</span>&gt;&lt;/script&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;stylesheet&#34;</span> type=<span style="color:#009c00">&#34;text/css&#34;</span> href=<span style="color:#009c00">&#34;style.css&#34;</span>&gt;
 </span></span></code></pre></div><ul>
 <li><strong>Codice in pagina</strong>: Gli stili grafici (contenuti nel file <code>style.css</code>) ed il file di progetto (contenuti nel file <code>sketch.js</code>) possono essere inclusi direttamente nella pagina, quindi questi file non sono presenti nella cartella di progetto perché sono scritti direttamente nella pagina web, come nel seguente esempio:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;style&gt;
+</span></span><span style="display:flex;"><span>    html, body { <span style="color:#00f">margin</span>: 0; <span style="color:#00f">padding</span>: 0; }
+</span></span><span style="display:flex;"><span>    canvas { <span style="color:#00f">display</span>: <span style="color:#00f">block</span>; }
+</span></span><span style="display:flex;"><span>&lt;/style&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>        createCanvas(400, 400);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">function</span> draw() {
+</span></span><span style="display:flex;"><span>        background(220);
+</span></span><span style="display:flex;"><span>        circle(100, 150, 50);
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
 </span></span></code></pre></div><h3 id="progetto-in-una-cartella-in-ambiente-locale">Progetto in una cartella in ambiente locale</h3>
 <p>Nel caso sia necessario, è possibile creare un progetto web in una nuova cartella (da creare sul proprio computer) e lavorare senza nessun ambiente di sviluppo. Per far ciò è necessario;</p>
 <ol>
@@ -357,68 +357,68 @@
 </li>
 <li>
 <p>creare il file di progetto <code>sketch.js</code> con il codice da scrivere;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>    createCanvas(400, 400);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">    </span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">function</span> draw() {
+</span></span><span style="display:flex;"><span>    background(220);
+</span></span><span style="display:flex;"><span>    circle(100, 150, 50);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 <li>
 <p>creare una nuova pagina web <code>index.html</code> con il contenuto seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;it&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;Sketch&lt;/<span style="color:#f92672">title</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;html lang=<span style="color:#009c00">&#34;it&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;head&gt;
+</span></span><span style="display:flex;"><span>        &lt;meta charset=<span style="color:#009c00">&#34;utf-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>        &lt;meta name=<span style="color:#009c00">&#34;viewport&#34;</span> content=<span style="color:#009c00">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;title&gt;Sketch&lt;/title&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Riferimenti --&gt;</span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sketch.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#f00;font-style:italic">&lt;!-- Riferimenti --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;script src=<span style="color:#009c00">&#34;p5.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>        &lt;script src=<span style="color:#009c00">&#34;p5.sound.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>        &lt;link rel=<span style="color:#009c00">&#34;stylesheet&#34;</span> type=<span style="color:#009c00">&#34;text/css&#34;</span> href=<span style="color:#009c00">&#34;style.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/head&gt;
+</span></span><span style="display:flex;"><span>    &lt;body&gt;
+</span></span><span style="display:flex;"><span>        &lt;script src=<span style="color:#009c00">&#34;sketch.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>    &lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
 </span></span></code></pre></div></li>
 </ol>
 <p>Il contenuto della cartella è il seguente:</p>
 <p><img src="/static/coding/web/p5js/intro-project-folder.png" alt="Progetto in una cartella" title="Progetto in una cartella"></p>
 <h3 id="progetto-in-un-unico-file-html">Progetto in un unico file HTML</h3>
 <p>E&rsquo; possibile creare un unico file HTML (da creare sul proprio computer) e lavorare senza nessun ambiente di sviluppo, indicando un riferimento assoluto alle librerie <code>p5.js</code> e <code>p5.sound.js</code> ed inglobando gli stili grafici ed il codice di progetto come codice in pagina, come nella pagina web seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;Sketch&lt;/<span style="color:#f92672">title</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;html&gt;
+</span></span><span style="display:flex;"><span>    &lt;head&gt;
+</span></span><span style="display:flex;"><span>        &lt;meta charset=<span style="color:#009c00">&#34;utf-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>        &lt;meta name=<span style="color:#009c00">&#34;viewport&#34;</span> content=<span style="color:#009c00">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;title&gt;Sketch&lt;/title&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Riferimenti --&gt;</span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">style</span>&gt;
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; }
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">canvas</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>; }
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">style</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Progetto p5.js --&gt;</span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#f00;font-style:italic">&lt;!-- Riferimenti --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;script src=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/addons/p5.sound.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>        &lt;style&gt;
+</span></span><span style="display:flex;"><span>            html, body { <span style="color:#00f">margin</span>: 0; <span style="color:#00f">padding</span>: 0; }
+</span></span><span style="display:flex;"><span>            canvas { <span style="color:#00f">display</span>: <span style="color:#00f">block</span>; }
+</span></span><span style="display:flex;"><span>        &lt;/style&gt;
+</span></span><span style="display:flex;"><span>    &lt;/head&gt;
+</span></span><span style="display:flex;"><span>    &lt;body&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#f00;font-style:italic">&lt;!-- Progetto p5.js --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;script&gt;
+</span></span><span style="display:flex;"><span>            <span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>                createCanvas(400, 400);
 </span></span><span style="display:flex;"><span>            }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#00f">function</span> draw() {
+</span></span><span style="display:flex;"><span>                background(220);
+</span></span><span style="display:flex;"><span>                circle(100, 150, 50);
 </span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/script&gt;
+</span></span><span style="display:flex;"><span>    &lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
 </span></span></code></pre></div><h3 id="struttura-del-programma">Struttura del programma</h3>
 <p>Sia che si lavori con una singola pagina web, sia che si utilizzi l&rsquo;editor online, sia che si organizzi il progetto in più file separati, nel codice devono sempre essere dichiarati i due blocchi principali <code>setup</code> e <code>draw</code>.</p>
 <p>Le istruzioni contenute nel blocco <code>setup()</code> sono eseguite una sola volta e servono ad impostare gli strumenti e le condizioni iniziali.</p>
@@ -534,9 +534,9 @@
 <li>la sintassi d&rsquo;uso, ovvero la firma della funzione. Ogni parametro formale, obbligatorio o facoltativo, è ulteriormente chiarito con l&rsquo;indicazione del tipo e della descrizione.</li>
 </ul>
 <p>Un esempio di documentazione di una funzione è quello della documentazione della funzione <code>createCanvas</code>. Nella documentazione è descritto che questa funzione ha il compito di creare l&rsquo;area da disegno nella quale poi disegnare. La sintassi, ovvero la firma, è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: createCanvas(w, h)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: createCanvas(w, h)
 </span></span></code></pre></div><p>I parametri formali sono <code>w</code> ed <code>h</code> e sono entrambi obbligatori, dato che non sono riportati tra parentesi quadre. La documentazione dei parametri riporta:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Parameters:
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    w    Number: width of the canvas
 </span></span><span style="display:flex;"><span>    h    Number: height of the canvas
 </span></span></code></pre></div><p>Quindi il parametro formale <code>w</code> è un numero e rappresenta la larghezza dell&rsquo;area da disegno. Il parametro formale <code>h</code> è un numero e rappresenta l&rsquo;altezza dell&rsquo;area da disegno.</p>
@@ -561,42 +561,42 @@
 <p>Tecnicamente si dice che si <strong>invoca</strong> una funzione quando il programmatore la utilizza per svolgere un determinato compito (o una sua parte).
 Piuttosto che scrivere un nuovo frammento di codice per eseguire il compito, invoca la funzione delegando a questa il compito da svolgere.</p>
 <p>Per invocare una funzione esistente, il programmatore verifica sulla documentazione la firma della funzione. Se nella firma non sono presenti parametri formali, la funzione può essere invocata semplicemente utilizzando la firma (il nome seguito da parentesi tonde):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">funzione</span>()
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>funzione()
 </span></span></code></pre></div><p>Se invece nella firma della funzione sono presenti parametri formali, allora ad ogni parametro formale si deve sostituire un valore. I valori assegnati prendono il nome di <strong>parametri attuali</strong>.</p>
 <p>In questo caso, per invocare una funzione, bisogna semplicemente scrivere il nome seguito da parentesi tonda aperta, la lista di parametri attuali, e la parentesi chiusa.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">funzione</span>(<span style="color:#a6e22e">p1</span>, <span style="color:#a6e22e">p2</span>, ...)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>funzione(p1, p2, ...)
 </span></span></code></pre></div><p>Ad esempio, volendo creare un&rsquo;area da disegno di larghezza 600 ed altezza 400, il primo passo consiste nel verificare sulla documentazione la firma della funzione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: createCanvas(w, h)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: createCanvas(w, h)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    w    Number: width of the canvas
 </span></span><span style="display:flex;"><span>    h    Number: height of the canvas
 </span></span></code></pre></div><p>A questo punto, sostituiamo al parametro formale <code>w</code> (che indica la larghezza dell&rsquo;area da disegno) il valore <code>600</code> ed al parametro formale <code>h</code> (che indica l&rsquo;altezza dell&rsquo;area da disegno) il valore <code>400</code>, invocando la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">600</span>, <span style="color:#ae81ff">400</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>createCanvas(600, 400);
 </span></span></code></pre></div><p>Nello stesso esempio, per creare un cerchio con centro alle coordinate (100, 150) e con diametro 50, verifichiamo sulla documentazione la firma della funzione:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: circle(x, y, diameter)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: circle(x, y, diameter)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x           Number: x-coordinate of the centre of the circle.
 </span></span><span style="display:flex;"><span>    y           Number: y-coordinate of the centre of the circle.
 </span></span><span style="display:flex;"><span>    diameter    Number: diameter of the circle.
 </span></span></code></pre></div><p>Sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del centro del cerchio) il valore <code>100</code>, al parametro formale <code>y</code> (che indica la coordinata y del centro del cerchio) il valore <code>150</code> ed al parametro formale <code>diameter</code> il valore <code>50</code>, quindi invochiamo la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(100, 150, 50);
 </span></span></code></pre></div><p>Queste istruzioni devono essere inserite o nel blocco <code>setup</code> oppure nel blocco <code>draw</code>. Ad esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">    </span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">50</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>    createCanvas(400, 400);
+</span></span><span style="display:flex;"><span>    circle(100,150, 50);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span><span style="color:#00f">function</span> draw() {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/p5js/intro-first-exercise.png" alt="p5.js - Primo esempio" title="p5.js - Primo esempio"></p>
 <p>Alcune operazioni, invece, devono essere effettuate una sola volta, come ad esempio la creazione dell&rsquo;area da disegno, per cui è <strong>errato</strong> invocare la funzione <code>createCanvas()</code> all&rsquo;interno del blocco <code>draw()</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ERRORE
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> draw() {
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// ERRORE
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    createCanvas(400, 400);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
     </div>

@@ -6,7 +6,16 @@
     <description>Recent content in software on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Fri, 17 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian GNU/Linux 12 Bookworm</title>
+      <link>http://codingepaduli.github.io/opensource/debian12/</link>
+      <pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/opensource/debian12/</guid>
+      <description>Debian GNU/Linux 12 Bookworm, il sistema operativo universale e completamente Libero</description>
+    </item>
+    
     <item>
       <title>Debian GNU/Linux</title>
       <link>http://codingepaduli.github.io/opensource/debian/</link>

@@ -1,0 +1,79 @@
+# shellcheck shell=bash
+#
+# ~/.bashrc_custom - il mio file personalizzato per le shell di login con bash.
+#
+# Ad ogni modifica, ricorda di eseguire "source .bashrc"
+#
+# Ricorda di aggiungere il seguente codice al file .bashrc
+#
+# if running bash
+# if [ -n "$BASH_VERSION" ]; then
+#    # include .profile_custom if it exists (use if -e for symbolic link)
+#    if [ -e "$HOME/.profile_custom" ]; then
+#        . "$HOME/.profile_custom"
+#    fi
+# fi
+
+if [ -e "$HOME/.bash_functions" ]; then
+    . "$HOME/.bash_functions"
+fi
+
+if [ -e "$HOME/.bash_functions_extra" ]; then
+    . "$HOME/.bash_functions_extra"
+fi
+
+: '
+if [ -e "$HOME/.bash_functions" ]; then
+    . "$HOME/.bash_functions_docker"
+fi
+'
+
+# Aggiungo JAVA_HOME
+if [ -n "$JAVA_HOME" ]; then
+    echo ""
+else
+    # Search the path with the command:
+    # readlink -ze $(which java) | xargs -0 dirname 
+    # export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+    JAVA_HOME=$(readlink -ze "$(which java)" | xargs -0 dirname | xargs -0 dirname)
+    export JAVA_HOME
+
+    # Only if needed
+    # export PATH=$PATH:$JAVA_HOME/bin
+fi
+
+# Imposto l'editor predefinito
+if [ -f "/usr/bin/micro" ]; then
+    export EDITOR="/usr/bin/micro"
+fi
+ 
+# Aggiungo l'SDK di Android al PATH
+if [ -d "$HOME/Sviluppo/AndroidSDK" ]; then
+    export ANDROID_HOME="$HOME/Sviluppo/AndroidSDK"
+    export ANDROID_SDK_ROOT="$HOME/Sviluppo/AndroidSDK"
+
+    export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+    export PATH=$PATH:$ANDROID_SDK_ROOT/emulator/
+    export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+    export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools/
+fi
+
+# Valori di default delle variabili di XDG BASE DIRECTORY 
+# SPECIFICATION, le applicazioni dovrebbero usarli gia e
+# non serve impostarli nuovamente. Verifica col comando:
+#  printenv | grep XDG
+#
+# XDG_DATA_HOME="$HOME/.local/share"  # user-specific data files
+# XDG_CONFIG_HOME="$HOME/.config"     # user-specific config files
+# XDG_STATE_HOME="$HOME/.local/state" # user-specific state data
+# XDG_CACHE_HOME="$HOME/.cache"       # user-specific cached data
+# XDG_DATA_DIRS="/usr/local/share/:/usr/share/" # search for data files
+# XDG_CONFIG_DIRS="/etc:/usr/etc:/etc/xdg"      # search for config files
+#
+# Each XDG variable has a corrispondence for multiple values:
+# $XDG_DATA_DIRS, $XDG_CONFIG_DIRS, 
+#
+# Le fix di XDG non rispettate si trovano a questa pagina:
+# https://wiki.archlinux.org/title/XDG_Base_Directory
+#
+# export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle 

@@ -229,7 +229,7 @@
     
 	<span class="meta__text">
         Tempo di lettura 5 minuti 
-        ( 936 parole)
+        ( 965 parole)
     </span>
 </div></div>
     </header>
@@ -291,13 +291,17 @@
 </ul>
 <p>Le Guest Additions di VirtualBox sono distribuite come file ISO (disco virtuale), per installarle è necessario montare il disco nel lettore cd-rom, cliccando sulla voce &ldquo;Archiviazione&rdquo; della macchina virtuale:</p>
 <p><img src="/static/coding/tools/VirtualBox7-SelectSO.png" alt="VirtualBox - Selezione Sistema Operativo" title="VirtualBox - Selezione Sistema Operativo"></p>
-<p>Una volta montato il disco, si deve avviare la macchina virtuale e aprire il disco delle Guest Additions:</p>
+<p>Una volta montato il disco, si può avviare la macchina virtuale.</p>
+<p><img src="/static/coding/tools/VirtualBox7-guestAdditions-mount.png" alt="VirtualBox - Disco Guest Additions montato" title="VirtualBox - Disco Guest Additions montato"></p>
+<p>Il disco delle Guest Additions contiene il file di installazione su macchine Linux <code>VBoxLinuxAdditions.run</code> ed il file di installazione su macchine Windows <code>VBoxWindowsAdditions.sh</code>.</p>
 <p><img src="/static/coding/tools/VirtualBox7-guestAdditions-folder.png" alt="VirtualBox - Cartella delle Guest Additions" title="VirtualBox - Cartella delle Guest Additions"></p>
-<p>Si apre la cartella nel terminale e si lancia il comando di installazione delle Guest Additions:</p>
-<p><img src="/static/coding/tools/VirtualBox7-guestAdditions-install.png" alt="VirtualBox - Installa le Guest Additions" title="VirtualBox - Installa le Guest Additions"></p>
+<p>Si apre la cartella nel terminale e si lancia il comando di installazione delle Guest Additions <code>sh ./VBoxLinuxAdditions.run</code>:</p>
+<p><img src="/static/coding/tools/VirtualBox7-guestAdditions-installer.png" alt="VirtualBox - Installa le Guest Additions" title="VirtualBox - Installa le Guest Additions"></p>
 <h2 id="condivisione-cartelle">Condivisione cartelle</h2>
 <p>Per condividere una cartella tra il sistema ospitante e la macchina virtuale, si deve cliccare sulla voce &ldquo;Cartelle condivise&rdquo; della macchina virtuale. Nella finestra delle cartelle condivise, si clicca sul pulsante di &ldquo;Aggiungi&rdquo; e nella finestra di dialogo si indica la cartella da condividere ed il punto di mount.</p>
 <p><img src="/static/coding/tools/VirtualBox7-share-folder.png" alt="VirtualBox - Condivisione cartella" title="VirtualBox - Condivisione cartella"></p>
+<p>Aggiunta la cartella, questa è visualizzata tra le cartelle della macchina:</p>
+<p><img src="/static/coding/tools/VirtualBox7-share-folder2.png" alt="VirtualBox - Condivisione cartella" title="VirtualBox - Condivisione cartella"></p>
 
     </div>
   </article>

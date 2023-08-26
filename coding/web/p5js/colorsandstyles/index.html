@@ -312,62 +312,62 @@ In chimica si utilizza una tecnica di analisi detta test della fiamma (o saggio 
 <li><code>HSB</code>, costante che indica di utilizzare il modello HSB.</li>
 </ul>
 <p>Un esempio d&rsquo;uso per impostare il modello di colori da utilizzare è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>colorMode(RGB);
 </span></span></code></pre></div><h2 id="disegnare-testi-e-figure-colorati">Disegnare testi e figure colorati</h2>
 <h3 id="usare-un-colore-di-sfondo">Usare un colore di sfondo</h3>
 <p>Fin&rsquo;ora abbiamo utilizzato la funzione <code>background</code> per impostare lo sfondo. Questa funzione prevede differenti modalità per indicare il colore di sfondo. La modalità tipica è di utilizzare tre parametri per indicare il colore nel modello di colori utilizzato.</p>
 <p>Ad esempio, per impostare uno sfondo rosso &ldquo;acceso&rdquo;, usando il modello di colori <strong>HSB</strong>, si utilizza il seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">HSB</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>colorMode(HSB);
+</span></span><span style="display:flex;"><span>background(0, 255, 255);
 </span></span></code></pre></div><p>Come secondo esempio, per impostare uno sfondo blu usando il modello di colori <strong>RGB</strong>, si utilizza il seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>colorMode(RGB);
+</span></span><span style="display:flex;"><span>background(0, 0, 255);
 </span></span></code></pre></div><h3 id="usare-un-colore-di-riempimento">Usare un colore di riempimento</h3>
 <p>Per scegliere il colore (sempre riferito al modello di colori utilizzato) di <strong>riempimento</strong> da utilizzare per qualsiasi entità da disegnare, si utilizza la funzione <code>fill</code>, che usa tre parametri per indicare il colore.</p>
 <p>Una volta impostato il colore di <strong>riempimento</strong>, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi entità da disegnare. Se si vuole cambiare il colore di riempimento, bisogna richiamare nuovamente la funzione <code>fill</code> impostando un altro colore.</p>
 <p>Ad esempio, supponiamo di voler disegnare un triangolo ed un cerchio di un colore, e poi un rettangolo ed un quadrato di un secondo colore, si utilizzerà il seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>colorMode(RGB);
+</span></span><span style="display:flex;"><span>background(0, 0, 255);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// primo colore, combinazione di rosso e verde
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">triangle</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">100</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">40</span>);
+</span></span><span style="display:flex;"><span>fill(255, 255, 0); <span style="color:#f00;font-style:italic">// primo colore, combinazione di rosso e verde
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>triangle(20, 60, 20, 100, 60, 100);
+</span></span><span style="display:flex;"><span>circle(100, 80, 40);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>); <span style="color:#75715e">// secondo colore, somma di verde e blu
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">40</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rect</span>(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>fill(0, 255, 255); <span style="color:#f00;font-style:italic">// secondo colore, somma di verde e blu
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>square(20, 140, 40);
+</span></span><span style="display:flex;"><span>rect(80, 140, 80, 20);
 </span></span></code></pre></div><p>Il risultato sarà il seguente:</p>
 <p><img src="/static/coding/web/p5js/colors01.png" alt="p5.js - Uso di più colori" title="p5.js - Uso di più colori"></p>
 <h3 id="usare-uno-stile-di-linea">Usare uno stile di linea</h3>
 <p>Punti, linee e contorni possono essere stilizzati impostando lo spessore delle linee, il colore, il tipo di linea (continua, tratteggiata, ecc..).</p>
 <p>Per impostare lo spessore, si utilizza la funzione <code>strokeWeight</code> che prende come parametro lo spessore in pixel della linea, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">4</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>strokeWeight(4);
 </span></span></code></pre></div><p>Per scegliere il colore (sempre riferito al modello di colori utilizzato) di <strong>linea</strong> da utilizzare per qualsiasi entità da disegnare, si utilizza la funzione <code>stroke</code>, che usa tre parametri per indicare il colore.</p>
 <p>Una volta impostato il colore di <strong>linea</strong>, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi entità da disegnare. Se si vuole cambiare il colore di linea, bisogna richiamare nuovamente la funzione <code>stroke</code> impostando un altro colore.</p>
 <p>Ad esempio, supponiamo di riprendere l&rsquo;esempio precedente e di voler aggiungere anche stile di linea e colore di contorno delle figure. Per effettuare ciò, si utilizzerà il seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">RGB</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>colorMode(RGB);
+</span></span><span style="display:flex;"><span>background(0, 0, 255);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">4</span>);     <span style="color:#75715e">// primo spessore di linea
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">stroke</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">204</span>, <span style="color:#ae81ff">255</span>); <span style="color:#75715e">// primo colore di linea
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// primo colore di riempimento
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">triangle</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">100</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">40</span>);
+</span></span><span style="display:flex;"><span>strokeWeight(4);     <span style="color:#f00;font-style:italic">// primo spessore di linea
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>stroke(0, 204, 255); <span style="color:#f00;font-style:italic">// primo colore di linea
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>fill(255, 255, 0); <span style="color:#f00;font-style:italic">// primo colore di riempimento
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>triangle(20, 60, 20, 100, 60, 100);
+</span></span><span style="display:flex;"><span>circle(100, 80, 40);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">8</span>);     <span style="color:#75715e">// secondo spessore di linea
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">stroke</span>(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">204</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">// secondo colore di linea
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>); <span style="color:#75715e">// secondo colore di riempimento
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">40</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rect</span>(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>strokeWeight(8);     <span style="color:#f00;font-style:italic">// secondo spessore di linea
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>stroke(255, 204, 0); <span style="color:#f00;font-style:italic">// secondo colore di linea
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>fill(0, 255, 255); <span style="color:#f00;font-style:italic">// secondo colore di riempimento
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>square(20, 140, 40);
+</span></span><span style="display:flex;"><span>rect(80, 140, 80, 20);
 </span></span></code></pre></div><p>Il risultato sarà il seguente:</p>
 <p><img src="/static/coding/web/p5js/colors02.png" alt="p5.js - Uso di colori differenti anche per i contorni" title="p5.js - Uso di colori differenti anche per i contorni"></p>
 <h3 id="usare-uno-stile-di-testo">Usare uno stile di testo</h3>
 <p>Il testo può essere stilizzato impostando il carattere, la dimensione, l&rsquo;allineamento, ecc&hellip;</p>
 <p>Per impostare la dimensione del testo, si utilizza la funzione <code>textSize</code>, che prende come parametro la dimensione in pixel del testo, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">16</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>textSize(16);
+</span></span><span style="display:flex;"><span>text(<span style="color:#009c00">&#34;testo&#34;</span>, 100, 50);
 </span></span></code></pre></div><p>Una volta impostata la dimensione del testo, questa sarà <strong>memorizzato</strong> e quindi sarà utilizzata per qualsiasi testo da disegnare. Se si vuole cambiare la dimensione del testo, bisogna richiamare nuovamente la funzione <code>textSize</code> impostando un altro colore.</p>
 <p>Lo stesso discorso vale per l&rsquo;allineamento, che viene memorizzato e quindi utilizzato per qualsiasi testo da disegnare.</p>
 <p>L&rsquo;allineamento può essere verticale e/o orizzontale e si imposta mediante la funzione <code>textAlign</code>, che prende come parametri due costanti che indichino rispettivamente l&rsquo;allineamento verticale e orizzontale da applicare; La libreria p5.js prevede le seguenti costanti:</p>
@@ -381,8 +381,8 @@ In chimica si utilizza una tecnica di analisi detta test della fiamma (o saggio 
 <li><code>BASELINE</code> indica l&rsquo;allineamento verticale sulla linea di base;</li>
 </ul>
 <p>Un esempio d&rsquo;uso dell&rsquo;allineamento del testo è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">textAlign</span>(<span style="color:#a6e22e">RIGHT</span>, <span style="color:#a6e22e">CENTER</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>textAlign(RIGHT, CENTER);
+</span></span><span style="display:flex;"><span>text(<span style="color:#009c00">&#34;testo&#34;</span>, 100, 50);
 </span></span></code></pre></div><p>Anche i classici stili del testo sono indicati attraverso delle costanti, di seguito elencate:</p>
 <ul>
 <li><code>NORMAL</code>: indica lo stile di testo <strong>normale</strong>;</li>
@@ -391,15 +391,15 @@ In chimica si utilizza una tecnica di analisi detta test della fiamma (o saggio 
 <li><code>BOLDITALIC</code>: indica lo stile di testo <strong>corsivo-grassetto</strong>.</li>
 </ul>
 <p>Per impostare la dimensione del testo, si utilizza la funzione <code>textStyle</code>, che prende come parametro la costante di allineamento tra quelle precedentemente elencate, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">textStyle</span>(<span style="color:#a6e22e">ITALIC</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>textStyle(ITALIC);
+</span></span><span style="display:flex;"><span>text(<span style="color:#009c00">&#34;testo&#34;</span>, 100, 50);
 </span></span></code></pre></div><p>Una volta impostato lo stile del testo, questo sarà <strong>memorizzato</strong> e quindi sarà utilizzato per qualsiasi testo da disegnare. Se si vuole cambiare lo stile del testo, bisogna richiamare nuovamente la funzione <code>textSize</code> impostando un altro colore.</p>
 <p>Per il caricamento e la scelta del carattere da utilizzare (in inglese il <strong>font</strong>), si rimanda alle specifiche della libreria.</p>
 <p>Di seguito un esempio completo del disegno del testo con il codice fino ad ora utilizzato:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">16</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">textAlign</span>(<span style="color:#a6e22e">RIGHT</span>, <span style="color:#a6e22e">CENTER</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">textStyle</span>(<span style="color:#a6e22e">ITALIC</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;testo&#34;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>textSize(16);
+</span></span><span style="display:flex;"><span>textAlign(RIGHT, CENTER);
+</span></span><span style="display:flex;"><span>textStyle(ITALIC);
+</span></span><span style="display:flex;"><span>text(<span style="color:#009c00">&#34;testo&#34;</span>, 100, 50);
 </span></span></code></pre></div><p>Il risultato sarà il seguente:</p>
 <p><img src="/static/coding/web/p5js/colors03.png" alt="p5.js - Uso dello stile del testo" title="p5.js - Uso dello stile del testo"></p>
 
