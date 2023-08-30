@@ -14,19 +14,19 @@
 #    fi
 # fi
 
-if [ -e "$HOME/.bash_functions" ]; then
-    . "$HOME/.bash_functions"
+SVN_REPO="$HOME/Sviluppo/SVN2/codingepaduli/static/static/openSource/DebianFirstConfig/user"
+
+if [ -f "$SVN_REPO/bash_functions" ] && [ -r "$SVN_REPO/bash_functions" ]; then
+    . "$SVN_REPO/bash_functions"
 fi
 
-if [ -e "$HOME/.bash_functions_extra" ]; then
-    . "$HOME/.bash_functions_extra"
+if [ -f "$SVN_REPO/bash_functions_extra" ] && [ -r "$SVN_REPO/bash_functions_extra" ]; then
+    . "$SVN_REPO/bash_functions_extra"
 fi
 
-: '
-if [ -e "$HOME/.bash_functions" ]; then
-    . "$HOME/.bash_functions_docker"
+if [ -f "$SVN_REPO/bash_functions_docker" ] && [ -r "$SVN_REPO/bash_functions_docker" ]; then
+    . "$SVN_REPO/bash_functions_docker"
 fi
-'
 
 # Aggiungo JAVA_HOME
 if [ -n "$JAVA_HOME" ]; then

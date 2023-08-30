@@ -11,12 +11,6 @@ echo mamma:mamma | chpasswd
 echo dario:dario | chpasswd
 echo roberto:roberto | chpasswd
 
-# Forzo il cambio password al primo accesso
-# passwd -e io
-# passwd -e dario
-# passwd -e roberto
-# passwd -e mamma
-
 # Per visualizzare i gruppi: getent group | sort
 
 # Aggiungo gli utenti ai gruppi

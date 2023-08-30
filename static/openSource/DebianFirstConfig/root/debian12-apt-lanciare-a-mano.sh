@@ -19,3 +19,13 @@ apt-get install $APT_OPTS firmware-realtek firmware-iwlwifi
 if [ $? -ne 0 ]; then
     exit 1
 fi
+
+# Forzo il cambio password al primo accesso degli utenti
+passwd -e io
+passwd -e dario
+passwd -e roberto
+passwd -e mamma
+
+# Forzo il cambio password delle chiavi SSH
+ssh-keygen -p -f ~/.ssh/id_ed25519
+

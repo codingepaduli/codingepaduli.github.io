@@ -377,12 +377,21 @@
     </item>
     
     <item>
-      <title>HTML Lez. 01 - Il World Wide Web</title>
-      <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
-      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      <title>Corsi e guide - istruzione di base</title>
+      <link>http://codingepaduli.github.io/interesting/educational/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
-      <description>HTML Lez. 01 - Il World Wide Web</description>
+      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
+      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
     </item>
     
     <item>
@@ -392,24 +401,6 @@
       
       <guid>http://codingepaduli.github.io/opensource/debian12/</guid>
       <description>Debian GNU/Linux 12 Bookworm, il sistema operativo universale e completamente Libero</description>
-    </item>
-    
-    <item>
-      <title>Corsi e guide - istruzione di base</title>
-      <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
-      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
-    </item>
-    
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
     </item>
     
     <item>
