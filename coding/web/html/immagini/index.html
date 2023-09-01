@@ -228,8 +228,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 13 minuti 
-        ( 2645 parole)
+        Tempo di lettura 10 minuti 
+        ( 2005 parole)
     </span>
 </div></div>
     </header>
@@ -237,48 +237,7 @@
       <h1 id="multimedialità-e-interattività">Multimedialità e interattività</h1>
 <p>La multimedialità è una forma di comunicazione caratterizzata dalla compresenza e interazione di più linguaggi (testi scritti, immagini, suoni, animazioni) in uno stesso supporto o contesto informativo.</p>
 <p>Il termine multimedialità si sta progressivamente sovrapponendo a quello di interattività, dato che i contenuti multimediali, che una volta erano fruibili su TV, radio o telefono oggi sono fruibili su dispositivi sempre più interattivi, dal computer al palmare, al telefono, alla LIM (lavagna interattiva multimediale).</p>
-<h2 id="collegamenti">Collegamenti</h2>
-<p>L&rsquo;etichetta <code>a</code> serve a creare un collegamento (in inglese &ldquo;link&rdquo;) verso un
-ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
-<ul>
-<li><code>href</code>, che permette di indicare l&rsquo;indirizzo dell&rsquo;ipertesto da raggiungere;</li>
-<li><code>target</code>, che permette di indicare come aprire l&rsquo;ipertesto, e può assumere solo i seguenti valori:
-<ol>
-<li><code>_blank</code> indica al browser di aprire l&rsquo;ipertesto in una nuova scheda o finestra;</li>
-<li><code>_self</code> indica al browser di aprire l&rsquo;ipertesto nella stessa scheda o finestra.</li>
-</ol>
-</li>
-</ul>
-<p>Un esempio di collegamento è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;a href=<span style="color:#009c00">&#34;www.google.it&#34;</span> target=<span style="color:#009c00">&#34;_blank&#34;</span>&gt;collegamento a Google&lt;/a&gt;
-</span></span></code></pre></div><p>Da questo esempio, si evidenziano sia l&rsquo;indirizzo web di &ldquo;Google&rdquo;, che è un indirizzo <strong>assoluto</strong>, sia l&rsquo;attributo <code>target=&quot;_blank&quot;</code> che indica di aprire il sito web in una nuova scheda.</p>
-<p>Un secondo esempio di collegamento è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;a href=<span style="color:#009c00">&#34;pagina1.html&#34;</span> target=<span style="color:#009c00">&#34;_self&#34;</span>&gt;collegamento a Google&lt;/a&gt;
-</span></span></code></pre></div><p>Da questo secondo esempio, si evidenzia sia l&rsquo;attributo <code>target=&quot;_self&quot;</code> che indica di aprire il sito web nella stessa scheda, sia l&rsquo;indirizzo della pagina web <code>pagina1.html</code>, che in questo caso è un indirizzo <strong>relativo</strong> al sito web sul quale sta navigando l&rsquo;utente;</p>
-<p>L&rsquo;etichetta <code>a</code> può essere utilizzata per creare collegamenti ad un punto preciso del documento, inserendo nell&rsquo;attributo <code>href</code> <strong>l&rsquo;identificativo</strong> dello specifico punto preceduto dal carattere <code>#</code>;</p>
-<p>Ad esempio, supponiamo che nella parte finale del documento sia stato creato il sotto-capitolo con l&rsquo;identificativo <code>idTabella</code>, come nel codice seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;h2 id=<span style="color:#009c00">&#34;idTabella&#34;</span>&gt;Sotto-capitolo sulle tabelle&lt;/h2&gt;
-</span></span></code></pre></div><p>Per creare, in cima al documento, un collegamento al sotto-capitolo che si trova in fondo alla pagina, l&rsquo;indirizzo di collegamento deve iniziare con il carattere <code>#</code> seguito dall&rsquo;identificativo di cui sopra, come nel codice seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;a href=<span style="color:#009c00">&#34;#idTabella&#34;</span>&gt;Link al Sotto-capitolo sulle tabelle&lt;/a&gt;
-</span></span></code></pre></div><p>Questo tipo di collegamento non è limitato allo stesso documento, per cui è possibile anche creare un collegamento ad un punto preciso di una qualsiasi pagina web presente online, a patto che in questa pagina web siano presenti dei punti con un identificativo al quale collegarsi.</p>
-<p>Ad esempio, per effettuare un collegamento al sotto-capitolo &ldquo;Struttura di un documento HTML&rdquo; della pagina web &ldquo;HTML&rdquo; ospitata su Wikipedia, supponendo che il sotto-capitolo sia identificato dalla voce univoca <code>Struttura_di_un_documento_HTML</code>, allora per creare il collegamento si utilizza il codice seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;a href=<span style="color:#009c00">&#34;https://it.wikipedia.org/wiki/HTML#Struttura_di_un_documento_HTML&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    Link al Sotto-capitolo &#34;Struttura di un documento HTML&#34;
-</span></span><span style="display:flex;"><span>&lt;/a&gt;
-</span></span></code></pre></div><p>Sempre trattando i collegamenti, state previste tipologie di indirizzi speciali per email e numeri di telefono che vengono gestite tramite collegamenti. Quando l&rsquo;utente clicca su un collegamento con un indirizzo &ldquo;speciale&rdquo;, il browser delega ad un&rsquo;applicazione esterna il compito di inviare una email, di effettuare una chiamata telefonica e di inviare SMS verso il numero di telefono indicato.</p>
-<p>In particolare, gli indirizzi speciali hanno un prefisso ben definito:</p>
-<ul>
-<li><code>mailto:</code> è il prefisso che indica un indirizzo speciale per l&rsquo;invio di una mail;</li>
-<li><code>tel:</code> è il prefisso che indica un indirizzo speciale per effettuare una chiamata telefonica;</li>
-<li><code>sms</code> è il prefisso che indica un indirizzo speciale per inviare un SMS.</li>
-</ul>
-<p>Di seguito si riporta un esempio d&rsquo;uso dei collegamenti verso queste tipologie di indirizzi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;a href=<span style="color:#009c00">&#34;mailto:bianchi@email.com,rossi@email.com?cc=paolo@email.com&amp;subject=Oggetto&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    Scrivi una mail
-</span></span><span style="display:flex;"><span>&lt;/a&gt;
-</span></span><span style="display:flex;"><span>&lt;a href=<span style="color:#009c00">&#34;tel:+390001234567&#34;</span>&gt;Chiama&lt;/a&gt;
-</span></span><span style="display:flex;"><span>&lt;a href=<span style="color:#009c00">&#34;sms:+390001234567&#34;</span>&gt;Invia un SMS&lt;/a&gt;
-</span></span></code></pre></div><h2 id="etichette-audio-e-video">Etichette audio e video</h2>
+<h2 id="etichette-audio-e-video">Etichette audio e video</h2>
 <p>È consigliabile, per questioni di performance, proporre i contenuti audio e video attraverso servizi <strong>streaming</strong>, in modo che la risoluzione dei contenuti si adatti alla velocità di trasmissione dati della linea dell&rsquo;utente.</p>
 <p>Volendo, però, evitare lo streaming ed inserire direttamente un file audio nella pagina web, si utilizza il seguente codice:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;audio controls autoplay&gt;
@@ -483,25 +442,6 @@ al pianeta scelto.</p>
     <area shape="circle" coords="124,58,8" alt="Venus" title="Venus" href="https://it.m.wikipedia.org/wiki/Venere_(astronomia)" />
 </map>
 <!-- markdownlint-enable MD033 -->
-<p>Le immagini possono essere caricate su richiesta utilizzando le tecniche
-di <strong>lazy loading</strong>, ovvero le immagini che si trovano in aree non
-visibili (l&rsquo;utente deve scorrere la pagina o deve cliccare qualche area
-per renderle visibili sullo schermo) possono essere caricate in modalità
-<strong>eager</strong>, cioè immediatamente, oppure in modalità <strong>lazy</strong>, cioè solo
-quando l&rsquo;utente scorre la pagina o rende visibile l&rsquo;area e quindi arriva
-a &ldquo;vedere&rdquo; l&rsquo;immagine.</p>
-<p>Utilizzare il caricamento lazy per le immagini che si trovano sulle aree
-non visibili permette di ridurre i tempi iniziali di caricamento della
-pagina, rimandando il caricamento di questi dati in un secondo momento.</p>
-<p>Per attivare il caricamento delle immagini in modalità lazy (o eager),
-si utilizza l&rsquo;attributo <code>loading</code> del tag <code>img</code>, che puó assumere il
-valore &ldquo;eager&rdquo; o &ldquo;lazy&rdquo;, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;img src=<span style="color:#009c00">&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png&#34;</span>
-</span></span><span style="display:flex;"><span>    width=<span style="color:#009c00">&#34;145&#34;</span> height=<span style="color:#009c00">&#34;126&#34;</span> alt=<span style="color:#009c00">&#34;Planets&#34;</span> loading=<span style="color:#009c00">&#34;lazy&#34;</span> /&gt;`
-</span></span></code></pre></div><p>che da il seguente risultato (in ambiente web si nota il caricamento &ldquo;su richiesta&rdquo;):</p>
-<!-- markdownlint-disable MD033 -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Terrestrial_Planets_Size_Comp_True_Color.png/320px-Terrestrial_Planets_Size_Comp_True_Color.png" width="145" height="126" alt="Planets" loading="lazy">
-<!-- markdownlint-enable MD033 -->
 <p>Ricapitolando quindi gli attributi del tag img, abbiamo:</p>
 <ul>
 <li><code>src</code> per indicare l&rsquo;URL dell&rsquo;<strong>unica</strong> immagine da mostrare;</li>
@@ -561,7 +501,7 @@ a quando l&rsquo;utente arriva a visualizzare il contenuto;</li>
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/web/html/tagtesto/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">HTML Lez. 03 - Formattazione carattere, liste e tabelle</p>
+			<p class="pager__title">HTML Lez. 03 - Etichette principali</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
