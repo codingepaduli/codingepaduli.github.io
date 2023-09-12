@@ -6,7 +6,7 @@ WORKING_DIR="$HOME/Sviluppo/SVN"
 # SVN_PWD=''
 
 GIT_USER="codingepaduli"
-GIT_EMAIL=""
+GIT_EMAIL="padulodeveloper@protonmail.com"
 
 SSH_KEY="$HOME/.ssh/id_ed25519"
 SSH_PUB_KEY="$SSH_KEY.pub"

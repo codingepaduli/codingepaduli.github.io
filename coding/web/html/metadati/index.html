@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HTML Lez. 05 - Metadati - Coding e Paduli</title>
+    <title>HTML Lez. 05 - Struttura e layout - Coding e Paduli</title>
 
-    <meta name="description" content="HTML Lez. 05 - Metadati">
-        <meta property="og:title" content="HTML Lez. 05 - Metadati" />
-<meta property="og:description" content="HTML Lez. 05 - Metadati" />
+    <meta name="description" content="HTML Lez. 05 - Struttura e layout di una pagina web">
+        <meta property="og:title" content="HTML Lez. 05 - Struttura e layout" />
+<meta property="og:description" content="HTML Lez. 05 - Struttura e layout di una pagina web" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/metadati/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
 <meta property="article:published_time" content="2019-07-27T00:00:00+00:00" />
@@ -17,8 +17,8 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="HTML Lez. 05 - Metadati"/>
-<meta name="twitter:description" content="HTML Lez. 05 - Metadati"/>
+<meta name="twitter:title" content="HTML Lez. 05 - Struttura e layout"/>
+<meta name="twitter:description" content="HTML Lez. 05 - Struttura e layout di una pagina web"/>
 
 
 
@@ -227,18 +227,23 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 5 minuti 
-        ( 1033 parole)
+        Tempo di lettura 12 minuti 
+        ( 2554 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="metadati">Metadati</h1>
-<p>Un documento HTML deve contenere i <strong>metadati</strong>, ovvero informazioni relative alla pagina web (autore, icona, descrizione, immagine di anteprima, ecc&hellip;). Questi <a href="https://it.wikipedia.org/wiki/Metadato" title="Link a Wikipedia sui metadati">metadati</a> non sono mostrati all&rsquo;utente, ma sono utilizzati dai motori di ricerca e dai social network per presentare e catalogare la pagina web.</p>
+      <h1 id="struttura-e-layout">Struttura e layout</h1>
+<p>Un documento HTML generalmente contiene informazioni relative alla pagina web, come l&rsquo;autore della pagina, la descrizione dei contenuti o un&rsquo;immagine di anteprima ed ha un proprio layout, ovvero una propria impaginazione e struttura grafica che serve ad indicare la posizione e la dimensione degli elementi sugli schermi di computer, smartphone e tablet.</p>
+<p>Le informazioni aggiuntive sono dette <strong>metadati</strong> e, sebbene quasi tutte facoltative, sono utilizzatissime da social network e motori di ricerca per catalogare la pagina e mostrarne un&rsquo;anteprima.</p>
+<p>Il layout grafico è gestito attraverso i <strong>CSS</strong>, ovvero i fogli di stile grafico che definiscono colore, dimensione e posizione degli elementi della pagina web. Il layout si poggia su una struttura basilare che indica ad esempio l&rsquo;area in cui è situato il menu laterale, l&rsquo;area destinata al piè di pagina e l&rsquo;area dei contenuti pubblicitari. Ognuno di questi elementi della struttura basilare è descritto attraverso un&rsquo;apposita etichetta del linguaggio HTML.</p>
+<p>A seconda del layout scelto e della risoluzione dello schermo del dispositivo, un&rsquo;immagine si può adattare meglio di un&rsquo;altra, ad esempio un&rsquo;immagine verticale in risoluzione sufficiente si adatta meglio a smartphone e tablet, mentre un immagine orizzontale ad altissima risoluzione si adatta meglio a TV e monitor PC. A seconda del layout è necessario scegliere appropriatamente le immagini che meglio si adattano e con la risoluzione necessaria.</p>
+<h2 id="metadati">Metadati</h2>
+<p>I <strong>metadati</strong> sono informazioni relative alla pagina web, come l&rsquo;autore, l&rsquo;icona, la descrizione e l&rsquo;immagine di anteprima. Questi <a href="https://it.wikipedia.org/wiki/Metadato" title="Link a Wikipedia sui metadati">metadati</a> non sono mostrati all&rsquo;utente, ma sono utilizzati dai motori di ricerca e dai social network per presentare e catalogare la pagina web.</p>
 <p>Ad esempio, quando si condivide agli amici un articolo sui social, questi visualizzano, oltre al collegamento, sia il titolo dell&rsquo;articolo, sia la descrizione, sia un&rsquo;immagine o un video di anteprima. Queste informazioni di anteprima i social le recuperano dai metadati allegati alla pagina web.</p>
 <p>Per un riferimento completo ai metadati si rimanda al link <a href="https://htmlhead.dev/" title="Link al sito di riferimento per i metadati">https://htmlhead.dev/</a> ed alle specifiche del linguaggio HTML.</p>
-<p>Tutti i metadati devono essere contenuti nel tag <code>head</code> della pagina web, ad eccezione dell&rsquo;icona principale del sito web: non è descritta da nessun tag, deve essere semplicemente salvata nel file <code>favicon.ico</code> nella cartella principale del sito per poter essere recuperata.</p>
-<h2 id="metadati-obbligatori">Metadati obbligatori</h2>
+<p>Tutti i metadati devono essere contenuti nell&rsquo;etichetta <code>head</code> della pagina web, ad eccezione dell&rsquo;icona principale del sito web: non è descritta da nessun etichetta, deve essere semplicemente salvata nel file <code>favicon.ico</code> nella cartella principale del sito per poter essere recuperata.</p>
+<h3 id="metadati-obbligatori">Metadati obbligatori</h3>
 <p>I seguenti metadati sono obbligatori e devono essere inseriti rispettivamente in prima, seconda e terza posizione tra i metadati della pagina web:</p>
 <ol>
 <li>la codifica della pagina web, per la quale si rimanda all&rsquo;apposito capitolo sulla codifica Unicode e UTF-8;</li>
@@ -252,62 +257,61 @@
 </span></span><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;viewport&#34;</span> content=<span style="color:#009c00">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;title&gt;Page Title&lt;/title&gt;
 </span></span><span style="display:flex;"><span>&lt;/head&gt;
-</span></span></code></pre></div><h2 id="metadati-facoltativi">Metadati facoltativi</h2>
-<h3 id="informazioni-sul-documento">Informazioni sul documento</h3>
-<p>Tra le varie informazioni che si possono aggiungere sulla pagina abbiamo: autore, descrizione, argomento trattato, ecc&hellip;</p>
-<p>Queste informazioni sono descritte dal tag <code>meta</code> che ha come attributi <code>name</code> e <code>content</code>. In pratica ogni tag <code>meta</code> permette di aggiungere una coppia chiave-valore, in cui la chiave (definite con l&rsquo;attributo <code>name</code>) indica la proprietà del documento (autore, descrizione, &hellip;) alla quale è assegnato il valore (definito per mezzo dell&rsquo;attributo <code>content</code>).</p>
-<p>Di seguito un esempio di metadati facoltativi, da includere nel tag <code>head</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- altri metadati della pagina html --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;author&#34;</span> content=<span style="color:#009c00">&#34;Bill Gates&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;description&#34;</span> content=<span style="color:#009c00">&#34;Pagina con spiegazione sui metadati&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;subject&#34;</span> content=<span style="color:#009c00">&#34;Linguaggio HTML&#34;</span>&gt;
+</span></span></code></pre></div><h3 id="informazioni-sul-documento">Informazioni sul documento</h3>
+<p>Tra le varie informazioni facoltative che si possono aggiungere sulla pagina abbiamo: autore, descrizione, argomento trattato, ecc&hellip;</p>
+<p>Queste informazioni sono descritte dall&rsquo;etichetta <code>meta</code> che ha come attributi <code>name</code> e <code>content</code>. In pratica ogni etichetta <code>meta</code> permette di aggiungere una coppia chiave-valore, in cui la chiave (definite con l&rsquo;attributo <code>name</code>) indica la proprietà del documento (autore, descrizione, &hellip;) alla quale è assegnato il valore (definito per mezzo dell&rsquo;attributo <code>content</code>).</p>
+<p>Di seguito un esempio di metadati facoltativi, da includere nell&rsquo;etichetta <code>head</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- altri metadati della pagina html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;meta name=<span style="color:#009c00">&#34;author&#34;</span> content=<span style="color:#009c00">&#34;Bill Gates&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;meta name=<span style="color:#009c00">&#34;description&#34;</span> content=<span style="color:#009c00">&#34;Pagina con spiegazione sui metadati&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;meta name=<span style="color:#009c00">&#34;subject&#34;</span> content=<span style="color:#009c00">&#34;Linguaggio HTML&#34;</span>&gt;
 </span></span></code></pre></div><h3 id="informazioni-per-i-social">Informazioni per i social</h3>
 <p>Le informazioni per i social network sono descritte attraverso l&rsquo;Open Graph protocol, a cui si rimanda per approfondimenti.</p>
 <p>I social estraggono le informazioni di una pagina web dalle seguenti chiavi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!--indica il contenuto che si condivide, scegliendo tra:
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">        website, article o video.movie --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#009c00">&#34;og:type&#34;</span> content=<span style="color:#009c00">&#34;website&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!--indica il linguaggio utilizzato --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#009c00">&#34;og:locale&#34;</span> content=<span style="color:#009c00">&#34;it_IT&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!--indica le informazioni sulla pagina web --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#009c00">&#34;og:title&#34;</span> content=<span style="color:#009c00">&#34;Titolo pagina&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#009c00">&#34;og:description&#34;</span> content=<span style="color:#009c00">&#34;Descrizione pagina&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!--indica l&#39;immagine principale della pagina con relativa descrizione --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#009c00">&#34;og:image&#34;</span> content=<span style="color:#009c00">&#34;https://example.com/image.jpg&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#009c00">&#34;og:image:alt&#34;</span> content=<span style="color:#009c00">&#34;Descrizione immagine&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!--indica il contenuto che si condivide, scegliendo tra:
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">    website, article o video.movie --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;og:type&#34;</span> content=<span style="color:#009c00">&#34;website&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!--indica il linguaggio utilizzato --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;og:locale&#34;</span> content=<span style="color:#009c00">&#34;it_IT&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!--indica le informazioni sulla pagina web --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;og:title&#34;</span> content=<span style="color:#009c00">&#34;Titolo pagina&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;og:description&#34;</span> content=<span style="color:#009c00">&#34;Descrizione pagina&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!--indica l&#39;immagine principale della pagina con relativa descrizione --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;og:image&#34;</span> content=<span style="color:#009c00">&#34;https://example.com/image.jpg&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;og:image:alt&#34;</span> content=<span style="color:#009c00">&#34;Descrizione immagine&#34;</span>&gt;
 </span></span></code></pre></div><p>Twitter fa eccezione, perché usa le Twitter Card, una tecnologia proprietaria, a cui si rimanda per approfondimenti.</p>
 <p>Twitter estrae le informazioni di una pagina web dalle seguenti chiavi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;twitter:creator&#34;</span> content=<span style="color:#009c00">&#34;@account_twitter&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#009c00">&#34;twitter:title&#34;</span> content=<span style="color:#009c00">&#34;Page Title&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#009c00">&#34;twitter:image&#34;</span> content=<span style="color:#009c00">&#34;https://example.com/image.jpg&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#009c00">&#34;twitter:description&#34;</span> content=<span style="color:#009c00">&#34;Descrizione pagina&#34;</span>&gt;
-</span></span></code></pre></div><p><strong>Si fa notare che per quanto riguarda i social, sia &ldquo;Open Graph&rdquo;, sia le &ldquo;Twitter Card&rdquo; descrivono le informazioni attraverso il tag <code>meta</code> che in alcuni casi fa uso dell&rsquo;attributo <code>property</code> al posto dell&rsquo;attributo <code>name</code>.</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;meta name=<span style="color:#009c00">&#34;twitter:creator&#34;</span> content=<span style="color:#009c00">&#34;@account_twitter&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;twitter:title&#34;</span> content=<span style="color:#009c00">&#34;Page Title&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;twitter:image&#34;</span> content=<span style="color:#009c00">&#34;https://example.com/image.jpg&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;twitter:description&#34;</span> content=<span style="color:#009c00">&#34;Descrizione pagina&#34;</span>&gt;
+</span></span></code></pre></div><p><strong>Si fa notare che per quanto riguarda i social, sia &ldquo;Open Graph&rdquo;, sia le &ldquo;Twitter Card&rdquo; descrivono le informazioni attraverso l&rsquo;etichetta <code>meta</code> che in alcuni casi fa uso dell&rsquo;attributo <code>property</code> al posto dell&rsquo;attributo <code>name</code>.</strong></p>
 <h3 id="risorse-collegate-al-documento">Risorse collegate al documento</h3>
 <p>Altre informazioni sulla pagina web sono invece le risorse collegate, come ad esempio la pagina web della licenza dei contenuti (copyright), la pagina web relativa agli autori del documento, le pagine web collegate nella serie di articoli (se la pagina web fa parte di una serie di articoli, si possono indicare il primo e l&rsquo;ultimo articolo della serie, l&rsquo;articolo precedente e successivo nella serie), la pagina web collegate nella struttura gerarchica (se si ha una struttura ad albero, si può indicare la pagina web &ldquo;radice&rdquo; dell&rsquo;albero), si può indicare l&rsquo;icona ad alta risoluzione.</p>
-<p>Queste risorse sono indicate nel tag <code>link</code> che ha come attributi <code>rel</code> e <code>href</code>. In pratica ogni tag <code>link</code> permette di aggiungere una coppia chiave-valore, in cui la chiave (definita con l&rsquo;attributo <code>rel</code>) indica quale risorsa si vuole collegare ed i valore (definito con l&rsquo;attributo <code>href</code>) indica il collegamento alla risorsa da collegare.</p>
-<p>Di seguito un esempio di metadati relativi alle risorse collegate, da includere nel tag <code>head</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- Provides information about an author or another person --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;me&#34;</span> href=<span style="color:#009c00">&#34;https://google.com/profiles/name&#34;</span> type=<span style="color:#009c00">&#34;text/html&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;me&#34;</span> href=<span style="color:#009c00">&#34;mailto:name@example.com&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;me&#34;</span> href=<span style="color:#009c00">&#34;sms:+15035550125&#34;</span>&gt;
+<p>Queste risorse sono indicate nell&rsquo;etichetta <code>link</code> che ha come attributi <code>rel</code> e <code>href</code>. In pratica ogni etichetta <code>link</code> permette di aggiungere una coppia chiave-valore, in cui la chiave (definita con l&rsquo;attributo <code>rel</code>) indica quale risorsa si vuole collegare ed i valore (definito con l&rsquo;attributo <code>href</code>) indica il collegamento alla risorsa da collegare.</p>
+<p>Di seguito un esempio di metadati relativi alle risorse collegate, da includere nell&rsquo;etichetta <code>head</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Provides information about an author or another person --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;me&#34;</span> href=<span style="color:#009c00">&#34;https://google.com/profiles/name&#34;</span> type=<span style="color:#009c00">&#34;text/html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;me&#34;</span> href=<span style="color:#009c00">&#34;mailto:name@example.com&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;me&#34;</span> href=<span style="color:#009c00">&#34;sms:+15035550125&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- Links to information about the author(s) of the document --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;author&#34;</span> href=<span style="color:#009c00">&#34;humans.txt&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Links to information about the author(s) of the document --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;author&#34;</span> href=<span style="color:#009c00">&#34;humans.txt&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- Refers to a copyright statement that applies to the link&#39;s context --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;license&#34;</span> href=<span style="color:#009c00">&#34;copyright.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Refers to a copyright statement that applies to the link&#39;s context --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;license&#34;</span> href=<span style="color:#009c00">&#34;copyright.html&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- The first, last, previous, and next documents in a series of documents --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;first&#34;</span> href=<span style="color:#009c00">&#34;/serie/first.html&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;last&#34;</span> href=<span style="color:#009c00">&#34;/serie/last.html&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;prev&#34;</span> href=<span style="color:#009c00">&#34;/serie/article4.html&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;next&#34;</span> href=<span style="color:#009c00">&#34;/serie/article6.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- The first, last, previous, and next documents in a series of documents --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;first&#34;</span> href=<span style="color:#009c00">&#34;/serie/first.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;last&#34;</span> href=<span style="color:#009c00">&#34;/serie/last.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;prev&#34;</span> href=<span style="color:#009c00">&#34;/serie/article4.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;next&#34;</span> href=<span style="color:#009c00">&#34;/serie/article6.html&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- Links to top level resource in an hierarchical structure --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;index&#34;</span> href=<span style="color:#009c00">&#34;/serie/&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Links to top level resource in an hierarchical structure --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;index&#34;</span> href=<span style="color:#009c00">&#34;/serie/&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- Icon in the highest resolution --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#009c00">&#34;icon&#34;</span> sizes=<span style="color:#009c00">&#34;192x192&#34;</span> href=<span style="color:#009c00">&#34;/path/to/icon.png&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Icon in the highest resolution --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;icon&#34;</span> sizes=<span style="color:#009c00">&#34;192x192&#34;</span> href=<span style="color:#009c00">&#34;/path/to/icon.png&#34;</span>&gt;
 </span></span></code></pre></div><h3 id="icone-del-sito-web">Icone del sito web</h3>
 <p>Possono essere necessarie anche più di 30 icone, in formati e risoluzioni differenti, per poter mostrare correttamente l&rsquo;icona del sito su tutti i dispositivi. Tablet, smartphone, computer o smart-TV scelgono l&rsquo;icona da mostrare all&rsquo;utente in base alla risoluzione ed alle caratteristiche dello schermo.</p>
 <p>Piuttosto che creare un così vasto numero di icone, in questi paragrafi sarà mostrato un approccio minimale, in cui solo le icone indispensabili saranno incluse nella pagina web.</p>
@@ -331,11 +335,168 @@
 </span></span><span style="display:flex;"><span>    { <span style="color:#009c00">&#34;src&#34;</span>: <span style="color:#009c00">&#34;/512.png&#34;</span>, <span style="color:#009c00">&#34;type&#34;</span>: <span style="color:#009c00">&#34;image/png&#34;</span>, <span style="color:#009c00">&#34;sizes&#34;</span>: <span style="color:#009c00">&#34;512x512&#34;</span> }
 </span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="struttura-basilare">Struttura basilare</h2>
+<p>La struttura basilare di una pagina web è definita dalle seguenti etichette HTML:</p>
+<ul>
+<li>L&rsquo;etichetta <code>header</code> rappresenta un contenuto introduttivo o un gruppo di contenuti introduttivi in un documento o in una sezione. Solitamente contiene elementi come il logo del sito, il titolo della pagina o la navigazione principale;</li>
+<li>L&rsquo;etichetta <code>nav</code> definisce una sezione di navigazione all&rsquo;interno di un documento HTML. Solitamente contiene link a diverse pagine o sezioni del sito web.</li>
+<li>L&rsquo;etichetta <code>main</code> rappresenta il contenuto principale di un documento HTML. È unico all&rsquo;interno del documento e dovrebbe contenere solo il contenuto direttamente correlato a quella pagina specifica.</li>
+<li>L&rsquo;etichetta <code>article</code> rappresenta un contenuto autonomo e indipendente all&rsquo;interno di un documento HTML. Può essere utilizzato per articoli di notizie, post di blog, commenti o altre sezioni di contenuto simili.</li>
+<li>L&rsquo;etichetta <code>section</code> definisce una sezione generica di contenuto in un documento HTML. È utilizzata per raggruppare insieme contenuti correlati. Può essere utilizzata per creare una struttura gerarchica nel documento.</li>
+<li>L&rsquo;etichetta <code>aside</code> rappresenta un contenuto non strettamente attinente, separato dal contenuto principale del documento. Solitamente contiene informazioni correlate, come barre laterali, note o contenuti pubblicitari.</li>
+<li>L&rsquo;etichetta <code>footer</code> rappresenta una sezione di contenuto di un documento HTML che contiene informazioni di chiusura, come i dettagli di contatto, i link ai social media o le informazioni di copyright. È spesso posizionata alla fine della pagina web.</li>
+</ul>
+<p>Un esempio di struttura di una pagina web che utilizza queste etichette è la seguente:</p>
+<p><img src="/static/coding/web/html/webPageStructure.png" alt="Esempio di struttura di una pagina web" title="Esempio di struttura di una pagina web"></p>
+<p>La struttura mostrata nell&rsquo;esempio precedente viene realizzata attraverso il codice HTML seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;html&gt;
+</span></span><span style="display:flex;"><span>  &lt;head&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- metadati obbligatori, vanno nelle prime posizioni --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;meta charset=<span style="color:#009c00">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;viewport&#34;</span> content=<span style="color:#009c00">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;title&gt;Esempio di struttura&lt;/title&gt;
+</span></span><span style="display:flex;"><span>  &lt;/head&gt;
+</span></span><span style="display:flex;"><span>  &lt;body&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- contenuto introduttivo --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;header&gt;
+</span></span><span style="display:flex;"><span>      &lt;h1&gt;Nome del sito web&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>    &lt;/header&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- sezione di navigazione --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;nav&gt;
+</span></span><span style="display:flex;"><span>      &lt;ul&gt;
+</span></span><span style="display:flex;"><span>        &lt;li&gt;&lt;a href=<span style="color:#009c00">&#34;#&#34;</span>&gt;Home&lt;/a&gt;&lt;/li&gt;
+</span></span><span style="display:flex;"><span>        &lt;li&gt;&lt;a href=<span style="color:#009c00">&#34;#&#34;</span>&gt;Articoli&lt;/a&gt;&lt;/li&gt;
+</span></span><span style="display:flex;"><span>        &lt;li&gt;&lt;a href=<span style="color:#009c00">&#34;#&#34;</span>&gt;Contatti&lt;/a&gt;&lt;/li&gt;
+</span></span><span style="display:flex;"><span>      &lt;/ul&gt;
+</span></span><span style="display:flex;"><span>    &lt;/nav&gt;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- contenuto principale --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;main&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>      <span style="color:#f00;font-style:italic">&lt;!-- sezione --&gt;</span>
+</span></span><span style="display:flex;"><span>      &lt;section&gt;
+</span></span><span style="display:flex;"><span>        &lt;h2&gt;Sezione 1&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>        &lt;p&gt;Contenuto della sezione 1...&lt;/p&gt;
+</span></span><span style="display:flex;"><span>      &lt;/section&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f00;font-style:italic">&lt;!-- articolo --&gt;</span>
+</span></span><span style="display:flex;"><span>      &lt;article&gt;
+</span></span><span style="display:flex;"><span>        &lt;h2&gt;Titolo dell&#39;articolo&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>        &lt;p&gt;Contenuto dell&#39;articolo...&lt;/p&gt;
+</span></span><span style="display:flex;"><span>      &lt;/article&gt;
+</span></span><span style="display:flex;"><span>    &lt;/main&gt;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- informazioni separate --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;aside&gt;
+</span></span><span style="display:flex;"><span>      &lt;h3&gt;Informazioni correlate&lt;/h3&gt;
+</span></span><span style="display:flex;"><span>      &lt;p&gt;contenuto non strettamente attinente&lt;/p&gt;
+</span></span><span style="display:flex;"><span>    &lt;/aside&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;footer&gt;
+</span></span><span style="display:flex;"><span>      &lt;p&gt;informazioni di chiusura&lt;/p&gt;
+</span></span><span style="display:flex;"><span>    &lt;/footer&gt;
+</span></span><span style="display:flex;"><span>  &lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div><p>Sia lo sviluppatore, sia il grafico devono conoscere queste regole e rispettare la struttura basilare della pagina web utilizzando le etichette in maniera coerente al contenuto.</p>
+<h2 id="immagini">Immagini</h2>
+<p>Smartphone e dispositivi IoT spesso sono dotati di connessioni lente e a
+pagamento, come il 3G, e di schermi piccoli con risoluzioni ridotte, per
+cui su questi dispositivi è consigliato mostrare immagini di qualità
+ridotta, che siano adatte come dimensioni e che possano al contempo
+ridurre i tempi di caricamento dal server. In caso di monitor per PC e smart TV 8K con schermi grandi e ad altissima risoluzione è invece preferibile mostrare immagini ad alta qualità, poiché generalmente questi dispositivi sono collegati in wi-fi o a reti veloci.</p>
+<p>Inoltre i dispositivi sono dotati tipicamente di uno schermo rettangolare che viene letto in verticale per smartphone e tablet e in orizzontale nel caso di smart TV e monitor per PC.</p>
+<p>Per permettere la selezione dell&rsquo;immagine adatta allo schermo del
+dispositivo è necessario conoscere alcuni concetti. Ogni
+dispositivo, a seconda della risoluzione dello schermo, ha una propria
+<strong>pixel density</strong>, ovvero un numero di pixel presenti su una linea di un
+pollice (PPI), descritta talvolta anche come punti presenti su una linea
+di un pollice (DPI). Piú la pixel density è alta, piú la qualità dello
+schermo è alta. Il browser, però, utilizza una propria misura, detta
+<strong>pixel CSS</strong>, calcolata a partire dalla pixel density.</p>
+<p>Il rapporto tra <strong>pixel density</strong> e <strong>pixel CSS</strong> è detto
+<strong>pixel-ratio</strong>, ed è un secondo valore da considerare, oltre alla
+larghezza dello schermo, per la selezione dell&rsquo;immagine.</p>
+<p>Su uno schermo di 1200px, un&rsquo;immagine di 1200px occupa:</p>
+<ul>
+<li>l&rsquo;intero schermo se la pixel ratio è 1x;</li>
+<li>metà schermo se la pixel ratio è 2x;</li>
+<li>un terzo dello schermo se la pixel ratio è 3x;</li>
+<li>e cosi via&hellip;</li>
+</ul>
+<p>Si deve tener presente che ogni browser puó leggere a proprio modo larghezza
+e pixel ratio. Quindi, data la stessa immagine salvata in risoluzioni diverse (per
+mostrarle su schermi con pixel ratio differenti), ad esempio
+&ldquo;immagine1.png, immagine2.png ed immagine3.png&rdquo;, e dato uno schermo con
+pixel ratio di 1x, puó il browser selezionare l&rsquo;immagine che piú si
+adatta ad occupare l&rsquo;intera larghezza del dispositivo?</p>
+<p>Non puó, perché non conosce la larghezza delle immagini &ldquo;immagine1.png, immagine2.png ed immagine3.png&rdquo;.
+Per conoscere la risoluzione di ogni immagine, dovrebbe scaricarle tutte
+dal server. Per evitare questo spreco di tempo e risorse, è necessario
+che sia lo sviluppatore ad indicare, per ogni immagine, la rispettiva
+risoluzione.</p>
+<p>Ad oggi l&rsquo;unico parametro che viene considerato della risoluzione è la
+larghezza (in futuro forse lo sarà anche l&rsquo;altezza?), che viene indicata
+esplicitamente aggiungendo al valore la lettera <strong>w</strong> (che sta per
+&ldquo;width&rdquo; ovvero &ldquo;larghezza&rdquo;). Quindi, per permettere al browser di
+scegliere l&rsquo;immagine con la larghezza adatta allo spazio da riempire
+sullo schermo, il programmatore deve indicare nell&rsquo;attributo <code>srcset</code> dell&rsquo;etichetta <code>img</code> la lista di immagini, con
+rispettive larghezze, come nel seguente esempio:</p>
+<p><code>srcset=&quot;immagine1.png 200w, immagine2.png 600w, immagine3.png 1200w&quot;</code></p>
+<p>Indicate le immagini e le rispettive larghezze, ad esempio img1 di
+200px, img2 di 600px e img3 di 1200px, dobbiamo associare queste
+immagini ai vari dispositivi. Si tenga presente che, su uno schermo di
+1200px di larghezza, non è detto si debba visualizzare un immagine di
+1200px, perché magari si ha una pagina con 6 colonne e quindi la
+larghezza adatta per ogni colonna è 1200px/6 = 200px. Caricando quindi
+un&rsquo;immagine di 200px x 150px (invece che una da 1200px x 900px) si ha un
+risparmio di tempo (e dati trasmessi di rete) di 35 volte! Considerando
+che le colonne dell&rsquo;esempio sono 6, il risparmio è considerevole.</p>
+<p>Inoltre c&rsquo;è da considerare la pixel ratio, quindi come indicare
+l&rsquo;associazione delle immagini al dispositivo? Per indicare il
+dispositivo, si usano le media query, che però saranno trattate nelle lezioni sui CSS, ed alle quali si rimanda per una completa descrizione. Per indicare invece
+la dimensione che deve occupare l&rsquo;immagine, si usano i descrittori
+<strong>vw</strong>, che descrive la percentuale di larghezza da occupare sullo
+schermo (in termini di pixel CSS), e <strong>vh</strong>, che descrive la percentuale
+di altezza da occupare sullo schermo (in termini di pixel CSS).</p>
+<p>L&rsquo;attributo <code>sizes</code> dell&rsquo;etichetta <code>img</code> serve appunto a descrivere le associazioni tra schermo e larghezza desiderata per l&rsquo;immagine, di seguito se ne fa un esempio d&rsquo;uso:</p>
+<p><code>sizes=&quot;(max-width: 500px) 100vw, (max-width: 1500px) 50vw, 25vm&quot;</code></p>
+<p>Il codice indicato descrive 3 associazioni: la prima indica che a
+schermi con risoluzione massima di 500 pixel, l&rsquo;immagine deve essere
+presentata a schermo intero; la seconda indica che a schermi con
+risoluzione massima di 1500 pixel, l&rsquo;immagine deve essere presentata a
+metà schermo, nell&rsquo;ultimo caso, con schermi piú grandi di 1500 (per
+esclusione), l&rsquo;immagine deve essere presentata ad un quarto dello
+schermo.</p>
+<p>Il browser, quindi, conoscendo la grandezza del display e la
+pixel-ratio, conoscendo le dimensioni che deve occupare l&rsquo;immagine per
+lo schermo utilizzato, descritte nell&rsquo;attributo <code>sizes</code>, puó scegliere
+l&rsquo;immagine appropriata tra quelle
+indicate nell&rsquo;attributo <code>srcset</code> e quindi mostrarla alla dimensione indicata (come da associazione indicata sempre nell&rsquo;attributo <code>srcset</code>). Se nessuna delle immagini viene selezionata,
+il browser di default visualizza l&rsquo;immagine descritta nell&rsquo;attributo <code>src</code>.</p>
+<p>L&rsquo;esempio completo è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;img srcset=<span style="color:#009c00">&#34;immagine1.png 200w, immagine2.png 600w, immagine3.png 1200w&#34;</span>
+</span></span><span style="display:flex;"><span>  sizes=<span style="color:#009c00">&#34;(max-width: 500px) 100vw, (max-width: 1500px) 50vw, 25vm&#34;</span>
+</span></span><span style="display:flex;"><span>  src=<span style="color:#009c00">&#34;immagine.png&#34;</span> alt=<span style="color:#009c00">&#34;esempio etichetta immagine&#34;</span> /&gt;
+</span></span></code></pre></div><p>che genera l&rsquo;immagine:</p>
+<!-- markdown-link-check-disable-next-line -->
+<p><img src="/static/coding/web/html/program_CC0.png" alt="esempio etichetta immagine" title="immagine generata dal codice HTML"></p>
+<h3 id="figure">Figure</h3>
+<p>Quando le immagini da mostrare sono le stesse in risoluzione differente, si utilizza l&rsquo;etichetta <code>img</code> indicando i file contenenti l&rsquo;immagine alle differenti risoluzioni.</p>
+<p>Quando a seconda del dispositivo si vuole scegliere un immagine sostanzialmente differente rispetto ad un&rsquo;altra, si utilizza l&rsquo;etichetta <code>figure</code>.</p>
+<p>Questa etichetta prevede al suo interno siano presenti più etichette <code>img</code>, ognuna per un&rsquo;immagine da scegliere su una categoria di dispositivi, sia l&rsquo;etichetta <code>figcaption</code> che consente di aggiungere una didascalia o una descrizione testuale all&rsquo;immagine. Questo la rende più adatta a legare l&rsquo;immagine con la sua descrizione associata.</p>
+<p>Un&rsquo;esempio d&rsquo;uso dell&rsquo;etichetta è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;figure&gt;
+</span></span><span style="display:flex;"><span>  &lt;img src=<span style="color:#009c00">&#34;imageMele.jpg&#34;</span> alt=<span style="color:#009c00">&#34;Mela&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;img src=<span style="color:#009c00">&#34;imagePere.jpg&#34;</span> alt=<span style="color:#009c00">&#34;Pera&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;figcaption&gt;Frutta tipica&lt;/figcaption&gt;
+</span></span><span style="display:flex;"><span>&lt;/figure&gt;
 </span></span></code></pre></div>
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="https://htmlhead.dev/" style="font-weight: 700; color: #e22d30;">Sito htmlhead.dev</a>: Guida (in inglese) all&#39;elemento &#39;head&#39; dell&#39;HTML;</p><p><a href="https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs" style="font-weight: 700; color: #e22d30;">Icone del sito web nel 2021</a>: Articolo (in inglese) sulla scelta e sulla creazione delle icone del sito web nel 2021</p><p><a href="https://www.matuzo.at/blog/html-boilerplate/" style="font-weight: 700; color: #e22d30;">My current HTML template</a>: Articolo (in inglese) sugli elementi basilari utilizzati per costruire un template di una pagina HTML</p>
+      <p><a href="https://htmlhead.dev/" style="font-weight: 700; color: #e22d30;">Sito htmlhead.dev</a>: Guida (in inglese) all&#39;elemento &#39;head&#39; dell&#39;HTML;</p><p><a href="https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs" style="font-weight: 700; color: #e22d30;">Icone del sito web nel 2021</a>: Articolo (in inglese) sulla scelta e sulla creazione delle icone del sito web nel 2021</p><p><a href="https://www.matuzo.at/blog/html-boilerplate/" style="font-weight: 700; color: #e22d30;">My current HTML template</a>: Articolo (in inglese) sugli elementi basilari utilizzati per costruire un template di una pagina HTML</p><p><a href="https://evilmartians.com/chronicles/images-done-right-web-graphics-good-to-the-last-byte-optimization-techniques" style="font-weight: 700; color: #e22d30;">HTML images done right - Web graphics, good to the last byte</a>: HTML images done right - Web graphics, good to the last byte</p><p><a href="https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/" style="font-weight: 700; color: #e22d30;">HTML images with srcset</a>: How to Build Responsive Images with srcset</p><p><a href="https://ericportis.com/posts/2014/srcset-sizes/" style="font-weight: 700; color: #e22d30;">HTML images srcset and sizes</a>: media queries aren’t the right tool for responsive images, srcset and sizes are</p>
   </article>
 </main>
 

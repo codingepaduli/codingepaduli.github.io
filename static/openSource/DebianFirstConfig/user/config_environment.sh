@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SVN_PATH="/home/io/startup/"
+SVN_PATH="$HOME/Sviluppo/SVN/codingepaduli/static/static/openSource/DebianFirstConfig/user/"
 
 # -s : create a symbolic link
 # -f : continues when error occours (useful in loop)

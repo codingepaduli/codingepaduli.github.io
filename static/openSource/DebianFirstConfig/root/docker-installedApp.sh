@@ -24,6 +24,9 @@ fi
 # in case of "permission denied", remove the folder  
 # rm -rf "$HOME/.docker"
 
+# List generated from the command:
+#    docker images --format "{{.Repository}}:{{.Tag}}" 
+
 # tag 12-bullseye - to compile against the same libc library 
 #     of debian bullseye (installed on my machine)
 docker pull gcc:12-bookworm

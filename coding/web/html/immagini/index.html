@@ -228,8 +228,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 10 minuti 
-        ( 2005 parole)
+        Tempo di lettura 6 minuti 
+        ( 1245 parole)
     </span>
 </div></div>
     </header>
@@ -292,13 +292,6 @@
 <p>L&rsquo;aggiunta di immagini ad una pagina web è semplice, ma si deve
 garantire un&rsquo;esperienza utente soddisfacente in termini di
 visualizzazione e tempi di caricamento.</p>
-<p>Smartphone e dispositivi IoT spesso sono dotati di connessioni lente e a
-pagamento, come il 3G, e di schermi piccoli con risoluzioni ridotte, per
-cui su questi dispositivi è consigliato mostrare immagini di qualità
-ridotta, che siano adatte come dimensioni e che possano al contempo
-ridurre i tempi di caricamento dal server. In caso di schermi grandi ed
-HD, invece, è preferibile mostrare immagini ad alta qualità, poiché
-generalmente questi dispositivi sono collegati in wi-fi o a reti veloci.</p>
 <p>Sempre nell&rsquo;ottica dell&rsquo;ottimizzazione dei tempi, si possono utilizzare
 tecniche di <strong>lazy loading</strong>, ovvero di caricamento delle immagini solo
 su richiesta.</p>
@@ -327,87 +320,10 @@ il tipo con <code>data:image/png;base64,</code>, come nel seguente esempio:</p>
 <p>Per la conversione dell&rsquo;immagine in base64 data-URI si puó usare uno dei numerosi
 servizi on-line, come il seguente:
 <a href="https://websemantics.uk/tools/image-to-data-uri-converter" title="servizio di conversione immagine in base64">https://websemantics.uk/tools/image-to-data-uri-converter</a></p>
-<p>Per permettere la selezione dell&rsquo;immagine adatta allo schermo del
-dispositivo, invece, è necessario conoscere alcuni concetti. Ogni
-dispositivo, a seconda della risoluzione dello schermo, ha una propria
-<strong>pixel density</strong>, ovvero un numero di pixel presenti su una linea di un
-pollice (PPI), descritta talvolta anche come punti presenti su una linea
-di un pollice (DPI). Piú la pixel density è alta, piú la qualità dello
-schermo è alta. Il browser, però, utilizza una propria misura, detta
-<strong>pixel CSS</strong>, calcolata a partire dalla pixel density.</p>
-<p>Il rapporto tra <strong>pixel density</strong> e <strong>pixel CSS</strong> è detto
-<strong>pixel-ratio</strong>, ed è un secondo valore da considerare, oltre alla
-larghezza dello schermo, per la selezione dell&rsquo;immagine.</p>
-<p>Su uno schermo di 1200px, un&rsquo;immagine di 1200px occupa:</p>
-<ul>
-<li>l&rsquo;intero schermo se la pixel ratio è 1x;</li>
-<li>metà schermo se la pixel ratio è 2x;</li>
-<li>un terzo dello schermo se la pixel ratio è 3x;</li>
-<li>e cosi via&hellip;</li>
-</ul>
 <p>Si tenga presente che ogni browser puó leggere a proprio modo larghezza
 e pixel ratio. Per valutare quelle del proprio schermo, si puó navigare
 con browser diversi questo sito:
 <a href="https://www.mydevice.io/" title="sito web per ottenere informazioni sul dispositivo">www.mydevice.io</a>.</p>
-<p>Quindi, data la stessa immagine salvata in risoluzioni diverse (per
-mostrarle su schermi con pixel ratio differenti), ad esempio
-&ldquo;immagine1.png, immagine2.png ed immagine3.png&rdquo;, e dato uno schermo con
-pixel ratio di 1x, puó il browser selezionare l&rsquo;immagine che piú si
-adatta ad occupare l&rsquo;intera larghezza del dispositivo?</p>
-<p>Non puó, perché non conosce la larghezza dell&rsquo;immagine &ldquo;immagine1.png&rdquo;.
-Per conoscere la risoluzione di ogni immagine, dovrebbe scaricarle tutte
-dal server. Per evitare questo spreco di tempo e risorse, è necessario
-che sia lo sviluppatore ad indicare, per ogni immagine, la rispettiva
-risoluzione.</p>
-<p>Per ora, l&rsquo;unico parametro che viene considerato della risoluzione è la
-larghezza (in futuro forse anche l&rsquo;altezza??), che viene indicata
-esplicitamente aggiungendo al valore la lettera <strong>w</strong> (che sta per
-&ldquo;weight&rdquo; ovvero &ldquo;larghezza&rdquo;). Quindi, per permettere al browser di
-scegliere l&rsquo;immagine con la larghezza adatta allo spazio da riempire
-sullo schermo, il programmatore deve indicare la lista di immagini, con
-rispettive larghezze, nell&rsquo;attributo <code>srcset</code>, come da seguente esempio:</p>
-<p><code>srcset=&quot;immagine1.png 200w, immagine2.png 600w, immagine3.png 1200w&quot;</code></p>
-<p>Indicate le immagini e le rispettive larghezze, ad esempio img1 di
-200px, img2 di 600px e img3 di 1200px, dobbiamo associare queste
-immagini ai vari dispositivi. Si tenga presente che, su uno schermo di
-1200px di larghezza, non è detto si debba visualizzare un immagine di
-1200px, perché magari si ha una pagina con 6 colonne e quindi la
-larghezza adatta per ogni colonna è 1200px/6 = 200px. Caricando quindi
-un&rsquo;immagine di 200px x 150px (invece che una da 1200px x 900px) si ha un
-risparmio di tempo (e dati trasmessi di rete) di 35 volte! Considerando
-che le colonne dell&rsquo;esempio sono 6, il risparmio è considerevole.</p>
-<p>Inoltre c&rsquo;è da considerare la pixel ratio, quindi come indicare
-l&rsquo;associazione delle immagini al dispositivo? Per indicare il
-dispositivo, si usano le media query, che però non saranno trattate in
-dettaglio ora, si rimanda ad una lezione successiva. Per indicare invece
-la dimensione che deve occupare l&rsquo;immagine, si usano i descrittori
-<strong>vw</strong>, che descrive la percentuale di larghezza da occupare sullo
-schermo (in termini di pixel CSS), e <strong>vh</strong>, che descrive la percentuale
-di altezza da occupare sullo schermo (in termini di pixel CSS).</p>
-<p>L&rsquo;attributo <code>sizes</code> serve appunto a descrivere le associazioni tra
-schermo e larghezza desiderata per l&rsquo;immagine, di seguito se ne fa un
-esempio d&rsquo;uso:</p>
-<p><code>sizes=&quot;(max-width: 500px) 100vw, (max-width: 1500px) 50vw, 25vm&quot;</code></p>
-<p>Il codice indicato descrive 3 associazioni: la prima indica che a
-schermi con risoluzione massima di 500 pixel, l&rsquo;immagine deve essere
-presentata a schermo intero; la seconda indica che a schermi con
-risoluzione massima di 1500 pixel, l&rsquo;immagine deve essere presentata a
-metà schermo, nell&rsquo;ultimo caso, con schermi piú grandi di 1500 (per
-esclusione), l&rsquo;immagine deve essere presentata ad un quarto dello
-schermo.</p>
-<p>Il browser, quindi, conoscendo la grandezza del display e la
-pixel-ratio, conoscendo le dimensioni che deve occupare l&rsquo;immagine per
-lo schermo utilizzato, descritte nel tag <code>sizes</code>, puó scegliere
-l&rsquo;immagine appropriata tra le immagini (e le relative dimensioni)
-indicate nel tag <code>sources</code>. Se nessuna delle immagini viene selezionata,
-il browser di default visualizza l&rsquo;immagine descritta dal tag <code>src</code>.</p>
-<p>L&rsquo;esempio completo è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;img srcset=<span style="color:#009c00">&#34;immagine1.png 200w, immagine2.png 600w, immagine3.png 1200w&#34;</span>
-</span></span><span style="display:flex;"><span>  sizes=<span style="color:#009c00">&#34;(max-width: 500px) 100vw, (max-width: 1500px) 50vw, 25vm&#34;</span>
-</span></span><span style="display:flex;"><span>  src=<span style="color:#009c00">&#34;immagine.png&#34;</span> alt=<span style="color:#009c00">&#34;esempio tag immagine&#34;</span> /&gt;
-</span></span></code></pre></div><p>che genera l&rsquo;immagine:</p>
-<!-- markdown-link-check-disable-next-line -->
-<p><img src="/static/coding/web/html/program_CC0.png" alt="esempio tag immagine" title="immagine generata dal codice HTML"></p>
 <p>Le immagini possono essere arricchite di <strong>mappe</strong>, cioè di aree
 cliccabili sovrapposte all&rsquo;immagine. Le mappe sono descritte dal tag
 <code>map</code> che prevede l&rsquo;attributo <code>name</code> come unico attributo di
@@ -489,7 +405,7 @@ a quando l&rsquo;utente arriva a visualizzare il contenuto;</li>
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="https://opensource.com/article/20/4/webp-image-compression" style="font-weight: 700; color: #e22d30;">WebP image compression</a>: HTML images - Drop PNG and JPG for your online images: Use WebP</p><p><a href="https://evilmartians.com/chronicles/images-done-right-web-graphics-good-to-the-last-byte-optimization-techniques" style="font-weight: 700; color: #e22d30;">HTML images done right - Web graphics, good to the last byte</a>: HTML images done right - Web graphics, good to the last byte</p><p><a href="https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/" style="font-weight: 700; color: #e22d30;">HTML images with srcset</a>: How to Build Responsive Images with srcset</p><p><a href="https://ericportis.com/posts/2014/srcset-sizes/" style="font-weight: 700; color: #e22d30;">HTML images srcset and sizes</a>: media queries aren’t the right tool for responsive images, srcset and sizes are</p><p><a href="https://websemantics.uk/tools/image-to-data-uri-converter/" style="font-weight: 700; color: #e22d30;">HTML Images to base64 data-URI converter</a>: A tool to convert images to base64 data-URI</p><p><a href="https://www.asciitable.it/mime-types" style="font-weight: 700; color: #e22d30;">MIME Types</a>: A list of mime types</p>
+      <p><a href="https://opensource.com/article/20/4/webp-image-compression" style="font-weight: 700; color: #e22d30;">WebP image compression</a>: HTML images - Drop PNG and JPG for your online images: Use WebP</p><p><a href="https://websemantics.uk/tools/image-to-data-uri-converter/" style="font-weight: 700; color: #e22d30;">HTML Images to base64 data-URI converter</a>: A tool to convert images to base64 data-URI</p><p><a href="https://www.asciitable.it/mime-types" style="font-weight: 700; color: #e22d30;">MIME Types</a>: A list of mime types</p>
   </article>
 </main>
 
@@ -507,7 +423,7 @@ a quando l&rsquo;utente arriva a visualizzare il contenuto;</li>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/html/metadati/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">HTML Lez. 05 - Metadati</p>
+			<p class="pager__title">HTML Lez. 05 - Struttura e layout</p>
 		</a>
 	</div>
 </nav>

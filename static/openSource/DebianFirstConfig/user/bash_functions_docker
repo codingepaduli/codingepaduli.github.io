@@ -1,0 +1,218 @@
+# shellcheck shell=bash
+
+################################################
+# Functions based on docker apps installed
+################################################
+
+# A basic docker function
+dockerContainer() {
+  docker container run --rm -it -u $UID:$(id -g $USER) -v "$PWD":"$PWD" -w "$PWD" "$@"
+}
+export -f dockerContainer
+
+# The gcc compiler
+# TEST: dockerGcc --version
+# RUN:  dockerGcc -o myapp myapp.c
+dockerGcc() {
+  dockerContainer --name docker-gcc  gcc:12-bookworm  gcc "$@"
+}
+export -f dockerGcc
+
+# The g++ compiler
+# TEST: dockerGpp --version
+# RUN:  dockerGpp -o myapp myapp.c
+dockerGpp() {
+  dockerGcc -lstdc++ "$@"
+}
+export -f dockerGpp
+
+# TEST: docker-gcc --version
+# RUN:  docker-gcc -o myapp myapp.c
+# alias docker-gcc='      dockerContainer --name docker-gcc       gcc:12-bullseye gcc '
+
+# TEST: docker-g++ --version
+# RUN:  docker-g++ -o myapp myapp.c
+# alias docker-g++='      docker-gcc -lstdc++ '
+
+# The deno JS compiler
+# TEST: deno --help
+# RUN:  denoCompile main.ts
+denoCompile() {
+  dockerContainer --name deno-compile -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.34.3 compile --unstable --allow-read --allow-env --allow-net --output=myapp.exe "$@"
+}
+export -f denoCompile
+
+# The deno JS runtime interpreter
+# TEST: deno --help
+# RUN:  denoRun main.ts
+denoRun() {
+  dockerContainer --name deno         -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.34.3 run --allow-net "$@"
+}
+export -f denoRun
+
+# alias deno='            dockerContainer --name deno             -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.34.3 run --allow-net '
+# TEST: deno --help
+# RUN:  deno run main.ts
+
+# alias deno-compile='    dockerContainer --name deno-compile     -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.34.3 compile --unstable --allow-read --allow-env --allow-net --output=myapp.exe '
+# TEST: deno-compile main.ts
+# RUN:  deno-compile main.ts
+
+# Python
+# TEST: dockerPython3 --version
+# RUN:  dockerPython3 your-daemon-or-script.py
+dockerPython3() {
+  dockerContainer  --name python3  python:3.11.4-bookworm python "$@"
+}
+export -f dockerPython3
+
+# alias docker-python3='  dockerContainer --name python3          python:3.11.4-bookworm python ' 
+# TEST: docker-python3 --version
+# RUN:  docker-python3 your-daemon-or-script.py
+
+# PowerShell
+# TEST: powershell /usr/bin/pwsh -Command "Write-Output 'Hello world'"
+powershell()  {
+  dockerContainer --name powershell  --net=host mcr.microsoft.com/powershell:7.3-debian-bullseye-slim 
+}
+export -f powershell
+
+# alias powershell='      dockerContainer --name powershell       --net=host mcr.microsoft.com/powershell:7.3-debian-bullseye-slim'
+# TEST:  powershell /usr/bin/pwsh -Command "Write-Output 'Hello world'"
+# RUN:   powershell /usr/bin/pwsh /path/to/script.ps
+
+# node
+nodeRun() {
+  # Save the first and second parameters
+  declare -A headParams
+  headParams+=$1
+  headParams+=$2
+
+  # Remove the first and second parameters from the parameter list
+  shift 2
+  
+  # Save all other parameters except the first and second
+  declare -A tailParams
+  tailParams=$@
+
+  dockerContainer   $headParams  node:20.3.1-bookworm $tailParams
+}
+
+# node JS
+# TEST: node --version
+node() {
+  nodeRun " --name node "     " "     "$@"
+}
+export -f node
+
+# npm
+# TEST: npm --version
+npm() { 
+  nodeRun " --name npm "     " --entrypoint /usr/local/bin/npm "  "$@"
+}
+export -f npm
+
+# alias node='            dockerContainer --name node             node:20.3.1-bookworm '
+# TEST: node --version
+# alias npm='             dockerContainer --name npm              --entrypoint "/usr/local/bin/npm" node:20.3.1-bookworm '
+
+# Run the hugo docker image
+# Test: hugoRun  " -p 1414:1414 " " -p 1515:1515 " "version"
+hugoRun() {
+  # Save the first and second parameters
+  declare -A headParams
+  headParams+=$1
+  headParams+=$2
+
+  # Remove the first and second parameters from the parameter list
+  shift 2
+  
+  # Save all other parameters except the first and second
+  declare -A tailParams
+  tailParams=$@
+
+  dockerContainer --name hugo $headParams -p 1313:1313 klakegg/hugo:0.111.3-debian $tailParams
+}
+export -f hugoRun
+
+# Hugo server
+# Test: hugoRun  " -p 1414:1414 " " -p 1515:1515 " "version"
+# Run: hugoDev
+hugoDev() {
+  hugoRun " -p 1414:1414 " " -p 1515:1515 "   server   --debug --environment mainroad --verbose --gc --disableFastRender --ignoreCache --noHTTPCache --renderStaticToDisk "$@"
+}
+export -f hugoDev
+
+# Hugo works with draft and future posts
+# Run: hugoDevDraft
+hugoDevDraft() {
+  hugoDev --buildDrafts --buildFuture "$@"
+}
+export -f hugoDevDraft
+
+# Hugo prod
+# "$PWD/.."" mount the parent directory, and after select the folder with --source ./codingepaduli
+hugoProd() {
+  hugoRun " --name hugo-prod "  " -v $PWD/..:/usr/src/SVN2 "  " --environment mainroad " "--source /usr/src/SVN2/codingepaduli" "--destination /usr/src/SVN2/codingepaduli.github.io"
+}
+export -f hugoProd
+
+#alias hugo='            dockerContainer --name hugo             -p 1313:1313 klakegg/hugo:0.111.3-debian'
+#alias hugo-dev='        hugo server --debug --environment mainroad --verbose --gc --disableFastRender --ignoreCache --noHTTPCache --renderStaticToDisk  '
+#alias hugo-dev-draft='  hugo-dev --buildDrafts --buildFuture'
+# "$PWD/.."" mount the parent directory, and after select the folder with --source ./codingepaduli
+#alias hugo-prod='       dockerContainer --name hugo-prod        -v "$PWD/..":/usr/src/SVN2           klakegg/hugo:0.111.3-debian         --debug --environment mainroad --verbose --gc --source /usr/src/SVN2/codingepaduli --destination /usr/src/SVN2/codingepaduli.github.io'
+
+# pandoc
+# TEST: pandoc --version
+pandoc() {
+  echo "running pandoc in folder $PWD"
+  dockerContainer --name pandoc          -v "$PWD":"$PWD" -v "$HOME/Sviluppo/SVN2/codingepaduli:/usr/src/myapp/"  -v "$HOME/Sviluppo/SVN2/from-hugo-to-book":/usr/src/luaFilters  dalibo/pandocker:latest-buster-full "$@" # --fail-if-warnings
+}
+export -f pandoc
+
+pandocGenerate() {
+  # "$PWD/.."" mount the parent directory, and after run the script generate.sh 
+  echo "running pandoc in folder $PWD"
+  dockerContainer --name pandoc-gen       -v "$PWD":"$PWD"  --entrypoint "$PWD/generate.sh" dalibo/pandocker:latest-buster-full --filter pandoc-crossref --template=eisvogel "$@"
+}
+export -f pandocGenerate
+
+# pandoc Md to pdf
+# Test: pandocMdToPdf intro.md
+pandocMdToPdf() {
+  pandoc --lua-filter=/usr/src/luaFilters/replace_image_source.lua --resource-path=/usr/src/myapp/static --filter pandoc-crossref --from=markdown+yaml_metadata_block --to=latex  --pdf-engine=xelatex  --output file.pdf -V geometry:margin=2cm  --highlight-style=tango "$@"
+}
+export -f pandocMdToPdf
+
+# yt-dl
+# Test: youTubeDownload URL
+youTubeDownload() {
+  dockerContainer --name youtube-dl  -e PUID="$UID" -e PGID="$(id -g)" -v "$PWD":"$PWD"   mikenye/youtube-dl:2023.02.17_linux_amd64  "$@"
+}
+export -f youTubeDownload
+
+
+# alias yt-dl='           dockerContainer --name youtube-dl        -e PGID=$(id -g) -e PUID=$(id -u) -v "$(pwd)":/workdir:rw  mikenye/youtube-dl:latest_linux_amd64 '
+
+# ImageMagick - convert from pdf to image
+#
+# On error "operation not allowed by the security policy PDF":
+#   Open the file /etc/ImageMagick-6/policy.xml 
+#   Replace <policy domain="coder" rights="none" pattern="PDF" />
+#   with <policy domain="coder" rights="read|write" pattern="PDF" />
+#
+# Test: convert -version
+# RUN: convert file.pdf file.jpg
+convert() {
+  dockerContainer --name imagemagick     dpokidov/imagemagick:7.1.1-10-bullseye "$@"
+}
+export -f convert
+
+#alias convert='         dockerContainer --name imagemagick                 dpokidov/imagemagick:7.1.1-10-bullseye ' 
+
+export convertPdfOptionPageA4White=' -background white -page a4 '
+export convertPdfOptionDensity300=' -density 300 -alpha background -alpha off '
+export convertOptionGreyscale40x100=' -set colorspace Gray -separate -average -resize 40% '
+export convertOptionIncreaseBrightness=' -alpha discrete -channel rgb -evaluate add 5% +channel '
+export convertOptionIncreaseContrast=' -contrast '
