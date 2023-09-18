@@ -1,11 +1,13 @@
 #!/bin/bash
 
-SVN_PATH="$HOME/Sviluppo/SVN/codingepaduli/static/static/openSource/DebianFirstConfig/user/"
+# Sync these variables with profile_custom
+MY_SVN_REPO_FOLDER="$HOME/Sviluppo/SVN2"
+MY_DOT_FILES_FOLDER="$MY_SVN_REPO_FOLDER/codingepaduli/static/static/openSource/DebianFirstConfig/user"
 
 # -s : create a symbolic link
 # -f : continues when error occours (useful in loop)
 # -n : avoid symbolic link of a symbolic link
-ln -sfn "$SVN_PATH/profile_custom" "$HOME/.profile_custom"
+ln -sfn "$MY_DOT_FILES_FOLDER/profile_custom" "$HOME/.profile_custom"
 chmod 600 "$HOME/.profile_custom"
 
 # make backup of .bashrc

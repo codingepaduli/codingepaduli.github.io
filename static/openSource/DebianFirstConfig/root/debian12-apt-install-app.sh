@@ -12,7 +12,8 @@
 #
 ## -y: answer "y"
 ## --dry-run: only simulate the changes
-APT_OPTS=" -y --quiet --quiet " # --dry-run
+## $1 can be --dry-run
+APT_OPTS=" -y $1" #--quiet --quiet  
 APT_UPDATE_OPTS=" -y --quiet --quiet" # unsupported --dry-run
 
 apt-get update $APT_UPDATE_OPTS

@@ -14,18 +14,27 @@
 #    fi
 # fi
 
-SVN_REPO="$HOME/Sviluppo/SVN2/codingepaduli/static/static/openSource/DebianFirstConfig/user"
+# Debian informations
+## -s : short format
+## -c : distro name (bullseye - bookworm)
+## -r : distro version (11 - 12)
+MY_DEBIAN_DISTRO_NAME=$(lsb_release -sc)
+MY_DEBIAN_DISTRO_VERSION=$(lsb_release -sr)
 
-if [ -f "$SVN_REPO/bash_functions" ] && [ -r "$SVN_REPO/bash_functions" ]; then
-    . "$SVN_REPO/bash_functions"
+# Sync these variables with config_environment
+MY_SVN_REPO_FOLDER="$HOME/Sviluppo/SVN2"
+MY_DOT_FILES_FOLDER="$MY_SVN_REPO_FOLDER/codingepaduli/static/static/openSource/DebianFirstConfig/user"
+
+if [ -f "$MY_DOT_FILES_FOLDER/bash_functions" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions" ]; then
+    . "$MY_DOT_FILES_FOLDER/bash_functions"
 fi
 
-if [ -f "$SVN_REPO/bash_functions_extra" ] && [ -r "$SVN_REPO/bash_functions_extra" ]; then
-    . "$SVN_REPO/bash_functions_extra"
+if [ -f "$MY_DOT_FILES_FOLDER/bash_functions_extra" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions_extra" ]; then
+    . "$MY_DOT_FILES_FOLDER/bash_functions_extra"
 fi
 
-if [ -f "$SVN_REPO/bash_functions_docker" ] && [ -r "$SVN_REPO/bash_functions_docker" ]; then
-    . "$SVN_REPO/bash_functions_docker"
+if [ -f "$MY_DOT_FILES_FOLDER/bash_functions_docker" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions_docker" ]; then
+    . "$MY_DOT_FILES_FOLDER/bash_functions_docker"
 fi
 
 # Aggiungo JAVA_HOME

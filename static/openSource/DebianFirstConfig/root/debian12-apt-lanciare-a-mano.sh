@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# APT options
+#
+## -y: answer "y"
+## --quiet: reduce log messages
+## --dry-run: only simulate the changes
+APT_OPTS=" -y --quiet --quiet" # --dry-run
+
 # Multimedia codecs
 apt-get install $APT_OPTS libdvd-pkg
 

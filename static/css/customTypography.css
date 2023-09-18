@@ -33,14 +33,18 @@ p, li {
 }
 
 .list__meta {
-    display: inline-block;
+  display: inline-block;
 }
 
 .meta__item {
-    margin-inline-end: 1rem;
-    display: inline-block;
+  margin-inline-end: 1rem;
+  display: inline-block;
 }
 
 .main__title {
   color: #e22d30;
+}
+
+.highlight pre code {
+  font-size: 1.0rem;
 }

@@ -11,8 +11,9 @@
 # APT options
 #
 ## -y: answer "y"
+## --quiet: reduce log messages
 ## --dry-run: only simulate the changes
-APT_OPTS=" -y --quiet --quiet " # --dry-run
+APT_OPTS=" -y --quiet --quiet $1" 
 APT_UPDATE_OPTS=" -y --quiet --quiet" # unsupported --dry-run
 
 apt-get update $APT_UPDATE_OPTS

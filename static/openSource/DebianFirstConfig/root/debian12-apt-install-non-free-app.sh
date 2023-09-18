@@ -3,11 +3,11 @@
 # APT options
 #
 ## -y: answer "y"
+## --quiet: reduce log messages
 ## --dry-run: only simulate the changes
-APT_OPTS=" -y --quiet --quiet" # --dry-run
+APT_OPTS=" -y --quiet --quiet $1"
 APT_ADD_REPO_OPTS=" -y " # unsupported --quiet
 APT_UPDATE_OPTS=" -y --quiet --quiet" # unsupported --dry-run
-
 
 # Provides the scripts 'apt-add-repository' used to add 
 #  section contrib, non-free and non-free-firmware in the

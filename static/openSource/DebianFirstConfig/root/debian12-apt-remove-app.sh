@@ -3,8 +3,10 @@
 # APT options
 #
 ## -y: answer "y"
+## --quiet: reduce log messages
+## --purge: remove config files
 ## --dry-run: only simulate the changes
-APT_OPTS=" -y --purge --quiet --quiet "
+APT_OPTS=" -y --purge --quiet --quiet $1"
 
 ## Remove unused Firefox localizations
 apt-get remove $APT_OPTS  firefox-esr-l10n-ar firefox-esr-l10n-ast \
