@@ -377,21 +377,30 @@
     </item>
     
     <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
-    </item>
-    
-    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>http://codingepaduli.github.io/coding/web/linkcss/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/linkcss/</guid>
+      <description>Lezioni sul linguaggio CSS nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/css&#39;&gt;CSS&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
     </item>
     
     <item>

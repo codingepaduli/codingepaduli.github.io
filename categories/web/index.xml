@@ -6,7 +6,7 @@
     <description>Recent content in web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 02 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
@@ -356,6 +356,15 @@
       
       <guid>http://codingepaduli.github.io/coding/web/html/etichette/</guid>
       <description>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
+    </item>
+    
+    <item>
+      <title>Lezioni sul linguaggio CSS</title>
+      <link>http://codingepaduli.github.io/coding/web/css/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/css/</guid>
+      <description>Lezioni sul linguaggio CSS</description>
     </item>
     
     <item>

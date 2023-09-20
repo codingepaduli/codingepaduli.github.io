@@ -6,23 +6,23 @@
     <description>Recent content in interesting on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Mon, 11 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
-    </item>
-    
+    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
     </item>
     
     <item>

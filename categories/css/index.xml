@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on Coding e Paduli</title>
+    <link>http://codingepaduli.github.io/categories/css/</link>
+    <description>Recent content in CSS on Coding e Paduli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lezioni sul linguaggio CSS</title>
+      <link>http://codingepaduli.github.io/coding/web/css/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/css/</guid>
+      <description>Lezioni sul linguaggio CSS</description>
+    </item>
+    
+  </channel>
+</rss>
