@@ -170,3 +170,10 @@ export convertPdfOptionDensity300=' -density 300 -alpha background -alpha off '
 export convertOptionGreyscale40x100=' -set colorspace Gray -separate -average -resize 40% '
 export convertOptionIncreaseBrightness=' -alpha discrete -channel rgb -evaluate add 5% +channel '
 export convertOptionIncreaseContrast=' -contrast '
+
+# xsv
+## Test: xsv --version
+xsv() { 
+  dockerContainer --name xsv   cincan/xsv "$@"
+}
+export -f xsv

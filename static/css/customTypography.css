@@ -47,4 +47,5 @@ p, li {
 
 .highlight pre code {
   font-size: 1.0rem;
+  white-space: pre-wrap;
 }
