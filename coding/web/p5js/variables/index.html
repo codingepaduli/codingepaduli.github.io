@@ -227,26 +227,130 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 16 minuti 
-        ( 3297 parole)
+        Tempo di lettura 22 minuti 
+        ( 4512 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="variabili">Variabili</h1>
-<p>Le variabili sono spazi di memoria in cui vengono memorizzate delle informazioni. Hanno un nome ed un tipo associato.</p>
-<p>In processing sono tipicamente utilizzate per memorizzare immagini, suoni, frasi o valori numerici, come le coordinate ed il diametro di un cerchio o il colore di un rettangolo.</p>
-<p>L&rsquo;istruzione che il programmatore utilizza in un programma per creare una variabile è l&rsquo;istruzione di <strong>dichiarazione di variabile</strong>, che assegna un nome ed un tipo di dato alla variabile e la <strong>alloca</strong> in memoria.</p>
-<p>La dichiarazione avviene con la parola chiave <code>let</code> seguita dai nomi delle variabili separate da virgola. Un esempio è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x, y, d;
-</span></span></code></pre></div><p>E&rsquo; possibile assegnare un valore iniziale alle variabili utilizzando l’operatore di assegnazione <code>=</code> seguito dal valore.</p>
+      <h1 id="costanti-e-variabili">Costanti e variabili</h1>
+<p>Le costanti e le variabili sono aree di memoria in cui vengono memorizzate le informazioni di un programma in esecuzione, come immagini, suoni, frasi o valori numerici.</p>
+<p>Come si può intuire dal nome, le variabili contengo informazioni che possono essere modificate durante l&rsquo;esecuzione del programma, mentre le costanti contengono informazioni non modificabili.</p>
+<p>Le costanti e le variabili hanno le seguenti caratteristiche:</p>
+<ul>
+<li>sono identificate da un nome;</li>
+<li>sono associate ad un certo tipo di dato, come ad esempio dati numerici interi o decimali, dati booleani (vero o falso), dati alfanumerici (frasi);</li>
+<li>possono avere assegnato un valore iniziale;</li>
+</ul>
+<p>La creazione di una costante o di una variabile di un programma avviene utilizzando un&rsquo;istruzione di <strong>dichiarazione</strong>, che <strong>alloca</strong> in memoria la costante o la variabile e le associa un nome ed un tipo di dato.</p>
+<p>Per assegnare un valore iniziale ad una variabile o ad una costante si utilizza l&rsquo;operazione di <strong>inizializzazione</strong>.</p>
+<h2 id="sintassi">Sintassi</h2>
+<p>La <strong>dichiarazione delle variabili</strong> avviene utilizzando la parola chiave <code>let</code> seguita dai nomi delle variabili separati da virgola. L&rsquo;istruzione di dichiarazione termina con il carattere &ldquo;punto e virgola&rdquo; <code>;</code>. Un esempio di dichiarazione è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x, y, diametro;
+</span></span></code></pre></div><p>L&rsquo;inizializzazione delle variabili avviene utilizzando l&rsquo;operatore di assegnazione <code>=</code> seguito dal valore iniziale, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 20;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 100;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> d = 50;
-</span></span></code></pre></div><p>Quando in una variabile si vuole memorizzare una frase, è necessario che questa sia racchiusa tra doppi apici.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> frase = <span style="color:#009c00">&#34;Hello&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> nome = <span style="color:#009c00">&#34;John&#34;</span>;
-</span></span></code></pre></div><p>In processing le variabili sono dichiarate ad inizio del programma. Di seguito un esempio completo:</p>
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> diametro = 50;
+</span></span></code></pre></div><p>La <strong>dichiarazione delle costanti</strong> avviene utilizzando la parola chiave  <code>const</code> seguita dal nome della costante, dall&rsquo;operatore di assegnazione <code>=</code> e dal valore iniziale. L&rsquo;istruzione di dichiarazione termina con il carattere &ldquo;punto e virgola&rdquo; <code>;</code>. Un esempio di dichiarazione di costanti è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> X = 10;
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> VALORE_Y = 20;
+</span></span></code></pre></div><h3 id="sintassi-dei-nomi">Sintassi dei nomi</h3>
+<p>I nomi che possono identificare una variabile o una costante devono rispettare le seguenti regole:</p>
+<ul>
+<li>il nome non può iniziare con un carattere numerico;</li>
+<li>il nome non può contenere spazi;</li>
+<li>il nome può essere composto solo da caratteri alfanumerici e qualche carattere di punteggiatura come il trattino basso, non altri caratteri;</li>
+<li>ogni nome identifica una sola area di memoria, quindi non può essere utilizzato per una seconda variabile o costante;</li>
+<li>il nome non può essere uguale alle parole utilizzate dal linguaggio di programmazione;</li>
+</ul>
+<p>Un esempio di nomi di variabili che rispettano le regole indicate sono <code>a</code>, <code>b</code>, <code>valore1</code>, <code>valore2</code> e <code>coloreDelQuadrato</code>.</p>
+<p>Ecco invece alcuni nomi che non rispettano le regole indicate:</p>
+<ul>
+<li><code>1a</code> e <code>2valore</code> non validi perché iniziano con un numero;</li>
+<li><code>a 1</code> e <code>secondo valore</code> non validi perché contengono spazi;</li>
+<li><code>variabile-1</code> e <code>variabile%5</code> non validi perché contengono caratteri non ammessi, come il trattino <code>-</code> e la percentuale <code>%</code>;</li>
+<li><code>const</code> perché è una parola chiave del linguaggio di programmazione (serve a dichiarare le costanti).</li>
+</ul>
+<h3 id="regole-stilistiche-dei-nomi">Regole stilistiche dei nomi</h3>
+<p>Per i nomi delle variabili esiste una regola stilistica che consiglia di utilizzare solo caratteri alfanumerici e di scriverli con <strong>carattere a cammello</strong> (in inglese &ldquo;camelCase&rdquo;), ovvero tutte le parole che compongono il nome vengono unite (togliendo gli spazi), trasformando tutte le loro iniziali, tranne la prima, in maiuscolo. Ad esempio, per il calcolo della &ldquo;media punti delle partite effettuate&rdquo; si può dichiarare una variabile con nome <code>mediaPuntiDellePartiteEffettuate</code>.</p>
+<p>Anche per i nomi delle costanti esiste una regola stilistica che consiglia di scriverle trasformando tutti i <strong>caratteri in maiuscolo</strong> e trasformando gli spazi in &ldquo;trattino basso&rdquo; (in inglese &ldquo;underscore&rdquo;). Ad esempio, per il valore &ldquo;pi greco mezzi&rdquo; si può dichiarare una costante con nome <code>PI_GRECO_MEZZI</code>.</p>
+<h2 id="tipi-di-dato-e-sintassi">Tipi di dato e sintassi</h2>
+<p>Costanti e variabili sono associate ad un tipo di dato che può essere <strong>primitivo</strong> o <strong>complesso</strong>.</p>
+<p>A variabili e costanti associate ad un tipo primitivo è possibile associare un solo valore, mentre a quelle associate ad un tipo complesso è possibile associare liste di valori, oggetti e altre entità più complesse.</p>
+<p>La gestione del tipo di dato fa una forte differenza nei linguaggi di programmazione.</p>
+<p>Il linguaggio di programmazione si dice tipizzato <strong>dinamicamente</strong> se ad una variabile è possibile assegnare un valore di un certo tipo di dato e, successivamente, un valore di un tipo di dato differente.</p>
+<p>Il linguaggio di programmazione si dice tipizzato <strong>staticamente</strong> se ad una variabile è possibile assegnare valori esclusivamente di un certo tipo di dato. Se si tenta di assegnare successivamente un valore di un tipo di dato differente, viene generato un errore.</p>
+<h3 id="tipo-booleano">Tipo booleano</h3>
+<p>Le variabili possono avere assegnato un valore logico, detto Booleano, che può essere <code>true</code> oppure <code>false</code>.</p>
+<p>Il termine Booleano deriva dal matematico George Boole, che descrisse in forma algebrica la logica delle proposizioni.</p>
+<p>Un esempio di dichiarazione di variabili a cui viene associato un tipo booleano è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> trueVariable = <span style="color:#00f">true</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> falseVariable = <span style="color:#00f">false</span>;
+</span></span></code></pre></div><h3 id="tipo-numerico">Tipo numerico</h3>
+<p>Le variabili possono avere assegnato un valore numerico, e quindi il tipo associato sarà numerico. Queste variabili possono avere un valore intero o decimale. Un esempio di dichiarazione di variabili a cui viene associato un tipo numerico è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> naturalNumber = 10;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> realNumber = 10.5;
+</span></span></code></pre></div><p>Il valore intero può essere rappresentato in decimale, esadecimale e binario.</p>
+<p>La rappresentazione decimale del valore da assegnare avviene nella forma classica, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> naturalNumber = 10;
+</span></span></code></pre></div><p>La rappresentazione esadecimale si esprime anteponendo al valore da assegnare alla variabile il simbolo <code>0x</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> naturalNumberHexadecimal = 0xFF;
+</span></span></code></pre></div><p>La rappresentazione binaria si esprime anteponendo al valore da assegnare alla variabile il simbolo <code>0b</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> naturalNumberBinary = 0b010111;
+</span></span></code></pre></div><p>Il valore intero o decimale può essere espresso in <a href="https://it.wikipedia.org/wiki/Notazione_scientifica" title="Link a Wikipedia sulla notazione scientifica">notazione scientifica</a>, nella classica forma <strong>mantissa</strong>, simbolo <code>e</code> (indicante l&rsquo;esponenziale) ed <strong>esponente</strong>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> realNumberExponentiation = 0.1E100;
+</span></span></code></pre></div><p>Tra i valori numerici esistono dei casi particolari:</p>
+<ul>
+<li><code>Nan</code> valore utilizzato per indicare un risultato che <a href="https://it.wikipedia.org/wiki/NaN" title="Link a Wikipedia su Not A Number">Non è un Numero</a> (dall&rsquo;inglese Not a Number). Questo valore è assegnato quando si tentano operazioni del tipo &ldquo;radice quadrata di meno uno&rdquo;, che non ha risultato nell&rsquo;insieme dei numeri reali;</li>
+<li><code>Infinity</code> utilizzato per indicare un valore infinito. Può essere specificato l&rsquo;infinito positivo <code>+Infinity</code> o anche negativo <code>-Infinity</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> positiveInfinity = +<span style="color:#00f">Infinity</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> negativeInfinity = -<span style="color:#00f">Infinity</span>;
+</span></span></code></pre></div><h3 id="tipo-stringa">Tipo stringa</h3>
+<p>Le variabili possono avere assegnata una sequenza di caratteri e quindi il tipo associato sarà &ldquo;stringa&rdquo;. La sequenza di caratteri deve essere racchiusa tra singoli apici <code>'</code> o doppi apici <code>&quot;</code>.</p>
+<p>Un esempio di dichiarazione di variabile a cui viene associato un tipo stringa è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable = <span style="color:#009c00">&#39;Una stringa&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable2 = <span style="color:#009c00">&#39;Seconda stringa&#39;</span>;
+</span></span></code></pre></div><p>Per definire una sequenza di caratteri che occupi più righe, si può racchiudere tra apici inversi <code>`</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable = <span style="color:#009c00">`Una
+</span></span></span><span style="display:flex;"><span><span style="color:#009c00">stringa`</span>;
+</span></span></code></pre></div><p>Questo tipo di definizione è utilizzato anche per concatenare variabili o il risultato di un&rsquo;espressione all&rsquo;interno della stringa. Le variabili e le espressioni devono essere racchiuse tra simboli <code>${</code> e <code>}</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> num1 = 9;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> num2 = 18;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> messaggio = <span style="color:#009c00">`La somma dei
+</span></span></span><span style="display:flex;"><span><span style="color:#009c00">numeri </span><span style="color:#009c00">${</span>num1<span style="color:#009c00">}</span><span style="color:#009c00"> e </span><span style="color:#009c00">${</span>num2<span style="color:#009c00">}</span><span style="color:#009c00">
+</span></span></span><span style="display:flex;"><span><span style="color:#009c00">vale </span><span style="color:#009c00">${</span>num1 + num2<span style="color:#009c00">}</span><span style="color:#009c00">.`</span>;
+</span></span></code></pre></div><p>L&rsquo;esempio precedente produce il seguente output (su più righe):</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">La somma dei
+numeri 9 e 18
+vale 27.
+</code></pre><h3 id="tipo-oggetto">Tipo oggetto</h3>
+<p>Un oggetto in ambito informatico è un dato complesso che risiede in memoria ed ha più proprietà ed anche dei metodi. Tipicamente la creazione di un oggetto è effettuata attraverso la parola chiave <code>new</code>.</p>
+<p>L&rsquo;operazione di inserimento di un oggetto in memoria è detta <strong>allocazione</strong>, quindi tecnicamente un oggetto è <strong>allocato</strong> in memoria.</p>
+<p>Un esempio di oggetto può essere una persona, che contiene proprietà quali nome, cognome, data di nascita, ecc..</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> persona = {
+</span></span><span style="display:flex;"><span>    firstname: <span style="color:#009c00">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>    lastname: <span style="color:#009c00">&#34;Doe&#34;</span>,
+</span></span><span style="display:flex;"><span>    id: 5566
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="tipi-oggetto-wrapper">Tipi oggetto wrapper</h3>
+<p>E&rsquo; possibile creare una versione ad oggetti (detta &ldquo;wrapper&rdquo;) dei tipi primitivi di dato, siano essi numerici, stringhe o booleani:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">var</span> naturalNumberObj = <span style="color:#00f">new</span> Number(10);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> realNumberObj = <span style="color:#00f">new</span> Number(10.5);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> toBeOrNotToBeObj = <span style="color:#00f">new</span> Boolean(<span style="color:#00f">true</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">var</span> vectorObj = <span style="color:#00f">new</span> String(<span style="color:#009c00">&#34;one&#34;</span>);
+</span></span></code></pre></div><p>Come si nota, la parola chiave <code>new</code> viene utilizzata per creare degli oggetti.</p>
+<h3 id="tipo-null">Tipo null</h3>
+<p>Il valore <code>null</code> è un valore speciale che si utilizza per indicare un oggetto non ancora allocato in memoria.</p>
+<p>Un esempio di dichiarazione di variabile di tipo oggetto non ancora allocato in memoria è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> persona = <span style="color:#00f">null</span>;
+</span></span></code></pre></div><h3 id="tipo-undefined">Tipo undefined</h3>
+<p>Il valore <code>undefined</code> è un valore speciale che si utilizza per indicare una variabile il cui valore non è ancora definito.</p>
+<p>Un esempio di dichiarazione di variabile con valore ancora non definito è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> variabileIndefinita;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> variabileIndefinita2 = <span style="color:#00f">undefined</span>;
+</span></span></code></pre></div><h2 id="variabili-in-processing">Variabili in processing</h2>
+<p>In processing le variabili sono dichiarate ad inizio del programma. Di seguito un esempio completo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 150;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> d = 50;

@@ -1,7 +1,11 @@
 
 body {
   font-size: 1.3rem;
-  line-height: 1.3rem;
+  line-height: 1.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 2rem 0 0.5rem;
 }
 
 h1, .logo__title {
@@ -30,6 +34,7 @@ h6 {
 
 p, li {
   font-size: 1.3rem;
+  margin: 0 0 0.5rem;
 }
 
 .list__meta {
@@ -45,7 +50,18 @@ p, li {
   color: #e22d30;
 }
 
+/* Codice tipo output */
+pre {
+  padding: 0;
+}
+
+.highlight pre {
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 0;
+}
+
 .highlight pre code {
   font-size: 1.0rem;
   white-space: pre-wrap;
+  margin: 0 0 0.5rem;
 }

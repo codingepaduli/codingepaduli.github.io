@@ -227,26 +227,59 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 9 minuti 
-        ( 1771 parole)
+        Tempo di lettura 10 minuti 
+        ( 2075 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="costanti-e-variabili">Costanti e variabili</h1>
-<p>Le variabili sono spazi di memoria in cui vengono memorizzate delle informazioni. Hanno un nome ed un tipo associato, ad esempio tipo numerico, tipo booleano (vero o falso) o tipo &ldquo;stringa&rdquo; (sequenza di caratteri).</p>
-<p>Dalla versione di ECMAScript 6 le variabili si dichiarano utilizzando la parola chiave <code>let</code>, anche se la parola chiave <code>var</code> usata in ECMAScript 5 è ancora valida.</p>
-<p>Anche le costanti sono spazi di memoria con un nome ed un tipo associato, ma non è possibile modificare il valore assegnato. Si dichiarano con la parola chiave <code>const</code>;</p>
-<p>Di seguito, un esempio di dichiarazione di una variabile con nome &ldquo;valoreX&rdquo; e valore <code>10</code> ed una dichiarazione di una costante con nome &ldquo;VALORE_Y&rdquo; e valore <code>20</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> valoreX = 10;
+<p>Le costanti e le variabili sono aree di memoria in cui vengono memorizzate le informazioni di un programma in esecuzione, come immagini, suoni, frasi o valori numerici.</p>
+<p>Come si può intuire dal nome, le variabili contengo informazioni che possono essere modificate durante l&rsquo;esecuzione del programma, mentre le costanti contengono informazioni non modificabili.</p>
+<p>Le costanti e le variabili hanno le seguenti caratteristiche:</p>
+<ul>
+<li>sono identificate da un nome;</li>
+<li>sono associate ad un certo tipo di dato, come ad esempio dati numerici interi o decimali, dati booleani (vero o falso), dati alfanumerici (frasi);</li>
+<li>possono avere assegnato un valore iniziale;</li>
+</ul>
+<p>La creazione di una costante o di una variabile di un programma avviene utilizzando un&rsquo;istruzione di <strong>dichiarazione</strong>, che <strong>alloca</strong> in memoria la costante o la variabile e le associa un nome ed un tipo di dato.</p>
+<p>Per assegnare un valore iniziale ad una variabile o ad una costante si utilizza l&rsquo;operazione di <strong>inizializzazione</strong>.</p>
+<h2 id="sintassi">Sintassi</h2>
+<p>La <strong>dichiarazione delle variabili</strong> avviene utilizzando la parola chiave <code>let</code> seguita dai nomi delle variabili separati da virgola. L&rsquo;istruzione di dichiarazione termina con il carattere &ldquo;punto e virgola&rdquo; <code>;</code>. Un esempio di dichiarazione è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x, y, diametro;
+</span></span></code></pre></div><p>L&rsquo;inizializzazione delle variabili avviene utilizzando l&rsquo;operatore di assegnazione <code>=</code> seguito dal valore iniziale, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 20;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 100;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> diametro = 50;
+</span></span></code></pre></div><p>La <strong>dichiarazione delle costanti</strong> avviene utilizzando la parola chiave  <code>const</code> seguita dal nome della costante, dall&rsquo;operatore di assegnazione <code>=</code> e dal valore iniziale. L&rsquo;istruzione di dichiarazione termina con il carattere &ldquo;punto e virgola&rdquo; <code>;</code>. Un esempio di dichiarazione di costanti è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> X = 10;
 </span></span><span style="display:flex;"><span><span style="color:#00f">const</span> VALORE_Y = 20;
-</span></span></code></pre></div><p>Il nome di una variabile o di una costante è scelto dal programmatore, non può contenere caratteri particolari, non può iniziare con un carattere numerico e non può essere una parola utilizzata dal linguaggio JavaScript, altrimenti sarà generato un errore.</p>
+</span></span></code></pre></div><h3 id="sintassi-dei-nomi">Sintassi dei nomi</h3>
+<p>I nomi che possono identificare una variabile o una costante devono rispettare le seguenti regole:</p>
+<ul>
+<li>il nome non può iniziare con un carattere numerico;</li>
+<li>il nome non può contenere spazi;</li>
+<li>il nome può essere composto solo da caratteri alfanumerici e qualche carattere di punteggiatura come il trattino basso, non altri caratteri;</li>
+<li>ogni nome identifica una sola area di memoria, quindi non può essere utilizzato per una seconda variabile o costante;</li>
+<li>il nome non può essere uguale alle parole utilizzate dal linguaggio di programmazione;</li>
+</ul>
+<p>Un esempio di nomi di variabili che rispettano le regole indicate sono <code>a</code>, <code>b</code>, <code>valore1</code>, <code>valore2</code> e <code>coloreDelQuadrato</code>.</p>
+<p>Ecco invece alcuni nomi che non rispettano le regole indicate:</p>
+<ul>
+<li><code>1a</code> e <code>2valore</code> non validi perché iniziano con un numero;</li>
+<li><code>a 1</code> e <code>secondo valore</code> non validi perché contengono spazi;</li>
+<li><code>variabile-1</code> e <code>variabile%5</code> non validi perché contengono caratteri non ammessi, come il trattino <code>-</code> e la percentuale <code>%</code>;</li>
+<li><code>const</code> perché è una parola chiave del linguaggio di programmazione (serve a dichiarare le costanti).</li>
+</ul>
+<h3 id="regole-stilistiche-dei-nomi">Regole stilistiche dei nomi</h3>
 <p>Per i nomi delle variabili esiste una regola stilistica che consiglia di utilizzare solo caratteri alfanumerici e di scriverli con <strong>carattere a cammello</strong> (in inglese &ldquo;camelCase&rdquo;), ovvero tutte le parole che compongono il nome vengono unite (togliendo gli spazi), trasformando tutte le loro iniziali, tranne la prima, in maiuscolo. Ad esempio, per il calcolo della &ldquo;media punti delle partite effettuate&rdquo; si può dichiarare una variabile con nome <code>mediaPuntiDellePartiteEffettuate</code>.</p>
 <p>Anche per i nomi delle costanti esiste una regola stilistica che consiglia di scriverle trasformando tutti i <strong>caratteri in maiuscolo</strong> e trasformando gli spazi in &ldquo;trattino basso&rdquo; (in inglese &ldquo;underscore&rdquo;). Ad esempio, per il valore &ldquo;pi greco mezzi&rdquo; si può dichiarare una costante con nome <code>PI_GRECO_MEZZI</code>.</p>
-<p>Quando ad una variabile viene assegnato un valore, allora alla variabile viene associato un tipo di dato, ad esempio il tipo numerico, il tipo booleano o tipo &ldquo;stringa&rdquo;.</p>
-<p>Se si assegna un valore differente, anche il tipo di dato cambia di conseguenza. Questo è permesso poiché JavaScript ha una tipizzazione <strong>debole</strong>, a differenza di linguaggi con tipizzazione <strong>forte</strong>, in cui, una volta associato il tipo di dato ad una variabile, questo non può più cambiare.</p>
-<p>I tipi di dato possono essere <strong>primitivi</strong> o <strong>complessi</strong>. Ai tipi primitivi è associato un solo valore, mentre sono considerati tipi complessi le liste di valori, gli oggetti con una o più proprietà, le strutture di dati, ecc&hellip; .</p>
-<h2 id="tipi-primitivi">Tipi primitivi</h2>
+<h2 id="tipi-di-dato-e-sintassi">Tipi di dato e sintassi</h2>
+<p>Costanti e variabili sono associate ad un tipo di dato che può essere <strong>primitivo</strong> o <strong>complesso</strong>.</p>
+<p>A variabili e costanti associate ad un tipo primitivo è possibile associare un solo valore, mentre a quelle associate ad un tipo complesso è possibile associare liste di valori, oggetti e altre entità più complesse.</p>
+<p>La gestione del tipo di dato fa una forte differenza nei linguaggi di programmazione.</p>
+<p>Il linguaggio di programmazione si dice tipizzato <strong>dinamicamente</strong> se ad una variabile è possibile assegnare un valore di un certo tipo di dato e, successivamente, un valore di un tipo di dato differente.</p>
+<p>Il linguaggio di programmazione si dice tipizzato <strong>staticamente</strong> se ad una variabile è possibile assegnare valori esclusivamente di un certo tipo di dato. Se si tenta di assegnare successivamente un valore di un tipo di dato differente, viene generato un errore.</p>
 <h3 id="tipo-booleano">Tipo booleano</h3>
 <p>Le variabili possono avere assegnato un valore logico, detto Booleano, che può essere <code>true</code> oppure <code>false</code>.</p>
 <p>Il termine Booleano deriva dal matematico George Boole, che descrisse in forma algebrica la logica delle proposizioni.</p>
@@ -274,7 +307,7 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> positiveInfinity = +<span style="color:#00f">Infinity</span>;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> negativeInfinity = -<span style="color:#00f">Infinity</span>;
 </span></span></code></pre></div><h3 id="tipo-stringa">Tipo stringa</h3>
-<p>Le variabili possono avere assegnata una sequenza di caratteri e quindi il tipo associato sarà stringa. La sequenza di caratteri deve essere racchiusa tra singoli apici <code>'</code> o doppi apici <code>&quot;</code>.</p>
+<p>Le variabili possono avere assegnata una sequenza di caratteri e quindi il tipo associato sarà &ldquo;stringa&rdquo;. La sequenza di caratteri deve essere racchiusa tra singoli apici <code>'</code> o doppi apici <code>&quot;</code>.</p>
 <p>Un esempio di dichiarazione di variabile a cui viene associato un tipo stringa è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable = <span style="color:#009c00">&#39;Una stringa&#39;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable2 = <span style="color:#009c00">&#39;Seconda stringa&#39;</span>;

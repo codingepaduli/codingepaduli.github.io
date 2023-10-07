@@ -56,4 +56,6 @@ docker pull linuxserver/ffmpeg:6.0-cli-ls91
 
 docker pull mikenye/youtube-dl:2023.02.17_linux_amd64
 
+docker pull cincan/xsv
 
+docker pull gcr.io/google.com/cloudsdktool/google-cloud-cli:449.0.0
