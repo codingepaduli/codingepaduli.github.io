@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 05.12 - Soluzione del progetto &#34;complemento a 1&#34;</title>
+      <title>p5.js Lez. 05.8 - Soluzione del progetto &#34;complemento a 1&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_soluzione/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
       
@@ -71,48 +71,12 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 05.11 - Fasi di sviluppo del progetto &#34;complemento a 1&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_sviluppo/</link>
-      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_sviluppo/</guid>
-      <description>Fasi di sviluppo del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 05.10 - Progetto &#34;complemento a 1&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</link>
-      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</guid>
-      <description>Requisiti del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 05.9 - Soluzione del progetto &#34;acchiappapalline&#34;</title>
+      <title>p5.js Lez. 05.7 - Soluzione del progetto &#34;acchiappapalline&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;acchiappapalline&amp;rdquo;</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 05.8 - Fasi di sviluppo del progetto &#34;acchiappapalline&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_sviluppo/</link>
-      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_sviluppo/</guid>
-      <description>Fasi di sviluppo del progetto &amp;ldquo;acchiappapalline&amp;rdquo;</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 05.7 - Progetto &#34;acchiappapalline&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</link>
-      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</guid>
-      <description>Requisiti del progetto &amp;ldquo;acchiappapalline&amp;rdquo;</description>
     </item>
     
     <item>
@@ -125,25 +89,7 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 05.5 - Fasi di sviluppo del progetto &#34;morra cinese&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe_sviluppo/</link>
-      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe_sviluppo/</guid>
-      <description>Fasi di sviluppo del progetto &amp;ldquo;morra cinese&amp;rdquo; (sasso carta forbici)</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 05.4 - Progetto &#34;morra cinese&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe/</link>
-      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe/</guid>
-      <description>Requisiti del progetto &amp;ldquo;morra cinese&amp;rdquo; (sasso carta forbici)</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 05.3 - Soluzione del progetto &#34;parco zoologico&#34;</title>
+      <title>p5.js Lez. 05.5 - Soluzione del progetto &#34;parco zoologico&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe_soluzione/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
       
@@ -152,12 +98,30 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 05.2 - Fasi di sviluppo del progetto &#34;parco zoologico&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe_sviluppo/</link>
-      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <title>p5.js Lez. 05.4 - Progetto &#34;complemento a 1&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe_sviluppo/</guid>
-      <description>Fasi di sviluppo del progetto &amp;ldquo;parco zoologico&amp;rdquo;</description>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</guid>
+      <description>Requisiti del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05.3 - Progetto &#34;acchiappapalline&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</guid>
+      <description>Requisiti del progetto &amp;ldquo;acchiappapalline&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>p5.js Lez. 05.2 - Progetto &#34;morra cinese&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe/</guid>
+      <description>Requisiti del progetto &amp;ldquo;morra cinese&amp;rdquo; (sasso carta forbici)</description>
     </item>
     
     <item>
@@ -179,30 +143,12 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 04.6 - Soluzione del progetto &#34;Sistema Solare&#34;</title>
+      <title>p5.js Lez. 04.4 - Soluzione del progetto &#34;Sistema Solare&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_soluzione/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 04.5 - Fasi di sviluppo del progetto &#34;Sistema Solare&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_sviluppo/</link>
-      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_sviluppo/</guid>
-      <description>Fasi di sviluppo del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 04.4 - Progetto &#34;Sistema Solare&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</link>
-      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</guid>
-      <description>Requisiti del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
     </item>
     
     <item>
@@ -215,12 +161,12 @@
     </item>
     
     <item>
-      <title>p5.js Lez. 04.2 - Fasi di sviluppo del progetto &#34;orologio analogico&#34;</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe_sviluppo/</link>
-      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <title>p5.js Lez. 04.2 - Progetto &#34;Sistema Solare&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe_sviluppo/</guid>
-      <description>Fasi di sviluppo del progetto &amp;ldquo;orologio analogico&amp;rdquo;</description>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</guid>
+      <description>Requisiti del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
     </item>
     
     <item>
@@ -275,15 +221,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</guid>
       <description>Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari</description>
-    </item>
-    
-    <item>
-      <title>p5.js Lez. 01.1 - Esercizi iniziali</title>
-      <link>http://codingepaduli.github.io/coding/web/p5js/intro_exe/</link>
-      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/p5js/intro_exe/</guid>
-      <description>Esercizi iniziali</description>
     </item>
     
     <item>

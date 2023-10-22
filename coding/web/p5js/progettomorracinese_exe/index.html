@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>p5.js Lez. 05.4 - Progetto &#34;morra cinese&#34; - Coding e Paduli</title>
+    <title>p5.js Lez. 05.2 - Progetto &#34;morra cinese&#34; - Coding e Paduli</title>
 
     <meta name="description" content="Requisiti del progetto &#34;morra cinese&#34; (sasso carta forbici)">
-        <meta property="og:title" content="p5.js Lez. 05.4 - Progetto &#34;morra cinese&#34;" />
+        <meta property="og:title" content="p5.js Lez. 05.2 - Progetto &#34;morra cinese&#34;" />
 <meta property="og:description" content="Requisiti del progetto &#34;morra cinese&#34; (sasso carta forbici)" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
@@ -17,7 +17,7 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="p5.js Lez. 05.4 - Progetto &#34;morra cinese&#34;"/>
+<meta name="twitter:title" content="p5.js Lez. 05.2 - Progetto &#34;morra cinese&#34;"/>
 <meta name="twitter:description" content="Requisiti del progetto &#34;morra cinese&#34; (sasso carta forbici)"/>
 
 
@@ -227,13 +227,14 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 2 minuti 
-        ( 227 parole)
+        Tempo di lettura 4 minuti 
+        ( 681 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="progetto-morra-cinese">Progetto &ldquo;morra cinese&rdquo;</h1>
+<h2 id="requisiti-funzionali">Requisiti funzionali</h2>
 <p>Si sviluppi il progetto &ldquo;morra cinese&rdquo; (sasso carta forbici) utilizzando la libreria grafica <code>p5.js</code> e la libreria dei suoni <code>p5.sound.js</code> per il disegno e la riproduzione degli oggetti necessari. I requisiti funzionali del progetto sono i seguenti:</p>
 <ol>
 <li>
@@ -262,7 +263,35 @@
 </ol>
 </li>
 </ol>
+<p>Di seguito, un&rsquo;immagine del progetto da realizzare.</p>
 <p><img src="/static/coding/web/p5js/progettoMorraCinese.png" alt="p5.js - gioco morra cinese" title="p5.js - gioco morra cinese"></p>
+<h2 id="fasi-di-realizzazione">Fasi di realizzazione</h2>
+<p>Le fasi di realizzazione da seguire per sviluppare il progetto sono le seguenti:</p>
+<p><strong>Fase 1:</strong> inserire la funzione <code>preload()</code> necessaria al caricamento delle risorse (immagini e suoni), come di seguito:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> preload() {
+</span></span><span style="display:flex;"><span>  soundFormats(<span style="color:#009c00">&#39;mp3&#39;</span>, <span style="color:#009c00">&#39;wav&#39;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Fase 2:</strong> caricare immagini e suoni in memoria e visualizzare le immagini nell&rsquo;area da disegno, come nell&rsquo;immagine in calce. Ad esempio, si dichiarino le tre variabili e si carichino in memoria le immagini:</p>
+<p><strong>Fase 3:</strong> Dichiarare le tre costanti ed un array che le contenga tutte, come di seguito indicato:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> SASSO = 1;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> CARTA = 2;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> FORBICI = 3;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> scelta = [SASSO, CARTA, FORBICI];
+</span></span></code></pre></div><p>Dichiarare per l&rsquo;utente una variabile che memorizzi la scelta effettuata (tra SASSO, CARTA e FORBICI) ed inizializzarla a <code>0</code>, poi dichiarare una seconda variabile che memorizzi l&rsquo;immagine associata alla scelta effettuata (senza inizializzare la variabile);</p>
+<p>Anche per il computer dichiarare una variabile che memorizzi la scelta effettuata (scelta casuale tra SASSO, CARTA e FORBICI) ed inizializzarla a <code>0</code>, poi dichiarare una seconda variabile che memorizzi l&rsquo;immagine associata alla scelta effettuata (senza inizializzare la variabile);</p>
+<p><strong>Fase 4:</strong> quando l’utente seleziona immagine, assegnare alla variabile che memorizza la scelta utente la costante corrispondente (tra SASSO, CARTA e FORBICI). Ad esempio, quando l&rsquo;utente sceglie <code>SASSO</code>, se la variabile è <code>sceltaUtente</code>, allora bisogna assegnare a tale variabile la costante <code>SASSO</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sceltaUtente = SASSO;
+</span></span></code></pre></div><p><strong>Fase 5:</strong> quando l’utente seleziona immagine, assegnare l&rsquo;immagine alla variabile che memorizza l&rsquo;immagine scelta dall&rsquo;utente. Ad esempio, se la variabile è <code>imgSceltaUtente</code> e la variabile che contiene l&rsquo;immagine del sasso è <code>imgRock</code>, allora bisogna assegnare alla prima variabile il valore della seconda.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>imgSceltaUtente = imgRock;
+</span></span></code></pre></div><p><strong>Fase 6:</strong> Quando l&rsquo;utente ha effettuato una scelta (ovvero quando la variabile corrispondente ha un valore diverso da zero), allora visualizza l&rsquo;immagine scelta dall&rsquo;utente.</p>
+<p><strong>Fase 7:</strong> quando l’utente seleziona immagine, è necessario generare il tiro del computer in maniera casuale, utilizzando la funzione <code>random</code> e passando come parametro l&rsquo;array di costanti creato in precedenza, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>tiroComputer = random(scelta);
+</span></span></code></pre></div><p><strong>Fase 8:</strong> come per la fase 5, a seconda della scelta casuale del computer, assegnare l&rsquo;immagine corrispondente alla variabile che memorizza l&rsquo;immagine scelta dal computer. Ad esempio, se la scelta casuale del computer è <code>SASSO</code>, ipotizzando che la variabile è <code>imgSceltaPC</code> e che la variabile che contiene l&rsquo;immagine del sasso è <code>imgRock</code>, allora bisogna assegnare alla prima variabile il valore della seconda.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>imgSceltaPC = imgRock;
+</span></span></code></pre></div><p><strong>Fase 9:</strong> Visualizza l&rsquo;immagine scelta dall&rsquo;utente (solo quando la variabile della scelta del computer ha un valore diverso da zero).</p>
+<p><strong>Fase 10:</strong> a seconda del tiro dell&rsquo;utente e del tiro il computer, visualizzare un messaggio che indichi la vittoria il pareggio o la sconfitta dell&rsquo;utente.</p>
+<h2 id="criteri-di-valutazione">Criteri di valutazione</h2>
 <!-- markdownlint-disable MD009 MD036 -->
 <table>
 <thead>
@@ -314,7 +343,10 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Cognome ______________ Nome ______________ Classe __________ Data __________</strong></p>
+<p>Cognome ______________
+Nome ______________
+Classe __________
+Data __________</p>
 <!-- markdownlint-enable MD009 MD036 -->
 
     </div>
@@ -327,15 +359,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/p5js/progettoparcozoologico_exe_soluzione/" rel="prev">
+		<a class="pager__link" href="/coding/web/p5js/progettoparcozoologico_exe/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">p5.js Lez. 05.3 - Soluzione del progetto &#34;parco zoologico&#34;</p>
+			<p class="pager__title">p5.js Lez. 05.1 - Progetto &#34;parco zoologico&#34;</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/p5js/progettomorracinese_exe_sviluppo/" rel="next">
+		<a class="pager__link" href="/coding/web/p5js/progettoacchiappapalline_exe/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">p5.js Lez. 05.5 - Fasi di sviluppo del progetto &#34;morra cinese&#34;</p>
+			<p class="pager__title">p5.js Lez. 05.3 - Progetto &#34;acchiappapalline&#34;</p>
 		</a>
 	</div>
 </nav>

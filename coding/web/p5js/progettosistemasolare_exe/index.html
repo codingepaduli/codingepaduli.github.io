@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>p5.js Lez. 04.4 - Progetto &#34;Sistema Solare&#34; - Coding e Paduli</title>
+    <title>p5.js Lez. 04.2 - Progetto &#34;Sistema Solare&#34; - Coding e Paduli</title>
 
     <meta name="description" content="Requisiti del progetto &#34;Sistema Solare&#34;">
-        <meta property="og:title" content="p5.js Lez. 04.4 - Progetto &#34;Sistema Solare&#34;" />
+        <meta property="og:title" content="p5.js Lez. 04.2 - Progetto &#34;Sistema Solare&#34;" />
 <meta property="og:description" content="Requisiti del progetto &#34;Sistema Solare&#34;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
@@ -17,7 +17,7 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="p5.js Lez. 04.4 - Progetto &#34;Sistema Solare&#34;"/>
+<meta name="twitter:title" content="p5.js Lez. 04.2 - Progetto &#34;Sistema Solare&#34;"/>
 <meta name="twitter:description" content="Requisiti del progetto &#34;Sistema Solare&#34;"/>
 
 
@@ -227,13 +227,14 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 2 minuti 
-        ( 232 parole)
+        Tempo di lettura 3 minuti 
+        ( 492 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="progetto-sistema-solare">Progetto &ldquo;Sistema Solare&rdquo;</h1>
+<h2 id="requisiti-funzionali">Requisiti funzionali</h2>
 <p>Si sviluppi il progetto &ldquo;Sistema Solare&rdquo;, utilizzando la libreria grafica <code>p5.js</code> e la libreria dei suoni <code>p5.sound.js</code> per il disegno e la riproduzione degli oggetti necessari. I requisiti funzionali del progetto sono i seguenti:</p>
 <ol>
 <li>L&rsquo;area da disegno deve avere una dimensione adatta alla pagina web; I colori e gli stili sono a scelta dello studente; Il Sole deve essere posizionato al centro dell&rsquo;area da disegno, coordinate e diametro devono essere memorizzati in opportune variabili;</li>
@@ -242,10 +243,32 @@
 <li>Verificare che il pianeta sia visibile nell&rsquo;area da disegno e che sia allineato orizzontalmente rispetto al Sole;</li>
 <li>Incrementare l&rsquo;angolo rispetto al Sole e verificare che il pianeta ruoti intorno al Sole;</li>
 <li>Seguendo i passi dal 2 al 5, disegnare gli altri pianeti del Sistema Solare;</li>
-<li>Seguendo i passi dal 2 al 5 e prendendo di riferimento il pianeta Terra anziché il Sole, disegnare la Luna e verificare che ruoti intorno alla Terra;</li>
+<li>Seguendo i passi dal 2 al 5 e prendendo di riferimento il pianeta Terra anziché il Sole, disegnare la Luna e verificare che ruoti intorno alla Terra.</li>
 </ol>
 <p>Di seguito, un&rsquo;immagine del progetto da realizzare.</p>
 <p><img src="/static/coding/web/p5js/progettoSistemaSolare.png" alt="p5.js - progetto Sistema Solare" title="p5.js - progetto Sistema Solare"></p>
+<h2 id="fasi-di-realizzazione">Fasi di realizzazione</h2>
+<p>Le fasi di realizzazione da seguire per sviluppare il progetto sono le seguenti:</p>
+<p><strong>Fase 1:</strong> inserire nella funzione <code>setup()</code> l&rsquo;impostazione d&rsquo;uso degli angoli sessagesimali:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>    createCanvas(...);
+</span></span><span style="display:flex;"><span>    angleMode(DEGREES);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Fase 2:</strong> Dichiarare le variabili per il Sole e disegnarlo utilizzando tali variabili; Dichiarare le variabili per il pianeta Terra;</p>
+<p><strong>Fase 3:</strong> Per calcolare le coordinate (x, y) del pianeta è necessario ricordare alcune nozioni di trigonometria; Dato che il pianeta ha un angolo ed una distanza rispetto al Sole, allora è necessario ricordare che le coordinate (x, y) sono espresse secondo queste formule:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = distanza * cos(angolo);
+</span></span><span style="display:flex;"><span>y = distanza * sin(angolo);
+</span></span></code></pre></div><p>Inoltre bisogna tener presente che queste formule valgono quando il riferimento è l&rsquo;origine degli assi di coordinate (0, 0); Nel nostro caso, il riferimento è il Sole (attorno al quale ruota il pianeta) con coordinate (xSole, ySole), quindi è necessario esprimere le coordinate del pianeta relativamente a quelle del Sole:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = xSole + distanza * cos(angolo);
+</span></span><span style="display:flex;"><span>y = ySole + distanza * sin(angolo);
+</span></span></code></pre></div><p>Procedere quindi a disegnare il pianeta Terra.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(x, y, diametro)
+</span></span></code></pre></div><p><strong>Fase 4:</strong> Verificare che il pianeta sia visibile, altrimenti modificare la distanza, il diametro e verificare le coordinate appena calcolate (magari disegnandole con la funzione <code>text</code>).</p>
+<p><strong>Fase 5:</strong> Incrementare l&rsquo;angolo e verificare la rotazione del pianeta:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>angolo = angolo + ;
+</span></span></code></pre></div><p><strong>Fase 6:</strong> Seguendo le fasi dalla 2 alla 5, disegnare gli altri pianeti del Sistema Solare;</p>
+<p><strong>Fase 7:</strong> Seguendo le fasi dalla 2 alla 5, disegnare la Luna che ruota intorno alla Terra.</p>
+<h2 id="criteri-di-valutazione">Criteri di valutazione</h2>
 <!-- markdownlint-disable MD009 MD036 -->
 <table>
 <thead>
@@ -297,7 +320,10 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Cognome ______________ Nome ______________ Classe __________ Data __________</strong></p>
+<p>Cognome ______________
+Nome ______________
+Classe __________
+Data __________</p>
 <!-- markdownlint-enable MD009 MD036 -->
 
     </div>
@@ -310,15 +336,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/p5js/progettoorologio_exe_soluzione/" rel="prev">
+		<a class="pager__link" href="/coding/web/p5js/progettoorologio_exe/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">p5.js Lez. 04.3 - Soluzione del progetto &#34;orologio analogico&#34;</p>
+			<p class="pager__title">p5.js Lez. 04.1 - Progetto &#34;orologio analogico&#34;</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/p5js/progettosistemasolare_exe_sviluppo/" rel="next">
+		<a class="pager__link" href="/coding/web/p5js/progettoorologio_exe_soluzione/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">p5.js Lez. 04.5 - Fasi di sviluppo del progetto &#34;Sistema Solare&#34;</p>
+			<p class="pager__title">p5.js Lez. 04.3 - Soluzione del progetto &#34;orologio analogico&#34;</p>
 		</a>
 	</div>
 </nav>

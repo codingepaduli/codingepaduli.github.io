@@ -178,9 +178,3 @@ xsv() {
 }
 export -f xsv
 
-# gcloud
-## Test docker run gcr.io/google.com/cloudsdktool/google-cloud-cli gcloud version
-gcloud () { 
-  dockerContainer --name gcloud -v "$HOME/Sviluppo/gcloud":"/.config/gcloud" gcr.io/google.com/cloudsdktool/google-cloud-cli gcloud "$@"
-}
-export -f gcloud

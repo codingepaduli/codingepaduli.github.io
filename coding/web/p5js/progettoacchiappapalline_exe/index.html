@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>p5.js Lez. 05.7 - Progetto &#34;acchiappapalline&#34; - Coding e Paduli</title>
+    <title>p5.js Lez. 05.3 - Progetto &#34;acchiappapalline&#34; - Coding e Paduli</title>
 
     <meta name="description" content="Requisiti del progetto &#34;acchiappapalline&#34;">
-        <meta property="og:title" content="p5.js Lez. 05.7 - Progetto &#34;acchiappapalline&#34;" />
+        <meta property="og:title" content="p5.js Lez. 05.3 - Progetto &#34;acchiappapalline&#34;" />
 <meta property="og:description" content="Requisiti del progetto &#34;acchiappapalline&#34;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
@@ -17,7 +17,7 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="p5.js Lez. 05.7 - Progetto &#34;acchiappapalline&#34;"/>
+<meta name="twitter:title" content="p5.js Lez. 05.3 - Progetto &#34;acchiappapalline&#34;"/>
 <meta name="twitter:description" content="Requisiti del progetto &#34;acchiappapalline&#34;"/>
 
 
@@ -227,24 +227,36 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 2 minuti 
-        ( 321 parole)
+        Tempo di lettura 3 minuti 
+        ( 552 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="progetto-acchiappapalline">Progetto &ldquo;acchiappapalline&rdquo;</h1>
+<h2 id="requisiti-funzionali">Requisiti funzionali</h2>
 <p>Si sviluppi il progetto &ldquo;acchiappapalline&rdquo;, utilizzando la libreria grafica <code>p5.js</code> e la libreria dei suoni <code>p5.sound.js</code> per il disegno e la riproduzione degli oggetti necessari. I requisiti funzionali del progetto sono i seguenti:</p>
 <ol>
-<li>Il rettangolo di gioco deve avere una dimensione adatta alla pagina web, deve contenere le palline che cadono e la racchetta per prenderle; I colori della racchetta, delle palline e dello sfondo sono a scelta dello studente. Una serie di 20 palline devono essere posizionate casualmente nell&rsquo;area superiore del rettangolo di gioco (o anche più in alto, in modo che non siano visibili all&rsquo;avvio del gioco). La racchetta deve essere posizionata poco distante dal bordo inferiore dell&rsquo;area da disegno.</li>
-<li>All&rsquo;avvio del gioco, le palline iniziano a muoversi verticalmente verso il basso.</li>
-<li>Il giocatore controlla la racchetta attraverso il mouse, la può muovere solo orizzontalmente. I bordi della racchetta non possono uscire dall&rsquo;area di gioco.</li>
-<li>Quando la posizione verticale di una pallina supera la posizione verticale della racchetta, allora la pallina è da considerarsi persa, quindi si toglie un punto al giocatore e la pallina viene riposizionata casualmente nell&rsquo;area superiore del rettangolo di gioco (o anche più in alto), in modo tale che possa cadere nuovamente.</li>
-<li>Quando la posizione della pallina e la posizione della racchetta si sovrappongono, allora la pallina è da considerarsi recuperata, quindi si aggiunge un punto al giocatore e la pallina viene riposizionata casualmente nell&rsquo;area superiore del rettangolo di gioco (o anche più in alto), in modo tale che possa cadere nuovamente.</li>
+<li>Il rettangolo di gioco deve avere una dimensione adatta alla pagina web, deve contenere le palline che cadono e la racchetta per prenderle; I colori della racchetta, delle palline e dello sfondo sono a scelta dello studente. Una serie di 20 palline devono essere posizionate casualmente nell&rsquo;area superiore del rettangolo di gioco (o anche più in alto, in modo che non siano visibili all&rsquo;avvio del gioco). La racchetta deve essere posizionata poco distante dal bordo inferiore dell&rsquo;area da disegno;</li>
+<li>All&rsquo;avvio del gioco, le palline iniziano a muoversi verticalmente verso il basso;</li>
+<li>Il giocatore controlla la racchetta attraverso il mouse, la può muovere solo orizzontalmente. I bordi della racchetta non possono uscire dall&rsquo;area di gioco;</li>
+<li>Quando la posizione verticale di una pallina supera la posizione verticale della racchetta, allora la pallina è da considerarsi persa, quindi si toglie un punto al giocatore e la pallina viene riposizionata casualmente nell&rsquo;area superiore del rettangolo di gioco (o anche più in alto), in modo tale che possa cadere nuovamente;</li>
+<li>Quando la posizione della pallina e la posizione della racchetta si sovrappongono, allora la pallina è da considerarsi recuperata, quindi si aggiunge un punto al giocatore e la pallina viene riposizionata casualmente nell&rsquo;area superiore del rettangolo di gioco (o anche più in alto), in modo tale che possa cadere nuovamente;</li>
 <li>Si può scegliere di continuare il gioco all&rsquo;infinito, di aumentare la velocità di movimento delle palline in base al punteggio, di terminare il gioco dopo un certo numero di palline perse e così via, secondo la propria fantasia.</li>
 </ol>
 <p>Di seguito, un&rsquo;immagine del gioco da realizzare.</p>
 <p><img src="/static/coding/web/p5js/colors_and_styles_exe_acchiappapalline_01.png" alt="p5.js - progetto acchiappapalline" title="p5.js - progetto acchiappapalline"></p>
+<h2 id="fasi-di-realizzazione">Fasi di realizzazione</h2>
+<p>Le fasi di realizzazione da seguire per sviluppare il progetto sono le seguenti:</p>
+<p><strong>Fase 1:</strong> dichiara le variabili <code>x1</code>, <code>y1</code> e <code>d1</code> che rappresentano le coordinate della pallina ed il diametro, quindi disegna una pallina, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(x1, y1, d1);
+</span></span></code></pre></div><p><strong>Fase 2:</strong> se la coordinata <code>y1</code> della pallina è maggiore di <code>400</code>, allora imposta la coordinata <code>y1</code> al valore <code>0</code> altrimenti incrementala di <code>10</code>. Verificare che la pallina si muova verso il basso e poi raggiunto il fondo ricompaia in alto;</p>
+<p><strong>Fase 3:</strong> disegna un rettangolo sulla parte inferiore dell&rsquo;area da disegno e fa sì che si muova solo verso destra o verso sinistra con il mouse;</p>
+<p><strong>Fase 4:</strong> calcola la distanza <code>d1</code> della pallina con il rettangolo;</p>
+<p><strong>Fase 5:</strong> Se la pallina tocca il rettangolo, cioè se la distanza <code>d1</code> è minore del raggio della pallina, allora riporta la pallina su impostando <code>y1</code> al valore <code>0</code> ed assegna alla variabile <code>x1</code> un nuovo valore casuale (maggiore di <code>0</code> e inferiore alla larghezza dell&rsquo;area da disegno) per far si che si sposti verso destra o sinistra;</p>
+<p><strong>Fase 6:</strong> Gestire il punteggio con questa regola: se l&rsquo;utente &ldquo;acchiappa&rdquo; la pallina, allora guadagna un punto. Se la pallina esce dal bordo e viene riportata in alto allora l&rsquo;utente perde un punto;</p>
+<p><strong>Fase 7:</strong> Aggiungere altre palline ripetendo le fasi da 1 a 6.</p>
+<h2 id="criteri-di-valutazione">Criteri di valutazione</h2>
 <!-- markdownlint-disable MD009 MD036 -->
 <table>
 <thead>
@@ -292,7 +304,10 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Cognome ______________ Nome ______________ Classe __________ Data __________</strong></p>
+<p>Cognome ______________
+Nome ______________
+Classe __________
+Data __________</p>
 <!-- markdownlint-enable MD009 MD036 -->
 
     </div>
@@ -305,15 +320,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/p5js/progettomorracinese_exe_soluzione/" rel="prev">
+		<a class="pager__link" href="/coding/web/p5js/progettomorracinese_exe/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">p5.js Lez. 05.6 - Soluzione del progetto &#34;morra cinese&#34;</p>
+			<p class="pager__title">p5.js Lez. 05.2 - Progetto &#34;morra cinese&#34;</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/p5js/progettoacchiappapalline_exe_sviluppo/" rel="next">
+		<a class="pager__link" href="/coding/web/p5js/progettocomplemento1_exe/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">p5.js Lez. 05.8 - Fasi di sviluppo del progetto &#34;acchiappapalline&#34;</p>
+			<p class="pager__title">p5.js Lez. 05.4 - Progetto &#34;complemento a 1&#34;</p>
 		</a>
 	</div>
 </nav>
