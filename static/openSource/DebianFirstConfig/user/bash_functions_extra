@@ -104,7 +104,7 @@ export -f flatpakListAllRemoteApp
 # Display all the installed apps
 # Usage: flatpakListAllInstalledApp
 # Usage: flatpakListAllInstalledApp "application,runtime,..."
-# Usage: flatpakListAllInstalledApp "application,runtime,..." "org.gnome.Platform/x86_64/44"
+# Usage: flatpakListAllInstalledApp "application,runtime,..." "org.gnome.Platform/x86_64/45"
 flatpakListAllInstalledApp() {
     defaultFields="application,version,size,runtime"
 
@@ -136,7 +136,7 @@ export -f flatpakListAllInstalledRuntimes
 
 # Display only the specified apps and the bounded runtime
 # Usage: flatpakFilterRemoteRuntimeOfInstalledApps
-# Usage: flatpakFilterRemoteRuntimeOfInstalledApps 'org.gnome.Platform/x86_64/44'
+# Usage: flatpakFilterRemoteRuntimeOfInstalledApps 'org.gnome.Platform/x86_64/45'
 flatpakFilterRemoteRuntimeOfInstalledApps() {
     # Creo la MAPPA di voci (app -> runtime) dal repository remoto
     declare -A remoteAppArray
@@ -159,7 +159,7 @@ export -f flatpakFilterRemoteRuntimeOfInstalledApps
 
 # Show updatable apps based on specified runtime
 # Usage: flatpakFilterUpdatableApps
-# Usage: flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/44'
+# Usage: flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/45'
 flatpakFilterUpdatableApps() {
     # Leggo le informazioni sul runtime corrente e remoto di ogni app
     updatableAppIdArray=()
@@ -179,7 +179,7 @@ export -f flatpakFilterUpdatableApps
 # Update only the apps bounded to the specified runtime
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop() {
-    app=$(flatpakFilterUpdatableApps 'org.freedesktop.Platform/x86_64/22.08')
+    app=$(flatpakFilterUpdatableApps 'org.freedesktop.Platform/x86_64/23.08')
     flatpak update $app
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
@@ -187,7 +187,7 @@ export -f flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 # Update only the apps bounded to the specified runtime
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeGnome
 flatpakUpdateAppBasedOnCurrentRuntimeGnome() {
-    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/44')
+    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/45')
     flatpak update $app
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeGnome
@@ -195,7 +195,7 @@ export -f flatpakUpdateAppBasedOnCurrentRuntimeGnome
 # Update only the apps bounded to the specified runtime
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeKde
 flatpakUpdateAppBasedOnCurrentRuntimeKde() {
-    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/5.15-22.08')
+    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/5.15-23.08')
     flatpak update $app
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeKde

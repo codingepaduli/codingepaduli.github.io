@@ -25,7 +25,9 @@ me.kozec.syncthingtk
 # net.christianbeier.Gromit-MPX
 # org.audacityteam.Audacity
 # org.avidemux.Avidemux
+org.chromium.Chromium
 # org.filezillaproject.Filezilla
+org.gimp.GIMP
 # org.gnome.Evince
 # org.gnome.baobab
 # org.gnome.gedit
@@ -34,7 +36,6 @@ me.kozec.syncthingtk
 # org.gottcode.Tanglet
 # org.inkscape.Inkscape
 # org.kde.kdenlive
-org.chromium.Chromium
 org.kde.kolourpaint
 org.kde.marble
 org.libreoffice.LibreOffice

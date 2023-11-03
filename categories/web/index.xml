@@ -6,7 +6,7 @@
     <description>Recent content in web on Coding e Paduli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
@@ -242,12 +242,21 @@
     </item>
     
     <item>
-      <title>HTML Lez. 07 - Codifica UTF-8, HTML entities ed emoji</title>
+      <title>HTML Lez. 07.1 - Esercizi per l&#39;uso di codici Unicode, HTML entities ed emoji nelle pagine web</title>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe/</guid>
+      <description>HTML Lez. 07.1 - Esercizi per l&amp;rsquo;uso di codici Unicode, HTML entities ed emoji nelle pagine web</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 07 - Codifica Unicode, HTML entities, emoji</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode/</link>
       <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode/</guid>
-      <description>HTML Lez. 07 - Codifica UTF-8 delle pagine web, HTML entities ed emoji</description>
+      <description>HTML Lez. 07 - La codifica Unicode, le HTML entities e le emoji nelle pagine web</description>
     </item>
     
     <item>

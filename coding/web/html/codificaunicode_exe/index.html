@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 07.1 - Esercizi per l&#39;uso di codici Unicode, HTML entities ed emoji nelle pagine web - Coding e Paduli</title>
+
+    <meta name="description" content="HTML Lez. 07.1 - Esercizi per l&#39;uso di codici Unicode, HTML entities ed emoji nelle pagine web">
+        <meta property="og:title" content="HTML Lez. 07.1 - Esercizi per l&#39;uso di codici Unicode, HTML entities ed emoji nelle pagine web" />
+<meta property="og:description" content="HTML Lez. 07.1 - Esercizi per l&#39;uso di codici Unicode, HTML entities ed emoji nelle pagine web" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/codificaunicode_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-11-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-03T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 07.1 - Esercizi per l&#39;uso di codici Unicode, HTML entities ed emoji nelle pagine web"/>
+<meta name="twitter:description" content="HTML Lez. 07.1 - Esercizi per l&#39;uso di codici Unicode, HTML entities ed emoji nelle pagine web"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Coding e Paduli" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Coding e Paduli
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Ennesimo sito/blog di programmazione ed informatica in generale</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-11-03T00:00:00Z">03-11-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 8 minuti 
+        ( 1542 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="esercizi-per-luso-di-codici-unicode-html-entities-ed-emoji-nelle-pagine-web">Esercizi per l&rsquo;uso di codici Unicode, HTML entities ed emoji nelle pagine web</h1>
+<!-- Stile delle tabelle usate -->
+<style>
+  th, td {
+      text-align: center;
+  }
+  
+  tr:nth-child(even) {
+      background-color: #d9d9d9;
+  }
+</style>
+<h2 id="lalfabeto-greco">L&rsquo;alfabeto Greco</h2>
+<p>Realizzazione di una tabella contenente:</p>
+<ol>
+<li>il nome delle lettere dell&rsquo;alfabeto Greco;</li>
+<li>il codice Unicode (scritto nel formato <code>U+codiceEsa</code>, con <code>codiceEsa</code> indicante il valore numerico esadecimale, ad esempio <code>U+1015B</code>);</li>
+<li>la lettera rappresentata in formato Unicode (secondo la sintassi <code>&amp;#codiceDec;</code>, con <code>codiceDec</code> indicante il valore numerico decimale, ad esempio <code>&amp;#1015B;</code>).</li>
+</ol>
+<!-- markdownlint-disable MD033 -->
+<table>
+  <tr>
+    <th>Lettera</th>
+    <th>Nome</th>
+    <th>Nome (HTML Entities)</th>
+    <th>Codice Unicode</th>
+  </tr>
+  <tr>
+    <td>Α</td>
+    <td>Alfa</td>
+    <td>&Alpha;</td>
+    <td>U+0391</td>
+  </tr>
+  <tr>
+    <td>Β</td>
+    <td>Beta</td>
+    <td>&Beta;</td>
+    <td>U+0392</td>
+  </tr>
+  <tr>
+    <td>Γ</td>
+    <td>Gamma</td>
+    <td>&Gamma;</td>
+    <td>U+0393</td>
+  </tr>
+  <tr>
+    <td>Δ</td>
+    <td>Delta</td>
+    <td>&Delta;</td>
+    <td>U+0394</td>
+  </tr>
+  <tr>
+    <td>Ε</td>
+    <td>Epsilon</td>
+    <td>&Epsilon;</td>
+    <td>U+0395</td>
+  </tr>
+  <tr>
+    <td>Ζ</td>
+    <td>Zeta</td>
+    <td>&Zeta;</td>
+    <td>U+0396</td>
+  </tr>
+  <tr>
+    <td>Η</td>
+    <td>Eta</td>
+    <td>&Eta;</td>
+    <td>U+0397</td>
+  </tr>
+  <tr>
+    <td>Θ</td>
+    <td>Theta</td>
+    <td>&Theta;</td>
+    <td>U+0398</td>
+  </tr>
+  <tr>
+    <td>Ι</td>
+    <td>Iota</td>
+    <td>&Iota;</td>
+    <td>U+0399</td>
+  </tr>
+  <tr>
+    <td>Κ</td>
+    <td>Kappa</td>
+    <td>&Kappa;</td>
+    <td>U+039A</td>
+  </tr>
+  <tr>
+    <td>Λ</td>
+    <td>Lambda</td>
+    <td>&Lambda;</td>
+    <td>U+039B</td>
+  </tr>
+  <tr>
+    <td>Μ</td>
+    <td>Mu</td>
+    <td>&Mu;</td>
+    <td>U+039C</td>
+  </tr>
+  <tr>
+    <td>Ν</td>
+    <td>Nu</td>
+    <td>&Nu;</td>
+    <td>U+039D</td>
+  </tr>
+  <tr>
+    <td>Ξ</td>
+    <td>Xi</td>
+    <td>&Xi;</td>
+    <td>U+039E</td>
+  </tr>
+  <tr>
+    <td>Ο</td>
+    <td>Omicron</td>
+    <td>&Omicron;</td>
+    <td>U+039F</td>
+  </tr>
+  <tr>
+    <td>Π</td>
+    <td>Pi</td>
+    <td>&Pi;</td>
+    <td>U+03A0</td>
+  </tr>
+  <tr>
+    <td>Ρ</td>
+    <td>Rho</td>
+    <td>&Rho;</td>
+    <td>U+03A1</td>
+  </tr>
+  <tr>
+    <td>Σ</td>
+    <td>Sigma</td>
+    <td>&Sigma;</td>
+    <td>U+03A3</td>
+  </tr>
+  <tr>
+    <td>Τ</td>
+    <td>Tau</td>
+    <td>&Tau;</td>
+    <td>U+03A4</td>
+  </tr>
+  <tr>
+    <td>Υ</td>
+    <td>Upsilon</td>
+    <td>&Upsilon;</td>
+    <td>U+03A5</td>
+  </tr>
+  <tr>
+    <td>Φ</td>
+    <td>Phi</td>
+    <td>&Phi;</td>
+    <td>U+03A6</td>
+  </tr>
+  <tr>
+    <td>Χ</td>
+    <td>Chi</td>
+    <td>&Chi;</td>
+    <td>U+03A7</td>
+  </tr>
+  <tr>
+    <td>Ψ</td>
+    <td>Psi</td>
+    <td>&Psi;</td>
+    <td>U+03A8</td>
+  </tr>
+  <tr>
+    <td>Ω</td>
+    <td>Omega</td>
+    <td>&Omega;</td>
+    <td>U+03A9</td>
+  </tr>
+</table>
+<!-- markdownlint-enable MD033 -->
+<h2 id="lalfabeto-russo">L&rsquo;alfabeto Russo</h2>
+<p>Realizzazione di una tabella contenente:</p>
+<ol>
+<li>il nome delle lettere dell&rsquo;alfabeto Russo;</li>
+<li>il codice Unicode (scritto nel formato <code>U+codiceEsa</code>, con <code>codiceEsa</code> indicante il valore numerico esadecimale, ad esempio U+1015B);</li>
+<li>la lettera rappresentata in formato Unicode (secondo la sintassi <code>&amp;#codiceDec;</code>, con <code>codiceDec</code> indicante il valore numerico decimale, ad esempio <code>&amp;#1015B;</code>).</li>
+</ol>
+<!-- markdownlint-disable MD033 -->
+<table>
+  <tr>
+    <th>Lettera</th>
+    <th>Nome</th>
+    <th>Codice Unicode</th>
+  </tr>
+  <tr>
+    <td>А</td>
+    <td>A</td>
+    <td>U+0410</td>
+  </tr>
+  <tr>
+    <td>Б</td>
+    <td>Be</td>
+    <td>U+0411</td>
+  </tr>
+  <tr>
+    <td>В</td>
+    <td>Ve</td>
+    <td>U+0412</td>
+  </tr>
+  <tr>
+    <td>Г</td>
+    <td>Ghe</td>
+    <td>U+0413</td>
+  </tr>
+  <tr>
+    <td>Д</td>
+    <td>De</td>
+    <td>U+0414</td>
+  </tr>
+  <tr>
+    <td>Е</td>
+    <td>Ie</td>
+    <td>U+0415</td>
+  </tr>
+  <tr>
+    <td>Ё</td>
+    <td>Ie Dieresis</td>
+    <td>U+0401</td>
+  </tr>
+  <tr>
+    <td>Ж</td>
+    <td>Zhe</td>
+    <td>U+0416</td>
+  </tr>
+  <tr>
+    <td>З</td>
+    <td>Ze</td>
+    <td>U+0417</td>
+  </tr>
+  <tr>
+    <td>И</td>
+    <td>I</td>
+    <td>U+0418</td>
+  </tr>
+  <tr>
+    <td>Й</td>
+    <td>Short I</td>
+    <td>U+0419</td>
+  </tr>
+  <tr>
+    <td>К</td>
+    <td>Ka</td>
+    <td>U+041A</td>
+  </tr>
+  <tr>
+    <td>Л</td>
+    <td>El</td>
+    <td>U+041B</td>
+  </tr>
+  <tr>
+    <td>М</td>
+    <td>Em</td>
+    <td>U+041C</td>
+  </tr>
+  <tr>
+    <td>Н</td>
+    <td>En</td>
+    <td>U+041D</td>
+  </tr>
+  <tr>
+    <td>О</td>
+    <td>O</td>
+    <td>U+041E</td>
+  </tr>
+  <tr>
+    <td>П</td>
+    <td>Pe</td>
+    <td>U+041F</td>
+  </tr>
+  <tr>
+    <td>Р</td>
+    <td>Er</td>
+    <td>U+0420</td>
+  </tr>
+  <tr>
+    <td>С</td>
+    <td>Es</td>
+    <td>U+0421</td>
+  </tr>
+  <tr>
+    <td>Т</td>
+    <td>Te</td>
+    <td>U+0422</td>
+  </tr>
+  <tr>
+    <td>У</td>
+    <td>U</td>
+    <td>U+0423</td>
+  </tr>
+  <tr>
+    <td>Ф</td>
+    <td>Ef</td>
+    <td>U+0424</td>
+  </tr>
+  <tr>
+    <td>Х</td>
+    <td>Ha</td>
+    <td>U+0425</td>
+  </tr>
+  <tr>
+    <td>Ц</td>
+    <td>Tse</td>
+    <td>U+0426</td>
+  </tr>
+  <tr>
+    <td>Ч</td>
+    <td>Che</td>
+    <td>U+0427</td>
+  </tr>
+  <tr>
+    <td>Ш</td>
+    <td>Sha</td>
+    <td>U+0428</td>
+  </tr>
+  <tr>
+    <td>Щ</td>
+    <td>Shcha</td>
+    <td>U+0429</td>
+  </tr>
+  <tr>
+    <td>Ъ</td>
+    <td>Hard Sign</td>
+    <td>U+042A</td>
+  </tr>
+  <tr>
+    <td>Ы</td>
+    <td>Yeru</td>
+    <td>U+042B</td>
+  </tr>
+  <tr>
+    <td>Ь</td>
+    <td>Soft Sign</td>
+    <td>U+042C</td>
+  </tr>
+  <tr>
+    <td>Э</td>
+    <td>E</td>
+    <td>U+042D</td>
+  </tr>
+  <tr>
+    <td>Ю</td>
+    <td>Yu</td>
+    <td>U+042E</td>
+  </tr>
+  <tr>
+    <td>Я</td>
+    <td>Ya</td>
+    <td>U+042F</td>
+  </tr>
+</table>
+<!-- markdownlint-enable MD033 -->
+<h2 id="lalfabeto-ucraino">L&rsquo;alfabeto Ucraino</h2>
+<p>Realizzazione di una lista contenente:</p>
+<ol>
+<li>il nome delle lettere dell&rsquo;alfabeto Ucraino;</li>
+<li>il codice Unicode (scritto nel formato <code>U+codiceEsa</code>, con <code>codiceEsa</code> indicante il valore numerico esadecimale, ad esempio U+1015B);</li>
+<li>la lettera rappresentata in formato Unicode (secondo la sintassi <code>&amp;#codiceDec;</code>, con <code>codiceDec</code> indicante il valore numerico decimale, ad esempio <code>&amp;#1015B;</code>).</li>
+</ol>
+<ul>
+<li>А (A) - U+0410 А</li>
+<li>Б (B) - U+0411 Б</li>
+<li>В (V) - U+0412 В</li>
+<li>Г (H) - U+0413 Г</li>
+<li>Ґ (G) - U+0490 Ґ</li>
+<li>Д (D) - U+0414 Д</li>
+<li>Е (E) - U+0415 Е</li>
+<li>Є (Ye) - U+0404 Є</li>
+<li>Ж (Zh) - U+0416 Ж</li>
+<li>З (Z) - U+0417 З</li>
+<li>И (Y) - U+0418 И</li>
+<li>І (I) - U+0406 І</li>
+<li>Ї (Yi) - U+0407 Ї</li>
+<li>Й (Y) - U+0419 Й</li>
+<li>К (K) - U+041A К</li>
+<li>Л (L) - U+041B Л</li>
+<li>М (M) - U+041C М</li>
+<li>Н (N) - U+041D Н</li>
+<li>О (O) - U+041E О</li>
+<li>П (P) - U+041F П</li>
+<li>Р (R) - U+0420 Р</li>
+<li>С (S) - U+0421 С</li>
+<li>Т (T) - U+0422 Т</li>
+<li>У (U) - U+0423 У</li>
+<li>Ф (F) - U+0424 Ф</li>
+<li>Х (Kh) - U+0425 Х</li>
+<li>Ц (Ts) - U+0426 Ц</li>
+<li>Ч (Ch) - U+0427 Ч</li>
+<li>Ш (Sh) - U+0428 Ш</li>
+<li>Щ (Shch) - U+0429 Щ</li>
+<li>Ь (Soft sign) - U+042C Ь</li>
+<li>Ю (Yu) - U+042E Ю</li>
+<li>Я (Ya) - U+042F Я</li>
+<li>Ґ (G) - U+0490 Ґ</li>
+</ul>
+<h2 id="codici-unicode-casuali">Codici Unicode casuali</h2>
+<!-- 
+Richiesta Chat-GPT
+Genera un documento CommonMark contenente 5 liste di 6 elementi. Il primo elemento della lista deve essere un carattere dell'alfabeto latino; 
+Il secondo elemento della lista deve essere un carattere dell'alfabeto greco;
+Il terzo elemento della lista deve essere un carattere di un'alfabeto asiatico; Quarto, quinto e sesto elemento della lista devono essere emoji. Tutti gli elementi delle cinque liste devono essere scritti con codice unicode nella forma U+codice, nome del carattere e rappresentazione HTML ``&#x12345;`` come nel seguente esempio ``U+0044, LATIN CAPITAL LETTER D, &#x0044;``
+-->
+<p>Realizzare una pagina web contenente i caratteri delle lettere assegnate:</p>
+<h3 id="lista-1">Lista 1</h3>
+<ul>
+<li>U+0041, LATIN CAPITAL LETTER A, A</li>
+<li>U+0391, GREEK CAPITAL LETTER ALPHA, Α</li>
+<li>U+3042, HIRAGANA LETTER A, あ</li>
+<li>U+1F600, GRINNING FACE, 😀</li>
+<li>U+1FA79, MENDING HEART, 🩹</li>
+<li>U+1F60D, SMILING FACE WITH HEART-SHAPED EYES, 😍</li>
+</ul>
+<h3 id="lista-2">Lista 2</h3>
+<ul>
+<li>U+0042, LATIN CAPITAL LETTER B, B</li>
+<li>U+0392, GREEK CAPITAL LETTER BETA, Β</li>
+<li>U+304B, HIRAGANA LETTER KA, か</li>
+<li>U+1F60E, SMILING FACE WITH SUNGLASSES, 😎</li>
+<li>U+1F610, NEUTRAL FACE, 😐</li>
+<li>U+1F615, CONFUSED FACE, 😕</li>
+</ul>
+<h3 id="lista-3">Lista 3</h3>
+<ul>
+<li>U+0043, LATIN CAPITAL LETTER C, C</li>
+<li>U+0393, GREEK CAPITAL LETTER GAMMA, Γ</li>
+<li>U+30AB, KATAKANA LETTER KA, カ</li>
+<li>U+1F617, KISSING FACE, 😗</li>
+<li>U+1F621, ENRAGED FACE, 😡</li>
+<li>U+1F633, FLUSHED FACE, 😳</li>
+</ul>
+<h3 id="lista-4">Lista 4</h3>
+<ul>
+<li>U+0044, LATIN CAPITAL LETTER D, D</li>
+<li>U+0394, GREEK CAPITAL LETTER DELTA, Δ</li>
+<li>U+30AD, KATAKANA LETTER KE, キ</li>
+<li>U+1F603, SMILING FACE WITH OPEN MOUTH, 😃</li>
+<li>U+1F62D, LOUDLY CRYING FACE, 😭</li>
+<li>U+1F61C, FACE WITH STUCK-OUT TONGUE AND WINKING EYE, 😜</li>
+</ul>
+<h3 id="lista-5">Lista 5</h3>
+<ul>
+<li>U+0045, LATIN CAPITAL LETTER E, E</li>
+<li>U+0395, GREEK CAPITAL LETTER EPSILON, Ε</li>
+<li>U+30AF, KATAKANA LETTER KU, ク</li>
+<li>U+1F604, SMILING FACE WITH OPEN MOUTH AND SMILING EYES, 😄</li>
+<li>U+1F60A, SMILING FACE WITH SMILING EYES, 😊</li>
+<li>U+1F60B, FACE SAVOURING DELICIOUS FOOD, 😋</li>
+</ul>
+<h3 id="lista-6">Lista 6</h3>
+<ul>
+<li>U+0046, LATIN CAPITAL LETTER F, F</li>
+<li>U+0396, GREEK CAPITAL LETTER ZETA, Ζ</li>
+<li>U+3105, BOPOMOFO LETTER B, ㄅ</li>
+<li>U+1F914, THINKING FACE, 🤔</li>
+<li>U+1F436, DOG FACE, 🐶</li>
+<li>U+1F4A9, PILE OF POO, 💩</li>
+</ul>
+<h3 id="lista-7">Lista 7</h3>
+<ul>
+<li>U+0047, LATIN CAPITAL LETTER G, G</li>
+<li>U+0397, GREEK CAPITAL LETTER ETA, Η</li>
+<li>U+30A9, KATAKANA LETTER SMALL O, ォ</li>
+<li>U+1F47A, GOBLIN, 👺</li>
+<li>U+1F64C, PERSON RAISING BOTH HANDS IN CELEBRATION, 🙌</li>
+<li>U+1F4A5, COLLISION SYMBOL, 💥</li>
+</ul>
+<h3 id="lista-8">Lista 8</h3>
+<ul>
+<li>U+0048, LATIN CAPITAL LETTER H, H</li>
+<li>U+0398, GREEK CAPITAL LETTER THETA, Θ</li>
+<li>U+4E2D, CJK UNIFIED IDEOGRAPH-4E2D, 中</li>
+<li>U+1F497, GROWING HEART, 💗</li>
+<li>U+1F42A, TIGER FACE, 🐪</li>
+<li>U+1F389, PARTY POPPER, 🎉</li>
+</ul>
+<h3 id="lista-9">Lista 9</h3>
+<ul>
+<li>U+0049, LATIN CAPITAL LETTER I, I</li>
+<li>U+0399, GREEK CAPITAL LETTER IOTA, Ι</li>
+<li>U+3059, HIRAGANA LETTER SU, す</li>
+<li>U+1F971, YAWNING FACE, 🥱</li>
+<li>U+1F407, RABBIT, 🐇</li>
+<li>U+1F915, FACE WITH HEAD-BANDAGE, 🤕</li>
+</ul>
+<h3 id="lista-10">Lista 10</h3>
+<ul>
+<li>U+004A, LATIN CAPITAL LETTER J, J</li>
+<li>U+039A, GREEK CAPITAL LETTER KAPPA, Κ</li>
+<li>U+3061, HIRAGANA LETTER TI, ち</li>
+<li>U+1F47D, ALIEN, 👽</li>
+<li>U+1F40C, SNAIL, 🐌</li>
+<li>U+1F3A6, CINEMA, 🎦</li>
+</ul>
+<h3 id="lista-11">Lista 11</h3>
+<ul>
+<li>U+004B, LATIN CAPITAL LETTER K, K</li>
+<li>U+039B, GREEK CAPITAL LETTER LAMDA, Λ</li>
+<li>U+6728, CJK UNIFIED IDEOGRAPH-6728, 木</li>
+<li>U+2605, BLACK STAR, ★</li>
+<li>U+26BD, SOCCER BALL, ⚽</li>
+<li>U+1F30D, EARTH GLOBE EUROPE-AFRICA, 🌍</li>
+</ul>
+<h3 id="lista-12">Lista 12</h3>
+<ul>
+<li>U+004C, LATIN CAPITAL LETTER L, L</li>
+<li>U+039C, GREEK CAPITAL LETTER MU, Μ</li>
+<li>U+65E5, CJK UNIFIED IDEOGRAPH-65E5, 日</li>
+<li>U+1F49E, REVOLVING HEARTS, 💞</li>
+<li>U+1F431, CAT FACE, 🐱</li>
+<li>U+1F31E, SUN WITH FACE, 🌞</li>
+</ul>
+<h3 id="lista-13">Lista 13</h3>
+<ul>
+<li>U+004C, LATIN CAPITAL LETTER L, L</li>
+<li>U+039D, GREEK CAPITAL LETTER NU, Ν</li>
+<li>U+4E9C, CJK UNIFIED IDEOGRAPH-4E9C, 亜</li>
+<li>U+1F648, SEE-NO-EVIL MONKEY, 🙈</li>
+<li>U+1F42D, MOUSE FACE, 🐭</li>
+<li>U+1F308, RAINBOW, 🌈</li>
+</ul>
+<h3 id="lista-14">Lista 14</h3>
+<ul>
+<li>U+004D, LATIN CAPITAL LETTER M, M</li>
+<li>U+039E, GREEK CAPITAL LETTER XI, Ξ</li>
+<li>U+4E2D, CJK UNIFIED IDEOGRAPH-4E2D, 中</li>
+<li>U+1F64A, SPEAK-NO-EVIL MONKEY, 🙊</li>
+<li>U+1F43C, PANDA FACE, 🐼</li>
+<li>U+2B50, WHITE MEDIUM STAR, ⭐</li>
+</ul>
+<h3 id="lista-15">Lista 15</h3>
+<ul>
+<li>U+0053, LATIN CAPITAL LETTER S, S</li>
+<li>U+039F, GREEK CAPITAL LETTER OMICRON, Ο</li>
+<li>U+4EAC, CJK UNIFIED IDEOGRAPH-4EAC, 京</li>
+<li>U+1F631, FACE SCREAMING IN FEAR, 😱</li>
+<li>U+1F430, RABBIT FACE, 🐰</li>
+<li>U+1F31F, GLOWING STAR, 🌟</li>
+</ul>
+<h3 id="lista-16">Lista 16</h3>
+<ul>
+<li>U+004E, LATIN CAPITAL LETTER N, N</li>
+<li>U+03A0, GREEK CAPITAL LETTER PI, Π</li>
+<li>U+305A, HIRAGANA LETTER ZU, ず</li>
+<li>U+260E, BLACK TELEPHONE ☎</li>
+<li>U+270C, VICTORY HAND, ✌</li>
+<li>U+2620, TESTA DI MORTO, ☠</li>
+</ul>
+<h3 id="lista-17">Lista 17</h3>
+<ul>
+<li>U+004F, LATIN CAPITAL LETTER O, O</li>
+<li>U+03A1, GREEK CAPITAL LETTER RHO, Ρ</li>
+<li>U+3105, BOPOMOFO LETTER B, ㄅ</li>
+<li>U+1F601, GRINNING FACE WITH SMILING EYES, 😁</li>
+<li>U+1F975, HOT FACE, 🥵</li>
+<li>U+1F44C, OK HAND SIGN, 👌</li>
+</ul>
+<h3 id="lista-18">Lista 18</h3>
+<ul>
+<li>U+0050, LATIN CAPITAL LETTER P, P</li>
+<li>U+03A3, GREEK CAPITAL LETTER SIGMA, Σ</li>
+<li>U+3109, BOPOMOFO LETTER ZH, ㄉ</li>
+<li>U+1F603, GRINNING FACE WITH BIG EYES, 😃</li>
+<li>U+1F48C, LOVE LETTER, 💌</li>
+<li>U+1F642, SLIGHTLY SMILING FACE, 🙂</li>
+</ul>
+<h3 id="lista-19">Lista 19</h3>
+<ul>
+<li>U+0051, LATIN CAPITAL LETTER Q, Q</li>
+<li>U+03A4, GREEK CAPITAL LETTER TAU, Τ</li>
+<li>U+310E, BOPOMOFO LETTER EH, ㄎ</li>
+<li>U+1F921, CLOWN FACE, 🤡</li>
+<li>U+1F609, WINKING FACE, 😉</li>
+<li>U+1F98D, FOX FACE, 🦍</li>
+</ul>
+<h3 id="lista-20">Lista 20</h3>
+<ul>
+<li>U+0052, LATIN CAPITAL LETTER R, R</li>
+<li>U+03A5, GREEK CAPITAL LETTER UPSILON, Υ</li>
+<li>U+311E, BOPOMOFO LETTER M, ㄞ</li>
+<li>U+1F605, SMILING FACE WITH OPEN MOUTH AND COLD SWEAT, 😅</li>
+<li>U+2618, SHAMROCK ☘</li>
+<li>U+1F436, DOG FACE, 🐶</li>
+</ul>
+<h3 id="lista-21">Lista 21</h3>
+<ul>
+<li>U+0054, LATIN CAPITAL LETTER T, T</li>
+<li>U+03A6, GREEK CAPITAL LETTER PHI, Φ</li>
+<li>U+305C, HIRAGANA LETTER ZE, ぜ</li>
+<li>U+26A1, HIGH VOLTAGE SIGN ⚡</li>
+<li>U+1F479, OGRE, 👹</li>
+<li>U+1F494, BROKEN HEART, 💔</li>
+</ul>
+<h3 id="lista-22">Lista 22</h3>
+<ul>
+<li>U+0055, LATIN CAPITAL LETTER U, U</li>
+<li>U+03A7, GREEK CAPITAL LETTER CHI, Χ</li>
+<li>U+3044, HIRAGANA LETTER I, い</li>
+<li>U+1F621, ENRAGED FACE, 😡</li>
+<li>U+1F47E, ALIEN MONSTER, 👾</li>
+<li>U+1F916, ROBOT, 🤖</li>
+</ul>
+<h3 id="lista-23">Lista 23</h3>
+<ul>
+<li>U+0056, LATIN CAPITAL LETTER V, V</li>
+<li>U+03A8, GREEK CAPITAL LETTER PSI, Ψ</li>
+<li>U+3046, HIRAGANA LETTER U, う</li>
+<li>U+1F606, SMILING FACE WITH SWEAT, 😆</li>
+<li>U+1F607, SMILING FACE WITH HALO, 😇</li>
+<li>U+1F608, SMILING FACE WITH HORNS, 😈</li>
+</ul>
+<h3 id="lista-24">Lista 24</h3>
+<ul>
+<li>U+0057, LATIN CAPITAL LETTER W, W</li>
+<li>U+03A9, GREEK CAPITAL LETTER OMEGA, Ω</li>
+<li>U+3048, HIRAGANA LETTER E, え</li>
+<li>U+1F61E, DISAPPOINTED FACE, 😞</li>
+<li>U+1F649, HEAR-NO-EVIL MONKEY, 🙉</li>
+<li>U+1F60B, FACE SAVOURING DELICIOUS FOOD, 😋</li>
+</ul>
+<h3 id="lista-25">Lista 25</h3>
+<ul>
+<li>U+0058, LATIN CAPITAL LETTER X, X</li>
+<li>U+03AA, GREEK CAPITAL LETTER IOTA WITH DIALYTIKA, Ϊ</li>
+<li>U+3050, HIRAGANA LETTER GU, ぐ</li>
+<li>U+1F60C, RELIEVED FACE, 😌</li>
+<li>U+1F49D, HEART WITH RIBBON, 💝</li>
+<li>U+1F913, NERD FACE, 🤓</li>
+</ul>
+<h3 id="lista-26">Lista 26</h3>
+<ul>
+<li>U+0059, LATIN CAPITAL LETTER Y, Y</li>
+<li>U+03AB, GREEK CAPITAL LETTER UPSILON WITH DIALYTIKA, Ϋ</li>
+<li>U+305E, HIRAGANA LETTER ZO, ぞ</li>
+<li>U+262F, YIN YANG, ☯</li>
+<li>U+1F4F1, MOBILE PHONE, 📱</li>
+<li>U+1F680, ROCKET, 🚀</li>
+</ul>
+<h3 id="lista-27">Lista 27</h3>
+<ul>
+<li>U+0061, LATIN SMALL LETTER A, a</li>
+<li>U+03B1, GREEK SMALL LETTER ALPHA, α</li>
+<li>U+306A, HIRAGANA LETTER NA, な</li>
+<li>U+1F47B, GHOST, 👻</li>
+<li>U+1F4F2, MOBILE PHONE WITH ARROW, 📲</li>
+<li>U+1F681, HELICOPTER, 🚁</li>
+</ul>
+<h3 id="lista-28">Lista 28</h3>
+<ul>
+<li>U+0062, LATIN SMALL LETTER B, b</li>
+<li>U+03B2, GREEK SMALL LETTER BETA, β</li>
+<li>U+3055, HIRAGANA LETTER SA, さ</li>
+<li>U+1F525, HEART ON FIRE, 🔥</li>
+<li>U+1F4F3, PALETTE, 📳</li>
+<li>U+1F682, STEAM LOCOMOTIVE, 🚂</li>
+</ul>
+<h3 id="lista-29">Lista 29</h3>
+<ul>
+<li>U+0063, LATIN SMALL LETTER C, c</li>
+<li>U+03B3, GREEK SMALL LETTER GAMMA, γ</li>
+<li>U+305F, HIRAGANA LETTER TA, た</li>
+<li>U+1F620, ANGRY FACE, 😠</li>
+<li>U+1F4F4, CLIPBOARD, 📴</li>
+<li>U+1F683, RAILWAY CAR, 🚃</li>
+</ul>
+<h3 id="lista-30">Lista 30</h3>
+<ul>
+<li>U+0064, SMALL LETTER LETTER E, d</li>
+<li>U+03B4, GREEK SMALL LETTER DELTA, δ</li>
+<li>U+306F, HIRAGANA LETTER HA, は</li>
+<li>U+2620, SKULL AND CROSSBONES, ☠</li>
+<li>U+1F4F5, CALENDAR, 📵</li>
+<li>U+1F684, HIGH-SPEED TRAIN, 🚄</li>
+</ul>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/codificaunicode/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">HTML Lez. 07 - Codifica Unicode, HTML entities, emoji</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/html/accessibilita/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">HTML Lez. 08 - Accessibilità</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Coding e Paduli.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
