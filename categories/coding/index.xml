@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>coding on Coding e Paduli</title>
+    <title>coding on Lab. informatica</title>
     <link>http://codingepaduli.github.io/categories/coding/</link>
-    <description>Recent content in coding on Coding e Paduli</description>
+    <description>Recent content in coding on Lab. informatica</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
     <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
@@ -257,6 +257,42 @@
       
       <guid>http://codingepaduli.github.io/coding/web/html/accessibilita/</guid>
       <description>HTML Lez. 08 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&amp;rsquo;uso di tecnologie assistive</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 07.4 - Sistemi numerici</title>
+      <link>http://codingepaduli.github.io/coding/web/html/sisteminumerici/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/sisteminumerici/</guid>
+      <description>HTML Lez. 07.4 - Sistemi numerici</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 07.3 - Alfabeto Ucraino</title>
+      <link>http://codingepaduli.github.io/coding/web/html/alfabetoucraino/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/alfabetoucraino/</guid>
+      <description>HTML Lez. 07.3 - Alfabeto Ucraino</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 07.2 - Alfabeto Russo</title>
+      <link>http://codingepaduli.github.io/coding/web/html/alfabetorusso/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/alfabetorusso/</guid>
+      <description>HTML Lez. 07.2 - Alfabeto Russo</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 07.1 - Alfabeto Greco</title>
+      <link>http://codingepaduli.github.io/coding/web/html/alfabetogreco/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/alfabetogreco/</guid>
+      <description>HTML Lez. 07.1 - Alfabeto Greco</description>
     </item>
     
     <item>

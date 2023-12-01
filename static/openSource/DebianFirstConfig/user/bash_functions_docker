@@ -133,7 +133,7 @@ export -f hugoProd
 # pandoc
 # TEST: pandoc --version
 pandoc() {
-  dockerContainer --name pandoc          -v "$PWD":"$PWD" -v "$HOME/Sviluppo/SVN2/codingepaduli:/usr/src/myapp/"  -v "$HOME/Sviluppo/SVN2/from-hugo-to-book":/usr/src/luaFilters  dalibo/pandocker:latest-buster-full "$@" # --fail-if-warnings
+  dockerContainer --name pandoc     -v "$HOME/Sviluppo/SVN2/codingepaduli:/usr/src/myapp/"  -v "$HOME/Sviluppo/SVN2/from-hugo-to-book":/usr/src/luaFilters  dalibo/pandocker:latest-buster-full "$@" # --fail-if-warnings
 }
 export -f pandoc
 
@@ -147,7 +147,7 @@ export -f pandocMdToPdf
 # yt-dl
 # Test: youTubeDownload URL
 youTubeDownload() {
-  dockerContainer --name youtube-dl  -e PUID="$UID" -e PGID="$(id -g)" -v "$PWD":"$PWD"   mikenye/youtube-dl:2023.02.17_linux_amd64  "$@"
+  dockerContainer --name youtube-dl  -e PUID="$UID" -e PGID="$(id -g)"  mikenye/youtube-dl:2023.02.17_linux_amd64  "$@"
 }
 export -f youTubeDownload
 

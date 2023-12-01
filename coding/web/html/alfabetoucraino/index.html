@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 07.3 - Alfabeto Ucraino - Lab. informatica</title>
+
+    <meta name="description" content="HTML Lez. 07.3 - Alfabeto Ucraino">
+        <meta property="og:title" content="HTML Lez. 07.3 - Alfabeto Ucraino" />
+<meta property="og:description" content="HTML Lez. 07.3 - Alfabeto Ucraino" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/alfabetoucraino/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-11-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-03T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 07.3 - Alfabeto Ucraino"/>
+<meta name="twitter:description" content="HTML Lez. 07.3 - Alfabeto Ucraino"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-11-03T00:00:00Z">03-11-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 2 minuti 
+        ( 223 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="alfabeto-ucraino">Alfabeto Ucraino</h1>
+<h2 id="lalfabeto-ucraino">L&rsquo;alfabeto Ucraino</h2>
+<p>Realizzazione di una lista contenente:</p>
+<ol>
+<li>il nome delle lettere dell&rsquo;alfabeto Ucraino;</li>
+<li>il codice Unicode (scritto nel formato <code>U+codiceEsa</code>, con <code>codiceEsa</code> indicante il valore numerico esadecimale, ad esempio U+1015B);</li>
+<li>la lettera rappresentata in formato Unicode (secondo la sintassi <code>&amp;#codiceDec;</code>, con <code>codiceDec</code> indicante il valore numerico decimale, ad esempio <code>&amp;#1015B;</code>).</li>
+</ol>
+<ul>
+<li>А (A) - U+0410 А</li>
+<li>Б (B) - U+0411 Б</li>
+<li>В (V) - U+0412 В</li>
+<li>Г (H) - U+0413 Г</li>
+<li>Ґ (G) - U+0490 Ґ</li>
+<li>Д (D) - U+0414 Д</li>
+<li>Е (E) - U+0415 Е</li>
+<li>Є (Ye) - U+0404 Є</li>
+<li>Ж (Zh) - U+0416 Ж</li>
+<li>З (Z) - U+0417 З</li>
+<li>И (Y) - U+0418 И</li>
+<li>І (I) - U+0406 І</li>
+<li>Ї (Yi) - U+0407 Ї</li>
+<li>Й (Y) - U+0419 Й</li>
+<li>К (K) - U+041A К</li>
+<li>Л (L) - U+041B Л</li>
+<li>М (M) - U+041C М</li>
+<li>Н (N) - U+041D Н</li>
+<li>О (O) - U+041E О</li>
+<li>П (P) - U+041F П</li>
+<li>Р (R) - U+0420 Р</li>
+<li>С (S) - U+0421 С</li>
+<li>Т (T) - U+0422 Т</li>
+<li>У (U) - U+0423 У</li>
+<li>Ф (F) - U+0424 Ф</li>
+<li>Х (Kh) - U+0425 Х</li>
+<li>Ц (Ts) - U+0426 Ц</li>
+<li>Ч (Ch) - U+0427 Ч</li>
+<li>Ш (Sh) - U+0428 Ш</li>
+<li>Щ (Shch) - U+0429 Щ</li>
+<li>Ь (Soft sign) - U+042C Ь</li>
+<li>Ю (Yu) - U+042E Ю</li>
+<li>Я (Ya) - U+042F Я</li>
+<li>Ґ (G) - U+0490 Ґ</li>
+</ul>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/alfabetorusso/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">HTML Lez. 07.2 - Alfabeto Russo</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/html/sisteminumerici/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">HTML Lez. 07.4 - Sistemi numerici</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
