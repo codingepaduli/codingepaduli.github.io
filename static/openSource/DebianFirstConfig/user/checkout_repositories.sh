@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# WORKING_DIR="storage/shared/SVN" # on phone
 WORKING_DIR="$HOME/Sviluppo/SVN"
 # SVN_REPO=""
 # SVN_USER=""
@@ -28,6 +29,7 @@ myRepositories=(
     "firefox-bookmarks-to-markdown"
     "java-hello-world-with-gradle"
     "j2ee-website-with-gradle"
+    "fet-timetabling-compute"
 )
 
 if [ ! -d "$WORKING_DIR" ]; then
@@ -55,6 +57,10 @@ ssh-add -k $SSH_KEY
 # moving to the folder where git repositories will be cloned
 cd "$WORKING_DIR"
 
+git config --global user.useConfigOnly true
+# Fix bug https://github.blog/2022-04-12-git-security-vulnerability-announced/
+git config --global --replace-all safe.directory "*"
+
 for repo in "${externalRepositories[@]}"
 do
     git clone $repo
@@ -68,7 +74,6 @@ do
     if [ $? -eq 0 ]; then
         # Configure the repo
         cd $repo
-        git config --global user.useConfigOnly true
         git config --local user.name "$GIT_USER"
         git config --local user.email "$GIT_EMAIL"
         git config --local core.autocrlf input
@@ -84,7 +89,7 @@ do
         git config --local gpg.ssh.allowedSignersFile "$SSH_ALLOWED_SIGNERS"
         git config --local core.sshCommand "/usr/bin/ssh -i $SSH_KEY"
 
-	    echo "Repository configured: $repo"
+        echo "Repository configured: $repo"
         cd ..
     else
     	echo "Fails - Please upload your key in case of Permission denied (publickey) - $repo"

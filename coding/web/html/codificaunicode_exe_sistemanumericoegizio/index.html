@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 07.5 - Sistema Numerico Egizio - Lab. informatica</title>
+
+    <meta name="description" content="HTML Lez. 07.1 - Sistema Numerico Egizio">
+        <meta property="og:title" content="HTML Lez. 07.5 - Sistema Numerico Egizio" />
+<meta property="og:description" content="HTML Lez. 07.1 - Sistema Numerico Egizio" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sistemanumericoegizio/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-12-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-12-17T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 07.5 - Sistema Numerico Egizio"/>
+<meta name="twitter:description" content="HTML Lez. 07.1 - Sistema Numerico Egizio"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-12-17T00:00:00Z">17-12-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 1 minuto 
+        ( 170 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="sistema-numerico-egizio">Sistema Numerico Egizio</h1>
+<p>Il sistema numerico Egizio <a href="https://unicode-table.com/en/blocks/egyptian-hieroglyphs/">Egyptian Hieroglyphs - Range: 13000—1342F</a>
+è un sistema non posizionale. Non posizionale significa che la posizione non conta e che un simbolo ha sempre lo stesso valore ovunque sia posizionato.</p>
+<p>Il numero Egizio 𓂭 è l&rsquo;unità e vale UNO in qualsiasi posizione si trova. Scrivere due volte 𓂭 𓂭 indica UNO ed UNO, cioè DUE.</p>
+<p>Con il sistema numerico Indiano (il nostro) scrivere 11 significa UNDICI, non UNO ed UNO, perché è un sistema in cui la posizione conta: la posizione più a destra indica le unita, quella subito a sinistra dell&rsquo;unità indica le decine.</p>
+<!-- markdownlint-disable MD033 -->
+<!-- Stile tabelle -->
+<style>
+  th, td {
+    text-align: center;
+    font-size: 3.3rem;
+    line-height: 4rem;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #d9d9d9;
+  }
+</style>
+<table>
+  <tr>
+    <th>Decimale</th>
+    <th>Egizio</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>&#x130AD;</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>&#x130AE;</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>&#x130AF;</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>&#x130B0;</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>&#x130B1;</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>&#x130B2;</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>&#x130B3;</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>&#x130B4;</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>&#x130B5;</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>&#x13386;</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>&#x13386;&#x130AD;</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>&#x13386;&#x130AE;</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>&#x13386;&#x130AF;</td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>&#x13387;</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>&#x13388;</td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td>&#x13389;</td>
+  </tr>
+  <tr>
+    <td>50</td>
+    <td>&#x1338A;</td>
+  </tr>
+  <tr>
+    <td>60</td>
+    <td>&#x1338B;</td>
+  </tr>
+  <tr>
+    <td>70</td>
+    <td>&#x1338C;</td>
+  </tr>
+  <tr>
+    <td>80</td>
+    <td>&#x1338D;</td>
+  </tr>
+  <tr>
+    <td>90</td>
+    <td>&#x1338E;</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>&#x13362;</td>
+  </tr>
+  <tr>
+    <td>200</td>
+    <td>&#x13363;</td>
+  </tr>
+  <tr>
+    <td>300</td>
+    <td>&#x13364;</td>
+  </tr>
+  <tr>
+    <td>400</td>
+    <td>&#x13365;</td>
+  </tr>
+  <tr>
+    <td>500</td>
+    <td>&#x13366;</td>
+  </tr>
+  <tr>
+    <td>600</td>
+    <td>&#x13367;</td>
+  </tr>
+  <tr>
+    <td>700</td>
+    <td>&#x13368;</td>
+  </tr>
+  <tr>
+    <td>800</td>
+    <td>&#x13369;</td>
+  </tr>
+  <tr>
+    <td>900</td>
+    <td>&#x1336A;</td>
+  </tr>
+  <tr>
+    <td>1000</td>
+    <td>&#x131BC;</td>
+  </tr>
+  <tr>
+    <td>1234</td>
+    <td>&#x131BC;&#x13363;&#x13388;&#x130B0;</td>
+  </tr>
+</table>
+<!-- markdownlint-enable MD033 -->
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/codificaunicode_exe_sisteminumerici/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">HTML Lez. 07.4 - Sistemi numerici</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/html/codificaunicode_exe_conversioninumeriche/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">HTML Lez. 07.6 - Conversioni numeriche</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

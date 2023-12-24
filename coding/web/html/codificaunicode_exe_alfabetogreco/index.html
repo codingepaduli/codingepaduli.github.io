@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 07.1 - Alfabeto Greco - Lab. informatica</title>
+
+    <meta name="description" content="HTML Lez. 07.1 - Alfabeto Greco">
+        <meta property="og:title" content="HTML Lez. 07.1 - Alfabeto Greco" />
+<meta property="og:description" content="HTML Lez. 07.1 - Alfabeto Greco" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-11-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-03T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 07.1 - Alfabeto Greco"/>
+<meta name="twitter:description" content="HTML Lez. 07.1 - Alfabeto Greco"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-11-03T00:00:00Z">03-11-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 1 minuto 
+        ( 155 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="alfabeto-greco">Alfabeto Greco</h1>
+<!-- markdownlint-disable MD033 -->
+<!-- Stile tabelle -->
+<style>
+  th, td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #d9d9d9;
+  }
+</style>
+<!-- markdownlint-enable MD033 -->
+<h2 id="lalfabeto-greco">L&rsquo;alfabeto Greco</h2>
+<p>Realizzazione di una tabella contenente:</p>
+<ol>
+<li>il nome delle lettere dell&rsquo;alfabeto Greco;</li>
+<li>il codice Unicode (scritto nel formato <code>U+codiceEsa</code>, con <code>codiceEsa</code> indicante il valore numerico esadecimale, ad esempio <code>U+1015B</code>);</li>
+<li>la lettera rappresentata in formato Unicode (secondo la sintassi <code>&amp;#codiceDec;</code>, con <code>codiceDec</code> indicante il valore numerico decimale, ad esempio <code>&amp;#1015B;</code>).</li>
+</ol>
+<!-- markdownlint-disable MD033 -->
+<table>
+  <tr>
+    <th>Lettera</th>
+    <th>Nome</th>
+    <th>Nome (HTML Entities)</th>
+    <th>Codice Unicode</th>
+  </tr>
+  <tr>
+    <td>Α</td>
+    <td>Alfa</td>
+    <td>&Alpha;</td>
+    <td>U+0391</td>
+  </tr>
+  <tr>
+    <td>Β</td>
+    <td>Beta</td>
+    <td>&Beta;</td>
+    <td>U+0392</td>
+  </tr>
+  <tr>
+    <td>Γ</td>
+    <td>Gamma</td>
+    <td>&Gamma;</td>
+    <td>U+0393</td>
+  </tr>
+  <tr>
+    <td>Δ</td>
+    <td>Delta</td>
+    <td>&Delta;</td>
+    <td>U+0394</td>
+  </tr>
+  <tr>
+    <td>Ε</td>
+    <td>Epsilon</td>
+    <td>&Epsilon;</td>
+    <td>U+0395</td>
+  </tr>
+  <tr>
+    <td>Ζ</td>
+    <td>Zeta</td>
+    <td>&Zeta;</td>
+    <td>U+0396</td>
+  </tr>
+  <tr>
+    <td>Η</td>
+    <td>Eta</td>
+    <td>&Eta;</td>
+    <td>U+0397</td>
+  </tr>
+  <tr>
+    <td>Θ</td>
+    <td>Theta</td>
+    <td>&Theta;</td>
+    <td>U+0398</td>
+  </tr>
+  <tr>
+    <td>Ι</td>
+    <td>Iota</td>
+    <td>&Iota;</td>
+    <td>U+0399</td>
+  </tr>
+  <tr>
+    <td>Κ</td>
+    <td>Kappa</td>
+    <td>&Kappa;</td>
+    <td>U+039A</td>
+  </tr>
+  <tr>
+    <td>Λ</td>
+    <td>Lambda</td>
+    <td>&Lambda;</td>
+    <td>U+039B</td>
+  </tr>
+  <tr>
+    <td>Μ</td>
+    <td>Mu</td>
+    <td>&Mu;</td>
+    <td>U+039C</td>
+  </tr>
+  <tr>
+    <td>Ν</td>
+    <td>Nu</td>
+    <td>&Nu;</td>
+    <td>U+039D</td>
+  </tr>
+  <tr>
+    <td>Ξ</td>
+    <td>Xi</td>
+    <td>&Xi;</td>
+    <td>U+039E</td>
+  </tr>
+  <tr>
+    <td>Ο</td>
+    <td>Omicron</td>
+    <td>&Omicron;</td>
+    <td>U+039F</td>
+  </tr>
+  <tr>
+    <td>Π</td>
+    <td>Pi</td>
+    <td>&Pi;</td>
+    <td>U+03A0</td>
+  </tr>
+  <tr>
+    <td>Ρ</td>
+    <td>Rho</td>
+    <td>&Rho;</td>
+    <td>U+03A1</td>
+  </tr>
+  <tr>
+    <td>Σ</td>
+    <td>Sigma</td>
+    <td>&Sigma;</td>
+    <td>U+03A3</td>
+  </tr>
+  <tr>
+    <td>Τ</td>
+    <td>Tau</td>
+    <td>&Tau;</td>
+    <td>U+03A4</td>
+  </tr>
+  <tr>
+    <td>Υ</td>
+    <td>Upsilon</td>
+    <td>&Upsilon;</td>
+    <td>U+03A5</td>
+  </tr>
+  <tr>
+    <td>Φ</td>
+    <td>Phi</td>
+    <td>&Phi;</td>
+    <td>U+03A6</td>
+  </tr>
+  <tr>
+    <td>Χ</td>
+    <td>Chi</td>
+    <td>&Chi;</td>
+    <td>U+03A7</td>
+  </tr>
+  <tr>
+    <td>Ψ</td>
+    <td>Psi</td>
+    <td>&Psi;</td>
+    <td>U+03A8</td>
+  </tr>
+  <tr>
+    <td>Ω</td>
+    <td>Omega</td>
+    <td>&Omega;</td>
+    <td>U+03A9</td>
+  </tr>
+</table>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/codificaunicode/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">HTML Lez. 07 - Codifica Unicode, HTML entities, emoji</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/html/codificaunicode_exe_alfabetorusso/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">HTML Lez. 07.2 - Alfabeto Russo</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

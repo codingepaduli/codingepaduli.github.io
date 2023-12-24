@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 07.6 - Conversioni numeriche - Lab. informatica</title>
+
+    <meta name="description" content="HTML Lez. 07.6 - Conversioni numeriche">
+        <meta property="og:title" content="HTML Lez. 07.6 - Conversioni numeriche" />
+<meta property="og:description" content="HTML Lez. 07.6 - Conversioni numeriche" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_conversioninumeriche/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-11-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-03T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 07.6 - Conversioni numeriche"/>
+<meta name="twitter:description" content="HTML Lez. 07.6 - Conversioni numeriche"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-11-03T00:00:00Z">03-11-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 8 minuti 
+        ( 1610 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="conversioni-numeriche">Conversioni numeriche</h1>
+<!-- 
+Richiesta Chat-GPT
+Genera un documento CommonMark contenente 5 liste di 6 elementi. Il primo elemento della lista deve essere un carattere dell'alfabeto latino; 
+Il secondo elemento della lista deve essere un carattere dell'alfabeto greco;
+Il terzo elemento della lista deve essere un carattere di un'alfabeto asiatico; Quarto, quinto e sesto elemento della lista devono essere emoji. Tutti gli elementi delle cinque liste devono essere scritti con codice unicode nella forma U+codice, nome del carattere e rappresentazione HTML ``&#x12345;`` come nel seguente esempio ``U+0044, LATIN CAPITAL LETTER D, &#x0044;``
+-->
+<h2 id="conversione-in-formato-decimale">Conversione in formato decimale</h2>
+<p>Realizzare una pagina web contenente i caratteri della lista assegnata. I codici Unicode presenti nelle liste  devono essere convertiti in formato decimale e scritti nelle pagine web utilizzando la sintassi &amp;#codice_decimale; :</p>
+<h2 id="lista-1">Lista 1</h2>
+<ul>
+<li>U+0041, LATIN CAPITAL LETTER A, A</li>
+<li>U+0391, GREEK CAPITAL LETTER ALPHA, Α</li>
+<li>U+0F3A, TIBETAN MARK CLOSIGN SANDY BIRGA, ༺</li>
+<li>U+3042, HIRAGANA LETTER A, あ</li>
+<li>U+1F600, GRINNING FACE, 😀</li>
+<li>U+1FA79, MENDING HEART, 🩹</li>
+<li>U+1F60D, SMILING FACE WITH HEART-SHAPED EYES, 😍</li>
+</ul>
+<h2 id="lista-2">Lista 2</h2>
+<ul>
+<li>U+0042, LATIN CAPITAL LETTER B, B</li>
+<li>U+0392, GREEK CAPITAL LETTER BETA, Β</li>
+<li>U+0FAC, TIBETAN SUBJOINED LETTER DZHA, ྫྷ</li>
+<li>U+304B, HIRAGANA LETTER KA, か</li>
+<li>U+1F60E, SMILING FACE WITH SUNGLASSES, 😎</li>
+<li>U+1F610, NEUTRAL FACE, 😐</li>
+<li>U+1F615, CONFUSED FACE, 😕</li>
+</ul>
+<h2 id="lista-3">Lista 3</h2>
+<ul>
+<li>U+0043, LATIN CAPITAL LETTER C, C</li>
+<li>U+0393, GREEK CAPITAL LETTER GAMMA, Γ</li>
+<li>U+0F78, TIBETAN VOWEL SIGN VOCALIC S, ླྀ</li>
+<li>U+30AB, KATAKANA LETTER KA, カ</li>
+<li>U+1F617, KISSING FACE, 😗</li>
+<li>U+1F621, ENRAGED FACE, 😡</li>
+<li>U+1F633, FLUSHED FACE, 😳</li>
+</ul>
+<h2 id="lista-4">Lista 4</h2>
+<ul>
+<li>U+0044, LATIN CAPITAL LETTER D, D</li>
+<li>U+0394, GREEK CAPITAL LETTER DELTA, Δ</li>
+<li>U+0F79, TIBETAN VOWEL SIGN VOCALIC H, ཹ</li>
+<li>U+30AD, KATAKANA LETTER KE, キ</li>
+<li>U+1F603, SMILING FACE WITH OPEN MOUTH, 😃</li>
+<li>U+1F62D, LOUDLY CRYING FACE, 😭</li>
+<li>U+1F61C, FACE WITH STUCK-OUT TONGUE AND WINKING EYE, 😜</li>
+</ul>
+<h2 id="lista-5">Lista 5</h2>
+<ul>
+<li>U+0045, LATIN CAPITAL LETTER E, E</li>
+<li>U+0395, GREEK CAPITAL LETTER EPSILON, Ε</li>
+<li>U+0FD0, TIBETAN MARK BSKA- SHOG GI MGO RGYAN, ࿐</li>
+<li>U+30AF, KATAKANA LETTER KU, ク</li>
+<li>U+1F604, SMILING FACE WITH OPEN MOUTH AND SMILING EYES, 😄</li>
+<li>U+1F60A, SMILING FACE WITH SMILING EYES, 😊</li>
+<li>U+1F60B, FACE SAVOURING DELICIOUS FOOD, 😋</li>
+</ul>
+<h2 id="lista-6">Lista 6</h2>
+<ul>
+<li>U+0046, LATIN CAPITAL LETTER F, F</li>
+<li>U+0396, GREEK CAPITAL LETTER ZETA, Ζ</li>
+<li>U+0FC6, TIBETAN ASTROLOGICAL SIGN -PHA, ࿆</li>
+<li>U+3105, BOPOMOFO LETTER B, ㄅ</li>
+<li>U+1F914, THINKING FACE, 🤔</li>
+<li>U+1F436, DOG FACE, 🐶</li>
+<li>U+1F4A9, PILE OF POO, 💩</li>
+</ul>
+<h2 id="lista-7">Lista 7</h2>
+<ul>
+<li>U+0047, LATIN CAPITAL LETTER G, G</li>
+<li>U+0397, GREEK CAPITAL LETTER ETA, Η</li>
+<li>U+0F69, TIBETAN LETTER KSSA, ཀྵ</li>
+<li>U+30A9, KATAKANA LETTER SMALL O, ォ</li>
+<li>U+1F47A, GOBLIN, 👺</li>
+<li>U+1F64C, PERSON RAISING BOTH HANDS IN CELEBRATION, 🙌</li>
+<li>U+1F4A5, COLLISION SYMBOL, 💥</li>
+</ul>
+<h2 id="lista-8">Lista 8</h2>
+<ul>
+<li>U+0048, LATIN CAPITAL LETTER H, H</li>
+<li>U+0398, GREEK CAPITAL LETTER THETA, Θ</li>
+<li>U+0F53, TIBETAN LETTER NA, ན</li>
+<li>U+4E2D, CJK UNIFIED IDEOGRAPH-4E2D, 中</li>
+<li>U+1F497, GROWING HEART, 💗</li>
+<li>U+1F42A, TIGER FACE, 🐪</li>
+<li>U+1F389, PARTY POPPER, 🎉</li>
+</ul>
+<h2 id="lista-9">Lista 9</h2>
+<ul>
+<li>U+0049, LATIN CAPITAL LETTER I, I</li>
+<li>U+0399, GREEK CAPITAL LETTER IOTA, Ι</li>
+<li>U+0F3D, TIBETAN MARK CLOSIGN DBYANGS GZHI MTHO, ༽</li>
+<li>U+3059, HIRAGANA LETTER SU, す</li>
+<li>U+1F971, YAWNING FACE, 🥱</li>
+<li>U+1F407, RABBIT, 🐇</li>
+<li>U+1F915, FACE WITH HEAD-BANDAGE, 🤕</li>
+</ul>
+<h2 id="lista-10">Lista 10</h2>
+<ul>
+<li>U+004A, LATIN CAPITAL LETTER J, J</li>
+<li>U+039A, GREEK CAPITAL LETTER KAPPA, Κ</li>
+<li>U+0F5C, TIBETAN LETTER DZHA, ཛྷ</li>
+<li>U+3061, HIRAGANA LETTER TI, ち</li>
+<li>U+1F47D, ALIEN, 👽</li>
+<li>U+1F40C, SNAIL, 🐌</li>
+<li>U+1F3A6, CINEMA, 🎦</li>
+</ul>
+<h2 id="lista-11">Lista 11</h2>
+<ul>
+<li>U+004B, LATIN CAPITAL LETTER K, K</li>
+<li>U+039B, GREEK CAPITAL LETTER LAMDA, Λ</li>
+<li>U+0FBF, TIBETAN ASTROLOGICAL SIGN CA, ྿</li>
+<li>U+6728, CJK UNIFIED IDEOGRAPH-6728, 木</li>
+<li>U+2605, BLACK STAR, ★</li>
+<li>U+26BD, SOCCER BALL, ⚽</li>
+<li>U+1F30D, EARTH GLOBE EUROPE-AFRICA, 🌍</li>
+</ul>
+<h2 id="lista-12">Lista 12</h2>
+<ul>
+<li>U+004C, LATIN CAPITAL LETTER L, L</li>
+<li>U+039C, GREEK CAPITAL LETTER MU, Μ</li>
+<li>U+0FC3, TIBETAN ASTROLOGICAL SIGN -PHA, ࿃</li>
+<li>U+65E5, CJK UNIFIED IDEOGRAPH-65E5, 日</li>
+<li>U+1F49E, REVOLVING HEARTS, 💞</li>
+<li>U+1F431, CAT FACE, 🐱</li>
+<li>U+1F31E, SUN WITH FACE, 🌞</li>
+</ul>
+<h2 id="lista-13">Lista 13</h2>
+<ul>
+<li>U+004C, LATIN CAPITAL LETTER L, L</li>
+<li>U+039D, GREEK CAPITAL LETTER NU, Ν</li>
+<li>U+0FC7, TIBETAN ASTROLOGICAL SIGN -BA, ࿇</li>
+<li>U+4E9C, CJK UNIFIED IDEOGRAPH-4E9C, 亜</li>
+<li>U+1F648, SEE-NO-EVIL MONKEY, 🙈</li>
+<li>U+1F42D, MOUSE FACE, 🐭</li>
+<li>U+1F308, RAINBOW, 🌈</li>
+</ul>
+<h2 id="lista-14">Lista 14</h2>
+<ul>
+<li>U+004D, LATIN CAPITAL LETTER M, M</li>
+<li>U+039E, GREEK CAPITAL LETTER XI, Ξ</li>
+<li>U+0FD3, TIBETAN MARK INITIAL BRDA RNYING YIG MGO MDUN MA, ࿓</li>
+<li>U+4E2D, CJK UNIFIED IDEOGRAPH-4E2D, 中</li>
+<li>U+1F64A, SPEAK-NO-EVIL MONKEY, 🙊</li>
+<li>U+1F43C, PANDA FACE, 🐼</li>
+<li>U+2B50, WHITE MEDIUM STAR, ⭐</li>
+</ul>
+<h2 id="lista-15">Lista 15</h2>
+<ul>
+<li>U+0053, LATIN CAPITAL LETTER S, S</li>
+<li>U+039F, GREEK CAPITAL LETTER OMICRON, Ο</li>
+<li>U+0F3F, TIBETAN MARK CLOSING GLANG TSHEL, ༿</li>
+<li>U+4EAC, CJK UNIFIED IDEOGRAPH-4EAC, 京</li>
+<li>U+1F631, FACE SCREAMING IN FEAR, 😱</li>
+<li>U+1F430, RABBIT FACE, 🐰</li>
+<li>U+1F31F, GLOWING STAR, 🌟</li>
+</ul>
+<h2 id="lista-16">Lista 16</h2>
+<ul>
+<li>U+004E, LATIN CAPITAL LETTER N, N</li>
+<li>U+03A0, GREEK CAPITAL LETTER PI, Π</li>
+<li>U+0F46, TIBETAN LETTER CHA, ཆ</li>
+<li>U+305A, HIRAGANA LETTER ZU, ず</li>
+<li>U+260E, BLACK TELEPHONE ☎</li>
+<li>U+270C, VICTORY HAND, ✌</li>
+<li>U+2620, TESTA DI MORTO, ☠</li>
+</ul>
+<h2 id="lista-17">Lista 17</h2>
+<ul>
+<li>U+004F, LATIN CAPITAL LETTER O, O</li>
+<li>U+03A1, GREEK CAPITAL LETTER RHO, Ρ</li>
+<li>U+0F4A, TIBETAN LETTER TTA, ཊ</li>
+<li>U+3105, BOPOMOFO LETTER B, ㄅ</li>
+<li>U+1F601, GRINNING FACE WITH SMILING EYES, 😁</li>
+<li>U+1F975, HOT FACE, 🥵</li>
+<li>U+1F44C, OK HAND SIGN, 👌</li>
+</ul>
+<h2 id="lista-18">Lista 18</h2>
+<ul>
+<li>U+0050, LATIN CAPITAL LETTER P, P</li>
+<li>U+03A3, GREEK CAPITAL LETTER SIGMA, Σ</li>
+<li>U+0F7D, TIBETAN VOWEL SIGN EE, ཽ</li>
+<li>U+3109, BOPOMOFO LETTER ZH, ㄉ</li>
+<li>U+1F603, GRINNING FACE WITH BIG EYES, 😃</li>
+<li>U+1F48C, LOVE LETTER, 💌</li>
+<li>U+1F642, SLIGHTLY SMILING FACE, 🙂</li>
+</ul>
+<h2 id="lista-19">Lista 19</h2>
+<ul>
+<li>U+0051, LATIN CAPITAL LETTER Q, Q</li>
+<li>U+03A4, GREEK CAPITAL LETTER TAU, Τ</li>
+<li>U+0F43, TIBETAN LETTER GHA, གྷ</li>
+<li>U+310E, BOPOMOFO LETTER EH, ㄎ</li>
+<li>U+1F921, CLOWN FACE, 🤡</li>
+<li>U+1F609, WINKING FACE, 😉</li>
+<li>U+1F98D, FOX FACE, 🦍</li>
+</ul>
+<h2 id="lista-20">Lista 20</h2>
+<ul>
+<li>U+0052, LATIN CAPITAL LETTER R, R</li>
+<li>U+03A5, GREEK CAPITAL LETTER UPSILON, Υ</li>
+<li>U+0F5E, TIBETAN LETTER ZHA, ཞ</li>
+<li>U+311E, BOPOMOFO LETTER M, ㄞ</li>
+<li>U+1F605, SMILING FACE WITH OPEN MOUTH AND COLD SWEAT, 😅</li>
+<li>U+2618, SHAMROCK ☘</li>
+<li>U+1F436, DOG FACE, 🐶</li>
+</ul>
+<h2 id="lista-21">Lista 21</h2>
+<ul>
+<li>U+0054, LATIN CAPITAL LETTER T, T</li>
+<li>U+03A6, GREEK CAPITAL LETTER PHI, Φ</li>
+<li>U+0F5B, TIBETAN LETTER DZA, ཛ</li>
+<li>U+305C, HIRAGANA LETTER ZE, ぜ</li>
+<li>U+26A1, HIGH VOLTAGE SIGN ⚡</li>
+<li>U+1F479, OGRE, 👹</li>
+<li>U+1F494, BROKEN HEART, 💔</li>
+</ul>
+<h2 id="lista-22">Lista 22</h2>
+<ul>
+<li>U+0055, LATIN CAPITAL LETTER U, U</li>
+<li>U+03A7, GREEK CAPITAL LETTER CHI, Χ</li>
+<li>U+0F75, TIBETAN VOWEL SIGN UU, ཱུ</li>
+<li>U+3044, HIRAGANA LETTER I, い</li>
+<li>U+1F621, ENRAGED FACE, 😡</li>
+<li>U+1F47E, ALIEN MONSTER, 👾</li>
+<li>U+1F916, ROBOT, 🤖</li>
+</ul>
+<h2 id="lista-23">Lista 23</h2>
+<ul>
+<li>U+0056, LATIN CAPITAL LETTER V, V</li>
+<li>U+03A8, GREEK CAPITAL LETTER PSI, Ψ</li>
+<li>U+0F61, TIBETAN LETTER YA, ཡ</li>
+<li>U+3046, HIRAGANA LETTER U, う</li>
+<li>U+1F606, SMILING FACE WITH SWEAT, 😆</li>
+<li>U+1F607, SMILING FACE WITH HALO, 😇</li>
+<li>U+1F608, SMILING FACE WITH HORNS, 😈</li>
+</ul>
+<h2 id="lista-24">Lista 24</h2>
+<ul>
+<li>U+0057, LATIN CAPITAL LETTER W, W</li>
+<li>U+03A9, GREEK CAPITAL LETTER OMEGA, Ω</li>
+<li>U+0F90, TIBETAN SUBJOINED LETTER KA, ྐ</li>
+<li>U+3048, HIRAGANA LETTER E, え</li>
+<li>U+1F61E, DISAPPOINTED FACE, 😞</li>
+<li>U+1F649, HEAR-NO-EVIL MONKEY, 🙉</li>
+<li>U+1F60B, FACE SAVOURING DELICIOUS FOOD, 😋</li>
+</ul>
+<h2 id="lista-25">Lista 25</h2>
+<ul>
+<li>U+0058, LATIN CAPITAL LETTER X, X</li>
+<li>U+03AA, GREEK CAPITAL LETTER IOTA WITH DIALYTIKA, Ϊ</li>
+<li>U+0FCA, TIBETAN ASTROLOGICAL SIGN -PHA TSHOGS, ࿊</li>
+<li>U+3050, HIRAGANA LETTER GU, ぐ</li>
+<li>U+1F60C, RELIEVED FACE, 😌</li>
+<li>U+1F49D, HEART WITH RIBBON, 💝</li>
+<li>U+1F913, NERD FACE, 🤓</li>
+</ul>
+<h2 id="lista-26">Lista 26</h2>
+<ul>
+<li>U+0059, LATIN CAPITAL LETTER Y, Y</li>
+<li>U+03AB, GREEK CAPITAL LETTER UPSILON WITH DIALYTIKA, Ϋ</li>
+<li>U+0F89, TIBETAN SIGN GREAT AUSPICIOUS GRAGS PA SKAR MA, ྉ</li>
+<li>U+305E, HIRAGANA LETTER ZO, ぞ</li>
+<li>U+262F, YIN YANG, ☯</li>
+<li>U+1F4F1, MOBILE PHONE, 📱</li>
+<li>U+1F680, ROCKET, 🚀</li>
+</ul>
+<h2 id="lista-27">Lista 27</h2>
+<ul>
+<li>U+0061, LATIN SMALL LETTER A, a</li>
+<li>U+03B1, GREEK SMALL LETTER ALPHA, α</li>
+<li>U+0F57, TIBETAN LETTER BHA, བྷ</li>
+<li>U+306A, HIRAGANA LETTER NA, な</li>
+<li>U+1F47B, GHOST, 👻</li>
+<li>U+1F4F2, MOBILE PHONE WITH ARROW, 📲</li>
+<li>U+1F681, HELICOPTER, 🚁</li>
+</ul>
+<h2 id="lista-28">Lista 28</h2>
+<ul>
+<li>U+0062, LATIN SMALL LETTER B, b</li>
+<li>U+03B2, GREEK SMALL LETTER BETA, β</li>
+<li>U+0FB9, TIBETAN SUBJOINED LETTER KSSA, ྐྵ</li>
+<li>U+3055, HIRAGANA LETTER SA, さ</li>
+<li>U+1F525, HEART ON FIRE, 🔥</li>
+<li>U+1F4F3, PALETTE, 📳</li>
+<li>U+1F682, STEAM LOCOMOTIVE, 🚂</li>
+</ul>
+<h2 id="lista-29">Lista 29</h2>
+<ul>
+<li>U+0063, LATIN SMALL LETTER C, c</li>
+<li>U+03B3, GREEK SMALL LETTER GAMMA, γ</li>
+<li>U+0F77, TIBETAN VOWEL SIGN VOCALIC L, ཷ</li>
+<li>U+305F, HIRAGANA LETTER TA, た</li>
+<li>U+1F620, ANGRY FACE, 😠</li>
+<li>U+1F4F4, CLIPBOARD, 📴</li>
+<li>U+1F683, RAILWAY CAR, 🚃</li>
+</ul>
+<h2 id="lista-30">Lista 30</h2>
+<ul>
+<li>U+0064, SMALL LETTER LETTER E, d</li>
+<li>U+03B4, GREEK SMALL LETTER DELTA, δ</li>
+<li>U+0FCF, TIBETAN SIGN RDEL NAG GSUM, ࿏</li>
+<li>U+306F, HIRAGANA LETTER HA, は</li>
+<li>U+2620, SKULL AND CROSSBONES, ☠</li>
+<li>U+1F4F5, CALENDAR, 📵</li>
+<li>U+1F684, HIGH-SPEED TRAIN, 🚄</li>
+</ul>
+<h2 id="equivalenze-tra-unità-di-misura-differenti-prefissi">Equivalenze tra unità di misura (differenti prefissi)</h2>
+<p>Esprimi le misure nella lista seguente in notazione scientifica (potenze del 10). Calcola poi l&rsquo;equivalente nel prefisso di misura richiesto ed esprimilo sia nel formato numerico, sia in notazione scientifica.</p>
+<p>Ad esempio: 158.123.000.000 grammi -&gt; Kg</p>
+<p>158.123.000.000 g = 158.123 * 10<sup>6</sup> g</p>
+<p>Calcolo equivalenza: 158.123.000 Kg = 158.123 * 10<sup>3</sup> Kg</p>
+<p>Lista:</p>
+<ul>
+<li>171.602.000.000.000.000 byte -&gt; Gb</li>
+<li>613.075.000.000.000.000 hertz -&gt; EHz</li>
+<li>134.885.000.000.000.000 grammi -&gt; Gg</li>
+<li>82.498.000.000.000.000 metri -&gt; Mm</li>
+<li>247.461.000.000.000.000 ohm -&gt; Kohm</li>
+<li>93.876.000.000.000.000 ampere -&gt; KA</li>
+<li>279.179.000.000.000.000 Volt -&gt; GV</li>
+<li>229.272.000.000.000.000 byte -&gt; Eb</li>
+<li>396.166.000.000.000.000 hertz -&gt; THz</li>
+<li>68.883.000.000.000.000 grammi -&gt; Tg</li>
+<li>104.430.000.000.000.000 metri -&gt; Gm</li>
+<li>492.722.000.000.000.000 ohm -&gt; Mohm</li>
+<li>133.532.000.000.000.000 ampere -&gt; EA</li>
+<li>383.851.000.000.000.000 Volt -&gt; KV</li>
+<li>283.858.000.000.000.000 byte -&gt; Tb</li>
+<li>458.723.000.000.000.000 hertz -&gt; MHz</li>
+<li>83.219.000.000.000.000 grammi -&gt; Kg</li>
+<li>117.642.000.000.000.000 metri -&gt; Km</li>
+<li>540.689.000.000.000.000 ohm -&gt; Kohm</li>
+<li>143.777.000.000.000.000 ampere -&gt; KA</li>
+<li>405.338.000.000.000.000 Volt -&gt; KV</li>
+<li>326.765.000.000.000.000 byte -&gt; Mb</li>
+<li>500.205.000.000.000.000 hertz -&gt; MHz</li>
+<li>102.540.000.000.000.000 grammi -&gt; Gg</li>
+<li>126.429.000.000.000.000 metri -&gt; Em</li>
+<li>602.592.000.000.000.000 ohm -&gt; Tohm</li>
+<li>151.772.000.000.000.000 ampere -&gt; KA</li>
+<li>438.617.000.000.000.000 Volt -&gt; MV</li>
+<li>366.789.000.000.000.000 byte -&gt; Tb</li>
+<li>536.287.000.000.000.000 hertz -&gt; THz</li>
+<li>104.445.000.000.000.000 grammi -&gt; Kg</li>
+<li>131.262.000.000.000.000 metri -&gt; Km</li>
+<li>648.267.000.000.000.000 ohm -&gt; Gohm</li>
+<li>158.573.000.000.000.000 ampere -&gt; TA</li>
+<li>467.709.000.000.000.000 Volt -&gt; GV</li>
+<li>399.876.000.000.000.000 byte -&gt; Gb</li>
+<li>568.606.000.000.000.000 hertz -&gt; EHz</li>
+<li>105.857.000.000.000.000 grammi -&gt; Gg</li>
+<li>133.113.000.000.000.000 metri -&gt; Mm</li>
+<li>685.408.000.000.000.000 ohm -&gt; Kohm</li>
+<li>162.964.000.000.000.000 ampere -&gt; KA</li>
+<li>499.927.000.000.000.000 Volt -&gt; GV</li>
+<li>422.835.000.000.000.000 byte -&gt; Eb</li>
+<li>603.488.000.000.000.000 hertz -&gt; THz</li>
+<li>107.578.000.000.000.000 grammi -&gt; Tg</li>
+<li>135.524.000.000.000.000 metri -&gt; Gm</li>
+<li>715.827.000.000.000.000 ohm -&gt; Mohm</li>
+<li>166.961.000.000.000.000 ampere -&gt; EA</li>
+<li>527.623.000.000.000.000 Volt -&gt; KV</li>
+<li>448.704.000.000.000.000 byte -&gt; Tb</li>
+<li>287.789.000.000.000.000 metri -&gt; Mm</li>
+<li>445.287.000.000.000.000 ohm -&gt; Kohm</li>
+<li>262.445.000.000.000.000 ampere -&gt; KA</li>
+<li>267.262.000.000.000.000 Volt -&gt; GV</li>
+<li>573.267.000.000.000.000 byte -&gt; Eb</li>
+<li>709.573.000.000.000.000 hertz -&gt; THz</li>
+<li>876.709.000.000.000.000 grammi -&gt; Tg</li>
+<li>606.876.000.000.000.000 metri -&gt; Gm</li>
+<li>857.606.000.000.000.000 ohm -&gt; Mohm</li>
+<li>113.857.000.000.000.000 ampere -&gt; EA</li>
+<li>408.113.000.000.000.000 Volt -&gt; KV</li>
+<li>964.408.000.000.000.000 byte -&gt; Tb</li>
+<li>927.964.000.000.000.000 byte -&gt; Gb</li>
+<li>835.927.000.000.000.000 hertz -&gt; THz</li>
+<li>488.835.000.000.000.000 grammi -&gt; Kg</li>
+<li>578.488.000.000.000.000 metri -&gt; Km</li>
+<li>524.578.000.000.000.000 ohm -&gt; Gohm</li>
+<li>827.524.000.000.000.000 ampere -&gt; TA</li>
+<li>961.987.000.000.000.000 Volt -&gt; GV</li>
+<li>623.456.000.000.000.000 byte -&gt; Gb</li>
+<li>704.123.000.000.000.000 hertz -&gt; EHz</li>
+<li>602.835.000.000.000.000 ohm -&gt; Gohm</li>
+<li>075.488.000.000.000.000 ampere -&gt; TA</li>
+<li>885.578.000.000.000.000 Volt -&gt; GV</li>
+<li>498.524.000.000.000.000 byte -&gt; Gb</li>
+<li>461.827.000.000.000.000 hertz -&gt; EHz</li>
+<li>876.961.000.000.000.000 grammi -&gt; Gg</li>
+<li>179.623.000.000.000.000 metri -&gt; Mm</li>
+<li>272.704.000.000.000.000 ohm -&gt; Kohm</li>
+<li>166.789.000.000.000.000 ampere -&gt; KA</li>
+<li>883.287.000.000.000.000 Volt -&gt; GV</li>
+<li>430.445.000.000.000.000 byte -&gt; Eb</li>
+<li>722.262.000.000.000.000 hertz -&gt; THz</li>
+<li>532.267.000.000.000.000 grammi -&gt; Tg</li>
+</ul>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/codificaunicode_exe_sistemanumericoegizio/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">HTML Lez. 07.5 - Sistema Numerico Egizio</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/html/accessibilita/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">HTML Lez. 08 - Accessibilità</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 07.4 - Sistemi numerici - Lab. informatica</title>
+
+    <meta name="description" content="HTML Lez. 07.4 - Sistemi numerici">
+        <meta property="og:title" content="HTML Lez. 07.4 - Sistemi numerici" />
+<meta property="og:description" content="HTML Lez. 07.4 - Sistemi numerici" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sisteminumerici/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-11-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-03T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 07.4 - Sistemi numerici"/>
+<meta name="twitter:description" content="HTML Lez. 07.4 - Sistemi numerici"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-11-03T00:00:00Z">03-11-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 3 minuti 
+        ( 628 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="sistemi-numerici">Sistemi numerici</h1>
+<h2 id="latin-numbers">Latin numbers</h2>
+<p>I codici del sistema numerico romano nel sistema di codifica Unicode sono i seguenti:</p>
+<ul>
+<li>codice Unicode: U+004D, rappresentazione: M, valore: 1000;</li>
+<li>codice Unicode: U+0044, rappresentazione: D, valore: 500;</li>
+<li>codice Unicode: U+0043, rappresentazione: C, valore: 100;</li>
+<li>codice Unicode: U+006C, rappresentazione: L, valore: 50;</li>
+<li>codice Unicode: U+0058, rappresentazione: X, valore: 10;</li>
+<li>codice Unicode: U+0056, rappresentazione: V, valore: 5;</li>
+<li>codice Unicode: U+0049, rappresentazione: I, valore: 1;</li>
+</ul>
+<h3 id="bengali-digits">Bengali digits</h3>
+<p>I codici del sistema numerico Bengali nel sistema di codifica Unicode sono i seguenti:</p>
+<ul>
+<li>০: U+09E6; rappresentazione: ০, Valore: zero;</li>
+<li>১: U+09E7; rappresentazione: ১, Valore: uno;</li>
+<li>২: U+09E8; rappresentazione: ২, Valore: due;</li>
+<li>৩: U+09E9; rappresentazione: ৩, Valore: tre;</li>
+<li>৪: U+09EA; rappresentazione: ৪, Valore: quattro;</li>
+<li>৫: U+09EB; rappresentazione: ৫, Valore: cinque;</li>
+<li>৬: U+09EC; rappresentazione: ৬, Valore: sei;</li>
+<li>৭: U+09ED; rappresentazione: ৭, Valore: sette;</li>
+<li>৮: U+09EE; rappresentazione: ৮, Valore: otto;</li>
+<li>৯: U+09EF; rappresentazione: ৯, Valore: nove;</li>
+</ul>
+<h3 id="sistema-numerico-devanagari">Sistema numerico Devanagari</h3>
+<p>La lista dei codici Unicode del sistema numerico Devanagari è la seguente:</p>
+<ul>
+<li>०: U+0966; rappresentazione: ०, Valore: zero;</li>
+<li>१: U+0967; rappresentazione: १, Valore: uno;</li>
+<li>२: U+0968; rappresentazione: २, Valore: due;</li>
+<li>३: U+0969; rappresentazione: ३, Valore: tre;</li>
+<li>४: U+096A; rappresentazione: ४, Valore: quattro;</li>
+<li>५: U+096B; rappresentazione: ५, Valore: cinque;</li>
+<li>६: U+096C; rappresentazione: ६, Valore: sei;</li>
+<li>७: U+096D; rappresentazione: ७, Valore: sette;</li>
+<li>८: U+096E; rappresentazione: ८, Valore: otto;</li>
+<li>९: U+096F; rappresentazione: ९, Valore: nove;</li>
+</ul>
+<h3 id="thai-numbers">Thai numbers</h3>
+<p>La lista dei codici Unicode del sistema numerico Thai numbers:</p>
+<ul>
+<li>๐: U+0E50; rappresentazione: ๐, Valore: zero;</li>
+<li>๑: U+0E51; rappresentazione: ๑, Valore: uno;</li>
+<li>๒: U+0E52; rappresentazione: ๒, Valore: due;</li>
+<li>๓: U+0E53; rappresentazione: ๓, Valore: tre;</li>
+<li>๔: U+0E54; rappresentazione: ๔, Valore: quattro;</li>
+<li>๕: U+0E55; rappresentazione: ๕, Valore: cinque;</li>
+<li>๖: U+0E56; rappresentazione: ๖, Valore: sei;</li>
+<li>๗: U+0E57; rappresentazione: ๗, Valore: sette;</li>
+<li>๘: U+0E58; rappresentazione: ๘, Valore: otto;</li>
+<li>๙: U+0E59; rappresentazione: ๙, Valore: nove;</li>
+</ul>
+<h3 id="tibetan-numbers">Tibetan numbers</h3>
+<p>I codici del sistema numerico Tibetano nella tabella Unicode sono:</p>
+<ul>
+<li>༠: U+0F20; rappresentazione: ༠, Valore: zero;</li>
+<li>༡: U+0F21; rappresentazione: ༡, Valore: uno;</li>
+<li>༢: U+0F22; rappresentazione: ༢, Valore: due;</li>
+<li>༣: U+0F23; rappresentazione: ༣, Valore: tre;</li>
+<li>༤: U+0F24; rappresentazione: ༤, Valore: quattro;</li>
+<li>༥: U+0F25; rappresentazione: ༥, Valore: cinque;</li>
+<li>༦: U+0F26; rappresentazione: ༦, Valore: sei;</li>
+<li>༧: U+0F27; rappresentazione: ༧, Valore: sette;</li>
+<li>༨: U+0F28; rappresentazione: ༨, Valore: otto;</li>
+<li>༩: U+0F29; rappresentazione: ༩, Valore: nove;</li>
+<li>༪: U+0F2A; rappresentazione: ༪, Valore: Half One;</li>
+<li>༫: U+0F2B; rappresentazione: ༫, Valore: Half Two;</li>
+<li>༬: U+0F2C; rappresentazione: ༬, Valore: Half Three;</li>
+<li>༭: U+0F2D; rappresentazione: ༭, Valore: Half Four;</li>
+<li>༮: U+0F2E; rappresentazione: ༮, Valore: Half Five;</li>
+<li>༯: U+0F2F; rappresentazione: ༯, Valore: Half Six;</li>
+<li>༰: U+0F30; rappresentazione: ༰, Valore: Half Seven;</li>
+<li>༱: U+0F31; rappresentazione: ༱, Valore: Half Eight;</li>
+<li>༲: U+0F32; rappresentazione: ༲, Valore: Half Nine;</li>
+<li>༳: U+0F33; rappresentazione: ༳, Valore: Half Zero One;</li>
+</ul>
+<h3 id="myanmar-numbers">Myanmar numbers</h3>
+<p>I codici del sistema numerico Myanmar numbers dello standard Unicode sono:</p>
+<ul>
+<li>၀: U+1040; rappresentazione: ၀, Valore: zero;</li>
+<li>၁: U+1041; rappresentazione: ၁, Valore: uno;</li>
+<li>၂: U+1042; rappresentazione: ၂, Valore: due;</li>
+<li>၃: U+1043; rappresentazione: ၃, Valore: tre;</li>
+<li>၄: U+1044; rappresentazione: ၄, Valore: quattro;</li>
+<li>၅: U+1045; rappresentazione: ၅, Valore: cinque;</li>
+<li>၆: U+1046; rappresentazione: ၆, Valore: sei;</li>
+<li>၇: U+1047; rappresentazione: ၇, Valore: sette;</li>
+<li>၈: U+1048; rappresentazione: ၈, Valore: otto;</li>
+<li>၉: U+1049; rappresentazione: ၉, Valore: nove;</li>
+</ul>
+<h3 id="numeri-maya">Numeri Maya</h3>
+<ul>
+<li>𐇐: U+101D0; rappresentazione: 𐇐, Valore: zero;</li>
+<li>𐇑: U+101D1; rappresentazione: 𐇑, Valore: uno;</li>
+<li>𐇒: U+101D2; rappresentazione: 𐇒, Valore: due;</li>
+<li>𐇓: U+101D3; rappresentazione: 𐇓, Valore: tre;</li>
+<li>𐇔: U+101D4; rappresentazione: 𐇔, Valore: quattro;</li>
+<li>𐇕: U+101D5; rappresentazione: 𐇕, Valore: cinque;</li>
+<li>𐇖: U+101D6; rappresentazione: 𐇖, Valore: sei;</li>
+<li>𐇗: U+101D7; rappresentazione: 𐇗, Valore: sette;</li>
+<li>𐇘: U+101D8; rappresentazione: 𐇘, Valore: otto;</li>
+<li>𐇙: U+101D9; rappresentazione: 𐇙, Valore: nove;</li>
+<li>𐇚: U+101DA; rappresentazione: 𐇚, Valore: ten;</li>
+<li>𐇛: U+101DB; rappresentazione: 𐇛, Valore: eleven;</li>
+<li>𐇜: U+101DC; rappresentazione: 𐇜, Valore: twelve;</li>
+<li>𐇝: U+101DD; rappresentazione: 𐇝, Valore: thirteen;</li>
+<li>𐇞: U+101DE; rappresentazione: 𐇞, Valore: fourteen;</li>
+<li>𐇟: U+101DF; rappresentazione: 𐇟, Valore: fifteen;</li>
+<li>𐇠: U+101E0; rappresentazione: 𐇠, Valore: sixteen;</li>
+<li>𐇡: U+101E1; rappresentazione: 𐇡, Valore: seventeen;</li>
+<li>𐇢: U+101E2; rappresentazione: 𐇢, Valore: eighteen;</li>
+<li>𐇣: U+101E3; rappresentazione: 𐇣, Valore: nineteen;</li>
+</ul>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/codificaunicode_exe_alfabetoucraino/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">HTML Lez. 07.3 - Alfabeto Ucraino</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/html/codificaunicode_exe_sistemanumericoegizio/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">HTML Lez. 07.5 - Sistema Numerico Egizio</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

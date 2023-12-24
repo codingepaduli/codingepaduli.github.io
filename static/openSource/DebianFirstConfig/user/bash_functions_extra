@@ -177,6 +177,8 @@ flatpakFilterUpdatableApps() {
 export -f flatpakFilterUpdatableApps
 
 # Update only the apps bounded to the specified runtime
+# If an App are stuck on a previous runtime (x86_64/22.08), it doensn't update it
+
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop() {
     app=$(flatpakFilterUpdatableApps 'org.freedesktop.Platform/x86_64/23.08')
@@ -184,7 +186,6 @@ flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop() {
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 
-# Update only the apps bounded to the specified runtime
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeGnome
 flatpakUpdateAppBasedOnCurrentRuntimeGnome() {
     app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/45')
@@ -192,7 +193,6 @@ flatpakUpdateAppBasedOnCurrentRuntimeGnome() {
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeGnome
 
-# Update only the apps bounded to the specified runtime
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeKde
 flatpakUpdateAppBasedOnCurrentRuntimeKde() {
     app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/5.15-23.08')
@@ -219,3 +219,4 @@ alias help-convert-video="echo 'ffmpeg -i inputFile outputFile' "
 #   - 4 (default) should be close to perceptual transparency
 #   - 6 usually produces an "acceptable" quality.
 alias help-convert-m4a-to-mp3="echo 'ffmpeg -i input.m4a -c:v copy -c:a libmp3lame -q:a 4 output.mp3'"
+

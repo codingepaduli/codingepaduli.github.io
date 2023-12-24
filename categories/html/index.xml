@@ -6,7 +6,7 @@
     <description>Recent content in html on Lab. informatica</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML Lez. 08 - Accessibilità</title>
       <link>http://codingepaduli.github.io/coding/web/html/accessibilita/</link>
@@ -17,48 +17,57 @@
     </item>
     
     <item>
-      <title>HTML Lez. 07.4 - Sistemi numerici</title>
-      <link>http://codingepaduli.github.io/coding/web/html/sisteminumerici/</link>
+      <title>HTML Lez. 07.6 - Conversioni numeriche</title>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_conversioninumeriche/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/html/sisteminumerici/</guid>
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_conversioninumeriche/</guid>
+      <description>HTML Lez. 07.6 - Conversioni numeriche</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 07.5 - Sistema Numerico Egizio</title>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sistemanumericoegizio/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sistemanumericoegizio/</guid>
+      <description>HTML Lez. 07.5 - Sistema Numerico Egizio</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 07.4 - Sistemi numerici</title>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sisteminumerici/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sisteminumerici/</guid>
       <description>HTML Lez. 07.4 - Sistemi numerici</description>
     </item>
     
     <item>
       <title>HTML Lez. 07.3 - Alfabeto Ucraino</title>
-      <link>http://codingepaduli.github.io/coding/web/html/alfabetoucraino/</link>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetoucraino/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/html/alfabetoucraino/</guid>
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetoucraino/</guid>
       <description>HTML Lez. 07.3 - Alfabeto Ucraino</description>
     </item>
     
     <item>
       <title>HTML Lez. 07.2 - Alfabeto Russo</title>
-      <link>http://codingepaduli.github.io/coding/web/html/alfabetorusso/</link>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetorusso/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/html/alfabetorusso/</guid>
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetorusso/</guid>
       <description>HTML Lez. 07.2 - Alfabeto Russo</description>
     </item>
     
     <item>
       <title>HTML Lez. 07.1 - Alfabeto Greco</title>
-      <link>http://codingepaduli.github.io/coding/web/html/alfabetogreco/</link>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://codingepaduli.github.io/coding/web/html/alfabetogreco/</guid>
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</guid>
       <description>HTML Lez. 07.1 - Alfabeto Greco</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 07.1 - Esercizi per l&#39;uso di codici Unicode, HTML entities ed emoji nelle pagine web</title>
-      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe/</link>
-      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe/</guid>
-      <description>HTML Lez. 07.1 - Esercizi per l&amp;rsquo;uso di codici Unicode, HTML entities ed emoji nelle pagine web</description>
     </item>
     
     <item>
@@ -86,15 +95,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/html/metadati/</guid>
       <description>HTML Lez. 05 - Struttura e layout di una pagina web</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 04 - Multimedialità e interattività</title>
-      <link>http://codingepaduli.github.io/coding/web/html/immagini/</link>
-      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/immagini/</guid>
-      <description>HTML Lez. 04 - Etichette per audio, video, immagini e collegamenti a risorse esterne</description>
     </item>
     
     <item>

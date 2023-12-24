@@ -227,22 +227,93 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 12 minuti 
-        ( 2554 parole)
+        Tempo di lettura 16 minuti 
+        ( 3353 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="struttura-e-layout">Struttura e layout</h1>
-<p>Un documento HTML generalmente contiene informazioni relative alla pagina web, come l&rsquo;autore della pagina, la descrizione dei contenuti o un&rsquo;immagine di anteprima ed ha un proprio layout, ovvero una propria impaginazione e struttura grafica che serve ad indicare la posizione e la dimensione degli elementi sugli schermi di computer, smartphone e tablet.</p>
-<p>Le informazioni aggiuntive sono dette <strong>metadati</strong> e, sebbene quasi tutte facoltative, sono utilizzatissime da social network e motori di ricerca per catalogare la pagina e mostrarne un&rsquo;anteprima.</p>
-<p>Il layout grafico è gestito attraverso i <strong>CSS</strong>, ovvero i fogli di stile grafico che definiscono colore, dimensione e posizione degli elementi della pagina web. Il layout si poggia su una struttura basilare che indica ad esempio l&rsquo;area in cui è situato il menu laterale, l&rsquo;area destinata al piè di pagina e l&rsquo;area dei contenuti pubblicitari. Ognuno di questi elementi della struttura basilare è descritto attraverso un&rsquo;apposita etichetta del linguaggio HTML.</p>
-<p>A seconda del layout scelto e della risoluzione dello schermo del dispositivo, un&rsquo;immagine si può adattare meglio di un&rsquo;altra, ad esempio un&rsquo;immagine verticale in risoluzione sufficiente si adatta meglio a smartphone e tablet, mentre un immagine orizzontale ad altissima risoluzione si adatta meglio a TV e monitor PC. A seconda del layout è necessario scegliere appropriatamente le immagini che meglio si adattano e con la risoluzione necessaria.</p>
+      <h1 id="struttura-layout-ed-elementi-multimediali">Struttura, layout ed elementi multimediali</h1>
+<p>Un documento HTML generalmente contiene <strong>informazioni</strong> relative alla pagina web, come l&rsquo;autore della pagina, la descrizione dei contenuti o un&rsquo;immagine di anteprima ed ha un proprio <strong>layout</strong>, ovvero una propria impaginazione e struttura grafica che serve ad indicare la posizione e la dimensione degli elementi sugli schermi di computer, smartphone e tablet.</p>
+<p>Le informazioni aggiuntive sono dette &ldquo;metadati&rdquo; e, sebbene quasi tutte facoltative, sono utilizzatissime da social network e motori di ricerca per catalogare la pagina e mostrarne un&rsquo;anteprima.</p>
+<p>Il layout grafico è gestito attraverso i &ldquo;CSS&rdquo;, ovvero i fogli di stile grafico che definiscono colore, dimensione e posizione degli elementi della pagina web. Il layout si poggia su una struttura basilare che indica ad esempio l&rsquo;area in cui è situato il menu laterale, l&rsquo;area destinata al piè di pagina e l&rsquo;area dei contenuti pubblicitari. Ognuno di questi elementi della struttura basilare è descritto attraverso un&rsquo;apposita etichetta del linguaggio HTML.</p>
+<p>A seconda del layout scelto e della risoluzione dello schermo del dispositivo è possibile selezionare gli <strong>elementi multimediali</strong> (immagini o video) che meglio si adattano, ad esempio un&rsquo;immagine verticale in risoluzione media si adatta meglio a smartphone e tablet, mentre un immagine orizzontale ad altissima risoluzione si adatta meglio a TV e monitor PC. I dispositivi più recenti possono poi sfruttare le ultime tecnologie, ad esempio video ad altissima risoluzione in 8K.</p>
+<h2 id="struttura-basilare">Struttura basilare</h2>
+<p>La struttura basilare di una pagina web è definita dalle seguenti etichette HTML:</p>
+<ul>
+<li>L&rsquo;etichetta <code>header</code> rappresenta un contenuto introduttivo o un gruppo di contenuti introduttivi in un documento o in una sezione. Solitamente contiene elementi come il logo del sito, il titolo della pagina o la navigazione principale;</li>
+<li>L&rsquo;etichetta <code>nav</code> definisce una sezione di navigazione all&rsquo;interno di un documento HTML. Solitamente contiene link a diverse pagine o sezioni del sito web.</li>
+<li>L&rsquo;etichetta <code>main</code> rappresenta il contenuto principale di un documento HTML. È unico all&rsquo;interno del documento e dovrebbe contenere solo il contenuto direttamente correlato a quella pagina specifica.</li>
+<li>L&rsquo;etichetta <code>article</code> rappresenta un contenuto autonomo e indipendente all&rsquo;interno di un documento HTML. Può essere utilizzato per articoli di notizie, post di blog, commenti o altre sezioni di contenuto simili.</li>
+<li>L&rsquo;etichetta <code>section</code> definisce una sezione generica di contenuto in un documento HTML. È utilizzata per raggruppare insieme contenuti correlati. Può essere utilizzata per creare una struttura gerarchica nel documento.</li>
+<li>L&rsquo;etichetta <code>aside</code> rappresenta un contenuto non strettamente attinente, separato dal contenuto principale del documento. Solitamente contiene informazioni correlate, come barre laterali, note o contenuti pubblicitari.</li>
+<li>L&rsquo;etichetta <code>footer</code> rappresenta una sezione di contenuto di un documento HTML che contiene informazioni di chiusura, come i dettagli di contatto, i link ai social media o le informazioni di copyright. È spesso posizionata alla fine della pagina web.</li>
+</ul>
+<p>Un esempio di struttura di una pagina web che utilizza queste etichette è la seguente:</p>
+<p><img src="/static/coding/web/html/webPageStructure.png" alt="Esempio di struttura di una pagina web" title="Esempio di struttura di una pagina web"></p>
+<p>La struttura mostrata nell&rsquo;esempio precedente viene realizzata attraverso il codice HTML seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;html&gt;
+</span></span><span style="display:flex;"><span>  &lt;head&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- metadati obbligatori, vanno nelle prime posizioni --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;meta charset=<span style="color:#009c00">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;viewport&#34;</span> content=<span style="color:#009c00">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;title&gt;Esempio di struttura&lt;/title&gt;
+</span></span><span style="display:flex;"><span>  &lt;/head&gt;
+</span></span><span style="display:flex;"><span>  &lt;body&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- contenuto introduttivo --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;header&gt;
+</span></span><span style="display:flex;"><span>      &lt;h1&gt;Nome del sito web&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>    &lt;/header&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- sezione di navigazione --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;nav&gt;
+</span></span><span style="display:flex;"><span>      &lt;ul&gt;
+</span></span><span style="display:flex;"><span>        &lt;li&gt;&lt;a href=<span style="color:#009c00">&#34;#&#34;</span>&gt;Home&lt;/a&gt;&lt;/li&gt;
+</span></span><span style="display:flex;"><span>        &lt;li&gt;&lt;a href=<span style="color:#009c00">&#34;#&#34;</span>&gt;Articoli&lt;/a&gt;&lt;/li&gt;
+</span></span><span style="display:flex;"><span>        &lt;li&gt;&lt;a href=<span style="color:#009c00">&#34;#&#34;</span>&gt;Contatti&lt;/a&gt;&lt;/li&gt;
+</span></span><span style="display:flex;"><span>      &lt;/ul&gt;
+</span></span><span style="display:flex;"><span>    &lt;/nav&gt;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- contenuto principale --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;main&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>      <span style="color:#f00;font-style:italic">&lt;!-- sezione --&gt;</span>
+</span></span><span style="display:flex;"><span>      &lt;section&gt;
+</span></span><span style="display:flex;"><span>        &lt;h2&gt;Sezione 1&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>        &lt;p&gt;Contenuto della sezione 1...&lt;/p&gt;
+</span></span><span style="display:flex;"><span>      &lt;/section&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f00;font-style:italic">&lt;!-- articolo --&gt;</span>
+</span></span><span style="display:flex;"><span>      &lt;article&gt;
+</span></span><span style="display:flex;"><span>        &lt;h2&gt;Titolo dell&#39;articolo&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>        &lt;p&gt;Contenuto dell&#39;articolo...&lt;/p&gt;
+</span></span><span style="display:flex;"><span>      &lt;/article&gt;
+</span></span><span style="display:flex;"><span>    &lt;/main&gt;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- informazioni separate --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;aside&gt;
+</span></span><span style="display:flex;"><span>      &lt;h3&gt;Informazioni correlate&lt;/h3&gt;
+</span></span><span style="display:flex;"><span>      &lt;p&gt;contenuto non strettamente attinente&lt;/p&gt;
+</span></span><span style="display:flex;"><span>    &lt;/aside&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;footer&gt;
+</span></span><span style="display:flex;"><span>      &lt;p&gt;informazioni di chiusura&lt;/p&gt;
+</span></span><span style="display:flex;"><span>    &lt;/footer&gt;
+</span></span><span style="display:flex;"><span>  &lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div><p>Sia lo sviluppatore, sia il grafico devono conoscere queste regole e rispettare la struttura basilare della pagina web utilizzando le etichette in maniera coerente al contenuto.</p>
 <h2 id="metadati">Metadati</h2>
 <p>I <strong>metadati</strong> sono informazioni relative alla pagina web, come l&rsquo;autore, l&rsquo;icona, la descrizione e l&rsquo;immagine di anteprima. Questi <a href="https://it.wikipedia.org/wiki/Metadato" title="Link a Wikipedia sui metadati">metadati</a> non sono mostrati all&rsquo;utente, ma sono utilizzati dai motori di ricerca e dai social network per presentare e catalogare la pagina web.</p>
 <p>Ad esempio, quando si condivide agli amici un articolo sui social, questi visualizzano, oltre al collegamento, sia il titolo dell&rsquo;articolo, sia la descrizione, sia un&rsquo;immagine o un video di anteprima. Queste informazioni di anteprima i social le recuperano dai metadati allegati alla pagina web.</p>
 <p>Per un riferimento completo ai metadati si rimanda al link <a href="https://htmlhead.dev/" title="Link al sito di riferimento per i metadati">https://htmlhead.dev/</a> ed alle specifiche del linguaggio HTML.</p>
 <p>Tutti i metadati devono essere contenuti nell&rsquo;etichetta <code>head</code> della pagina web, ad eccezione dell&rsquo;icona principale del sito web: non è descritta da nessun etichetta, deve essere semplicemente salvata nel file <code>favicon.ico</code> nella cartella principale del sito per poter essere recuperata.</p>
+<p>Una volta inseriti tutti i metadata nelle pagine web, è possibile visualizzare le anteprime di condivisione sui social utilizzando gli strumenti indicati di seguito:</p>
+<ul>
+<li><a href="https://developers.facebook.com/tools/debug">Facebook Sharing Debugger</a>;</li>
+<li><a href="https://socialsharepreview.com/">Social Media Preview</a>;</li>
+<li><a href="https://metatags.io/">Meta Tags Toolkit</a>.</li>
+</ul>
 <h3 id="metadati-obbligatori">Metadati obbligatori</h3>
 <p>I seguenti metadati sono obbligatori e devono essere inseriti rispettivamente in prima, seconda e terza posizione tra i metadati della pagina web:</p>
 <ol>
@@ -335,72 +406,10 @@
 </span></span><span style="display:flex;"><span>    { <span style="color:#009c00">&#34;src&#34;</span>: <span style="color:#009c00">&#34;/512.png&#34;</span>, <span style="color:#009c00">&#34;type&#34;</span>: <span style="color:#009c00">&#34;image/png&#34;</span>, <span style="color:#009c00">&#34;sizes&#34;</span>: <span style="color:#009c00">&#34;512x512&#34;</span> }
 </span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="struttura-basilare">Struttura basilare</h2>
-<p>La struttura basilare di una pagina web è definita dalle seguenti etichette HTML:</p>
-<ul>
-<li>L&rsquo;etichetta <code>header</code> rappresenta un contenuto introduttivo o un gruppo di contenuti introduttivi in un documento o in una sezione. Solitamente contiene elementi come il logo del sito, il titolo della pagina o la navigazione principale;</li>
-<li>L&rsquo;etichetta <code>nav</code> definisce una sezione di navigazione all&rsquo;interno di un documento HTML. Solitamente contiene link a diverse pagine o sezioni del sito web.</li>
-<li>L&rsquo;etichetta <code>main</code> rappresenta il contenuto principale di un documento HTML. È unico all&rsquo;interno del documento e dovrebbe contenere solo il contenuto direttamente correlato a quella pagina specifica.</li>
-<li>L&rsquo;etichetta <code>article</code> rappresenta un contenuto autonomo e indipendente all&rsquo;interno di un documento HTML. Può essere utilizzato per articoli di notizie, post di blog, commenti o altre sezioni di contenuto simili.</li>
-<li>L&rsquo;etichetta <code>section</code> definisce una sezione generica di contenuto in un documento HTML. È utilizzata per raggruppare insieme contenuti correlati. Può essere utilizzata per creare una struttura gerarchica nel documento.</li>
-<li>L&rsquo;etichetta <code>aside</code> rappresenta un contenuto non strettamente attinente, separato dal contenuto principale del documento. Solitamente contiene informazioni correlate, come barre laterali, note o contenuti pubblicitari.</li>
-<li>L&rsquo;etichetta <code>footer</code> rappresenta una sezione di contenuto di un documento HTML che contiene informazioni di chiusura, come i dettagli di contatto, i link ai social media o le informazioni di copyright. È spesso posizionata alla fine della pagina web.</li>
-</ul>
-<p>Un esempio di struttura di una pagina web che utilizza queste etichette è la seguente:</p>
-<p><img src="/static/coding/web/html/webPageStructure.png" alt="Esempio di struttura di una pagina web" title="Esempio di struttura di una pagina web"></p>
-<p>La struttura mostrata nell&rsquo;esempio precedente viene realizzata attraverso il codice HTML seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;html&gt;
-</span></span><span style="display:flex;"><span>  &lt;head&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- metadati obbligatori, vanno nelle prime posizioni --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;meta charset=<span style="color:#009c00">&#34;UTF-8&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;viewport&#34;</span> content=<span style="color:#009c00">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;title&gt;Esempio di struttura&lt;/title&gt;
-</span></span><span style="display:flex;"><span>  &lt;/head&gt;
-</span></span><span style="display:flex;"><span>  &lt;body&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- contenuto introduttivo --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;header&gt;
-</span></span><span style="display:flex;"><span>      &lt;h1&gt;Nome del sito web&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>    &lt;/header&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- sezione di navigazione --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;nav&gt;
-</span></span><span style="display:flex;"><span>      &lt;ul&gt;
-</span></span><span style="display:flex;"><span>        &lt;li&gt;&lt;a href=<span style="color:#009c00">&#34;#&#34;</span>&gt;Home&lt;/a&gt;&lt;/li&gt;
-</span></span><span style="display:flex;"><span>        &lt;li&gt;&lt;a href=<span style="color:#009c00">&#34;#&#34;</span>&gt;Articoli&lt;/a&gt;&lt;/li&gt;
-</span></span><span style="display:flex;"><span>        &lt;li&gt;&lt;a href=<span style="color:#009c00">&#34;#&#34;</span>&gt;Contatti&lt;/a&gt;&lt;/li&gt;
-</span></span><span style="display:flex;"><span>      &lt;/ul&gt;
-</span></span><span style="display:flex;"><span>    &lt;/nav&gt;
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- contenuto principale --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;main&gt;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>      <span style="color:#f00;font-style:italic">&lt;!-- sezione --&gt;</span>
-</span></span><span style="display:flex;"><span>      &lt;section&gt;
-</span></span><span style="display:flex;"><span>        &lt;h2&gt;Sezione 1&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>        &lt;p&gt;Contenuto della sezione 1...&lt;/p&gt;
-</span></span><span style="display:flex;"><span>      &lt;/section&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f00;font-style:italic">&lt;!-- articolo --&gt;</span>
-</span></span><span style="display:flex;"><span>      &lt;article&gt;
-</span></span><span style="display:flex;"><span>        &lt;h2&gt;Titolo dell&#39;articolo&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>        &lt;p&gt;Contenuto dell&#39;articolo...&lt;/p&gt;
-</span></span><span style="display:flex;"><span>      &lt;/article&gt;
-</span></span><span style="display:flex;"><span>    &lt;/main&gt;
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- informazioni separate --&gt;</span>
-</span></span><span style="display:flex;"><span>    &lt;aside&gt;
-</span></span><span style="display:flex;"><span>      &lt;h3&gt;Informazioni correlate&lt;/h3&gt;
-</span></span><span style="display:flex;"><span>      &lt;p&gt;contenuto non strettamente attinente&lt;/p&gt;
-</span></span><span style="display:flex;"><span>    &lt;/aside&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    &lt;footer&gt;
-</span></span><span style="display:flex;"><span>      &lt;p&gt;informazioni di chiusura&lt;/p&gt;
-</span></span><span style="display:flex;"><span>    &lt;/footer&gt;
-</span></span><span style="display:flex;"><span>  &lt;/body&gt;
-</span></span><span style="display:flex;"><span>&lt;/html&gt;
-</span></span></code></pre></div><p>Sia lo sviluppatore, sia il grafico devono conoscere queste regole e rispettare la struttura basilare della pagina web utilizzando le etichette in maniera coerente al contenuto.</p>
-<h2 id="immagini">Immagini</h2>
+</span></span></code></pre></div><h2 id="elementi-multimediali">Elementi multimediali</h2>
+<p>La multimedialità è una forma di comunicazione caratterizzata dalla compresenza e interazione di più linguaggi (testi scritti, immagini, suoni, animazioni) in uno stesso supporto o contesto informativo.</p>
+<p>Il termine multimedialità si sta progressivamente sovrapponendo a quello di interattività, dato che i contenuti multimediali, che una volta erano fruibili su TV, radio o telefono oggi sono fruibili su dispositivi sempre più interattivi, dal computer al palmare, al telefono, alla LIM (lavagna interattiva multimediale).</p>
+<h3 id="immagini">Immagini</h3>
 <p>Smartphone e dispositivi IoT spesso sono dotati di connessioni lente e a
 pagamento, come il 3G, e di schermi piccoli con risoluzioni ridotte, per
 cui su questi dispositivi è consigliato mostrare immagini di qualità
@@ -482,21 +491,115 @@ il browser di default visualizza l&rsquo;immagine descritta nell&rsquo;attributo
 </span></span></code></pre></div><p>che genera l&rsquo;immagine:</p>
 <!-- markdown-link-check-disable-next-line -->
 <p><img src="/static/coding/web/html/program_CC0.png" alt="esempio etichetta immagine" title="immagine generata dal codice HTML"></p>
-<h3 id="figure">Figure</h3>
-<p>Quando le immagini da mostrare sono le stesse in risoluzione differente, si utilizza l&rsquo;etichetta <code>img</code> indicando i file contenenti l&rsquo;immagine alle differenti risoluzioni.</p>
-<p>Quando a seconda del dispositivo si vuole scegliere un immagine sostanzialmente differente rispetto ad un&rsquo;altra, si utilizza l&rsquo;etichetta <code>figure</code>.</p>
-<p>Questa etichetta prevede al suo interno siano presenti più etichette <code>img</code>, ognuna per un&rsquo;immagine da scegliere su una categoria di dispositivi, sia l&rsquo;etichetta <code>figcaption</code> che consente di aggiungere una didascalia o una descrizione testuale all&rsquo;immagine. Questo la rende più adatta a legare l&rsquo;immagine con la sua descrizione associata.</p>
+<h3 id="picture-e-source">Picture e source</h3>
+<p>Quando si devono visualizzare versioni alternative di una stessa immagine per dispositivi o schermi differenti, si utilizza l&rsquo;etichetta <code>picture</code> che sceglie tra differenti elementi <code>source</code>, se nessuno è adeguato la scelta di default (di fallback) ricade sull&rsquo;elemento <code>img</code>.</p>
+<p>Ad esempio, se i tipi di immagine &ldquo;AVIF&rdquo; e &ldquo;WEBP&rdquo; non sono supportate dai browser, si ricade su quella di default &ldquo;JPG&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;picture&gt;
+</span></span><span style="display:flex;"><span>  &lt;source srcset=<span style="color:#009c00">&#34;photo.avif&#34;</span> type=<span style="color:#009c00">&#34;image/avif&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;source srcset=<span style="color:#009c00">&#34;photo.webp&#34;</span> type=<span style="color:#009c00">&#34;image/webp&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;img src=<span style="color:#009c00">&#34;photo.jpg&#34;</span> alt=<span style="color:#009c00">&#34;photo&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;/picture&gt;
+</span></span></code></pre></div><p>Un secondo esempio è la scelta dell&rsquo;immagine effettuata con delle media query, utilizzando l&rsquo;attributo  <code>media</code>. Ad esempio, se l&rsquo;orientamento dello schermo è &ldquo;orizzontale&rdquo; si usa un immagine, in alternativa si ricade su quella di default &ldquo;JPG&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;picture&gt;
+</span></span><span style="display:flex;"><span>  &lt;source srcset=<span style="color:#009c00">&#34;photo-240-200.jpg&#34;</span> media=<span style="color:#009c00">&#34;(orientation: portrait)&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;img src=<span style="color:#009c00">&#34;photo-200-240.jpg&#34;</span> alt=<span style="color:#009c00">&#34;photo&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;/picture&gt;
+</span></span></code></pre></div><p>Se la scelta dell&rsquo;immagine deve essere effettuata in base alla densità del display si utilizza l&rsquo;attributo <code>srcset</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;picture&gt;
+</span></span><span style="display:flex;"><span>  &lt;source srcset=<span style="color:#009c00">&#34;photo.avif 1x, photo2x.avif 2x, photo3x.avif 3x&#34;</span> type=<span style="color:#009c00">&#34;image/avif&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;source srcset=<span style="color:#009c00">&#34;photo.webp 1x, photo2x.webp 2x, photo3x.webp 3x&#34;</span> type=<span style="color:#009c00">&#34;image/webp&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;img src=<span style="color:#009c00">&#34;photo.jpg&#34;</span> alt=<span style="color:#009c00">&#34;photo&#34;</span> height=<span style="color:#009c00">&#34;320&#34;</span> width=<span style="color:#009c00">&#34;320&#34;</span>  /&gt;
+</span></span><span style="display:flex;"><span>&lt;/picture&gt;
+</span></span></code></pre></div><p>Se la scelta dell&rsquo;immagine deve essere effettuata in base alla dimensione dell&rsquo;immagine che si adatta meglio alla densità del display, si utilizza l&rsquo;attributo <code>sizes</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;picture&gt;
+</span></span><span style="display:flex;"><span>  &lt;source sizes=<span style="color:#009c00">&#34;photo.avif 50vw, photo2x.avif 70vw, photo3x.avif 100vw&#34;</span> type=<span style="color:#009c00">&#34;image/avif&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;source srcset=<span style="color:#009c00">&#34;photo.webp 50vw, photo2x.webp 70vw, photo3x.webp 100vw&#34;</span> type=<span style="color:#009c00">&#34;image/webp&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;img src=<span style="color:#009c00">&#34;photo.jpg&#34;</span> alt=<span style="color:#009c00">&#34;photo&#34;</span> height=<span style="color:#009c00">&#34;320&#34;</span> width=<span style="color:#009c00">&#34;320&#34;</span>  /&gt;
+</span></span><span style="display:flex;"><span>&lt;/picture&gt;
+</span></span></code></pre></div><p>Si possono anche combinare le scelte, ad esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;picture&gt;
+</span></span><span style="display:flex;"><span>  &lt;source media=<span style="color:#009c00">&#34;(min-width: 1920px)&#34;</span> srcset=<span style="color:#009c00">&#34;image-big.png&#34;</span> type=<span style="color:#009c00">&#34;image/avif&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;source media=<span style="color:#009c00">&#34;(min-width: 1200px)&#34;</span> srcset=<span style="color:#009c00">&#34;image-medium.png&#34;</span> type=<span style="color:#009c00">&#34;image/avif&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;source media=<span style="color:#009c00">&#34;(min-width: 700px)&#34;</span> srcset=<span style="color:#009c00">&#34;image-small.png&#34;</span> type=<span style="color:#009c00">&#34;image/avif&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;source media=<span style="color:#009c00">&#34;(min-width: 1920px)&#34;</span> srcset=<span style="color:#009c00">&#34;image-big.png&#34;</span> type=<span style="color:#009c00">&#34;image/webp&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;source media=<span style="color:#009c00">&#34;(min-width: 1200px)&#34;</span> srcset=<span style="color:#009c00">&#34;image-medium.png&#34;</span> type=<span style="color:#009c00">&#34;image/webp&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;source media=<span style="color:#009c00">&#34;(min-width: 700px)&#34;</span> srcset=<span style="color:#009c00">&#34;image-small.png&#34;</span> type=<span style="color:#009c00">&#34;image/webp&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;img src=<span style="color:#009c00">&#34;photo.jpg&#34;</span> alt=<span style="color:#009c00">&#34;photo&#34;</span> height=<span style="color:#009c00">&#34;320&#34;</span> width=<span style="color:#009c00">&#34;320&#34;</span>  /&gt;
+</span></span><span style="display:flex;"><span>&lt;/picture&gt;
+</span></span></code></pre></div><h3 id="figure">Figure</h3>
+<p>Questa etichetta prevede che al suo interno siano presenti uno o più elementi multimediali (<code>img</code>, <code>picture</code>, <code>video</code>, &hellip;) e l&rsquo;etichetta <code>figcaption</code> che consente di aggiungere una didascalia o una descrizione testuale all&rsquo;elemento. Questo la rende più adatta a legare l&rsquo;elemento multimediale con la sua descrizione associata.</p>
 <p>Un&rsquo;esempio d&rsquo;uso dell&rsquo;etichetta è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;figure&gt;
 </span></span><span style="display:flex;"><span>  &lt;img src=<span style="color:#009c00">&#34;imageMele.jpg&#34;</span> alt=<span style="color:#009c00">&#34;Mela&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;img src=<span style="color:#009c00">&#34;imagePere.jpg&#34;</span> alt=<span style="color:#009c00">&#34;Pera&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;figcaption&gt;Frutta tipica&lt;/figcaption&gt;
 </span></span><span style="display:flex;"><span>&lt;/figure&gt;
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>E&rsquo; preferibile utilizzarla con gli elementi <code>picture</code>, ad esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;figure&gt;
+</span></span><span style="display:flex;"><span>  &lt;picture&gt;
+</span></span><span style="display:flex;"><span>    &lt;source srcset=<span style="color:#009c00">&#34;photo.avif&#34;</span> type=<span style="color:#009c00">&#34;image/avif&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;source srcset=<span style="color:#009c00">&#34;photo.webp&#34;</span> type=<span style="color:#009c00">&#34;image/webp&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;img src=<span style="color:#009c00">&#34;photo.jpg&#34;</span> alt=<span style="color:#009c00">&#34;photo&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/picture&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   &lt;figcaption&gt;Didascalia della foto&lt;/figcaption&gt;
+</span></span><span style="display:flex;"><span>&lt;/figure&gt;
+</span></span></code></pre></div><h3 id="etichette-audio-e-video">Etichette audio e video</h3>
+<p>È consigliabile, per questioni di performance, proporre i contenuti audio e video attraverso servizi <strong>streaming</strong>, in modo che la risoluzione dei contenuti si adatti alla velocità di trasmissione dati della linea dell&rsquo;utente.</p>
+<p>Volendo, però, evitare lo streaming ed inserire direttamente un file audio nella pagina web, si utilizza il seguente codice:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;audio controls autoplay&gt;
+</span></span><span style="display:flex;"><span>    &lt;source src=<span style="color:#009c00">&#34;horse.ogg&#34;</span> type=<span style="color:#009c00">&#34;audio/ogg&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;source src=<span style="color:#009c00">&#34;horse.mp3&#34;</span> type=<span style="color:#009c00">&#34;audio/mpeg&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;source src=<span style="color:#009c00">&#34;horse.wav&#34;</span> type=<span style="color:#009c00">&#34;audio/wav&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/audio&gt;
+</span></span></code></pre></div><p>Allo stesso modo, per inserire direttamente un file video, si utilizza il seguente codice:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;video controls autoplay width=<span style="color:#009c00">&#34;800px&#34;</span> height=<span style="color:#009c00">&#34;600px&#34;</span> poster=<span style="color:#009c00">&#34;poster.png&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;source src=<span style="color:#009c00">&#34;horse.mp4&#34;</span> type=<span style="color:#009c00">&#34;video/mp4&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;source src=<span style="color:#009c00">&#34;horse.ogg&#34;</span> type=<span style="color:#009c00">&#34;video/ogg&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;source src=<span style="color:#009c00">&#34;horse.webm&#34;</span> type=<span style="color:#009c00">&#34;video/webm&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;track label=<span style="color:#009c00">&#34;English&#34;</span> kind=<span style="color:#009c00">&#34;subtitles&#34;</span> srclang=<span style="color:#009c00">&#34;en&#34;</span> src=<span style="color:#009c00">&#34;captions/vtt/sintel-en.vtt&#34;</span> default&gt;
+</span></span><span style="display:flex;"><span>&lt;/video&gt;
+</span></span></code></pre></div><p>Come si vede, entrambe le etichette <code>audio</code> e <code>video</code> hanno gli attributi:</p>
+<ul>
+<li><code>mute</code>, per silenziare il video;</li>
+<li><code>loop</code>, per riavviare l&rsquo;audio o il video una volta terminato;</li>
+<li><code>autoplay</code>, per avviare automaticamente l&rsquo;audio o il video; Le specifiche indicano che deve essere usato insieme all&rsquo;attributo
+<code>mute</code> per poter effettuare l&rsquo;autoplay sui dispositivi mobile;</li>
+<li><code>controls</code>, per visualizzare i pulsanti di controllo &ldquo;play&rdquo;, &ldquo;pause&rdquo;, &ldquo;stop&rdquo;, &hellip;.</li>
+<li><code>controlsList</code>, una lista di tre possibili valori:
+<ol>
+<li><code>nodownload</code> non permette all&rsquo;utente di scaricare il file;</li>
+<li><code>nofullscreen</code> non permette all&rsquo;utente di vedere il video a tutto schermo;</li>
+<li><code>noremoteplayback</code>, non permette all&rsquo;utente di riprodurre il contenuto in remoto.</li>
+</ol>
+</li>
+</ul>
+<p>Essendo una lista, l&rsquo;attributo <code>controlsList</code> può avere uno o più valori, come nel seguente esempio: <code>controlsList=&quot;nodownload nofullscreen noremoteplayback&quot;</code>.</p>
+<p>Ovviamente, solo l&rsquo;etichetta video ha gli attributi:</p>
+<ul>
+<li><code>poster</code>, l&rsquo;immagine di anteprima da mostrare;</li>
+<li><code>width</code>, la larghezza del video (in pixel);</li>
+<li><code>height</code>, l&rsquo;altezza del video (in pixel).</li>
+</ul>
+<p>Entrambe le etichette <code>audio</code> e <code>video</code> fanno uso dell&rsquo;etichetta <code>source</code>, per indicare i video o gli audio da riprodurre. Di questi, solo uno viene effettivamente riprodotto: il browser sceglie (nell&rsquo;ordine indicato) il primo file che riesce a riprodurre (in base ai formati supportati).</p>
+<p>L&rsquo;etichetta <code>source</code> prevede diversi attributi, ma alcuni sono ad uso esclusivo per le immagini, per cui quelli maggiormente utilizzabili per <strong>audio e video</strong> sono:</p>
+<ul>
+<li><code>src</code>, per indicare il percorso del file da riprodurre;</li>
+<li><code>type</code>, per indicare il mime-type del file da riprodurre. Tra i possibili mime-type <strong>audio</strong> abbiamo <code>audio/mpeg</code> (per i file mp3), <code>audio/wav</code> e <code>audio/ogg</code> per i file audio wav/ogg. Tra i possibili mime-type <strong>video</strong> abbiamo <code>video/mp4</code>, <code>video/webm</code> e <code>video/ogg</code> per i rispettivi file.</li>
+</ul>
+<p>L&rsquo;etichetta <code>video</code> permette anche di specificare dei possibili sottotitoli da mostrare sopra il video. I sottotitoli sono indicati nelle etichette <code>track</code>, che prevede i seguenti attributi:</p>
+<ul>
+<li><code>label</code>, una descrizione, generalmente la lingua del sottotitolo;</li>
+<li><code>kind</code>, il tipo di traccia (per ora subtitles);</li>
+<li><code>srclang</code> il codice del linguaggio;</li>
+<li><code>src</code> il percorso del file di sottotitoli; Il formato del file è VTT;</li>
+<li><code>default</code> il sottotitolo da mostrare di default.</li>
+</ul>
+
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="https://htmlhead.dev/" style="font-weight: 700; color: #e22d30;">Sito htmlhead.dev</a>: Guida (in inglese) all&#39;elemento &#39;head&#39; dell&#39;HTML;</p><p><a href="https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs" style="font-weight: 700; color: #e22d30;">Icone del sito web nel 2021</a>: Articolo (in inglese) sulla scelta e sulla creazione delle icone del sito web nel 2021</p><p><a href="https://www.matuzo.at/blog/html-boilerplate/" style="font-weight: 700; color: #e22d30;">My current HTML template</a>: Articolo (in inglese) sugli elementi basilari utilizzati per costruire un template di una pagina HTML</p><p><a href="https://evilmartians.com/chronicles/images-done-right-web-graphics-good-to-the-last-byte-optimization-techniques" style="font-weight: 700; color: #e22d30;">HTML images done right - Web graphics, good to the last byte</a>: HTML images done right - Web graphics, good to the last byte</p><p><a href="https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/" style="font-weight: 700; color: #e22d30;">HTML images with srcset</a>: How to Build Responsive Images with srcset</p><p><a href="https://ericportis.com/posts/2014/srcset-sizes/" style="font-weight: 700; color: #e22d30;">HTML images srcset and sizes</a>: media queries aren’t the right tool for responsive images, srcset and sizes are</p>
+      <p><a href="https://htmlhead.dev/" style="font-weight: 700; color: #e22d30;">Sito htmlhead.dev</a>: Guida (in inglese) all&#39;elemento &#39;head&#39; dell&#39;HTML;</p><p><a href="https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs" style="font-weight: 700; color: #e22d30;">Icone del sito web nel 2021</a>: Articolo (in inglese) sulla scelta e sulla creazione delle icone del sito web nel 2021</p><p><a href="https://www.matuzo.at/blog/html-boilerplate/" style="font-weight: 700; color: #e22d30;">My current HTML template</a>: Articolo (in inglese) sugli elementi basilari utilizzati per costruire un template di una pagina HTML</p><p><a href="https://evilmartians.com/chronicles/images-done-right-web-graphics-good-to-the-last-byte-optimization-techniques" style="font-weight: 700; color: #e22d30;">HTML images done right - Web graphics, good to the last byte</a>: HTML images done right - Web graphics, good to the last byte</p><p><a href="https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/" style="font-weight: 700; color: #e22d30;">HTML images with srcset</a>: How to Build Responsive Images with srcset</p><p><a href="https://ericportis.com/posts/2014/srcset-sizes/" style="font-weight: 700; color: #e22d30;">HTML images srcset and sizes</a>: media queries aren’t the right tool for responsive images, srcset and sizes are</p><p><a href="https://developers.facebook.com/tools/debug" style="font-weight: 700; color: #e22d30;">Facebook Sharing Debugger</a>: Il debugger di condivisione di facebook consente di visualizzare l&#39;anteprima del contenuto che sarà pubblicato su Facebook</p><p><a href="https://socialsharepreview.com/" style="font-weight: 700; color: #e22d30;">Social Media Preview</a>: Social Media Preview consente di visualizzare l&#39;anteprima del contenuto che sarà pubblicato sui social</p><p><a href="https://metatags.io/" style="font-weight: 700; color: #e22d30;">Meta Tags Toolkit</a>: Meta Tags Toolkit consente di visualizzare l&#39;anteprima del contenuto che sarà pubblicato sui social</p>
   </article>
 </main>
 
@@ -506,9 +609,9 @@ il browser di default visualizza l&rsquo;immagine descritta nell&rsquo;attributo
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/html/immagini/" rel="prev">
+		<a class="pager__link" href="/coding/web/html/tagtesto/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">HTML Lez. 04 - Multimedialità e interattività</p>
+			<p class="pager__title">HTML Lez. 03 - Etichette principali</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">

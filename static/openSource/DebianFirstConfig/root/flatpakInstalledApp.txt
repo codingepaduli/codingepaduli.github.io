@@ -27,6 +27,7 @@ me.kozec.syncthingtk
 # org.avidemux.Avidemux
 org.chromium.Chromium
 # org.filezillaproject.Filezilla
+org.freefilesync.FreeFileSync
 org.gimp.GIMP
 # org.gnome.Evince
 # org.gnome.baobab

@@ -2,6 +2,10 @@ let img1, img2, img3;
 let img4, img5, img6;
 let img7, img8, img9;
 
+let suono_img1, suono_img2, suono_img3;
+let suono_img4, suono_img5, suono_img6;
+let suono_img7, suono_img8, suono_img9;
+
 let nomeAnimale = "Scegli l'animale";
 
 // TODO aggiungere i suoni
@@ -20,6 +24,17 @@ function preload() {
     img9 = loadImage('/static/coding/web/p5js/progettoParcoZoologico_rabbit.jpg');
 
     soundFormats('mp3', 'wav');
+
+    suono_img1 = loadSound('/static/coding/web/p5js/progettoParcoZoologico_cat.mp3');
+    suono_img2 = loadSound('/static/coding/web/p5js/progettoParcoZoologico_chicken.mp3');
+    suono_img3 = loadSound('/static/coding/web/p5js/progettoParcoZoologico_cock.mp3');
+    suono_img4 = loadSound('/static/coding/web/p5js/progettoParcoZoologico_cow.mp3');
+    suono_img5 = loadSound('/static/coding/web/p5js/progettoParcoZoologico_dog1.mp3');
+    suono_img6 = loadSound('/static/coding/web/p5js/progettoParcoZoologico_donkey.mp3');
+    suono_img7 = loadSound('/static/coding/web/p5js/progettoParcoZoologico_horse1.mp3');
+    suono_img8 = loadSound('/static/coding/web/p5js/progettoParcoZoologico_lion.mp3');
+    suono_img9 = loadSound('/static/coding/web/p5js/progettoParcoZoologico_rabbit.mp3');
+
     /*
     chicchirichi = loadSound('gallo.wav');
     cipcip = loadSound('canarino.mp3');
@@ -58,15 +73,15 @@ function mousePressed() {
     clickY = mouseY;
     
     if (clickX>0 && clickX<150 && clickY>0 && clickY<150) {
-        //SuonoIena.play();
+        suono_img1.play();
         nomeAnimale = "Gatto";
     }
     if (clickX>0 && clickX<150 && clickY>150 && clickY<300) {
-        //SuonoCavallo.play();
+        suono_img4.play();
         nomeAnimale = "Mucca";
     }
     if (clickX>0 && clickX<150 && clickY>300 && clickY<450) {
-        //SuonoUccello.play();
+        suono_img7.play();
         nomeAnimale = "Cavallo";
     }
     if (clickX>0 && clickX<150 && clickY>450 && clickY<600) {
@@ -74,15 +89,15 @@ function mousePressed() {
     }
     
     if (clickX>150 && clickX<300 && clickY>0 && clickY<150) {
-        // SuonoElefante.play();
+        suono_img2.play();
         nomeAnimale = "Gallina";
     }
     if (clickX>150 && clickX<300 && clickY>150 && clickY<300) {
-        // SuonoLeone.play();
+        suono_img5.play();
         nomeAnimale = "Cane";
     }
     if (clickX>150 && clickX<300 && clickY>300 && clickY<450) {
-        // SuonoMucca.play();
+        suono_img8.play();
         nomeAnimale = "Leone";
     }
     if (clickX>150 && clickX<300 && clickY>450 && clickY<600) {
@@ -91,15 +106,15 @@ function mousePressed() {
     }
 
     if (clickX>300 && clickX<450 && clickY>0 && clickY<150) {
-        // SuonoCane.play();
+        suono_img3.play();
         nomeAnimale = "Gallo";
     }
     if (clickX>300 && clickX<450 && clickY>150 && clickY<300) {
-        // SuonoTigre.play();
+        suono_img6.play();
         nomeAnimale = "Asino";
     }
     if (clickX>300 && clickX<450 && clickY>300 && clickY<450) {
-        // SuonoScimmia.play();
+        suono_img9.play();
         nomeAnimale = "Coniglio";
     }
     if (clickX>300 && clickX<450 && clickY>450 && clickY<600) {
