@@ -8,6 +8,33 @@
     <language>it-IT</language>
     <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/coding/web/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>HTML Lez. 09.2 - Soluzioni esercizi sui moduli di invio dati</title>
+      <link>http://codingepaduli.github.io/coding/web/html/form_exe_soluzioni/</link>
+      <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/form_exe_soluzioni/</guid>
+      <description>HTML - Soluzioni esercizi e quiz di comprensione sui moduli di invio dati</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 09.1 - Esercizi sui moduli di invio dati</title>
+      <link>http://codingepaduli.github.io/coding/web/html/form_exe/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/form_exe/</guid>
+      <description>HTML - Esercizi e quiz di comprensione sui moduli di invio dati</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 09 - Moduli di invio dati e trasmissione dati al server</title>
+      <link>http://codingepaduli.github.io/coding/web/html/form/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/form/</guid>
+      <description>HTML - La richiesta di risorse al server può essere corredata di ulteriori dati da trasmettere, che possono essere inseriti dall&amp;rsquo;utente negli appositi moduli di invio dati presenti nella pagina web o che possono essere preimpostati staticamente in un collegamento.</description>
+    </item>
+    
+    <item>
       <title>HTML Lez. 08 - Accessibilità</title>
       <link>http://codingepaduli.github.io/coding/web/html/accessibilita/</link>
       <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>

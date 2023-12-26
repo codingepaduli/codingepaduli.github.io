@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Lez. 09.1 - Esercizi sui moduli di invio dati - Lab. informatica</title>
+
+    <meta name="description" content="HTML - Esercizi sui moduli di invio dati">
+        <meta property="og:title" content="HTML Lez. 09.1 - Esercizi sui moduli di invio dati" />
+<meta property="og:description" content="HTML - Esercizi sui moduli di invio dati" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/form_exe/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2019-10-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-28T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="HTML Lez. 09.1 - Esercizi sui moduli di invio dati"/>
+<meta name="twitter:description" content="HTML - Esercizi sui moduli di invio dati"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-10-28T00:00:00Z">28-10-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/html/" rel="category">html</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 5 minuti 
+        ( 889 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="esercizi-e-quiz-sui-moduli-di-invio-dati">Esercizi e quiz sui moduli di invio dati</h1>
+<h2 id="creazione-di-un-modulo-di-invio-dati-di-registrazione-utente">Creazione di un modulo di invio dati di registrazione utente</h2>
+<p>Realizzare un modulo di registrazione contenente i seguenti campi con i relativi vincoli:</p>
+<ul>
+<li>nome (obbligatorio)</li>
+<li>cognome (obbligatorio)</li>
+<li>eta ( numerico &gt;18)</li>
+<li>data di nascita (obbligatorio data, &lt; data odierna)</li>
+<li>codice fiscale (lunghezza = 16 caratteri)</li>
+<li>sesso (obbligatorio radio, scelta singola)</li>
+<li>pulsante di invio  (con azione &ldquo;formaction&rdquo; per invio <strong>dati personali</strong>)</li>
+<li>provincia (obbligatorio, con lista suggerimenti)</li>
+<li>comune (obbligatorio, con lista suggerimenti)</li>
+<li>via</li>
+<li>numero civico (numerico, &gt;1 &amp;&amp; &lt; 1000)</li>
+<li>pulsante di invio  (con azione &ldquo;formaction&rdquo; per invio dati <strong>residenza</strong>)</li>
+<li>email (obbligatorio, tipo email)</li>
+<li>password (obbligatorio, tipo password)</li>
+<li>ora di invio (tipo orario)</li>
+<li>pulsante di invio  (con azione &ldquo;formaction&rdquo; per invio <strong>account</strong>)</li>
+<li>interessi (checkbox, scelta multipla)</li>
+<li>segni particolari</li>
+<li>statura</li>
+<li>colore occhi</li>
+<li>colore capelli</li>
+<li>stato civile</li>
+<li>professione</li>
+<li>cittadinanza</li>
+<li>pulsante di invio e di reset</li>
+</ul>
+<p>Scrivi un commento copiando i punti richiesti nella traccia e scrivendo per ognuno se l&rsquo;hai fatto completamente (esempio: ora di invio con tipo orario: FATTO con requisiti).</p>
+<!-- markdownlint-disable MD036 -->
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esercizio</td>
+<td>Struttura pagina web</td>
+<td>Form</td>
+<td>Commenti, indentazione e validazione</td>
+<td>Totale Punti</td>
+</tr>
+<tr>
+<td>Max punti</td>
+<td>2</td>
+<td>6</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Punti</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cognome ______________ Nome ______________ Classe __________ Data __________</strong></p>
+<!-- markdownlint-enable MD036 -->
+<h2 id="creazione-di-un-form-di-invio-dati">Creazione di un form di invio dati</h2>
+<p>Nell&rsquo;elenco riportato di seguito sono indicati una serie di oggetti con le relative proprietà. Ad ogni proprietà sono associate le caratteristiche: il tipo di dato (testuale, numerico, &hellip;), l&rsquo;obbligatorietà, i vincoli sul valore assegnabile.
+Lo studente realizzi una pagina web che permetta all&rsquo;utente di inserire i dati dell&rsquo;oggetto assegnato, scelto tra quelli in elenco. Il nome del file deve essere formato dal cognome dello studente concatenato all&rsquo;estensione <code>html</code>.</p>
+<p>Elenco degli oggetti e relative proprietà:</p>
+<ol>
+<li>Oggetto <strong>canzone</strong> con le proprietà:
+<ul>
+<li>Titolo (testo, obbligatorio, minimo 3, massimo 9 caratteri);</li>
+<li>Autore (testo, obbligatorio, minimo 3, massimo 9 caratteri);</li>
+<li>Durata (numerico, facoltativo, minimo 3, massimo 90 secondi);</li>
+<li>Genere (voce a scelta singola tra le opzioni &ldquo;Pop&rdquo;, &ldquo;Rock&rdquo;, &ldquo;Rap&rdquo;);</li>
+</ul>
+</li>
+<li>Oggetto <strong>film</strong> con le proprietà:
+<ul>
+<li>Regista (testo, obbligatorio, minimo 5, massimo 12 caratteri);</li>
+<li>Protagonista (testo, facoltativo, minimo 5, massimo 12 caratteri);</li>
+<li>Durata (numerico, facoltativo, minimo 5, massimo 120 secondi);</li>
+<li>Genere (voce a scelta tra le opzioni &ldquo;Fantasy&rdquo;, &ldquo;Horror&rdquo;, &ldquo;Drammatico&rdquo;);</li>
+</ul>
+</li>
+<li>Oggetto <strong>biglietto</strong> con le proprietà
+<ul>
+<li>Numero (numerico, obbligatorio, minimo 7, massimo 150);</li>
+<li>Intestatario (testo, obbligatorio, minimo 7, massimo 15 caratteri);</li>
+<li>Luogo (testo, facoltativo, minimo 7, massimo 15 caratteri);</li>
+<li>TipoEvento (voce a scelta tra le opzioni &ldquo;Calcio&rdquo;, &ldquo;Concerto&rdquo;, &ldquo;Teatro&rdquo;);</li>
+</ul>
+</li>
+<li>Oggetto <strong>viaggio</strong> con le proprietà:
+<ul>
+<li>Prezzo (numerico, obbligatorio, minimo 9, massimo 180);</li>
+<li>Compagnia (testo, obbligatorio, minimo 9, massimo 18 caratteri);</li>
+<li>Guida (testo, facoltativo, minimo 9, massimo 18 caratteri);</li>
+<li>Località (voce a scelta tra le opzioni &ldquo;Roma&rdquo;, &ldquo;Milano&rdquo;, &ldquo;Torino&rdquo;);</li>
+</ul>
+</li>
+<li>Oggetto <strong>auto</strong> con le proprietà:
+<ul>
+<li>Targa (testo, obbligatorio, minimo 6, massimo 8 caratteri);</li>
+<li>Colore (voce a scelta tra le opzioni &ldquo;Giallo&rdquo;, &ldquo;Verde&rdquo;, &ldquo;Rosso&rdquo;);</li>
+<li>Marca (testo, facoltativo, minimo 11, massimo 210 caratteri);</li>
+<li>Cilindrata (numerico, obbligatorio, minimo 900, massimo 5000);</li>
+</ul>
+</li>
+<li>Oggetto <strong>documento</strong> con le proprietà:
+<ul>
+<li>Numero (numerico, obbligatorio, minimo 13, massimo 240);</li>
+<li>Tipo (voce a scelta tra le opzioni &ldquo;Patente&rdquo;, &ldquo;Carta identità&rdquo;, &ldquo;Passaporto&rdquo;);</li>
+<li>Intestatario (testo, obbligatorio, minimo 13, massimo 24 caratteri);</li>
+<li>Ente (testo, facoltativo, minimo 13, massimo 24 caratteri);</li>
+</ul>
+</li>
+<li>Oggetto <strong>indirizzo</strong> con le proprietà:
+<ul>
+<li>Comune (testo, obbligatorio, minimo 15, massimo 27 caratteri);</li>
+<li>Provincia (voce a scelta tra le opzioni &ldquo;Caserta&rdquo;, &ldquo;Napoli&rdquo;, &ldquo;Salerno&rdquo;);</li>
+<li>Cap (numerico, obbligatorio, minimo 10000, massimo 99999);</li>
+<li>Via (testo, facoltativo, minimo 15, massimo 27 caratteri);</li>
+</ul>
+</li>
+<li>Oggetto <strong>squadra</strong> con le proprietà:
+<ul>
+<li>Nome (testo, obbligatorio, minimo 13, massimo 24 caratteri);</li>
+<li>Sport (voce a scelta tra le opzioni &ldquo;Calcio&rdquo;, &ldquo;Tennis&rdquo;, &ldquo;Ippica&rdquo;)</li>
+<li>Allenatore (testo, facoltativo, minimo 13, massimo 24 caratteri);</li>
+<li>Punti (numerico, obbligatorio, minimo 17, massimo 30);</li>
+</ul>
+</li>
+<li>Oggetto <strong>libro</strong> con le proprietà:
+<ul>
+<li>Editore (testo, facoltativo, minimo 19, massimo 33 caratteri);</li>
+<li>Genere (voce a scelta tra le opzioni &ldquo;Fantasy&rdquo;, &ldquo;Drammatico&rdquo;, &ldquo;Giallo&rdquo;);</li>
+<li>ISBN (testo, obbligatorio, minimo 19, massimo 33 caratteri);</li>
+<li>Pagine (numerico, obbligatorio, minimo 19, massimo 33);</li>
+</ul>
+</li>
+<li>Oggetto <strong>albergo</strong> con le proprietà:
+<ul>
+<li>Nome (testo, obbligatorio, minimo 21, massimo 36 caratteri);</li>
+<li>Proprietario (testo, facoltativo, minimo 21, massimo 36 caratteri);</li>
+<li>Stelle (numerico, obbligatorio, minimo 1, massimo 5);</li>
+<li>Comune (voce a scelta tra le opzioni &ldquo;Caserta&rdquo;, &ldquo;Napoli&rdquo;, &ldquo;Salerno&rdquo;);</li>
+</ul>
+</li>
+<li>Oggetto <strong>computer</strong> con le proprietà:
+<ul>
+<li>Modello (testo, facoltativo, minimo 21, massimo 36 caratteri);</li>
+<li>Marca (voce a scelta tra le opzioni &ldquo;HP&rdquo;, &ldquo;Lenovo&rdquo;, &ldquo;Acer&rdquo;);</li>
+<li>Costo (numerico, obbligatorio, minimo 100, massimo 10000);</li>
+<li>Descrizione (testo, facoltativo, minimo 21, massimo 36 caratteri);</li>
+</ul>
+</li>
+<li>Oggetto <strong>foto</strong> con le proprietà:
+<ul>
+<li>Risoluzione (testo, facoltativo, minimo 23, massimo 39 caratteri);</li>
+<li>Formato (voce a scelta tra le opzioni &ldquo;15:10&rdquo;, &ldquo;21:16&rdquo;, &ldquo;28:20&rdquo;)</li>
+<li>Fotografo (testo, obbligatorio, minimo 23, massimo 39 caratteri);</li>
+<li>Costo (numerico, obbligatorio, minimo 10, massimo 100);</li>
+</ul>
+</li>
+<li>Oggetto <strong>stadio</strong> con le proprietà:
+<ul>
+<li>Nome (testo, obbligatorio, minimo 25, massimo 42 caratteri);</li>
+<li>Indirizzo (testo, facoltativo, minimo 25, massimo 42 caratteri);</li>
+<li>Sport (voce a scelta tra le opzioni &ldquo;Calcio&rdquo;, &ldquo;Tennis&rdquo;, &ldquo;Ippica&rdquo;)</li>
+<li>Posti (numerico, obbligatorio, minimo 1000, massimo 100000);</li>
+</ul>
+</li>
+<li>Oggetto <strong>smartphone</strong> con le proprietà:
+<ul>
+<li>Nome (testo, obbligatorio, minimo 27, massimo 45 caratteri);</li>
+<li>Schermo (voce a scelta tra le opzioni &ldquo;Retina&rdquo;, &ldquo;Amoled&rdquo;, &ldquo;LCD&rdquo;)</li>
+<li>Prezzo (numerico, obbligatorio, minimo 270, massimo 450);</li>
+<li>Marca (testo, facoltativo, minimo 27, massimo 45 caratteri);</li>
+</ul>
+</li>
+<li>Oggetto <strong>sito web</strong> con le proprietà:
+<ul>
+<li>Nome (testo, obbligatorio, minimo 29, massimo 48 caratteri);</li>
+<li>Ip (numerico, obbligatorio, minimo 12, massimo 12);</li>
+<li>Categoria (voce a scelta tra le opzioni &ldquo;Blog&rdquo;, &ldquo;e-commerce&rdquo; e &ldquo;video streaming&rdquo;);</li>
+<li>Descrizione (testo, facoltativo, minimo 29, massimo 48 caratteri);</li>
+</ul>
+</li>
+<li>Oggetto <strong>ristorante</strong> con le proprietà:
+<ul>
+<li>Nome (testo, obbligatorio, minimo 31, massimo 51 caratteri);</li>
+<li>Tavoli (numerico, obbligatorio, minimo 31, massimo 51);</li>
+<li>Prenotazione (voce a scelta tra le opzioni &ldquo;pranzo&rdquo;, &ldquo;cena&rdquo; e &ldquo;buffet&rdquo;);</li>
+<li>Indirizzo (testo, facoltativo, minimo 31, massimo 51 caratteri);</li>
+</ul>
+</li>
+</ol>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/form/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">HTML Lez. 09 - Moduli di invio dati e trasmissione dati al server</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/html/form_exe_soluzioni/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">HTML Lez. 09.2 - Soluzioni esercizi sui moduli di invio dati</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
