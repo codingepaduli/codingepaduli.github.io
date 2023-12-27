@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>three.js Lez. 02 - Sistema Solare 3D - Lab. informatica</title>
+
+    <meta name="description" content="Sistema Solare 3D">
+        <meta property="og:title" content="three.js Lez. 02 - Sistema Solare 3D" />
+<meta property="og:description" content="Sistema Solare 3D" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/coding/web/threejs-r124/sistemasolare/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
+<meta property="article:published_time" content="2023-12-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-12-16T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="three.js Lez. 02 - Sistema Solare 3D"/>
+<meta name="twitter:description" content="Sistema Solare 3D"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-12-16T00:00:00Z">16-12-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/three.js/" rel="category">three.js</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 1 minuto 
+        ( 8 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="sistema-solare-3d">Sistema Solare 3D</h1>
+<p>Naviga con i tasti freccia.</p>
+<p><canvas id="canvas" style="width: 100%; height: 100%;"></canvas></p>
+
+    </div>
+  </article>
+</main>
+
+<script src="/static/coding/web/threejs-r124/lib/three.js"></script><script src="/static/coding/web/threejs-r124/lib/GLTFLoader.js"></script><script src="/static/coding/web/threejs-r124/sistemaSolare3D.js"></script>
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/threejs-r124/tourvoltantecitta/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">three.js Lez. 03 - Tour volante della città</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/threejs-r124/tourpaesaggio3d/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">three.js Lez. 01 - Tour paesaggio 3D</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+
+
+<style>
+ 
+.snowflake {
+  color: #fff;
+  font-size: 1.5em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 6px #100;
+}
+
+@keyframes snowflakes-fall {
+  0% {
+    transform: translateY(0vh);
+  }
+
+  100% {
+    transform: translateY(110vh);
+  }
+}
+
+@keyframes snowflakes-shake {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(80px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+   
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+
+  animation-name: snowflakes-shake;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.snowflake .inner {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: snowflakes-fall;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  animation-delay: 0s;
+}
+.snowflake:nth-of-type(0) .inner {
+  animation-delay: 0s;
+}
+
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  animation-delay: 1s;
+}
+.snowflake:nth-of-type(1) .inner {
+  animation-delay: 1s;
+}
+
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  animation-delay: 0.5s;
+}
+.snowflake:nth-of-type(2) .inner {
+  animation-delay: 6s;
+}
+
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  animation-delay: 2s;
+}
+.snowflake:nth-of-type(3) .inner {
+  animation-delay: 4s;
+}
+
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  animation-delay: 2s;
+}
+.snowflake:nth-of-type(4) .inner {
+  animation-delay: 2s;
+}
+
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  animation-delay: 3s;
+}
+.snowflake:nth-of-type(5) .inner {
+  animation-delay: 8s;
+}
+
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  animation-delay: 2s;
+}
+.snowflake:nth-of-type(6) .inner {
+  animation-delay: 6s;
+}
+
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  animation-delay: 1s;
+}
+.snowflake:nth-of-type(7) .inner {
+  animation-delay: 2.5s;
+}
+
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  animation-delay: 0s;
+}
+.snowflake:nth-of-type(8) .inner {
+  animation-delay: 1s;
+}
+
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  animation-delay: 1.5s;
+}
+.snowflake:nth-of-type(9) .inner {
+  animation-delay: 3s;
+}
+
+.snowflake:nth-of-type(10) {
+  left: 25%;
+  animation-delay: 0s;
+}
+.snowflake:nth-of-type(10) .inner {
+  animation-delay: 2s;
+}
+
+.snowflake:nth-of-type(11) {
+  left: 65%;
+  animation-delay: 2.5s;
+}
+.snowflake:nth-of-type(11) .inner {
+  animation-delay: 4s;
+}
+  </style>
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+  </div>
+
+  <script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

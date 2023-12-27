@@ -224,6 +224,51 @@
     </item>
     
     <item>
+      <title>three.js Lez. 01 - Tour paesaggio 3D</title>
+      <link>http://codingepaduli.github.io/coding/web/threejs-r124/tourpaesaggio3d/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/threejs-r124/tourpaesaggio3d/</guid>
+      <description>Tour paesaggio 3D</description>
+    </item>
+    
+    <item>
+      <title>three.js Lez. 02 - Sistema Solare 3D</title>
+      <link>http://codingepaduli.github.io/coding/web/threejs-r124/sistemasolare/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/threejs-r124/sistemasolare/</guid>
+      <description>Sistema Solare 3D</description>
+    </item>
+    
+    <item>
+      <title>three.js Lez. 03 - Tour volante della città</title>
+      <link>http://codingepaduli.github.io/coding/web/threejs-r124/tourvoltantecitta/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/threejs-r124/tourvoltantecitta/</guid>
+      <description>Tour volante della città</description>
+    </item>
+    
+    <item>
+      <title>three.js Lez. 05 - Guidando l&#39;auto in città</title>
+      <link>http://codingepaduli.github.io/coding/web/threejs-r124/drivinginthecity/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/threejs-r124/drivinginthecity/</guid>
+      <description>Guidando l&amp;rsquo;auto in città</description>
+    </item>
+    
+    <item>
+      <title>three.js Lez. X - Transizione al nuovo Three.js ES6</title>
+      <link>http://codingepaduli.github.io/coding/web/threejs-r124/movingnewthreejs/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/threejs-r124/movingnewthreejs/</guid>
+      <description>Transizione al nuovo Three.js ES6</description>
+    </item>
+    
+    <item>
       <title>p5.js Lez. 01 - Introduzione alla libreria grafica p5.js</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/intro/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
