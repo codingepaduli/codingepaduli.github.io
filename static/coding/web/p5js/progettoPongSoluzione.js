@@ -109,7 +109,11 @@ function draw() {
 // fullscreen when click
 function mousePressed() {
   if (mouseX > width - 60 && mouseX < width - 30 && mouseY > height - 60 && mouseY < height - 30) {
-    let fs = fullscreen();
-    fullscreen(!fs);
+    if (!document.fullscreenElement) {
+      let canvasNode = document.querySelector('#progettoPong canvas');
+      canvasNode.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
   }
 }
