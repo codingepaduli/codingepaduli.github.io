@@ -36,7 +36,6 @@ function draw() {
 
     angoloTerra = angoloTerra + 1;
 
-
     xVenere = xSole + distanzaVenere * cos(angoloVenere);
     yVenere = ySole + distanzaVenere * sin(angoloVenere);
 
@@ -44,4 +43,34 @@ function draw() {
     circle(xVenere, yVenere, diametroVenere);
 
     angoloVenere = angoloVenere + 2;
+
+    drawFullScreenRect();
+}
+
+// fullscreen when click
+function mousePressed() {
+  if (mouseX > width - 60 && mouseX < width - 30 && mouseY > height - 60 && mouseY < height - 30) {
+    if (!document.fullscreenElement) {
+      let canvasNode = document.querySelector('#sistema canvas');
+      canvasNode.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+function drawFullScreenRect() {
+  // fullscreen rectangle
+  push();
+
+  textSize(10);
+  //text(" " + mouseX + " " + mouseY, width - 100, height - 70);
+
+  noFill();
+  strokeWeight(4);
+  stroke(0, 255, 0);
+
+  rectMode(CORNER);
+  square(530, height - 60, 30);
+  pop();
 }

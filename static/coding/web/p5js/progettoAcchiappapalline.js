@@ -5,7 +5,9 @@ let distanza;
 let punteggio = 0;
 
 function setup() {
-  createCanvas(600, 400);
+  let canvasNode = document.querySelector('#acchiappapalline');
+  let cw = canvasNode.parentNode.clientWidth;
+  createCanvas(cw * 0.9, cw * 0.4).parent('acchiappapalline');
 }
 
 function draw() {
@@ -33,8 +35,37 @@ function draw() {
 	  punteggio = punteggio + 1;
 
 	  // riporto la pallina su in posizione casuale
-      x1 = random(20, 580);
+    x1 = random(20, width - 20);
 	  y1 = 0;
   }
   
+  drawFullScreenRect();
+}
+
+// fullscreen when click
+function mousePressed() {
+  if (mouseX > width - 60 && mouseX < width - 30 && mouseY > height - 60 && mouseY < height - 30) {
+    if (!document.fullscreenElement) {
+      let canvasNode = document.querySelector('#acchiappapalline canvas');
+      canvasNode.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+function drawFullScreenRect() {
+  // fullscreen rectangle
+  push();
+
+  textSize(10);
+  //text(" " + mouseX + " " + mouseY, width - 100, height - 70);
+
+  noFill();
+  strokeWeight(4);
+  stroke(0, 255, 0);
+
+  rectMode(CORNER);
+  square(width - 60, height - 60, 30);
+  pop();
 }

@@ -594,4 +594,35 @@ function draw() {
     }
     //console per visualizzare che la dimensione dello snake stia aumentando
     console.info("Snake di lunghezza " + snakeX.length);
+
+    drawFullScreenRect();
+}
+
+
+function drawFullScreenRect() {
+  // fullscreen rectangle
+  push();
+
+  textSize(10);
+  //text(" " + mouseX + " " + mouseY, width - 100, height - 70);
+
+  noFill();
+  strokeWeight(4);
+  stroke(0, 255, 0);
+
+  rectMode(CORNER);
+  square(width - 60, height - 60, 30);
+  pop();
+}
+
+// fullscreen when click
+function mousePressed() {
+  if (mouseX > width - 60 && mouseX < width - 30 && mouseY > height - 60 && mouseY < height - 30) {
+    if (!document.fullscreenElement) {
+      let canvasNode = document.querySelector('#progettoSnake canvas');
+      canvasNode.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
 }

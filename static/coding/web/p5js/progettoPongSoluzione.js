@@ -101,9 +101,7 @@ function draw() {
     fill(255, 204, 100);
     ellipse(x, y, d, d);
     
-    // fullscreen rectangle
-    textSize(28);
-    text("[  ]", width - 60, height - 30);
+    drawFullScreenRect();
 }
 
 // fullscreen when click
@@ -116,4 +114,20 @@ function mousePressed() {
       document.exitFullscreen();
     }
   }
+}
+
+function drawFullScreenRect() {
+  // fullscreen rectangle
+  push();
+
+  textSize(10);
+  //text(" " + mouseX + " " + mouseY, width - 100, height - 70);
+
+  noFill();
+  strokeWeight(4);
+  stroke(0, 255, 0);
+
+  rectMode(CORNER);
+  square(width - 60, height - 60, 30);
+  pop();
 }
