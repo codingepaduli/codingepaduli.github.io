@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 7 minuti 
-        ( 1349 parole)
+        Tempo di lettura 8 minuti 
+        ( 1545 parole)
     </span>
 </div></div>
     </header>
@@ -291,14 +291,14 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 </span></span></code></pre></div><h2 id="struttura-di-una-pagina-web-con-script">Struttura di una pagina web con script</h2>
 <p>JavaScript è un linguaggio nato per rendere dinamiche le pagine web. Questo significa che gli script sono legati alla pagina web. Esistono tre differenti tipi di legami che permettono ad uno script di interagire con la pagina web:</p>
 <ul>
-<li>uno script può essere <strong>inline</strong>, ovvero legato in una delle etichette HTML che lo permettono;</li>
-<li>uno script può essere direttamente contenuto nella pagina HTML, definito nell&rsquo;etichetta <code>script</code>;</li>
+<li>uno script può essere <strong>inline</strong>, ovvero inserito in una delle etichette HTML che lo permettono;</li>
+<li>uno script può essere contenuto nella pagina HTML, definito nell&rsquo;etichetta <code>script</code>;</li>
 <li>uno script può essere collegato come file JavaScript esterno, indicando il collegamento nell&rsquo;etichetta <code>script</code>;</li>
 </ul>
 <h3 id="script-inline">Script inline</h3>
 <p>Per inserire uno script <strong>inline</strong>, lo si può allegare nelle etichette HTML, ove previsto dalle specifiche;</p>
 <p>Si supponga, ad esempio, di voler associare al <code>click</code> su un pulsante, realizzato tramite l&rsquo;etichetta <code>button</code>, uno script (composto da una sola istruzione) <code>alert('Script contenuto inline');</code>. Il codice risultante sarà il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;button&#34;</span> onclick=<span style="color:#009c00">&#34;alert(&#39;Script contenuto inline&#39;);&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;button onclick=<span style="color:#009c00">&#34;alert(&#39;Script contenuto inline&#39;);&#34;</span>&gt;Clicca&lt;/button&gt;
 </span></span></code></pre></div><p>Si nota che nella stessa riga di codice è presente sia il codice HTML sia il codice JavaScript (inline).</p>
 <h3 id="script-nella-pagina-html">Script nella pagina HTML</h3>
 <p>Può essere difficoltoso e inopportuno, per questioni di leggibilità del codice, inserire script complessi in modalità <strong>inline</strong>. L&rsquo;etichetta <code>script</code> è ideata proprio allo scopo di contenere codice JavaScript. Di seguito un esempio:</p>
@@ -309,14 +309,56 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 </span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>  alert(<span style="color:#009c00">&#34;script contenuto nella pagina web&#34;</span>);
 </span></span><span style="display:flex;"><span>&lt;/script&gt;
 </span></span></code></pre></div><h3 id="script-in-file-esterno">Script in file esterno</h3>
-<p>Generalmente è consigliato separare il codice HTML dal codice JavaScript, per cui, rispetto alla pagina web, il codice JavaScript è contenuto in un file esterno, tipicamente con estensione <code>.js</code>.  Per includere nella pagina web uno script contenuto in un file esterno, si utilizza l&rsquo;etichetta <code>script</code>, specificando nell&rsquo;attributo <code>src</code> il percorso o l&rsquo;indirizzo del file esterno.</p>
-<p>Di seguito un esempio di un primo file specificato mediante un percorso relativo ed un secondo file specificato mediante un percorso assoluto (un indirizzo web):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;file.js&#34;</span>&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;www.google.com/javascript/file.js&#34;</span>&gt;&lt;/script&gt;
+<p>Generalmente è consigliato separare il codice HTML dal codice JavaScript, per cui, rispetto alla pagina web, il codice JavaScript è contenuto in un file esterno, tipicamente con estensione <code>.js</code>.  Per includere nella pagina web uno script contenuto in un file esterno, si utilizza l&rsquo;etichetta <code>script</code>, specificando nell&rsquo;attributo <code>src</code> il percorso o l&rsquo;indirizzo del file esterno. E&rsquo; possibile indicare due tipi di riferimenti:</p>
+<ul>
+<li><strong>Riferimenti assoluti</strong>: La pagina web individua i file JavaScript utilizzando un percorso completo, indicando il sito web, il percorso ed il file. Un esempio è il seguente:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://sitoweb.com/libs/script.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://sitoweb.com/libs/altroScript.js&#34;</span>&gt;&lt;/script&gt;
+</span></span></code></pre></div><ul>
+<li><strong>Riferimenti relativi</strong>: La pagina web individua i file JavaScript utilizzando un percorso relativo alla posizione della pagina stessa. Un esempio è il seguente:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;script.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;./libs/altroScript.js&#34;</span>&gt;&lt;/script&gt;
 </span></span></code></pre></div><p>I file esterni ovviamente conterranno gli script, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#009c00">&#34;use strict&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>alert(<span style="color:#009c00">&#34;script contenuto in un file esterno&#34;</span>);
+</span></span></code></pre></div><h3 id="progetto-in-una-cartella-locale">Progetto in una cartella locale</h3>
+<p>E&rsquo; possibile creare un semplice progetto locale in una cartella.</p>
+<p><img src="/static/coding/web/javascript/javascript-progetto.png" alt="JavaScript - Progetto locale" title="JavaScript - Progetto locale"></p>
+<p>La pagina web contiene i riferimenti agli script:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;html lang=<span style="color:#009c00">&#34;it&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;head&gt;
+</span></span><span style="display:flex;"><span>    &lt;meta charset=<span style="color:#009c00">&#34;utf-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;viewport&#34;</span> content=<span style="color:#009c00">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;title&gt;Script&lt;/title&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- Riferimenti agli script --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;script src=<span style="color:#009c00">&#34;script.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>    &lt;script src=<span style="color:#009c00">&#34;altroScript.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>  &lt;/head&gt;
+</span></span><span style="display:flex;"><span>  &lt;body&gt;
+</span></span><span style="display:flex;"><span>    &lt;h1&gt;Progetto JavaScript&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>  &lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div><h2 id="compilazione-script-con-deno">Compilazione Script con Deno</h2>
+<p><a href="https://deno.com/">Deno</a> è un ambiente di esecuzione JavaScript che permette di creare programmi eseguibili a partire dai file sorgenti.</p>
+<p>Una volta salvato lo script in un file <code>script.js</code> (attenzione all&rsquo;estensione <code>.js</code>), è possibile procedere alla compilazione eseguendo il comando:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>deno compile script.js
+</span></span></code></pre></div><p>Tra le opzioni disponibili, abbiamo:</p>
+<ul>
+<li><code>--allow-read</code> permette la lettura del file-system;</li>
+<li><code>--allow-write</code> permette la scrittura sul file-system;</li>
+<li><code>--allow-net</code> permette l&rsquo;accesso alla rete;</li>
+<li><code>--allow-env</code> permette l&rsquo;accesso alle informazioni d&rsquo;ambiente;</li>
+<li><code>--allow-sys</code> permette l&rsquo;accesso alle informazioni del sistema operativo;</li>
+</ul>
+<p>Per compilare con la lista di permessi indicata, il comando è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>deno compile --allow-read --allow-write --allow-net --allow-sys script.js
+</span></span></code></pre></div><p>L&rsquo;output del programma è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Compile file:///home/user/script.js to myapp.exe
 </span></span></code></pre></div>
     </div>
       <hr>
