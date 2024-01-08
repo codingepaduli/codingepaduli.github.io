@@ -227,133 +227,18 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 22 minuti 
-        ( 4512 parole)
+        Tempo di lettura 15 minuti 
+        ( 3017 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="costanti-e-variabili">Costanti e variabili</h1>
-<p>Le costanti e le variabili sono aree di memoria in cui vengono memorizzate le informazioni di un programma in esecuzione, come immagini, suoni, frasi o valori numerici.</p>
-<p>Come si può intuire dal nome, le variabili contengo informazioni che possono essere modificate durante l&rsquo;esecuzione del programma, mentre le costanti contengono informazioni non modificabili.</p>
-<p>Le costanti e le variabili hanno le seguenti caratteristiche:</p>
-<ul>
-<li>sono identificate da un nome;</li>
-<li>sono associate ad un certo tipo di dato, come ad esempio dati numerici interi o decimali, dati booleani (vero o falso), dati alfanumerici (frasi);</li>
-<li>possono avere assegnato un valore iniziale;</li>
-</ul>
-<p>La creazione di una costante o di una variabile di un programma avviene utilizzando un&rsquo;istruzione di <strong>dichiarazione</strong>, che <strong>alloca</strong> in memoria la costante o la variabile e le associa un nome ed un tipo di dato.</p>
-<p>Per assegnare un valore iniziale ad una variabile o ad una costante si utilizza l&rsquo;operazione di <strong>inizializzazione</strong>.</p>
-<h2 id="sintassi">Sintassi</h2>
-<p>La <strong>dichiarazione delle variabili</strong> avviene utilizzando la parola chiave <code>let</code> seguita dai nomi delle variabili separati da virgola. L&rsquo;istruzione di dichiarazione termina con il carattere &ldquo;punto e virgola&rdquo; <code>;</code>. Un esempio di dichiarazione è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x, y, diametro;
-</span></span></code></pre></div><p>L&rsquo;inizializzazione delle variabili avviene utilizzando l&rsquo;operatore di assegnazione <code>=</code> seguito dal valore iniziale, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 20;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 100;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> diametro = 50;
-</span></span></code></pre></div><p>La <strong>dichiarazione delle costanti</strong> avviene utilizzando la parola chiave  <code>const</code> seguita dal nome della costante, dall&rsquo;operatore di assegnazione <code>=</code> e dal valore iniziale. L&rsquo;istruzione di dichiarazione termina con il carattere &ldquo;punto e virgola&rdquo; <code>;</code>. Un esempio di dichiarazione di costanti è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> X = 10;
-</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> VALORE_Y = 20;
-</span></span></code></pre></div><h3 id="sintassi-dei-nomi">Sintassi dei nomi</h3>
-<p>I nomi che possono identificare una variabile o una costante devono rispettare le seguenti regole:</p>
-<ul>
-<li>il nome non può iniziare con un carattere numerico;</li>
-<li>il nome non può contenere spazi;</li>
-<li>il nome può essere composto solo da caratteri alfanumerici e qualche carattere di punteggiatura come il trattino basso, non altri caratteri;</li>
-<li>ogni nome identifica una sola area di memoria, quindi non può essere utilizzato per una seconda variabile o costante;</li>
-<li>il nome non può essere uguale alle parole utilizzate dal linguaggio di programmazione;</li>
-</ul>
-<p>Un esempio di nomi di variabili che rispettano le regole indicate sono <code>a</code>, <code>b</code>, <code>valore1</code>, <code>valore2</code> e <code>coloreDelQuadrato</code>.</p>
-<p>Ecco invece alcuni nomi che non rispettano le regole indicate:</p>
-<ul>
-<li><code>1a</code> e <code>2valore</code> non validi perché iniziano con un numero;</li>
-<li><code>a 1</code> e <code>secondo valore</code> non validi perché contengono spazi;</li>
-<li><code>variabile-1</code> e <code>variabile%5</code> non validi perché contengono caratteri non ammessi, come il trattino <code>-</code> e la percentuale <code>%</code>;</li>
-<li><code>const</code> perché è una parola chiave del linguaggio di programmazione (serve a dichiarare le costanti).</li>
-</ul>
-<h3 id="regole-stilistiche-dei-nomi">Regole stilistiche dei nomi</h3>
-<p>Per i nomi delle variabili esiste una regola stilistica che consiglia di utilizzare solo caratteri alfanumerici e di scriverli con <strong>carattere a cammello</strong> (in inglese &ldquo;camelCase&rdquo;), ovvero tutte le parole che compongono il nome vengono unite (togliendo gli spazi), trasformando tutte le loro iniziali, tranne la prima, in maiuscolo. Ad esempio, per il calcolo della &ldquo;media punti delle partite effettuate&rdquo; si può dichiarare una variabile con nome <code>mediaPuntiDellePartiteEffettuate</code>.</p>
-<p>Anche per i nomi delle costanti esiste una regola stilistica che consiglia di scriverle trasformando tutti i <strong>caratteri in maiuscolo</strong> e trasformando gli spazi in &ldquo;trattino basso&rdquo; (in inglese &ldquo;underscore&rdquo;). Ad esempio, per il valore &ldquo;pi greco mezzi&rdquo; si può dichiarare una costante con nome <code>PI_GRECO_MEZZI</code>.</p>
-<h2 id="tipi-di-dato-e-sintassi">Tipi di dato e sintassi</h2>
-<p>Costanti e variabili sono associate ad un tipo di dato che può essere <strong>primitivo</strong> o <strong>complesso</strong>.</p>
-<p>A variabili e costanti associate ad un tipo primitivo è possibile associare un solo valore, mentre a quelle associate ad un tipo complesso è possibile associare liste di valori, oggetti e altre entità più complesse.</p>
-<p>La gestione del tipo di dato fa una forte differenza nei linguaggi di programmazione.</p>
-<p>Il linguaggio di programmazione si dice tipizzato <strong>dinamicamente</strong> se ad una variabile è possibile assegnare un valore di un certo tipo di dato e, successivamente, un valore di un tipo di dato differente.</p>
-<p>Il linguaggio di programmazione si dice tipizzato <strong>staticamente</strong> se ad una variabile è possibile assegnare valori esclusivamente di un certo tipo di dato. Se si tenta di assegnare successivamente un valore di un tipo di dato differente, viene generato un errore.</p>
-<h3 id="tipo-booleano">Tipo booleano</h3>
-<p>Le variabili possono avere assegnato un valore logico, detto Booleano, che può essere <code>true</code> oppure <code>false</code>.</p>
-<p>Il termine Booleano deriva dal matematico George Boole, che descrisse in forma algebrica la logica delle proposizioni.</p>
-<p>Un esempio di dichiarazione di variabili a cui viene associato un tipo booleano è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> trueVariable = <span style="color:#00f">true</span>;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> falseVariable = <span style="color:#00f">false</span>;
-</span></span></code></pre></div><h3 id="tipo-numerico">Tipo numerico</h3>
-<p>Le variabili possono avere assegnato un valore numerico, e quindi il tipo associato sarà numerico. Queste variabili possono avere un valore intero o decimale. Un esempio di dichiarazione di variabili a cui viene associato un tipo numerico è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> naturalNumber = 10;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> realNumber = 10.5;
-</span></span></code></pre></div><p>Il valore intero può essere rappresentato in decimale, esadecimale e binario.</p>
-<p>La rappresentazione decimale del valore da assegnare avviene nella forma classica, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> naturalNumber = 10;
-</span></span></code></pre></div><p>La rappresentazione esadecimale si esprime anteponendo al valore da assegnare alla variabile il simbolo <code>0x</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> naturalNumberHexadecimal = 0xFF;
-</span></span></code></pre></div><p>La rappresentazione binaria si esprime anteponendo al valore da assegnare alla variabile il simbolo <code>0b</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> naturalNumberBinary = 0b010111;
-</span></span></code></pre></div><p>Il valore intero o decimale può essere espresso in <a href="https://it.wikipedia.org/wiki/Notazione_scientifica" title="Link a Wikipedia sulla notazione scientifica">notazione scientifica</a>, nella classica forma <strong>mantissa</strong>, simbolo <code>e</code> (indicante l&rsquo;esponenziale) ed <strong>esponente</strong>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> realNumberExponentiation = 0.1E100;
-</span></span></code></pre></div><p>Tra i valori numerici esistono dei casi particolari:</p>
-<ul>
-<li><code>Nan</code> valore utilizzato per indicare un risultato che <a href="https://it.wikipedia.org/wiki/NaN" title="Link a Wikipedia su Not A Number">Non è un Numero</a> (dall&rsquo;inglese Not a Number). Questo valore è assegnato quando si tentano operazioni del tipo &ldquo;radice quadrata di meno uno&rdquo;, che non ha risultato nell&rsquo;insieme dei numeri reali;</li>
-<li><code>Infinity</code> utilizzato per indicare un valore infinito. Può essere specificato l&rsquo;infinito positivo <code>+Infinity</code> o anche negativo <code>-Infinity</code>.</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> positiveInfinity = +<span style="color:#00f">Infinity</span>;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> negativeInfinity = -<span style="color:#00f">Infinity</span>;
-</span></span></code></pre></div><h3 id="tipo-stringa">Tipo stringa</h3>
-<p>Le variabili possono avere assegnata una sequenza di caratteri e quindi il tipo associato sarà &ldquo;stringa&rdquo;. La sequenza di caratteri deve essere racchiusa tra singoli apici <code>'</code> o doppi apici <code>&quot;</code>.</p>
-<p>Un esempio di dichiarazione di variabile a cui viene associato un tipo stringa è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable = <span style="color:#009c00">&#39;Una stringa&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable2 = <span style="color:#009c00">&#39;Seconda stringa&#39;</span>;
-</span></span></code></pre></div><p>Per definire una sequenza di caratteri che occupi più righe, si può racchiudere tra apici inversi <code>`</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable = <span style="color:#009c00">`Una
-</span></span></span><span style="display:flex;"><span><span style="color:#009c00">stringa`</span>;
-</span></span></code></pre></div><p>Questo tipo di definizione è utilizzato anche per concatenare variabili o il risultato di un&rsquo;espressione all&rsquo;interno della stringa. Le variabili e le espressioni devono essere racchiuse tra simboli <code>${</code> e <code>}</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> num1 = 9;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> num2 = 18;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> messaggio = <span style="color:#009c00">`La somma dei
-</span></span></span><span style="display:flex;"><span><span style="color:#009c00">numeri </span><span style="color:#009c00">${</span>num1<span style="color:#009c00">}</span><span style="color:#009c00"> e </span><span style="color:#009c00">${</span>num2<span style="color:#009c00">}</span><span style="color:#009c00">
-</span></span></span><span style="display:flex;"><span><span style="color:#009c00">vale </span><span style="color:#009c00">${</span>num1 + num2<span style="color:#009c00">}</span><span style="color:#009c00">.`</span>;
-</span></span></code></pre></div><p>L&rsquo;esempio precedente produce il seguente output (su più righe):</p>
-<pre tabindex="0"><code class="language-output" data-lang="output">La somma dei
-numeri 9 e 18
-vale 27.
-</code></pre><h3 id="tipo-oggetto">Tipo oggetto</h3>
-<p>Un oggetto in ambito informatico è un dato complesso che risiede in memoria ed ha più proprietà ed anche dei metodi. Tipicamente la creazione di un oggetto è effettuata attraverso la parola chiave <code>new</code>.</p>
-<p>L&rsquo;operazione di inserimento di un oggetto in memoria è detta <strong>allocazione</strong>, quindi tecnicamente un oggetto è <strong>allocato</strong> in memoria.</p>
-<p>Un esempio di oggetto può essere una persona, che contiene proprietà quali nome, cognome, data di nascita, ecc..</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> persona = {
-</span></span><span style="display:flex;"><span>    firstname: <span style="color:#009c00">&#34;John&#34;</span>,
-</span></span><span style="display:flex;"><span>    lastname: <span style="color:#009c00">&#34;Doe&#34;</span>,
-</span></span><span style="display:flex;"><span>    id: 5566
-</span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><h3 id="tipi-oggetto-wrapper">Tipi oggetto wrapper</h3>
-<p>E&rsquo; possibile creare una versione ad oggetti (detta &ldquo;wrapper&rdquo;) dei tipi primitivi di dato, siano essi numerici, stringhe o booleani:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">var</span> naturalNumberObj = <span style="color:#00f">new</span> Number(10);
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> realNumberObj = <span style="color:#00f">new</span> Number(10.5);
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> toBeOrNotToBeObj = <span style="color:#00f">new</span> Boolean(<span style="color:#00f">true</span>);
-</span></span><span style="display:flex;"><span><span style="color:#00f">var</span> vectorObj = <span style="color:#00f">new</span> String(<span style="color:#009c00">&#34;one&#34;</span>);
-</span></span></code></pre></div><p>Come si nota, la parola chiave <code>new</code> viene utilizzata per creare degli oggetti.</p>
-<h3 id="tipo-null">Tipo null</h3>
-<p>Il valore <code>null</code> è un valore speciale che si utilizza per indicare un oggetto non ancora allocato in memoria.</p>
-<p>Un esempio di dichiarazione di variabile di tipo oggetto non ancora allocato in memoria è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> persona = <span style="color:#00f">null</span>;
-</span></span></code></pre></div><h3 id="tipo-undefined">Tipo undefined</h3>
-<p>Il valore <code>undefined</code> è un valore speciale che si utilizza per indicare una variabile il cui valore non è ancora definito.</p>
-<p>Un esempio di dichiarazione di variabile con valore ancora non definito è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> variabileIndefinita;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> variabileIndefinita2 = <span style="color:#00f">undefined</span>;
-</span></span></code></pre></div><h2 id="variabili-in-processing">Variabili in processing</h2>
-<p>In processing le variabili sono dichiarate ad inizio del programma. Di seguito un esempio completo:</p>
+      <h1 id="variabili-in-processing-e-p5js">Variabili in processing e p5.js</h1>
+<p>I programmi di processing e di p5.js sono realizzati in JavaScript, quindi le costanti e le variabili si dichiarano secondo le regole del linguaggio JavaScript. Le regole di JavaScript valgono anche per le operazioni di inizializzazione, di assegnazione, per le operazioni matematiche e per qualsiasi altra regola.</p>
+<p>Tipicamente in processing e p5.js le costanti e le variabili sono dichiarate ad inizio del programma, ad esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 150;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> d = 50;
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> d = 50;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> frase = <span style="color:#009c00">&#34;Hello world!&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
@@ -365,24 +250,11 @@ vale 27.
 </span></span><span style="display:flex;"><span>  circle(x, y, d);
 </span></span><span style="display:flex;"><span>  text(frase, 10, 10);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="istruzione-di-input-prompt">Istruzione di input <code>prompt</code></h2>
-<p>In programmazione le funzioni di input sono quelle funzioni che permettono ad un programma di ricevere dati dall&rsquo;esterno. Le funzioni di input permettono all&rsquo;utente di inserire in input i dati che il programma utilizza per effettuare calcoli.</p>
-<p>La funzione progettata allo scopo è <code>prompt</code>, la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: prompt(msg)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Parameters:
-</span></span><span style="display:flex;"><span>    msg    String: message to show
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Return:
-</span></span><span style="display:flex;"><span>    the input value
-</span></span></code></pre></div><p>Il parametro <code>msg</code> è un messaggio alfanumerico da visualizzare all&rsquo;utente, per cui deve essere inserito tra doppi apici.</p>
-<p>Il valore inserito dall&rsquo;utente può essere memorizzato all&rsquo;interno di una variabile.</p>
-<p>Un esempio d&rsquo;uso della funzione, che in questo caso memorizza l&rsquo;input dell&rsquo;utente nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = prompt(<span style="color:#009c00">&#34;inserisci un valore&#34;</span>);
-</span></span></code></pre></div><p>Dato che questa funzione blocca il programma in attesa di un input dell&rsquo;utente, deve essere utilizzata nella funzione <code>setup</code>, come nel seguente esempio:</p>
+</span></span></code></pre></div><p>La funzione JavaScript <code>prompt</code>, che visualizza un messaggio alfanumerico all&rsquo;utente e permette di memorizzare all&rsquo;interno di una variabile il valore inserito in input dall&rsquo;utente, si utilizza con un&rsquo;accortezza:</p>
+<p>Dato che questa funzione blocca il programma in attesa di un input dell&rsquo;utente, deve essere utilizzata nella funzione <code>setup</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 150;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> d;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> d = 50;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> frase;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
@@ -396,41 +268,35 @@ vale 27.
 </span></span><span style="display:flex;"><span>  circle(x, y, d);
 </span></span><span style="display:flex;"><span>  text(frase, 100, 30);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="input-di-un-numero-intero">Input di un numero intero</h3>
-<p>L&rsquo;input dell&rsquo;utente può essere una qualsiasi sequenza di caratteri alfanumerici. Quando si necessita di un input numerico intero allora lo si deve convertire al formato intero con la funzione <code>parseInt</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: parseInt(str)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Parameters:
-</span></span><span style="display:flex;"><span>  str    String: the string to convert to integer type
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Return:
-</span></span><span style="display:flex;"><span>  Number: the converted number
-</span></span></code></pre></div><p>Il parametro <code>str</code> rappresenta la stringa da convertire in numero.</p>
-<p>Il valore convertito può essere memorizzato all&rsquo;interno di una variabile.</p>
-<p>Un esempio di input numerico intero, che viene memorizzato nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = prompt(<span style="color:#009c00">&#34;inserisci un numero&#34;</span>);
-</span></span><span style="display:flex;"><span>x = parseInt(x);
-</span></span></code></pre></div><h3 id="input-di-un-numero-decimale">Input di un numero decimale</h3>
-<p>Quando si necessita di un input numerico decimale allora si deve convertire l&rsquo;input dell&rsquo;utente al formato decimale con la funzione <code>parseFloat</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: parseFloat(str)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Parameters:
-</span></span><span style="display:flex;"><span>  str    String: the string to convert to float type
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Return:
-</span></span><span style="display:flex;"><span>  Number: the converted number
-</span></span></code></pre></div><p>Il parametro <code>str</code> rappresenta la stringa da convertire in numero.</p>
-<p>Il valore convertito può essere memorizzato all&rsquo;interno di una variabile.</p>
-<p>Un esempio di input numerico decimale, che viene memorizzato nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = prompt(<span style="color:#009c00">&#34;inserisci un numero&#34;</span>);
-</span></span><span style="display:flex;"><span>x = parseFloat(x);
 </span></span></code></pre></div><h2 id="istruzione-di-output-text">Istruzione di output <code>text</code></h2>
 <p>In programmazione le funzioni di output sono quelle funzioni che producono un risultato visibile all&rsquo;utente o al sistema in cui viene eseguito il programma. Le funzioni di output determinano cosa viene stampato a schermo, mostrato su un&rsquo;interfaccia utente o salvato in un file.</p>
-<p>La funzione <code>text</code> è un esempio di funzione di output, infatti è utilizzata per visualizzare testo o variabili in output nell&rsquo;area da disegno, inserendo come primo parametro della funzione la variabile da mostrare e specificando come successivi parametri le coordinate in cui si desidera visualizzare il testo.</p>
-<p>Ad esempio, se si vuole visualizzare il valore della variabile <code>j</code> nell&rsquo;area da disegno, si può utilizzare la seguente istruzione:</p>
+<p>Le funzioni per l&rsquo;output nella console possono essere utilizzate come di consueto, ma in processing e in p5.js si preferisce utilizzare la funzione di output <code>text</code> che permette di visualizzare testo e/o variabili nell&rsquo;area da disegno. Questa funzione ha la seguente sintassi:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: text(value, x, y)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  value    String: text to be displayed.
+</span></span><span style="display:flex;"><span>  x        Number: x-coordinate of the text
+</span></span><span style="display:flex;"><span>  y        Number: y-coordinate of the text
+</span></span></code></pre></div><p>Ad esempio, se si vuole visualizzare il valore della variabile <code>j</code> nell&rsquo;area da disegno, si può utilizzare la seguente istruzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>text(j, 10, 50);
 </span></span></code></pre></div><p>In questo caso, il primo parametro attuale è la variabile <code>j</code>, i successivi parametri attuali sono le coordinate <code>10</code> e <code>50</code>.</p>
-<h2 id="assegnazione-di-un-valore-casuale">Assegnazione di un valore casuale</h2>
+<p>Anche con la funzione <code>text</code> possiamo sfruttare l&rsquo;operatore di concatenazione <code>+</code> per formare messaggi complessi. Ad esempio, alle coordinate (100, 30) possiamo visualizzare il messaggio composto dalle variabili inserite dall&rsquo;utente / calcolate dal programma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> base;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> altezza;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>  createCanvas(400, 400);
+</span></span><span style="display:flex;"><span>  base = prompt(<span style="color:#009c00">&#34;inserisci la base del rettangolo&#34;</span>);
+</span></span><span style="display:flex;"><span>  altezza = prompt(<span style="color:#009c00">&#34;inserisci l&#39;altezza del rettangolo&#34;</span>);
+</span></span><span style="display:flex;"><span>  perimetro = base * altezza;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">function</span> draw() {
+</span></span><span style="display:flex;"><span>  background(220);
+</span></span><span style="display:flex;"><span>  circle(x, y, d);
+</span></span><span style="display:flex;"><span>  text(<span style="color:#009c00">&#34;perimetro = base * altezza = &#34;</span> + base + <span style="color:#009c00">&#34; * &#34;</span> + altezza + <span style="color:#009c00">&#34; = &#34;</span> + perimetro, 100, 30);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="assegnazione-di-un-valore-casuale">Assegnazione di un valore casuale</h2>
 <p>E&rsquo; possibile assegnare ad una variabile un numero pseudo-casuale compreso in un certo range numerico. Per generare numeri casuali all&rsquo;interno di un range specifico, bisogna utilizzare la funzione <code>random()</code>, che ha la seguente sintassi:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: random([min], [max])
 </span></span><span style="display:flex;"><span>

@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 15 minuti 
-        ( 3082 parole)
+        Tempo di lettura 16 minuti 
+        ( 3338 parole)
     </span>
 </div></div>
     </header>
@@ -301,7 +301,7 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> realNumberExponentiation = 0.1E100;
 </span></span></code></pre></div><p>Tra i valori numerici esistono dei casi particolari:</p>
 <ul>
-<li><code>Nan</code> valore utilizzato per indicare un risultato che <a href="https://it.wikipedia.org/wiki/NaN" title="Link a Wikipedia su Not A Number">Non è un Numero</a> (dall&rsquo;inglese Not a Number). Questo valore è assegnato quando si tentano operazioni del tipo &ldquo;radice quadrata di meno uno&rdquo;, che non ha risultato nell&rsquo;insieme dei numeri reali;</li>
+<li><code>NaN</code> valore utilizzato per indicare un risultato che <a href="https://it.wikipedia.org/wiki/NaN" title="Link a Wikipedia su Not A Number">Non è un Numero</a> (dall&rsquo;inglese Not a Number). Questo valore è assegnato quando si tentano operazioni del tipo &ldquo;radice quadrata di meno uno&rdquo;, che non ha risultato nell&rsquo;insieme dei numeri reali;</li>
 <li><code>Infinity</code> utilizzato per indicare un valore infinito. Può essere specificato l&rsquo;infinito positivo <code>+Infinity</code> o anche negativo <code>-Infinity</code>.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> positiveInfinity = +<span style="color:#00f">Infinity</span>;
@@ -375,6 +375,13 @@ vale 27.
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x = 4;
 </span></span><span style="display:flex;"><span>x = 8 / 2;
 </span></span><span style="display:flex;"><span>x = x / 2;
+</span></span></code></pre></div><p>L&rsquo;operatore di concatenazione <code>+</code> permette di concatenare due stringhe. E&rsquo; molto utilizzato per creare messaggi, unendo frasi e variabili. Ad esempio, per realizzare un messaggio che mostra il calcolo del perimetro del quadrato si utilizza il seguente codice:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> base = 2;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> altezza = 4;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> perimetro = base * altezza;
+</span></span><span style="display:flex;"><span>alert(<span style="color:#009c00">&#34;perimetro = base * altezza = &#34;</span> + base + <span style="color:#009c00">&#34; * &#34;</span> + altezza + <span style="color:#009c00">&#34; = &#34;</span> + perimetro);
+</span></span></code></pre></div><p>In questo caso il messaggio è unito alle variabili <code>base</code> ed <code>altezza</code> ed infine alla variabile <code>perimetro</code>, formando la stringa risultate:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>perimetro = base * altezza = 2 * 4 = 8
 </span></span></code></pre></div><h2 id="istruzioni-di-input">Istruzioni di input</h2>
 <p>In programmazione, le funzioni di input sono quelle funzioni che permettono ad un programma di ricevere dati dall&rsquo;esterno. Le funzioni di input permettono all&rsquo;utente di inserire in input i dati che il programma utilizza per effettuare calcoli.</p>
 <h3 id="istruzione-di-input-prompt">Istruzione di input <code>prompt</code></h3>
@@ -404,7 +411,15 @@ vale 27.
 <p>Un esempio di input numerico intero, che viene memorizzato nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = prompt(<span style="color:#009c00">&#34;inserisci un numero&#34;</span>);
 </span></span><span style="display:flex;"><span>x = parseInt(x);
-</span></span></code></pre></div><h3 id="input-di-un-numero-decimale">Input di un numero decimale</h3>
+</span></span></code></pre></div><p>L&rsquo;istruzione effettua la conversione delle cifre fino al primo carattere non numerico. Nel caso non esista nessun valore numerico, restituisce il valore <code>NaN</code> (Non è un Numero).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>parseInt(<span style="color:#009c00">&#34;123.45&#34;</span>);   <span style="color:#f00;font-style:italic">// restituisce 123
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseInt(<span style="color:#009c00">&#34;123.45KG&#34;</span>); <span style="color:#f00;font-style:italic">// restituisce 123
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseInt(<span style="color:#009c00">&#34;aaaa&#34;</span>);     <span style="color:#f00;font-style:italic">// restituisce NaN
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseInt(<span style="color:#009c00">&#34;0.1e6&#34;</span>);    <span style="color:#f00;font-style:italic">// restituisce 0, il punto non è numerico
+</span></span></span></code></pre></div><p>L&rsquo;istruzione presenta due caratteristiche importanti, permette le rappresentazioni in ottale, ovvero quelle che iniziano con <code>0x</code>, e permette di convertire in una base differente da quella decimale, se specificata. Ad esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>parseInt(<span style="color:#009c00">&#34;0x77&#34;</span>);     <span style="color:#f00;font-style:italic">// restituisce 119 (= 7*16 + 7)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseInt(<span style="color:#009c00">&#34;ZR&#34;</span>, 36);   <span style="color:#f00;font-style:italic">// restituisce 1289 (= 35*36 + 29)
+</span></span></span></code></pre></div><h3 id="input-di-un-numero-decimale">Input di un numero decimale</h3>
 <p>Quando si necessita di un input numerico decimale allora si deve convertire l&rsquo;input dell&rsquo;utente al formato decimale con la funzione <code>parseFloat</code>, che ha la seguente sintassi:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: parseFloat(str)
 </span></span><span style="display:flex;"><span>
@@ -418,7 +433,11 @@ vale 27.
 <p>Un esempio di input numerico decimale, che viene memorizzato nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = prompt(<span style="color:#009c00">&#34;inserisci un numero&#34;</span>);
 </span></span><span style="display:flex;"><span>x = parseFloat(x);
-</span></span></code></pre></div><h2 id="tecnica-della-variabile-contatore">Tecnica della variabile contatore</h2>
+</span></span></code></pre></div><p>L&rsquo;istruzione effettua la conversione tenendo sia conto del carattere di separazione dei decimali (il punto o la virgola), sia il formato esponenziale. Nel caso il valore da convertire non è un valore numerico, restituisce il valore <code>NaN</code> (Non è un Numero). Ad esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>parseFloat(<span style="color:#009c00">&#34;.3&#34;</span>);    <span style="color:#f00;font-style:italic">// restituisce 0.3
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseFloat(<span style="color:#009c00">&#34;0.1e6&#34;</span>); <span style="color:#f00;font-style:italic">// restituisce 100000
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseFloat(<span style="color:#009c00">&#34;eee&#34;</span>);   <span style="color:#f00;font-style:italic">// restituisce NaN
+</span></span></span></code></pre></div><h2 id="tecnica-della-variabile-contatore">Tecnica della variabile contatore</h2>
 <p>La <strong>tecnica della variabile contatore</strong> è un modello molto utilizzato nella scrittura degli algoritmi e consiste nell&rsquo;utilizzare una variabile per contare il numero di volte in cui è eseguita una determinata azione o avviene un determinato evento.</p>
 <p>Per implementare questa tecnica è necessario:</p>
 <ol>
@@ -588,7 +607,7 @@ vale 27.
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/javascript/conversioni/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">JavaScript Lez. 04 - Identificazione del tipo e conversioni tra tipi</p>
+			<p class="pager__title">JavaScript Lez. 04 - I metodi e gli operatori</p>
 		</a>
 	</div>
 </nav>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JavaScript Lez. 04 - Identificazione del tipo e conversioni tra tipi - Lab. informatica</title>
+    <title>JavaScript Lez. 04 - I metodi e gli operatori - Lab. informatica</title>
 
-    <meta name="description" content="Identificazione del tipo di dato di una variabile e conversioni tra i vari tipi">
-        <meta property="og:title" content="JavaScript Lez. 04 - Identificazione del tipo e conversioni tra tipi" />
-<meta property="og:description" content="Identificazione del tipo di dato di una variabile e conversioni tra i vari tipi" />
+    <meta name="description" content="I metodi e gli operatori">
+        <meta property="og:title" content="JavaScript Lez. 04 - I metodi e gli operatori" />
+<meta property="og:description" content="I metodi e gli operatori" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/conversioni/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
 <meta property="article:published_time" content="2020-04-06T00:00:00+00:00" />
@@ -17,8 +17,8 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="JavaScript Lez. 04 - Identificazione del tipo e conversioni tra tipi"/>
-<meta name="twitter:description" content="Identificazione del tipo di dato di una variabile e conversioni tra i vari tipi"/>
+<meta name="twitter:title" content="JavaScript Lez. 04 - I metodi e gli operatori"/>
+<meta name="twitter:description" content="I metodi e gli operatori"/>
 
 
 
@@ -227,13 +227,13 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 3 minuti 
-        ( 588 parole)
+        Tempo di lettura 6 minuti 
+        ( 1192 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="identificazione-del-tipo-e-conversione-tra-tipi">Identificazione del tipo e conversione tra tipi</h1>
+      <h1 id="i-metodi-e-gli-operatori">I metodi e gli operatori</h1>
 <h2 id="parola-chiave-typeof-per-lidentificazione-del-tipo-di-dato">Parola chiave <code>typeof</code> per l&rsquo;identificazione del tipo di dato</h2>
 <p>E&rsquo; possibile identificare il tipo di una variabile utilizzando la parola chiave <code>typeof</code>.</p>
 <p>Supponendo di aver dichiarato le seguenti variabili:</p>
@@ -267,20 +267,6 @@
 </ul>
 <p>Come si può notare, sia la variabile oggetto, sia le variabili con valore <code>null</code>, sia la variabile sia tutte le variabili &ldquo;wrapper&rdquo; sono di tipo oggetto.</p>
 <p>Una precisazione però è da fare sulla variabile inizializzata a <code>null</code>: la specifica di ECMAScript prevede che, nonostante la variabile sia da considerare come tipo &ldquo;null&rdquo;, l&rsquo;operazione <code>typeof null</code> restituisca <code>object</code>.</p>
-<h2 id="conversioni-tra-tipi">Conversioni tra tipi</h2>
-<h3 id="conversioni-da-stringa-a-numero">Conversioni da stringa a numero</h3>
-<p>Per convertire dati dal formato stringa al formato intero, si usa l&rsquo;istruzione <code>parseInt()</code>, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>parseInt(<span style="color:#009c00">&#34;123.45&#34;</span>)   <span style="color:#f00;font-style:italic">// restituisce 123
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseInt(<span style="color:#009c00">&#34;123.45KG&#34;</span>) <span style="color:#f00;font-style:italic">// restituisce 123
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseInt(<span style="color:#009c00">&#34;aaaa&#34;</span>)     <span style="color:#f00;font-style:italic">// restituisce NaN
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseInt(<span style="color:#009c00">&#34;0.1e6&#34;</span>)    <span style="color:#f00;font-style:italic">// restituisce 0 perchè legge solo il numero intero 0
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseInt(<span style="color:#009c00">&#34;0x77&#34;</span>)     <span style="color:#f00;font-style:italic">// restituisce 119 (= 7*16 + 7)
-</span></span></span></code></pre></div><p>E&rsquo; possibile convertire la stringa in un numero con una base specifica, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>parseInt(<span style="color:#009c00">&#34;ZR&#34;</span>, 36) <span style="color:#f00;font-style:italic">// restituisce 1289 (= 35*36 + 29)
-</span></span></span></code></pre></div><p>Per convertire dati dal formato stringa al formato float, si usa l&rsquo;istruzione <code>parseFloat()</code>, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>parseFloat(<span style="color:#009c00">&#34;.3&#34;</span>)    <span style="color:#f00;font-style:italic">// restituisce 0.3
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>parseFloat(<span style="color:#009c00">&#34;0.1e6&#34;</span>) <span style="color:#f00;font-style:italic">// restituisce 100000
-</span></span></span></code></pre></div><p>Per i numeri decimali, non è prevista la conversione del numero in una base specifica.</p>
 <h2 id="conversione-da-numero-a-stringa">Conversione da numero a stringa</h2>
 <p>Per quanto concerne la conversione di un numero in formato stringa, è possibile utilizzare il metodo <code>toString()</code> dei tipi numerici, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 1;
@@ -323,7 +309,309 @@ x16 = &#34;a&#34;
 <pre tabindex="0"><code class="language-output" data-lang="output">&#34;1.23e+8&#34;
 &#34;1.23456789e+8&#34;
 &#34;1.2345678912345600e+8&#34;
-</code></pre>
+</code></pre><h2 id="operazioni-ed-operatori-per-le-stringhe">Operazioni ed operatori per le stringhe</h2>
+<p>Diversi operatori possono lavorare sulle stringhe:</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo operatore</th>
+<th>Operatore</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>concatenazione tra due stringhe</td>
+<td><code>x = &quot;una &quot; + &quot;stringa.&quot;</code></td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>confronto di eguaglianza di due stringhe</td>
+<td><code>&quot;una &quot; == &quot;stringa&quot;</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>confronto di due stringhe in base all&rsquo;ordinamento naturale</td>
+<td><code>&quot;una &quot; &gt; &quot;stringa&quot;</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>confronto di due stringhe in base all&rsquo;ordinamento naturale</td>
+<td><code>&quot;una &quot; &gt;= &quot;stringa&quot;</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>confronto di due stringhe in base all&rsquo;ordinamento naturale</td>
+<td><code>&quot;una &quot; &lt; &quot;stringa&quot;</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>confronto di due stringhe in base all&rsquo;ordinamento naturale</td>
+<td><code>&quot;una &quot; &lt;= &quot;stringa&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Per tutte le altre operazioni sulle stringhe si utilizzano le proprietà ed i metodi dell&rsquo;oggetto <code>String</code>. Tutte le stringhe sono istanze di questo oggetto (come le istanze di una classe nella programmazione OOP), e quindi le proprietà ed i metodi di questo oggetto <code>String</code> sono disponibili alle istanze.</p>
+<p>L&rsquo;unica proprietà disponibile nelle stringhe è <code>length</code>, ed è di sola lettura.</p>
+<table>
+<thead>
+<tr>
+<th>Proprietà</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lenghth</code></td>
+<td>lunghezza della stringa</td>
+<td><code>&quot;Questa è una stringa&quot;.length</code></td>
+</tr>
+</tbody>
+</table>
+<p>I metodi disponibili sono numerosissimi, per un elenco completo si rimanda alla documentazione della classe <code>String</code>. Di seguito un elenco dei metodi più utilizzati:</p>
+<table>
+<thead>
+<tr>
+<th>Metodi</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>charAt(index)</code></td>
+<td>restituisce il carattere alla posizione passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.charAt(0)</code></td>
+</tr>
+<tr>
+<td><code>endsWith(stringa)</code></td>
+<td>indica se termina con la stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.endsWith(&quot;inga&quot;)</code></td>
+</tr>
+<tr>
+<td><code>indexOf(stringa)</code></td>
+<td>restituisce l&rsquo;indice in cui appare la stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.indexOf(&quot;inga&quot;)</code></td>
+</tr>
+<tr>
+<td><code>lastIndexOf(stringa)</code></td>
+<td>restituisce l&rsquo;ultimo indice in cui appare la stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.lastIndexOf(&quot;ga&quot;)</code></td>
+</tr>
+<tr>
+<td><code>replace(stringa1, stringa2)</code></td>
+<td>sostituisce tutte le occorrenze della prima stringa passata come argomento con la seconda stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.replace(&quot;a&quot;, &quot;altra stringa&quot;)</code></td>
+</tr>
+<tr>
+<td><code>startsWith(stringa)</code></td>
+<td>indica se inizia con la stringa passata come argomento</td>
+<td><code>&quot;Questa è una stringa&quot;.startsWith(&quot;inga&quot;)</code></td>
+</tr>
+<tr>
+<td><code>substring(inizio, fine)</code></td>
+<td>restituisce la stringa inclusa tra le posizioni di inizio e fine</td>
+<td><code>&quot;Questa è una stringa&quot;.substring(1,4)</code></td>
+</tr>
+<tr>
+<td><code>toLowerCase()</code></td>
+<td>restituisce la stringa con tutti i caratteri in minuscolo</td>
+<td><code>&quot;Questa è una stringa&quot;.toLowerCase()</code></td>
+</tr>
+<tr>
+<td><code>toUpperCase()</code></td>
+<td>restituisce la stringa con tutti i caratteri in maiuscolo</td>
+<td><code>&quot;Questa è una stringa&quot;.toUpperCase()</code></td>
+</tr>
+<tr>
+<td><code>trim()</code></td>
+<td>rimuove tutti gli spazi iniziali e finali</td>
+<td><code>&quot;Questa è una stringa&quot;.trim()</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="costanti-e-funzioni-matematiche">Costanti e funzioni matematiche</h2>
+<p>Per tutte le altre operazioni sui numeri si utilizzano le proprietà ed i metodi della libreria <code>Math</code> e dell&rsquo;oggetto <code>Number</code>.</p>
+<p>Le costanti ed i metodi resi disponibili dalla libreria <code>Math</code> sono numerosissimi, per un elenco completo si rimanda alla documentazione della libreria. Di seguito un elenco delle costanti e dei metodi più utilizzati:</p>
+<table>
+<thead>
+<tr>
+<th>Costante</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Math.E</code></td>
+<td>Costante e di Eulero / Nepero</td>
+<td><code>&quot;La costante E vale&quot; + Math.E</code></td>
+</tr>
+<tr>
+<td><code>Math.PI</code></td>
+<td>Costante Π (pi greco) / Costante di Archimede</td>
+<td><code>&quot;La costante &amp;Pi; vale&quot; + Math.PI</code></td>
+</tr>
+<tr>
+<td><code>Math.SQRT2</code></td>
+<td>Valore della radice quadrata di 2</td>
+<td><code>&quot;La costante SQRT2 vale&quot; + Math.SQRT2</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Metodi</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>abs(x)</code></td>
+<td>restituisce il valore assoluto del numero x</td>
+<td><code>Math.abs(-2)</code></td>
+</tr>
+<tr>
+<td><code>cbrt(x)</code></td>
+<td>restituisce la radice cubica del numero x</td>
+<td><code>Math.cbrt(-2)</code></td>
+</tr>
+<tr>
+<td><code>ceil(x)</code></td>
+<td>restituisce l&rsquo;arrotondamento di x al numero intero più grande</td>
+<td><code>Math.ceil(-2.12)</code></td>
+</tr>
+<tr>
+<td><code>cos(x)</code></td>
+<td>restituisce il coseno dell&rsquo;angolo x (espresso in radianti)</td>
+<td><code>Math.cos(-2)</code></td>
+</tr>
+<tr>
+<td><code>exp(x)</code></td>
+<td>restituisce l&rsquo;esponenziale in base E del numero x</td>
+<td><code>Math.exp(2)</code></td>
+</tr>
+<tr>
+<td><code>floor(x)</code></td>
+<td>restituisce l&rsquo;arrotondamento di x al numero intero più piccolo</td>
+<td><code>Math.floor(-2)</code></td>
+</tr>
+<tr>
+<td><code>log(x)</code></td>
+<td>restituisce il logaritmo in base E del numero x</td>
+<td><code>Math.log(2)</code></td>
+</tr>
+<tr>
+<td><code>max(x, y, w, ...)</code></td>
+<td>restituisce il maggiore dei valori passati come argomento</td>
+<td><code>Math.max(-2, 3, 4, -8)</code></td>
+</tr>
+<tr>
+<td><code>min(x, y, w, ...)</code></td>
+<td>restituisce il minore dei valori passati come argomento</td>
+<td><code>Math.min(-2, 3, 4, -8)</code></td>
+</tr>
+<tr>
+<td><code>pow(x, y)</code></td>
+<td>restituisce il valore di x elevato ad y</td>
+<td><code>Math.pow(2, 3)</code></td>
+</tr>
+<tr>
+<td><code>random()</code></td>
+<td>restituisce un valore casuale tra zero ed uno</td>
+<td><code>Math.random()</code></td>
+</tr>
+<tr>
+<td><code>round(x)</code></td>
+<td>restituisce l&rsquo;arrotondamento di x al numero intero più vicino</td>
+<td><code>Math.round(3.12)</code></td>
+</tr>
+<tr>
+<td><code>sin(x)</code></td>
+<td>restituisce il seno dell&rsquo;angolo x (espresso in radianti)</td>
+<td><code>Math.sin(2)</code></td>
+</tr>
+<tr>
+<td><code>sqrt(x)</code></td>
+<td>restituisce la radice quadrata di x</td>
+<td><code>Math.sqrt(2)</code></td>
+</tr>
+<tr>
+<td><code>trunc(x)</code></td>
+<td>restituisce il valore di x senza la parte decimale</td>
+<td><code>Math.trunc(3.2)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="le-costanti-e-i-metodi-numerici">Le costanti e i metodi numerici</h2>
+<p>Le costanti ed i metodi comunemente utilizzati dell&rsquo;oggetto <code>Number</code> sono di seguito descritti:</p>
+<table>
+<thead>
+<tr>
+<th>Costante</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Number.NaN</code></td>
+<td>Valore speciale indicante &lsquo;Not a Number&rsquo;</td>
+<td><code>&quot;Il valore NaN vale&quot; + Number.NaN</code></td>
+</tr>
+<tr>
+<td><code>Number.NEGATIVE_INFINITY</code></td>
+<td>Valore speciale indicante &lsquo;Infinito negativo&rsquo;</td>
+<td><code>&quot; -Infinito &quot; + Number.NEGATIVE_INFINITY</code></td>
+</tr>
+<tr>
+<td><code>Number.POSITIVE_INFINITY</code></td>
+<td>Valore speciale indicante &lsquo;Infinito positivo&rsquo;</td>
+<td><code>&quot; +Infinito &quot; + Number.POSITIVE_INFINITY</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Metodi</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>isNaN()</code></td>
+<td>indica se il valore è &lsquo;NaN&rsquo;</td>
+<td><code>Number.isNaN(-2)</code></td>
+</tr>
+<tr>
+<td><code>isFinite()()</code></td>
+<td>indica se il valore è un numero finito</td>
+<td><code>Number.isFinite()</code></td>
+</tr>
+<tr>
+<td><code>isInteger()</code></td>
+<td>indica se il valore è un numero intero</td>
+<td><code>Number.isInteger()</code></td>
+</tr>
+<tr>
+<td><code>parseFloat(string)</code></td>
+<td>converte la stringa in un numero decimale</td>
+<td><code>Number.parseFloat(&quot;2.15&quot;)</code></td>
+</tr>
+<tr>
+<td><code>parseInt(string)</code></td>
+<td>converte la stringa in un numero intero</td>
+<td><code>Number.parseInt(&quot;2.15&quot;)</code></td>
+</tr>
+</tbody>
+</table>
+
     </div>
   </article>
 </main>
