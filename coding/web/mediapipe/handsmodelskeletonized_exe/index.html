@@ -228,21 +228,21 @@
     
 	<span class="meta__text">
         Tempo di lettura 1 minuto 
-        ( 7 parole)
+        ( 3 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="scheletrizzazione-mano">Scheletrizzazione mano</h1>
-<h2 id="doesnt-work-on-firefox-why">(doesn&rsquo;t work on Firefox, why?)</h2>
+<!-- markdownlint-disable MD033 -->
 <!-- L'errore su Firefox sembra simile a questo 
   <a href="https://github.com/google/mediapipe/issues/2704">https://github.com/google/mediapipe/issues/2704</a>  
   devo sperare in un aggiornamento delle librerie 
 -->
 <p><img src="https://mediapipe.dev/images/mobile/hand_landmarks.png" alt="Hands landmarks (punti di riferimento della mano)"></p>
-<!-- markdownlint-disable MD033 -->
 <div class="container">
     <div id="handsModel"></div>
+    <button id="fullscreen">Fullscreen</button>
     <video class="input_video"></video>
 </div>
 <script>
@@ -337,6 +337,18 @@
             image(imgHand, handTopLeftX, handTopLeftY, handWidth, handHeight);
         }
     }
+
+    const fullscreenBtn = document.querySelector("#fullscreen");
+
+    fullscreenBtn.addEventListener('click', function(event) {
+      if (!document.fullscreenElement) {
+        let canvasNode = document.querySelector('#defaultCanvas0');
+        canvasNode.requestFullscreen();
+      } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    });
+
 </script>
 <!-- markdownlint-enable MD033 -->
 

@@ -122,3 +122,14 @@ var animate = function () {
 };
 
 animate();
+
+const fullscreenBtn = document.querySelector("#fullscreen");
+
+fullscreenBtn.addEventListener('click', function(event) {
+  if (!document.fullscreenElement) {
+    let canvasNode = document.querySelector('#canvas');
+    canvasNode.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+});

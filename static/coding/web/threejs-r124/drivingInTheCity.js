@@ -51,7 +51,7 @@ gltfLoader.load(modelUrl, (gltf) => {
     gltfModel.rotation.y += 0.5;
 
     cars = gltfModel.getObjectByName('Cars');
-    myCar = cars.children[18];
+    myCar = cars.children[20];
     myCar.add(camera);
     console.log(cars);
 });
@@ -113,8 +113,12 @@ document.addEventListener('keydown', function(event) {
 });
 
 const fullscreenBtn = document.querySelector("#fullscreen");
-const canvas = document.querySelector('#canvas');
 
 fullscreenBtn.addEventListener('click', function(event) {
-  canvas.classList.toggle('absolute');
+  if (!document.fullscreenElement) {
+    let canvasNode = document.querySelector('#canvas');
+    canvasNode.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
 });

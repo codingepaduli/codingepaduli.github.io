@@ -228,7 +228,7 @@
     
 	<span class="meta__text">
         Tempo di lettura 1 minuto 
-        ( 2 parole)
+        ( 3 parole)
     </span>
 </div></div>
     </header>
@@ -237,6 +237,7 @@
 <!-- markdownlint-disable MD033 -->
 <div class="container">
     <div id="flappyBird"></div>
+    <button id="fullscreen">Fullscreen</button>
     <video class="input_video"></video>
 </div>
 <script>
@@ -366,6 +367,18 @@
         }
 
     }
+
+    const fullscreenBtn = document.querySelector("#fullscreen");
+
+    fullscreenBtn.addEventListener('click', function(event) {
+      if (!document.fullscreenElement) {
+        let canvasNode = document.querySelector('#defaultCanvas0');
+        canvasNode.requestFullscreen();
+      } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    });
+
 </script>
 <!-- markdownlint-enable MD033 -->
 

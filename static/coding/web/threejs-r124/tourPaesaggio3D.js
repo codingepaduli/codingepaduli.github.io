@@ -128,8 +128,12 @@ document.addEventListener('keydown', function(event) {
 });
 
 const fullscreenBtn = document.querySelector("#fullscreen");
-const canvas = document.querySelector('#canvas');
 
 fullscreenBtn.addEventListener('click', function(event) {
-  canvas.classList.toggle('absolute');
+  if (!document.fullscreenElement) {
+    let canvasNode = document.querySelector('#canvas');
+    canvasNode.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
 });

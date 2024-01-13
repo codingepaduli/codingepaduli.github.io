@@ -228,17 +228,17 @@
     
 	<span class="meta__text">
         Tempo di lettura 1 minuto 
-        ( 8 parole)
+        ( 4 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="scheletrizzazione-della-posa">Scheletrizzazione della posa</h1>
-<h2 id="doesnt-work-on-firefox-why">(doesn&rsquo;t work on Firefox, why?)</h2>
-<p><img src="https://mediapipe.dev/images/mobile/pose_tracking_full_body_landmarks.png" alt="Pose landmarks (punti di riferimento della posa)"></p>
 <!-- markdownlint-disable MD033 -->
+<p><img src="https://mediapipe.dev/images/mobile/pose_tracking_full_body_landmarks.png" alt="Pose landmarks (punti di riferimento della posa)"></p>
 <div class="container">
     <div id="handsModel"></div>
+    <button id="fullscreen">Fullscreen</button>
     <video class="input_video"></video>
 </div>
 <script>
@@ -364,6 +364,18 @@
         }
 
     }
+
+    const fullscreenBtn = document.querySelector("#fullscreen");
+
+    fullscreenBtn.addEventListener('click', function(event) {
+      if (!document.fullscreenElement) {
+        let canvasNode = document.querySelector('#defaultCanvas0');
+        canvasNode.requestFullscreen();
+      } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    });
+
 </script>
 <!-- markdownlint-enable MD033 -->
 
