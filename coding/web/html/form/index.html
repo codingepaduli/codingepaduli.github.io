@@ -228,7 +228,7 @@
     
 	<span class="meta__text">
         Tempo di lettura 16 minuti 
-        ( 3310 parole)
+        ( 3365 parole)
     </span>
 </div></div>
     </header>
@@ -356,7 +356,7 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;nome&#34;</span>&gt;nome utente:&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;nome&#34;</span> name=<span style="color:#009c00">&#34;nomeUtente&#34;</span> required placeholder=<span style="color:#009c00">&#34;Inserisci il nome qui (obbligatorio)&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;input name=<span style="color:#009c00">&#34;identificativo&#34;</span> hidden&gt;
+</span></span><span style="display:flex;"><span>&lt;input name=<span style="color:#009c00">&#34;identificativo&#34;</span> hidden &gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;company&#34;</span>&gt;società:&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;company&#34;</span> name=<span style="color:#009c00">&#34;company&#34;</span> readonly&gt;
@@ -380,13 +380,13 @@
 </span></span><span style="display:flex;"><span>    &lt;label&gt;password&lt;/label&gt;
 </span></span><span style="display:flex;"><span>    &lt;input placeholder=<span style="color:#009c00">&#34;inserisci la password&#34;</span> name=<span style="color:#009c00">&#34;password&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    &lt;button type=<span style="color:#009c00">&#34;submit&#34;</span> formaction=<span style="color:#009c00">&#34;www.server.com/login&#34;</span> &gt;Invia richiesta&lt;/button&gt;
+</span></span><span style="display:flex;"><span>    &lt;button type=<span style="color:#009c00">&#34;submit&#34;</span> formaction=<span style="color:#009c00">&#34;www.server.com/login&#34;</span>&gt;Invia richiesta&lt;/button&gt;
 </span></span><span style="display:flex;"><span>    &lt;button type=<span style="color:#009c00">&#34;reset&#34;</span>&gt;Ripristina valori iniziali&lt;/button&gt;
 </span></span><span style="display:flex;"><span>&lt;/form&gt;
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/html/form02.png" alt="Immagine del form" title="Immagine del secondo form"></p>
 <h4 id="input-testuale">Input testuale</h4>
-<p>Il campo di input, se non diversamente specificato, permette l&rsquo;inserimento di testo. E&rsquo; comunque buona norma specificare il tipo testuale, indicando l&rsquo;attributo <code>type=&quot;text&quot;</code>.</p>
+<p>Il campo di input, se non diversamente specificato, permette l&rsquo;inserimento di testo. È comunque buona norma specificare il tipo testuale, indicando l&rsquo;attributo <code>type=&quot;text&quot;</code>.</p>
 <p>Un campo di testo può avere dei vincoli di lunghezza minima e/o massima di caratteri. Questi vincoli si specificano attraverso gli attributi:</p>
 <ul>
 <li><code>minlenght</code>: indica il numero minimo di caratteri (compreso);</li>
@@ -403,8 +403,9 @@
 <li><code>autocomplete=&quot;country-name&quot;</code> per suggerirgli lo stato (&ldquo;Italia&rdquo;);</li>
 <li><code>autocomplete=&quot;cc-name&quot;</code> per suggerirgli il nome dell&rsquo;intestatario del conto corrente.</li>
 </ul>
-<p>Un esempio di campo di testo con i vincoli descritti è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;text&#34;</span> name=<span style="color:#009c00">&#34;descrizione&#34;</span> minlenght=<span style="color:#009c00">&#34;10&#34;</span> maxlenght=<span style="color:#009c00">&#34;150&#34;</span> autocomplete=<span style="color:#009c00">&#34;on&#34;</span>&gt;
+<p>È consigliato inserire anche la direzione del testo, soprattutto se vi è la possibilità che un utente inserisca i dati in una lingua che prevede la direzione del testo da sinistra a destra, come l&rsquo;arabo o l&rsquo;ebraico. L&rsquo;attributo <code>dir=&quot;auto&quot;</code> permette al browser di scegliere la direzione del testo per il campo.</p>
+<p>Un esempio di campo di testo con i vincoli e gli attributi descritti è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;text&#34;</span> name=<span style="color:#009c00">&#34;descrizione&#34;</span> minlenght=<span style="color:#009c00">&#34;10&#34;</span> maxlenght=<span style="color:#009c00">&#34;150&#34;</span> autocomplete=<span style="color:#009c00">&#34;on&#34;</span> dir=<span style="color:#009c00">&#34;auto&#34;</span>&gt;
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/html/inputTesto.png" alt="Input di testo" title="Input di testo"></p>
 <h4 id="input-di-una-password">Input di una password</h4>
@@ -630,200 +631,6 @@ I dati da inviare possono essere di diversa natura, per cui sono previsti
 </footer>
     </div>
 
-
-
-<style>
- 
-.snowflake {
-  color: #fff;
-  font-size: 1.5em;
-  font-family: Arial, sans-serif;
-  text-shadow: 0 0 6px #100;
-}
-
-@keyframes snowflakes-fall {
-  0% {
-    transform: translateY(0vh);
-  }
-
-  100% {
-    transform: translateY(110vh);
-  }
-}
-
-@keyframes snowflakes-shake {
-  0% {
-    transform: translateX(0px);
-  }
-
-  50% {
-    transform: translateX(80px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-.snowflake {
-  position: fixed;
-  top: -10%;
-  z-index: 9999;
-   
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
-
-  animation-name: snowflakes-shake;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-}
-
-.snowflake .inner {
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-name: snowflakes-fall;
-  animation-play-state: running;
-  animation-timing-function: linear;
-}
-
-.snowflake:nth-of-type(0) {
-  left: 1%;
-  animation-delay: 0s;
-}
-.snowflake:nth-of-type(0) .inner {
-  animation-delay: 0s;
-}
-
-.snowflake:nth-of-type(1) {
-  left: 10%;
-  animation-delay: 1s;
-}
-.snowflake:nth-of-type(1) .inner {
-  animation-delay: 1s;
-}
-
-.snowflake:nth-of-type(2) {
-  left: 20%;
-  animation-delay: 0.5s;
-}
-.snowflake:nth-of-type(2) .inner {
-  animation-delay: 6s;
-}
-
-.snowflake:nth-of-type(3) {
-  left: 30%;
-  animation-delay: 2s;
-}
-.snowflake:nth-of-type(3) .inner {
-  animation-delay: 4s;
-}
-
-.snowflake:nth-of-type(4) {
-  left: 40%;
-  animation-delay: 2s;
-}
-.snowflake:nth-of-type(4) .inner {
-  animation-delay: 2s;
-}
-
-.snowflake:nth-of-type(5) {
-  left: 50%;
-  animation-delay: 3s;
-}
-.snowflake:nth-of-type(5) .inner {
-  animation-delay: 8s;
-}
-
-.snowflake:nth-of-type(6) {
-  left: 60%;
-  animation-delay: 2s;
-}
-.snowflake:nth-of-type(6) .inner {
-  animation-delay: 6s;
-}
-
-.snowflake:nth-of-type(7) {
-  left: 70%;
-  animation-delay: 1s;
-}
-.snowflake:nth-of-type(7) .inner {
-  animation-delay: 2.5s;
-}
-
-.snowflake:nth-of-type(8) {
-  left: 80%;
-  animation-delay: 0s;
-}
-.snowflake:nth-of-type(8) .inner {
-  animation-delay: 1s;
-}
-
-.snowflake:nth-of-type(9) {
-  left: 90%;
-  animation-delay: 1.5s;
-}
-.snowflake:nth-of-type(9) .inner {
-  animation-delay: 3s;
-}
-
-.snowflake:nth-of-type(10) {
-  left: 25%;
-  animation-delay: 0s;
-}
-.snowflake:nth-of-type(10) .inner {
-  animation-delay: 2s;
-}
-
-.snowflake:nth-of-type(11) {
-  left: 65%;
-  animation-delay: 2.5s;
-}
-.snowflake:nth-of-type(11) .inner {
-  animation-delay: 4s;
-}
-  </style>
-  <div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-  </div>
-
-  <script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 9 minuti 
-        ( 1906 parole)
+        Tempo di lettura 16 minuti 
+        ( 3275 parole)
     </span>
 </div></div>
     </header>
@@ -239,7 +239,14 @@
 <p>Prima dell&rsquo;avvento del linguaggio CSS, un sito web veniva realizzato come un&rsquo;insieme di documenti HTML che ripetevano in ogni documento gli stili grafici degli elementi presenti nel documento stesso. Modificare lo stile grafico di un elemento comune richiedeva la modifica di ogni documento HTML.</p>
 <p>Con l&rsquo;avvento del linguaggio CSS, un sito web viene realizzato come un&rsquo;insieme di documenti HTML che condividono gli stessi fogli di stile CSS. Una singola modifica ai fogli di stile si ripercuote su tutte le pagine del sito web.</p>
 <p>Nel tempo questo linguaggio è diventando uno dei principali linguaggi del World Wide Web ed è stato standardizzato dal W3C. Attualmente sono state pubblicate tre versioni (CSS1, CSS2 e CSS3) che hanno aggiunto sempre più funzionalità, permettendo la personalizzazione di più di 3000 proprietà di un documento web.</p>
-<h2 id="proprietà-grafiche">Proprietà grafiche</h2>
+<h2 id="commenti">Commenti</h2>
+<p>I <strong>commenti</strong> sono delle note, delle spiegazioni che il programmatore inserisce per descrivere e documentare parti di codice e che chiariscono le intenzioni del programmatore. I commenti sono completamente ignorati nella fase in cui i fogli di stile sono applicati alla pagina web.</p>
+<p>I commenti si scrivono tra le sequenze di caratteri <code>/*</code> e <code>*/</code>. È importante porre attenzione a non inserire spazi tra le sequenze di caratteri indicati. Un commento può occupare più righe.</p>
+<p>Di seguito, un esempio di commento multilinea:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>/* commento relativo i
+</span></span><span style="display:flex;"><span>     contenuti dei
+</span></span><span style="display:flex;"><span>     fogli di stile CSS */
+</span></span></code></pre></div><h2 id="proprietà-grafiche">Proprietà grafiche</h2>
 <p>Una proprietà grafica è una coppia nome-valore. Le proprietà sono numerosissime, ognuna ha il suo nome ed un valore che può essere numerico oppure scelto da una lista di elementi.</p>
 <p>La sintassi di una proprietà è molto semplice: il nome ed il valore sono separati da un &ldquo;due punti&rdquo; <code>:</code> e la regola termina con un punto e virgola <code>;</code>, come di seguito indicato:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>nome: valore;
@@ -354,7 +361,8 @@
 <li>l&rsquo;attributo <code>rel</code> ha valore <code>stylesheet</code>, ad indicare che si tratta di un foglio di stile;</li>
 <li>l&rsquo;attributo <code>href</code> indica l&rsquo;indirizzo relativo o assoluto del foglio di stile; nell&rsquo;esempio appena riportato, l&rsquo;indirizzo relativo <code>css/style.css</code> è relativo al proprio sito web, mentre quello assoluto <code>https://sitoweb.it/css/style.css</code> non ha questo limite dato che viene indicato anche il nome del sito web;</li>
 </ul>
-<h2 id="proprietà-per-il-testo">Proprietà per il testo</h2>
+<h2 id="proprietà-di-formattazione-testo">Proprietà di formattazione testo</h2>
+<p>Le proprietà di formattazione testo permettono di applicare al testo le formattazioni &ldquo;grassetto&rdquo;, &ldquo;corsivo&rdquo;, &ldquo;sottolineato&rdquo;, permettono di indicare il colore del testo, il colore di sfondo e tutte le altre proprietà applicabili. Di seguito si elencano le principali:</p>
 <p>Per rendere il testo grassetto si utilizza la proprietà <code>font-weight</code> con valore <code>bold</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">font-weight</span>: <span style="color:#00f">bold</span>;
@@ -427,7 +435,156 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">background-image</span>: url(<span style="color:#009c00">&#34;images/sfondo.jpg&#34;</span>);
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">background-repeat</span>: <span style="color:#00f">no-repeat</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="fogli-di-stile-già-pronti">Fogli di stile già pronti</h2>
+</span></span></code></pre></div><h2 id="proprietà-di-delimitazione-elementi">Proprietà di delimitazione elementi</h2>
+<p>Le proprieta CSS di delimitazione degli elementi permettono di definire lo spazio interno e lo spazio esterno di un elemento e lo spazio di confine tra gli elementi.</p>
+<p>Lo spazio interno, detto anche riempimento interno (dall&rsquo;inglese &ldquo;padding&rdquo;) è lo spazio che si applica intorno ad un elemento, internamente al bordo, ovvero interno al confine tra l&rsquo;elemento e gli altri elementi. È definito da quattro proprietà:</p>
+<p>Lo spazio interno superiore di un elemento è controllato dalla proprietà <code>padding-top</code> che indica la dimensione in una delle unità di misura CSS sopra definite, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding-top</span>: 1<span style="color:#00f">%</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Lo spazio interno a destra di un elemento è controllato dalla proprietà <code>padding-right</code> che indica la dimensione in una delle unità di misura CSS sopra definite, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding-right</span>: 1<span style="color:#00f">rem</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Lo spazio interno inferiore di un elemento è controllato dalla proprietà <code>padding-bottom</code> che indica la dimensione in una delle unità di misura CSS sopra definite, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding-bottom</span>: 2<span style="color:#00f">vh</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Lo spazio interno a sinistra di un elemento è controllato dalla proprietà <code>padding-left</code> che indica la dimensione in una delle unità di misura CSS sopra definite, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding-left</span>: 3<span style="color:#00f">em</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Complessivamente è possibile indicare la spaziatura interna con la proprietà <code>padding</code> ed indicare le dimensioni. Si deve indicare <strong>rigorosamente</strong> in ordine la dimensione dello spazio superiore, poi la dimensione dello spazio a destra, poi la dimensione dello spazio inferiore ed infine la dimensione dello spazio a sinistra. Un esempio è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">/* Spazio interno superiore, a destra, 
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">     inferiore ed a sinistra. */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding</span>: 3<span style="color:#00f">em</span> 1<span style="color:#00f">%</span> 4<span style="color:#00f">px</span> 4<span style="color:#00f">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Lo spazio esterno, detto anche riempimento esterno (dall&rsquo;inglese &ldquo;margin&rdquo;) è lo spazio che si applica intorno ad un elemento, esternamente al bordo, ovvero esterno al confine tra l&rsquo;elemento e gli altri elementi. È definito da quattro proprietà:</p>
+<p>Lo spazio esterno superiore di un elemento è controllato dalla proprietà <code>margin-top</code> che indica la dimensione in una delle unità di misura CSS sopra definite, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin-top</span>: 1<span style="color:#00f">%</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Lo spazio esterno a destra di un elemento è controllato dalla proprietà <code>margin-right</code> che indica la dimensione in una delle unità di misura CSS sopra definite, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin-right</span>: 1<span style="color:#00f">rem</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Lo spazio esterno inferiore di un elemento è controllato dalla proprietà <code>margin-bottom</code> che indica la dimensione in una delle unità di misura CSS sopra definite, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin-bottom</span>: 2<span style="color:#00f">vh</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Lo spazio esterno a sinistra di un elemento è controllato dalla proprietà <code>margin-left</code> che indica la dimensione in una delle unità di misura CSS sopra definite, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin-left</span>: 3<span style="color:#00f">em</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Complessivamente è possibile indicare la spaziatura esterna con la proprietà <code>margin</code> ed indicare le dimensioni. Si deve indicare <strong>rigorosamente</strong> in ordine la dimensione dello spazio superiore, poi la dimensione dello spazio a destra, poi la dimensione dello spazio inferiore ed infine la dimensione dello spazio a sinistra. Un esempio è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">/* Spazio interno superiore, a destra, 
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">     inferiore ed a sinistra. */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin</span>: 3<span style="color:#00f">em</span> 1<span style="color:#00f">%</span> 4<span style="color:#00f">px</span> 4<span style="color:#00f">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Il bordo di un elemento è caratterizzato dallo spessore della linea, dallo stile e dal colore della linea.</p>
+<p>È possibile indicare lo spessore della linea del bordo attraverso le quattro proprietà:</p>
+<ul>
+<li><code>border-top-width</code>: spessore del bordo superiore;</li>
+<li><code>border-right-width</code>: spessore del bordo destro;</li>
+<li><code>border-bottom-width</code>: spessore del bordo inferiore;</li>
+<li><code>border-left-width</code>: spessore del bordo sinistro;</li>
+</ul>
+<p>Un esempio che indichi i valori della dimensione del bordo in una delle unità di misura CSS sopra definite è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>border-top-width: 12px;
+</span></span><span style="display:flex;"><span>border-right-width: 3%;
+</span></span><span style="display:flex;"><span>border-bottom-width: 4rem;
+</span></span><span style="display:flex;"><span>border-left-width: 2em;
+</span></span></code></pre></div><p>In alternativa allo spessore, è possibile indica lo spessore con uno dei seguenti valori:</p>
+<ul>
+<li><code>thin</code>: spessore della linea sottile;</li>
+<li><code>medium</code>: spessore medio della linea;</li>
+<li><code>thick</code>: spessore della linea consistente;</li>
+</ul>
+<p>Complessivamente è possibile indicare lo spessore del bordo con la proprietà <code>border-width</code> seguito dallo spessore. Si deve indicare <strong>rigorosamente</strong> in ordine lo spessore superiore, poi lo spessore a destra, poi lo spessore inferiore ed infine lo spessore a sinistra. Un esempio è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">/* Spessore bordo superiore, destro, 
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">     inferiore e sinistro. */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">border-width</span>: <span style="color:#00f">thin</span> 1<span style="color:#00f">%</span> <span style="color:#00f">thick</span> 4<span style="color:#00f">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>È possibile indicare lo stile della linea del bordo attraverso le quattro proprietà:</p>
+<ul>
+<li><code>border-top-style</code>: style del bordo superiore;</li>
+<li><code>border-right-style</code>: style del bordo destro;</li>
+<li><code>border-bottom-style</code>: style del bordo inferiore;</li>
+<li><code>border-left-style</code>: style del bordo sinistro;</li>
+</ul>
+<p>Il valore assegnabile è uno dei seguenti:</p>
+<ul>
+<li><code>dotted</code>: Definisce uno stile punteggiato;</li>
+<li><code>dashed</code>: Definisce uno stile tratteggiato;</li>
+<li><code>solid</code>: Definisce uno stile lineare;</li>
+<li><code>double</code>: Definisce uno stile a doppia linea;</li>
+<li><code>groove</code>: Definisce uno stile 3D scanalato;</li>
+<li><code>ridge</code>: Definisce uno stile 3D increspato;</li>
+<li><code>inset</code>: Definisce uno stile 3D incastonato;</li>
+<li><code>outset</code>: Definisce uno stile 3D in rilievo;</li>
+<li><code>none</code>: Stile non applicato;</li>
+<li><code>hidden</code>: Definisce uno stile non visibile;</li>
+</ul>
+<p>Un esempio che indichi i valori dello stile della linea del bordo è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>border-top-style: dotted;
+</span></span><span style="display:flex;"><span>border-right-style: dashed;
+</span></span><span style="display:flex;"><span>border-bottom-style: solid;
+</span></span><span style="display:flex;"><span>border-left-style: double;
+</span></span></code></pre></div><p>Complessivamente è possibile indicare lo stile della linea del bordo con la proprietà <code>border-style</code> seguito dagli stili. Si deve indicare <strong>rigorosamente</strong> in ordine lo stile della linea del bordo superiore, poi lo stile della linea del bordo a destra, poi lo stile della linea del bordo inferiore ed infine lo stile della linea del bordo a sinistra. Un esempio è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">/* stile della linea bordo superiore, 
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">     destro, inferiore e sinistro. */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">border-style</span>: <span style="color:#00f">red</span> <span style="color:#00f">blue</span> #00FF00 #FFFFFF;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>È possibile indicare il colore della linea del bordo attraverso le quattro proprietà:</p>
+<ul>
+<li><code>border-top-color</code>: colore del bordo superiore;</li>
+<li><code>border-right-color</code>: colore del bordo destro;</li>
+<li><code>border-bottom-color</code>: colore del bordo inferiore;</li>
+<li><code>border-left-color</code>: colore del bordo sinistro;</li>
+</ul>
+<p>Un esempio che indichi i valori del colore del bordo è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>border-top-color: red;
+</span></span><span style="display:flex;"><span>border-right-color: #00FF00;
+</span></span><span style="display:flex;"><span>border-bottom-color: blue;
+</span></span><span style="display:flex;"><span>border-left-color: #00FFFF;
+</span></span></code></pre></div><p>Complessivamente è possibile indicare il colore del bordo con la proprietà <code>border-color</code> seguito dai colori. Si deve indicare <strong>rigorosamente</strong> in ordine il colore del bordo superiore, poi il colore del bordo a destra, poi il colore del bordo inferiore ed infine il colore del bordo a sinistra. Un esempio è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">/* Colore bordo superiore, destro, 
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">     inferiore e sinistro. */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">border-color</span>: <span style="color:#00f">red</span> <span style="color:#00f">blue</span> #00FF00 #FFFFFF;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>È possibile specificare inoltre tutte le proprietà dei bordi attraverso un&rsquo;unica proprietà <code>border</code> che specifica i valori di spessore della linea (proprietà <code>border-width</code>), stile della linea (proprietà <code>border-style</code>)e colore della linea del bordo (proprietà <code>border-color</code>), rigorosamente nell&rsquo;ordine appena indicato.  Un esempio è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">/* Spessore linea, stile linea e 
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">     colore linea del bordo. */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">border</span>: 5<span style="color:#00f">px</span> <span style="color:#00f">dotted</span> #FF00FF;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>La proprietà <code>outline</code> indica un margine stilizzato, ma la dimensione da indicare è ingannevole, perché non crea distanza tra il bordo del componente ed i componenti circostanti. Se si vuole creare la distanza, la proprietà  <code>outline</code> deve essere associata alla proprietà <code>margin</code>, che indica la distanza.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">border</span>: 15<span style="color:#00f">px</span> <span style="color:#00f">solid</span> #FF00FF;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin</span>: 15<span style="color:#00f">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">outline</span>: 15<span style="color:#00f">px</span> <span style="color:#00f">solid</span> <span style="color:#00f">yellow</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Tutte queste proprietà creano un modello &ldquo;scatola&rdquo; dei componenti, in cui lo spazio interno, il bordo e lo spazio esterno sono indicate dalle proprietà appena viste. Un esempio di questo modello è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>h1, p {
+</span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">/* Spazio interno e colore 
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">     dello spazio interno. */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding</span>: 15<span style="color:#00f">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">background</span>:  <span style="color:#00f">cyan</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">border</span>: 15<span style="color:#00f">px</span> <span style="color:#00f">solid</span> #FF00FF;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">/* Margine e stile margine (outline) */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin</span>: 15<span style="color:#00f">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">outline</span>: 15<span style="color:#00f">px</span> <span style="color:#00f">dashed</span> <span style="color:#00f">yellow</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Il codice appena presentato genera un margine tratteggiato di colore giallo, un bordo di colore rosa e uno spazio interno di colore azzurro, come visibile nella seguente figura:</p>
+<p><img src="/static/coding/web/css/intro-modelloBoxCss.png" alt="Modello &amp;ldquo;box&amp;rdquo;" title="Modello box"></p>
+<h2 id="fogli-di-stile-già-pronti">Fogli di stile già pronti</h2>
 <p>Esistono numerosi stili CSS già pronti per l&rsquo;utilizzo, è necessario solamente indicarli nella pagina HTML. Si può scegliere ad esempio uno dei seguenti:</p>
 <p>W3C Core - Modernist:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;stylesheet&#34;</span> href=<span style="color:#009c00">&#34;https://www.w3.org/StyleSheets/Core/Modernist&#34;</span> type=<span style="color:#009c00">&#34;text/css&#34;</span>&gt;
@@ -435,7 +592,7 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;stylesheet&#34;</span> href=<span style="color:#009c00">&#34;https://www.w3.org/StyleSheets/Core/Chocolate&#34;</span> type=<span style="color:#009c00">&#34;text/css&#34;</span>&gt;
 </span></span></code></pre></div><p>MVP CSS</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;stylesheet&#34;</span> href=<span style="color:#009c00">&#34;https://unpkg.com/mvp.css&#34;</span>&gt; 
-</span></span></code></pre></div><p>Per iniziare a sperimentare, può utilizzare un menu a tendina dal quale scegliere lo stile, inserendo in pagina il codice seguente:</p>
+</span></span></code></pre></div><p>Per iniziare a sperimentare, si può utilizzare un menu a tendina dal quale scegliere lo stile, inserendo in pagina il codice seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://dohliam.github.io/dropin-minimal-css/switcher.js&#34;</span> type=<span style="color:#009c00">&#34;text/javascript&#34;</span>&gt;&lt;/script&gt;
 </span></span></code></pre></div>
     </div>
@@ -446,6 +603,14 @@
 
 
 
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/css/selettoricss/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">I selettori CSS </p>
+		</a>
+	</div>
+</nav>
 <div class="article-content">
 
   
@@ -467,200 +632,6 @@
 </footer>
     </div>
 
-
-
-<style>
- 
-.snowflake {
-  color: #fff;
-  font-size: 1.5em;
-  font-family: Arial, sans-serif;
-  text-shadow: 0 0 6px #100;
-}
-
-@keyframes snowflakes-fall {
-  0% {
-    transform: translateY(0vh);
-  }
-
-  100% {
-    transform: translateY(110vh);
-  }
-}
-
-@keyframes snowflakes-shake {
-  0% {
-    transform: translateX(0px);
-  }
-
-  50% {
-    transform: translateX(80px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-.snowflake {
-  position: fixed;
-  top: -10%;
-  z-index: 9999;
-   
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
-
-  animation-name: snowflakes-shake;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-}
-
-.snowflake .inner {
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-name: snowflakes-fall;
-  animation-play-state: running;
-  animation-timing-function: linear;
-}
-
-.snowflake:nth-of-type(0) {
-  left: 1%;
-  animation-delay: 0s;
-}
-.snowflake:nth-of-type(0) .inner {
-  animation-delay: 0s;
-}
-
-.snowflake:nth-of-type(1) {
-  left: 10%;
-  animation-delay: 1s;
-}
-.snowflake:nth-of-type(1) .inner {
-  animation-delay: 1s;
-}
-
-.snowflake:nth-of-type(2) {
-  left: 20%;
-  animation-delay: 0.5s;
-}
-.snowflake:nth-of-type(2) .inner {
-  animation-delay: 6s;
-}
-
-.snowflake:nth-of-type(3) {
-  left: 30%;
-  animation-delay: 2s;
-}
-.snowflake:nth-of-type(3) .inner {
-  animation-delay: 4s;
-}
-
-.snowflake:nth-of-type(4) {
-  left: 40%;
-  animation-delay: 2s;
-}
-.snowflake:nth-of-type(4) .inner {
-  animation-delay: 2s;
-}
-
-.snowflake:nth-of-type(5) {
-  left: 50%;
-  animation-delay: 3s;
-}
-.snowflake:nth-of-type(5) .inner {
-  animation-delay: 8s;
-}
-
-.snowflake:nth-of-type(6) {
-  left: 60%;
-  animation-delay: 2s;
-}
-.snowflake:nth-of-type(6) .inner {
-  animation-delay: 6s;
-}
-
-.snowflake:nth-of-type(7) {
-  left: 70%;
-  animation-delay: 1s;
-}
-.snowflake:nth-of-type(7) .inner {
-  animation-delay: 2.5s;
-}
-
-.snowflake:nth-of-type(8) {
-  left: 80%;
-  animation-delay: 0s;
-}
-.snowflake:nth-of-type(8) .inner {
-  animation-delay: 1s;
-}
-
-.snowflake:nth-of-type(9) {
-  left: 90%;
-  animation-delay: 1.5s;
-}
-.snowflake:nth-of-type(9) .inner {
-  animation-delay: 3s;
-}
-
-.snowflake:nth-of-type(10) {
-  left: 25%;
-  animation-delay: 0s;
-}
-.snowflake:nth-of-type(10) .inner {
-  animation-delay: 2s;
-}
-
-.snowflake:nth-of-type(11) {
-  left: 65%;
-  animation-delay: 2.5s;
-}
-.snowflake:nth-of-type(11) .inner {
-  animation-delay: 4s;
-}
-  </style>
-  <div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-  </div>
-
-  <script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

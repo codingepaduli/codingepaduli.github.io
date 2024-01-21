@@ -6,13 +6,31 @@
     <description>Recent content in Categories on Lab. informatica</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Thu, 21 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>coding</title>
       <link>http://codingepaduli.github.io/categories/coding/</link>
-      <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>http://codingepaduli.github.io/categories/css/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>http://codingepaduli.github.io/categories/web/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/categories/web/</guid>
       <description></description>
     </item>
     
@@ -26,29 +44,11 @@
     </item>
     
     <item>
-      <title>web</title>
-      <link>http://codingepaduli.github.io/categories/web/</link>
-      <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/categories/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>three.js</title>
       <link>http://codingepaduli.github.io/categories/three.js/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/categories/three.js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CSS</title>
-      <link>http://codingepaduli.github.io/categories/css/</link>
-      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/categories/css/</guid>
       <description></description>
     </item>
     

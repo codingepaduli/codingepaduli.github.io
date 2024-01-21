@@ -6,7 +6,7 @@
     <description>Recent content in coding on Lab. informatica</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Thu, 21 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>La nascita del computer e delle telecomunicazioni</title>
       <link>http://codingepaduli.github.io/coding/storia/</link>
@@ -431,6 +431,15 @@
     </item>
     
     <item>
+      <title>I selettori CSS </title>
+      <link>http://codingepaduli.github.io/coding/web/css/selettoricss/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/css/selettoricss/</guid>
+      <description>I selettori CSS</description>
+    </item>
+    
+    <item>
       <title>Esercitazioni con la libreria grafica three.js</title>
       <link>http://codingepaduli.github.io/coding/web/threejs-r124/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
@@ -445,7 +454,7 @@
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/css/intro/</guid>
-      <description>Il linguaggio CSS, l&amp;rsquo;evoluzione e le caratteristiche</description>
+      <description>Il linguaggio CSS, introduzione e proprietà principali</description>
     </item>
     
     <item>
@@ -566,7 +575,7 @@
     </item>
     
     <item>
-      <title>Introduzione a Git</title>
+      <title>Git</title>
       <link>http://codingepaduli.github.io/tools/git/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
       

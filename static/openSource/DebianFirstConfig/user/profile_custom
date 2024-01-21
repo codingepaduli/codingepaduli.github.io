@@ -86,3 +86,9 @@ fi
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 #
 # export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle 
+
+export GRADLE_HOME="/opt/gradle/gradle-8.0"
+export PATH=$PATH:$GRADLE_HOME/bin/
+
+# set in place of JAVA_HOME, to be used specifically for Cordova development
+export CORDOVA_JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64

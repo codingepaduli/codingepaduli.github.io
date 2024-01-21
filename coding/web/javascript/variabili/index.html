@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 16 minuti 
-        ( 3338 parole)
+        Tempo di lettura 17 minuti 
+        ( 3491 parole)
     </span>
 </div></div>
     </header>
@@ -573,6 +573,12 @@ vale 27.
 <p>La scrittura di una tabella nella console, attraverso l&rsquo;istruzione <code>console.table()</code>, è particolarmente utile poiché permette di visualizzare array e matrici in un formato molto comprensibile:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> vettore = [<span style="color:#009c00">&#39;uno&#39;</span>, <span style="color:#009c00">&#39;due&#39;</span>, <span style="color:#009c00">&#39;tre&#39;</span>];
 </span></span><span style="display:flex;"><span>console.table(vettore);
+</span></span></code></pre></div><p>È possibile selezionare le proprietà da visualizzare, filtrandole:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> p1 = { nome: <span style="color:#009c00">&#34;Tyrone&#34;</span>, cognome: <span style="color:#009c00">&#34;Jones&#34;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> p2 = { nome: <span style="color:#009c00">&#34;Janet&#34;</span>, cognome: <span style="color:#009c00">&#34;Smith&#34;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> p3 = { nome: <span style="color:#009c00">&#34;Maria&#34;</span>, cognome: <span style="color:#009c00">&#34;Cruz&#34;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> vettore = [p1, p2, p3];
+</span></span><span style="display:flex;"><span>console.table(vettore, [<span style="color:#009c00">&#34;nome&#34;</span>]);
 </span></span></code></pre></div><h3 id="tempo-di-esecuzione">Tempo di esecuzione</h3>
 <p>Utilissima pure la scrittura in console del tempo di esecuzione intercorso tra due punti dello script, indicati dalle istruzioni <code>console.time()</code> e <code>console.timeEnd()</code>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.time(<span style="color:#009c00">&#34;tempo impiegato:&#34;</span>);
@@ -588,7 +594,20 @@ vale 27.
 </span></span><span style="display:flex;"><span>console.dir(obj);
 </span></span></code></pre></div><p>Un esempio completo della console contenente l&rsquo;output di tutte le istruzioni viste è il seguente:</p>
 <p><img src="/static/coding/web/javascript/javascript-console-primi-script.png" alt="Console - output di tutte le istruzioni" title="Console - output di tutte le istruzioni"></p>
-
+<h3 id="alias-e-selezione-oggetti">Alias e selezione oggetti</h3>
+<p>Nella console è possibile utilizzare due alias per velocizzare la selezione degli elementi:</p>
+<ul>
+<li><code>$('selettoreCSS')</code> sta ad indicare <code>document.querySelector('selettoreCSS')</code>;</li>
+<li><code>$$('selettoreCSS')</code> sta ad indicare <code>document.querySelectorAll('selettoreCSS')</code>;</li>
+</ul>
+<p>Il testo <code>'selettoreCSS'</code> sta ad indicare un selettore CSS, per maggiori informazioni si rimanda alla lezione sull&rsquo;argomento.</p>
+<p>I metodi della console permettono di selezionare uno specifico elemento oppure tutti gli elementi che hanno determinate caratteristiche e di mostrarle in un elenco. Ad esempio, per visualizzare tutti i collegamenti:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.table($$(<span style="color:#009c00">&#39;a&#39;</span>), [<span style="color:#009c00">&#39;href&#39;</span>]);
+</span></span></code></pre></div><p>Come secondo esempio visualizziamo tutte le immagini presenti nella pagina ed il corrispondente testo alternativo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.table($$(<span style="color:#009c00">&#39;img&#39;</span>), [<span style="color:#009c00">&#39;src&#39;</span>, <span style="color:#009c00">&#39;alt&#39;</span>]);
+</span></span></code></pre></div><p>Se si vuole visualizzare una specifica immagine con identificativo <code>img1</code> ed il corrispondente testo alternativo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.table($(<span style="color:#009c00">&#39;#img1&#39;</span>), [<span style="color:#009c00">&#39;src&#39;</span>, <span style="color:#009c00">&#39;alt&#39;</span>]);
+</span></span></code></pre></div>
     </div>
   </article>
 </main>
@@ -632,200 +651,6 @@ vale 27.
 </footer>
     </div>
 
-
-
-<style>
- 
-.snowflake {
-  color: #fff;
-  font-size: 1.5em;
-  font-family: Arial, sans-serif;
-  text-shadow: 0 0 6px #100;
-}
-
-@keyframes snowflakes-fall {
-  0% {
-    transform: translateY(0vh);
-  }
-
-  100% {
-    transform: translateY(110vh);
-  }
-}
-
-@keyframes snowflakes-shake {
-  0% {
-    transform: translateX(0px);
-  }
-
-  50% {
-    transform: translateX(80px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-.snowflake {
-  position: fixed;
-  top: -10%;
-  z-index: 9999;
-   
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
-
-  animation-name: snowflakes-shake;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-}
-
-.snowflake .inner {
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-name: snowflakes-fall;
-  animation-play-state: running;
-  animation-timing-function: linear;
-}
-
-.snowflake:nth-of-type(0) {
-  left: 1%;
-  animation-delay: 0s;
-}
-.snowflake:nth-of-type(0) .inner {
-  animation-delay: 0s;
-}
-
-.snowflake:nth-of-type(1) {
-  left: 10%;
-  animation-delay: 1s;
-}
-.snowflake:nth-of-type(1) .inner {
-  animation-delay: 1s;
-}
-
-.snowflake:nth-of-type(2) {
-  left: 20%;
-  animation-delay: 0.5s;
-}
-.snowflake:nth-of-type(2) .inner {
-  animation-delay: 6s;
-}
-
-.snowflake:nth-of-type(3) {
-  left: 30%;
-  animation-delay: 2s;
-}
-.snowflake:nth-of-type(3) .inner {
-  animation-delay: 4s;
-}
-
-.snowflake:nth-of-type(4) {
-  left: 40%;
-  animation-delay: 2s;
-}
-.snowflake:nth-of-type(4) .inner {
-  animation-delay: 2s;
-}
-
-.snowflake:nth-of-type(5) {
-  left: 50%;
-  animation-delay: 3s;
-}
-.snowflake:nth-of-type(5) .inner {
-  animation-delay: 8s;
-}
-
-.snowflake:nth-of-type(6) {
-  left: 60%;
-  animation-delay: 2s;
-}
-.snowflake:nth-of-type(6) .inner {
-  animation-delay: 6s;
-}
-
-.snowflake:nth-of-type(7) {
-  left: 70%;
-  animation-delay: 1s;
-}
-.snowflake:nth-of-type(7) .inner {
-  animation-delay: 2.5s;
-}
-
-.snowflake:nth-of-type(8) {
-  left: 80%;
-  animation-delay: 0s;
-}
-.snowflake:nth-of-type(8) .inner {
-  animation-delay: 1s;
-}
-
-.snowflake:nth-of-type(9) {
-  left: 90%;
-  animation-delay: 1.5s;
-}
-.snowflake:nth-of-type(9) .inner {
-  animation-delay: 3s;
-}
-
-.snowflake:nth-of-type(10) {
-  left: 25%;
-  animation-delay: 0s;
-}
-.snowflake:nth-of-type(10) .inner {
-  animation-delay: 2s;
-}
-
-.snowflake:nth-of-type(11) {
-  left: 65%;
-  animation-delay: 2.5s;
-}
-.snowflake:nth-of-type(11) .inner {
-  animation-delay: 4s;
-}
-  </style>
-  <div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-  </div>
-
-  <script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
