@@ -6,20 +6,29 @@
     <description>Recent content in interesting on Lab. informatica</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
     </item>
     
     <item>
+      <title>Link interessanti</title>
+      <link>http://codingepaduli.github.io/interesting/others/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/others/</guid>
+      <description>Set di link interessanti</description>
+    </item>
+    
+    <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
@@ -32,15 +41,6 @@
       
       <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
       <description>Set di link relativi alle app su F-Droid</description>
-    </item>
-    
-    <item>
-      <title>Link interessanti</title>
-      <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/others/</guid>
-      <description>Set di link interessanti</description>
     </item>
     
     <item>

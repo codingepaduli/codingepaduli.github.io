@@ -431,6 +431,33 @@
     </item>
     
     <item>
+      <title>Corsi e guide - istruzione di base</title>
+      <link>http://codingepaduli.github.io/interesting/educational/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
+      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+    </item>
+    
+    <item>
+      <title>Link interessanti</title>
+      <link>http://codingepaduli.github.io/interesting/others/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/others/</guid>
+      <description>Set di link interessanti</description>
+    </item>
+    
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
+    
+    <item>
       <title>I selettori CSS </title>
       <link>http://codingepaduli.github.io/coding/web/css/selettoricss/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
@@ -449,15 +476,6 @@
     </item>
     
     <item>
-      <title>Corsi e guide - istruzione di base</title>
-      <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
-      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
-    </item>
-    
-    <item>
       <title>CSS</title>
       <link>http://codingepaduli.github.io/coding/web/linkcss/</link>
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
@@ -473,15 +491,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/css/intro/</guid>
       <description>Il linguaggio CSS, introduzione e proprietà principali</description>
-    </item>
-    
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
     </item>
     
     <item>
@@ -518,15 +527,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/flappybird/</guid>
       <description>Esercizi di AI - 05 Flappy Bird</description>
-    </item>
-    
-    <item>
-      <title>Link interessanti</title>
-      <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/interesting/others/</guid>
-      <description>Set di link interessanti</description>
     </item>
     
     <item>
