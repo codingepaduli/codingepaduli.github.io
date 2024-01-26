@@ -10,6 +10,11 @@ MY_DOT_FILES_FOLDER="$MY_SVN_REPO_FOLDER/codingepaduli/static/static/openSource/
 ln -sfn "$MY_DOT_FILES_FOLDER/profile_custom" "$HOME/.profile_custom"
 chmod 600 "$HOME/.profile_custom"
 
+# Config podman to search container images on https://docker.io/
+mkdir -p $HOME/.config/containers
+touch $HOME/.config/containers/registries.conf
+echo 'unqualified-search-registries=["docker.io"]' > "$HOME/.config/containers/registries.conf" 
+
 # make backup of .bashrc
 cp "$HOME/.bashrc" "$HOME/.bashrc_backup"
 

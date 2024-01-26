@@ -8,12 +8,12 @@
     <language>it-IT</language>
     <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>JavaScript Lez. 09 - Document Object Model (DOM)</title>
+      <title>JavaScript Lez. 09 - Manipolazione del DOM</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/dom/</guid>
-      <description>09 - Document Object Model (DOM)</description>
+      <description>09 - Manipolazione del DOM</description>
     </item>
     
     <item>
@@ -23,15 +23,6 @@
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/selettoricss/</guid>
       <description>08 - DOM e selettori CSS</description>
-    </item>
-    
-    <item>
-      <title>JavaScript Lez. 07 - Istruzioni basilari per processare il contenuto di una pagina web</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/interazionehtml/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/javascript/interazionehtml/</guid>
-      <description>07 - Istruzioni basilari per processare il contenuto di una pagina web</description>
     </item>
     
     <item>

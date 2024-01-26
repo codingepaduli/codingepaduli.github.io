@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JavaScript Lez. 09 - Document Object Model (DOM) - Lab. informatica</title>
+    <title>JavaScript Lez. 09 - Manipolazione del DOM - Lab. informatica</title>
 
-    <meta name="description" content="09 - Document Object Model (DOM)">
-        <meta property="og:title" content="JavaScript Lez. 09 - Document Object Model (DOM)" />
-<meta property="og:description" content="09 - Document Object Model (DOM)" />
+    <meta name="description" content="09 - Manipolazione del DOM">
+        <meta property="og:title" content="JavaScript Lez. 09 - Manipolazione del DOM" />
+<meta property="og:description" content="09 - Manipolazione del DOM" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/dom/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
 <meta property="article:published_time" content="2020-08-01T00:00:00+00:00" />
@@ -17,8 +17,8 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="JavaScript Lez. 09 - Document Object Model (DOM)"/>
-<meta name="twitter:description" content="09 - Document Object Model (DOM)"/>
+<meta name="twitter:title" content="JavaScript Lez. 09 - Manipolazione del DOM"/>
+<meta name="twitter:description" content="09 - Manipolazione del DOM"/>
 
 
 
@@ -227,17 +227,81 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 3 minuti 
-        ( 463 parole)
+        Tempo di lettura 5 minuti 
+        ( 1037 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="09---dom---operazioni-sui-nodi">09 - DOM - Operazioni sui nodi</h1>
-<p>Il Document Object Model (DOM) è un&rsquo;interfaccia che permette di rappresentare la struttura di un documento come un albero, consentendo le classiche operazioni di creazione, lettura, modifica e cancellazione di un nodo dell&rsquo;albero (CRUD è un&rsquo;abbreviazione che indica le operazioni indicate, ovvero Create, Read, Update e Delete).</p>
-<p>Le operazioni di selezione di un elemento del documento avvengono attraverso i selettori CSS. Le funzioni principali per la selezione di elementi sono <code>document.querySelector</code> e <code>document.querySelectorAll</code>.</p>
-<p>La selezione non è l&rsquo;unica operazione possibile su DOM. Le tipiche operazioni di creazione, lettura, aggiornamento e cancellazione (CRUD: Create, Read, Update, Delete) sono possibili su un qualsiasi elemento della pagina.</p>
-<h2 id="gestione-di-elementi">Gestione di elementi</h2>
+      <h1 id="09---manipolazione-del-dom-ed-eventi">09 - Manipolazione del DOM ed eventi</h1>
+<p>Il Document Object Model (DOM) è un&rsquo;interfaccia che permette di rappresentare la struttura di un documento HTML come un albero e che fornisce le funzionalità per selezionare gli elementi sui quali effettuare le classiche operazioni di creazione, lettura, modifica e cancellazione di un nodo dell&rsquo;albero (CRUD è un&rsquo;abbreviazione che indica le operazioni indicate, ovvero Create, Read, Update e Delete).</p>
+<p>Permette di selezionare gli elementi, accedere alle proprietà di un elemento e di ricevere notifiche di eventi che avvengono nella pagina o su uno specifico elemento.</p>
+<h2 id="selezione-e-proprietà-degli-elementi">Selezione e proprietà degli elementi</h2>
+<p>Le operazioni di selezione di un elemento del documento avvengono attraverso i selettori CSS. I selettori che restituiscono un solo elemento possono essere gestiti attraverso la funzione <code>document.querySelector</code>, mentre quelli che restituiscono più di un elemento possono essere gestiti attraverso la funzione<code>document.querySelectorAll</code>. Quando si hanno più elementi, può essere necessario un ciclo iterativo per scorrerli ed elaborarli uno ad uno.</p>
+<p>Entrambe le funzioni di selezione indicate prendono come argomento una stringa che rappresenta un <strong>selettore CSS</strong>. Per un dettaglio completo sui <strong>selettori CSS</strong> si rimanda al relativo capitolo ed alle specifiche di ECMAScript.</p>
+<p>Le principali proprietà di un elemento a cui è possibile accedere nelle funzioni JavaScript sono le seguenti:</p>
+<ul>
+<li><code>innerHTML</code>: il contenuto dell&rsquo;elemento selezionato (senza l&rsquo;elemento);</li>
+<li><code>outerHTML</code>: l&rsquo;elemento selezionato ed il suo contenuto;</li>
+<li><code>value</code>: proprietà accessibile solo per i campi di input, restituisce il valore in formato stringa.</li>
+</ul>
+<p>Ad esempio, utilizzando il <strong>selettore CSS per identificatore</strong>, è possibile selezionare un elemento di input ed accedere al valore:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;text&#34;</span> id=<span style="color:#009c00">&#34;nome&#34;</span> value=<span style="color:#009c00">&#34;John&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> valoreInput = document.querySelector(<span style="color:#009c00">&#34;#nome&#34;</span>).value;
+</span></span><span style="display:flex;"><span>console.info(valoreInput);
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
+</span></span></code></pre></div><p>L&rsquo;output scritto in console è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>John
+</span></span></code></pre></div><p>Sempre utilizzando il <strong>selettore CSS per identificatore</strong>, per selezionare un elemento paragrafo ed accedere al testo presente nel paragrafo, si può utilizzare la proprietà <code>innerHTML</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo&#34;</span>&gt;Questo è un paragrafo&lt;/p&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> paragrafo = document.querySelector(<span style="color:#009c00">&#34;#paragrafo&#34;</span>).innerHTML;
+</span></span><span style="display:flex;"><span>console.info(paragrafo);
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
+</span></span></code></pre></div><p>L&rsquo;output scritto in console è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Questo è un paragrafo
+</span></span></code></pre></div><p>Se invece si fa uso della proprietà <code>outerHTML</code>, in console viene riportato anche il codice HTML dell&rsquo;elemento:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>&lt;p id=&#34;paragrafo&#34;&gt;Questo è un paragrafo&lt;/p&gt;
+</span></span></code></pre></div><h2 id="eventi-dom-ed-html">Eventi DOM ed HTML</h2>
+<p>Il DOM permette di notificare gli <strong>eventi</strong>, detti tecnicamente <strong>eventi DOM</strong>, che avvengono in una pagina HTML, come il completamento della lettura della pagina web o il click da parte dell&rsquo;utente su un pulsante.</p>
+<p>Al verificarsi di un evento relativo al documento o ad uno specifico elemento si può programmare un&rsquo;azione da eseguire.</p>
+<p>L&rsquo;elenco di eventi è vasto per cui si rimanda alle specifiche ECMAScript per un dettaglio completo.</p>
+<p>Le notifiche di un determinato evento non sono automatiche, ma il programmatore deve indicare che ha interesse a ricevere notifiche di eventi che avvengono su un determinato elemento.</p>
+<p>Per poter programmare le azioni da eseguire quando viene notificato un evento su un elemento di una pagina web, si possono utilizzare gli attributi previsti dal linguaggio HTML. Questi attributi hanno tipicamente il nome composto dal prefisso <code>on</code> seguito dal nome dell&rsquo;evento.</p>
+<p>Di seguito un elenco di attributi con il rispettivo evento che viene notificato:</p>
+<ul>
+<li><code>onblur</code>: l&rsquo;elemento non ha più il focus;</li>
+<li><code>onclick</code>: l&rsquo;elemento è stato cliccato;</li>
+<li><code>onchange</code>: il valore dell&rsquo;elemento è cambiato;</li>
+<li><code>ondblclick</code>: l&rsquo;elemento ha ricevuto un doppio click;</li>
+<li><code>onfocus</code>: l&rsquo;elemento ha ricevuto il focus;</li>
+<li><code>onreset</code>: il form è stato &ldquo;pulito&rdquo;;</li>
+<li><code>onsubmit</code>: il form è stato inviato;</li>
+<li><code>onload</code>: la pagina web è stato caricata;</li>
+</ul>
+<p>Come valore di questi attributi si deve specificare una funzione da eseguire, ad esempio la funzione JavaScript <code>alert</code> che mostra un messaggio all&rsquo;utente.</p>
+<p>Un esempio completo che mostra come alla notifica dell&rsquo;azione del click si può eseguire l&rsquo;azione di mostrare un messaggio all&rsquo;utente è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;button&#34;</span> value=<span style="color:#009c00">&#34;clicca&#34;</span> onclick=<span style="color:#009c00">&#34;alert(&#39;cliccato&#39;)&#34;</span>&gt;
+</span></span></code></pre></div><p>Nell&rsquo;esempio precedente, l&rsquo;attributo <code>onclick</code> permette di ricevere la notifica dell&rsquo;evento di &ldquo;click&rdquo; sull&rsquo;elemento <code>input</code>, l&rsquo;azione da eseguire è quella di <code>alert('cliccato')</code>.</p>
+<p>Ovviamente le azioni da eseguire possono essere definine in funzioni JavaScript, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">function</span> definitaDaUtente() {
+</span></span><span style="display:flex;"><span>    alert(<span style="color:#009c00">&#39;questa è una funzione definita dal programmatore&#39;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;button&#34;</span> value=<span style="color:#009c00">&#34;clicca&#34;</span> id=<span style="color:#009c00">&#34;myButton&#34;</span> onclick=<span style="color:#009c00">&#34;definitaDaUtente()&#34;</span>&gt;
+</span></span></code></pre></div><p>In alternativa agli attributi, si può legare un elemento ad un azione con il seguente codice JavaScript:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;button id=<span style="color:#009c00">&#34;myButton&#34;</span>&gt;clicca&lt;button&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> button = document.getElementById(<span style="color:#009c00">&#34;#myButton&#34;</span>);
+</span></span><span style="display:flex;"><span>button.addEventListener(<span style="color:#009c00">&#34;click&#34;</span>, definitaDaUtente()); 
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
+</span></span></code></pre></div><h2 id="operazioni-sul-dom">Operazioni sul DOM</h2>
 <p>Per creare un elemento di testo, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> ele = document.createTextNode(<span style="color:#009c00">&#39;Hello World!&#39;</span>);
 </span></span></code></pre></div><p>Per creare un elemento che fa da contenitore, si utilizza la seguente funzione:</p>
