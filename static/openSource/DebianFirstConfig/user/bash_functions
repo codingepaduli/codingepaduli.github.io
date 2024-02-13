@@ -83,16 +83,15 @@ md5check() {
 }
 export -f md5check
 
+# Blade3 hashing 
+# Usage: b3check file.txt.b3
+# Usage: b3sum file.txt file.txt.b3 
+#  - OPTION --num-threads is set by variable RAYON_NUM_THREADS
+#  No needs of b3sum --num-threads 16 file.txt file.txt.b3 
 b3check() {
-  command b3sum --quiet --check --num-threads 16 "$@"
+  command b3sum --quiet --check "$@"
 }
 export -f b3check
-
-# Blade3 hashing 
-b3sum() {
-  command b3sum --num-threads 16 "$@"
-}
-export -f b3sum
 
 # elimina con wipe (sovrascrive N volte, f=force no confirmation, r=recoursive, i=verbose mode, q=quick wipe)
 # Usage: wipe file.txt

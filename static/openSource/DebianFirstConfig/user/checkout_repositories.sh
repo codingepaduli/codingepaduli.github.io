@@ -72,22 +72,32 @@ do
     git clone "$myRepositoriesRoot$repo.git" --recurse-submodules --config core.sshCommand="/usr/bin/ssh -i $SSH_KEY"
     
     if [ $? -eq 0 ]; then
-        # Configure the repo
+        
         cd $repo
-        git config --local user.name "$GIT_USER"
-        git config --local user.email "$GIT_EMAIL"
-        git config --local core.autocrlf input
-        git config --local core.editor "micro"
-        git config --local core.ignorecase false
-        git config --local credential.helper store
-        git config --local pull.rebase false
+        
+        # Option used in git config --local 
+        # --add key value 
+        # --unset key
+
+        git config --local --add user.name "$GIT_USER"
+        git config --local --add user.email "$GIT_EMAIL"
+        git config --local --add core.autocrlf input
+        git config --local --add core.editor "micro"
+        git config --local --add core.ignorecase false
+        git config --local --add credential.helper store
+        git config --local --add pull.rebase false
+
+        git config --local --add diff.tool "meld"
+        git config --local --add difftool.prompt false
+        git config --local --add merge.tool "meld"
+        git config --local --add mergetool.prompt false
 
         ## ssh signign key config
-        git config --local commit.gpgsign true
-        git config --local gpg.format ssh
-        git config --local user.signingkey "$(cat $SSH_PUB_KEY)"
-        git config --local gpg.ssh.allowedSignersFile "$SSH_ALLOWED_SIGNERS"
-        git config --local core.sshCommand "/usr/bin/ssh -i $SSH_KEY"
+        git config --local --add commit.gpgsign true
+        git config --local --add gpg.format ssh
+        git config --local --add user.signingkey "$(cat $SSH_PUB_KEY)"
+        git config --local --add gpg.ssh.allowedSignersFile "$SSH_ALLOWED_SIGNERS"
+        git config --local --add core.sshCommand "/usr/bin/ssh -i $SSH_KEY"
 
         echo "Repository configured: $repo"
         cd ..

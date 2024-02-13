@@ -32,14 +32,21 @@ fi
 
 # BLADE3 hashing - Set the number of threads
 RAYON_NUM_THREADS=4
+export RAYON_NUM_THREADS
 
-# Aggiungo JAVA_HOME
-if [ -z "$JAVA_HOME" ]; then
-    echo ""
+# Ignore global and system config
+GIT_CONFIG_NOSYSTEM=1 # Ignore /etc/gitconfig
+GIT_CONFIG_NOGLOBAL=1 # Ignore ~/.gitconfig
+export GIT_CONFIG_NOSYSTEM
+export GIT_CONFIG_NOGLOBAL
+
+# Aggiungo JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+JAVA_INSTALLED="$(which java)"
+if [ -z "$JAVA_INSTALLED" ]; then
+    echo "Java not installed"
 else
     # Search the path with the command
     # readlink -ze $(which java) | xargs -0 dirname 
-    # export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
     JAVA_HOME=$(readlink -ze "$(which java)" | xargs -0 dirname | xargs -0 dirname)
     export JAVA_HOME
 
@@ -58,8 +65,7 @@ if [ -d "/opt/gradle/gradle-8.0" ]; then
   export PATH="$PATH:$GRADLE_HOME/bin/"
 
   # Fix XDG BASE DIRECTORY SPECIFICATION non rispettata per Gradle
-  # export GRADLE_USER_HOME="$XDG_DATA_HOME./gradle"
-  GRADLE_USER_HOME="${XDG_DATA_HOME:="$HOME"}/.gradle"
+  GRADLE_USER_HOME="${XDG_DATA_HOME:="$HOME/.local/share"}/.gradle"
   export GRADLE_USER_HOME
 fi
 

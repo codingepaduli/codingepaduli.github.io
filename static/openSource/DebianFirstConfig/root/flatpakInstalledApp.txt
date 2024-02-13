@@ -21,6 +21,7 @@ com.vscodium.codium
 # io.github.peazip.PeaZip
 # io.dbeaver.DBeaverCommunity
 # io.mpv.Mpv
+io.podman_desktop.PodmanDesktop
 me.kozec.syncthingtk
 # net.christianbeier.Gromit-MPX
 # org.audacityteam.Audacity
