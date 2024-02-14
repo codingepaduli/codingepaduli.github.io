@@ -299,7 +299,7 @@
 </ul>
 <p>Per scrivere un messaggio di debug sul terminale, si usa quindi:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Write-Debug <span style="color:#009c00">&#34;Hello&#34;</span>
-</span></span></code></pre></div><p>Il comando non presenta nessun output, perchè le impostazioni predefinite non visualizzano sul terminale lo stream di output. Nel caso fosse attivato, l&rsquo;output sarebbe il seguente:</p>
+</span></span></code></pre></div><p>Il comando non presenta nessun output, perché le impostazioni predefinite non visualizzano sul terminale lo stream di output. Nel caso fosse attivato, l&rsquo;output sarebbe il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>DEBUG: Hello
 </span></span></code></pre></div><h3 id="scrivere-sul-flusso-di-warning">Scrivere sul flusso di warning</h3>
 <p>Il CommandLet utilizzato per scrivere sul flusso di warning è <code>Write-Warning</code> che ha la seguente sintassi:</p>
@@ -321,7 +321,7 @@
 </ul>
 <p>Per scrivere un messaggio di verbose sul terminale, si usa quindi:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Write-Verbose <span style="color:#009c00">&#34;Hello&#34;</span>
-</span></span></code></pre></div><p>Il comando non presenta nessun output, perchè le impostazioni predefinite non visualizzano sul terminale lo stream di output. Questo stream si attiva passando il parametro <code>-Verbose</code>, comune a tutti i CommandLet.</p>
+</span></span></code></pre></div><p>Il comando non presenta nessun output, perché le impostazioni predefinite non visualizzano sul terminale lo stream di output. Questo stream si attiva passando il parametro <code>-Verbose</code>, comune a tutti i CommandLet.</p>
 <p>Per visualizzare il messaggio di verbose sul terminale, si usa quindi:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Write-Verbose <span style="color:#009c00">&#34;Hello&#34;</span> -Verbose
 </span></span></code></pre></div><p>L&rsquo;output è il seguente:</p>
@@ -374,7 +374,7 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Remove-Alias -Name <span style="color:#009c00">&#34;wo&#34;</span>
 </span></span></code></pre></div><h2 id="primi-script">Primi script</h2>
 <p>Uno script è un elenco di istruzioni inserite in un file. Eseguire uno script consiste nell&rsquo;esecuzione di tutte le istruzioni inserite nel file. L&rsquo;estensione del file per gli script PowerShell è <code>ps1</code>.</p>
-<p>Prima di creare uno script è consigliato impostare le opzioni di salvataggio (quali codifica dei caratteri UTF-8 ed il carattere di terminazione riga) attraverso gli strumenti appositi quali <a href="/coding/tools/editorconfig/">EditorConfig</a>.</p>
+<p>Prima di creare uno script è consigliato impostare le opzioni di salvataggio (quali codifica dei caratteri UTF-8 ed il carattere di terminazione riga) attraverso gli strumenti appositi quali <a href="/tools/editorconfig/">EditorConfig</a>.</p>
 <p>E&rsquo; possibile creare il primo script salvando le seguenti istruzioni in un file <code>esempio.ps1</code>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#f00;font-style:italic"># Questo è il primo script</span>
 </span></span><span style="display:flex;"><span>
