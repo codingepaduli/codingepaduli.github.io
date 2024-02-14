@@ -14,6 +14,9 @@ let distanzaVenere = 60;
 let diametroVenere = 20;
 let angoloVenere = 15;
 
+let scaleX = 1;
+let scaleY = 1;
+
 let canvas;
 function setup() {
    canvas = createCanvas(600, 400);
@@ -65,6 +68,7 @@ function drawFullScreenRect() {
 
   textSize(10);
   //text(" " + mouseX + " " + mouseY, width - 100, height - 70);
+  text("w " + width + " " + height, 100,  70);
 
   noFill();
   strokeWeight(4);
@@ -73,4 +77,14 @@ function drawFullScreenRect() {
   rectMode(CORNER);
   square(530, height - 60, 30);
   pop();
+}
+
+function windowResized () {
+  resizeCanvas (windowWidth, windowHeight);
+
+  // windowWidth : windowHeight = 600 : 400
+  scaleX = windowWidth / 600;
+  scaleY = windowHeight / 400;
+
+  scale(min(scaleX, scaleY));
 }
