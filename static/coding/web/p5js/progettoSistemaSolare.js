@@ -14,8 +14,7 @@ let distanzaVenere = 60;
 let diametroVenere = 20;
 let angoloVenere = 15;
 
-let scaleX = 1;
-let scaleY = 1;
+let scaleXY = 1;
 
 let canvas;
 function setup() {
@@ -23,29 +22,36 @@ function setup() {
    angleMode(DEGREES);
 
    canvas.parent('sistema');
+
+   console.info(`initial canvas size: ${width} ${height} scale: ${scaleXY}`);
 }
 
 function draw() {
     background(0, 0,0);
 
+    scale(scaleXY);
+
+    // disegno il Sole
     fill(255,255,0);
     circle(xSole, ySole, diametroSole);
 
+    // disegno la Terra
     xTerra = xSole + distanzaTerra * cos(angoloTerra);
     yTerra = ySole + distanzaTerra * sin(angoloTerra);
 
     fill(0,0,255);
     circle(xTerra, yTerra, diametroTerra);
 
-    angoloTerra = angoloTerra + 1;
-
+    // disegno Venere
     xVenere = xSole + distanzaVenere * cos(angoloVenere);
     yVenere = ySole + distanzaVenere * sin(angoloVenere);
-
+    
     fill(0,255,45);
     circle(xVenere, yVenere, diametroVenere);
-
-    angoloVenere = angoloVenere + 2;
+    
+    // rotazione angolare
+    angoloTerra = angoloTerra + 1;
+    angoloVenere = angoloVenere - 2;
 
     drawFullScreenRect();
 }
@@ -56,8 +62,10 @@ function mousePressed() {
     if (!document.fullscreenElement) {
       let canvasNode = document.querySelector('#sistema canvas');
       canvasNode.requestFullscreen();
-    } else if (document.exitFullscreen) {
-      document.exitFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
     }
   }
 }
@@ -67,24 +75,27 @@ function drawFullScreenRect() {
   push();
 
   textSize(10);
-  //text(" " + mouseX + " " + mouseY, width - 100, height - 70);
-  text("w " + width + " " + height, 100,  70);
 
   noFill();
   strokeWeight(4);
   stroke(0, 255, 0);
 
   rectMode(CORNER);
-  square(530, height - 60, 30);
+  rect(width - 60, height - 60, 30, 30);
+
   pop();
 }
 
 function windowResized () {
-  resizeCanvas (windowWidth, windowHeight);
-
   // windowWidth : windowHeight = 600 : 400
-  scaleX = windowWidth / 600;
-  scaleY = windowHeight / 400;
+  let scaleX = windowWidth * 0.8 / 600;
+  let scaleY = windowHeight * 0.8 / 400;
 
-  scale(min(scaleX, scaleY));
+  scaleXY = min(scaleX, scaleY)
+
+  resizeCanvas (600 * scaleXY, 400 * scaleXY);
+
+  console.info(`resize: ${600 * scaleXY} ${400 * scaleXY} scale: ${scaleXY}`);
+  console.info(`canvas size: ${width} ${height} scale: ${scaleXY}`);
+  console.info(`windowsize: ${windowWidth} ${windowHeight} scale: ${scaleXY}`);
 }
