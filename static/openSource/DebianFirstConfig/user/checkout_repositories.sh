@@ -87,6 +87,11 @@ do
         git config --local --add credential.helper store
         git config --local --add pull.rebase false
 
+        git config --local --add transfer.fsckobjects true
+        git config --local --add fetch.fsckobjects true
+        git config --local --add receive.fsckObjects true
+
+        git config --local --add diff.algorithm histogram
         git config --local --add diff.tool "meld"
         git config --local --add difftool.prompt false
         git config --local --add merge.tool "meld"

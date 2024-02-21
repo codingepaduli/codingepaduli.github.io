@@ -228,7 +228,7 @@
     
 	<span class="meta__text">
         Tempo di lettura 34 minuti 
-        ( 7042 parole)
+        ( 7101 parole)
     </span>
 </div></div>
     </header>
@@ -444,14 +444,24 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --local core.autocrlf true
 </span></span></code></pre></div><p>Una macchina Linux invece deve essere abilitata per la correzione automatica di tutti i file che arrivano dal repository trasformando i caratteri CR + LF con il carattere LF:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --local core.autocrlf input
-</span></span></code></pre></div><p>Nella configurazione è utile anche impostare l&rsquo;editor di riferimento:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --local core.editor <span style="color:#009c00">&#34;atom --wait&#34;</span>
+</span></span></code></pre></div><h4 id="altre-opzioni-di-configurazione-utili">Altre opzioni di configurazione utili</h4>
+<p>Per rilevare in tempo la corruzione del repository:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --local transfer.fsckobjects true
+</span></span><span style="display:flex;"><span>git config --local fetch.fsckobjects true
+</span></span><span style="display:flex;"><span>git config --local receive.fsckObjects true
 </span></span></code></pre></div><p>Se necessario, si può scegliere di non ignorare la differenza tra caratteri minuscoli e maiuscoli nei nomi dei file, con il comando:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --local core.ignorecase false
 </span></span></code></pre></div><p>Se si vuole memorizzare le credenziali, può essere utile il comando:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --local credential.helper store
-</span></span></code></pre></div><p>Infine, git chiede quale tecnica usare per sincronizzare il repository. Si consiglia la seguente:</p>
+</span></span></code></pre></div><p>Quando git chiede quale tecnica usare per sincronizzare il repository. Si consiglia la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --local pull.rebase false
+</span></span></code></pre></div><p>Per configurare l&rsquo;editor e gli strumenti per visualizzare le differenze si possono usare i seguenti comandi:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --local core.editor <span style="color:#009c00">&#34;micro&#34;</span>
+</span></span><span style="display:flex;"><span>git config --local diff.algorithm histogram
+</span></span><span style="display:flex;"><span>git config --local diff.tool <span style="color:#009c00">&#34;meld&#34;</span>
+</span></span><span style="display:flex;"><span>git config --local difftool.prompt false
+</span></span><span style="display:flex;"><span>git config --local merge.tool <span style="color:#009c00">&#34;meld&#34;</span>
+</span></span><span style="display:flex;"><span>git config --local mergetool.prompt false
 </span></span></code></pre></div><h3 id="configurazione-chiave-ssh-per-firma-e-verifica">Configurazione chiave SSH per firma e verifica</h3>
 <p>Creata la coppia di chiavi pubblica/privata e registrata su GitHub, è possibile utilizzare queste chiavi anche per firmare e verificare i commit, configurando il client locale con i seguenti comandi:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --local commit.gpgsign true
