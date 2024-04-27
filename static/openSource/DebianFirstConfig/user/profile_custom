@@ -30,6 +30,8 @@ if [ -f "$MY_DOT_FILES_FOLDER/bash_functions_docker" ] && [ -r "$MY_DOT_FILES_FO
     . "$MY_DOT_FILES_FOLDER/bash_functions_docker"
 fi
 
+NTFY_UUID="aa30e17e-591f-4256-b749-4b9ae0739f85"
+
 # BLADE3 hashing - Set the number of threads
 RAYON_NUM_THREADS=4
 export RAYON_NUM_THREADS

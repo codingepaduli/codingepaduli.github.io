@@ -4,14 +4,17 @@
 
 cc.arduino.IDE2
 com.calibre_ebook.calibre
+com.github.dail8859.NotepadNext
 com.dosbox_x.DOSBox-X
 # com.github.johnfactotum.Foliate
 # com.github.marktext.marktext
 # com.github.optyfr.JRomManager
 com.github.jeromerobert.pdfarranger
+com.github.rajsolai.textsnatcher
 com.github.tchx84.Flatseal
 com.nextcloud.desktopclient.nextcloud
 # com.ozmartians.VidCutter
+com.ranfdev.Notify
 com.transmissionbt.Transmission
 com.vscodium.codium
 # com.zettlr.Zettlr
@@ -47,3 +50,4 @@ org.mozilla.firefox
 org.processing.processingide
 # org.remmina.Remmina
 org.videolan.VLC
+tv.kodi.Kodi

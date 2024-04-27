@@ -167,6 +167,72 @@ userDefined() {
 export -f userDefined
 
 ########################
+#        ntfy          #
+########################
+
+# - max (5) - Really long vibration bursts, default notification sound with a pop-over notification.
+# - high (4) - Long vibration burst, default notification sound with a pop-over notification.
+# - default (3) -	Short default vibration and sound. Default notification behavior.
+# - low (2) -	No vibration or sound. Notification will not visibly show up until notification drawer is pulled down.
+# - min (1) -	No vibration or sound. The notification will be under the fold in "Other notifications".
+
+NTFY_PRIORITY_MAX="max"
+NTFY_PRIORITY_HIGH="high"
+NTFY_PRIORITY_DEFAULT="default"
+NTFY_PRIORITY_LOW="low"
+NTFY_PRIORITY_MIN="min"
+
+NTFY_TAG_MAX="skull_and_crossbones" # ☠️
+NTFY_TAG_HIGH="warning,radioactive" # ⚠️☢️
+NTFY_TAG_DEFAULT="bell" # 🔔
+NTFY_TAG_LOW="speech_balloon" # 💬
+NTFY_TAG_MIN="x" #  ❌
+
+export NTFY_PRIORITY_MAX
+export NTFY_PRIORITY_HIGH
+export NTFY_PRIORITY_DEFAULT
+export NTFY_PRIORITY_LOW
+export NTFY_PRIORITY_MIN
+
+export NTFY_TAG_MAX
+export NTFY_TAG_HIGH
+export NTFY_TAG_DEFAULT
+export NTFY_TAG_LOW
+export NTFY_TAG_MIN
+
+ntfy() {
+  if [ "$#" -lt "2" ] || [ "$#" -gt "3" ]; then
+    echo "please use:";
+    echo " ntfy \"title\" \"message\" ";
+    echo " ntfy \"title\"\"message\" \"priority\" ";
+    return 0
+  fi
+
+  defaultTitle=""
+  defaultMsg=""
+  
+  # $1 if not empty, defualt value if $1 is empty or unset
+  title=${1:-$defaultTitle}
+
+  # $2 if not empty, defualt value if $2 is empty or unset
+  msg=${2:-$defaultMsg}
+
+  # $3 if not empty, defualt value if $3 is empty or unset
+  priority=${3:-$NTFY_PRIORITY_DEFAULT}
+  tag=${3:-$NTFY_TAG_DEFAULT}
+
+  # Linked tags:
+  if [ "$priority" = "$NTFY_PRIORITY_MAX" ]; then tag="$NTFY_TAG_MAX"; fi
+  if [ "$priority" = "$NTFY_PRIORITY_HIGH" ]; then tag="$NTFY_TAG_HIGH"; fi
+  if [ "$priority" = "$NTFY_PRIORITY_DEFAULT" ]; then tag="$NTFY_TAG_DEFAULT"; fi
+  if [ "$priority" = "$NTFY_PRIORITY_LOW" ]; then tag="$NTFY_TAG_LOW"; fi
+  if [ "$priority" = "$NTFY_PRIORITY_MIN" ]; then tag="$NTFY_TAG_MIN"; fi
+  
+  curl -H "Title: $title" -H "Priority: $priority" -H "Tags: $tag" -d "$msg" ntfy.sh/$NTFY_UUID
+}
+export -f ntfy
+
+########################
 #         ufw          #
 ########################
 
@@ -191,95 +257,95 @@ export -f wget
 # ping only 5 times
 # Usage: ping https://google.it
 ping() {
-    command ping -c 5 "$@"
+  command ping -c 5 "$@"
 }
 export -f ping
 
 # On windows: tracepath -b twitter.com
 # Usage: traceroute https://google.it
 traceroute() {
-    command traceroute "$@"
+  command traceroute "$@"
 }
 export -f traceroute
 
 # display the ports # (TU=TPC/UDP, L=show LISTEN state, PN=Process id/process Name)
 ports() {
-    netstat -tulpn
+  netstat -tulpn
 }
 export -f ports
 
 # show all sockets (A=all; L=listening; T=TCP; P=related process)
 socketStatus() {
-    ss -plat
+  ss -plat
 }
 export -f socketStatus
 
 # display the interfaces, the status and the ip
 interfaceList() {
-    ip -br -c address
+  ip -br -c address
 }
 export -f interfaceList
 
 # display the interfaces, the status and the ip
 interfaceList2() {
-    nmcli device status
+  nmcli device status
 }
 export -f interfaceList2
 
 # Show the network manager
 showNetworkManager() {
-    nmtui
+  nmtui
 }
 export -f showNetworkManager
 
 # Set the hostname: hostnamectl set-hostname host.domain.org
 setHostnameControl() {
-    hostnamectl 'set-hostname'
+  hostnamectl 'set-hostname'
 }
 export -f setHostnameControl
 
 interfaceWifiUp() {
-    ip link set wlan0 up
+  ip link set wlan0 up
 }
 export -f interfaceWifiUp
 
 interfaceWifiDown() {
-    ip link set wlan0 down
+  ip link set wlan0 down
 }
 export -f interfaceWifiDown
 
 interfaceEthUp() {
-    ip link set eth0 up
+  ip link set eth0 up
 }
 export -f interfaceEthUp
 
 interfaceEthDown() {
-    ip link set eth0 down
+  ip link set eth0 down
 }
 export -f interfaceEthDown
 
 interfaceLoAddAddress() {
-    ip address add 127.0.0.2/16 dev lo
+  ip address add 127.0.0.2/16 dev lo
 }
 export -f interfaceLoAddAddress
 
 interfaceLoRemoveAddress() {
-    ip address delete 127.0.0.2/16 dev lo
+  ip address delete 127.0.0.2/16 dev lo
 }
 export -f interfaceLoRemoveAddress
 
 interfaceEthArpOn() {
-    ip link set dev eth0 arp on
+  ip link set dev eth0 arp on
 }
 export -f interfaceEthArpOn
 
 interfaceEthArpOff() {
-    ip link set dev eth0 arp off
+  ip link set dev eth0 arp off
 }
 export -f interfaceEthArpOff
 
 ipRoutingTable() {
-    ip route
+  ip route
 }
 export -f ipRoutingTable
 
@@ -290,7 +356,7 @@ export -f ipRoutingTable
 #   -p      list of ports to test
 #   -sV	    detect software version for each port
 scanNetwork() {
-    nmap -p 22,80,443  192.168.1.0-255
+  nmap -p 22,80,443  192.168.1.0-255
 }
 export -f scanNetwork
 
@@ -302,12 +368,12 @@ export -f scanNetwork
 # https://github.com/git/git/blob/56d268bafff7538f82c01d3c9c07bdc54b2993b1/Documentation/pretty-formats.txt
 
 gitLog() {
-    git log --pretty="format:%h %G? %cn %ce %s" --graph --decorate --abbrev-commit --all  "$@"
+  git log --pretty="format:%h %G? %cn %ce %s" --graph --decorate --abbrev-commit --all  "$@"
 }
 export -f gitLog
 
 gitLogFiles() {
-    git log --pretty=oneline --decorate --abbrev-commit --name-only "$@"
+  git log --pretty=oneline --decorate --abbrev-commit --name-only "$@"
 }
 export -f gitLogFiles
 
@@ -316,7 +382,7 @@ export -f gitLogFiles
 # -i search ignorecase
 # --untracked search in tracked (committed) and untracked files
 gitGrep() {
-    git grep --untracked -n -i "$@"
+  git grep --untracked -n -i "$@"
 }
 export -f gitGrep
 

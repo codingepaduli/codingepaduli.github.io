@@ -74,4 +74,97 @@ apt-get remove $APT_OPTS xterm mlterm mlterm-common mlterm-tiny xiterm+thai
 
 apt-get remove $APT_OPTS exim4-base exim4-config quodlibet parole geoclue-2.0
 
+apt-get remove $APT_OPTS imagemagick-6-common libmagickcore-6.q16-6 \
+    libmagickcore-6.q16-6-extra libmagickwand-6.q16-6
+
+apt-get remove $APT_OPTS aspell-am aspell-ar aspell-ar-large aspell-bg \
+    aspell-bn aspell-ca aspell-cs aspell-cy aspell-da aspell-de aspell-el \
+    aspell-eo aspell-es aspell-et aspell-eu aspell-fa aspell-fr aspell-ga \
+    aspell-gl-minimos aspell-gu aspell-he aspell-hi aspell-hr aspell-hu \
+    aspell-is aspell-kk aspell-ku aspell-lt aspell-lv aspell-ml aspell-mr \
+    aspell-nl aspell-no aspell-pa aspell-pl aspell-pt-br aspell-pt-pt \
+    aspell-ro aspell-ru aspell-sk aspell-sl aspell-sv aspell-ta aspell-te \
+    aspell-tl aspell-uk
+
+apt-get remove $APT_OPTS hunspell-ar hunspell-be hunspell-bg hunspell-bs \
+    hunspell-ca hunspell-cs hunspell-da hunspell-de-at hunspell-de-ch \
+    hunspell-de-de hunspell-el hunspell-en-gb hunspell-eu hunspell-fr \
+    hunspell-fr-classical hunspell-gl hunspell-gu hunspell-hi hunspell-hr \
+    hunspell-hu hunspell-id hunspell-is hunspell-kk hunspell-kmr \
+    hunspell-ko hunspell-lt hunspell-lv hunspell-ml hunspell-ne \
+    hunspell-nl hunspell-pl hunspell-pt-br hunspell-pt-pt hunspell-ro \
+    hunspell-ru hunspell-si hunspell-sl hunspell-sr hunspell-sv \
+    hunspell-te hunspell-th hunspell-vi
+
+apt-get remove $APT_OPTS hyphen-af hyphen-as hyphen-be hyphen-bg \
+    hyphen-bn hyphen-ca hyphen-cs hyphen-da hyphen-de hyphen-el \
+    hyphen-es hyphen-fr hyphen-gl hyphen-gu hyphen-hr hyphen-hu \
+    hyphen-hi hyphen-id hyphen-is hyphen-kn hyphen-lt hyphen-lv \
+    hyphen-ml hyphen-mn hyphen-mr hyphen-nl hyphen-no hyphen-or \
+    hyphen-pa hyphen-pl hyphen-pt-br hyphen-pt-pt hyphen-ro \
+    hyphen-ru hyphen-show hyphen-sk hyphen-sl hyphen-sr hyphen-sv \
+    hyphen-ta hyphen-te hyphen-th hyphen-uk hyphen-zu
+
+apt-get remove $APT_OPTS iamerican iamerican-huge iamerican-insane \
+    iamerican-large iamerican-small ibrazilian ibulgarian icatalan \
+    iczech idanish idutch iesperanto iestonian ifaroese ifrench \
+    ifrench-gut igaelic igalician-minimos ihungarian iirish \
+    ilithuanian imanx ingerman inorwegian iogerman ipolish \
+    iportuguese irussian ispanish iswedish iswiss itagalog 
+
+apt-get remove $APT_OPTS wamerican-huge wamerican-insane wamerican-large \
+    wamerican-small wbrazilian wbritish wbritish-huge wbritish-insane \
+    wbritish-large wbritish-small wbulgarian wcanadian wcanadian-huge \
+    wcanadian-insane wcanadian-large wcanadian-small wcatalan wdanish \
+    wdutch wesperanto wfaroese wfrench wgaelic wgalician-minimos \
+    wgerman-medical wirish wmanx wngerman wnorwegian wogerman \
+    wpolish wportuguese wspanish wswedish wswiss wukrainian 
+
+apt-get remove $APT_OPTS itools anthy anthy-common hspell hspell-gui mozc-data mozc-server mozc-utils-gui 
+
+apt-get remove $APT_OPTS manpages-de manpages-es manpages-fr manpages-hu \
+    manpages-ja manpages-mk manpages-nl manpages-pl manpages-ro \
+    manpages-tr manpages-zh task-dutch task-german task-japanese \
+    task-macedonian task-polish task-romanian task-spanish task-turkish \
+    manpages-ja-dev manpages-pl-dev manpages-pt-br task-brazilian-portuguese 
+ 
+apt-get remove $APT_OPTS task-albanian-desktop task-amharic-desktop \
+    task-arabic-desktop task-asturian-desktop task-basque-desktop \
+    task-belarusian-desktop task-bengali-desktop task-bosnian-desktop \
+    task-brazilian-portuguese-desktop \
+    task-bulgarian-desktop task-catalan-desktop task-chinese-s-desktop \
+    task-chinese-t-desktop task-croatian-desktop task-cyrillic-desktop \
+    task-czech-desktop task-danish-desktop task-dutch-desktop \
+    task-dzongkha-desktop task-esperanto-desktop task-estonian-desktop \
+    task-finnish-desktop task-french-desktop task-galician-desktop \
+    task-georgian-desktop task-german-desktop task-greek-desktop \
+    task-gujarati-desktop task-hebrew-desktop task-hindi-desktop \
+    task-hungarian-desktop task-icelandic-desktop \
+    task-indonesian-desktop task-irish-desktop task-japanese-desktop \
+    task-kannada-desktop task-kazakh-desktop task-khmer-desktop \
+    task-korean-desktop task-kurdish-desktop task-latvian-desktop \
+    task-lithuanian-desktop task-macedonian-desktop \
+    task-malayalam-desktop task-marathi-desktop task-nepali-desktop \
+    task-northern-sami-desktop task-norwegian-desktop \
+    task-persian-desktop task-polish-desktop task-portuguese-desktop \
+    task-punjabi-desktop task-romanian-desktop task-russian-desktop \
+    task-serbian-desktop task-sinhala-desktop task-slovak-desktop \
+    task-slovenian-desktop task-south-african-english-desktop \
+    task-spanish-desktop task-swedish-desktop task-tamil-desktop \
+    task-telugu-desktop task-thai-desktop task-turkish-desktop \
+    task-ukrainian-desktop task-uyghur-desktop task-vietnamese-desktop \
+    task-welsh-desktop task-xhosa-desktop
+
+apt-get remove $APT_OPTS task-amharic  task-arabic task-asturian task-basque \
+    task-belarusian task-bengali task-bosnian task-bulgarian task-catalan \
+    task-chinese-s task-chinese-t task-croatian task-cyrillic task-czech \
+    task-danish task-esperanto task-estonian task-finnish task-french \
+    task-galician task-greek task-gujarati task-hebrew task-hindi \
+    task-hungarian task-icelandic task-irish task-kazakh task-khmer \
+    task-korean task-kurdish task-latvian task-lithuanian task-malayalam \
+    task-marathi task-northern-sami task-norwegian task-persian \
+    task-portuguese task-punjabi task-russian task-serbian task-slovak \
+    task-slovenian task-swedish task-tagalog task-tamil task-telugu \
+    task-thai task-ukrainian task-welsh 
+
 apt-get autoremove $APT_OPTS

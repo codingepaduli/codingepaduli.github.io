@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 5 minuti 
-        ( 1037 parole)
+        Tempo di lettura 6 minuti 
+        ( 1099 parole)
     </span>
 </div></div>
     </header>
@@ -346,6 +346,16 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.remove(<span style="color:#009c00">&#39;another&#39;</span>, <span style="color:#009c00">&#39;class&#39;</span>, <span style="color:#009c00">&#39;name&#39;</span>);
 </span></span></code></pre></div><p>Per effettuare il &ldquo;toggle&rdquo; di una classe di un elemento, si utilizza la funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.toggle(<span style="color:#009c00">&#39;class-name&#39;</span>);
+</span></span></code></pre></div><p>Si può condizionare la presenza di una classe ad una specifica condizione:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.toggle(<span style="color:#009c00">&#39;class-name&#39;</span>, i&lt;10);
+</span></span></code></pre></div><p>Per sostituire una classe di un elemento con un&rsquo;altra, si utilizza la funzione:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.replace(<span style="color:#009c00">&#39;class1&#39;</span>, <span style="color:#009c00">&#39;class2&#39;</span>);
+</span></span></code></pre></div><p>Per verificare se una classe è presente per un elemento, si utilizza la funzione:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.contains(<span style="color:#009c00">&#39;class1&#39;</span>);
+</span></span></code></pre></div><p>La &ldquo;spread syntax&rdquo; permette di aggiungere o togliere liste di classi:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> <span style="color:#00f">class</span> = [<span style="color:#009c00">&#39;class1&#39;</span>, <span style="color:#009c00">&#39;class2&#39;</span>];
+</span></span><span style="display:flex;"><span>ele.classList.add(...<span style="color:#00f">class</span>);
+</span></span><span style="display:flex;"><span>ele.classList.remove(...<span style="color:#00f">class</span>);
 </span></span></code></pre></div>
     </div>
   </article>

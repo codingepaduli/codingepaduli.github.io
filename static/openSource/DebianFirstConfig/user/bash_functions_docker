@@ -30,7 +30,7 @@ export -f dockerGpp
 # TEST: deno --help
 # RUN:  denoCompile main.ts
 denoCompile() {
-  dockerContainer --name deno-compile -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.34.3 compile --unstable --allow-read --allow-env --allow-net --output=myapp.exe "$@"
+  dockerContainer --name deno-compile -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.39.4 compile --unstable --allow-read --allow-env --allow-net "$@"
 }
 export -f denoCompile
 
@@ -38,9 +38,33 @@ export -f denoCompile
 # TEST: deno --help
 # RUN:  denoRun main.ts
 denoRun() {
-  dockerContainer --name deno         -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.34.3 run --allow-net "$@"
+  dockerContainer --name deno         -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.39.4 run --allow-net "$@"
 }
 export -f denoRun
+
+# The deno JS formatter
+# TEST: deno --help
+# RUN:  denoFmt main.ts
+denoFmt() {
+  dockerContainer --name deno-fmt -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.39.4 fmt "$@"
+}
+export -f denoFmt
+
+# The deno JS linter
+# TEST: deno --help
+# RUN:  denoLinter main.ts
+denoLinter() {
+  dockerContainer --name deno-lint -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.39.4 lint "$@"
+}
+export -f denoLinter
+
+# The deno JS documentation generator
+# TEST: deno --help
+# RUN:  denoFmt main.ts
+denoDoc() {
+  dockerContainer --name deno-doc -p 1993:1993 -e DENO_DIR="/tmp" denoland/deno:debian-1.39.4 doc --private "$@"
+}
+export -f denoDoc
 
 # Python
 # TEST: dockerPython3 --version
@@ -165,8 +189,24 @@ convert() {
 }
 export -f convert
 
+# Test: 
+# Run: convertAllImages $convertOption40x100
+convertAllImages() {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.jpg, *.JPG, *.Jpg, *.jpeg, *.jPeG, etc
+  shopt -s nullglob nocaseglob
+
+  for file in *.jpg *.jpeg *.jfif *.exif *.tif *.tiff *.gif *.bmp *.png *.svg
+  do
+      convert "$@" "$file" "new-$file"
+  done
+}
+export -f convertAllImages
+
 export convertPdfOptionPageA4White=' -background white -page a4 '
 export convertPdfOptionDensity300=' -density 300 -alpha background -alpha off '
+export convertOption40x100=' -resize 40% '
 export convertOptionGreyscale40x100=' -set colorspace Gray -separate -average -resize 40% '
 export convertOptionIncreaseBrightness=' -alpha discrete -channel rgb -evaluate add 5% +channel '
 export convertOptionIncreaseContrast=' -contrast '
@@ -178,3 +218,12 @@ xsv() {
 }
 export -f xsv
 
+# lampp
+## Apache HTTP: http://localhost:41062/www 
+## MariaDB: http://localhost:41062/phpmyadmin/
+## SSH: ssh root@localhost -p 41061
+## Test: lampp --version
+xampp() { 
+  dockerContainer --name myXampp -u root:root -p 41061:22 -p 41062:80 -v $HOME/lamp/apache/conf.d:/opt/lampp/conf.d -v $HOME/lamp/apache/htdocs:/opt/lampp/htdocs tomsik68/xampp:8.2.4 "$@"
+}
+export -f xampp

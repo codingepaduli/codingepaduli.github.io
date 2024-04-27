@@ -6,7 +6,7 @@
     <description>Recent content in coding on Lab. informatica</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>La nascita del computer e delle telecomunicazioni</title>
       <link>http://codingepaduli.github.io/coding/storia/</link>
@@ -296,21 +296,30 @@
     </item>
     
     <item>
-      <title>HTML Lez. 09.2 - Soluzioni esercizi sui moduli di invio dati</title>
-      <link>http://codingepaduli.github.io/coding/web/html/form_exe_soluzioni/</link>
-      <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/form_exe_soluzioni/</guid>
-      <description>HTML - Soluzioni esercizi e quiz di comprensione sui moduli di invio dati</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 09.1 - Esercizi sui moduli di invio dati</title>
+      <title>HTML Lez. 09.5 - Esercizi sui moduli di invio dati</title>
       <link>http://codingepaduli.github.io/coding/web/html/form_exe/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/form_exe/</guid>
       <description>HTML - Esercizi e quiz di comprensione sui moduli di invio dati</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 09.4 - Soluzione modulo di registrazione utente</title>
+      <link>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente_soluzione/</link>
+      <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente_soluzione/</guid>
+      <description>HTML - Soluzione modulo di registrazione utente</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 09.3 - Modulo di registrazione utente</title>
+      <link>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente/</guid>
+      <description>HTML - Modulo di registrazione utente</description>
     </item>
     
     <item>

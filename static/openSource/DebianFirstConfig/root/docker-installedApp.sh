@@ -31,7 +31,7 @@ fi
 #     of debian bullseye (installed on my machine)
 docker pull gcc:12-bookworm
 
-docker pull denoland/deno:debian-1.34.3
+docker pull denoland/deno:debian-1.39.4
 
 docker pull python:3.11.4-bookworm
 
@@ -57,3 +57,5 @@ docker pull linuxserver/ffmpeg:6.0-cli-ls91
 docker pull mikenye/youtube-dl:2023.02.17_linux_amd64
 
 docker pull cincan/xsv
+
+docker pull tomsik68/xampp:8.2.4

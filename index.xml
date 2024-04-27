@@ -296,21 +296,30 @@
     </item>
     
     <item>
-      <title>HTML Lez. 09.2 - Soluzioni esercizi sui moduli di invio dati</title>
-      <link>http://codingepaduli.github.io/coding/web/html/form_exe_soluzioni/</link>
-      <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingepaduli.github.io/coding/web/html/form_exe_soluzioni/</guid>
-      <description>HTML - Soluzioni esercizi e quiz di comprensione sui moduli di invio dati</description>
-    </item>
-    
-    <item>
-      <title>HTML Lez. 09.1 - Esercizi sui moduli di invio dati</title>
+      <title>HTML Lez. 09.5 - Esercizi sui moduli di invio dati</title>
       <link>http://codingepaduli.github.io/coding/web/html/form_exe/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/html/form_exe/</guid>
       <description>HTML - Esercizi e quiz di comprensione sui moduli di invio dati</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 09.4 - Soluzione modulo di registrazione utente</title>
+      <link>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente_soluzione/</link>
+      <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente_soluzione/</guid>
+      <description>HTML - Soluzione modulo di registrazione utente</description>
+    </item>
+    
+    <item>
+      <title>HTML Lez. 09.3 - Modulo di registrazione utente</title>
+      <link>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente/</guid>
+      <description>HTML - Modulo di registrazione utente</description>
     </item>
     
     <item>
@@ -433,7 +442,7 @@
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
@@ -442,7 +451,7 @@
     <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
@@ -451,10 +460,19 @@
     <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
+    </item>
+    
+    <item>
+      <title>Scheme</title>
+      <link>http://codingepaduli.github.io/coding/link-scheme/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/coding/link-scheme/</guid>
+      <description>Lezioni su scheme nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/scheme&#39;&gt;scheme&lt;/a&gt;</description>
     </item>
     
     <item>

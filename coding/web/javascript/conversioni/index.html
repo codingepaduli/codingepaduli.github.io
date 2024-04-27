@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 6 minuti 
-        ( 1192 parole)
+        Tempo di lettura 9 minuti 
+        ( 1860 parole)
     </span>
 </div></div>
     </header>
@@ -611,6 +611,114 @@ x16 = &#34;a&#34;
 </tr>
 </tbody>
 </table>
+<h2 id="la-data-e-lorario">La data e l&rsquo;orario</h2>
+<p>Le variabili possono aver assegnata una data ed un orario. Questi tipi di dati di uso molto comune sono oggetti che rappresentano un singolo momento temporale in un formato indipendente dalla piattaforma.</p>
+<p>La rappresentazione di date e orari su internet deve seguire le regole dello standard internazionale
+<a href="https://it.wikipedia.org/wiki/ISO_8601">ISO 8601 Information interchange - Representation of dates and times</a>. Questo standard nasce per risolvere problemi di comprensione dei formati di date e ore utilizzati nei vari paesi, ad esempio la data rappresentata con 04-09-03 può indicare il:</p>
+<ul>
+<li>4 settembre 2003 (o addirittura 1903) in Europa e altri Paesi,</li>
+<li>9 aprile 2003 negli Stati Uniti d&rsquo;America,</li>
+<li>3 settembre 2004 secondo lo standard ISO 8601.</li>
+</ul>
+<p>Il formato in cui scrivere date e ore deve essere <code>YYYY</code>-<code>MM</code>-<code>DD</code>T<code>hh</code>:<code>mm</code>:<code>ss</code>.<code>KKK</code>, con il seguente significato:</p>
+<ul>
+<li><code>YYYY</code>: Anno;</li>
+<li><code>MM</code>: Mese;</li>
+<li><code>GG</code>: Giorno;</li>
+<li>T: è un carattere di separazione, deve essere inserito per separare la data dall&rsquo;ora;</li>
+<li><code>hh</code>: Ora;</li>
+<li><code>mm</code>: Minuti;</li>
+<li><code>ss</code>: Secondi;</li>
+<li><code>kkk</code>: Millisecondi.</li>
+</ul>
+<p>Alcuni campi possono essere omessi, per maggiori informazioni si rimanda alle specifiche del W3C.</p>
+<p>Per creare un oggetto che memorizza il momento temporale:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> date2 = <span style="color:#00f">new</span> Date();
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> date1 = <span style="color:#00f">new</span> Date(<span style="color:#009c00">&#39;1995-12-17T03:24:00&#39;</span>);
+</span></span></code></pre></div><p>Per convertire la data in una rappresentazione testuale localizzata:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> orario1 = date.toLocaleString(<span style="color:#009c00">&#39;en-US&#39;</span>); <span style="color:#f00;font-style:italic">//  2/11/2020,  1:04:52 PM
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> orario2 = date.toLocaleString(<span style="color:#009c00">&#39;en-GB&#39;</span>); <span style="color:#f00;font-style:italic">// 11/02/2020, 13:04:52
+</span></span></span></code></pre></div><p>Per convertire la data in una rappresentazione testuale localizzata e specificare il formato:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> orario1 = date.toLocaleString(<span style="color:#009c00">&#39;en-US&#39;</span>); <span style="color:#f00;font-style:italic">//  2/11/2020,  1:04:52 PM
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> orario2 = date.toLocaleString(<span style="color:#009c00">&#39;it-IT&#39;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;dateStyle&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;timeStyle&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>
+</span></span><span style="display:flex;"><span>}); <span style="color:#f00;font-style:italic">// 11 aprile 2024 alle ore 19:19:15 UTC
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>console.log(<span style="color:#00f">new</span> Date().toLocaleString(<span style="color:#009c00">&#39;it-IT&#39;</span>, {<span style="color:#009c00">&#39;dateStyle&#39;</span>: <span style="color:#009c00">&#39;full&#39;</span>, <span style="color:#009c00">&#39;timeStyle&#39;</span>: <span style="color:#009c00">&#39;full&#39;</span>}))
+</span></span></code></pre></div><p>Le proprietà <code>dateStyle</code> e <code>timeStyle</code> possono essere specificate per indicare il formato della data e dell&rsquo;ora, non necessariamente devono essere inserite entrambe, possono assumere uno dei seguenti valori:</p>
+<ul>
+<li><code>full</code> indica tutti i dati in formato testuale completo, ad esempio <code>giovedì 11 aprile 2024 alle ore 19:20:42 Tempo coordinato universale</code>;</li>
+<li><code>long</code> indica tutti i dati in formato testuale abbreviato, ad esempio <code>11 aprile 2024 alle ore 19:21:18 UTC</code>;</li>
+<li><code>medium</code> indica tutti i dati in formato numerico, ad esempio <code>11 apr 2024, 19:21:18</code>;</li>
+<li><code>short</code> indica tutti i dati in formato numerico ridotto, ad esempio <code>11/04/24, 19:21</code>.</li>
+</ul>
+<p>Se si vuole specificare il formato solo per una parte della data e dell&rsquo;orario, si possono utilizzare le seguenti proprietà:</p>
+<ul>
+<li>
+<p><code>day</code>, <code>month</code>, <code>year</code>, <code>hour</code>, <code>minute</code>, <code>second</code> permettono di visualizzare il campo numerico nel formato seguente:</p>
+<ul>
+<li><code>numeric</code> a una o due cifre;</li>
+<li><code>2-digit</code> sempre a due cifre (ad esempio <code>03</code>).</li>
+</ul>
+</li>
+<li>
+<p><code>fractionalSecondDigits</code> permette di visualizzare il numero di millisecondi nei seguenti formati:</p>
+<ul>
+<li><code>1</code>: una sola cifra;</li>
+<li><code>2</code>: due cifre;</li>
+<li><code>3</code>: tre cifre;</li>
+</ul>
+</li>
+<li>
+<p><code>hour12</code> visualizza l&rsquo;ora nel formato a 12 o 24 ore:</p>
+<ul>
+<li><code>true</code>: con 12 ore e indicatori AM e PM;</li>
+<li><code>false</code>: con 24 cifre;</li>
+</ul>
+</li>
+<li>
+<p><code>weekday</code>, <code>era</code>, <code>month</code>, <code>dayPeriod</code> e <code>timeZoneName</code> permettono di visualizzare il nome del campo in uno dei seguenti formati:</p>
+<ul>
+<li><code>long</code> nome completo del campo;</li>
+<li><code>short</code> nome abbreviato del campo;</li>
+<li><code>narrow</code> iniziale del nome del campo;</li>
+</ul>
+</li>
+</ul>
+<p>Ad esempio, per specificare data e ora con le informazioni &ldquo;aprile 2024 dopo Cristo sabato alle ore 14:35:50,777&rdquo; è necessario specificare le seguenti proprietà:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.log(<span style="color:#00f">new</span> Date().toLocaleString(<span style="color:#009c00">&#39;it-IT&#39;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;era&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;year&#39;</span>: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;month&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;weekday&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;hour&#39;</span>: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;minute&#39;</span>: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;second&#39;</span>: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;fractionalSecondDigits&#39;</span>: <span style="color:#009c00">&#39;3&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;hour12&#39;</span>: <span style="color:#00f">false</span>
+</span></span><span style="display:flex;"><span>}));
+</span></span></code></pre></div><p>I metodi getter con parametri per le date in JavaScript sono:</p>
+<ol>
+<li><code>getFullYear()</code>: Restituisce l&rsquo;anno della data.</li>
+<li><code>getMonth()</code>: Restituisce il mese della data (0-11).</li>
+<li><code>getDate()</code>: Restituisce il giorno del mese della data (1-31).</li>
+<li><code>getDay()</code>: Restituisce il giorno della settimana della data (0-6, dove 0 è Domenica e 6 è Sabato).</li>
+<li><code>getHours()</code>: Restituisce l&rsquo;ora della data (0-23).</li>
+<li><code>getMinutes()</code>: Restituisce i minuti della data (0-59).</li>
+<li><code>getSeconds()</code>: Restituisce i secondi della data (0-59).</li>
+<li><code>getMilliseconds()</code>: Restituisce i millisecondi della data (0-999).</li>
+</ol>
+<p>I metodi setter con parametri per le date in JavaScript sono:</p>
+<ol>
+<li><code>setFullYear(year)</code>: Imposta l&rsquo;anno della data.</li>
+<li><code>setMonth(month)</code>: Imposta il mese della data (0 per gennaio, 1 per febbraio, ecc.).</li>
+<li><code>setDate(day)</code>: Imposta il giorno del mese della data.</li>
+<li><code>setHours(hours)</code>: Imposta le ore della data (0-23).</li>
+<li><code>setMinutes(minutes)</code>: Imposta i minuti della data (0-59).</li>
+<li><code>setSeconds(seconds)</code>: Imposta i secondi della data (0-59).</li>
+<li><code>setMilliseconds(milliseconds)</code>: Imposta i millisecondi della data (0-999).</li>
+</ol>
 
     </div>
   </article>
