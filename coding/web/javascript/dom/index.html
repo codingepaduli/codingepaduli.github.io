@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 12 minuti 
-        ( 2463 parole)
+        Tempo di lettura 13 minuti 
+        ( 2580 parole)
     </span>
 </div></div>
     </header>
@@ -258,13 +258,8 @@
 <li>effettuare le modifiche dalle <strong>proprietà</strong> di un nodo;</li>
 <li>ricevere notifiche di eventi che avvengono su un nodo del documento, come il click del mouse su un elemento o l&rsquo;aggiunta di un nuovo elemento.</li>
 </ul>
-<p>Esiste una notevole differenza tra i concetti di proprietà ed attributi, quando si parla di sviluppo di pagine web:</p>
-<ul>
-<li>si parla di attributi quando si riferisce agli attributi delle etichette HTML, come ad esempio l&rsquo;attributo <code>width</code> nell&rsquo;etichetta <code>&lt;img width=&quot;5px&quot; height=&quot;5px&quot;&gt;</code>;</li>
-<li>si parla di proprietà quando si riferisce ad una proprietà di un oggetto JavaScript, in particolare ad una proprietà di un nodo selezionato attraverso le funzioni <code>document.querySelector</code> e <code>document.querySelectorAll</code>.</li>
-</ul>
-<p>Sia gli attributi, sia le proprietà, sia gli eventi possono essere gestite utilizzando il modello ad albero DOM.</p>
-<p>Nel modello DOM ogni nodo è interpretato come una tipologia di oggetto JavaScript <code>Node</code>, <code>Element</code> ed <code>HTMLElement</code> che rappresentano genericamente un elemento del documento HTML e che forniscono i metodi per manipolare gli attributi ed il contenuto del nodo; Ogni nodo poi si specializza in una tipologia di oggetto particolare, ad esempio:</p>
+<p>Questa modello è un concetto generico ed è utilizzabile in qualsiasi linguaggio di programmazione.</p>
+<p>In JavaScript è l&rsquo;oggetto <code>document</code> che permette di vedere il documento HTML come albero DOM e permette di manipolarlo attraverso le operazioni riportate in precedenza. Ogni nodo dell&rsquo;albero DOM è interpretato come una tipologia di oggetto JavaScript <code>Node</code>, <code>Element</code> ed <code>HTMLElement</code> che rappresentano genericamente un elemento del documento HTML e che forniscono i metodi per manipolare gli attributi ed il contenuto del nodo; Ogni nodo poi si specializza in una tipologia di oggetto particolare, ad esempio:</p>
 <ul>
 <li><code>HTMLParagraphElement</code>: è un nodo interpretato come una tipologia di oggetto JavaScript che rappresenta un paragrafo del documento HTML;</li>
 <li><code>HTMLHeadingElement</code>: è un nodo interpretato come una tipologia di oggetto JavaScript che rappresenta un titolo (dal primo al sesto) del documento HTML;</li>
@@ -272,8 +267,13 @@
 <li><code>HTMLInputElement</code>: è un nodo interpretato come una tipologia di oggetto JavaScript che rappresenta un campo di input del documento HTML.</li>
 </ul>
 <p>Ognuno di questi oggetti mette a disposizione proprietà, attributi ed eventi specifici per la specifica etichetta HTML che il nodo rappresenta.</p>
+<p>Sia gli attributi, sia le proprietà, sia gli eventi possono essere gestite utilizzando il modello ad albero DOM.</p>
+<p>In JavaScript esiste una notevole differenza tra i concetti di proprietà ed attributi, quando si parla di modello DOM nello sviluppo di pagine web:</p>
+<ul>
+<li>si parla di attributi quando si riferisce agli attributi delle etichette HTML, come ad esempio l&rsquo;attributo <code>width</code> nell&rsquo;etichetta <code>&lt;img width=&quot;5px&quot; height=&quot;5px&quot;&gt;</code>;</li>
+<li>si parla di proprietà quando si riferisce ad una proprietà di un nodo dell&rsquo;albero, in particolare ad una proprietà di un oggetto JavaScript il cui tipo è <code>Node</code>, <code>Element</code> o <code>HTMLElement</code>.</li>
+</ul>
 <h2 id="selezione-dei-nodi">Selezione dei nodi</h2>
-<p>Il documento HTML in JavaScript è visto come un albero DOM ed è accessibile attraverso l&rsquo;oggetto <code>document</code>.</p>
 <p>L&rsquo;oggetto <code>document</code> permette di selezionare gli elementi che si intende manipolare indicandoli con un selettore CSS. In particolare si ha:</p>
 <ul>
 <li>la funzione <code>document.querySelector</code> prende come parametro un selettore CSS che seleziona <strong>un singolo elemento</strong> e quindi questa funzione restituisce il solo elemento selezionato;</li>
@@ -302,20 +302,7 @@
 <p>Questo selettore CSS seleziona più elementi ed è quindi utilizzabile con la funzione <code>document.querySelectorAll</code>.</p>
 <p>Invocando la funzione <code>document.querySelectorAll</code> con parametro il selettore CSS <code>.paragrafo</code> ci permette di selezionare la lista di nodi del DOM che rappresentano i due paragrafi, come nell&rsquo;esempio seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elementList = document.querySelectorAll(<span style="color:#009c00">&#39;.paragrafo&#39;</span>);
-</span></span></code></pre></div><h2 id="proprietà-dei-nodi-del-dom">Proprietà dei nodi del DOM</h2>
-<p>Le proprietà di un nodo sono coppie chiave-valore (nome-valore). La sintassi <code>nodo.nomeProprieta</code> è utilizzata per accedere ad una proprietà di un nodo (in maniera molto simile all&rsquo;uso delle variabili). Se la proprietà a cui si accede esiste, viene modificata, se non esiste viene creata.</p>
-<p>Come per le variabili, il valore associato ad una proprietà può essere di qualsiasi tipo, un numero, un oggetto o qualsiasi altro tipo consentito.</p>
-<p>Come per le variabili, le proprietà possono avere il nome composto con caratteri alfanumerici (maiuscoli o minuscoli).</p>
-<p>Supponiamo di avere la seguente porzione di documento HTML:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprietaEsistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
-</span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si accede alle proprietà del nodo.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
-</span></span><span style="display:flex;"><span>elemento.proprietaEsistente = <span style="color:#009c00">&#34;p2&#34;</span>;
-</span></span><span style="display:flex;"><span>elemento.proprietaNuova = <span style="color:#009c00">&#34;valoreProprieta2&#34;</span>;
-</span></span><span style="display:flex;"><span>elemento.proprietaOggetto = { p1 : <span style="color:#009c00">&#34;v1&#34;</span>, p2: 1 };
-</span></span></code></pre></div><p>La creazione o la modifica di queste proprietà non comporta la creazione o la modifica degli attributi HTML del nodo selezionato. Il paragrafo non viene alterato, resta identico:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprietaEsistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
-</span></span></code></pre></div><h2 id="attributi-html">Attributi HTML</h2>
+</span></span></code></pre></div><h2 id="gestione-attributi-html">Gestione attributi HTML</h2>
 <p>Gli attributi sono coppie chiave-valore (nome-valore) appartenenti agli elementi HTML, quindi indicati nelle etichette. Il nome di un attributo HTML è alfanumerico, ma con tutte le lettere minuscole, non sono ammesse lettere maiuscole.</p>
 <p>Per gestire gli attributi è necessario selezionare un nodo, ad esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> node = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
@@ -337,7 +324,21 @@
 </span></span><span style="display:flex;"><span>elemento.setAttribute(<span style="color:#009c00">&#34;proprieta-nuova&#34;</span>, <span style="color:#009c00">&#34;valoreProprieta2&#34;</span>);
 </span></span></code></pre></div><p>Il paragrafo selezionato sarà quindi modificato nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;div id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-nuova=<span style="color:#009c00">&#34;valoreProprieta2&#34;</span>&gt;Hello World!&lt;/div&gt;
-</span></span></code></pre></div><h2 id="proprietà-che-si-riflettono-sugli-attributi">Proprietà che si riflettono sugli attributi</h2>
+</span></span></code></pre></div><h2 id="proprietà-dei-nodi-del-dom">Proprietà dei nodi del DOM</h2>
+<p>Le proprietà di un nodo sono coppie chiave-valore (nome-valore). La sintassi <code>nodo.nomeProprieta</code> è utilizzata per accedere ad una proprietà di un nodo (in maniera molto simile all&rsquo;uso delle variabili). Se la proprietà a cui si accede esiste, viene modificata, se non esiste viene creata.</p>
+<p>Come per le variabili, il valore associato ad una proprietà può essere di qualsiasi tipo, un numero, un oggetto o qualsiasi altro tipo consentito.</p>
+<p>Come per le variabili, le proprietà possono avere il nome composto con caratteri alfanumerici (maiuscoli o minuscoli).</p>
+<p>Supponiamo di avere la seguente porzione di documento HTML:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprietaEsistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+</span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si accede alle proprietà del nodo.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
+</span></span><span style="display:flex;"><span>elemento.proprietaEsistente = <span style="color:#009c00">&#34;p2&#34;</span>;
+</span></span><span style="display:flex;"><span>elemento.proprietaNuova = <span style="color:#009c00">&#34;valoreProprieta2&#34;</span>;
+</span></span><span style="display:flex;"><span>elemento.proprietaOggetto = { p1 : <span style="color:#009c00">&#34;v1&#34;</span>, p2: 1 };
+</span></span></code></pre></div><p>La creazione o la modifica di queste proprietà non comporta la creazione o la modifica degli attributi HTML del nodo selezionato. Il paragrafo non viene alterato, resta identico:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprietaEsistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+</span></span></code></pre></div><p>Esiste una sintassi alternativa per accedere ad una proprietà di un nodo, consiste nell&rsquo;indicare la proprietà tra parentesi quadre: <code>nodo[nomeProprieta]</code>, è utilizzata quando il nome della proprietà non rispetta le convenzioni suggerite per il nome della proprietà.</p>
+<h2 id="proprietà-che-si-riflettono-sugli-attributi">Proprietà che si riflettono sugli attributi</h2>
 <p>Le proprietà possono riflettersi su un attributo, ma solo nei casi in cui è previsto e documentato (cioè se l&rsquo;interfaccia dello specifico elemento DOM prevede la proprietà e la trasforma automaticamente in un attributo);</p>
 <p>Ad esempio è sempre possibile accedere all&rsquo;attributo <code>id</code> utilizzando la sintassi <code>elemento.id</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> element = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
@@ -352,49 +353,32 @@
 </span></span></code></pre></div><p>Alcune volte la riflessione avviene attraverso una proprietà che ha un nome differente, ad esempio:</p>
 <ul>
 <li>su un qualsiasi nodo è possibile modificare la proprietà <code>ariaLabel</code>, questa modifica si riflette sull&rsquo;attributo <code>aria-label</code> della corrispondente etichetta;</li>
-<li>su un qualsiasi nodo è possibile modificare la proprietà <code>className</code>, questa modifica si riflette sull&rsquo;attributo <code>class</code> della corrispondente etichetta;</li>
 </ul>
 <p>Altre volte, l&rsquo;accesso alla proprietà restituisce un valore di default se il valore dell&rsquo;attributo non è valido oppure modifica l&rsquo;attributo inserendo un valore di default.</p>
 <p>Ancora, l&rsquo;accesso alla proprietà restituisce il valore dell&rsquo;attributo finché non viene modificata una seconda proprietà.</p>
 <p>Insomma, le modifiche delle proprietà non seguono una logica lineare e non esiste una regola comune per indicare come queste modifiche si riflettano sugli attributi. Ogni volta è necessario controllare la documentazione della specifica proprietà.</p>
-<h2 id="proprietà-principali">Proprietà principali</h2>
-<p>Questo ultimo caso è il caso di tutti i campi di input, i quali sono dotati sia della proprietà <code>value</code> che della proprietà <code>defaultValue</code>. Quando si accede alla proprietà <code>value</code> si ottiene il valore della proprietà <code>defaultValue</code> fino a quando non viene indicato un valore per la proprietà <code>value</code>. Dal momento in cui viene indicato un valore, l&rsquo;accesso alla proprietà <code>value</code> inizia a restituire il proprio valore.</p>
-<script>
-  const text = document.createTextNode('Hello World!');
-  let elemento = document.createElement('div');
-  elemento.appendChild(text);
-  // document.body.appendChild(elemento);
-
-  // imposto l'attributo
-  elemento.setAttribute('proprieta-esistente', 'p1');
-  elemento.proprietaEsistente="p2";
-  
-  // imposto le proprietà
-  elemento.proprietaEsistente = "p1";
-  elemento.proprietaNuova = "valoreProprieta2";
-  elemento.proprietaOggetto = { p1 : "v1", p2: 1 };
-  console.log(elemento.proprietaEsistente);
-  console.log(elemento.proprietaNuova);
-  console.dir(elemento.proprietaOggetto);
-
-  console.log(elemento.hasAttributes());
-  console.table(elemento.getAttributeNames());
-  console.log(elemento.hasAttribute("proprieta-esistente"));
-  elemento.removeAttribute("proprieta-esistente");
-
-  elemento.setAttribute("proprieta-nuova", "valoreProprieta2");
-  console.log(elemento.getAttribute("proprieta-nuova"));
-
-  elemento.toggleAttribute("proprieta-esistente");
-  elemento.id = { id : "v1" };
-</script>
-<h2 id="proprieta-principali">Proprieta principali</h2>
-<p>Le principali proprietà di un elemento a cui è possibile accedere nelle funzioni JavaScript sono le seguenti:</p>
+<h3 id="proprietà-testuali">Proprietà testuali</h3>
+<p>Le proprietà che permettono di avere una rappresentazione testuale dell&rsquo;elemento e del contenuto sono le seguenti:</p>
 <ul>
-<li><code>innerHTML</code>: il contenuto dell&rsquo;elemento selezionato (senza l&rsquo;elemento);</li>
-<li><code>outerHTML</code>: l&rsquo;elemento selezionato ed il suo contenuto;</li>
-<li><code>value</code>: proprietà accessibile solo per i campi di input, restituisce il valore in formato stringa.</li>
+<li><code>innerHTML</code>: il contenuto dell&rsquo;elemento selezionato (senza l&rsquo;etichetta HTML);</li>
+<li><code>outerHTML</code>: l&rsquo;elemento selezionato ed il suo contenuto (compresa l&rsquo;etichetta HTML);</li>
+<li><code>textContent</code>: il testo inserito all&rsquo;interno di un elemento.</li>
 </ul>
+<p>Alcuni caratteri possono essere convertiti in &ldquo;HTML entities&rdquo; per essere correttamente rappresentati.</p>
+<p>Supponiamo di avere la seguente porzione di documento HTML:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+</span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si modifica il contenuto del nodo e poi si scrive l&rsquo;intera etichetta nella console.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
+</span></span><span style="display:flex;"><span>elemento.innerHTML = <span style="color:#009c00">&#34;nuovo paragrafo&#34;</span>;
+</span></span><span style="display:flex;"><span>console.log(ele.textContent);
+</span></span><span style="display:flex;"><span>console.log(elemento.outerHTML);
+</span></span></code></pre></div><p>Il paragrafo selezionato sarà quindi modificato nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;nuovo paragrafo&lt;/p&gt;
+</span></span></code></pre></div><p>La proprietà <code>ele.textContent</code> visualizzerà il testo &ldquo;nuovo paragrafo&rdquo;, mentre la proprietà <code>elemento.outerHTML</code> visualizzerà il testo &ldquo;<p id="paragrafo1" proprieta-esistente="p1">nuovo paragrafo</p>&rdquo;</p>
+<h3 id="proprietà-value">Proprietà <code>value</code></h3>
+<p>La proprietà <code>value</code> è disponibile solo per i campi di input, restituisce il valore del campo di input inserito dall&rsquo;utente. Dato che il linguaggio HTML è un linguaggio testuale, il valore è sempre una stringa.</p>
+<p>Questo ultimo caso è il caso di tutti i campi di input, i quali sono dotati sia della proprietà <code>value</code> che della proprietà <code>defaultValue</code>. Quando si accede alla proprietà <code>value</code> si ottiene il valore della proprietà <code>defaultValue</code> fino a quando non viene indicato un valore per la proprietà <code>value</code>. Dal momento in cui viene indicato un valore, l&rsquo;accesso alla proprietà <code>value</code> inizia a restituire il proprio valore.</p>
+<h2 id="esercizio">Esercizio</h2>
 <p>Ad esempio, utilizzando il <strong>selettore CSS per identificatore</strong>, è possibile selezionare un elemento di input ed accedere al valore:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;text&#34;</span> id=<span style="color:#009c00">&#34;nome&#34;</span> value=<span style="color:#009c00">&#34;John&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
@@ -462,16 +446,12 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>target.removeChild(ele);
 </span></span></code></pre></div><p>Per rimuovere un elemento dalla pagina, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.remove();
-</span></span></code></pre></div><p>Per ottenere solo ed esclusivamente il testo inserito all&rsquo;interno di un elemento dalla pagina, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> text = ele.textContent;
 </span></span></code></pre></div><p>Per aggiungere un elemento prima di un secondo elemento, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;beforebegin&#39;</span>, ele);
 </span></span></code></pre></div><p>Per aggiungere un elemento dopo un secondo elemento, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;afterend&#39;</span>, ele);
 </span></span></code></pre></div><h2 id="gestione-di-codice-html-degli-elementi">Gestione di codice HTML degli elementi</h2>
-<p>Per ottenere il codice HTML (alcuni caratteri sono convertiti in &ldquo;HTML entities&rdquo;) contenuto all&rsquo;interno di un elemento dalla pagina, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> text = ele.innerHTML;
-</span></span></code></pre></div><p>Per aggiungere codice HTML prima di un secondo elemento, si utilizza la seguente funzione:</p>
+<p>Per aggiungere codice HTML prima di un secondo elemento, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentHTML(<span style="color:#009c00">&#39;beforebegin&#39;</span>, html);
 </span></span></code></pre></div><p>Per aggiungere codice HTML dopo un secondo elemento, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentHTML(<span style="color:#009c00">&#39;afterend&#39;</span>, html);
