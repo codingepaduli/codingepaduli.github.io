@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JavaScript Lez. 09 - Manipolazione del DOM - Lab. informatica</title>
+    <title>JavaScript Lez. 09 - Document Object Model - Lab. informatica</title>
 
-    <meta name="description" content="09 - Manipolazione del DOM">
-        <meta property="og:title" content="JavaScript Lez. 09 - Manipolazione del DOM" />
-<meta property="og:description" content="09 - Manipolazione del DOM" />
+    <meta name="description" content="09 - Document Object Model">
+        <meta property="og:title" content="JavaScript Lez. 09 - Document Object Model" />
+<meta property="og:description" content="09 - Document Object Model" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/dom/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
 <meta property="article:published_time" content="2020-08-01T00:00:00+00:00" />
@@ -17,8 +17,8 @@
         <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
 
-<meta name="twitter:title" content="JavaScript Lez. 09 - Manipolazione del DOM"/>
-<meta name="twitter:description" content="09 - Manipolazione del DOM"/>
+<meta name="twitter:title" content="JavaScript Lez. 09 - Document Object Model"/>
+<meta name="twitter:description" content="09 - Document Object Model"/>
 
 
 
@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 13 minuti 
-        ( 2580 parole)
+        Tempo di lettura 15 minuti 
+        ( 3069 parole)
     </span>
 </div></div>
     </header>
@@ -350,14 +350,11 @@
 </span></span><span style="display:flex;"><span>element.boh =<span style="color:#009c00">&#34;p1&#34;</span>
 </span></span></code></pre></div><p>Questo esempio mostra la selezione di un nodo del documento, su questo nodo selezionato si accede alla proprietà <code>boh</code> che non esiste e viene creta, ma questa modifica non si riflette in un attributo del paragrafo HTML. Il paragrafo HTML rimane quindi il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
-</span></span></code></pre></div><p>Alcune volte la riflessione avviene attraverso una proprietà che ha un nome differente, ad esempio:</p>
-<ul>
-<li>su un qualsiasi nodo è possibile modificare la proprietà <code>ariaLabel</code>, questa modifica si riflette sull&rsquo;attributo <code>aria-label</code> della corrispondente etichetta;</li>
-</ul>
+</span></span></code></pre></div><p>Alcune volte la riflessione avviene attraverso una proprietà che ha un nome differente, ad esempio per la proprietà <code>ariaLabel</code> che si riflette sull&rsquo;attributo <code>aria-label</code> (e non sull&rsquo;attributo <code>ariaLabel</code>) della corrispondente etichetta;</p>
 <p>Altre volte, l&rsquo;accesso alla proprietà restituisce un valore di default se il valore dell&rsquo;attributo non è valido oppure modifica l&rsquo;attributo inserendo un valore di default.</p>
 <p>Ancora, l&rsquo;accesso alla proprietà restituisce il valore dell&rsquo;attributo finché non viene modificata una seconda proprietà.</p>
 <p>Insomma, le modifiche delle proprietà non seguono una logica lineare e non esiste una regola comune per indicare come queste modifiche si riflettano sugli attributi. Ogni volta è necessario controllare la documentazione della specifica proprietà.</p>
-<h3 id="proprietà-testuali">Proprietà testuali</h3>
+<h3 id="proprietà-di-contenuto-testuale">Proprietà di contenuto testuale</h3>
 <p>Le proprietà che permettono di avere una rappresentazione testuale dell&rsquo;elemento e del contenuto sono le seguenti:</p>
 <ul>
 <li><code>innerHTML</code>: il contenuto dell&rsquo;elemento selezionato (senza l&rsquo;etichetta HTML);</li>
@@ -374,31 +371,36 @@
 </span></span><span style="display:flex;"><span>console.log(elemento.outerHTML);
 </span></span></code></pre></div><p>Il paragrafo selezionato sarà quindi modificato nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;nuovo paragrafo&lt;/p&gt;
-</span></span></code></pre></div><p>La proprietà <code>ele.textContent</code> visualizzerà il testo &ldquo;nuovo paragrafo&rdquo;, mentre la proprietà <code>elemento.outerHTML</code> visualizzerà il testo &ldquo;<p id="paragrafo1" proprieta-esistente="p1">nuovo paragrafo</p>&rdquo;</p>
-<h3 id="proprietà-value">Proprietà <code>value</code></h3>
-<p>La proprietà <code>value</code> è disponibile solo per i campi di input, restituisce il valore del campo di input inserito dall&rsquo;utente. Dato che il linguaggio HTML è un linguaggio testuale, il valore è sempre una stringa.</p>
-<p>Questo ultimo caso è il caso di tutti i campi di input, i quali sono dotati sia della proprietà <code>value</code> che della proprietà <code>defaultValue</code>. Quando si accede alla proprietà <code>value</code> si ottiene il valore della proprietà <code>defaultValue</code> fino a quando non viene indicato un valore per la proprietà <code>value</code>. Dal momento in cui viene indicato un valore, l&rsquo;accesso alla proprietà <code>value</code> inizia a restituire il proprio valore.</p>
-<h2 id="esercizio">Esercizio</h2>
-<p>Ad esempio, utilizzando il <strong>selettore CSS per identificatore</strong>, è possibile selezionare un elemento di input ed accedere al valore:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;text&#34;</span> id=<span style="color:#009c00">&#34;nome&#34;</span> value=<span style="color:#009c00">&#34;John&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;script&gt;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> valoreInput = document.querySelector(<span style="color:#009c00">&#34;#nome&#34;</span>).value;
-</span></span><span style="display:flex;"><span>console.info(valoreInput);
-</span></span><span style="display:flex;"><span>&lt;/script&gt;
-</span></span></code></pre></div><p>L&rsquo;output scritto in console è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>John
-</span></span></code></pre></div><p>Sempre utilizzando il <strong>selettore CSS per identificatore</strong>, per selezionare un elemento paragrafo ed accedere al testo presente nel paragrafo, si può utilizzare la proprietà <code>innerHTML</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo&#34;</span>&gt;Questo è un paragrafo&lt;/p&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;script&gt;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> paragrafo = document.querySelector(<span style="color:#009c00">&#34;#paragrafo&#34;</span>).innerHTML;
-</span></span><span style="display:flex;"><span>console.info(paragrafo);
-</span></span><span style="display:flex;"><span>&lt;/script&gt;
-</span></span></code></pre></div><p>L&rsquo;output scritto in console è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Questo è un paragrafo
-</span></span></code></pre></div><p>Se invece si fa uso della proprietà <code>outerHTML</code>, in console viene riportato anche il codice HTML dell&rsquo;elemento:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>&lt;p id=&#34;paragrafo&#34;&gt;Questo è un paragrafo&lt;/p&gt;
+</span></span></code></pre></div><p>La proprietà <code>ele.textContent</code> visualizzerà il testo <code>nuovo paragrafo</code>, mentre la proprietà <code>elemento.outerHTML</code> visualizzerà il testo <code>&lt;p id=&quot;paragrafo1&quot; proprieta-esistente=&quot;p1&quot;&gt;nuovo paragrafo&lt;/p&gt;</code></p>
+<h3 id="proprietà-defaultvalue">Proprietà <code>defaultValue</code></h3>
+<p>Tutti i campi di input sono dotati della proprietà <code>defaultValue</code>che restituisce sempre il valore dell&rsquo;attributo HTML <code>value</code> del campo di input. Dato che il linguaggio HTML è un linguaggio testuale, il valore è sempre una stringa.</p>
+<p>Supponiamo di avere la seguente porzione di documento HTML:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;default&#34;</span>&gt;
+</span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si accede alle proprietà del nodo.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#input&#39;</span>);
+</span></span><span style="display:flex;"><span>console.log(input.defaultValue); <span style="color:#f00;font-style:italic">// &#39;default&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>input.defaultValue = <span style="color:#009c00">&#34;new default&#34;</span>
+</span></span><span style="display:flex;"><span>console.log(input.defaultValue); <span style="color:#f00;font-style:italic">// &#39;new default&#39;
+</span></span></span></code></pre></div><p>La modifica di questa proprietà comporta di riflesso la modifica dell&rsquo;attributo HTML <code>value</code> del nodo selezionato. Il campo di input viene alterato come di seguito:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;new default&#34;</span>&gt;
+</span></span></code></pre></div><h3 id="proprietà-value">Proprietà <code>value</code></h3>
+<p>Tutti i campi di input sono dotati della proprietà <code>value</code>, che non deve essere confusa ne con la proprietà <code>defaultValue</code> ne con il valore dell&rsquo;attributo HTML <code>value</code> dei campi di input. Dato che il linguaggio HTML è un linguaggio testuale, il valore è sempre una stringa.</p>
+<p>La proprietà <code>value</code> si comporta in modo particolare:</p>
+<ul>
+<li>se nel nodo selezionato questa proprietà non è definita, allora viene restituito il valore presente nella proprietà <code>defaultValue</code> del campo di input;</li>
+<li>se nel nodo selezionato questa proprietà è stata definita (ad esempio attraverso l&rsquo;istruzione <code>nodo.value = 3</code>), allora viene restituito il valore di questa proprietà.</li>
+</ul>
+<p>La modifica di questa proprietà non si riflette in una modifica all&rsquo;attributo HTML del campo di input.</p>
+<p>Supponiamo di avere la seguente porzione di documento HTML:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;default&#34;</span>&gt;
+</span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si accede alle proprietà del nodo.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#input&#39;</span>);
+</span></span><span style="display:flex;"><span>console.log(input.value); <span style="color:#f00;font-style:italic">// &#39;default&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>input.value = <span style="color:#009c00">&#34;new default&#34;</span>
+</span></span><span style="display:flex;"><span>console.log(input.value); <span style="color:#f00;font-style:italic">// &#39;new default&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.log(input.defaultValue); <span style="color:#f00;font-style:italic">// &#39;default&#39;
+</span></span></span></code></pre></div><p>La modifica della proprietà <code>value</code> non comporta di riflesso la modifica dell&rsquo;attributo HTML <code>value</code> del nodo selezionato. Il campo di input rimane inalterato come di seguito:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;default&#34;</span>&gt;
 </span></span></code></pre></div><h2 id="eventi-dom-ed-html">Eventi DOM ed HTML</h2>
 <p>Il DOM permette di notificare gli <strong>eventi</strong>, detti tecnicamente <strong>eventi DOM</strong>, che avvengono in una pagina HTML, come il completamento della lettura della pagina web o il click da parte dell&rsquo;utente su un pulsante.</p>
 <p>Al verificarsi di un evento relativo al documento o ad uno specifico elemento si può programmare un&rsquo;azione da eseguire.</p>
@@ -416,10 +418,10 @@
 <li><code>onsubmit</code>: il form è stato inviato;</li>
 <li><code>onload</code>: la pagina web è stato caricata;</li>
 </ul>
-<p>Come valore di questi attributi si deve specificare una funzione da eseguire, ad esempio la funzione JavaScript <code>alert</code> che mostra un messaggio all&rsquo;utente.</p>
+<p>La presenza di uno di questi attributi indica che si ha interesse a ricevere notifiche dell&rsquo;evento associato, e che una volta notificato l&rsquo;evento si deve eseguire una funzione indicata come valore dell&rsquo;attributo, ad esempio la funzione JavaScript <code>alert</code> che mostra un messaggio all&rsquo;utente.</p>
 <p>Un esempio completo che mostra come alla notifica dell&rsquo;azione del click si può eseguire l&rsquo;azione di mostrare un messaggio all&rsquo;utente è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;button&#34;</span> value=<span style="color:#009c00">&#34;clicca&#34;</span> onclick=<span style="color:#009c00">&#34;alert(&#39;cliccato&#39;)&#34;</span>&gt;
-</span></span></code></pre></div><p>Nell&rsquo;esempio precedente, l&rsquo;attributo <code>onclick</code> permette di ricevere la notifica dell&rsquo;evento di &ldquo;click&rdquo; sull&rsquo;elemento <code>input</code>, l&rsquo;azione da eseguire è quella di <code>alert('cliccato')</code>.</p>
+</span></span></code></pre></div><p>Nell&rsquo;esempio appena visto, l&rsquo;attributo <code>onclick</code> permette di ricevere la notifica dell&rsquo;evento di &ldquo;click&rdquo; sull&rsquo;elemento <code>input</code>, l&rsquo;azione da eseguire è la funzione <code>alert('cliccato')</code> che mostra un messaggio all&rsquo;utente.</p>
 <p>Ovviamente le azioni da eseguire possono essere definire in funzioni JavaScript, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script&gt;
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">function</span> definitaDaUtente() {
@@ -434,6 +436,65 @@
 </span></span><span style="display:flex;"><span>&lt;script&gt;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> button = document.getElementById(<span style="color:#009c00">&#34;#myButton&#34;</span>);
 </span></span><span style="display:flex;"><span>button.addEventListener(<span style="color:#009c00">&#34;click&#34;</span>, definitaDaUtente()); 
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
+</span></span></code></pre></div><h2 id="esercizio-calcolatrice-web-interattiva">Esercizio: Calcolatrice web interattiva</h2>
+<p>Utilizzando eventi, proprietà ed attributi si può realizzare una pagina web interattiva che elabori l&rsquo;input dell&rsquo;utente e mostri un output, tutto in locale nel browser.</p>
+<p>Supponiamo di voler creare una semplice calcolatrice per la somma di due numeri, composta da due campi di input ed un campo di output. La calcolatrice al momento effettua solo la somma.</p>
+<p>I campi di input devono avere gli identificativi necessari, dato che saranno utilizzati nei <strong>selettori CSS per identificatore</strong> per selezionare l&rsquo;elemento di input ed accedere al valore inserito dall&rsquo;utente. Stessa cosa per i campi di output, dato che il valore deve essere modificato. Quindi:</p>
+<ul>
+<li>al primo campo di input assegniamo un identificativo <code>num1</code>;</li>
+<li>al secondo campo di input assegniamo un identificativo <code>num2</code>;</li>
+<li>al campo di output assegniamo un identificativo <code>ris</code>.</li>
+</ul>
+<p>Dobbiamo inoltre legare l&rsquo;evento di click sul pulsante ad una funzione di somma, utilizzando l&rsquo;attributo HTML <code>onclick</code> del pulsante e definendo una nuova funzione <code>somma</code>.</p>
+<p>La porzione di codice HTML necessaria è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Primo numero (input)--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;num1&#34;</span>&gt;Num1:&lt;/label&gt;
+</span></span><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;num1&#34;</span> type=<span style="color:#009c00">&#34;number&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Secondo numero (input)--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;num2&#34;</span>&gt;Num2:&lt;/label&gt;
+</span></span><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;num2&#34;</span> type=<span style="color:#009c00">&#34;number&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Pulsante (click)--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;button type=<span style="color:#009c00">&#34;button&#34;</span> onclick=<span style="color:#009c00">&#34;somma()&#34;</span>&gt;Calcola&lt;/button&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Risultato (output)--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;ris&#34;</span>&gt;Risultato:&lt;/label&gt;
+</span></span><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;ris&#34;</span> type=<span style="color:#009c00">&#34;number&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">function</span> somma() {
+</span></span><span style="display:flex;"><span>    alert(<span style="color:#009c00">&#39;calcolo somma&#39;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/script&gt;
+</span></span></code></pre></div><p>L&rsquo;utente inserisce i primi due numeri e quindi clicca sul pulsante per effettuare la somma. L&rsquo;evento del click viene notificato e quindi viene eseguita la funzione somma, che in questo caso mostra un messaggio all&rsquo;utente (non è stata ancora completata).</p>
+<p>Per accedere ai valori che l&rsquo;utente inserisce nei campi di input e per modificare i valori dei campi di output è necessario utilizzare i <strong>selettori CSS per identificatore</strong>. Quindi:</p>
+<ul>
+<li>il selettori CSS del primo campo di input è <code>#num1</code>;</li>
+<li>il selettori CSS del secondo campo di input è <code>#num2</code>;</li>
+<li>il selettori CSS del campo di output è <code>#ris</code>.</li>
+</ul>
+<p>La proprietà che dobbiamo utilizzare per accedere e modificare il valore di un campo di input è <code>value</code> ed è un valore testuale. Dato che bisogna fare la somma tra numeri, dobbiamo convertire il valore in numerico utilizzando la funzione <code>parseInt()</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">function</span> somma() {
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// seleziono i nodi di input
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#00f">let</span> input1 = document.querySelector(<span style="color:#009c00">&#34;#num1&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">let</span> input2 = document.querySelector(<span style="color:#009c00">&#34;#num2&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// seleziono il nodo di output 
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#00f">let</span> output = document.querySelector(<span style="color:#009c00">&#34;#ris&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// accedo al valore di input e lo converto in numero
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#00f">let</span> num1 = parseInt(input1.value);
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">let</span> num2 = parseInt(input2.value);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// faccio la somma dei numeri
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    s = num1 + num2;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// scrivo il risultato
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    output.value = s;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>&lt;/script&gt;
 </span></span></code></pre></div><h2 id="operazioni-sul-dom">Operazioni sul DOM</h2>
 <p>Per creare un elemento di testo, si utilizza la seguente funzione:</p>
@@ -450,11 +511,6 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;beforebegin&#39;</span>, ele);
 </span></span></code></pre></div><p>Per aggiungere un elemento dopo un secondo elemento, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;afterend&#39;</span>, ele);
-</span></span></code></pre></div><h2 id="gestione-di-codice-html-degli-elementi">Gestione di codice HTML degli elementi</h2>
-<p>Per aggiungere codice HTML prima di un secondo elemento, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentHTML(<span style="color:#009c00">&#39;beforebegin&#39;</span>, html);
-</span></span></code></pre></div><p>Per aggiungere codice HTML dopo un secondo elemento, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentHTML(<span style="color:#009c00">&#39;afterend&#39;</span>, html);
 </span></span></code></pre></div><h2 id="gestione-dello-stile-di-un-elemento">Gestione dello stile di un elemento</h2>
 <p>Per aggiungere una proprietà di stile ad un elemento, si utilizza la funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.style[<span style="color:#009c00">&#39;backgroundColor&#39;</span>] = <span style="color:#009c00">&#39;red&#39;</span>;
@@ -479,7 +535,37 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> <span style="color:#00f">class</span> = [<span style="color:#009c00">&#39;class1&#39;</span>, <span style="color:#009c00">&#39;class2&#39;</span>];
 </span></span><span style="display:flex;"><span>ele.classList.add(...<span style="color:#00f">class</span>);
 </span></span><span style="display:flex;"><span>ele.classList.remove(...<span style="color:#00f">class</span>);
-</span></span></code></pre></div>
+</span></span></code></pre></div><script>
+  const text = document.createTextNode('Hello World!');
+  let elemento = document.createElement('div');
+  elemento.appendChild(text);
+  document.body.appendChild(elemento);
+
+  // imposto l'attributo
+  elemento.setAttribute('proprieta-esistente', 'p1');
+  elemento.proprietaEsistente="p2";
+  
+  // imposto le proprietà
+  elemento.proprietaEsistente = "p1";
+  elemento.proprietaNuova = "valoreProprieta2";
+  elemento.proprietaOggetto = { p1 : "v1", p2: 1 };
+  console.log(elemento.proprietaEsistente);
+  console.log(elemento.proprietaNuova);
+  console.dir(elemento.proprietaOggetto);
+
+  console.log(elemento.hasAttributes());
+  console.table(elemento.getAttributeNames());
+  console.log(elemento.hasAttribute("proprieta-esistente"));
+  elemento.removeAttribute("proprieta-esistente");
+
+  elemento.setAttribute("proprieta-nuova", "valoreProprieta2");
+  console.log(elemento.getAttribute("proprieta-nuova"));
+
+  elemento.toggleAttribute("proprieta-esistente");
+  elemento.id = { id : "v1" };
+
+</script>
+
     </div>
   </article>
 </main>

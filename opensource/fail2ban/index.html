@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fail2ban - Lab. informatica</title>
+
+    <meta name="description" content="Fail2ban, un servizio di protezione da tentativi di intrusione ripetuti">
+        <meta property="og:title" content="Fail2ban" />
+<meta property="og:description" content="Fail2ban, un servizio di protezione da tentativi di intrusione ripetuti" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingepaduli.github.io/opensource/fail2ban/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="openSource" />
+<meta property="article:published_time" content="2024-05-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-13T00:00:00+00:00" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
+
+<meta name="twitter:title" content="Fail2ban"/>
+<meta name="twitter:description" content="Fail2ban, un servizio di protezione da tentativi di intrusione ripetuti"/>
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2024-05-13T00:00:00Z">13-05-2024</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/open-source/" rel="category">open source</a>, <a class="meta__link" href="/categories/software/" rel="category">software</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 2 minuti 
+        ( 411 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="fail2ban">Fail2ban</h1>
+<p>Fail2ban è un servizio di protezione da ripetitivi tentativi di intrusione nel proprio pc.</p>
+<p>Il servizio controlla i file di log del sistema per verificare tentativi ripetuti di accesso remoto non riusciti e dopo un certo numero di tentativi in un determinato periodo da parte dello stesso IP, lo blocca aggiungendo una regola sul firewall.</p>
+<p>Può monitorare diversi servizi, come ssh ed apache HTTP server, inoltre funziona con diversi firewall, da iptables a ufw. Ogni servizio da monitorare è detto <strong>jail</strong>, il servizio che monitora i log del sistema è detto <strong>backend</strong>, l&rsquo;aggiunta di una nuova regola nel firewall per bloccare un IP è detta <strong>ban action</strong>;</p>
+<p>Il client <code>fail2ban-client</code> permette di interagire col server, in particolare possiamo avviarlo, stopparlo, riavviarlo, aggiornare la configurazione e monitorare il sistema con i comandi:</p>
+<ul>
+<li><code>sudo fail2ban-client start</code>;</li>
+<li><code>sudo fail2ban-client stop</code>;</li>
+<li><code>sudo fail2ban-client restart</code>;</li>
+<li><code>sudo fail2ban-client reload</code>;</li>
+<li><code>sudo fail2ban-client reload --restart</code>;</li>
+<li><code>sudo fail2ban-client status</code>;</li>
+</ul>
+<p>Per visualizzare i log del servizio possiamo usare uno dei due comandi (l&rsquo;opzione <code>-b</code> visualizza quelli dall&rsquo;ultimo avvio del sistema):</p>
+<ul>
+<li><code>sudo journalctl -u fail2ban.service</code></li>
+<li><code>sudo journalctl -u fail2ban.service -b</code></li>
+</ul>
+<p>Esiste anche il file di log del servizio, configurato nel percorso ricavabile dal comando:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fail2ban-client get logtarget
+</span></span></code></pre></div><h2 id="configurazione">Configurazione</h2>
+<p>La cartella <code>/etc/fail2ban/</code> contiene i file di configurazione principali:</p>
+<ul>
+<li><code>fail2ban.conf</code>: la configurazione del servizio. Non è consigliabile modificare questo file;</li>
+<li><code>jail.conf</code>: i parametri dei servizi per i quali rilevare i ripetuti tentativi di accesso remoto non riusciti. Non è consigliabile modificare questo file;</li>
+</ul>
+<p>Sono poi presenti le sottocartelle contenenti i file specifici che sovrascrivono la configurazione generica:</p>
+<ul>
+<li><code>jail.conf/*.conf</code> file che sovrascrivono i parametri dei servizi;</li>
+<li><code>fail2ban.d/*.conf</code> file che sovrascrivono la configurazione del servizio;</li>
+<li><code>filter.d/*.conf</code> regole per leggere i file di log e filtrare le righe del servizio monitorato;</li>
+<li><code>action.d/*.conf</code> azioni per creare una nuova regola sul firewall;</li>
+</ul>
+<p>Nei sistemi Debian, ad esempio, le voci contenute nel file <code>jail.d//defaults-debian.conf</code> sovrascrivono tutte le voci generiche del file <code>jail.conf</code>;</p>
+<h2 id="jail-sshd">Jail SSHD</h2>
+<p>Questa <strong>Jail</strong> è utilizzata per configurare il blocco degli IP per il servizio SSH. Eredita tutti i parametri dalla jail <strong>DEFAULT</strong>, quindi in questo file è necessario solo sovrascrivere quelli differenti.</p>
+<p>Supponiamo che il file di configurazione sia <code>jail.d//defaults-debian.conf</code>. Questo file deve indicare il servizio, il backend, la porta e l&rsquo;azione da effettuare:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#00f">[sshd]</span>
+</span></span><span style="display:flex;"><span>enabled = <span style="color:#009c00">true</span>
+</span></span><span style="display:flex;"><span>port = <span style="color:#009c00">10022</span>
+</span></span><span style="display:flex;"><span>backend = <span style="color:#009c00">systemd</span>
+</span></span><span style="display:flex;"><span>banaction = <span style="color:#009c00">ufw</span>
+</span></span></code></pre></div><p>Opzionalmente si possono suggerire:</p>
+<ul>
+<li><code>bantime</code>: il periodo da utilizzare per contare il numero di tentativi;</li>
+<li><code>findtime</code>: il periodo di blocco di un IP;</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span>bantime  = <span style="color:#009c00">1w</span>
+</span></span><span style="display:flex;"><span>findtime = <span style="color:#009c00">1d</span>
+</span></span></code></pre></div><!-- 
+![Bitwarden - Resoconto nessuna violazione](/static/openSource/Bitwarden-Resoconti-no-violazione.png "Bitwarden - Resoconto nessuna violazione")
+
+Installa l'app da [F-Droid](/opensource/fdroid/ "F-Droid").
+-->
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/opensource/debian12/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">Debian GNU/Linux 12 Bookworm</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2024 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

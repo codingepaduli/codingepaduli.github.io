@@ -6,7 +6,16 @@
     <description>Recent content in software on Lab. informatica</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 12 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fail2ban</title>
+      <link>http://codingepaduli.github.io/opensource/fail2ban/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/opensource/fail2ban/</guid>
+      <description>Fail2ban, un servizio di protezione da tentativi di intrusione ripetuti.</description>
+    </item>
+    
     <item>
       <title>Debian GNU/Linux 12 Bookworm</title>
       <link>http://codingepaduli.github.io/opensource/debian12/</link>

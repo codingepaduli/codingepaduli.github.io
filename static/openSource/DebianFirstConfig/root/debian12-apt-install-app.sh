@@ -101,7 +101,8 @@ fi
 ## nmap: esplora reti
 ## net-tools: controllo del sottosistema di rete
 ## traceroute: traccia la rotta dei pacchetti
-apt-get install $APT_OPTS ufw gufw iptraf-ng nmap net-tools traceroute
+## fail2ban python3-systemd: nega l'accesso agli host che causano molteplici errori di autenticazione, controllando i log di systemd
+apt-get install $APT_OPTS ufw gufw iptraf-ng nmap net-tools traceroute fail2ban python3-systemd
 
 if [ $? -ne 0 ]; then
     exit 1
@@ -205,8 +206,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# cryptography utils
-apt-get install $APT_OPTS python3-bcrypt python3-cryptography
+# hash and cryptographic utils
+## rhash: calcola gli hash dei file
+## digup: aggiorna e verifica i file hash a partire dal contenuto di una cartella
+apt-get install $APT_OPTS rhash digup python3-bcrypt python3-cryptography
 
 if [ $? -ne 0 ]; then
     exit 1
@@ -259,13 +262,18 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-
 # Installa i dizionari hunspell e aspell per il controllo ortografico (in Atom)
 apt-get install $APT_OPTS hunspell-it hunspell-en-gb hunspell-en-us aspell aspell-en aspell-it
 
 if [ $? -ne 0 ]; then
     exit 1
 fi
+
+# Installa il dizionario ispell con le parole (witalian) e le associazioni (iitalian)
+apt-get install $APT_OPTS ispell ienglish-common ibritish wbritish iitalian witalian ibritish-insane wbritish-insane 
+
+# select-default-ispell --show-choices
+# select-default-ispell --set-default="italian"
 
 # Installa il tool per lavorare con i formati testuali (json, toml, xml)
 ## crudini: bash utility for reading ini file (used in Mozilla Bookmarks for loading profile.ini)

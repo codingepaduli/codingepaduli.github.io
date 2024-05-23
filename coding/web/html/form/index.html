@@ -227,8 +227,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 13 minuti 
-        ( 2762 parole)
+        Tempo di lettura 14 minuti 
+        ( 2857 parole)
     </span>
 </div></div>
     </header>
@@ -540,35 +540,37 @@ Si consiglia inoltre di fornire assistenza all'utente nell'inserimento del campo
 </span></span><span style="display:flex;"><span>&lt;/select&gt;
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/html/inputSelectGroup.png" alt="Input di tipo selezione singola" title="Input di tipo selezione singola"></p>
-<!-- TODO verifica perchè non funziona
-
-### Finestre di dialogo
-
-``onclick="window.dialog.showModal();"`` permette di aprire la finestra di dialogo
-``formmethod="dialog"`` permette di chiudere la finestra di dialogo
-
-<button onclick="window.dialog.showModal();">open dialog 1</button>
-
-<button onclick="window.dialogWindow.showModal();">open dialog 2</button>
-
-<div>
-  <dialog id="dialogWindow">
-    <p>Miseriaccia  la vendetta 2</p>
-    <form>
-      <button formmethod="dialog">Close</button>
-    </form>
-  </dialog>
-
-  <dialog id="dialog">
-    <p>Miseriaccia</p>
-    <form>
-      <button formmethod="dialog">Close</button>
-    </form>
-  </dialog>
+<!-- TODO verifica perchè non funziona -->
+<h3 id="finestre-di-dialogo">Finestre di dialogo</h3>
+<p>Popovers created using the Popover API are always non-modal. If you want to create a modal popover, a <code>&lt;dialog&gt;</code> element is the right way to go. There is significant overlap between the two — you might for example want to create a popover that persists, but control it using declarative HTML. You can turn a <code>&lt;dialog&gt;</code> element into a popover (<code>&lt;dialog popover&gt;</code> is perfectly valid) if you want to combine popover control with dialog semantics.</p>
+<style>
+  div::backdrop {
+    background-color: salmon;
+  }
+</style>
+<p><button popovertarget="mypopover" popovertargetaction="show">Apri la finestra popover</button>
+<button popovertarget="mypopover" popovertargetaction="hide">Chiudi la finestra popover</button>
+<button popovertarget="mypopover">Cambia stato alla finestra popover</button></p>
+<div id="mypopover" popover>
+  <p>Finestra di dialogo</p>
+  <form>
+    <button type="button" popovertarget="mypopover">Chiudi</button>
+  </form>
 </div>
+<!-- perchè non funziona ?
+
+<button popovertarget="mypopover2" popovertargetaction="show">Apri la finestra popover</button>
+<button popovertarget="mypopover2" popovertargetaction="hide">Chiudi la finestra popover</button>
+<button popovertarget="mypopover2">Cambia stato alla finestra popover</button>
+
+<dialog id="mypopover2" popover>
+  <p>Altra finestra modale</p>
+  <form>
+    <button type="button" popovertarget="mypopover2">Chiudi</button>
+  </form>
+</dialog>
 
 -->
-
     </div>
       <hr>
       <h2>Riferimenti</h2>

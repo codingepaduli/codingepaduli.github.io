@@ -440,6 +440,15 @@
     </item>
     
     <item>
+      <title>Fail2ban</title>
+      <link>http://codingepaduli.github.io/opensource/fail2ban/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingepaduli.github.io/opensource/fail2ban/</guid>
+      <description>Fail2ban, un servizio di protezione da tentativi di intrusione ripetuti.</description>
+    </item>
+    
+    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
@@ -665,12 +674,12 @@
     </item>
     
     <item>
-      <title>JavaScript Lez. 09 - Manipolazione del DOM</title>
+      <title>JavaScript Lez. 09 - Document Object Model</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingepaduli.github.io/coding/web/javascript/dom/</guid>
-      <description>09 - Manipolazione del DOM</description>
+      <description>09 - Document Object Model</description>
     </item>
     
     <item>
