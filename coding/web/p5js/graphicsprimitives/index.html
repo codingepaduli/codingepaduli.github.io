@@ -227,30 +227,17 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 14 minuti 
-        ( 2873 parole)
+        Tempo di lettura 17 minuti 
+        ( 3420 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="primitive-per-la-grafica-2d">Primitive per la grafica 2D</h1>
 <p>Nella geometria, una primitiva è la più semplice delle figure geometriche. Tutte le figure più complesse si costruiscono combinando più primitive.</p>
-<p>Nella moderna computer grafica, le primitive grafiche sono le funzioni che realizzano le figure geometriche più elementari, come punti, linee e triangoli. Alcuni poligoni e curve sono considerati primitive, anche se possono essere realizzati combinando altre primitive. Oggetti e scene più complesse sono realizzati combinando l&rsquo;uso di più primitive.</p>
-<p>Ogni primitiva è una funzione, e quindi ha una firma composta dal nome e dalla lista di parametri formali, che possono essere obbligatori o facoltativi, riportati tra parentesi tonde.</p>
-<p>Prima di entrare nel dettaglio delle primitive grafiche principali, è necessario riportare alla mente alcuni concetti di geometria piana, necessari a chiarire il funzionamento delle primitive grafiche.</p>
-<h2 id="concetti-di-geometria-piana">Concetti di geometria piana</h2>
-<p>Un <strong>poligono</strong> è una figura geometrica piana delimitata da una linea spezzata chiusa. I segmenti che compongono la spezzata chiusa si chiamano <strong>lati</strong> del poligono. Il <strong>vertice</strong> è il punto di incontro di due lati del poligono.</p>
-<p>Due segmenti che appartengono alla stessa retta e che hanno un solo punto in comune si dicono <strong>adiacenti</strong>. Allo stesso modo, due poligoni che condividono lo stesso lato si dicono adiacenti. Anche in uno spazio a tre dimensioni, due parallelepipedi che condividono la stessa faccia si dicono adiacenti.</p>
-<!-- vedi https://it.wikipedia.org/wiki/Tassellazione_dello_spazio -->
-<p>Un <strong>cerchio</strong> è una parte di piano delimitata da una circonferenza. Una <strong>circonferenza</strong> è il luogo geometrico di punti del piano equidistanti da un punto fisso detto centro. La distanza di qualsiasi punto della circonferenza dal centro si definisce raggio.</p>
-<p>Due cerchi che hanno un solo punto in comune si dicono <strong>tangenti</strong>.</p>
-<p>Un <strong>arco di circonferenza</strong> è il tratto di linea curva che ha le due estremità definite da due raggi della circonferenza stessa.</p>
-<p>Un <strong>settore circolare</strong> è l&rsquo;area compresa tra l&rsquo;arco di circonferenza ed i raggi che delimitano le estremità dell&rsquo;arco.</p>
-<p>Una <strong>corda di circonferenza</strong> è un segmento che ha le due estremità definite da due punti della circonferenza stessa.</p>
-<p>Un <strong>ellisse</strong> è il luogo geometrico dei punti del piano per i quali la somma delle distanze da due punti fissi detti &ldquo;fuochi&rdquo; rimane costante.</p>
-<p>Un <strong>arco d&rsquo;ellisse</strong> è simile ad un arco di circonferenza, con la differenza che il tratto di linea curva è parte dell&rsquo;ellisse.</p>
-<!-- TODO aggiungere le immagini delle figure indicate -->
-<p>Chiariti questi concetti, possiamo proseguire elencando le primitive principali, con i relativi parametri necessari ad invocarle. Per ulteriori dettagli sulle primitive grafiche, si rimanda alla documentazione ufficiale.</p>
+<p>Nella moderna computer grafica, le primitive grafiche sono le funzioni che realizzano le figure geometriche più elementari, come punti, segmenti, archi e poligoni, e saranno spiegate in questo capitolo, mentre le primitive che realizzano figure più complesse, come le curve <strong>spline</strong> e le curve di <strong>Bézier</strong> si rimanda alle specifiche tecniche e agli esempi ufficiali.</p>
+<p>Alcuni poligoni ed alcune curve sono considerati primitive, anche se possono essere realizzati combinando altre primitive, ad esempio i segmenti possono essere realizzati con più punti ed i poligoni con più segmenti, ma le primitive grafiche facilitano il lavoro del programmatore nella creazione di queste figure.</p>
+<p>Dal precedente capitolo abbiamo imparato che ogni funzione (e le primitive sono funzioni) ha una firma composta dal nome e dalla lista di parametri formali. La lista di parametri formali è riportata tra parentesi tonde, ogni parametro può essere obbligatorio o facoltativo. Di seguito le varie primitive saranno descritte indicando la firma.</p>
 <h2 id="creazione-dellarea-da-disegno">Creazione dell&rsquo;area da disegno</h2>
 <p>L&rsquo;area da disegno è la tavola sulla quale disegnare ed è caratterizzata da una larghezza ed un&rsquo;altezza. La funzione progettata allo scopo è <code>createCanvas</code>, la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: createCanvas(w, h)
@@ -258,22 +245,39 @@
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    w    Number: width of the canvas
 </span></span><span style="display:flex;"><span>    h    Number: height of the canvas
-</span></span></code></pre></div><p>I parametri formali sono <code>w</code> ed <code>h</code>, che rappresentano la larghezza e l&rsquo;altezza dell&rsquo;area da disegno.</p>
-<p>Per creare un&rsquo;area da disegno di larghezza 600 ed altezza 400 punti, sostituiamo al parametro formale <code>w</code> (che indica la larghezza dell&rsquo;area da disegno) il valore <code>600</code> ed al parametro formale <code>h</code> (che indica l&rsquo;altezza dell&rsquo;area da disegno) il valore <code>400</code>, invocando la funzione nel seguente modo:</p>
+</span></span></code></pre></div><p>I parametri formali sono <code>w</code> ed <code>h</code> e rappresentano la larghezza e l&rsquo;altezza dell&rsquo;area da disegno.</p>
+<p>Per creare un&rsquo;area da disegno di larghezza 600 ed altezza 400 punti, sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>w</code> (che indica la larghezza dell&rsquo;area da disegno) il valore <code>600</code>;</li>
+<li>al parametro formale <code>h</code> (che indica l&rsquo;altezza dell&rsquo;area da disegno) il valore <code>400</code>.</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>createCanvas(600, 400);
 </span></span></code></pre></div><h2 id="disegno-di-un-punto">Disegno di un punto</h2>
-<p>Il punto è l&rsquo;entità più semplice da realizzare. La funzione progettata allo scopo è <code>point</code>, la cui firma è la seguente:</p>
+<p>Il punto è un&rsquo;entità geometrica senza dimensioni, ovvero non ha estensione, cioè non ha larghezza, altezza o profondità, ma ha una posizione (nel piano, nello spazio, dipende dal sistema di coordinate). Tipicamente al punto viene associato un nome letterale (ad esempio P, Q, R).</p>
+<p>Nella computer grafica un punto deve poter essere disegnato sullo schermo, quinti ha una dimensione che è di un pixel dello schermo, ed ha un colore.</p>
+<p>La posizione di un punto è indicata da due coordinate del piano, l&rsquo;ascissa e l&rsquo;ordinata (o tre coordinate nel caso di uno spazio a tre dimensioni).</p>
+<p>La primitiva grafica che permette di disegnare un punto in una certa posizione dell&rsquo;area da disegno è <code>point</code>, la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: point(x, y, [z])
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>    x   Number: the x-coordinate
 </span></span><span style="display:flex;"><span>    y   Number: the y-coordinate
 </span></span><span style="display:flex;"><span>    z   Number: the z-coordinate (for WebGL mode) (Optional)
-</span></span></code></pre></div><p>I parametri formali sono <code>x</code>, <code>y</code> e <code>z</code>, che rappresentano le coordinate del <strong>punto</strong>.  I primi due parametri sono obbligatori e rappresentano le coordinate in un piano, il terzo parametro è tra parentesi quadre, quindi è opzionale, e lo si utilizza per indicare una terza coordinata in un sistema a tre dimensioni (non più un piano, ma uno spazio). Questo terzo parametro si usa solo quando si attiva la modalità WebGL, che non sarà trattata in questo capitolo.</p>
-<p>Per creare un punto alle coordinate (20, 20), sostituiamo al parametro formale <code>x</code> (che indica la coordinata X) il valore <code>20</code> ed al parametro formale <code>y</code> (che indica la coordinata Y) il valore <code>20</code>, invocando la funzione nel seguente modo:</p>
+</span></span></code></pre></div><p>I parametri formali sono <code>x</code>, <code>y</code> e <code>z</code> e rappresentano le coordinate del <strong>punto</strong>.  I primi due parametri sono obbligatori e rappresentano le coordinate in un piano, il terzo parametro è tra parentesi quadre, quindi è opzionale, e lo si utilizza per indicare una terza coordinata in un sistema a tre dimensioni (non più un piano, ma uno spazio). Questo terzo parametro si usa solo quando si attiva la modalità WebGL, che non sarà trattata in questo capitolo.</p>
+<p>Per creare un punto alle coordinate (20, 20), sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>x</code> (che indica la coordinata X) il valore <code>20</code>;</li>
+<li>al parametro formale <code>y</code> (che indica la coordinata Y) il valore <code>20</code>.</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>point(20, 20);
-</span></span></code></pre></div><h2 id="disegno-di-una-linea">Disegno di una linea</h2>
-<p>La linea è un segmento che unisce due punti ed è realizzata dalla funzione <code>line</code> la cui firma è la seguente:</p>
+</span></span></code></pre></div><h2 id="disegno-di-un-segmento">Disegno di un segmento</h2>
+<p>Geometricamente una linea è un insieme illimitato di punti che si estendono in una direzione. Non ha larghezza o spessore. Può essere retta, curva, inclinata o ondulata, a seconda delle sue proprietà specifiche. Dal punto di vista matematico, una linea è descritta da un&rsquo;equazione, ad esempio un&rsquo;equazione lineare genera una retta, un&rsquo;equazione quadratica produce una curva.</p>
+<p>Nella computer grafica per linea si intende un segmento, ovvero una porzione di retta che unisce due estremi, indicati da un punto iniziale ed un punto finale.</p>
+<p>Due segmenti che appartengono alla stessa retta e che hanno un solo punto in comune si dicono <strong>adiacenti</strong>.</p>
+<p>Due segmenti si dicono <strong>perpendicolari</strong> se si incontrano formando un angolo retto (90 gradi) tra di loro. Si dicono <strong>paralleli</strong> se mantengono sempre la stessa distanza tra di loro lungo tutta la loro lunghezza.</p>
+<p>La primitiva grafica che permette di disegnare una linea (segmento delimitato da due punti) è <code>line</code> la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: line(x1, y1, x2, y2)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
@@ -282,10 +286,23 @@
 </span></span><span style="display:flex;"><span>    x2    Number: the x-coordinate of the second point
 </span></span><span style="display:flex;"><span>    y2    Number: the y-coordinate of the second point
 </span></span></code></pre></div><p>I parametri formali <code>x1</code> ed <code>y1</code> rappresentano le coordinate del punto da cui parte la linea ed i parametri formali <code>x2</code> ed <code>y2</code> rappresentano le coordinate del punto in cui la linea termina.</p>
-<p>Per creare una linea che parte dal punto alle coordinate (80, 20) e termina al punto alle coordinate (120, 40), sostituiamo al parametro formale <code>x1</code> (che indica la coordinata X del punto di partenza) il valore <code>80</code>, al parametro formale <code>y1</code> (che indica la coordinata Y del punto di partenza) il valore <code>20</code>, al parametro formale <code>x2</code> (che indica la coordinata X del punto di arrivo) il valore <code>120</code> ed al parametro formale <code>y2</code> (che indica la coordinata Y del punto di arrivo) il valore <code>40</code>, invocando la funzione nel seguente modo:</p>
+<p>Per creare una linea che parte dal punto alle coordinate (80, 20) e termina al punto alle coordinate (120, 40), sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>x1</code> (che indica la coordinata X del punto di partenza) il valore <code>80</code>;</li>
+<li>al parametro formale <code>y1</code> (che indica la coordinata Y del punto di partenza) il valore <code>20</code>;</li>
+<li>al parametro formale <code>x2</code> (che indica la coordinata X del punto di arrivo) il valore <code>120</code>;</li>
+<li>al parametro formale <code>y2</code> (che indica la coordinata Y del punto di arrivo) il valore <code>40</code>.</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>line(80, 20, 120, 40);
-</span></span></code></pre></div><h2 id="disegno-di-un-triangolo">Disegno di un triangolo</h2>
-<p>La figura del triangolo è caratterizzata da tre punti in cui originano e terminano i lati che la vanno a formare e la si può realizzare attraverso la funzione <code>triangle</code> la cui firma è la seguente:</p>
+</span></span></code></pre></div><h2 id="disegno-di-figure-poligonali">Disegno di figure poligonali</h2>
+<p>Un <strong>poligono</strong> è una figura geometrica piana delimitata da una linea spezzata chiusa. I segmenti che compongono la spezzata chiusa si chiamano <strong>lati</strong> del poligono. Il <strong>vertice</strong> è il punto di incontro di due lati del poligono.</p>
+<p>Si dicono <strong>adiacenti</strong> due segmenti che appartengono alla stessa retta e che hanno un solo punto in comune. Allo stesso modo, due poligoni che condividono lo stesso lato si dicono adiacenti. Anche in uno spazio a tre dimensioni, due parallelepipedi che condividono la stessa faccia si dicono adiacenti.</p>
+<!-- vedi https://it.wikipedia.org/wiki/Tassellazione_dello_spazio -->
+<!-- TODO aggiungere le immagini delle figure indicate -->
+<h3 id="disegno-di-un-triangolo">Disegno di un triangolo</h3>
+<p>Un triangolo è un poligono che ha tre lati e tre angoli. Può essere descritto da tre punti in cui originano e terminano i tre lati che lo vanno a formare.</p>
+<p>La primitiva grafica che permette di disegnare un triangolo è <code>triangle</code> la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: triangle(x1, y1, x2, y2, x3, y3)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters
@@ -296,21 +313,20 @@
 </span></span><span style="display:flex;"><span>    x3    Number: x-coordinate of the third point
 </span></span><span style="display:flex;"><span>    y3    Number: y-coordinate of the third point
 </span></span></code></pre></div><p>I parametri formali <code>x1</code> ed <code>y1</code> rappresentano le coordinate del primo vertice,  <code>x2</code> ed <code>y2</code> rappresentano le coordinate del secondo vertice, <code>x3</code> ed <code>y3</code> le coordinate del terzo vertice.</p>
-<p>Per creare una triangolo i cui vertici si trovano alle coordinate (20, 60), (20, 100) e (60, 100), sostituiamo al parametro formale <code>x1</code> (che indica la coordinata X del primo vertice) il valore <code>20</code>, al parametro formale <code>y1</code> (che indica la coordinata Y del primo vertice) il valore <code>60</code>, al parametro formale <code>x2</code> (che indica la coordinata X del secondo vertice) il valore <code>20</code>, al parametro formale <code>y2</code> (che indica la coordinata Y del secondo vertice) il valore <code>100</code>, al parametro formale <code>x3</code> (che indica la coordinata X del terzo vertice) il valore <code>60</code>, al parametro formale <code>y2</code> (che indica la coordinata Y del secondo vertice) il valore <code>100</code>, invocando la funzione nel seguente modo:</p>
+<p>Per creare una triangolo i cui vertici si trovano alle coordinate (20, 60), (20, 100) e (60, 100), sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>x1</code> (che indica la coordinata X del primo vertice) il valore <code>20</code>;</li>
+<li>al parametro formale <code>y1</code> (che indica la coordinata Y del primo vertice) il valore <code>60</code>;</li>
+<li>al parametro formale <code>x2</code> (che indica la coordinata X del secondo vertice) il valore <code>20</code>;</li>
+<li>al parametro formale <code>y2</code> (che indica la coordinata Y del secondo vertice) il valore <code>100</code>;</li>
+<li>al parametro formale <code>x3</code> (che indica la coordinata X del terzo vertice) il valore <code>60</code>;</li>
+<li>al parametro formale <code>y2</code> (che indica la coordinata Y del secondo vertice) il valore <code>100</code>.</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>triangle(20, 60, 20, 100, 60, 100);
-</span></span></code></pre></div><h2 id="disegno-di-un-cerchio">Disegno di un cerchio</h2>
-<p>Il cerchio è caratterizzata da un punto centrale ed un diametro e la si può realizzare attraverso la funzione <code>circle</code> la cui firma è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: circle(x, y, diameter)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Parameters:
-</span></span><span style="display:flex;"><span>    x           Number: x-coordinate of the centre of the circle.
-</span></span><span style="display:flex;"><span>    y           Number: y-coordinate of the centre of the circle.
-</span></span><span style="display:flex;"><span>    diameter    Number: diameter of the circle.
-</span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del centro, <code>diameter</code> è la dimensione del diametro.</p>
-<p>Per creare un cerchio con centro nel punto (100, 80) e diametro 40, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del centro del cerchio) il valore <code>100</code>, al parametro formale <code>y</code> (che indica la coordinata y del centro del cerchio) il valore <code>80</code> ed al parametro formale <code>diameter</code> (che indica il diametro) il valore <code>40</code>, quindi invochiamo la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(100, 80, 40);
-</span></span></code></pre></div><h2 id="disegno-di-un-quadrato">Disegno di un quadrato</h2>
-<p>Il quadrato è caratterizzata da un punto da cui iniziare a disegnare e dalla dimensione del lato. Si può disegnare attraverso la funzione <code>square</code> la cui firma è la seguente:</p>
+</span></span></code></pre></div><h3 id="disegno-di-un-quadrato">Disegno di un quadrato</h3>
+<p>Un quadrato è un poligono regolare che ha quattro lati uguali e quattro angoli retti.</p>
+<p>La primitiva grafica che permette di disegnare un quadrato è <code>square</code> la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: square(x, y, side)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
@@ -318,10 +334,17 @@
 </span></span><span style="display:flex;"><span>    y     Number: the y-coordinate of the first point
 </span></span><span style="display:flex;"><span>    side  Number: side of the square
 </span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto da cui iniziare a disegnare, <code>side</code> è la dimensione del lato.</p>
-<p>Per creare un quadrato con vertice in alto a sinistra nel punto (20, 140) e lato 40, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>20</code>, al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>140</code> ed al parametro formale <code>side</code> (che indica il lato) il valore <code>40</code>, quindi invochiamo la funzione nel seguente modo:</p>
+<p>Per creare un quadrato con vertice in alto a sinistra nel punto (20, 140) e lato 40, sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>20</code>;</li>
+<li>al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>140</code>;</li>
+<li>al parametro formale <code>side</code> (che indica il lato) il valore <code>40</code>.</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>square(20, 140, 40);
-</span></span></code></pre></div><h2 id="disegno-di-un-rettangolo">Disegno di un rettangolo</h2>
-<p>Il rettangolo è caratterizzata da un punto da cui iniziare a disegnare e dalla dimensioni della base e dell&rsquo;altezza. Lo si può realizzare attraverso la funzione <code>rect</code> la cui firma è la seguente:</p>
+</span></span></code></pre></div><h3 id="disegno-di-un-rettangolo">Disegno di un rettangolo</h3>
+<p>Il rettangolo è un poligono che ha quattro lati e quattro angoli retti. I lati opposti del rettangolo sono uguali e paralleli.</p>
+<p>La primitiva grafica che permette di disegnare un quadrato è <code>rect</code> la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: rect(x, y, w, h)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
@@ -330,11 +353,62 @@
 </span></span><span style="display:flex;"><span>    w     Number: width of the rectangle
 </span></span><span style="display:flex;"><span>    h     Number: height of the rectangle
 </span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del vertice in alto a sinistra da cui iniziare a disegnare, <code>w</code> ed <code>h</code> sono le dimensioni della base e dell&rsquo;altezza del rettangolo.</p>
-<p>Per creare un rettangolo con vertice in alto a sinistra nel punto (80, 140), base 80 ed altezza 20, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>80</code>, al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>140</code>, al parametro formale <code>w</code> (che indica la base) il valore <code>80</code> ed al parametro formale <code>h</code> (che indica l&rsquo;altezza) il valore <code>20</code>, quindi invochiamo la funzione nel seguente modo:</p>
+<p>Per creare un rettangolo con vertice in alto a sinistra nel punto (80, 140), base 80 ed altezza 20, sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>80</code>;</li>
+<li>al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>140</code>;</li>
+<li>al parametro formale <code>w</code> (che indica la base) il valore <code>80</code>;</li>
+<li>al parametro formale <code>h</code> (che indica l&rsquo;altezza) il valore <code>20</code>.</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>rect(80, 140, 80, 20);
-</span></span></code></pre></div><h2 id="disegno-di-un-ellisse">Disegno di un ellisse</h2>
-<p>Un ellisse è una sorta di circonferenza &ldquo;schiacciata&rdquo;, la si può interpretare come una sorta di circonferenza con larghezza ed altezza differenti. Nel caso in cui la larghezza è uguale all&rsquo;altezza, la figura risultante è una circonferenza. Matematicamente parlando, l&rsquo;ellisse ha due punti focali invece di uno (a differenza della circonferenza che ha come unico fuoco il centro).</p>
-<p>La funzione per realizzare un ellisse è <code>ellipse</code>, la cui firma è la seguente:</p>
+</span></span></code></pre></div><h3 id="disegno-di-un-generico-poligono">Disegno di un generico poligono</h3>
+<p>Un poligono ha più vertici, che sono i punti di incontro di due lati del poligono. E&rsquo; possibile indicare quindi tutti i vertici di un poligono per poterlo disegnare.</p>
+<p>La primitiva grafica che permette di disegnare un vertice in una certa posizione dell&rsquo;area da disegno è <code>vertex</code> la cui firma (è molto simile alla firma della primitiva <code>point</code>) è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: vertex(x, y)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    x   Number: the x-coordinate
+</span></span><span style="display:flex;"><span>    y   Number: the y-coordinate
+</span></span></code></pre></div><p>I parametri formali sono <code>x</code> ed <code>y</code> e rappresentano le coordinate del vertice.</p>
+<p>Per disegnare un poligono è quindi necessario indicare i vari vertici, invocare più volte la funzione. Ma non basta.</p>
+<p>Per indicare che si vuole disegnare un poligono, bisogna invocare la funzione <code>beginShape()</code> che indica l&rsquo;inizio dei vertici, poi bisogna indicare i vari vertici ed infine invocare la funzione <code>endShape(CLOSE);</code> per terminare il disegno del poligono, come di seguito:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>beginShape();
+</span></span><span style="display:flex;"><span>  vertex(100, 100);
+</span></span><span style="display:flex;"><span>  vertex(100, 200);
+</span></span><span style="display:flex;"><span>  vertex(200, 100);
+</span></span><span style="display:flex;"><span>endShape(CLOSE);
+</span></span></code></pre></div><p>Il parametro <code>CLOSE</code> della funzione <code>endShape</code> serve ad indicare che si vuole realizzare un poligono con una linea spezzata chiusa. Se questo parametro non viene passato alla funzione, si realizza una linea spezzata aperta, di conseguenza mancherà un lato al poligono.</p>
+<h2 id="disegno-di-figure-non-poligonali">Disegno di figure non poligonali</h2>
+<p>Sono dette <strong>non poligonali</strong> le figure che non sono descritte da una linea spezzata chiusa, come la circonferenza o l&rsquo;ellisse.</p>
+<p>Si dicono <strong>tangenti</strong> due oggetti geometrici che si toccano ma non si intersecano. Il punto di contatto tra curve e/o linee e/o facce della figura che si toccano senza attraversarsi è detto punto di tangenza.</p>
+<p>Un poligono è tangente ad un&rsquo;ellisse o ad una circonferenza se ha un lato toccato ma non attraversato dall&rsquo;ellisse o dalla circonferenza.</p>
+<p>Due cerchi che hanno un solo punto in comune sono tangenti.</p>
+<h3 id="disegno-di-un-cerchio">Disegno di un cerchio</h3>
+<p>Un <strong>cerchio</strong> è una parte di piano delimitata da una circonferenza.</p>
+<p>Una <strong>circonferenza</strong> è il luogo geometrico di punti del piano equidistanti da un punto fisso detto centro. La circonferenza è quindi una linea curva chiusa.</p>
+<p>La distanza di qualsiasi punto della circonferenza dal centro si definisce <strong>raggio</strong>. Il <strong>diametro</strong> è il segmento che passa per il centro del cerchio e ha come estremità due punti sulla circonferenza.</p>
+<p>L&rsquo;area del piano delimitata da due circonferenze che hanno lo stesso centro è detta <strong>corona</strong>.</p>
+<p>La primitiva grafica che permette di disegnare un cerchio è <code>circle</code> la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: circle(x, y, diameter)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    x           Number: x-coordinate of the centre of the circle.
+</span></span><span style="display:flex;"><span>    y           Number: y-coordinate of the centre of the circle.
+</span></span><span style="display:flex;"><span>    diameter    Number: diameter of the circle.
+</span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del centro, <code>diameter</code> è la dimensione del diametro.</p>
+<p>Per creare un cerchio con centro nel punto (100, 80) e diametro 40, sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>x</code> (che indica la coordinata x del centro del cerchio) il valore <code>100</code>;</li>
+<li>al parametro formale <code>y</code> (che indica la coordinata y del centro del cerchio) il valore <code>80</code>;</li>
+<li>al parametro formale <code>diameter</code> (che indica il diametro) il valore <code>40</code>.</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(100, 80, 40);
+</span></span></code></pre></div><h3 id="disegno-di-un-ellisse">Disegno di un ellisse</h3>
+<p>Un ellisse è una sorta di &ldquo;circonferenza schiacciata&rdquo;, la si può interpretare come una sorta di &ldquo;circonferenza&rdquo; con larghezza ed altezza differenti. Nel caso in cui la larghezza è uguale all&rsquo;altezza, la figura risultante è una vera e propria circonferenza.</p>
+<p>Matematicamente un <strong>ellisse</strong> è il luogo geometrico dei punti del piano per i quali la somma delle distanze da due punti fissi detti &ldquo;fuochi&rdquo; rimane costante (a differenza la circonferenza che ha come unico fuoco il centro) .</p>
+<p>La primitiva grafica che permette di disegnare un ellisse è <code>ellipse</code>, la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: ellipse(x, y, w, h)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
@@ -342,12 +416,19 @@
 </span></span><span style="display:flex;"><span>    y     Number: the y-coordinate of the first point
 </span></span><span style="display:flex;"><span>    w     Number: width of the ellipse
 </span></span><span style="display:flex;"><span>    h     Number: height of the ellipse
-</span></span></code></pre></div><p>Per creare un ellisse con vertice in alto a sinistra nel punto (60, 220), larghezza 80 ed altezza 40, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>60</code>, al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>220</code>, al parametro formale <code>w</code> (che indica la larghezza) il valore <code>80</code> ed al parametro formale <code>h</code> (che indica l&rsquo;altezza) il valore <code>40</code>, quindi invochiamo la funzione nel seguente modo:</p>
+</span></span></code></pre></div><p>Per creare un ellisse con vertice in alto a sinistra nel punto (60, 220), larghezza 80 ed altezza 40, sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>60</code>;</li>
+<li>al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>220</code>;</li>
+<li>al parametro formale <code>w</code> (che indica la larghezza) il valore <code>80</code>;</li>
+<li>al parametro formale <code>h</code> (che indica l&rsquo;altezza) il valore <code>40</code>.</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ellipse(60, 220, 80, 40);
-</span></span></code></pre></div><h2 id="disegno-di-un-arco-di-circonferenza-e-dellisse">Disegno di un arco di circonferenza e d&rsquo;ellisse</h2>
+</span></span></code></pre></div><h3 id="disegno-di-un-arco-di-circonferenza-e-dellisse">Disegno di un arco di circonferenza e d&rsquo;ellisse</h3>
 <p>Un <strong>arco di circonferenza</strong> è il tratto di linea curva che ha le due estremità definite da due raggi della circonferenza stessa. Un <strong>arco d&rsquo;ellisse</strong> è simile ad un arco di circonferenza, con la differenza che il tratto di linea curva è parte dell&rsquo;ellisse.</p>
 <p>L&rsquo;arco di circonferenza lo si realizza impostando la stessa dimensione per larghezza ed altezza della figura. L&rsquo;arco d&rsquo;ellisse si realizza specificando valori differenti per larghezza ed altezza della figura;</p>
-<p>La funzione per realizzare un arco di circonferenza o d&rsquo;ellisse è <code>arc</code> la cui firma è la seguente:</p>
+<p>La primitiva grafica che permette di disegnare un arco di circonferenza o d&rsquo;ellisse è <code>arc</code> la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: arc(x, y, w, h, start, stop, [mode])
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>x       Number: x-coordinate of the arc&#39;s ellipse
@@ -358,9 +439,27 @@
 </span></span><span style="display:flex;"><span>stop    Number: angle to stop the arc, specified in radians
 </span></span><span style="display:flex;"><span>mode    Constant: optional parameter to determine the way of drawing the arc. either CHORD, PIE or OPEN (Optional)
 </span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del centro, <code>w</code> ed <code>h</code> sono le dimensioni della larghezza e dell&rsquo;altezza della figura. Il parametro <code>start</code> indica l&rsquo;angolo del primo raggio che fa da prima estremità all&rsquo;arco, il parametro<code>stop</code> indica l&rsquo;angolo del secondo raggio che fa da seconda estremità all&rsquo;arco. Il parametro <code>mode</code> è tra parentesi quadre, quindi è opzionale, ed indica come disegnare l&rsquo;arco, in particolare come collegare i due estremi d&rsquo;arco.</p>
-<p>Per creare un arco di circonferenza con centro nel punto (40, 300), con diametro 40, angolo iniziale impostato a pi greco ed angolo finale impostato a due pi greco, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del centro) il valore <code>40</code>, al parametro formale <code>y</code> (che indica la coordinata y del centro) il valore <code>300</code>, al parametro formale <code>w</code> (che indica il diametro) il valore <code>40</code>, al parametro formale <code>h</code> (che indica il diametro) nuovamente il valore <code>40</code>, al parametro formale <code>start</code> (che indica l&rsquo;angolo del primo raggio che fa da prima estremità all&rsquo;arco) la costante <code>PI</code> (pi greco espresso in radianti), al parametro formale <code>stop</code> (indica l&rsquo;angolo del secondo raggio che fa da seconda estremità all&rsquo;arco) la costante <code>TWO_PI</code> (due pi greco espresso in radianti), quindi invochiamo la funzione nel seguente modo:</p>
+<p>Per creare un arco di circonferenza con centro nel punto (40, 300), con diametro 40, angolo iniziale impostato a pi greco ed angolo finale impostato a due pi greco, sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>x</code> (che indica la coordinata x del centro) il valore <code>40</code>;</li>
+<li>al parametro formale <code>y</code> (che indica la coordinata y del centro) il valore <code>300</code>;</li>
+<li>al parametro formale <code>w</code> (che indica il diametro) il valore <code>40</code>;</li>
+<li>al parametro formale <code>h</code> (che indica il diametro) nuovamente il valore <code>40</code>;</li>
+<li>al parametro formale <code>start</code> (che indica l&rsquo;angolo del primo raggio che fa da prima estremità all&rsquo;arco) la costante <code>PI</code> (pi greco espresso in radianti);</li>
+<li>al parametro formale <code>stop</code> (indica l&rsquo;angolo del secondo raggio che fa da seconda estremità all&rsquo;arco) la costante <code>TWO_PI</code> (due pi greco espresso in radianti).</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>arc(40, 300, 40, 40, PI, TWO_PI);
-</span></span></code></pre></div><p>Per creare un arco di ellisse con centro nel punto (100, 300), con larghezza 40, altezza 80, angolo iniziale impostato a pi greco ed angolo finale impostato a due pi greco, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del centro) il valore <code>100</code>, al parametro formale <code>y</code> (che indica la coordinata y del centro) il valore <code>300</code>, al parametro formale <code>w</code> (che indica la larghezza dell&rsquo;ellisse) il valore <code>40</code>, al parametro formale <code>h</code> (che indica l&rsquo;altezza dell&rsquo;ellisse) il valore <code>80</code>, al parametro formale <code>start</code> (che indica l&rsquo;angolo del primo raggio che fa da prima estremità all&rsquo;arco) la costante <code>PI</code> (pi greco espresso in radianti), al parametro formale <code>stop</code> (indica l&rsquo;angolo del secondo raggio che fa da seconda estremità all&rsquo;arco) la costante <code>TWO_PI</code> (due pi greco espresso in radianti), quindi invochiamo la funzione nel seguente modo:</p>
+</span></span></code></pre></div><p>Per creare un arco di ellisse con centro nel punto (100, 300), con larghezza 40, altezza 80, angolo iniziale impostato a pi greco ed angolo finale impostato a due pi greco, sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>x</code> (che indica la coordinata x del centro) il valore <code>100</code>;</li>
+<li>al parametro formale <code>y</code> (che indica la coordinata y del centro) il valore <code>300</code>;</li>
+<li>al parametro formale <code>w</code> (che indica la larghezza dell&rsquo;ellisse) il valore <code>40</code>;</li>
+<li>al parametro formale <code>h</code> (che indica l&rsquo;altezza dell&rsquo;ellisse) il valore <code>80</code>;</li>
+<li>al parametro formale <code>start</code> (che indica l&rsquo;angolo del primo raggio che fa da prima estremità all&rsquo;arco) la costante <code>PI</code> (pi greco espresso in radianti);</li>
+<li>al parametro formale <code>stop</code> (indica l&rsquo;angolo del secondo raggio che fa da seconda estremità all&rsquo;arco) la costante <code>TWO_PI</code> (due pi greco espresso in radianti).</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>arc(100, 300, 40, 80, PI, TWO_PI);
 </span></span></code></pre></div><p>Entriamo nel dettaglio sull&rsquo;uso del parametro opzionale <code>mode</code>, che definisce come disegnare l&rsquo;arco. A questo parametro può essere assegnato il valore definito dalle seguenti costanti:</p>
 <ul>
@@ -368,11 +467,13 @@
 <li><code>CHORD</code>: indica di chiudere l&rsquo;arco con una linea di contorno tracciata come corda di circonferenza;</li>
 <li><code>PIE</code>: indica di chiudere l&rsquo;arco realizzato con due raggi di contorno al fine di formare un settore circolare;</li>
 </ul>
+<p>Un <strong>settore circolare</strong> è l&rsquo;area compresa tra l&rsquo;arco di circonferenza ed i raggi che delimitano le estremità dell&rsquo;arco.</p>
+<p>Una <strong>corda di circonferenza</strong> è un segmento che ha le due estremità definite da due punti della circonferenza stessa.</p>
+<p>Le opzioni disponibili per il parametro opzionale <code>mode</code> permettono di non chiudere l&rsquo;arco di circonferenza, di chiuderlo con una corda di circonferenza (o di ellisse) o di chiuderlo realizzando un settore circolare, come visualizzato di seguito.</p>
 <p><img src="/static/coding/web/p5js/graphics-primitives-arcs.png" alt="p5.js - Opzioni di disegno per gli archi di circonferenza" title="p5.js - Opzioni di disegno per gli archi di circonferenza"></p>
 <p>Un esempio di funzione invocata utilizzando anche il parametro <code>mode</code> è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>arc(100, 300, 40, 80, PI, TWO_PI, CHORD);
-</span></span></code></pre></div><p>Gli archi non sono gli unici tipi di curve supportate. Esistono diverse primitive grafiche che permettono di disegnare curve complesse, come le curve <strong>spline</strong> e le curve di <strong>Bézier</strong>, ma per queste realizzazioni si rimanda alle specifiche e agli esempi ufficiali.</p>
-<h2 id="disegno-di-un-testo">Disegno di un testo</h2>
+</span></span></code></pre></div><h2 id="disegno-di-un-testo">Disegno di un testo</h2>
 <p>Anche il disegno di un testo nell&rsquo;area da disegno è considerato una primitiva grafica ed è realizzato dalla funzione <code>text</code>, che prevede la seguente firma:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: text(str, x, y, [x2], [y2])
 </span></span><span style="display:flex;"><span>
@@ -383,9 +484,21 @@
 </span></span><span style="display:flex;"><span>    x2   Number:    by default, the width of the text box (Optional)
 </span></span><span style="display:flex;"><span>    y2   Number:    by default, the height of the text box (Optional)
 </span></span></code></pre></div><p>Il parametro formale <code>str</code> indica il testo da disegnare, i parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto in alto a sinistra dal quale disegnare il testo. I parametri formali <code>x2</code> ed <code>y2</code> sono tra parentesi quadre, quindi sono opzionali, e si utilizzano per indicare base ed altezza del rettangolo nel quale racchiudere il testo.</p>
-<p>Per disegnare la frase <code>questo è un testo</code> partendo dal vertice in alto a sinistra nel punto (20, 340), sostituiamo al parametro formale <code>str</code> (che indica il testo) il valore <code>questo è un testo</code>, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>20</code>, al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>340</code>, quindi invochiamo la funzione nel seguente modo:</p>
+<p>Per disegnare la frase <code>questo è un testo</code> partendo dal vertice in alto a sinistra nel punto (20, 340), sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>str</code> (che indica il testo) il valore <code>questo è un testo</code>;</li>
+<li>al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>20</code>;</li>
+<li>al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>340</code>, quindi invochiamo la funzione nel seguente modo:</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>text(<span style="color:#009c00">&#34;questo è un testo&#34;</span>, 20, 340);
-</span></span></code></pre></div><p>Per disegnare la frase <code>questo è un testo</code> partendo dal vertice in alto a sinistra nel punto (20, 360) e terminando nel vertice in basso a destra nel punto (160, 20), sostituiamo al parametro formale <code>str</code> (che indica il testo) il valore <code>questo è un testo</code>, sostituiamo al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>20</code>, al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>360</code>, al parametro formale <code>x2</code> (che indica la base) il valore <code>160</code> ed al parametro formale <code>y2</code> (che indica l&rsquo;altezza) il valore <code>20</code>, quindi invochiamo la funzione nel seguente modo:</p>
+</span></span></code></pre></div><p>Per disegnare la frase <code>questo è un testo</code> partendo dal vertice in alto a sinistra nel punto (20, 360) e terminando nel vertice in basso a destra nel punto (160, 20), sostituiamo:</p>
+<ul>
+<li>al parametro formale <code>str</code> (che indica il testo) il valore <code>questo è un testo</code>;</li>
+<li>al parametro formale <code>x</code> (che indica la coordinata x del vertice in alto a sinistra) il valore <code>20</code>;</li>
+<li>al parametro formale <code>y</code> (che indica la coordinata y del vertice in alto a sinistra) il valore <code>360</code>;</li>
+<li>al parametro formale <code>x2</code> (che indica la base) il valore <code>160</code> ed al parametro formale <code>y2</code> (che indica l&rsquo;altezza) il valore <code>20</code>.</li>
+</ul>
+<p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>text(<span style="color:#009c00">&#34;questo è un testo troppo lungo&#34;</span>, 20, 360, 160, 20);
 </span></span></code></pre></div><p>Bisogna prestare attenzione al fatto che se il testo è troppo lungo e non può essere racchiuso nell&rsquo;area del rettangolo, la parte eccessiva del testo non sarà disegnata.</p>
 <!-- TODO check it
@@ -403,6 +516,7 @@ Creiamo un'area da disegno, delle dimensioni di 600 per 400, nella quale disegni
 - un ellisse con centro alle coordinate (60, 220), con larghezza 80 ed altezza 40;
 - un arco di circonferenza
 -->
+<!-- TODO aggiungere le immagini delle figure indicate -->
 <p>Di seguito, si visualizza un esempio completo delle figure realizzate mediante il codice riportato nei vari esempi mostrati:</p>
 <p><img src="/static/coding/web/p5js/graphics-primitives-basics.png" alt="p5.js - Basi della grafica 2D" title="p5.js - Basi della grafica 2D"></p>
 
