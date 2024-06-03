@@ -44,7 +44,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-apt-get install $APT_OPTS python3 python3-venv
+apt-get install $APT_OPTS python3 python3-venv python-is-python3
 
 if [ $? -ne 0 ]; then
     exit 1

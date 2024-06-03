@@ -12,6 +12,8 @@ com.dosbox_x.DOSBox-X
 com.github.jeromerobert.pdfarranger
 com.github.rajsolai.textsnatcher
 com.github.tchx84.Flatseal
+com.github.xournalpp.xournalpp
+com.neatdecisions.Detwinner
 com.nextcloud.desktopclient.nextcloud
 # com.ozmartians.VidCutter
 com.ranfdev.Notify
@@ -29,6 +31,7 @@ me.kozec.syncthingtk
 # net.christianbeier.Gromit-MPX
 # org.audacityteam.Audacity
 # org.avidemux.Avidemux
+org.beeref.BeeRef
 org.chromium.Chromium
 # org.filezillaproject.Filezilla
 org.freefilesync.FreeFileSync
@@ -42,6 +45,7 @@ org.gimp.GIMP
 # org.inkscape.Inkscape
 # org.kde.kdenlive
 org.kde.kolourpaint
+org.kde.krename
 org.kde.marble
 org.libreoffice.LibreOffice
 org.mozilla.firefox
@@ -51,3 +55,4 @@ org.processing.processingide
 # org.remmina.Remmina
 org.videolan.VLC
 tv.kodi.Kodi
+
