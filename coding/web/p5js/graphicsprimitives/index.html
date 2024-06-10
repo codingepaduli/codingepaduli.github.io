@@ -227,17 +227,18 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 17 minuti 
-        ( 3420 parole)
+        Tempo di lettura 18 minuti 
+        ( 3763 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="primitive-per-la-grafica-2d">Primitive per la grafica 2D</h1>
 <p>Nella geometria, una primitiva è la più semplice delle figure geometriche. Tutte le figure più complesse si costruiscono combinando più primitive.</p>
-<p>Nella moderna computer grafica, le primitive grafiche sono le funzioni che realizzano le figure geometriche più elementari, come punti, segmenti, archi e poligoni, e saranno spiegate in questo capitolo, mentre le primitive che realizzano figure più complesse, come le curve <strong>spline</strong> e le curve di <strong>Bézier</strong> si rimanda alle specifiche tecniche e agli esempi ufficiali.</p>
-<p>Alcuni poligoni ed alcune curve sono considerati primitive, anche se possono essere realizzati combinando altre primitive, ad esempio i segmenti possono essere realizzati con più punti ed i poligoni con più segmenti, ma le primitive grafiche facilitano il lavoro del programmatore nella creazione di queste figure.</p>
+<p>Nella moderna computer grafica, le primitive grafiche sono le funzioni che realizzano le figure geometriche più elementari, come punti, segmenti, archi e poligoni, e saranno spiegate in questo capitolo. Per le primitive che realizzano figure più complesse, come le curve <strong>spline</strong> e le curve di <strong>Bézier</strong> si rimanda alle specifiche tecniche e agli esempi ufficiali.</p>
+<p>Alcuni poligoni ed alcune curve sono considerati primitive, anche se possono essere realizzati combinando altre primitive, ad esempio i segmenti possono essere realizzati con più punti ed i poligoni con più segmenti, ma le primitive grafiche facilitano il lavoro del programmatore nella creazione di queste figure. Inseriremo anche funzione per la creazione dell&rsquo;area da disegno tra le primitive grafiche, anche se non realizza alcuna figura geometrica.</p>
 <p>Dal precedente capitolo abbiamo imparato che ogni funzione (e le primitive sono funzioni) ha una firma composta dal nome e dalla lista di parametri formali. La lista di parametri formali è riportata tra parentesi tonde, ogni parametro può essere obbligatorio o facoltativo. Di seguito le varie primitive saranno descritte indicando la firma.</p>
+<p>Di seguito saranno descritte quindi le varie figure geometriche e le funzioni che le realizzano, indicando la firma e descrivendo gli argomenti necessari.</p>
 <h2 id="creazione-dellarea-da-disegno">Creazione dell&rsquo;area da disegno</h2>
 <p>L&rsquo;area da disegno è la tavola sulla quale disegnare ed è caratterizzata da una larghezza ed un&rsquo;altezza. La funzione progettata allo scopo è <code>createCanvas</code>, la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: createCanvas(w, h)
@@ -272,12 +273,16 @@
 </ul>
 <p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>point(20, 20);
-</span></span></code></pre></div><h2 id="disegno-di-un-segmento">Disegno di un segmento</h2>
+</span></span></code></pre></div><p>Il risultato è visualizzato nell&rsquo;immagine seguente:</p>
+<p><img src="/static/coding/web/p5js/graphics-primitives-entities-points.png" alt="p5.js - Primitive grafiche - Punti alfa, delta e teta" title="p5.js - Primitive grafiche - Punti alfa, delta e teta"></p>
+<h2 id="disegno-di-un-segmento-rettilineo">Disegno di un segmento rettilineo</h2>
 <p>Geometricamente una linea è un insieme illimitato di punti che si estendono in una direzione. Non ha larghezza o spessore. Può essere retta, curva, inclinata o ondulata, a seconda delle sue proprietà specifiche. Dal punto di vista matematico, una linea è descritta da un&rsquo;equazione, ad esempio un&rsquo;equazione lineare genera una retta, un&rsquo;equazione quadratica produce una curva.</p>
-<p>Nella computer grafica per linea si intende un segmento, ovvero una porzione di retta che unisce due estremi, indicati da un punto iniziale ed un punto finale.</p>
-<p>Due segmenti che appartengono alla stessa retta e che hanno un solo punto in comune si dicono <strong>adiacenti</strong>.</p>
+<p>Un <strong>segmento</strong> è una porzione di linea (retta, curva, ondulata, l&rsquo;importante è che sia continua) che unisce due estremi, indicati da un punto iniziale ed un punto finale.</p>
+<p>Nella computer grafica per linea si intende un segmento <strong>rettilineo</strong>, ovvero una porzione di retta che unisce due estremi, indicati da un punto iniziale ed un punto finale.</p>
+<p>Due segmenti si dicono <strong>consecutivi</strong> o <strong>adiacenti</strong> se condividono esclusivamente un estremo comune, cioè se il punto di fine di un segmento coincide con il punto di inizio dell&rsquo;altro segmento. La caratteristica dei segmenti adiacenti è che possono avere diverse lunghezze e angolature, ma sono collocati uno dietro l&rsquo;altro in modo sequenziale.</p>
+<p>Due segmenti rettilinei si dicono adiacenti se hanno un estremo in comune ed appartengono alla stessa retta, di conseguenza hanno la stessa angolatura.</p>
 <p>Due segmenti si dicono <strong>perpendicolari</strong> se si incontrano formando un angolo retto (90 gradi) tra di loro. Si dicono <strong>paralleli</strong> se mantengono sempre la stessa distanza tra di loro lungo tutta la loro lunghezza.</p>
-<p>La primitiva grafica che permette di disegnare una linea (segmento delimitato da due punti) è <code>line</code> la cui firma è la seguente:</p>
+<p>La primitiva grafica che permette di disegnare un segmento rettilineo delimitato da due punti) è <code>line</code>, la cui firma è la seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: line(x1, y1, x2, y2)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
@@ -295,11 +300,35 @@
 </ul>
 <p>La funzione viene quindi invocata nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>line(80, 20, 120, 40);
-</span></span></code></pre></div><h2 id="disegno-di-figure-poligonali">Disegno di figure poligonali</h2>
-<p>Un <strong>poligono</strong> è una figura geometrica piana delimitata da una linea spezzata chiusa. I segmenti che compongono la spezzata chiusa si chiamano <strong>lati</strong> del poligono. Il <strong>vertice</strong> è il punto di incontro di due lati del poligono.</p>
-<p>Si dicono <strong>adiacenti</strong> due segmenti che appartengono alla stessa retta e che hanno un solo punto in comune. Allo stesso modo, due poligoni che condividono lo stesso lato si dicono adiacenti. Anche in uno spazio a tre dimensioni, due parallelepipedi che condividono la stessa faccia si dicono adiacenti.</p>
+</span></span></code></pre></div><p>Nell&rsquo;immagine seguente troviamo visualizzati vari segmenti:</p>
+<p><img src="/static/coding/web/p5js/graphics-primitives-entities-lines.png" alt="p5.js - Primitive grafiche - Segmenti" title="p5.js - Primitive grafiche - Segmenti"></p>
+<p>I segmenti visualizzati sono i seguenti:</p>
+<ul>
+<li>i segmenti AB e CD;</li>
+<li>il segmento EF che è adiacente al segmento FG;</li>
+<li>il segmento HI che è adiacente al segmento IJ;</li>
+<li>i segmenti KL e MN che sono paralleli tra loro;</li>
+<li>i segmenti OP e QR che sono paralleli tra loro;</li>
+<li>i segmenti ST e UV che sono paralleli tra loro;</li>
+<li>i segmenti XW e YZ che sono perpendicolari tra loro;</li>
+<li>i segmenti ΛΞ (lambda xi) e ΠΣ (pi sigma) che sono perpendicolari tra loro.</li>
+</ul>
+<h2 id="disegno-di-figure-poligonali">Disegno di figure poligonali</h2>
+<p>Un <strong>poligono</strong> è una figura geometrica piana delimitata da una linea spezzata chiusa. I segmenti che compongono la spezzata chiusa si chiamano <strong>lati</strong> del poligono. Il <strong>vertice</strong> è il punto di incontro di due lati consecutivi del poligono.</p>
+<p>Si dicono <strong>consecutivi</strong> o <strong>adiacenti</strong> due segmenti che appartengono alla stessa retta e che hanno un solo punto in comune. Allo stesso modo, due poligoni che condividono lo stesso lato si dicono adiacenti. Anche in uno spazio a tre dimensioni, due parallelepipedi che condividono la stessa faccia si dicono adiacenti.</p>
 <!-- vedi https://it.wikipedia.org/wiki/Tassellazione_dello_spazio -->
-<!-- TODO aggiungere le immagini delle figure indicate -->
+<!-- La **simmetria** è una proprietà geometrica che indica l'equilibrio e uguaglianza di parti che si riflettono o si corrispondono rispetto a un asse, un punto o un piano; è una proprietà presente in natura per cui è considerata esteticamente piacevole e armoniosa, e per questo motivo è utilizzata spesso nell'arte, nel design, nell'architettura e nell'ingegneria. -->
+<p>Nell&rsquo;immagine seguente troviamo visualizzati vari segmenti:</p>
+<p><img src="/static/coding/web/p5js/graphics-primitives-entities-poligons.png" alt="p5.js - Primitive grafiche - Poligoni" title="p5.js - Primitive grafiche - Poligoni"></p>
+<p>I poligoni visualizzati nell&rsquo;immagine sono:</p>
+<ul>
+<li>un quadrato;</li>
+<li>un triangolo;</li>
+<li>un rettangolo;</li>
+<li>un poligono con sette lati;</li>
+<li>un quadrato adiacente ad un triangolo;</li>
+<li>un primo triangolo adiacente ad un secontro triangolo a sua volta adiacente ad un quadrilatero (poligono con quattro lati).</li>
+</ul>
 <h3 id="disegno-di-un-triangolo">Disegno di un triangolo</h3>
 <p>Un triangolo è un poligono che ha tre lati e tre angoli. Può essere descritto da tre punti in cui originano e terminano i tre lati che lo vanno a formare.</p>
 <p>La primitiva grafica che permette di disegnare un triangolo è <code>triangle</code> la cui firma è la seguente:</p>
@@ -381,9 +410,28 @@
 </span></span></code></pre></div><p>Il parametro <code>CLOSE</code> della funzione <code>endShape</code> serve ad indicare che si vuole realizzare un poligono con una linea spezzata chiusa. Se questo parametro non viene passato alla funzione, si realizza una linea spezzata aperta, di conseguenza mancherà un lato al poligono.</p>
 <h2 id="disegno-di-figure-non-poligonali">Disegno di figure non poligonali</h2>
 <p>Sono dette <strong>non poligonali</strong> le figure che non sono descritte da una linea spezzata chiusa, come la circonferenza o l&rsquo;ellisse.</p>
+<!-- TODO 
+due angoli consecutivi o adiacenti sono angoli che condividono un lato e una vertice comune
+-->
 <p>Si dicono <strong>tangenti</strong> due oggetti geometrici che si toccano ma non si intersecano. Il punto di contatto tra curve e/o linee e/o facce della figura che si toccano senza attraversarsi è detto punto di tangenza.</p>
 <p>Un poligono è tangente ad un&rsquo;ellisse o ad una circonferenza se ha un lato toccato ma non attraversato dall&rsquo;ellisse o dalla circonferenza.</p>
 <p>Due cerchi che hanno un solo punto in comune sono tangenti.</p>
+<p>Nell&rsquo;immagine seguente troviamo visualizzati varie figure non poligonali:</p>
+<p><img src="/static/coding/web/p5js/graphics-primitives-entities-circles.png" alt="p5.js - Primitive grafiche - Figure non poligonali" title="p5.js - Primitive grafiche - Figure non poligonali"></p>
+<p>Le figure non poligonali visualizzate sono le seguenti:</p>
+<ul>
+<li>circonferenza con raggio;</li>
+<li>cerchi tangenti tra loro;</li>
+<li>corona;</li>
+<li>circonferenza con corda di circonferenza;</li>
+<li>un ellisse;</li>
+<li>una coppia di ellissi tangenti tra loro;</li>
+<li>un poligono tangente ad un ellisse;</li>
+<li>un angolo retto;</li>
+<li>un primo angolo adiacente ad un secondo angolo, formano in totale un angolo piatto;</li>
+<li>un arco di circonferenza;</li>
+<li>un arco d&rsquo;ellisse.</li>
+</ul>
 <h3 id="disegno-di-un-cerchio">Disegno di un cerchio</h3>
 <p>Un <strong>cerchio</strong> è una parte di piano delimitata da una circonferenza.</p>
 <p>Una <strong>circonferenza</strong> è il luogo geometrico di punti del piano equidistanti da un punto fisso detto centro. La circonferenza è quindi una linea curva chiusa.</p>

@@ -469,6 +469,62 @@ smontaPhone() {
 }
 export -f smontaPhone
 
+############################
+#          FFmpeg          #
+############################
+
+# Use ffmpeg -i inputFile outputFile
+#
+# Options:
+#  -vn              disable video conversion 
+# -c:a libmp3lame   use the lame Mp3 library
+# -c:v copy         don't re-encode video, only copy video
+# -ar               Set the audio sampling frequency.
+# -ac               Set the number of audio channels
+# The quality argument "-q:a Value" has a range 0-9 (lower value is higher quality).
+# It sets the variable bit rate, see https://trac.ffmpeg.org/wiki/Encode/MP3
+#   - 0-3 will normally produce transparent results
+#   - 4 (default) should be close to perceptual transparency
+#   - 6 usually produces an "acceptable" quality.
+
+# See https://trac.ffmpeg.org/wiki/TitleIndex
+
+# For high quality lossy audio encoding
+#   see https://trac.ffmpeg.org/wiki/Encode/HighQualityAudio 
+
+alias help-convert-m4a-to-mp3="echo 'ffmpeg -i input.m4a -c:v copy  -q:a 4 output.mp3'"
+
+# Test: 
+# Run: convertAllM4aToMp3
+convertAllM4aToMp3() {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+
+  for file in *.m4a
+  do
+    
+    ffmpeg -i "${file}" -vn -ar 44100 -ac 2 -ac 2 -q:a 2 "new-${file}.mp3";
+  done
+}
+export -f convertAllM4aToMp3
+
+# Test: 
+# Run: convertAllWavToMp3
+convertAllWavToMp3() {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.wav, *.Wav, *.WaV etc
+  shopt -s nullglob nocaseglob
+
+  for file in *.wav
+  do
+    ffmpeg -i "${file}" -vn -ar 44100 -ac 2 -q:a 2 "new-${file}.mp3";
+  done
+}
+export -f convertAllWavToMp3
+
 ########################
 # Beautiful interfaces #
 ########################
