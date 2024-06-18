@@ -368,8 +368,8 @@ Potremmo dire anche che l&rsquo;etichetta <code>html</code> e l&rsquo;etichetta 
 <li>per selezionare tutti gli elementi in posizione maggiore o uguale ad <code>n</code>, ad esempio <code>6</code>, si può utilizzare <code>nth-child(n+6)</code>;</li>
 <li>per selezionare tutti gli elementi in posizione minore o uguale ad <code>n</code>, ad esempio <code>6</code>, si può utilizzare un passo negativo <code>X=-1</code>, quindi il selettore risultante è <code>nth-child(-1n+6)</code>;</li>
 </ul>
-<p>Facciamo un esempio di tre liste. Nella prima lista applichiamo il colore blu agli elementi in posizione minore di tre e agli elementi in posizione maggiore di sei, poi al primo e all&rsquo;ultimo elemento sovrascriviamo il colore applicando il verde ed infine all&rsquo;elemento in posizione cinque elemento applichiamo un testo più grande. Nella seconda lista applichiamo il colore blu agli elementi pari ed il verde sottolineatp agli elementi in posizione dispari. Nell&rsquo;ultima lista applichiamo evidenziamo e sottolineamo l&rsquo;unico elemento presente. Lo stile risultante è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>&lt;style&gt;
+<p>Facciamo un esempio di tre liste. Nella prima lista applichiamo il colore blu agli elementi in posizione minore di tre e agli elementi in posizione maggiore di sei, poi al primo e all&rsquo;ultimo elemento sovrascriviamo il colore applicando il verde ed infine all&rsquo;elemento in posizione cinque elemento applichiamo un testo più grande. Nella seconda lista applichiamo il colore blu agli elementi pari ed il verde sottolineato agli elementi in posizione dispari. Nell&rsquo;ultima lista applichiamo evidenziamo e sottolineiamo l&rsquo;unico elemento presente. Lo stile risultante è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;style&gt;
 </span></span><span style="display:flex;"><span>#list1 li:<span style="color:#cc00a3">nth-child</span>(-1n+3), #list1 li:<span style="color:#cc00a3">nth-child</span>(1n+6) {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: <span style="color:#00f">blue</span>;
 </span></span><span style="display:flex;"><span>}
@@ -380,10 +380,10 @@ Potremmo dire anche che l&rsquo;etichetta <code>html</code> e l&rsquo;etichetta 
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">font-size</span>: <span style="color:#00f">larger</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">font-weight</span>: <span style="color:#00f">bold</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>#list2 li:<span style="color:#cc00a3">nth-child</span>(2n) { <span style="color:#f00;font-style:italic">/* even (pari) */</span> 
+</span></span><span style="display:flex;"><span>#list2 li:<span style="color:#cc00a3">nth-child</span>(2n) { <span style="color:#f00;font-style:italic">/* even (pari) */</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: <span style="color:#00f">blue</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>#list2 li:<span style="color:#cc00a3">nth-child</span>(odd) { <span style="color:#f00;font-style:italic">/* odd (dispari) */</span> 
+</span></span><span style="display:flex;"><span>#list2 li:<span style="color:#cc00a3">nth-child</span>(odd) { <span style="color:#f00;font-style:italic">/* odd (dispari) */</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: <span style="color:#00f">green</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">text-decoration</span>: <span style="color:#00f">underline</span>;
 </span></span><span style="display:flex;"><span>}
@@ -393,7 +393,8 @@ Potremmo dire anche che l&rsquo;etichetta <code>html</code> e l&rsquo;etichetta 
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">padding</span>:0.1<span style="color:#00f">em</span> 0.2<span style="color:#00f">em</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>&lt;/style&gt;
-</span></span></code></pre></div><table>
+</span></span></code></pre></div><!-- markdownlint-disable MD033 -->
+<table>
   <tr>
     <td>
       <ul id="list1">
@@ -426,29 +427,30 @@ Potremmo dire anche che l&rsquo;etichetta <code>html</code> e l&rsquo;etichetta 
   </tr>
 </table>
 <style>
-#list1 li:nth-child(-1n+3), #list1 li:nth-child(1n+6) {
-  color: blue;
-}
-#list1 li:first-child, #list1 li:last-child {
-  color: green;
-}
-#list1 li:nth-child(5) {
-  font-size: larger;
-  font-weight: bold;
-}
-#list2 li:nth-child(2n) { /* even (pari) */ 
-  color: blue;
-}
-#list2 li:nth-child(odd) { /* odd (dispari) */ 
-  color: green;
-  text-decoration: underline;
-}
-#list3 li:only-child {
-  text-decoration: underline;
-  background-color:yellow;
-  padding:0.1em 0.2em;
-}
+  #list1 li:nth-child(-1n+3), #list1 li:nth-child(1n+6) {
+    color: blue;
+  }
+  #list1 li:first-child, #list1 li:last-child {
+    color: green;
+  }
+  #list1 li:nth-child(5) {
+    font-size: larger;
+    font-weight: bold;
+  }
+  #list2 li:nth-child(2n) { /* even (pari) */
+    color: blue;
+  }
+  #list2 li:nth-child(odd) { /* odd (dispari) */
+    color: green;
+    text-decoration: underline;
+  }
+  #list3 li:only-child {
+    text-decoration: underline;
+    background-color:yellow;
+    padding:0.1em 0.2em;
+  }
 </style>
+<!-- markdownlint-enable MD033 -->
 <h2 id="selettori-per-pseudo-elementi">Selettori per pseudo-elementi</h2>
 <p>I <strong>selettori CSS per pseudo-elementi</strong> permettono di selezionare gli elementi che sono accomunati in una certa categoria, ad esempio tutti i titoli, tutti i campi di input o tutte le checkbox selezionate.</p>
 <p>Una lista che elenca i principali pseudo-elementi con relativa descrizione è la seguente:</p>

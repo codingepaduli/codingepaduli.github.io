@@ -54,7 +54,7 @@ let alpha = 0;
 let canvas;
 function setup() {
    canvas = createCanvas(800, 600);
-   canvas.parent('solarSistem');
+   canvas.parent('solarSystem');
 }
 
 function draw() {
