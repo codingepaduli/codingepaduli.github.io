@@ -4,26 +4,23 @@
     <title>Lezioni sul linguaggio CSS on Lab. informatica</title>
     <link>http://codingepaduli.github.io/coding/web/css/</link>
     <description>Recent content in Lezioni sul linguaggio CSS on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/coding/web/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/coding/web/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I selettori CSS </title>
       <link>http://codingepaduli.github.io/coding/web/css/selettoricss/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/css/selettoricss/</guid>
       <description>I selettori CSS</description>
     </item>
-    
     <item>
       <title>CSS </title>
       <link>http://codingepaduli.github.io/coding/web/css/intro/</link>
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/css/intro/</guid>
       <description>Il linguaggio CSS, introduzione e proprietà principali</description>
     </item>
-    
   </channel>
 </rss>

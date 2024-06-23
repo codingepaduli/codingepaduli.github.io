@@ -4,62 +4,51 @@
     <title>Tecnologie Web on Lab. informatica</title>
     <link>http://codingepaduli.github.io/coding/web/</link>
     <description>Recent content in Tecnologie Web on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/coding/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/coding/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>three.js</title>
       <link>http://codingepaduli.github.io/coding/web/linkthreejs/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkthreejs/</guid>
       <description>Esercitazioni con la libreria grafica Three.js r124 (ormai deprecata e trasformata in ES6) nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/threejs-r124&#39;&gt;Three.js r124&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>CSS</title>
       <link>http://codingepaduli.github.io/coding/web/linkcss/</link>
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkcss/</guid>
       <description>Lezioni sul linguaggio CSS nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/css&#39;&gt;CSS&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>mediapipe</title>
       <link>http://codingepaduli.github.io/coding/web/linkmediapipe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkmediapipe/</guid>
       <description>Lezioni su mediapipe nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/mediapipe&#39;&gt;mediapipe&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>p5.js</title>
       <link>http://codingepaduli.github.io/coding/web/linkp5js/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkp5js/</guid>
       <description>Lezioni sulla libreria grafica p5.js nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/p5js&#39;&gt;p5.js&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/linkjavascript/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkjavascript/</guid>
       <description>Lezioni sul linguaggio JavaScript nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/javascript&#39;&gt;JavaScript&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>HTML</title>
       <link>http://codingepaduli.github.io/coding/web/linkhtml/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkhtml/</guid>
       <description>Lezioni sul linguaggio HTML nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/html&#39;&gt;HTML&lt;/a&gt;</description>
     </item>
-    
   </channel>
 </rss>

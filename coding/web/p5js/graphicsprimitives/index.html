@@ -7,18 +7,22 @@
     <title>p5.js Lez. 02 - Primitive grafiche - Lab. informatica</title>
 
     <meta name="description" content="Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari">
-        <meta property="og:title" content="p5.js Lez. 02 - Primitive grafiche" />
-<meta property="og:description" content="Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/" /><meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/><meta property="article:section" content="coding" />
-<meta property="article:published_time" content="2020-09-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-10T00:00:00+00:00" />
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="p5.js Lez. 02 - Primitive grafiche">
+  <meta property="og:description" content="Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2020-09-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-09-10T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
 
-        <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg"/>
-
-<meta name="twitter:title" content="p5.js Lez. 02 - Primitive grafiche"/>
-<meta name="twitter:description" content="Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari"/>
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="p5.js Lez. 02 - Primitive grafiche">
+  <meta name="twitter:description" content="Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari">
 
 
 
@@ -222,7 +226,7 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-10T00:00:00Z">10-09-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">coding</a>, <a class="meta__link" href="/categories/web/" rel="category">web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">p5.js</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-10T00:00:00Z">10-09-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">P5.js</a>
 	</span>
 </div><div class="meta__item-reading meta__item">
     
@@ -316,7 +320,9 @@
 <h2 id="disegno-di-figure-poligonali">Disegno di figure poligonali</h2>
 <p>Un <strong>poligono</strong> è una figura geometrica piana delimitata da una linea spezzata chiusa. I segmenti che compongono la spezzata chiusa si chiamano <strong>lati</strong> del poligono. Il <strong>vertice</strong> è il punto di incontro di due lati consecutivi del poligono.</p>
 <p>Si dicono <strong>consecutivi</strong> o <strong>adiacenti</strong> due segmenti che appartengono alla stessa retta e che hanno un solo punto in comune. Allo stesso modo, due poligoni che condividono lo stesso lato si dicono adiacenti. Anche in uno spazio a tre dimensioni, due parallelepipedi che condividono la stessa faccia si dicono adiacenti.</p>
+<!-- markdownlint-disable MD044 -->
 <!-- vedi https://it.wikipedia.org/wiki/Tassellazione_dello_spazio -->
+<!-- markdownlint-enable MD044 -->
 <!-- La **simmetria** è una proprietà geometrica che indica l'equilibrio e uguaglianza di parti che si riflettono o si corrispondono rispetto a un asse, un punto o un piano; è una proprietà presente in natura per cui è considerata esteticamente piacevole e armoniosa, e per questo motivo è utilizzata spesso nell'arte, nel design, nell'architettura e nell'ingegneria. -->
 <p>Nell&rsquo;immagine seguente troviamo visualizzati vari segmenti:</p>
 <p><img src="/static/coding/web/p5js/graphics-primitives-entities-poligons.png" alt="p5.js - Primitive grafiche - Poligoni" title="p5.js - Primitive grafiche - Poligoni"></p>

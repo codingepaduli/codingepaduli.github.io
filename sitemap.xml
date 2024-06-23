@@ -175,11 +175,11 @@
     <loc>http://codingepaduli.github.io/interesting/others/</loc>
     <lastmod>2024-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/coding/</loc>
-    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/coding/link-scheme/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/coding/</loc>
+    <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/css/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
@@ -196,10 +196,10 @@
     <loc>http://codingepaduli.github.io/coding/web/threejs-r124/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/three.js/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/linkthreejs/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/linkthreejs/</loc>
+    <loc>http://codingepaduli.github.io/categories/three.js/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/linkcss/</loc>
@@ -336,6 +336,9 @@
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/javascript/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/java/openjdk/</loc>
+    <lastmod>2020-03-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/tools/gradle/</loc>
     <lastmod>2020-03-27T00:00:00+00:00</lastmod>

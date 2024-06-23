@@ -42,7 +42,7 @@ docker pull python:3.11.4-bookworm
 # docker pull gradle:8.0.0-jdk17
 
 # Hugo
-docker pull klakegg/hugo:0.111.3-debian
+docker pull hugomods/hugo:reg-base-0.127.0
 
 docker pull dalibo/pandocker:latest-buster-full
 

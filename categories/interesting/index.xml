@@ -1,65 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>interesting on Lab. informatica</title>
+    <title>Interesting on Lab. informatica</title>
     <link>http://codingepaduli.github.io/categories/interesting/</link>
-    <description>Recent content in interesting on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Interesting on Lab. informatica</description>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 08 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Donne</title>
       <link>http://codingepaduli.github.io/interesting/women/</link>
       <pubDate>Sat, 08 Jun 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/women/</guid>
       <description>Link a storie di donne. Dottoresse, imprenditrici, regine&amp;hellip; Donne fantastiche</description>
     </item>
-    
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
     </item>
-    
     <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
     </item>
-    
     <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
       <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
     </item>
-    
     <item>
       <title>App su F-Droid</title>
       <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
       <description>Set di link relativi alle app su F-Droid</description>
     </item>
-    
     <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/</link>
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/</guid>
       <description>Set di link interessanti di cui tener traccia</description>
     </item>
-    
   </channel>
 </rss>

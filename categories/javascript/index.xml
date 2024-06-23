@@ -1,74 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>javascript on Lab. informatica</title>
+    <title>Javascript on Lab. informatica</title>
     <link>http://codingepaduli.github.io/categories/javascript/</link>
-    <description>Recent content in javascript on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Javascript on Lab. informatica</description>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript Lez. 09 - Document Object Model</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/dom/</guid>
       <description>09 - Document Object Model</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 06 - Funzioni</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/funzioni/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/funzioni/</guid>
       <description>Funzioni</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 05 - Istruzioni condizionali ed iterative</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</guid>
       <description>Istruzioni condizionali ed iterative</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 04 - I metodi e gli operatori</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/conversioni/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/conversioni/</guid>
       <description>I metodi e gli operatori</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 03 - Costanti, variabili e tipi di dato</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/variabili/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/variabili/</guid>
       <description>Dichiarazione di costanti e variabili per i vari tipi di dato</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 01 - JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/intro/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/intro/</guid>
       <description>JavaScript</description>
     </item>
-    
     <item>
       <title>Lezioni sul linguaggio JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/</guid>
       <description>Lezioni sul linguaggio JavaScript</description>
     </item>
-    
   </channel>
 </rss>

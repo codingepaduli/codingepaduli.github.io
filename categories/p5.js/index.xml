@@ -1,254 +1,201 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>p5.js on Lab. informatica</title>
+    <title>P5.js on Lab. informatica</title>
     <link>http://codingepaduli.github.io/categories/p5.js/</link>
-    <description>Recent content in p5.js on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in P5.js on Lab. informatica</description>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 02 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/p5.js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/p5.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</guid>
       <description>Implementazione di un videogioco in stile &amp;lsquo;snake&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.7 - Progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</guid>
       <description>Sviluppo di un videogioco in stile &amp;lsquo;snake&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.6 - Soluzione progetto Arknoid</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</guid>
       <description>Implementazione del videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.5 - Progetto Arknoid</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</guid>
       <description>Sviluppo di un videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.4 - Soluzione progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</guid>
       <description>Implementazione del videogioco in stile &amp;lsquo;pong&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.3 - Progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</guid>
       <description>Sviluppo di un videogioco in stile &amp;lsquo;pong&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.8 - Soluzione del progetto &#34;complemento a 1&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_soluzione/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.7 - Soluzione del progetto &#34;acchiappapalline&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;acchiappapalline&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.6 - Soluzione del progetto &#34;morra cinese&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe_soluzione/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;morra cinese&amp;rdquo;  (sasso carta forbici)</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.5 - Soluzione del progetto &#34;parco zoologico&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe_soluzione/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;parco zoologico&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.4 - Progetto &#34;complemento a 1&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.3 - Progetto &#34;acchiappapalline&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;acchiappapalline&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.2 - Progetto &#34;morra cinese&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe/</link>
       <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;morra cinese&amp;rdquo; (sasso carta forbici)</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.1 - Progetto &#34;parco zoologico&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;parco zoologico&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05 - Suoni ed immagini</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</link>
       <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</guid>
       <description>Suoni ed immagini</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04.4 - Soluzione del progetto &#34;Sistema Solare&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_soluzione/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04.3 - Soluzione del progetto &#34;orologio analogico&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe_soluzione/</link>
       <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;orologio analogico&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04.2 - Progetto &#34;Sistema Solare&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04.1 - Progetto &#34;orologio analogico&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;orologio analogico&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04 - Variabili</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/variables/</link>
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/variables/</guid>
       <description>Usare le variabili per creare animazioni e memorizzare lo stato</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 03.1 - Esercizi di grafica 2D a colori</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles_exe/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles_exe/</guid>
       <description>Esercizi di grafica 2D a colori</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 03 - Colori e stili</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</link>
       <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</guid>
       <description>Colori e stili</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 02.1 - Esercizi di grafica 2D</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</guid>
       <description>Esercizi di grafica 2D</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 02 - Primitive grafiche</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</guid>
       <description>Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 01 - Introduzione alla libreria grafica p5.js</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/intro/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/intro/</guid>
       <description>Introduzione alla libreria grafica p5.js</description>
     </item>
-    
     <item>
       <title>JavaScript - Operatori ed operazioni matematiche</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
       <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
       <description>Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche</description>
     </item>
-    
     <item>
       <title>p5.js Lez. Libreria grafica p5.js</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/</guid>
       <description>Lezioni di programmazione sulla libreria grafica p5.js</description>
     </item>
-    
   </channel>
 </rss>

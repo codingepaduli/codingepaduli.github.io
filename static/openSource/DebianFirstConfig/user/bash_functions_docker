@@ -129,14 +129,14 @@ hugoRun() {
   declare -A tailParams
   tailParams=$@
 
-  dockerContainer --name hugo $headParams -p 1313:1313 klakegg/hugo:0.111.3-debian $tailParams
+  dockerContainer --name hugo $headParams -p 1313:1313 hugomods/hugo:reg-base-0.127.0 hugo $tailParams
 }
 export -f hugoRun
 
 # Hugo server
 # Run: hugoDev
 hugoDev() {
-  hugoRun " "   " "   server   --debug --environment mainroad --verbose --gc --disableFastRender --ignoreCache --noHTTPCache --renderStaticToDisk "$@"
+  hugoRun " "   " "   server  --bind 0.0.0.0  --logLevel debug --environment mainroad --gc --disableFastRender --ignoreCache --noHTTPCache --renderStaticToDisk "$@"
 }
 export -f hugoDev
 

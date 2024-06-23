@@ -199,3 +199,9 @@ flatpakUpdateAppBasedOnCurrentRuntimeKde() {
     flatpak update $app
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeKde
+
+# Usage: flatpakShowRemoteCommitOfApp org.app
+flatpakShowRemoteCommitOfApp() {
+  flatpak remote-info --log flathub "$@"
+}
+export -f flatpakShowRemoteCommitOfApp

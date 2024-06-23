@@ -1,182 +1,145 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>html on Lab. informatica</title>
+    <title>HTML on Lab. informatica</title>
     <link>http://codingepaduli.github.io/categories/html/</link>
-    <description>Recent content in html on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in HTML on Lab. informatica</description>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Thu, 21 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML Lez. 09.5 - Esercizi sui moduli di invio dati</title>
       <link>http://codingepaduli.github.io/coding/web/html/form_exe/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/form_exe/</guid>
       <description>HTML - Esercizi e quiz di comprensione sui moduli di invio dati</description>
     </item>
-    
     <item>
       <title>HTML Lez. 09.4 - Soluzione modulo di registrazione utente</title>
       <link>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente_soluzione/</link>
       <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente_soluzione/</guid>
       <description>HTML - Soluzione modulo di registrazione utente</description>
     </item>
-    
     <item>
       <title>HTML Lez. 09.3 - Modulo di registrazione utente</title>
       <link>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente/</guid>
       <description>HTML - Modulo di registrazione utente</description>
     </item>
-    
     <item>
       <title>HTML Lez. 09 - Moduli di invio dati e trasmissione dati al server</title>
       <link>http://codingepaduli.github.io/coding/web/html/form/</link>
       <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/form/</guid>
       <description>HTML - La richiesta di risorse al server può essere corredata di ulteriori dati da trasmettere, che possono essere inseriti dall&amp;rsquo;utente negli appositi moduli di invio dati presenti nella pagina web o che possono essere preimpostati staticamente in un collegamento.</description>
     </item>
-    
     <item>
       <title>HTML Lez. 08 - Accessibilità</title>
       <link>http://codingepaduli.github.io/coding/web/html/accessibilita/</link>
       <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/accessibilita/</guid>
       <description>HTML Lez. 08 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&amp;rsquo;uso di tecnologie assistive</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.6 - Conversioni numeriche</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_conversioninumeriche/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_conversioninumeriche/</guid>
       <description>HTML Lez. 07.6 - Conversioni numeriche</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.5 - Sistema Numerico Egizio</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sistemanumericoegizio/</link>
       <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sistemanumericoegizio/</guid>
       <description>HTML Lez. 07.5 - Sistema Numerico Egizio</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.4 - Sistemi numerici</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sisteminumerici/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sisteminumerici/</guid>
       <description>HTML Lez. 07.4 - Sistemi numerici</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.3 - Alfabeto Ucraino</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetoucraino/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetoucraino/</guid>
       <description>HTML Lez. 07.3 - Alfabeto Ucraino</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.2 - Alfabeto Russo</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetorusso/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetorusso/</guid>
       <description>HTML Lez. 07.2 - Alfabeto Russo</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.1 - Alfabeto Greco</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</guid>
       <description>HTML Lez. 07.1 - Alfabeto Greco</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07 A - Combinazioni Unicode</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_appendice_combinazioni/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_appendice_combinazioni/</guid>
       <description>HTML Lez. 07 A - Combinazioni Unicode</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07 - Codifica Unicode, HTML entities, emoji</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode/</link>
       <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode/</guid>
       <description>HTML Lez. 07 - La codifica Unicode, le HTML entities e le emoji nelle pagine web</description>
     </item>
-    
     <item>
       <title>HTML Lez. 06 - Validazione del codice HTML</title>
       <link>http://codingepaduli.github.io/coding/web/html/validazione/</link>
       <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/validazione/</guid>
       <description>HTML Lez. 06 - Validazione del codice HTML</description>
     </item>
-    
     <item>
       <title>HTML Lez. 05 - Struttura e layout</title>
       <link>http://codingepaduli.github.io/coding/web/html/metadati/</link>
       <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/metadati/</guid>
       <description>HTML Lez. 05 - Struttura e layout di una pagina web</description>
     </item>
-    
     <item>
       <title>HTML Lez. 03 - Etichette principali</title>
       <link>http://codingepaduli.github.io/coding/web/html/tagtesto/</link>
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/tagtesto/</guid>
       <description>HTML Lez. 03 - Etichette principali per titoli, formattazione carattere, liste, tabelle, collegamenti, immagini</description>
     </item>
-    
     <item>
       <title>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag)</title>
       <link>http://codingepaduli.github.io/coding/web/html/etichette/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/etichette/</guid>
       <description>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
     </item>
-    
     <item>
       <title>Tecnologie Web</title>
       <link>http://codingepaduli.github.io/coding/web/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/</guid>
       <description>Lezioni di programmazione sulle diverse Tecnologie Web</description>
     </item>
-    
     <item>
       <title>Lezioni sul linguaggio HTML</title>
       <link>http://codingepaduli.github.io/coding/web/html/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/</guid>
       <description>Lezioni sul linguaggio HTML</description>
     </item>
-    
   </channel>
 </rss>

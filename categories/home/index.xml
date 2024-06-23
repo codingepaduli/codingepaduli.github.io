@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>home on Lab. informatica</title>
+    <title>Home on Lab. informatica</title>
     <link>http://codingepaduli.github.io/categories/home/</link>
-    <description>Recent content in home on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Home on Lab. informatica</description>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/home/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/home/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding e Paduli</title>
       <link>http://codingepaduli.github.io/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/</guid>
       <description>Ennesimo sito/blog di programmazione ed informatica in generale</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,962 +4,758 @@
     <title>Coding e Paduli on Lab. informatica</title>
     <link>http://codingepaduli.github.io/</link>
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>La nascita del computer e delle telecomunicazioni</title>
       <link>http://codingepaduli.github.io/coding/storia/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/storia/</guid>
       <description>La nascita del computer e delle telecomunicazioni</description>
     </item>
-    
     <item>
       <title>Docker Engine e Podman</title>
       <link>http://codingepaduli.github.io/tools/docker/</link>
       <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/docker/</guid>
       <description>Docker Engine e Podman - Strumenti per gestire i container</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</guid>
       <description>Implementazione di un videogioco in stile &amp;lsquo;snake&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.7 - Progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe/</guid>
       <description>Sviluppo di un videogioco in stile &amp;lsquo;snake&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.6 - Soluzione progetto Arknoid</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe_soluzione/</guid>
       <description>Implementazione del videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.5 - Progetto Arknoid</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoarknoid_exe/</guid>
       <description>Sviluppo di un videogioco in stile &amp;lsquo;arknoid&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.4 - Soluzione progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe_soluzione/</guid>
       <description>Implementazione del videogioco in stile &amp;lsquo;pong&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 07.3 - Progetto Pong</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettopong_exe/</guid>
       <description>Sviluppo di un videogioco in stile &amp;lsquo;pong&amp;rsquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.8 - Soluzione del progetto &#34;complemento a 1&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_soluzione/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.7 - Soluzione del progetto &#34;acchiappapalline&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;acchiappapalline&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.6 - Soluzione del progetto &#34;morra cinese&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe_soluzione/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;morra cinese&amp;rdquo;  (sasso carta forbici)</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.5 - Soluzione del progetto &#34;parco zoologico&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe_soluzione/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;parco zoologico&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.4 - Progetto &#34;complemento a 1&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettocomplemento1_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;complemento a 1&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.3 - Progetto &#34;acchiappapalline&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoacchiappapalline_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;acchiappapalline&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.2 - Progetto &#34;morra cinese&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe/</link>
       <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettomorracinese_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;morra cinese&amp;rdquo; (sasso carta forbici)</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05.1 - Progetto &#34;parco zoologico&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoparcozoologico_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;parco zoologico&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 05 - Suoni ed immagini</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</link>
       <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/soundsandimages/</guid>
       <description>Suoni ed immagini</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04.4 - Soluzione del progetto &#34;Sistema Solare&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_soluzione/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04.3 - Soluzione del progetto &#34;orologio analogico&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe_soluzione/</link>
       <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe_soluzione/</guid>
       <description>Soluzione del progetto &amp;ldquo;orologio analogico&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04.2 - Progetto &#34;Sistema Solare&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettosistemasolare_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;Sistema Solare&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04.1 - Progetto &#34;orologio analogico&#34;</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/progettoorologio_exe/</guid>
       <description>Requisiti del progetto &amp;ldquo;orologio analogico&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 04 - Variabili</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/variables/</link>
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/variables/</guid>
       <description>Usare le variabili per creare animazioni e memorizzare lo stato</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 03.1 - Esercizi di grafica 2D a colori</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles_exe/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles_exe/</guid>
       <description>Esercizi di grafica 2D a colori</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 03 - Colori e stili</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</link>
       <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/colorsandstyles/</guid>
       <description>Colori e stili</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 02.1 - Esercizi di grafica 2D</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</guid>
       <description>Esercizi di grafica 2D</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 02 - Primitive grafiche</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</guid>
       <description>Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari</description>
     </item>
-    
     <item>
       <title>three.js Lez. 01 - Tour paesaggio 3D</title>
       <link>http://codingepaduli.github.io/coding/web/threejs-r124/tourpaesaggio3d/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/threejs-r124/tourpaesaggio3d/</guid>
       <description>Tour paesaggio 3D</description>
     </item>
-    
     <item>
       <title>three.js Lez. 02 - Sistema Solare 3D</title>
       <link>http://codingepaduli.github.io/coding/web/threejs-r124/sistemasolare/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/threejs-r124/sistemasolare/</guid>
       <description>Sistema Solare 3D</description>
     </item>
-    
     <item>
       <title>three.js Lez. 03 - Tour volante della città</title>
       <link>http://codingepaduli.github.io/coding/web/threejs-r124/tourvoltantecitta/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/threejs-r124/tourvoltantecitta/</guid>
       <description>Tour volante della città</description>
     </item>
-    
     <item>
       <title>three.js Lez. 05 - Guidando l&#39;auto in città</title>
       <link>http://codingepaduli.github.io/coding/web/threejs-r124/drivinginthecity/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/threejs-r124/drivinginthecity/</guid>
       <description>Guidando l&amp;rsquo;auto in città</description>
     </item>
-    
     <item>
       <title>three.js Lez. X - Transizione al nuovo Three.js ES6</title>
       <link>http://codingepaduli.github.io/coding/web/threejs-r124/movingnewthreejs/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/threejs-r124/movingnewthreejs/</guid>
       <description>Transizione al nuovo Three.js ES6</description>
     </item>
-    
     <item>
       <title>p5.js Lez. 01 - Introduzione alla libreria grafica p5.js</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/intro/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/p5js/intro/</guid>
       <description>Introduzione alla libreria grafica p5.js</description>
     </item>
-    
     <item>
       <title>HTML Lez. 09.5 - Esercizi sui moduli di invio dati</title>
       <link>http://codingepaduli.github.io/coding/web/html/form_exe/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/form_exe/</guid>
       <description>HTML - Esercizi e quiz di comprensione sui moduli di invio dati</description>
     </item>
-    
     <item>
       <title>HTML Lez. 09.4 - Soluzione modulo di registrazione utente</title>
       <link>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente_soluzione/</link>
       <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente_soluzione/</guid>
       <description>HTML - Soluzione modulo di registrazione utente</description>
     </item>
-    
     <item>
       <title>HTML Lez. 09.3 - Modulo di registrazione utente</title>
       <link>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/form_exe_registrazione_utente/</guid>
       <description>HTML - Modulo di registrazione utente</description>
     </item>
-    
     <item>
       <title>HTML Lez. 09 - Moduli di invio dati e trasmissione dati al server</title>
       <link>http://codingepaduli.github.io/coding/web/html/form/</link>
       <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/form/</guid>
       <description>HTML - La richiesta di risorse al server può essere corredata di ulteriori dati da trasmettere, che possono essere inseriti dall&amp;rsquo;utente negli appositi moduli di invio dati presenti nella pagina web o che possono essere preimpostati staticamente in un collegamento.</description>
     </item>
-    
     <item>
       <title>HTML Lez. 08 - Accessibilità</title>
       <link>http://codingepaduli.github.io/coding/web/html/accessibilita/</link>
       <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/accessibilita/</guid>
       <description>HTML Lez. 08 - Accessibilità ovvero il diritto a fruire dei sistemi informatici e delle risorse a disposizione attraverso l&amp;rsquo;uso di tecnologie assistive</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.6 - Conversioni numeriche</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_conversioninumeriche/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_conversioninumeriche/</guid>
       <description>HTML Lez. 07.6 - Conversioni numeriche</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.5 - Sistema Numerico Egizio</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sistemanumericoegizio/</link>
       <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sistemanumericoegizio/</guid>
       <description>HTML Lez. 07.5 - Sistema Numerico Egizio</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.4 - Sistemi numerici</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sisteminumerici/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sisteminumerici/</guid>
       <description>HTML Lez. 07.4 - Sistemi numerici</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.3 - Alfabeto Ucraino</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetoucraino/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetoucraino/</guid>
       <description>HTML Lez. 07.3 - Alfabeto Ucraino</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.2 - Alfabeto Russo</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetorusso/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetorusso/</guid>
       <description>HTML Lez. 07.2 - Alfabeto Russo</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07.1 - Alfabeto Greco</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</guid>
       <description>HTML Lez. 07.1 - Alfabeto Greco</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07 A - Combinazioni Unicode</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_appendice_combinazioni/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_appendice_combinazioni/</guid>
       <description>HTML Lez. 07 A - Combinazioni Unicode</description>
     </item>
-    
     <item>
       <title>HTML Lez. 07 - Codifica Unicode, HTML entities, emoji</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode/</link>
       <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode/</guid>
       <description>HTML Lez. 07 - La codifica Unicode, le HTML entities e le emoji nelle pagine web</description>
     </item>
-    
     <item>
       <title>HTML Lez. 06 - Validazione del codice HTML</title>
       <link>http://codingepaduli.github.io/coding/web/html/validazione/</link>
       <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/validazione/</guid>
       <description>HTML Lez. 06 - Validazione del codice HTML</description>
     </item>
-    
     <item>
       <title>HTML Lez. 05 - Struttura e layout</title>
       <link>http://codingepaduli.github.io/coding/web/html/metadati/</link>
       <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/metadati/</guid>
       <description>HTML Lez. 05 - Struttura e layout di una pagina web</description>
     </item>
-    
     <item>
       <title>HTML Lez. 03 - Etichette principali</title>
       <link>http://codingepaduli.github.io/coding/web/html/tagtesto/</link>
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/tagtesto/</guid>
       <description>HTML Lez. 03 - Etichette principali per titoli, formattazione carattere, liste, tabelle, collegamenti, immagini</description>
     </item>
-    
     <item>
       <title>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag)</title>
       <link>http://codingepaduli.github.io/coding/web/html/etichette/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/html/etichette/</guid>
       <description>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
     </item>
-    
     <item>
       <title>Donne</title>
       <link>http://codingepaduli.github.io/interesting/women/</link>
       <pubDate>Sat, 08 Jun 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/women/</guid>
       <description>Link a storie di donne. Dottoresse, imprenditrici, regine&amp;hellip; Donne fantastiche</description>
     </item>
-    
     <item>
       <title>Fail2ban</title>
       <link>http://codingepaduli.github.io/opensource/fail2ban/</link>
       <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/opensource/fail2ban/</guid>
       <description>Fail2ban, un servizio di protezione da tentativi di intrusione ripetuti.</description>
     </item>
-    
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
     </item>
-    
     <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
     </item>
-    
     <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
       <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
     </item>
-    
     <item>
       <title>Scheme</title>
       <link>http://codingepaduli.github.io/coding/link-scheme/</link>
       <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/link-scheme/</guid>
       <description>Lezioni su scheme nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/scheme&#39;&gt;scheme&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>I selettori CSS </title>
       <link>http://codingepaduli.github.io/coding/web/css/selettoricss/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/css/selettoricss/</guid>
       <description>I selettori CSS</description>
     </item>
-    
     <item>
       <title>three.js</title>
       <link>http://codingepaduli.github.io/coding/web/linkthreejs/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkthreejs/</guid>
       <description>Esercitazioni con la libreria grafica Three.js r124 (ormai deprecata e trasformata in ES6) nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/threejs-r124&#39;&gt;Three.js r124&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>CSS</title>
       <link>http://codingepaduli.github.io/coding/web/linkcss/</link>
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkcss/</guid>
       <description>Lezioni sul linguaggio CSS nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/css&#39;&gt;CSS&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>CSS </title>
       <link>http://codingepaduli.github.io/coding/web/css/intro/</link>
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/css/intro/</guid>
       <description>Il linguaggio CSS, introduzione e proprietà principali</description>
     </item>
-    
     <item>
       <title>Debian GNU/Linux 12 Bookworm</title>
       <link>http://codingepaduli.github.io/opensource/debian12/</link>
       <pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/opensource/debian12/</guid>
       <description>Debian GNU/Linux 12 Bookworm, il sistema operativo universale e completamente Libero</description>
     </item>
-    
     <item>
       <title>App su F-Droid</title>
       <link>http://codingepaduli.github.io/interesting/fdroidapp/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
       <description>Set di link relativi alle app su F-Droid</description>
     </item>
-    
     <item>
       <title>Debian GNU/Linux</title>
       <link>http://codingepaduli.github.io/opensource/debian/</link>
       <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/opensource/debian/</guid>
       <description>Debian GNU/Linux, il sistema operativo universale e completamente Libero</description>
     </item>
-    
     <item>
       <title>Esercizi di AI - 05 Flappy Bird</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/flappybird/</link>
       <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/flappybird/</guid>
       <description>Esercizi di AI - 05 Flappy Bird</description>
     </item>
-    
     <item>
       <title>QR Code Generator</title>
       <link>http://codingepaduli.github.io/webapp/qrcodegenerator/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/webapp/qrcodegenerator/</guid>
       <description>Generare un codice QR quadrato (modello 2)</description>
     </item>
-    
     <item>
       <title>Esercizi di AI - 01 Riconoscimento mano</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/handsmodel_exe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/handsmodel_exe/</guid>
       <description>Esercizi di AI - 01 Riconoscimento mano</description>
     </item>
-    
     <item>
       <title>Esercizi di AI - 02 Scheletrizzazione mano</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/handsmodelskeletonized_exe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/handsmodelskeletonized_exe/</guid>
       <description>Esercizi di A2 - 01 Scheletrizzazione mano</description>
     </item>
-    
     <item>
       <title>Esercizi di AI - 03 Riconoscimento posa</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/posemodel_exe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/posemodel_exe/</guid>
       <description>Esercizi di AI - 03 Riconoscimento posa</description>
     </item>
-    
     <item>
       <title>Esercizi di AI - 04 Scheletrizzazione della posa</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/posemodelskeletonized_exe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/posemodelskeletonized_exe/</guid>
       <description>Esercizi di AI - 04 Scheletrizzazione della posa</description>
     </item>
-    
     <item>
       <title>mediapipe</title>
       <link>http://codingepaduli.github.io/coding/web/linkmediapipe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkmediapipe/</guid>
       <description>Lezioni su mediapipe nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/mediapipe&#39;&gt;mediapipe&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>Codifica RSA</title>
       <link>http://codingepaduli.github.io/webapp/codificarsa/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/webapp/codificarsa/</guid>
       <description>Codifica e decodifica RSA di un messaggio.</description>
     </item>
-    
     <item>
       <title>Rompere la codifica RSA</title>
       <link>http://codingepaduli.github.io/webapp/breakingrsa/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/webapp/breakingrsa/</guid>
       <description>Rompere la codifica RSA con il metodo di Fermat.</description>
     </item>
-    
     <item>
       <title>SSH</title>
       <link>http://codingepaduli.github.io/tools/ssh/</link>
       <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/ssh/</guid>
       <description>SSH, uno strumento per l&amp;rsquo;amministrazione di una macchina da remoto</description>
     </item>
-    
     <item>
       <title>JavaScript - Operatori ed operazioni matematiche</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
       <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
       <description>Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche</description>
     </item>
-    
     <item>
       <title>Anacron ed Anacrontab</title>
       <link>http://codingepaduli.github.io/tools/anacron/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/anacron/</guid>
       <description>Anacron ed Anacrontab, strumenti per la schedulazione di un task con una specifica ricorrenza.</description>
     </item>
-    
     <item>
       <title>Cron e Crontab</title>
       <link>http://codingepaduli.github.io/tools/cron/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/cron/</guid>
       <description>Cron e Crontab, strumenti per la schedulazione di un task con una specifica ricorrenza.</description>
     </item>
-    
     <item>
       <title>p5.js</title>
       <link>http://codingepaduli.github.io/coding/web/linkp5js/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkp5js/</guid>
       <description>Lezioni sulla libreria grafica p5.js nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/p5js&#39;&gt;p5.js&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 09 - Document Object Model</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/dom/</guid>
       <description>09 - Document Object Model</description>
     </item>
-    
     <item>
       <title>Git</title>
       <link>http://codingepaduli.github.io/tools/git/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/git/</guid>
       <description>Git - Un sistema per il controllo di versione distribuito</description>
     </item>
-    
     <item>
       <title>DavX e Fruux</title>
       <link>http://codingepaduli.github.io/opensource/davx_e_fruux/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/opensource/davx_e_fruux/</guid>
       <description>DavX è un&amp;rsquo;app che permette la sincronizzazione di contatti, calendario e tasks su server. Fruux è un server (basato su software open source) che offre la memorizzazione e sincronizzazione della rubrica, del calendario e dei task ai dispositivi registrati.</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 06 - Funzioni</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/funzioni/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/funzioni/</guid>
       <description>Funzioni</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 05 - Istruzioni condizionali ed iterative</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</guid>
       <description>Istruzioni condizionali ed iterative</description>
     </item>
-    
     <item>
       <title>05 - Filesystem - Gestione file e cartelle</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-filecartelle/</link>
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-filecartelle/</guid>
       <description>Gestione file e cartelle</description>
     </item>
-    
     <item>
       <title>04 - Filesystem - Gestione percorsi</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-path/</link>
       <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-path/</guid>
       <description>Filesystem - Gestione percorsi</description>
     </item>
-    
     <item>
       <title>03 - Primi comandi e primi script</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/primiscript/</link>
       <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/primiscript/</guid>
       <description>Primi comandi e primi script</description>
     </item>
-    
     <item>
       <title>02 - Concetti principali</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/concetti/</link>
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/concetti/</guid>
       <description>Concetti principali</description>
     </item>
-    
     <item>
       <title>01 - Introduzione a PowerShell</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/intro/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/intro/</guid>
       <description>Introduzione a PowerShell</description>
     </item>
-    
     <item>
       <title>PowerShell</title>
       <link>http://codingepaduli.github.io/coding/shell/linkpowershell/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/linkpowershell/</guid>
       <description>Lezioni sulla programmazione di script in PowerShell nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/powershell&#39;&gt;PowerShell&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 04 - I metodi e gli operatori</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/conversioni/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/conversioni/</guid>
       <description>I metodi e gli operatori</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 03 - Costanti, variabili e tipi di dato</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/variabili/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/variabili/</guid>
       <description>Dichiarazione di costanti e variabili per i vari tipi di dato</description>
     </item>
-    
     <item>
       <title>JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/linkjavascript/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkjavascript/</guid>
       <description>Lezioni sul linguaggio JavaScript nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/javascript&#39;&gt;JavaScript&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>JavaScript Lez. 01 - JavaScript</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/intro/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/javascript/intro/</guid>
       <description>JavaScript</description>
     </item>
-    
+    <item>
+      <title>Installare OpenJDK</title>
+      <link>http://codingepaduli.github.io/coding/java/openjdk/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/java/openjdk/</guid>
+      <description>Guida passo passo all&amp;rsquo;installazione di OpenJDK, l&amp;rsquo;ambiente di sviluppo per applicazioni Java</description>
+    </item>
     <item>
       <title>Gradle</title>
       <link>http://codingepaduli.github.io/tools/gradle/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/gradle/</guid>
       <description>Gradle è un sistema open source per automatizzare le fasi di compilazione, test, pacchettizzazione, deploy e tutte le altre fasi di sviluppo</description>
     </item>
-    
     <item>
       <title>Vagrant</title>
       <link>http://codingepaduli.github.io/tools/vagrant/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/vagrant/</guid>
       <description>Vagrant, uno strumento open-source per la creazione e la gestione di ambiente virtualizzato attraverso un workflow, seguendo la metodologia DevOps.</description>
     </item>
-    
     <item>
       <title>AQemu</title>
       <link>http://codingepaduli.github.io/tools/aqemu/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/aqemu/</guid>
       <description>AQemu, uno strumento open-source per la creazione di macchine virtuali.</description>
     </item>
-    
     <item>
       <title>Macchine Virtuali</title>
       <link>http://codingepaduli.github.io/tools/macchinevirtuali/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/macchinevirtuali/</guid>
       <description>Macchine virtuali, cosa sono, che vantaggi e svantaggi presentano.</description>
     </item>
-    
     <item>
       <title>VirtualBox</title>
       <link>http://codingepaduli.github.io/tools/virtualbox/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/virtualbox/</guid>
       <description>VirtualBox, uno strumento open-source per la creazione di macchine virtuali.</description>
     </item>
-    
     <item>
       <title>HTML</title>
       <link>http://codingepaduli.github.io/coding/web/linkhtml/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/linkhtml/</guid>
       <description>Lezioni sul linguaggio HTML nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/html&#39;&gt;HTML&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>Shell</title>
       <link>http://codingepaduli.github.io/coding/link-shell/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/link-shell/</guid>
       <description>Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell&#39;&gt;Shell&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>Web</title>
       <link>http://codingepaduli.github.io/coding/link-web/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/link-web/</guid>
       <description>Corsi di programmazione web nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web&#39;&gt;Web&lt;/a&gt;</description>
     </item>
-    
     <item>
       <title>Session</title>
       <link>http://codingepaduli.github.io/opensource/session/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/opensource/session/</guid>
       <description>Session, un&amp;rsquo;app open source per la messaggistica progettata per offrire comunicazioni criptate e orientate al rispetto della privacy.</description>
     </item>
-    
     <item>
       <title>F-Droid</title>
       <link>http://codingepaduli.github.io/opensource/fdroid/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/opensource/fdroid/</guid>
       <description>F-Droid, un&amp;rsquo;app store open source, simile a Google Play Store, per la distribuzione di app free ed open source (FOSS) per Android</description>
     </item>
-    
     <item>
       <title>OpenTasks</title>
       <link>http://codingepaduli.github.io/opensource/opentasks/</link>
       <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/opensource/opentasks/</guid>
       <description>OpenTasks, un&amp;rsquo;app open source per la gestione delle proprie attivitá.</description>
     </item>
-    
     <item>
       <title>AndOTP</title>
       <link>http://codingepaduli.github.io/opensource/andotp/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/opensource/andotp/</guid>
       <description>AndOTP, un&amp;rsquo;app open source per l&amp;rsquo;autenticazione a due fattori.</description>
     </item>
-    
     <item>
       <title>Bitwarden</title>
       <link>http://codingepaduli.github.io/opensource/bitwarden/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/opensource/bitwarden/</guid>
       <description>Bitwarden, un servizio di gestione credenziali/password open source.</description>
     </item>
-    
     <item>
       <title>Question And Answer WebApp</title>
       <link>http://codingepaduli.github.io/webapp/questionandanswer/</link>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/webapp/questionandanswer/</guid>
       <description>Question and Answer WebApp, per domande sul diritto allo studio.</description>
     </item>
-    
     <item>
       <title>EditorConfig</title>
       <link>http://codingepaduli.github.io/tools/editorconfig/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/tools/editorconfig/</guid>
       <description>EditorConfig, uno strumento per condividere le stesse impostazioni di stile e codifica tra gli sviluppatori che lavorano sullo stesso progetto con vari editors e IDEs</description>
     </item>
-    
   </channel>
 </rss>

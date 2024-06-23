@@ -4,53 +4,44 @@
     <title>Lezioni su mediapipe on Lab. informatica</title>
     <link>http://codingepaduli.github.io/coding/web/mediapipe/</link>
     <description>Recent content in Lezioni su mediapipe on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 30 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/coding/web/mediapipe/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/coding/web/mediapipe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Esercizi di AI - 05 Flappy Bird</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/flappybird/</link>
       <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/flappybird/</guid>
       <description>Esercizi di AI - 05 Flappy Bird</description>
     </item>
-    
     <item>
       <title>Esercizi di AI - 01 Riconoscimento mano</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/handsmodel_exe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/handsmodel_exe/</guid>
       <description>Esercizi di AI - 01 Riconoscimento mano</description>
     </item>
-    
     <item>
       <title>Esercizi di AI - 02 Scheletrizzazione mano</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/handsmodelskeletonized_exe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/handsmodelskeletonized_exe/</guid>
       <description>Esercizi di A2 - 01 Scheletrizzazione mano</description>
     </item>
-    
     <item>
       <title>Esercizi di AI - 03 Riconoscimento posa</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/posemodel_exe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/posemodel_exe/</guid>
       <description>Esercizi di AI - 03 Riconoscimento posa</description>
     </item>
-    
     <item>
       <title>Esercizi di AI - 04 Scheletrizzazione della posa</title>
       <link>http://codingepaduli.github.io/coding/web/mediapipe/posemodelskeletonized_exe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/web/mediapipe/posemodelskeletonized_exe/</guid>
       <description>Esercizi di AI - 04 Scheletrizzazione della posa</description>
     </item>
-    
   </channel>
 </rss>

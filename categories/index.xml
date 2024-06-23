@@ -4,152 +4,121 @@
     <title>Categories on Lab. informatica</title>
     <link>http://codingepaduli.github.io/categories/</link>
     <description>Recent content in Categories on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 08 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>interesting</title>
+      <title>Interesting</title>
       <link>http://codingepaduli.github.io/categories/interesting/</link>
-      <pubDate>Sat, 08 Jun 2024 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/interesting/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>open source</title>
+      <title>Open Source</title>
       <link>http://codingepaduli.github.io/categories/open-source/</link>
-      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/open-source/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>software</title>
+      <title>Software</title>
       <link>http://codingepaduli.github.io/categories/software/</link>
-      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/software/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>coding</title>
+      <title>Coding</title>
       <link>http://codingepaduli.github.io/categories/coding/</link>
-      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/coding/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CSS</title>
       <link>http://codingepaduli.github.io/categories/css/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/css/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>web</title>
+      <title>Web</title>
       <link>http://codingepaduli.github.io/categories/web/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/web/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>html</title>
+      <title>HTML</title>
       <link>http://codingepaduli.github.io/categories/html/</link>
-      <pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/html/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>three.js</title>
+      <title>Three.js</title>
       <link>http://codingepaduli.github.io/categories/three.js/</link>
-      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/three.js/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>p5.js</title>
+      <title>P5.js</title>
       <link>http://codingepaduli.github.io/categories/p5.js/</link>
-      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/p5.js/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mediapipe</title>
+      <title>Mediapipe</title>
       <link>http://codingepaduli.github.io/categories/mediapipe/</link>
-      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/mediapipe/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>webApp</title>
+      <title>WebApp</title>
       <link>http://codingepaduli.github.io/categories/webapp/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/webapp/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tools</title>
+      <title>Tools</title>
       <link>http://codingepaduli.github.io/categories/tools/</link>
-      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/tools/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>javascript</title>
+      <title>Javascript</title>
       <link>http://codingepaduli.github.io/categories/javascript/</link>
-      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/javascript/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>powershell</title>
+      <title>Powershell</title>
       <link>http://codingepaduli.github.io/categories/powershell/</link>
-      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/powershell/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>shell</title>
+      <title>Shell</title>
       <link>http://codingepaduli.github.io/categories/shell/</link>
-      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/shell/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>home</title>
+      <title>Home</title>
       <link>http://codingepaduli.github.io/categories/home/</link>
-      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/home/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

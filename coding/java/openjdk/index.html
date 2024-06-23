@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>OpenTasks - Lab. informatica</title>
+    <title>Installare OpenJDK - Lab. informatica</title>
 
-    <meta name="description" content="OpenTasks, un&#39;app open source per la gestione delle proprie attivitá">
-        <meta property="og:url" content="http://codingepaduli.github.io/opensource/opentasks/">
+    <meta name="description" content="Guida passo passo all&#39;installazione di OpenJDK, l&#39;ambiente di sviluppo per applicazioni Java">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/java/openjdk/">
   <meta property="og:site_name" content="Lab. informatica">
-  <meta property="og:title" content="OpenTasks">
-  <meta property="og:description" content="OpenTasks, un&#39;app open source per la gestione delle proprie attivitá">
+  <meta property="og:title" content="Installare OpenJDK">
+  <meta property="og:description" content="Guida passo passo all&#39;installazione di OpenJDK, l&#39;ambiente di sviluppo per applicazioni Java">
   <meta property="og:locale" content="it_IT">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="opensource">
-    <meta property="article:published_time" content="2020-03-03T00:00:00+00:00">
-    <meta property="article:modified_time" content="2020-03-03T00:00:00+00:00">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2020-03-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-03-27T00:00:00+00:00">
     <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
 
         
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
-  <meta name="twitter:title" content="OpenTasks">
-  <meta name="twitter:description" content="OpenTasks, un&#39;app open source per la gestione delle proprie attivitá">
+  <meta name="twitter:title" content="Installare OpenJDK">
+  <meta name="twitter:description" content="Guida passo passo all&#39;installazione di OpenJDK, l&#39;ambiente di sviluppo per applicazioni Java">
 
 
 
@@ -226,32 +226,37 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-03T00:00:00Z">03-03-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/open-source/" rel="category">Open Source</a>, <a class="meta__link" href="/categories/software/" rel="category">Software</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-27T00:00:00Z">27-03-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">Tools</a>
 	</span>
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
         Tempo di lettura 1 minuto 
-        ( 131 parole)
+        ( 190 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
-      <h1 id="opentasks">OpenTasks</h1>
-<p>OpenTasks è un&rsquo;app open source per la gestione delle proprie attivitá.</p>
-<p>Permette la visualizzazione delle attivitá per data di scadenza, di inizio, per prioritá e per percentuale di completamento.</p>
-<p><img src="/static/openSource/OpenTasks-ListByDueDate.png" alt="OpenTasks - Image 1" title="OpenTasks - Image 1"></p>
-<p><img src="/static/openSource/OpenTasks-ListByStartDate.png" alt="OpenTasks - Image 2" title="OpenTasks - Image 2"></p>
-<p><img src="/static/openSource/OpenTasks-ListByPriority.png" alt="OpenTasks - Image 3" title="OpenTasks - Image 3"></p>
-<p><img src="/static/openSource/OpenTasks-ListByPercentage.png" alt="OpenTasks - Image 4" title="OpenTasks - Image 4"></p>
-<p>La schermata di dettaglio per la creazione di una nuova attivitá e la modifica di una esistente si presenta semplice e di facile utilizzo. Si nota in particolare l&rsquo;elenco degli elementi da spuntare man mano che si portano a compimento. Questi elementi contribuiscono al calcolo della percentuale di completamento dell&rsquo;attivitá.</p>
-<p><img src="/static/openSource/OpenTasks-TaskDetails.png" alt="OpenTasks - Task Details" title="OpenTasks - Task Details"></p>
-<p>C&rsquo;è la possibilitá di legare le attivitá ad uno specifico elenco (ogni elenco ha un colore diverso).</p>
-<p>Inoltre è possibile sincronizzare le proprie attivitá su server compatibile con la tecnologia CalDAV, usando app come DavX.</p>
-<p><img src="/static/openSource/OpenTasks-Accounts.png" alt="OpenTasks - Account" title="OpenTasks - Account"></p>
-<p>Manca il supporto alle attivitá ricorrenti (attivitá da tenersi settimanalmente, mensilmente, &hellip;).</p>
-<p>Installa l&rsquo;app da <a href="/opensource/fdroid/" title="Sito web F-Droid">F-Droid</a>.</p>
-
+      <h1 id="openjdk">OpenJDK</h1>
+<p>OpenJDK è un&rsquo;implementazione open-source della piattaforma Java, un insieme di software per lo sviluppo e l&rsquo;esecuzione di applicazioni scritte in linguaggio Java.</p>
+<p>Il JDK rappresenta l&rsquo;ambiente di sviluppo; Il JRE rappresenta l&rsquo;ambiente di esecuzione che contiene la macchina virtuale Java (dall&rsquo;inglese Java Virtual Machine);</p>
+<p>In Gnu/Linux, su distribuzioni basate su Debian, si può installare attraverso il package manager apt:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install openjdk-11-jdk
+</span></span><span style="display:flex;"><span>sudo update-alternatives --config java
+</span></span></code></pre></div><p>In windows si può installare attraverso il package manager <code>choco</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>choco install openjdk11
+</span></span></code></pre></div><p>In alternativa, si può scaricare dal sito <a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a>.</p>
+<p><img src="/static/coding/tools/OpenJDK-ChooseSO.png" alt="OpenJDK - Scelta Sistema Operativo" title="OpenJDK - Scelta Sistema Operativo"></p>
+<p>Cliccando sul tasto <code>Altre piattaforme</code>, si ha la possibilità di scegliere sia la versione che la macchina virtuale.</p>
+<p><img src="/static/coding/tools/OpenJDK-Choose.png" alt="OpenJDK - Scelta versione e JVM" title="OpenJDK - Scelta versione e JVM"></p>
+<p>Si sceglie la versione OpenJDK 11, la Java Virtual Machine &ldquo;OpenJ9&rdquo; poi si prosegue nella scelta del pacchetto adatto al sistema operativo:</p>
+<p><img src="/static/coding/tools/OpenJDK-Download.png" alt="OpenJDK - Download pacchetto" title="OpenJDK - Download pacchetto"></p>
+<p>Si sceglie il sistema operativo, si verifica l&rsquo;architettura (x86 o x64) e si scarica il pacchetto eseguibile (con estensione &ldquo;.msi&rdquo; per Windows o &ldquo;.pkg&rdquo; per Linux).</p>
+<p>Si procede all&rsquo;installazione seguendo le indicazioni della procedura guidata. Quindi al termine, si verifica che l&rsquo;installazione è avvenuta correttamente, eseguendo il comando:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -version
+</span></span></code></pre></div><p>L&rsquo;output del comando indicherà la versione installata:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openjdk version <span style="color:#009c00">&#34;11.0.6&#34;</span> 2020-01-14
+</span></span></code></pre></div>
     </div>
   </article>
 </main>
@@ -260,20 +265,6 @@
 
 
 
-<nav class="pager flex">
-	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/opensource/andotp/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">AndOTP</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/opensource/fdroid/" rel="next">
-			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">F-Droid</p>
-		</a>
-	</div>
-</nav>
 <div class="article-content">
 
   

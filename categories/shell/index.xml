@@ -1,74 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>shell on Lab. informatica</title>
+    <title>Shell on Lab. informatica</title>
     <link>http://codingepaduli.github.io/categories/shell/</link>
-    <description>Recent content in shell on Lab. informatica</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Shell on Lab. informatica</description>
+    <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 15 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://codingepaduli.github.io/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>05 - Filesystem - Gestione file e cartelle</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-filecartelle/</link>
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-filecartelle/</guid>
       <description>Gestione file e cartelle</description>
     </item>
-    
     <item>
       <title>04 - Filesystem - Gestione percorsi</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-path/</link>
       <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-path/</guid>
       <description>Filesystem - Gestione percorsi</description>
     </item>
-    
     <item>
       <title>03 - Primi comandi e primi script</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/primiscript/</link>
       <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/primiscript/</guid>
       <description>Primi comandi e primi script</description>
     </item>
-    
     <item>
       <title>02 - Concetti principali</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/concetti/</link>
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/concetti/</guid>
       <description>Concetti principali</description>
     </item>
-    
     <item>
       <title>01 - Introduzione a PowerShell</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/intro/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/intro/</guid>
       <description>Introduzione a PowerShell</description>
     </item>
-    
     <item>
       <title>PowerShell</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/powershell/</guid>
       <description>Lezioni su Powershell</description>
     </item>
-    
     <item>
       <title>Shell</title>
       <link>http://codingepaduli.github.io/coding/shell/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>http://codingepaduli.github.io/coding/shell/</guid>
       <description>Lezioni sulle shell (DOS - Bash - Powershell) e sulla programmazione di script</description>
     </item>
-    
   </channel>
 </rss>
