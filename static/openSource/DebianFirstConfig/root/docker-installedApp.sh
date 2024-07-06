@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install docker
-sudo apt-get install -y docker.io docker-compose
+sudo apt-get install -y docker.io docker-compose # podman podman-compose slirp4netns fuse-overlayfs
 
 if [ $? -ne 0 ]; then
     exit 1
@@ -44,7 +44,7 @@ docker pull python:3.11.4-bookworm
 # Hugo
 docker pull hugomods/hugo:reg-base-0.127.0
 
-docker pull dalibo/pandocker:latest-buster-full
+docker pull pandoc/extra:3.2
 
 docker pull node:20.3.1-bookworm
 

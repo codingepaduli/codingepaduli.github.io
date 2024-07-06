@@ -493,6 +493,7 @@ export -f smontaPhone
 #   see https://trac.ffmpeg.org/wiki/Encode/HighQualityAudio 
 
 alias help-convert-m4a-to-mp3="echo 'ffmpeg -i input.m4a -c:v copy  -q:a 4 output.mp3'"
+alias help-convert-webm-to-mp4="echo 'ffmpeg -i input.webm -c:v copy output.mp4'"
 
 # Test: 
 # Run: convertAllM4aToMp3

@@ -4,9 +4,56 @@
 # Functions based on docker apps installed
 ################################################
 
+# Set in $HOME/.config/my_env.conf
+#   unset USE_PODMAN
+
+
 # A basic docker function
 dockerContainer() {
-  docker container run --rm -it -u $UID:$(id -g $USER) -v "$PWD":"$PWD" -w "$PWD" "$@"
+  # For issues, check this options
+  # --log-level debug
+  # --privileged  
+  # --group-add keep-groups
+  # --security-opt label=disable
+  # --security-opt apparmor=unconfined
+  
+  # I need these informations from command ``podman info``
+  # host:
+  #   idMappings:
+  #     gidmap:
+  #     - container_id: 0
+  #       host_id: 2000
+  #       size: 1
+  #     - container_id: 1
+  #       host_id: 165536
+  #       size: 65536
+  #     uidmap:
+  #     - container_id: 0
+  #       host_id: 1001
+  #       size: 1
+  #     - container_id: 1
+  #       host_id: 165536
+  #       size: 65536
+  #
+  # I get these from the command:
+  #   podman info --format "{{ (index .Host.IDMappings.UIDMap 0).ContainerID }}"
+  #   podman info --format "{{ (index .Host.IDMappings.UIDMap 0).HostId }}"
+  #   podman info --format "{{ (index .Host.IDMappings.UIDMap 0).Size }}"
+  #   podman info --format "{{ (index .Host.IDMappings.UIDMap 1).ContainerID }}"
+  #   podman info --format "{{ (index .Host.IDMappings.UIDMap 1).HostId }}"
+  #   podman info --format "{{ (index .Host.IDMappings.UIDMap 1).Size }}"
+  # Or alternatively from the command:
+  #   podman unshare cat /proc/self/uid_map
+  #   podman unshare cat /proc/self/gid_map
+
+  my_uid=$(id -u $USER)
+  my_gid=$(id -g $USER)
+
+  if [ -z "$USE_PODMAN" ]; then
+    docker container run --rm -it -u $my_uid:$my_gid -v "$PWD":"$PWD" -w "$PWD" "$@"
+  else
+    podman container run --rm -it -u $my_uid:$my_gid --userns keep-id:uid=$my_uid,gid=$my_gid -v "$PWD":"$PWD":Z -w "$PWD" "$@"
+  fi
 }
 export -f dockerContainer
 
@@ -129,7 +176,7 @@ hugoRun() {
   declare -A tailParams
   tailParams=$@
 
-  dockerContainer --name hugo $headParams -p 1313:1313 hugomods/hugo:reg-base-0.127.0 hugo $tailParams
+  dockerContainer --name hugo $headParams -p 1313:1313 hugomods/hugo:reg-base-0.127.0 hugo  --noBuildLock $tailParams
 }
 export -f hugoRun
 
@@ -157,7 +204,7 @@ export -f hugoProd
 # pandoc
 # TEST: pandoc --version
 pandoc() {
-  dockerContainer --name pandoc     -v "$HOME/Sviluppo/SVN2/codingepaduli:/usr/src/myapp/"  -v "$HOME/Sviluppo/SVN2/from-hugo-to-book":/usr/src/luaFilters  dalibo/pandocker:latest-buster-full "$@" # --fail-if-warnings
+  dockerContainer --name pandoc     -v "$HOME/Sviluppo/SVN2/codingepaduli:/usr/src/myapp/"  -v "$HOME/Sviluppo/SVN2/from-hugo-to-book":/usr/src/luaFilters  pandoc/extra:3.2 "$@" # --fail-if-warnings
 }
 export -f pandoc
 
@@ -223,7 +270,10 @@ export -f xsv
 ## MariaDB: http://localhost:41062/phpmyadmin/
 ## SSH: ssh root@localhost -p 41061
 ## Test: lampp --version
-xampp() { 
+xampp() {
+  echo "Apache HTTP:  http://localhost:41062/www"
+  echo "MariaDB:      http://localhost:41062/phpmyadmin/"
+  echo "SSH:          ssh root@localhost -p 41061"
   dockerContainer --name myXampp -u root:root -p 41061:22 -p 41062:80 -v $HOME/lamp/apache/conf.d:/opt/lampp/conf.d -v $HOME/lamp/apache/htdocs:/opt/lampp/htdocs tomsik68/xampp:8.2.4 "$@"
 }
 export -f xampp

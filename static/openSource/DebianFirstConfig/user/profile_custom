@@ -14,33 +14,70 @@
 #    fi
 # fi
 
-# Sync these variables with config_environment
-MY_SVN_REPO_FOLDER="$HOME/Sviluppo/SVN2"
+# Get the system info from /etc/os-release and /usr/lib/os-release
+## PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+## NAME="Debian GNU/Linux"
+## VERSION_ID="12"
+## VERSION="12 (bookworm)"
+## VERSION_CODENAME=bookworm
+## ID=debian
+. /etc/os-release
+
+# Nota:
+#
+# Variabili di shell, visibili sono nella shell corrente, sono create con MYVAR=1729
+# Variabili di ambiente, esportarte nei sottoprocessi, sono create con export MYVAR=1729
+# Per evitare l'esportazione nel sottoprocesso, export-n MYVAR=1729
+
+#########################################################
+# Default value, overriden in $HOME/.config/my_env.conf #
+#########################################################
+
+# set USE_PODMAN=1 if using podman
+# Indico che si usa podman al posto di docker
+# USE_PODMAN=1                    => invoke podman command
+# USE_PODMAN=""                   => invoke docker command
+# unset USE_PODMAN                => invoke docker command
+export USE_PODMAN=1
+
+# Set the SVN folder 
+export MY_SVN_REPO_FOLDER="$HOME/Sviluppo/SVN2"
+
+export NTFY_UUID="aa30e17e-591f-4256-b749-4b9ae0739f85"
+
+# BLADE3 hashing - Set the number of threads
+export RAYON_NUM_THREADS=4
+
+# Ignore global and system config of Git
+export GIT_CONFIG_NOSYSTEM=1 # Ignore /etc/gitconfig
+export GIT_CONFIG_NOGLOBAL=1 # Ignore ~/.gitconfig
+
+# Overwrite default options for specific environment
+###
+### For example, sets
+### RAYON_NUM_THREADS=1
+###
+if [ -f "$HOME/.config/my_env.conf" ]; then
+  . "$HOME/.config/my_env.conf"
+fi
+
+###############################
+# Custom commands and options #
+###############################
+
 MY_DOT_FILES_FOLDER="$MY_SVN_REPO_FOLDER/codingepaduli/static/static/openSource/DebianFirstConfig/user"
 
 if [ -f "$MY_DOT_FILES_FOLDER/bash_functions" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions" ]; then
-    . "$MY_DOT_FILES_FOLDER/bash_functions"
+  . "$MY_DOT_FILES_FOLDER/bash_functions"
 fi
 
 if [ -f "$MY_DOT_FILES_FOLDER/bash_functions_extra" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions_extra" ]; then
-    . "$MY_DOT_FILES_FOLDER/bash_functions_extra"
+  . "$MY_DOT_FILES_FOLDER/bash_functions_extra"
 fi
 
 if [ -f "$MY_DOT_FILES_FOLDER/bash_functions_docker" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions_docker" ]; then
-    . "$MY_DOT_FILES_FOLDER/bash_functions_docker"
+  . "$MY_DOT_FILES_FOLDER/bash_functions_docker"
 fi
-
-NTFY_UUID="aa30e17e-591f-4256-b749-4b9ae0739f85"
-
-# BLADE3 hashing - Set the number of threads
-RAYON_NUM_THREADS=4
-export RAYON_NUM_THREADS
-
-# Ignore global and system config
-GIT_CONFIG_NOSYSTEM=1 # Ignore /etc/gitconfig
-GIT_CONFIG_NOGLOBAL=1 # Ignore ~/.gitconfig
-export GIT_CONFIG_NOSYSTEM
-export GIT_CONFIG_NOGLOBAL
 
 # Aggiungo JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 JAVA_INSTALLED="$(which java)"

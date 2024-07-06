@@ -10,6 +10,8 @@ MY_DOT_FILES_FOLDER="$MY_SVN_REPO_FOLDER/codingepaduli/static/static/openSource/
 ln -sfn "$MY_DOT_FILES_FOLDER/profile_custom" "$HOME/.profile_custom"
 chmod 600 "$HOME/.profile_custom"
 
+touch "$HOME/.config/my_env.conf"
+
 # Config podman to search container images on https://docker.io/
 mkdir -p $HOME/.config/containers
 touch $HOME/.config/containers/registries.conf
