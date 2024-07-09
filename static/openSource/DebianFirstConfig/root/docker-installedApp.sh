@@ -29,11 +29,13 @@ fi
 
 # tag 12-bullseye - to compile against the same libc library 
 #     of debian bullseye (installed on my machine)
-docker pull gcc:12-bookworm
+# docker pull gcc:12-bullseye
+docker pull gcc:13-bookworm
 
-docker pull denoland/deno:debian-1.39.4
+docker pull denoland/deno:debian-1.44.4
 
-docker pull python:3.11.4-bookworm
+# docker pull python:3.12-bullseye
+docker pull python:3.3.13-rc-bookworm
 
 # docker pull mcr.microsoft.com/powershell:7.3-debian-bullseye-slim
 
@@ -46,16 +48,15 @@ docker pull hugomods/hugo:reg-base-0.127.0
 
 docker pull pandoc/extra:3.2
 
-docker pull node:20.3.1-bookworm
+# docker pull node:20.3.1-bookworm
 
 docker pull dpokidov/imagemagick:7.1.1-10-bullseye
 
-docker pull frenmoji/backgroundremover
-
-docker pull linuxserver/ffmpeg:6.0-cli-ls91
+# docker pull linuxserver/ffmpeg:6.0-cli-ls91
 
 docker pull mikenye/youtube-dl:2023.02.17_linux_amd64
 
 docker pull cincan/xsv
 
 docker pull tomsik68/xampp:8.2.4
+
