@@ -6,7 +6,7 @@
     <description>Recent content in HTML on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Thu, 21 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML Lez. 09.5 - Esercizi sui moduli di invio dati</title>
@@ -98,6 +98,13 @@
       <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode/</guid>
       <description>HTML Lez. 07 - La codifica Unicode, le HTML entities e le emoji nelle pagine web</description>
+    </item>
+    <item>
+      <title>HTML Lez. 06 - Sistemi numerici</title>
+      <link>http://codingepaduli.github.io/coding/web/html/sisteminumerici/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/html/sisteminumerici/</guid>
+      <description>HTML Lez. 06 - Sistemi numerici</description>
     </item>
     <item>
       <title>HTML Lez. 06 - Validazione del codice HTML</title>

@@ -149,12 +149,12 @@ function draw() {
   fill('white');
   circle(240, 290, 30);
 
-  angleMode(RADIANS)
+  angleMode(RADIANS);
 
   // corda
   fill('white');
   circle(320, 290, 60);
-  line(320,290-30,320+30,290,0,PI)
+  line(320,290-30,320+30,290,0,PI);
   
   fill('blue');
 

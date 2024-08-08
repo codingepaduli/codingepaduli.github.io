@@ -20,21 +20,22 @@ function draw() {
     strokeWeight(2);
     stroke(0, 204, 255);
     noFill();
-    let arcSpace = 50;
+    let arcSpace = 20;
 
     // draw arcs
     let count = 0;
     let rangeMin = 0n;
     let rangeMax = 0n;
-    for (let [i, values] of mapOfPrimes) {
-        count ++;
+    for (let [i] of mapOfPrimes) {
+      count ++;
 
-        rangeMin = 6n ** (i - 1n) + 1n;
-        rangeMax = 6n ** i;
+        rangeMin = calculateLimit(i - 1n) +1n;
+        rangeMax = calculateLimit(i);
 
         arc(width/2, height/2, 2 * arcSpace * count, 2 * arcSpace * count, 0, TWO_PI, CHORD);
         text(rangeMin, width/2 - arcSpace * count, height/2 + 20);
         text(rangeMax, width/2 + arcSpace * count, height/2 + 20);
+
     }
 
     // point style
@@ -47,20 +48,18 @@ function draw() {
     for (let [i, values] of mapOfPrimes.entries()) {
         count ++;
 
-        rangeMin = 6n ** (i - 1n) + 1n;
-        rangeMax = 6n ** i;
+        rangeMin = calculateLimit(i - 1n) +1n;
+        rangeMax = calculateLimit(i);
 
-        let arcStep = TWO_PI / values.length;
+        // let arcStep = TWO_PI / values.length;
 
-        let j = 0;
         for (let prime of values) {
 
             // (rangeMax - rangeMin) : TWO_PI ==  (prime - rangeMin) : alpha
 
             let alpha = Number(prime - rangeMin) * TWO_PI / Number(rangeMax - rangeMin);
 
-            point(width/2 - cos(alpha) * arcSpace * count, height/2 - sin(alpha) * arcSpace * count);
-            j++;
+            point(width/2 + cos(alpha) * arcSpace * count, height/2 - sin(alpha) * arcSpace * count);
         }
     }
 
@@ -72,9 +71,9 @@ function createMapOfPrimes() {
     let rangeMin = 0n;
     let rangeMax = 0n;
 
-    for (let i=1n; i<6n; i = i + 1n) {
-        rangeMin = 6n ** (i - 1n) + 1n;
-        rangeMax = 6n ** i;
+    for (let i=1n; i<15n; i = i + 1n) {
+      rangeMin = calculateLimit(i - 1n) +1n;
+      rangeMax = calculateLimit(i);
 
         let values = new Array();
 
@@ -100,4 +99,41 @@ function isPrime(k) {
         }
     }
     return true;
+}
+
+function calculateLimit(val) {
+  return (2n ** val) - 1n;
+  /*
+  console.log(log10(val));
+  if (log10(val) === -Infinity) return 0n;
+  if (log10(val) === 0) return 10000000n;
+  return BigInt(Number(val) / Number(log10(val)));
+  */
+}
+
+/*************************************************************************
+ * Source for BigNum Math.log :
+ * https://stackoverflow.com/questions/70382306/logarithm-of-a-bigint/
+**************************************************************************/
+
+function log10(bigint) {
+  if (bigint < 0) return NaN;
+  const s = bigint.toString(10);
+
+  return s.length + Math.log10("0." + s.substring(0, 15));
+}
+
+function log(bigint) {
+  console.log(log10(bigint));
+
+  return log10(bigint) * Math.log(10);
+}
+
+function natlog(bigint) {
+  if (bigint < 0) return NaN;
+
+  const s = bigint.toString(16);
+  const s15 = s.substring(0, 15);
+
+  return Math.log(16) * (s.length - s15.length) + Math.log("0x" + s15);
 }

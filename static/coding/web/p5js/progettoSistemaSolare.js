@@ -91,7 +91,7 @@ function windowResized () {
   let scaleX = windowWidth * 0.8 / 600;
   let scaleY = windowHeight * 0.8 / 400;
 
-  scaleXY = min(scaleX, scaleY)
+  scaleXY = min(scaleX, scaleY);
 
   resizeCanvas (600 * scaleXY, 400 * scaleXY);
 

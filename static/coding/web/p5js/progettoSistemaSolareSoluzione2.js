@@ -2,7 +2,7 @@ let sole={
   x:800,
   y:800,
   r:100
-}
+};
 
 let mercurio={
   x:0,
@@ -10,7 +10,7 @@ let mercurio={
   r:25,
   distanzaSole:80,
   alfaSole:0
-}
+};
 
 let venere={
   x:0,
@@ -18,7 +18,7 @@ let venere={
   r:35,
   distanzaSole:140,
   alfaSole:0
-}
+};
 
 let terra={
   x:0,
@@ -26,7 +26,7 @@ let terra={
   r:35,
   distanzaSole:210,
   alfaSole:0
-}
+};
 
 let marte={
   x:0,
@@ -34,7 +34,7 @@ let marte={
   r:35,
   distanzaSole:280,
   alfaSole:0
-}
+};
 
 // fascia principale degli asteroidi
 
@@ -44,7 +44,7 @@ let giove={
   r:55,
   distanzaSole:400,
   alfaSole:0
-}
+};
 
 let saturno={
   x:0,
@@ -52,7 +52,7 @@ let saturno={
   r:50,
   distanzaSole:520,
   alfaSole:0
-}
+};
 
 let urano={
   x:0,
@@ -60,7 +60,7 @@ let urano={
   r:40,
   distanzaSole:640,
   alfaSole:0
-}
+};
 
 let nettuno={
   x:0,
@@ -68,7 +68,7 @@ let nettuno={
   r:35,
   distanzaSole:710,
   alfaSole:0
-}
+};
 
 let luna={
   x:0,
@@ -76,7 +76,7 @@ let luna={
   r:10,
   distanzaTerra:40,
   alfaTerra:0
-}
+};
 
 let lunaSaturno1={
   x:0,
@@ -84,7 +84,7 @@ let lunaSaturno1={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:0
-}
+};
 
 let lunaSaturno2={
   x:0,
@@ -92,7 +92,7 @@ let lunaSaturno2={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:30
-}
+};
 
 let lunaSaturno3={
   x:0,
@@ -100,7 +100,7 @@ let lunaSaturno3={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:60
-}
+};
 
 let lunaSaturno4={
   x:0,
@@ -108,7 +108,7 @@ let lunaSaturno4={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:90
-}
+};
 
 let lunaSaturno5={
   x:0,
@@ -116,7 +116,7 @@ let lunaSaturno5={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:120
-}
+};
 
 let lunaSaturno6={
   x:0,
@@ -124,7 +124,7 @@ let lunaSaturno6={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:150
-}
+};
 
 let lunaSaturno7={
   x:0,
@@ -132,7 +132,7 @@ let lunaSaturno7={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:180
-}
+};
 
 let lunaSaturno8={
   x:0,
@@ -140,7 +140,7 @@ let lunaSaturno8={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:210
-}
+};
 
 let lunaSaturno9={
   x:0,
@@ -148,7 +148,7 @@ let lunaSaturno9={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:240
-}
+};
 
 let lunaSaturno10={
   x:0,
@@ -156,7 +156,7 @@ let lunaSaturno10={
   r:10,
   distanzaSaturno:60,
   alfaSaturno:270
-}
+};
 
 let canvas;
 

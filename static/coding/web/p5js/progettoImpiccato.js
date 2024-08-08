@@ -158,19 +158,19 @@ function classifica(){
 
 function ghigliottina0(){
   // gambe omino
-  line(230,300,250,360)
+  line(230,300,250,360);
   ghigliottina1(); 
 }
 
 function ghigliottina1(){
   // gambe omino
-  line(230,300,210,360)
+  line(230,300,210,360);
   ghigliottina2();
 }
 
 function ghigliottina2(){
   // braccia omino
-  line(230,250,200,280)
+  line(230,250,200,280);
   ghigliottina3();
 }
 
