@@ -231,8 +231,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 11 minuti 
-        ( 2197 parole)
+        Tempo di lettura 13 minuti 
+        ( 2641 parole)
     </span>
 </div></div>
     </header>
@@ -483,6 +483,76 @@
 <h2 id="sistemi-numerici-posizionali">Sistemi numerici posizionali</h2>
 <p>I sistemi numerici posizionali nacquero già nella civiltà babilonese, ma furono dimenticati per poi essere reinventati in quella cinese che li diffuse nelle altre civiltà asiatiche. Furono poi gli indiani a creare l&rsquo;odierno sistema numerico che oggi conosciamo, introducendo il concetto innovativo di zero numerico.</p>
 <p>In un sistema numerico <strong>posizionale</strong> la posizione di ogni cifra numerica nella rappresentazione del numero è importante perché modifica la quantità espressa dalla cifra stessa, attribuendo un peso maggiore o minore a seconda della posizione.</p>
+<p>La <strong>base</strong> di un sistema numerico posizionale è l&rsquo;insieme dei simboli (cifre numeriche) utilizzati per rappresentare i numeri. Ad esempio nel sistema numerico decimale che utilizziamo, la base è composta dall&rsquo;insieme di numeri da 0 (zero) a 9 (nove). Nel sistema numerico binario, la base è composta dai soli numeri 0 (zero) e 1 (uno).</p>
+<p>Ogni numero è quindi rappresentato da una sequenza di cifre numeriche scelte tra quelle presenti nella base, ad esempio il numero 3413 espresso in un sistema numerico posizionale decimale è rappresentato da una sequenza di cifre 3, 4, 1 e 3, ognuna appartenente all&rsquo;insieme dei simboli base.</p>
+<p>In un sistema numerico <strong>posizionale</strong>, il concetto cardine alla base del conteggio è quello dell&rsquo;arrotolamento: nella rappresentazione di un numero, quando in una determinata posizione si arriva alla cifra che indica la quantità massima, per rappresentare il numero successivo in quella stessa posizione si ricomincia dalla cifra che indica la quantità minima, ma nella posizione successiva si incrementa la cifra.</p>
+<p>Questo concetto di <strong>arrotolamento</strong> nel sistema numerico decimale è molto intuitivo: quando si raggiunge il 9 (la cifra che indica la quantità massima), per rappresentare il numero successivo in quella stessa posizione si ricomincia dalla cifra che indica la quantità minima (lo 0) ma nella posizione successiva si incrementa la cifra (da zero si incrementa ad 1). Il numero successivo è il 10.</p>
+<p>Allo stesso modo, quando si raggiunge il 19, per rappresentare il numero successivo arrotolo la posizione del 9, che torna a 0, e incremento la cifra nella posizione successiva, quindi (da 1 si incrementa a 2). Il numero successivo è il 20.</p>
+<h2 id="sistema-numerico-decimale-posizionale">Sistema numerico decimale posizionale</h2>
+<p>La <strong>base</strong> del nostro sistema numerico posizionale decimale è composta dall&rsquo;insieme di numeri da 0 (zero) a 9 (nove).</p>
+<p>Questo sistema numerico fu inventato dagli indiani ma solo molti secoli dopo si diffuse in Europa, ma le cifre originarie erano leggermente differenti:</p>
+<table>
+<thead>
+<tr>
+<th>Numero</th>
+<th>Simbolo</th>
+<th>Codice Unicode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>०</td>
+<td>U+0966</td>
+</tr>
+<tr>
+<td>1</td>
+<td>१</td>
+<td>U+0967</td>
+</tr>
+<tr>
+<td>2</td>
+<td>२</td>
+<td>U+0968</td>
+</tr>
+<tr>
+<td>3</td>
+<td>३</td>
+<td>U+0969</td>
+</tr>
+<tr>
+<td>4</td>
+<td>४</td>
+<td>U+096A</td>
+</tr>
+<tr>
+<td>5</td>
+<td>५</td>
+<td>U+096B</td>
+</tr>
+<tr>
+<td>6</td>
+<td>६</td>
+<td>U+096C</td>
+</tr>
+<tr>
+<td>7</td>
+<td>७</td>
+<td>U+096D</td>
+</tr>
+<tr>
+<td>8</td>
+<td>८</td>
+<td>U+096E</td>
+</tr>
+<tr>
+<td>9</td>
+<td>९</td>
+<td>U+096F</td>
+</tr>
+</tbody>
+</table>
+<p>Come si può notare, esiste un simbolo per lo zero, ad indicare nessuna quantità.</p>
 <p>Per convenzione le posizioni delle cifre numeriche sono indicate da sinistra verso destra e contate a partire dalla posizione zero. Ad esempio, nel nostro sistema numerico decimale le cifre del numero 21035 hanno le seguenti posizioni:</p>
 <table>
 <thead>
@@ -506,8 +576,14 @@
 </tr>
 </tbody>
 </table>
-<p>Ogni cifra occupa una posizione all&rsquo;interno del numero.</p>
-<p>La quantità espressa da ogni posizione è la seguente:</p>
+<p>Ogni cifra occupa una posizione all&rsquo;interno del numero. Ogni posizione esprime la cifra numerica moltiplicata per una potenza del dieci, potenza che viene indicata dalla posizione stessa:</p>
+<ul>
+<li>in posizione zero, la cifra numerica è moltiplicata per la potenza 10<sup>0</sup>;</li>
+<li>in posizione uno, la cifra numerica è moltiplicata per la potenza 10<sup>1</sup>;</li>
+<li>in posizione due, la cifra numerica è moltiplicata per la potenza 10<sup>2</sup>;</li>
+<li>e cosi via per le altre posizioni.</li>
+</ul>
+<p>Ad esempio, nel sistema numerico decimale, ogni cifra del numero 21035 esprime la quantità indicata nella seguente tabella:</p>
 <table>
 <thead>
 <tr>
@@ -529,16 +605,16 @@
 <td>cifra</td>
 </tr>
 <tr>
-<td>2 * 10<sup>4</sup></td>
-<td>1 * 10<sup>3</sup></td>
-<td>0 * 10<sup>2</sup></td>
-<td>3 * 10<sup>1</sup></td>
-<td>5 * 10<sup>0</sup></td>
+<td>2 ⋅ 10<sup>4</sup></td>
+<td>1 ⋅ 10<sup>3</sup></td>
+<td>0 ⋅ 10<sup>2</sup></td>
+<td>3 ⋅ 10<sup>1</sup></td>
+<td>5 ⋅ 10<sup>0</sup></td>
 <td>quantità</td>
 </tr>
 </tbody>
 </table>
-<p>Come si può notare, la quantità espressa dalla cifra 3 non è tre, ma è tremila poiché la posizione ha il ruolo di modificare la quantità espressa.</p>
+<p>Come si può notare, la quantità espressa dalla cifra 3 non è tre, ma è tremila poiché la posizione ha il ruolo di modificare la quantità espressa, in posizione tre la cifra numerica è moltiplicata per la potenza 10<sup>3</sup>;</p>
 <h3 id="sistema-numerico-posizionale-babilonese">Sistema numerico posizionale babilonese</h3>
 <p>Il sistema numerico posizionale babilonese è stato in parte ereditato dai sumeri e dalla scrittura cuneiforme ed è stato sviluppato ulteriormente con idee innovative per l&rsquo;epoca.</p>
 <p>Si trattava di un sistema numerico che poggiava le basi su un secondo sistema numerico, un sistema additivo che permetteva di contare fino a cinquantanove. Le cifre utilizzate per rappresentare i cinquantanove numeri sono le seguenti:</p>
@@ -606,13 +682,13 @@
 <td>cifra</td>
 </tr>
 <tr>
-<td>1 * 60<sup>1</sup></td>
-<td>1 * 60<sup>0</sup></td>
+<td>1 ⋅ 60<sup>1</sup></td>
+<td>1 ⋅ 60<sup>0</sup></td>
 <td>quantità</td>
 </tr>
 </tbody>
 </table>
-<p>𒑰𒑰 = 1 * 60<sup>1</sup> + 1 * 60<sup>0</sup> = 60 + 1 = 61</p>
+<p>𒑰𒑰 = 1 ⋅ 60<sup>1</sup> + 1 ⋅ 60<sup>0</sup> = 60 + 1 = 61</p>
 <p>Il numero 71 veniva espresso con le cifre dell&rsquo;uno e dell&rsquo;undici, in ordine di posizione da sinistra a destra.</p>
 <table>
 <thead>
@@ -646,8 +722,8 @@
 <td>cifra</td>
 </tr>
 <tr>
-<td>1 * 60<sup>1</sup></td>
-<td>11 * 60<sup>0</sup></td>
+<td>1 ⋅ 60<sup>1</sup></td>
+<td>11 ⋅ 60<sup>0</sup></td>
 <td>quantità</td>
 </tr>
 </tbody>
