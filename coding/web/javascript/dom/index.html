@@ -231,8 +231,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 15 minuti 
-        ( 3069 parole)
+        Tempo di lettura 19 minuti 
+        ( 3845 parole)
     </span>
 </div></div>
     </header>
@@ -375,7 +375,8 @@
 </span></span><span style="display:flex;"><span>console.log(elemento.outerHTML);
 </span></span></code></pre></div><p>Il paragrafo selezionato sarà quindi modificato nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;nuovo paragrafo&lt;/p&gt;
-</span></span></code></pre></div><p>La proprietà <code>ele.textContent</code> visualizzerà il testo <code>nuovo paragrafo</code>, mentre la proprietà <code>elemento.outerHTML</code> visualizzerà il testo <code>&lt;p id=&quot;paragrafo1&quot; proprieta-esistente=&quot;p1&quot;&gt;nuovo paragrafo&lt;/p&gt;</code></p>
+</span></span></code></pre></div><p>La proprietà <code>ele.textContent</code> visualizzerà il testo <code>nuovo paragrafo</code>, mentre la proprietà <code>elemento.outerHTML</code> visualizzerà il testo <code>&lt;p id=&quot;paragrafo1&quot; proprieta-esistente=&quot;p1&quot;&gt;nuovo paragrafo&lt;/p&gt;</code>.</p>
+<p>Una nota importante per il recupero del testo: per questioni di performance, quando si aggiungono più elementi testuali ad un nodo, questi rimangono separati perché inseriti in due nodi testuali differenti. Accedendo al testo di un nodo con la proprietà <code>ele.textContent</code>, si ottiene solo una parte del testo. Per poter unificare i nodi è necessario invocare la funzione <code>el.normalize();</code> prima di accedere al testo con <code>ele.textContent</code>.</p>
 <h3 id="proprietà-defaultvalue">Proprietà <code>defaultValue</code></h3>
 <p>Tutti i campi di input sono dotati della proprietà <code>defaultValue</code>che restituisce sempre il valore dell&rsquo;attributo HTML <code>value</code> del campo di input. Dato che il linguaggio HTML è un linguaggio testuale, il valore è sempre una stringa.</p>
 <p>Supponiamo di avere la seguente porzione di documento HTML:</p>
@@ -501,12 +502,18 @@
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>&lt;/script&gt;
 </span></span></code></pre></div><h2 id="operazioni-sul-dom">Operazioni sul DOM</h2>
+<p>Le operazioni sul DOM sono le operazioni di creazione, lettura, modifica e cancellazione di un nodo dell’albero (le operazioni sono dette CRUD, dall’inglese Create, Read, Update e Delete) e di creazione, lettura, modifica e cancellazione di uno degli attributi o dalle proprietà di un nodo.</p>
+<p>E&rsquo; possibile sfruttare le relazioni tra i nodi, come quella di &ldquo;padre/figlio&rdquo; o di &ldquo;nodo fratello&rdquo; per poter inserire i nodi nella posizione desiderata.</p>
+<h3 id="gestione-dei-nodi">Gestione dei nodi</h3>
 <p>Per creare un elemento di testo, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> ele = document.createTextNode(<span style="color:#009c00">&#39;Hello World!&#39;</span>);
-</span></span></code></pre></div><p>Per creare un elemento che fa da contenitore, si utilizza la seguente funzione:</p>
+</span></span></code></pre></div><p>Come gia descritto in precedenza, quando si aggiungono più elementi testuali ad un nodo, questi rimangono separati (per questioni di performance) perché inseriti in due nodi testuali differenti. Accedendo al testo di un nodo con la proprietà <code>ele.textContent</code>, si ottiene solo una parte del testo. Per poter unificare i nodi è necessario invocare la funzione <code>ele.normalize();</code> prima di accedere al testo con <code>ele.textContent</code>.</p>
+<p>Per creare un elemento che fa da contenitore, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> ele = document.createElement(<span style="color:#009c00">&#39;div&#39;</span>);
 </span></span></code></pre></div><p>Per aggiungere un elemento all&rsquo;interno di un secondo elemento, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>target.appendChild(ele);
+</span></span></code></pre></div><p>Si può scegliere di aggiungere un elemento in fondo alla pagina web, sebbene ciò sia sconsigliato per via del footer della pagina, utilizzando il riferimento:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>document.body.appendChild(elemento);
 </span></span></code></pre></div><p>Per rimuovere un elemento dall&rsquo;interno di un secondo elemento, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>target.removeChild(ele);
 </span></span></code></pre></div><p>Per rimuovere un elemento dalla pagina, si utilizza la seguente funzione:</p>
@@ -515,14 +522,14 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;beforebegin&#39;</span>, ele);
 </span></span></code></pre></div><p>Per aggiungere un elemento dopo un secondo elemento, si utilizza la seguente funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;afterend&#39;</span>, ele);
-</span></span></code></pre></div><h2 id="gestione-dello-stile-di-un-elemento">Gestione dello stile di un elemento</h2>
+</span></span></code></pre></div><h3 id="gestione-dello-stile-di-un-elemento">Gestione dello stile di un elemento</h3>
 <p>Per aggiungere una proprietà di stile ad un elemento, si utilizza la funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.style[<span style="color:#009c00">&#39;backgroundColor&#39;</span>] = <span style="color:#009c00">&#39;red&#39;</span>;
 </span></span></code></pre></div><p>Per rimuovere una proprietà di stile da un elemento, si utilizza la funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.style.removeProperty(<span style="color:#009c00">&#39;background-color&#39;</span>);
 </span></span></code></pre></div><p>Per ottenere il valore di una proprietà di stile da un elemento, si utilizza la funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> attr = ele.style[<span style="color:#009c00">&#39;backgroundColor&#39;</span>];
-</span></span></code></pre></div><h2 id="gestione-delle-classi-di-un-elemento">Gestione delle classi di un elemento</h2>
+</span></span></code></pre></div><h3 id="gestione-delle-classi-di-un-elemento">Gestione delle classi di un elemento</h3>
 <p>Per aggiungere delle classi ad un elemento, si utilizza la funzione:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.add(<span style="color:#009c00">&#39;another&#39;</span>, <span style="color:#009c00">&#39;class&#39;</span>, <span style="color:#009c00">&#39;name&#39;</span>);
 </span></span></code></pre></div><p>Per rimuovere delle classi ad un elemento, si utilizza la funzione:</p>
@@ -539,39 +546,88 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> <span style="color:#00f">class</span> = [<span style="color:#009c00">&#39;class1&#39;</span>, <span style="color:#009c00">&#39;class2&#39;</span>];
 </span></span><span style="display:flex;"><span>ele.classList.add(...<span style="color:#00f">class</span>);
 </span></span><span style="display:flex;"><span>ele.classList.remove(...<span style="color:#00f">class</span>);
-</span></span></code></pre></div><!-- markdownlint-disable MD033 -->
-<script>
-  const text = document.createTextNode('Hello World!');
-  let elemento = document.createElement('div');
-  elemento.appendChild(text);
-  document.body.appendChild(elemento);
-
-  // imposto l'attributo
-  elemento.setAttribute('proprieta-esistente', 'p1');
-  elemento.proprietaEsistente="p2";
-  
-  // imposto le proprietà
-  elemento.proprietaEsistente = "p1";
-  elemento.proprietaNuova = "valoreProprieta2";
-  elemento.proprietaOggetto = { p1 : "v1", p2: 1 };
-  console.log(elemento.proprietaEsistente);
-  console.log(elemento.proprietaNuova);
-  console.dir(elemento.proprietaOggetto);
-
-  console.log(elemento.hasAttributes());
-  console.table(elemento.getAttributeNames());
-  console.log(elemento.hasAttribute("proprieta-esistente"));
-  elemento.removeAttribute("proprieta-esistente");
-
-  elemento.setAttribute("proprieta-nuova", "valoreProprieta2");
-  console.log(elemento.getAttribute("proprieta-nuova"));
-
-  elemento.toggleAttribute("proprieta-esistente");
-  elemento.id = { id : "v1" };
-
-</script>
-<!-- markdownlint-enable MD033 -->
-
+</span></span></code></pre></div><h2 id="template-html-e-gestione-nodi">Template HTML e gestione nodi</h2>
+<p>Il linguaggio HTML permette di creare dei template, cioè dei modelli, di sezioni della pagina web nei quali inserire i propri dati. Sono principalmente utilizzati dai &ldquo;web components&rdquo;, ma possono essere utilizzati facilmente anche negli script.</p>
+<p>Il vantaggio di utilizzare un template consiste nella separazione della struttura HTML dai dati, tipicamente inseriti utilizzando JavaScript.</p>
+<p>Il template è generato dall&rsquo;etichetta <code>template</code> che ha il simbolo di apertura <code>&lt;template&gt;</code> ed il simbolo di chiusura <code>&lt;/template&gt;</code>. In questo elemento è possibile inserire qualsiasi altro elemento senza dover rispettare le regole di relazione &ldquo;padre-figlio&rdquo; del linguaggio HTML, proprio perché questo contenitore serve da modello. Ad esempio è possibile inserire  nell&rsquo;etichetta <code>template</code> un&rsquo;etichetta <code>&lt;li&gt;</code> senza che sia presente un&rsquo;etichetta <code>&lt;ul&gt;</code> .</p>
+<p>Un template deve essere identificato per <code>id</code> per poi clonare il contenuto, per poterlo poi utilizzare:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> template = document.querySelector(templateID);
+</span></span><span style="display:flex;"><span>templateContent = template.content.cloneNode(<span style="color:#00f">true</span>);
+</span></span></code></pre></div><p>Per poter inserire il contenuto di un template in un nodo &ldquo;target&rdquo; possiamo utilizzare la seguente funzione, che controlla se gli identificativi sono stringhe, seleziona gli elementi e se entrambi trovati inserisce il template nel nodo &ldquo;target&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> addTemplate(targetId, templateID) {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (<span style="color:#00f">typeof</span> targetId !== <span style="color:#009c00">&#39;string&#39;</span> &amp;&amp; ! (targetId <span style="color:#00f">instanceof</span> String) ) {
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">throw</span> <span style="color:#00f">new</span> Error(<span style="color:#009c00">&#34;param &#39;targetId&#39; is not a string&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (<span style="color:#00f">typeof</span> templateID !== <span style="color:#009c00">&#39;string&#39;</span> &amp;&amp; ! (templateID <span style="color:#00f">instanceof</span> String) ) {
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">throw</span> <span style="color:#00f">new</span> Error(<span style="color:#009c00">&#34;param &#39;templateID&#39; is not a string&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">const</span> target = document.querySelector(targetId);
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">const</span> template = document.querySelector(templateID);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (target != <span style="color:#00f">null</span> &amp;&amp; template != <span style="color:#00f">null</span>) {
+</span></span><span style="display:flex;"><span>    target.append(template.content.cloneNode(<span style="color:#00f">true</span>));
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Nel template possiamo inserire i segnaposto nei quali inserire i dati nella forma <code>${nome}</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;template id=<span style="color:#009c00">&#34;tableDataRowTemplate&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;tr id=<span style="color:#009c00">&#34;tableDataRow&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;th class=<span style="color:#009c00">&#34;replaceData&#34;</span>&gt;${Extra}&lt;/th&gt;
+</span></span><span style="display:flex;"><span>    &lt;th class=<span style="color:#009c00">&#34;replaceData&#34;</span>&gt;${Giorno}&lt;/th&gt;
+</span></span><span style="display:flex;"><span>    &lt;th class=<span style="color:#009c00">&#34;replaceData&#34;</span>&gt;${Ora}&lt;/th&gt;
+</span></span><span style="display:flex;"><span>    &lt;th class=<span style="color:#009c00">&#34;replaceData&#34;</span>&gt;${Classe}&lt;/th&gt;
+</span></span><span style="display:flex;"><span>    &lt;th class=<span style="color:#009c00">&#34;replaceData&#34;</span>&gt;${Aula}&lt;/th&gt;
+</span></span><span style="display:flex;"><span>    &lt;th class=<span style="color:#009c00">&#34;replaceData&#34;</span>&gt;${Piano}&lt;/th&gt;
+</span></span><span style="display:flex;"><span>  &lt;/tr&gt;
+</span></span><span style="display:flex;"><span>&lt;/template&gt;
+</span></span></code></pre></div><p>I dati da inserire possono poi essere contenuti in un oggetto in cui il nome delle proprietà corrisponde con il nome inserito nel segnaposto dei dati da sostituire. Un esempio di oggetto è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Extra&#34;</span>: <span style="color:#009c00">&#34;SI&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Giorno&#34;</span>: <span style="color:#009c00">&#34;LUNEDI&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Ora&#34;</span>: <span style="color:#009c00">&#34;1°&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Classe&#34;</span>: <span style="color:#009c00">&#34;4A_INF&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Aula&#34;</span>: <span style="color:#009c00">&#34;123&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Piano&#34;</span>: <span style="color:#00f">null</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In questo modo si crea una corrispondenza tra il segnaposto <code>${Giorno}</code> e l&rsquo;oggetto che ha proprietà <code>Giorno</code>.</p>
+<p>L&rsquo;identificativo <code>#tableDataRow .replaceData</code> può essere utilizzato per selezionare tutti i nodi nei quali è necessario effettuare la sostituzione dei dati secondo il modello appena descritto.</p>
+<p>La funzione seguente può essere utilizzata per:</p>
+<ul>
+<li>controllare se il primo parametro è una stringa da usare per identificare la sezione;</li>
+<li>controllare se il secondo parametro è un oggetto che contiene le proprietà, nella forma nome-valore, da utilizzare per sostituire i dati;</li>
+<li>selezionare tutti i nodi contenenti i segnaposti da sostituire con i dati;</li>
+<li>sostituire tutti i segnaposti.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> replaceTemplateData(dataNodesID, dataToReplace={}) {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (<span style="color:#00f">typeof</span> dataNodesID !== <span style="color:#009c00">&#39;string&#39;</span> &amp;&amp; ! (dataNodesID <span style="color:#00f">instanceof</span> String) ) {
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">throw</span> <span style="color:#00f">new</span> Error(<span style="color:#009c00">&#34;param &#39;targetId&#39; is not a string&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (!dataToReplace <span style="color:#00f">instanceof</span> Object || Array.isArray(dataToReplace) || dataToReplace === <span style="color:#00f">null</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">throw</span> <span style="color:#00f">new</span> Error(<span style="color:#009c00">&#34;param &#39;dataToReplace&#39; is not an object (empty object is allowed)&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">const</span> nodeToReplace = document.querySelectorAll(dataNodesID + <span style="color:#009c00">&#34; .replaceData&#34;</span>);
+</span></span><span style="display:flex;"><span>  console.debug(<span style="color:#009c00">`Found </span><span style="color:#009c00">${</span>nodeToReplace.length<span style="color:#009c00">}</span><span style="color:#009c00"> elements to replace in node </span><span style="color:#009c00">${</span>dataNodesID<span style="color:#009c00">}</span><span style="color:#009c00">`</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  nodeToReplace.forEach(node =&gt; {
+</span></span><span style="display:flex;"><span>    Object.entries(dataToReplace).forEach(([key, val]) =&gt; {
+</span></span><span style="display:flex;"><span>      console.debug(<span style="color:#009c00">`Replacing \$\{</span><span style="color:#009c00">${</span>key<span style="color:#009c00">}</span><span style="color:#009c00">\} --&gt; </span><span style="color:#009c00">${</span>val<span style="color:#009c00">}</span><span style="color:#009c00">`</span>);
+</span></span><span style="display:flex;"><span>      node.textContent = node.textContent.replace(<span style="color:#009c00">`\$\{</span><span style="color:#009c00">${</span>key<span style="color:#009c00">}</span><span style="color:#009c00">\}`</span> , <span style="color:#009c00">`</span><span style="color:#009c00">${</span>val<span style="color:#009c00">}</span><span style="color:#009c00">`</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Creato l&rsquo;oggetto contenente i dati da sostituire, si può invocare la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> oggetto = {
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Extra&#34;</span>: <span style="color:#009c00">&#34;SI&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Giorno&#34;</span>: <span style="color:#009c00">&#34;LUNEDI&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Ora&#34;</span>: <span style="color:#009c00">&#34;1°&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Classe&#34;</span>: <span style="color:#009c00">&#34;4A_INF&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Aula&#34;</span>: <span style="color:#009c00">&#34;123&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Piano&#34;</span>: <span style="color:#00f">null</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>replaceTemplateData(<span style="color:#009c00">&#39;#tableDataRow&#39;</span>, oggetto)
+</span></span></code></pre></div>
     </div>
   </article>
 </main>
