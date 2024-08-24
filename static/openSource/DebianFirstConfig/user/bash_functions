@@ -160,11 +160,23 @@ homespace() {
 export -f homespace
 
 # Show user defined functions
-# Usage: userDefined
-userDefined() {
+# Usage: userDefinedFunctions
+userDefinedFunctions() {
   declare -F
 }
-export -f userDefined
+export -f userDefinedFunctions
+
+# Show user biggest file in current dir
+# Usage: biggestFiles
+biggestFiles() {
+  find  -type f  -exec  du -Sh {} +  |  sort -rh  |  head -n 50
+}
+export -f biggestFiles
+
+biggestDir() {
+  du -a .  |  sort -n -r  |  head -n 50
+}
+export -f biggestDir
 
 ########################
 #        ntfy          #
@@ -473,6 +485,8 @@ export -f smontaPhone
 #          FFmpeg          #
 ############################
 
+# See https://trac.ffmpeg.org/wiki/TitleIndex
+
 # Use ffmpeg -i inputFile outputFile
 #
 # Options:
@@ -487,13 +501,22 @@ export -f smontaPhone
 #   - 4 (default) should be close to perceptual transparency
 #   - 6 usually produces an "acceptable" quality.
 
-# See https://trac.ffmpeg.org/wiki/TitleIndex
+# Audio formats:
+#    Lossless and uncompressed: WAV PCM AIFF
+#    Lossless and compressed: FLAC ALAC
+#    Lossy: WEBM OPUS OGG (Vorbis) MP3 M4A AAC (some implementations not open formats) WMA (not an open format) 
+
+# Today's most widely used open source video formats:
+# - The MP4 format, containing H.264 video and AAC audio, used in BluRay and Internet streaming.
+# - The WEBM format, containing VP9 video and Opus audio;
+# - The Matroska (MKV) container format can contain nearly any combination of video, audio, 
+#     and even stereoscopic (3D) imagery. It's the basis for WEBM.
+
+# See container formats here:
+# https://trac.ffmpeg.org/wiki/Encode/HighQualityAudio#Containerformats
 
 # For high quality lossy audio encoding
 #   see https://trac.ffmpeg.org/wiki/Encode/HighQualityAudio 
-
-alias help-convert-m4a-to-mp3="echo 'ffmpeg -i input.m4a -c:v copy  -q:a 4 output.mp3'"
-alias help-convert-webm-to-mp4="echo 'ffmpeg -i input.webm -c:v copy output.mp4'"
 
 # Test: 
 # Run: convertAllM4aToMp3
@@ -506,7 +529,7 @@ convertAllM4aToMp3() {
   for file in *.m4a
   do
     
-    ffmpeg -i "${file}" -vn -ar 44100 -ac 2 -ac 2 -q:a 2 "new-${file}.mp3";
+    ffmpeg -i "${file}" -vn -ar 44100 -ac 2 -q:a 2 "new-${file}.mp3";
   done
 }
 export -f convertAllM4aToMp3
@@ -525,6 +548,21 @@ convertAllWavToMp3() {
   done
 }
 export -f convertAllWavToMp3
+
+# Test: 
+# Run: convertAllWebmToMp4
+convertAllWebmToMp4() {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.wav, *.Wav, *.WaV etc
+  shopt -s nullglob nocaseglob
+
+  for file in *.webm
+  do
+    ffmpeg -i "${file}" -c:v copy "new-${file}.mp4";
+  done
+}
+export -f convertAllWebmToMp4
 
 ########################
 # Beautiful interfaces #

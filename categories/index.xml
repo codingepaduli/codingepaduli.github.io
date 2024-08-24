@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interesting</title>
+      <link>http://codingepaduli.github.io/categories/interesting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/interesting/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Coding</title>
       <link>http://codingepaduli.github.io/categories/coding/</link>
@@ -27,13 +34,6 @@
       <link>http://codingepaduli.github.io/categories/web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/web/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Interesting</title>
-      <link>http://codingepaduli.github.io/categories/interesting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/interesting/</guid>
       <description></description>
     </item>
     <item>

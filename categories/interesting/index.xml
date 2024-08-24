@@ -6,21 +6,28 @@
     <description>Recent content in Interesting on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Fri, 05 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brand</title>
+      <link>http://codingepaduli.github.io/interesting/brand/</link>
+      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/brand/</guid>
+      <description>Storie di Brand</description>
+    </item>
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Fri, 05 Jul 2024 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
-    </item>
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Fri, 05 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
     </item>
     <item>
       <title>Donne</title>
