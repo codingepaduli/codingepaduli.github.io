@@ -57,3 +57,18 @@ apt-get install $APT_OPTS mame-extra
 if [ $? -ne 0 ]; then
     exit 1
 fi
+#
+# Check your firmware with:
+#  - sudo update-initramfs -u
+#
+# In case of warning messages like:
+#  - Possible missing firmware /lib/firmware/i915/icl_guc_32
+#
+# apt-get install apt-file && apt-file update
+#
+# apt-file search icl_guc
+# Output will search the file in the missing package:
+#   firmware-misc-nonfree: /lib/firmware/i915/icl_guc_32.0.3.bin
+#
+# You need to install the missing package to solve the warning
+# apt-get install firmware-misc-nonfree 

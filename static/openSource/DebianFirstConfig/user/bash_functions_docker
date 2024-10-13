@@ -215,6 +215,15 @@ pandocMdToPdf() {
 }
 export -f pandocMdToPdf
 
+
+# uglifyjs .js to .min.js
+# Run: uglifyjs --compress --mangle -- input.js
+# Test: uglifyjs
+uglifyjs() {
+  dockerContainer --name uglifyjs      olbat/uglify:2024-09-06 uglifyjs "$@"
+}
+export -f uglifyjs
+
 # yt-dl
 # Test: youTubeDownload URL
 youTubeDownload() {

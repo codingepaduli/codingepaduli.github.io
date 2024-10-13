@@ -660,7 +660,7 @@ ssh -i $HOME/chiavi_ssh/id_ed25519 user@server
 </span></span></code></pre></div><p>Per recuperare la fingerprint della chiave, si può utilizzare il comando <code>ssh-keygen</code> e, ricordando che il Linux lo standard input è indicato dal simbolo <code>-</code>, utilizzando lo standard input come file contenente la chiave:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keyscan -t ecdsa gitlab.com | ssh-keygen -l -f -
 </span></span></code></pre></div><p>Per aggiungere la chiave al file <code>.ssh/.known_hosts</code> si può utilizzare il redirezionamento dell&rsquo;output, come nel seguente comando:</p>
-<p>ssh-keyscan -t ecdsa gitlab.com &raquo; &ldquo;~/.ssh/.known_hosts&rdquo;</p>
+<p>ssh-keyscan -t ecdsa gitlab.com &gt;&gt; &ldquo;~/.ssh/.known_hosts&rdquo;</p>
 <p>Per verificare che una chiave sia presente nel file <code>.ssh/.known_hosts</code>, si può utilizzare il comando seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -F github.com
 </span></span></code></pre></div><p>Per rimuovere una chiave presente nel file <code>.ssh/.known_hosts</code>, si può utilizzare il comando seguente:</p>

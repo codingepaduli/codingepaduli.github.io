@@ -93,6 +93,23 @@ b3check() {
 }
 export -f b3check
 
+# Make .iso.md5 files from .iso file
+# Usage: md5MakeAllFromIsoFile
+md5MakeAllFromIsoFile() {
+  
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+
+  while IFS= read -r fileIso
+  do
+    echo "calculating md5 of $fileIso"
+    touch "$fileIso.md5"
+    md5sum "$fileIso" > "$fileIso.md5"
+  done < <(ls ./*.iso)
+}
+export -f md5MakeAllFromIsoFile
+
 # elimina con wipe (sovrascrive N volte, f=force no confirmation, r=recoursive, i=verbose mode, q=quick wipe)
 # Usage: wipe file.txt
 wipe() {
@@ -169,7 +186,7 @@ export -f userDefinedFunctions
 # Show user biggest file in current dir
 # Usage: biggestFiles
 biggestFiles() {
-  find  -type f  -exec  du -Sh {} +  |  sort -rh  |  head -n 50
+  find . -type f  -exec  du -Sh {} +  |  sort -rh  |  head -n 50
 }
 export -f biggestFiles
 

@@ -30,6 +30,7 @@ myRepositories=(
     "java-hello-world-with-gradle"
     "j2ee-website-with-gradle"
     "fet-timetabling-compute"
+    "gsuite_workspace_argo"
 )
 
 if [ ! -d "$WORKING_DIR" ]; then

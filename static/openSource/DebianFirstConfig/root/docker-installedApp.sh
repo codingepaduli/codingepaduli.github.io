@@ -60,3 +60,5 @@ docker pull cincan/xsv
 
 docker pull tomsik68/xampp:8.2.4
 
+docker pull olbat/uglify:2024-09-06
+

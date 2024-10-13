@@ -232,8 +232,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 14 minuti 
-        ( 2943 parole)
+        Tempo di lettura 15 minuti 
+        ( 3182 parole)
     </span>
 </div></div>
     </header>
@@ -550,8 +550,8 @@ Il <strong>grafema</strong> è una sequenza di uno o più punti di codice che co
 <p>Questi codici mnemonici devono essere sempre inseriti tra il simbolo <code>&amp;</code> ed il simbolo <code>;</code>, come negli esempi <code>&amp;minus;</code> (con risultato − <!-- − -->) ed <code>&amp;amp;</code> (con risultato &amp; <!-- & -->).</p>
 <p>Con la nascita dello standard Unicode, la rappresentazione di un grafema avviene attraverso i punti di codice. Ogni punto di codice può essere inserito nel documento HTML utilizzando il corrispondente valore numerico espresso in formato decimale o esadecimale. La regola prevede che:</p>
 <ul>
-<li>se si utilizza il valore numerico espresso in formato decimale, allora è necessario inserirlo tra il simbolo <code>&amp;#</code> ed il simbolo <code>;</code>;
--se si utilizza il valore numerico espresso in formato esadecimale, allora è necessario inserirlo tra il simbolo <code>&amp;#x</code> ed il simbolo <code>;</code>.</li>
+<li>se si utilizza il valore numerico espresso in formato decimale, allora è necessario inserirlo tra il simbolo <code>&amp;#</code> ed il simbolo <code>;</code>;</li>
+<li>se si utilizza il valore numerico espresso in formato esadecimale, allora è necessario inserirlo tra il simbolo <code>&amp;#x</code> ed il simbolo <code>;</code>.</li>
 </ul>
 <p>Ad esempio, il grafema &ldquo;lettera greca delta&rdquo; Δ <!-- Δ --> può essere rappresentato con il codice numerico decimale 916 e con codice numerico esadecimale 394, quindi possiamo scrivere questo grafema sia con la notazione decimale <code>&amp;#916;</code> (con risultato Δ) sia con quella esadecimale <code>&amp;#x394;</code> (con risultato Δ).</p>
 <p>Altro esempio, il grafema &ldquo;simbolo dell&rsquo;euro&rdquo; € <!-- € --> può essere rappresentato con codice numerico decimale 8364 e con codice numerico esadecimale 20AC, quindi possiamo scrivere questo grafema sia con la notazione decimale <code>&amp;#8364;</code> (con risultato €) sia con quella esadecimale <code>&amp;#x20AC;</code> (con risultato €).</p>
@@ -580,6 +580,33 @@ fanno parte della specifica Unicode, per cui possono essere rappresentati attrav
 <p>Dato che due grafemi distinti possono visualizzare lo stesso &ldquo;carattere&rdquo;, la ricerca di parole nel testo spesso non funziona. Non tutti gli strumenti di scrittura e visualizzazione del testo passano alla &ldquo;forma normalizzata&rdquo; descritta dallo standard Unicode prima di effettuare una ricerca.</p>
 <p>Unicode è ancora legato alla localizzazione di chi scrive, lo stesso grafema può essere visualizzato in maniera molto differente a seconda che sia visualizzato su un computer con localizzazione Cinese, Giapponese o Koreana. E la localizzazione non può essere salvata in un messaggio Unicode.</p>
 <p>Purtroppo alcune scelte risultano incomprensibili, ma lo standard Unicode è diffusissimo ed utilizzato ovunque, quindi bisogna conviverci e imparare a gestire queste situazioni utilizzando gli strumenti opportuni.</p>
+<h3 id="caratteri-invisibili">Caratteri invisibili</h3>
+<p>Molti caratteri non hanno una rappresentazione visibile e possono essere problematici perché possono causare spazi o righe vuote inaspettate, problemi nella ricerca di parole o frasi e problemi nella formattazione e nella lettura del testo. Di seguito sono elencati alcuni di questi caratteri:</p>
+<ul>
+<li>U+0009: tabulazione orizzontale (Horizontal Tab <code>&amp;Tab;</code>);</li>
+<li>U+000A: fine riga (Line Feed <code>&amp;NewLine;</code>);</li>
+<li>U+000B: tabulazione verticale (Vertical Tab) è un fine riga;</li>
+<li>U+000C: interruzione di pagina (Form Feed) è un fine riga;</li>
+<li>U+000D: fine riga (Carriage Return) è un fine riga;</li>
+<li>U+0020: Spazio;</li>
+<li>U+0085: Interruzione di riga;</li>
+<li>U+00A0: Spazio che impedisce la divisione di parola (No-Break Space);</li>
+<li>U+00AD: Trattino di sillabazione (syllable hyphen) per spezzare una parola e andare a capo, è visibile solo se la parola si trova a fine riga e viene divisa in sillabe per andare a capo;</li>
+<li>da U+2000 a U+200A: spazi a larghezza variabile;</li>
+<li>U+200B: Spazio a &ldquo;larghezza zero&rdquo; (zero-width space);</li>
+<li>U+200E: Indicatore di direzione del testo da sinistra a destra (Left-to-right mark);</li>
+<li>U+200F: Indicatore di direzione del testo da destra a sinistra (Right-to-left mark);</li>
+<li>U+2028: Separatore di riga (Line Separator);</li>
+<li>U+2029: Separatore di paragrafo (Paragraph Separator);</li>
+<li>U+205F: Spazio matematico (medium mathematical space);</li>
+<li>U+3000: Spazio usato con caratteri ideografici (ideographic space);</li>
+<li>U+FEFF: Byte Order Mark;</li>
+</ul>
+<p>Se scriviamo nel seguente modo la frase:</p>
+<p>Al<code>&amp;#x200B;</code>fa<code>&amp;#x00A0;</code>be<code>&amp;#x00AD;</code>t<code>&amp;#x200E;&amp;#x200F;</code>o clas<code>&amp;#x200A;</code>sico;</p>
+<p>il risultato sarà:</p>
+<p>Al​fa be­t‎‏o clas sico</p>
+<p>ma per gli strumenti di ricerca testo, lettura e scrittura sarà difficile la ricerca delle parole &ldquo;alfa&rdquo; e &ldquo;classico&rdquo;.</p>
 <h2 id="unicode-e-byte-order-mark-bom">Unicode e byte-order mark (BOM)</h2>
 <p>I sistemi di memorizzazione dati, di trasmissione, di codifica e decodifica utilizzano modalità differenti per immagazzinare in memoria dati testuali e per trasmetterli. In particolare i caratteri rappresentati con una dimensione maggiore di un byte (stringhe multi-byte di caratteri) sono soggetti alla codifica &ldquo;Big Endian&rdquo; o &ldquo;Little Endian&rdquo;:</p>
 <ul>
@@ -604,7 +631,7 @@ I termini big-endian e little-endian derivano dai nomi di due popolazioni che ab
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="http://codingepaduli.github.io/tools/editorconfig/" style="font-weight: 700; color: #e22d30;">EditorConfig</a>: Articolo per la configurazione di Editorconfig</p><p><a href="https://www.branah.com/unicode-converter" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicodes and text converter</a>: A tool to convert between Unicode and plain text</p><p><a href="https://r12a.github.io/app-conversion/" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicode code converter</a>: Another tool to convert between Unicode and plain text</p><p><a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" style="font-weight: 700; color: #e22d30;">Emoji Chart, v12.0</a>: A full list of Emoji</p>
+      <p><a href="http://codingepaduli.github.io/tools/editorconfig/" style="font-weight: 700; color: #e22d30;">EditorConfig</a>: Articolo per la configurazione di Editorconfig</p><p><a href="https://www.branah.com/unicode-converter" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicodes and text converter</a>: A tool to convert between Unicode and plain text</p><p><a href="https://r12a.github.io/app-conversion/" style="font-weight: 700; color: #e22d30;">Unicode Converter - Unicode code converter</a>: Another tool to convert between Unicode and plain text</p><p><a href="https://www.unicode.org/emoji/charts/full-emoji-list.html" style="font-weight: 700; color: #e22d30;">Emoji Chart, v12.0</a>: A full list of Emoji</p><p><a href="https://en.wikipedia.org/wiki/Whitespace_character" style="font-weight: 700; color: #e22d30;">Whitespace character</a>: A list of whitespace character</p>
   </article>
 </main>
 
