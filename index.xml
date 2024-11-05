@@ -6,7 +6,7 @@
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 24 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>L&#39;evoluzione delle comunicazioni</title>
@@ -359,25 +359,46 @@
       <description>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
     </item>
     <item>
+      <title>Corsi e guide - istruzione di base</title>
+      <link>http://codingepaduli.github.io/interesting/educational/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
+      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+    </item>
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
+    <item>
+      <title>Google Moduli checker</title>
+      <link>http://codingepaduli.github.io/interesting/googlemodulichecker/</link>
+      <pubDate>Wed, 30 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/googlemodulichecker/</guid>
+      <description>Google Moduli checker</description>
+    </item>
+    <item>
+      <title>Google App Script</title>
+      <link>http://codingepaduli.github.io/coding/link-gappsscript/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/link-gappsscript/</guid>
+      <description>Lezioni su Google App Script nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/gappsscript&#39;&gt;Google App Script&lt;/a&gt;</description>
+    </item>
+    <item>
+      <title>Lez. 01 - Introduzione a Google App Script</title>
+      <link>http://codingepaduli.github.io/coding/gappsscript/intro/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/gappsscript/intro/</guid>
+      <description>Introduzione a Google App Script</description>
+    </item>
+    <item>
       <title>Brand</title>
       <link>http://codingepaduli.github.io/interesting/brand/</link>
       <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/brand/</guid>
       <description>Storie di Brand</description>
-    </item>
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
-    </item>
-    <item>
-      <title>Corsi e guide - istruzione di base</title>
-      <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Fri, 05 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
-      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
     </item>
     <item>
       <title>Donne</title>

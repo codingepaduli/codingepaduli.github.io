@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Appunti Google App Script on Lab. informatica</title>
+    <link>http://codingepaduli.github.io/coding/gappsscript/</link>
+    <description>Recent content in Appunti Google App Script on Lab. informatica</description>
+    <generator>Hugo</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Sun, 20 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/coding/gappsscript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lez. 01 - Introduzione a Google App Script</title>
+      <link>http://codingepaduli.github.io/coding/gappsscript/intro/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/gappsscript/intro/</guid>
+      <description>Introduzione a Google App Script</description>
+    </item>
+  </channel>
+</rss>

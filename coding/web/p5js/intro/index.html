@@ -232,7 +232,7 @@
     
 	<span class="meta__text">
         Tempo di lettura 16 minuti 
-        ( 3408 parole)
+        ( 3307 parole)
     </span>
 </div></div>
     </header>
@@ -432,89 +432,40 @@
 <h2 id="api">API</h2>
 <p>Per poter utilizzare correttamente la libreria p5.js, è necessario conoscere l&rsquo;interfaccia esposta dalla libreria stessa.</p>
 <p>Il termine <strong>interfaccia</strong>, nelle discipline tecniche, indica l&rsquo;area (la &ldquo;faccia&rdquo;) esposta da un sistema, al fine di potervi interagire. Un esempio sono le interfacce grafiche di Microsoft Windows, che permettono di interagire con i calcolatori, oppure le interfacce vocali di iPhone ed Android, con &ldquo;Siri&rdquo; ed &ldquo;OK Google&rdquo;, che permettono di interagire con gli smartphone.</p>
-<p>Nello sviluppo di applicazioni, le interfacce esposte da librerie e linguaggi di programmazione, e quindi anche dalla libreria p5.js, prendono il nome di <strong>Application Programming Interface</strong> (API).</p>
-<p>Le API espongono strutture, funzioni, costanti e tanti altri elementi che il programmatore può usare per realizzare la propria applicazione.</p>
-<p>La documentazione delle API descrive cosa rappresenta e come utilizzare ogni singolo oggetto esposto, come ad esempio una costante o una funzione, ed è consultabile all&rsquo;indirizzo <a href="https://p5js.org/reference/" title="Documentazione di p5.js">https://p5js.org/reference/</a>.</p>
-<p>La documentazione è organizzata per aree di interesse, come si può vedere nell&rsquo;immagine seguente:</p>
-<p><img src="/static/coding/web/p5js/intro-api-references.png" alt="p5.js - API" title="p5.js - API"></p>
-<p>Nella tabella seguente è riportata la descrizione delle varie categorie:</p>
-<table>
-<thead>
-<tr>
-<th>Area</th>
-<th>Descrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Color</td>
-<td>Gestione colori di contorno, di riempimento, di sfondo</td>
-</tr>
-<tr>
-<td>Constants</td>
-<td>Costanti disponibili</td>
-</tr>
-<tr>
-<td>DOM</td>
-<td>Interazione con gli elementi della pagina web</td>
-</tr>
-<tr>
-<td>Data</td>
-<td>Gestione dei dati</td>
-</tr>
-<tr>
-<td>Environment</td>
-<td>Informazioni sull&rsquo;ambiente di esecuzione</td>
-</tr>
-<tr>
-<td>Events</td>
-<td>Gestione eventi della tastiera, del mouse e del touch-screen</td>
-</tr>
-<tr>
-<td>Foundation</td>
-<td>Basi di JavaScript</td>
-</tr>
-<tr>
-<td>IO</td>
-<td>Gestione Input / Output</td>
-</tr>
-<tr>
-<td>Image</td>
-<td>Gestione immagini</td>
-</tr>
-<tr>
-<td>Lights, Camera</td>
-<td>Gestione luci, camera, materiali, ombre</td>
-</tr>
-<tr>
-<td>Math</td>
-<td>Funzioni matematiche</td>
-</tr>
-<tr>
-<td>Rendering</td>
-<td>Informazioni sul processo di disegno (rendering)</td>
-</tr>
-<tr>
-<td>Shape</td>
-<td>Funzioni per il disegno di forme 2D, 3D e curve</td>
-</tr>
-<tr>
-<td>Structure</td>
-<td>Informazioni sul ciclo di esecuzione</td>
-</tr>
-<tr>
-<td>Transform</td>
-<td>Trasformazioni matematiche nel piano (2D) e nello spazio (3D)</td>
-</tr>
-<tr>
-<td>Typography</td>
-<td>Caratteri, stili e formattazione testo</td>
-</tr>
-</tbody>
-</table>
-<p>Ogni categoria mostra le costanti e le funzioni disponibili, con un link alla documentazione specifica.</p>
+<p>Nello sviluppo di applicazioni, le interfacce esposte da librerie e linguaggi di programmazione prendono il nome di <strong>Application Programming Interface</strong> (API). Le API espongono strutture, funzioni, costanti e tanti altri elementi che il programmatore può usare per realizzare la propria applicazione.</p>
+<p>La documentazione delle API descrive cosa rappresenta e come utilizzare ogni singolo oggetto esposto, come ad esempio una costante o una funzione.</p>
+<p>La libreria p5.js espone le proprie API, in particolare funzioni e costanti, e le documenta accuratamente. La documentazione è consultabile all&rsquo;indirizzo <a href="https://p5js.org/reference/" title="Documentazione di p5.js">https://p5js.org/reference/</a>.</p>
+<p>La documentazione è organizzata per sezioni ed è disponibile anche un piccolo motore di ricerca per trovare uno specifico elemento, come si può vedere dall&rsquo;immagine seguente:</p>
+<p><img src="/static/coding/web/p5js/intro-api-references-2024.png" alt="p5.js - API" title="p5.js - API"></p>
+<!-- Rimossa dalla documentazione 
+
+Nella tabella seguente è riportata la descrizione delle varie categorie:
+
+Area | Descrizione
+--- | ---
+Color           | Gestione colori di contorno, di riempimento, di sfondo
+Constants       | Costanti disponibili
+DOM             | Interazione con gli elementi della pagina web
+Data            | Gestione dei dati
+Environment     | Informazioni sull'ambiente di esecuzione
+Events          | Gestione eventi della tastiera, del mouse e del touch-screen
+Foundation      | Basi di JavaScript
+IO              | Gestione Input / Output
+Image           | Gestione immagini
+Lights, Camera  | Gestione luci, camera, materiali, ombre
+Math            | Funzioni matematiche
+Rendering       | Informazioni sul processo di disegno (rendering)
+Shape           | Funzioni per il disegno di forme 2D, 3D e curve
+Structure       | Informazioni sul ciclo di esecuzione
+Transform       | Trasformazioni matematiche nel piano (2D) e nello spazio (3D)
+Typography      | Caratteri, stili e formattazione testo
+
+Ogni categoria mostra le costanti e le funzioni disponibili, con un link alla documentazione specifica.
+
+-->
 <h3 id="documentazione-delle-costanti">Documentazione delle costanti</h3>
-<p>Le <strong>costanti</strong>, nell&rsquo;ambito informatico come nell&rsquo;ambito matematico, sono dei valori che non variano nel tempo, ed ai quali è associato un nome, come ad esempio la costante fisica <strong>c</strong> che definisce la velocità della luce nel vuoto pari a 299792458 m/s. Per conoscere il nome, il compito e la descrizione di una costante è necessario consultare la documentazione.</p>
+<p>Le <strong>costanti</strong>, nell&rsquo;ambito informatico come nell&rsquo;ambito matematico, sono dei valori che non variano nel tempo, ed ai quali è associato un nome, come ad esempio la costante fisica <strong>c</strong> che definisce la velocità della luce nel vuoto pari a 299792458 m/s. Per conoscere il nome, il compito e la descrizione di una costante è necessario consultare la documentazione, come da immagine seguente:</p>
+<p><img src="/static/coding/web/p5js/intro-api-references-constants-2024.png" alt="p5.js - API" title="p5.js - API - Constants"></p>
 <p>Ogni costante è documentata indicando uno o più esempi d&rsquo;uso, il nome, la descrizione ed il valore.</p>
 <p>Un esempio di documentazione delle costanti è quello della documentazione della costante <code>PI</code>. Nella descrizione si legge che questa costante rappresenta la costante matematica <strong>pi greco</strong>, che definisce il rapporto tra la lunghezza della circonferenza e quella del suo diametro. Il nome di questa costante è <code>PI</code> ed il valore associato è 3.14159265358979323846&hellip;</p>
 <p>Nella documentazione sono definite anche le seguenti costanti:</p>
