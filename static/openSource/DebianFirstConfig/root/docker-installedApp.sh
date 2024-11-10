@@ -46,7 +46,7 @@ docker pull python:3.3.13-rc-bookworm
 # Hugo
 docker pull hugomods/hugo:reg-base-0.127.0
 
-docker pull pandoc/extra:3.2
+docker pull pandoc/extra:3.5
 
 # docker pull node:20.3.1-bookworm
 

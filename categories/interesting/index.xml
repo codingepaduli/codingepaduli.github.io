@@ -6,8 +6,22 @@
     <description>Recent content in Interesting on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iframe Remover</title>
+      <link>http://codingepaduli.github.io/interesting/frameremover/</link>
+      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/frameremover/</guid>
+      <description>iframe Remover</description>
+    </item>
+    <item>
+      <title>link shower</title>
+      <link>http://codingepaduli.github.io/interesting/linkshower/</link>
+      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/linkshower/</guid>
+      <description>link shower</description>
+    </item>
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>

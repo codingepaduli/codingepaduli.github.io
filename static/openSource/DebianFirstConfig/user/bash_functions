@@ -68,48 +68,6 @@ untarz() {
 }
 export -f untarz
 
-# test the checksum for sha, md5 and Blade3 files
-# BUG md5sum's option --quiet and --warn are incompatible
-# https://lists.gnu.org/r/bug-coreutils/2010-10/msg00104.html
-# Usage: shacheck file.txt.sha
-shacheck() {
-  shasum --quiet -a 512 --check "$@"
-}
-export -f shacheck
-
-# Usage: md5check file.txt.md5
-md5check() {
-  md5sum --quiet --check "$@"
-}
-export -f md5check
-
-# Blade3 hashing 
-# Usage: b3check file.txt.b3
-# Usage: b3sum file.txt file.txt.b3 
-#  - OPTION --num-threads is set by variable RAYON_NUM_THREADS
-#  No needs of b3sum --num-threads 16 file.txt file.txt.b3 
-b3check() {
-  command b3sum --quiet --check "$@"
-}
-export -f b3check
-
-# Make .iso.md5 files from .iso file
-# Usage: md5MakeAllFromIsoFile
-md5MakeAllFromIsoFile() {
-  
-  # nullglob: if there is no file, don't output anything
-  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
-  shopt -s nullglob nocaseglob
-
-  while IFS= read -r fileIso
-  do
-    echo "calculating md5 of $fileIso"
-    touch "$fileIso.md5"
-    md5sum "$fileIso" > "$fileIso.md5"
-  done < <(ls ./*.iso)
-}
-export -f md5MakeAllFromIsoFile
-
 # elimina con wipe (sovrascrive N volte, f=force no confirmation, r=recoursive, i=verbose mode, q=quick wipe)
 # Usage: wipe file.txt
 wipe() {
@@ -194,6 +152,168 @@ biggestDir() {
   du -a .  |  sort -n -r  |  head -n 50
 }
 export -f biggestDir
+
+##########################################
+# Ricerca e sostituzione testo nei files #
+##########################################
+
+# visualizza tutti i file contenenti il testo
+# Usage: grepSearch "testo"
+grepSearch() {
+  grep -H -e "$@" ./*
+}
+export -f grepSearch
+
+# visualizza ricorsivamente tutti i file contenenti il testo
+# Usage: grepRecursiveSearch "testo" .
+grepRecursiveSearch() {
+  grep --include "*" --recursive "$@"
+}
+export -f grepRecursiveSearch
+
+# Usa ripgrep per effettuare una sostituzione
+# Usage: command | grepRgReplace "testo1" "testo2"
+grepRgReplace() {
+  ## -N: ingnora i file nascosti
+  ## --passthru: restituisce anche le righe che non corrispondono 
+  ## -r: pattern di ricerca
+  rg -N --passthru "$1" -r "$2" 
+}
+export -f grepRgReplace
+
+# Usa tr per effettuare una sostituzione
+# Usage: command | grepReplaceLowerWithUpper
+grepReplaceLowerWithUpper() {
+  tr '[:lower:]' '[:upper:]'
+}
+export -f grepReplaceLowerWithUpper
+
+# Usa tr per effettuare una sostituzione
+# Usage: command | grepReplaceUpperWithLower
+grepReplaceUpperWithLower() {
+  tr '[:upper:]' '[:lower:]'
+}
+export -f grepReplaceUpperWithLower
+
+######################################################
+# Hashing functions (sha256, sha512, md5 and Blade3) #
+######################################################
+
+# SHA-512 hash checker
+# Usage: sha512check *.sha512
+sha512check() {
+  shasum --quiet --warn -a 512 --check "$@"
+}
+export -f sha512check
+
+# SHA-256 hash checker
+# Usage: sha256check *.sha256
+sha256check() {
+  shasum --quiet --warn -a 256 --check "$@"
+}
+export -f sha256check
+
+# MD5 hash checker
+# Usage: md5check *.md5
+md5check() {
+  # BUG md5sum's option --quiet and --warn are incompatible
+  # https://lists.gnu.org/r/bug-coreutils/2010-10/msg00104.html
+  md5sum --quiet --check "$@"
+}
+export -f md5check
+
+# Blade3 hash checker (multi-thread)
+# Usage: b3check *.b3
+b3check() {
+  #  - OPTION --num-threads is set by variable RAYON_NUM_THREADS
+  #  No needs of b3sum --num-threads 16 file.txt file.txt.b3 
+  b3sum --quiet --check "$@"
+}
+export -f b3check
+
+# Make .iso.md5 files from .iso files
+# Usage: md5HashingAllIsoFiles
+md5HashingAllIsoFiles() {
+  
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+
+  while IFS= read -r fileIso
+  do
+    if [ -f "$fileIso.md5" ]; then
+      echo "    Md5 hash exists: $fileIso.md5"
+    else
+      echo "    $(date) - Hashing (MD5) $fileIso"
+      touch "$fileIso.md5"
+      md5sum "$fileIso" > "$fileIso.md5"
+    fi
+  done < <(ls ./*.iso)
+}
+export -f md5HashingAllIsoFiles
+
+# Make .iso.b3 files from .iso files
+# Usage: blake3HashingAllIsoFiles
+blake3HashingAllIsoFiles() {
+  
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+
+  while IFS= read -r fileIso
+  do
+    if [ -f "$fileIso.b3" ]; then
+      echo "    b3 hash exists: $fileIso.b3"
+    else
+      echo "    $(date) - Hashing (b3) $fileIso"
+      touch "$fileIso.b3"
+      b3sum "$fileIso" > "$fileIso.b3"
+    fi
+  done < <(ls ./*.iso)
+}
+export -f blake3HashingAllIsoFiles
+
+# Make .iso.sha256 files from .iso files
+# Usage: sha256HashingAllIsoFiles
+sha256HashingAllIsoFiles() {
+  
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+
+  while IFS= read -r fileIso
+  do
+    if [ -f "$fileIso.sha256" ]; then
+      echo "    sha256 hash exists: $fileIso.sha256"
+    else
+      echo "    $(date) - Hashing (sha256) $fileIso"
+      touch "$fileIso.sha256"
+      sha256sum "$fileIso" > "$fileIso.sha256"
+    fi
+  done < <(ls ./*.iso)
+}
+export -f sha256HashingAllIsoFiles
+
+## rhash - calculate recoursive hash:
+## rhash --md5 --recursive  --verbose --output=checksum.md5 *
+
+# Make a report of file status against the file checksum.md5
+# Usage: md5VerboseReport --file=checksum.md5
+md5VerboseReport() {
+  ## --batch : non interactive mode
+  ## --check : check the hashes
+  ## --type : check the hash type MD5, sha256 or sha512
+  digup --batch --check --type=md5 "$@"
+}
+export -f md5VerboseReport
+
+# Make a report of file status against the file checksum.md5
+# Usage: md5Report --file=checksum.md5
+md5Report() {
+  ## --modified : print only "new", "CHANGED" or deleted file
+  md5VerboseReport --modified "$@"
+}
+export -f md5Report
 
 ########################
 #        ntfy          #
@@ -415,6 +535,70 @@ gitGrep() {
 }
 export -f gitGrep
 
+# Check the status of all repository
+gitStatusOfAllRepo() {
+  endColor='\033[0m]'
+  foregroundColor='35' 
+  backgroundColor='44'
+  boldStyle='1'
+  color="\033[${boldStyle};${foregroundColor};${backgroundColor}m"
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+
+  while IFS= read -r repo
+  do
+    # SC2103 – ShellCheck Wiki - Use a ( subshell ) to avoid having to cd back.
+    # You can run commands in a subshell using parenthesis ( command )
+    (
+      cd "$repo" || exit
+      echo -e "${color} ${PWD} \033[0m"
+
+      # Verifico se è un repo git
+      if [ -d ".git" ]; then
+        git status --short --branch
+        # git pull origin
+      fi
+    ) # close subshell
+  done < <(ls -d ./*/)
+}
+export -f gitStatusOfAllRepo
+
+# Updates all repository
+gitUpdateAllRepo() {
+  endColor='\033[0m]'
+  foregroundColor='35' 
+  backgroundColor='44'
+  boldStyle='1'
+  color="\033[${boldStyle};${foregroundColor};${backgroundColor}m"
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+
+  # Check if ssh-add is running
+  if [ -n "$SSH_AGENT_PID" ] && kill -0 "$SSH_AGENT_PID" 2>/dev/null; then
+    while IFS= read -r repo
+    do
+      # SC2103 – ShellCheck Wiki - Use a ( subshell ) to avoid having to cd back.
+      # You can run commands in a subshell using parenthesis ( command )
+      (
+        cd "$repo" || exit
+        echo -e "${color} ${PWD} \033[0m"
+
+        # Verifico se è un repo git
+        if [ -d ".git" ]; then
+          git pull origin
+        fi
+      ) # close subshell
+    done < <(ls -d ./*/)
+  else
+    echo "run ssh-add"
+  fi
+}
+export -f gitUpdateAllRepo
+
 ########################
 #         SVN          #
 ########################
@@ -580,6 +764,72 @@ convertAllWebmToMp4() {
   done
 }
 export -f convertAllWebmToMp4
+
+########################
+# Check files to burn  #
+########################
+
+checkFilesToBurn() {
+
+  # Ultimo aggiornamento 2022-06-20
+  # 
+  # Script che visualizza i file nascosti, i file di cache windows "thumbs.db"
+  # ed i file che hanno dei caratteri nel nome che non sono accettabili per noi.
+  #
+  # News:
+  # Versione 1.5 : Ricerca incompatibilità Windows, nomi dei file con piu di 64 caratteri.
+  # Versione 1.4 : Ricarca di cartelle annidate per piu di sette livelli
+  # Versione 1.3 : Ricerca file di cache windows "thumbs.db".
+  # Versione 1.2 : Ricerca file che hanno dei caratteri nel nome non accettabili.
+  # Versione 1.1 : Ricerca file con nome che finisce per "tilde" (~).
+  # Versione 1.0 : Ricerca file con nome che inizia per "punto" (.).
+
+  # Elenco dei caratteri accettati:
+  Alfabetici="a-zA-Z"
+  Numerici="0-9"
+  Punto="\."
+  Spazio="\ "
+  Slash="\/"
+  Trattino="-"
+  Under="_"
+  Dollaro='$'
+
+  # Talvolta l'ordine dei caratteri accettati crea confusione nel riconoscimento.
+  # Assicurarsi che cio non avvenga.
+  Accettati="$Dollaro$Under$Alfabetici$Numerici$Punto$Spazio$Slash$Trattino"
+
+  echo -e "Script che visualizza i file nascosti, i file di cache windows \"thumbs.db\" "
+  echo -e "ed i file che hanno dei caratteri nel nome che non sono accettabili per noi. "
+
+  echo -e "\n I file nascosti nelle varie directory e sottodirectory sono: "
+  find ./ -regextype posix-egrep -regex "\./.*\/['.'].*$" 
+  find ./ -regextype posix-egrep -regex "\./.*~.*"
+
+  echo -e "\n I file Thumbs.db nelle varie directory e sottodirectory sono: "
+  find ./ -iname '*thumbs.db'
+
+  echo -e "\n I file che hanno caratteri non accettati sono: "
+  find ./ -regextype posix-egrep -regex "\./.*[^$Accettati].*"
+
+  echo -e "\n I file che hanno un nome con più di 64 caratteri sono: "
+  find ./ -regextype posix-egrep -regex ".*" | sed 's/^.*\///g' | grep -E "^.{64,}"
+
+  echo -e "\n Le cartelle annidate per piu di 7 livelli sono: "
+
+  elenco=$(find ./ -type d -ls)
+  elenco2=$(echo "$elenco" | cut -d\. -f2 | sed "s/[^/]//g")
+
+  numDir=$(echo "$elenco" | wc --lines)
+
+  for i in $(seq 1 "$numDir")
+  do
+    nomeFile=$(echo "$elenco" | sed -n "$i"p\;"$i"q | cut -d\. -f2) #sed stampa solo la riga i-esima
+    numSlash=$(echo "$elenco2" | cut -d\  -f"$i") #Ricerca dell'ennesima riga di slash
+    numLivelli=$(echo "$numSlash" | wc --chars)
+    echo -e "\"$nomeFile\"*\t*$((numLivelli - 1))livelli." | sed 's/\\//g' | grep -e "8livelli."
+  done
+}
+export -f checkFilesToBurn
 
 ########################
 # Beautiful interfaces #
