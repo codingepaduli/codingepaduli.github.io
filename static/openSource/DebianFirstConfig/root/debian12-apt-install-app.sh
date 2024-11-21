@@ -102,7 +102,8 @@ fi
 ## net-tools: controllo del sottosistema di rete
 ## traceroute: traccia la rotta dei pacchetti
 ## fail2ban python3-systemd: nega l'accesso agli host che causano molteplici errori di autenticazione, controllando i log di systemd
-apt-get install $APT_OPTS ufw gufw iptraf-ng nmap net-tools traceroute fail2ban python3-systemd
+## whois: protocollo di rete che individua il provider internet a cui appartiene un indirizzo IP o DNS.
+apt-get install $APT_OPTS ufw gufw iptraf-ng nmap net-tools traceroute fail2ban python3-systemd whois
 
 if [ $? -ne 0 ]; then
     exit 1
@@ -136,7 +137,8 @@ if [ $? -ne 0 ]; then
 fi
 
 # acpi info, list-hardware info, linux standard base reporting utilities
-apt-get install $APT_OPTS acpi cpufrequtils lshw lshw-gtk lsb-base lsb-release
+## gsmartcontrol: ispeziona i dati SMART delle unità a disco rigido per determinarne lo stato di salute
+apt-get install $APT_OPTS acpi cpufrequtils lshw lshw-gtk lsb-base lsb-release gsmartcontrol
 
 if [ $? -ne 0 ]; then
     exit 1
@@ -151,7 +153,8 @@ fi
 ## jmtpfs: Filesystem USErmode for MTP devices
 ## wipe: secure deletion of files (overwriting it more times)
 ## rmlint-gui: GUI for finding duplicate files & directories
-apt-get install $APT_OPTS gparted testdisk ntfs-3g gnome-disk-utility gvfs gvfs-backends ifuse jmtpfs wipe rmlint-gui
+## exfat-utils: tools to create, check and label exFAT filesystems
+apt-get install $APT_OPTS gparted testdisk ntfs-3g gnome-disk-utility gvfs gvfs-backends ifuse jmtpfs wipe rmlint-gui exfat-utils
 
 if [ $? -ne 0 ]; then
     exit 1
@@ -245,7 +248,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-apt-get install $APT_OPTS bash bash-completion curl dash diffutils tldr-py
+## screen: gestisce le sessioni di terminale, quando la connessione cade o si chiude
+##         involontariamente un terminale, ci si può ricollegare e riprendere.
+apt-get install $APT_OPTS bash bash-completion curl dash diffutils tldr-py screen
 
 if [ $? -ne 0 ]; then
     exit 1
@@ -289,6 +294,24 @@ apt-get install $APT_OPTS boxes cowsay lolcat cmatrix
 if [ $? -ne 0 ]; then
     exit 1
 fi
+
+# Installa le guide
+## abs-guide: The Advanced Bash-Scripting Guide.
+## debian-reference-it: Debian system administration guide.
+## Developers-reference: guidelines and information for Debian developers.
+## ebook-dev—alp: Advanced Linux Programming
+
+# Installa i giochi
+## Gbrainy: Test di logica, matematica e memoria.
+## Hedgewars : Clone di worms multiplayer. 
+## OpenArena : Sparatutto 3D
+## PokerTH : Client per poker on line.
+## Quadrapassel : Tetris.
+## Super Tux 2 (clone GPL di Super Mario Bros)
+## Tanglet : gioco tipo paroliere.   
+## Torcs : Corse automobilistiche.
+	
+# apt-get install $APT_OPTS abs-guide debian-reference-it developers-reference ebook-dev—alp
 
 apt-get autoremove $APT_OPTS --purge
 

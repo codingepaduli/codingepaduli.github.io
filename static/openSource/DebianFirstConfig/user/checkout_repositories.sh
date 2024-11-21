@@ -31,6 +31,7 @@ myRepositories=(
     "j2ee-website-with-gradle"
     "fet-timetabling-compute"
     "gsuite_workspace_argo"
+    "find-missing-hash"
 )
 
 if [ ! -d "$WORKING_DIR" ]; then

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dab-Coding on Lab. informatica</title>
+    <link>http://codingepaduli.github.io/categories/dab-coding/</link>
+    <description>Recent content in Dab-Coding on Lab. informatica</description>
+    <generator>Hugo</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Sat, 16 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/dab-coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DAB e coding</title>
+      <link>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</guid>
+      <description>Esercizi sui diagrammi a blocchi e sul coding</description>
+    </item>
+  </channel>
+</rss>

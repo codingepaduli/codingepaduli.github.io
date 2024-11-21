@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DAB e coding - Lab. informatica</title>
+
+    <meta name="description" content="Esercizi sui diagrammi a blocchi e sul coding">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/dab-coding/dabecoding/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="DAB e coding">
+  <meta property="og:description" content="Esercizi sui diagrammi a blocchi e sul coding">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2023-07-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-16T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="DAB e coding">
+  <meta name="twitter:description" content="Esercizi sui diagrammi a blocchi e sul coding">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-07-23T00:00:00Z">23-07-2023</time>
+	<time class="meta__text" datetime="2024-11-16T00:00:00Z">(Ultima modifica: 16-11-2024)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/dab-coding/" rel="category">Dab-Coding</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 5 minuti 
+        ( 1002 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="dab-e-coding">DAB e coding</h1>
+<h2 id="regole-generali">Regole generali</h2>
+<p>Analizzare il problema descritto in calce e quindi realizzare e consegnare:</p>
+<ol>
+<li>il diagramma a blocchi (file di flowgorithm con estensione &ldquo;<code>.fprg</code>&rdquo;);</li>
+<li>l&rsquo;immagine vettoriale del diagramma a blocchi (file con estensione &ldquo;<code>.svg</code>&rdquo;);</li>
+<li>l&rsquo;immagine del diagramma a blocchi in formato bitmap (file con estensione &ldquo;<code>.bmp</code>&rdquo;);</li>
+<li>l&rsquo;immagine della finestra delle variabili (file con estensione &ldquo;<code>.png</code>);</li>
+<li>l&rsquo;immagine della finestra di esecuzione (file con estensione &ldquo;<code>.png</code>);</li>
+<li>la codifica nel linguaggio di programmazione (file con estensione &ldquo;<code>.c</code>&rdquo; o &ldquo;<code>.cpp</code>&rdquo;).</li>
+</ol>
+<p>Ogni nome di file deve iniziare con il proprio <code>cognome</code> (non il nome) seguito dalla data (in formato <code>aaaa-mm-gg</code>, usando il carattere &ldquo;trattino&rdquo; <code>-</code>, e non la barra, per separare i campi), dalla descrizione del file e dalla relativa estensione, ad esempio &ldquo;<code>Rossi 2022-03-01 finestra variabili.png</code>&rdquo;.</p>
+<p>Se espressamente indicato, la consegna deve avvenire in un unico pacchetto compresso (file in formato &ldquo;<code>.zip</code>&rdquo;), con nome del file che rispetta sempre la regola indicata in precedenza (<code>cognome</code> seguito dalla data in formato <code>aaaa-mm-gg</code>, dalla descrizione e dall&rsquo;estensione &ldquo;<code>.zip</code>&rdquo;).</p>
+<p>L&rsquo;esercitazione deve terminare 15 minuti prima del termine delle ore a disposizione; Prima di iniziare il lavoro, smartphone e smartwatch devono essere lasciati sulla cattedra o nello zaino nella zona comune.</p>
+<p>L&rsquo;esercitazione sarà annullata per:</p>
+<ul>
+<li>chi viene sorpreso in possesso di smartphone e/o smartwatch, anche se in tasca o sulla scrivania;</li>
+<li>chi viene sorpreso ad utilizzare le chat online o a inviarsi la soluzione via email;</li>
+<li>chi viene richiamato più di una volta a parlare con i propri compagni;</li>
+<li>chi viola le regole di laboratorio o le regole di comportamento condivise con l&rsquo;insegnante.</li>
+</ul>
+<p>Superato la scadenza temporale impostata, la piattaforma impedisce la consegna di ulteriori lavori. E&rsquo; compito dello studente organizzarsi per consegnare nel tempo previsto.</p>
+<p>Per ogni problema assegnato sarà valutata la correttezza della consegna e la qualità del codice prodotto, in particolare sarà valutato:</p>
+<ul>
+<li>se tutti i file sono stati consegnati;</li>
+<li>se il nome e l&rsquo;estensione di ogni file consegnato sono corretti;</li>
+<li>se l&rsquo;eventuale file compresso contiene tutti i file ed il nome è corretto;</li>
+<li>se nel DAB e nel codice sono presenti i commenti;</li>
+<li>se nel primo commento sono indicati autore, data, traccia, input ed output.</li>
+<li>se il codice consegnato compila ed esegue correttamente il programma.</li>
+</ul>
+<h2 id="equazione-di-secondo-grado">Equazione di secondo grado</h2>
+<p>Realizzare un programma che permetta di risolvere un equazione di secondo grado <code>ax^2 + bx + c = 0</code> che ha <code>delta = b b - 4ac</code>.</p>
+<p>A partire dai coefficienti <code>a</code>, <code>b</code> e <code>c</code> calcolare il <code>delta</code> e visualizzarlo in output. Inoltre:</p>
+<ul>
+<li>se <code>delta &gt; 0</code> allora scrivere in output <code>&quot;L'equazione ammette due soluzioni reali e distinte&quot;</code>;</li>
+<li>se <code>delta = 0</code> allora scrivere in output <code>&quot;L'equazione ammette due soluzioni reali e coincidenti&quot;</code>;</li>
+<li>se <code>delta &lt; 0</code> allora scrivere in output <code>&quot;L'equazione ammette due soluzioni immaginarie&quot;</code>.</li>
+</ul>
+<p>Sia nel caso del delta maggiore di zero, sia nel caso di delta uguale a zero, calcolare le soluzioni:</p>
+<ul>
+<li><code>x1 = (-b -Sqrt(delta))/(2*a)</code>;</li>
+<li><code>x2 = (-b +Sqrt(delta))/(2*a)</code>;</li>
+</ul>
+<h2 id="calcolatrice">Calcolatrice</h2>
+<p>Realizzare un programma che permetta di creare una semplice calcolatrice che svolge un operazione <code>T</code> su 2 numeri.</p>
+<p>A partire dai due numeri, svolgere l&rsquo;operazione richiesta secondo questo schema:</p>
+<ul>
+<li>se <code>T = 1</code> calcolare e visualizzare la somma dei 2 numeri;</li>
+<li>se <code>T = 2</code> calcolare e visualizzare la differenza dei 2 numeri;</li>
+<li>se <code>T = 3</code> calcolare e visualizzare il prodotto dei 2 numeri;</li>
+<li>se <code>T = 4</code> calcolare e visualizzare la divisione dei 2 numeri.</li>
+</ul>
+<h2 id="distanza-tra-due-punti">Distanza tra due punti</h2>
+<p>Realizzare un programma che permetta di calcolare la distanza tra due punti, <code>A</code> di coordinate (x1, y1) e <code>B</code> di coordinate (x2, y2), utilizzando il teorema di Pitagora.</p>
+<h2 id="calcolo-dellarea-e-del-perimetro-delle-figure-geometriche-indicate">Calcolo dell&rsquo;area e del perimetro delle figure geometriche indicate</h2>
+<p>Realizzare un programma che, a partire da un numero <code>D</code> inserito dall&rsquo;utente, permetta di calcolare:</p>
+<ul>
+<li>perimetro ed area del quadrato di lato D;</li>
+<li>circonferenza ed area del cerchio di raggio D;</li>
+<li>perimetro ed area del triangolo equilatero di lato D, utilizzando la formula di calcolo dell&rsquo;area <code>SQRT(3/4) * D * D</code>.</li>
+</ul>
+<h2 id="maggiore-del-limite">Maggiore del limite</h2>
+<p>Realizzare un programma che permetta di inserire 3 numeri e reinizializzare a zero quelli maggiori di 400 e di incrementare di 10 quelli minori o uguali a 400.</p>
+<p>Al termine visualizzare i numeri risultanti.</p>
+<h2 id="media-settimanale-delle-temperature">Media settimanale delle temperature</h2>
+<p>Progettare un programma che prenda in input le temperature giornaliere per l&rsquo;intera settimana e ne calcoli la media; Se la media è inferiore ad 8,
+visualizzare il messaggio indicante che la settimana è stata fredda, altrimenti se la media è superiore a 24 visualizzare il messaggio indicante che la settimana è stata calda, altrimenti visualizzare il messaggio che la media settimanale è nella norma;</p>
+<h2 id="media-dei-voti-di-informatica">Media dei voti di informatica</h2>
+<p>Progettare un programma che prenda in input il voto scritto, orale e pratico di informatica del primo quadrimestre e ne calcoli la media; prenda in input poi il voto scritto, orale e pratico di informatica del secondo quadrimestre e ne calcoli la media;</p>
+<p>Se la media del primo quadrimestre è inferiore a quella del secondo quadrimestre, visualizzi un messaggio che la media è in calo, altrimenti se la media è uguale visualizzi un messaggio che la media è uguale altrimenti visualizzi un messaggio che la media è in aumento.</p>
+<h2 id="data-valida">Data valida</h2>
+<p>Progettare un programma che permetta all&rsquo;utente di inserire tre numeri per giorno, mese ed anno e di verificare se essi corrispondono effettivamente ad una data valida. L&rsquo;output deve essere un messaggio indicante &ldquo;la data è valida&rdquo; oppure &ldquo;la data è invalida&rdquo;.</p>
+<p>Traccia extra: Verificare le date per il mese di Febbraio (giorni 30 e 31 non sono validi), verificare che il giorno 31 per i mesi pari non sia valido.</p>
+<p>Traccia extra - extra: Verificare che la data sia valida in caso di anno bisestile;</p>
+<h2 id="ordine-crescente-o-decrescente-2-numeri">Ordine crescente o decrescente 2 numeri</h2>
+<p>Realizzare un programma che permetta di visualizzare in ordine crescente o decrescente i due 2 numeri inseriti dall&rsquo;utente.</p>
+<p>Svolgere l&rsquo;operazione richiesta secondo questo schema:</p>
+<ul>
+<li>se il tipo di ordinamento <code>TO</code> è uguale a <code>C</code>, allora  visualizzare i 2 numeri con ordine crescente;</li>
+<li>se il tipo di ordinamento <code>TO</code> è uguale a <code>D</code>, allora  visualizzare i 2 numeri con ordine decrescente.</li>
+</ul>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2024 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

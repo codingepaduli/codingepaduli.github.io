@@ -23,6 +23,22 @@ helpPandocMdAndYmlToPdf() {
 export -f helpPandocMdAndYmlToPdf
 '
 
+#########################
+# mencoder - anacrontab #
+#########################
+
+# You can download streamed file from mms and rtsp protocol with mencoder :
+alias downloadRstpStreaming='mencoder -dumpstream -dumpfile music.ra rtsp://site/music.ra'
+
+# Convertire da mp4 ad avi:
+alias convertMp4ToAvi='mencoder -oac copy -ovc copy file.mp4 -o file.avi'
+	
+# Aggiungere i sottotitoli da un file separato ad un video avi: 
+alias convertSubtitlesToAvi='mencoder -oac copy -ovc xvid -xvidencopts fixed_quant=5 -sub file_sottotitoli.srt -sub-bg-alpha 0 -subfont-text-scale 4 -utf8 -o file_output.avi file_input.avi'
+
+# Copiare piu parti video in un unico file :
+alias convertAviFileListInALoneAviFile='mencoder -oac copy -ovc copy parte1.avi parte2.avi -o finale.avi'
+
 ########################
 # crontab - anacrontab #
 ########################

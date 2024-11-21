@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="autore"/>
+        <attribute name="authors" value="UtenteDoc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-14 12:45:36 "/>
+        <attribute name="created" value="VXRlbnRlRG9jO1RJTkYyLURPQzsyMDI0LTExLTE0OyIxMjoyMToyNSAiOzI3MDQ="/>
+        <attribute name="edited" value="VXRlbnRlRG9jO1RJTkYyLURPQzsyMDI0LTExLTE0OyIxMjo0NTozNiAiOzE7MjgyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="autore&#13;&#10;data 14-11-2024&#13;&#10;&#13;&#10;Programma che ordina 2 numneri in maniera crescente o decrescente&#13;&#10;&#13;&#10;INPUT: N1, N2, TO&#13;&#10;OUTPUT: sequenza numeri crescente o decrescente"/>
+            <output expression="&quot;Inserisci i 2 numeri e il tipo di ordinamento&quot;" newline="True"/>
+            <declare name="N1, N2, S" type="Integer" array="False" size=""/>
+            <declare name="TO" type="String" array="False" size=""/>
+            <input variable="N1"/>
+            <input variable="N2"/>
+            <input variable="TO"/>
+            <if expression="TO == &quot;C&quot;">
+                <then>
+                    <if expression="N1 &gt; N2">
+                        <then>
+                            <output expression="N2" newline="True"/>
+                            <output expression="N1" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="N1" newline="True"/>
+                            <output expression="N2" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="N1 &gt; N2">
+                        <then>
+                            <output expression="N1" newline="True"/>
+                            <output expression="N2" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="N2" newline="True"/>
+                            <output expression="N1" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
