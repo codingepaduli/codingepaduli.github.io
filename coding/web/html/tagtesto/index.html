@@ -232,8 +232,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 12 minuti 
-        ( 2466 parole)
+        Tempo di lettura 15 minuti 
+        ( 3038 parole)
     </span>
 </div></div>
     </header>
@@ -313,26 +313,81 @@ l&rsquo;altra per creare le formattazioni di testo desiderate.</p>
 </span></span><span style="display:flex;"><span>      &lt;ins&gt;testo&lt;/ins&gt;
 </span></span><span style="display:flex;"><span>    &lt;/mark&gt;
 </span></span><span style="display:flex;"><span>&lt;/strong&gt;
-</span></span></code></pre></div><h2 id="etichetta-per-data-e-ora">Etichetta per data e ora</h2>
-<p>La rappresentazione di date e orari su internet deve seguire le regole dello standard internazionale
-<a href="https://it.wikipedia.org/wiki/ISO_8601">ISO 8601 Information interchange - Representation of dates and times</a>. Questo standard nasce per risolvere problemi di comprensione dei formati di date e ore utilizzati nei vari paesi, ad esempio la data rappresentata con 04-09-03 può indicare il:</p>
+</span></span></code></pre></div><h2 id="data-e-ora">Data e ora</h2>
+<p>Date e orari sono spesso ambigui in contesto internazionale.</p>
+<p>Ad esempio la data rappresentata con 04-09-03 può indicare il:</p>
 <ul>
-<li>4 settembre 2003 (o addirittura 1903) in Europa e altri Paesi,</li>
-<li>9 aprile 2003 negli Stati Uniti d&rsquo;America,</li>
+<li>4 settembre 2003 (o addirittura 1903) in Europa e altri Paesi;</li>
+<li>9 aprile 2003 negli Stati Uniti d&rsquo;America;</li>
 <li>3 settembre 2004 secondo lo standard ISO 8601.</li>
 </ul>
-<p>Il formato in cui scrivere date e ore deve essere <code>YYYY</code>-<code>MM</code>-<code>DD</code>T<code>hh</code>:<code>mm</code>:<code>ss</code>.<code>KKK</code>, con il seguente significato:</p>
+<p>Ulteriore esempio, ci comunicano via email che il cliente in Giappone ha fissato un incontro con il fornitore Americano alle ore 11:00, noi siamo a Londra e dobbiamo partecipare. Ma le 11:00 sono riferite all&rsquo;orario Americano, Giapponese o inglese? Inoltre, è riferita all&rsquo;ora solare oppure all&rsquo;ora legale?</p>
+<p>Per risolvere problemi di comprensione di date e orari utilizzati nei vari paesi, il fuso orario internazionale di riferimento è il <strong>tempo coordinato universale</strong>, abbreviato con la sigla <strong>UTC</strong>, uno standard di Internet e del World Wide Web che è utilizzato per le comunicazioni internazionali, la navigazione, il commercio, i voli.</p>
+<p>Ogni data ed orario su internet deve essere indicato in UTC e rappresentato secondo le regole dello standard internazionale
+<a href="https://it.wikipedia.org/wiki/ISO_8601">ISO 8601 Information interchange - Representation of dates and times</a> del 2019, che su internet è specificato dalle RFC 3339 del 2004 e dall&rsquo;aggiornamento tramite RFC 9557 del 2024.</p>
+<p>Lo standard internazionale definisce il seguente formato in cui scrivere date e orari: <code>YYYY</code>-<code>MM</code>-<code>DD</code>T<code>hh</code>:<code>mm</code>:<code>ss</code>.<code>KKK</code> <code>timezone</code>.</p>
+<p>I gruppi di lettere indicati hanno il seguente significato:</p>
 <ul>
-<li><code>YYYY</code>: Anno;</li>
-<li><code>MM</code>: Mese;</li>
-<li><code>GG</code>: Giorno;</li>
+<li><code>YYYY</code>: Anno (4 cifre);</li>
+<li><code>MM</code>: Mese (2 cifre);</li>
+<li><code>GG</code>: Giorno (2 cifre);</li>
 <li>T: è un carattere di separazione, deve essere inserito per separare la data dall&rsquo;ora;</li>
-<li><code>hh</code>: Ora;</li>
-<li><code>mm</code>: Minuti;</li>
-<li><code>ss</code>: Secondi;</li>
-<li><code>kkk</code>: Millisecondi.</li>
+<li><code>hh</code>: Ora (2 cifre);</li>
+<li><code>mm</code>: Minuti (2 cifre);</li>
+<li><code>ss</code>: Secondi (2 cifre);</li>
+<li><code>kkk</code>: Millisecondi (3 cifre);</li>
+<li><code>timezone</code>: il fuso orario;</li>
 </ul>
-<p>Alcuni campi possono essere omessi, per maggiori informazioni si rimanda alle specifiche del W3C.</p>
+<p>La separazione dei campi della data deve avvenire col carattere &ldquo;trattino&rdquo; <code>-</code>, la separazione dei campi dell&rsquo;ora deve avvenire col carattere &ldquo;due punti&rdquo; <code>:</code>, mentre quella dei millisecondi col carattere &ldquo;punto&rdquo; <code>.</code>.</p>
+<p>Alcuni campi possono essere omessi, ad esempio i millisecondi e i secondi, per maggiori informazioni si rimanda alle specifiche del W3C.</p>
+<p>La <strong>timezone</strong> rappresenta la differenza di orario tra il paese a cui l&rsquo;orario si riferisce e l&rsquo;orario UTC. Questa differenza è espressa positivamente o negativamente in ore e minuti, ad esempio <code>+03:30</code> oppure <code>-07:45</code>.</p>
+<p>Prendiamo l&rsquo;orario italiano:</p>
+<ul>
+<li>durante il periodo estivo è definito &ldquo;ora solare&rdquo; ed indicato come <code>+01:00</code> di differenza;</li>
+<li>durante il periodo invernale è definito &ldquo;ora legale&rdquo; ed indicato come <code>+02:00</code> di differenza;</li>
+</ul>
+<p>Quindi, le ore 10:30 (ora italiana) del 10 gennaio 2024 devono essere rappresentate calcolando l&rsquo;orario UTC e poi indicando la differenza di fuso orario, come nel seguente esempio:</p>
+<p><code>2024-01-10T08:30:00.000+02:00</code></p>
+<p>Allo stesso modo, le ore 10:30 (ora italiana) del 10 giugno 2024 devono essere calcolate secondo l&rsquo;orario UTC e rappresentate nella seguente forma:</p>
+<p><code>2024-06-10T09:30:00.000+01:00</code></p>
+<p>Si può notare la differenza nella rappresentazione della timezone tra l&rsquo;ora solare e legale.</p>
+<p>Le zone temporali Europee sono:</p>
+<ul>
+<li>i paesi che seguono l&rsquo;ora inglese, differenza <code>+00:00</code>;</li>
+<li>i paesi che seguono l&rsquo;ora centrale europea (CET), differenza <code>+01:00</code>;</li>
+<li>i paesi che seguono l&rsquo;ora est europea (EET), differenza <code>+02:00</code>;</li>
+<li>i paesi che seguono l&rsquo;ora di Mosca, differenza <code>+03:00</code>.</li>
+</ul>
+<p>Le ore 10:30 (ora est europea) del 10 gennaio 2024 devono essere rappresentate calcolando l&rsquo;orario UTC e poi indicando la differenza, come nel seguente esempio:</p>
+<p><code>2024-06-10T08:30:00.000+02:00</code></p>
+<p>Le zone temporali del nord america sono:</p>
+<ul>
+<li>Atlantic Standard Time (AST), differenza <code>-04:00</code>;</li>
+<li>Eastern Standard Time (EST), differenza <code>-05:00</code>;</li>
+<li>Central Standard Time Zone (CST), differenza <code>-06:00</code>;</li>
+<li>Mountain Standard Time (MST), differenza <code>-07:00</code>;</li>
+<li>Pacific Standard Time (PST), differenza <code>-08:00</code>;</li>
+<li>Alaska Standard Time (AKST), differenza <code>-09:00</code>;</li>
+<li>Hawaii–Aleutian Standard Time (HST), differenza <code>-10:00</code>.</li>
+</ul>
+<p>Le stesse zone temporali che nel periodo estivo utilizzano l&rsquo;ora legale (orario estivo) sono definite non piu con &ldquo;Standard Time&rdquo; ma con &ldquo;Daylight saving Time&rdquo;, e riducono la differenza di un&rsquo;ora.</p>
+<p>Abbiamo quindi:</p>
+<ul>
+<li>Atlantic Daylight saving Time (ADT), differenza <code>-03:00</code>;</li>
+<li>Eastern Daylight saving Time (EDT), differenza <code>-04:00</code>;</li>
+<li>Central Daylight saving Time Zone (CDT), differenza <code>-05:00</code>;</li>
+<li>Mountain Daylight saving Time (MDT), differenza <code>-06:00</code>;</li>
+<li>Pacific Daylight saving Time (PDT), differenza <code>-07:00</code>;</li>
+<li>Alaska Daylight saving Time (AKDT), differenza <code>-08:00</code>;</li>
+<li>Hawaii–Aleutian Daylight saving Time (HDT), differenza <code>-09:00</code>.</li>
+</ul>
+<p>I paesi australiani nella zona temporale standard centro-occidentale australiana (ACWST) hanno una differenza di 8 ore e 45 minuti, quindi <code>+08:45</code>.</p>
+<p>La lista completa delle zone temporali si trova qui:</p>
+<p><a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">https://en.wikipedia.org/wiki/List_of_tz_database_time_zones</a>.</p>
+<p>L&rsquo;aggiornamento del 2024 del formato di rappresentazione della data e dell&rsquo;ora permette di aggiungere anche la zona temporale (tra parentesi quadre), come nei seguenti esempi:</p>
+<p><code>2024-06-10T09:30:00.000-08:00[America/Los_Angeles]</code></p>
+<p><code>2022-07-08T00:14:07Z[Europe/London]</code></p>
+<h3 id="etichetta-per-data-e-ora">Etichetta per data e ora</h3>
 <p>Per indicare una data e/o un&rsquo;ora è possibile utilizzare l&rsquo;etichetta <code>time</code> che prevede un unico attributo:</p>
 <ul>
 <li><code>datetime</code> indica della data in formato ISO 8601.</li>
@@ -341,7 +396,7 @@ l&rsquo;altra per creare le formattazioni di testo desiderate.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;time datetime=<span style="color:#009c00">&#34;2021-01-25&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    25 Gennaio 2021
 </span></span><span style="display:flex;"><span>&lt;/time&gt;
-</span></span><span style="display:flex;"><span>&lt;time datetime=<span style="color:#009c00">&#34;2001-05-15T19:00&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;time datetime=<span style="color:#009c00">&#34;2001-05-15T19:00+02:00&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    15 Maggio 2001 - ore 19.00
 </span></span><span style="display:flex;"><span>&lt;/time&gt;
 </span></span></code></pre></div><h2 id="liste-puntate-o-numerate">Liste puntate o numerate</h2>
@@ -620,7 +675,7 @@ ipertesto (un&rsquo;altra pagina web). Questa etichetta ha gli attributi:</p>
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2024 Lab. informatica.
+			&copy; 2025 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

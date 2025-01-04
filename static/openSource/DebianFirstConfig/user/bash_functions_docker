@@ -69,7 +69,7 @@ export -f dockerGcc
 # TEST: dockerGpp --version
 # RUN:  dockerGpp -o myapp myapp.c
 dockerGpp() {
-  dockerGcc -lstdc++ "$@"
+  dockerGcc -lstdc++ -lm "$@"
 }
 export -f dockerGpp
 

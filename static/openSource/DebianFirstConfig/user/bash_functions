@@ -762,7 +762,7 @@ export -f smontaPhone
 ##############################
 
 # Test: 
-# Run: convertAllM4aToMp3
+# Run: convertAllSvgToPng
 convertAllSvgToPng() {
   # nullglob: if there is no file, don't output anything
   # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
@@ -776,6 +776,7 @@ convertAllSvgToPng() {
     inkscape -e "$newFileName" "$file"
   done
 }
+# export -f convertAllSvgToPng
 
 ############################
 #          FFmpeg          #
@@ -791,8 +792,8 @@ convertAllSvgToPng() {
 # -c:v copy         don't re-encode video, only copy video
 # -ar               Set the audio sampling frequency.
 # -ac               Set the number of audio channels
-# The quality argument "-q:a Value" has a range 0-9 (lower value is higher quality).
-# It sets the variable bit rate, see https://trac.ffmpeg.org/wiki/Encode/MP3
+# -q:a Value        The quality argument has a range 0-9 (lower value is higher quality)
+#   It sets the variable bit rate, see https://trac.ffmpeg.org/wiki/Encode/MP3
 #   - 0-3 will normally produce transparent results
 #   - 4 (default) should be close to perceptual transparency
 #   - 6 usually produces an "acceptable" quality.
@@ -859,6 +860,36 @@ convertAllWebmToMp4() {
   done
 }
 export -f convertAllWebmToMp4
+
+# Run: convertAllMp4VideoToMp3Audio
+convertAllMp4VideoToMp3Audio() {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+
+  for file in *.mp4
+  do
+    
+    ffmpeg -i "${file}" -vn -ar 44100 -ac 2 -q:a 2 "new-${file}.mp3";
+  done
+}
+export -f convertAllMp4VideoToMp3Audio
+
+# Run: convertAllFlvVideoToMp3Audio
+convertAllFlvVideoToMp3Audio() {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+
+  for file in *.flv
+  do
+    
+    ffmpeg -i "${file}" -vn -ar 44100 -ac 2 -q:a 2 "new-${file}.mp3";
+  done
+}
+export -f convertAllFlvVideoToMp3Audio
 
 ########################
 # Check files to burn  #

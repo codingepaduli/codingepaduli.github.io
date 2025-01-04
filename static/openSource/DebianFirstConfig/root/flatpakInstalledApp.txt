@@ -24,11 +24,12 @@ com.vscodium.codium
 # eu.scarpetta.PDFMixTool
 # im.pidgin.Pidgin
 # io.atom.Atom
+io.github.martchus.syncthingtray
 # io.github.peazip.PeaZip
 # io.dbeaver.DBeaverCommunity
 # io.mpv.Mpv
 io.podman_desktop.PodmanDesktop
-me.kozec.syncthingtk
+me.kozec.syncthingtk  ## deprecated, use io.github.martchus.syncthingtray. For info see https://github.com/syncthing-gtk/syncthing-gtk/issues/90 AND https://github.com/flathub/me.kozec.syncthingtk/pull/193
 # net.christianbeier.Gromit-MPX
 # net.sourceforge.Klavaro
 # org.audacityteam.Audacity

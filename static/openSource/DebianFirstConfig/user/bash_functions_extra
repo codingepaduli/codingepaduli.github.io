@@ -152,7 +152,7 @@ export -f flatpakListAllInstalledRuntimes
 
 # Display only the specified apps and the bounded runtime
 # Usage: flatpakFilterRemoteRuntimeOfInstalledApps
-# Usage: flatpakFilterRemoteRuntimeOfInstalledApps 'org.gnome.Platform/x86_64/45'
+# Usage: flatpakFilterRemoteRuntimeOfInstalledApps 'org.gnome.Platform/x86_64/40'
 flatpakFilterRemoteRuntimeOfInstalledApps() {
     # Creo la MAPPA di voci (app -> runtime) dal repository remoto
     declare -A remoteAppArray
