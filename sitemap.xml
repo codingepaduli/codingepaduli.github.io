@@ -154,11 +154,29 @@
     <loc>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</loc>
     <lastmod>2024-11-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/interesting/alohomora/</loc>
-    <lastmod>2024-11-10T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/categories/bash/</loc>
+    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2024-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/coding/</loc>
+    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/shell/linkbash/</loc>
+    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/shell/bash/intro/</loc>
+    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/shell/bash/</loc>
+    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/shell/</loc>
+    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/alohomora/</loc>
+    <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/frameremover/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
@@ -180,9 +198,6 @@
   </url><url>
     <loc>http://codingepaduli.github.io/coding/gappsscript/</loc>
     <lastmod>2024-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/coding/</loc>
-    <lastmod>2024-11-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/gappsscript/</loc>
     <lastmod>2024-10-20T00:00:00+00:00</lastmod>
@@ -260,6 +275,9 @@
     <lastmod>2023-02-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/link-dab-coding/</loc>
+    <lastmod>2023-02-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/dab-coding/</loc>
     <lastmod>2023-02-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/mediapipe/flappybird/</loc>
@@ -341,9 +359,6 @@
     <lastmod>2020-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/powershell/</loc>
-    <lastmod>2020-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/shell/</loc>
     <lastmod>2020-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-path/</loc>

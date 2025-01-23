@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="UtentePC7"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-01-23 12:59:03 "/>
+        <attribute name="created" value="VXRlbnRlUEM3O1RJTkYyLVBDNzsyMDI1LTAxLTIzOyIwODoyNjoxNyAiOzI2Mjc="/>
+        <attribute name="edited" value="VXRlbnRlUEM3O1RJTkYyLVBDNzsyMDI1LTAxLTIzOyIxMjo1OTowMyAiOzY7MjczNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Autore: _____________&#13;&#10;Data:23/01/2025&#13;&#10;Traccia:Realizzare un DAB di un programma che permetta di calcolare la distanza tra due punti, A di coordinate (x1, y1) e B di coordinate (x2, y2), utilizzando il teorema di Pitagora.&#13;&#10;I: a(x1,y1), b(x2, y2)&#13;&#10;o: d"/>
+            <comment text="variabili input"/>
+            <declare name="a, x1, x2, b, y1, y2" type="Integer" array="False" size=""/>
+            <comment text="variabile output"/>
+            <declare name="d" type="Real" array="False" size=""/>
+            <comment text="richiesta variabili"/>
+            <output expression="&quot;inserisci coordinata x1&quot;" newline="True"/>
+            <input variable="x1"/>
+            <output expression="&quot;inserisci coordinata x2&quot;" newline="True"/>
+            <input variable="x2"/>
+            <comment text="elevazione alla seconda della differenza delle due coordinate ascisse"/>
+            <assign variable="a" expression="(x1-x2)^2"/>
+            <output expression="a" newline="True"/>
+            <comment text="richiesta variabili"/>
+            <output expression="&quot;inserisci coordinata y1&quot;" newline="True"/>
+            <input variable="y1"/>
+            <output expression="&quot;inserisci coordinata y2&quot;" newline="True"/>
+            <input variable="y2"/>
+            <comment text="elevazione alla seconda della differenza delle due coordinate ordinate"/>
+            <assign variable="b" expression="(y1-y2)^2"/>
+            <output expression="b" newline="True"/>
+            <comment text="calcolo distanza tra i due punti"/>
+            <assign variable="d" expression="sqrt(a+b)"/>
+            <comment text="scrittura risultato finale"/>
+            <output expression="&quot;la distanza tra i due punti e'&quot;" newline="True"/>
+            <output expression="d" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

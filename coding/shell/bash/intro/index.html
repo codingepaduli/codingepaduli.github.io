@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Esercizi in bash - Lab. informatica</title>
+
+    <meta name="description" content="Esercizi in bash">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/shell/bash/intro/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="Esercizi in bash">
+  <meta property="og:description" content="Esercizi in bash">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2025-01-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-05T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="Esercizi in bash">
+  <meta name="twitter:description" content="Esercizi in bash">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-01-05T00:00:00Z">05-01-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/shell/" rel="category">Shell</a>, <a class="meta__link" href="/categories/bash/" rel="category">Bash</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 3 minuti 
+        ( 574 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="esercizi-in-bash">Esercizi in bash</h1>
+<h2 id="controllo-esistenza-file">Controllo esistenza file</h2>
+<p>Si realizzi uno script <code>controlla_esistenza_file.sh</code> che prende come parametro il nome di un file ed, ad intervalli di 20 secondi, controlli che il file sia stato creato, restando in attesa fino alla creazione.</p>
+<p><a href="/static/coding/shell/bash/controlla_esistenza_file.sh" title="Controllo esistenza file">controlla_esistenza_file.sh</a>.</p>
+<h2 id="crea-nodi-html">Crea nodi HTML</h2>
+<p>Si realizzi uno script <code>crea_nodi_html.sh</code> che genera 30 file vuoti denominati <code>node1.html</code>, <code>node2.html</code>, &hellip; , <code>node30.html</code>.</p>
+<p>In ogni file <code>nodeXXX.html</code> inserire poi la stringa
+<code>&lt;HTML&gt; &lt;HEAD&gt; &lt;TITLE&gt; nodoXXX.html &lt;/TITLE&gt; &lt;/HEAD&gt; &lt;BODY&gt; nodoXXX.html &lt;/BODY&gt; &lt;/HTML&gt;</code>.</p>
+<p>Per ciascun file HTML aggiungere all&rsquo;inizio del file una riga di commento che indica il proprietario del file e la data di ultima modifica del file. Nota che commenti HTML si applicano nella forma <!-- Commento -->.</p>
+<p><a href="/static/coding/shell/bash/crea_nodi_html.sh" title="Crea nodi HTML">crea_nodi_html.sh</a>.</p>
+<h2 id="elenca-file">Elenca file</h2>
+<p>Si realizzi uno script <code>elenca_file.sh</code> che prende come parametro una directory e un file, cerchi file regolari e directory nella directory passata come argomento e:</p>
+<ul>
+<li>aggiungere la lettera &ldquo;F&rdquo; prima del nome per i file regolari;</li>
+<li>aggiungere la lettera &ldquo;D&rdquo; per le directory;</li>
+</ul>
+<p>L&rsquo;output deve essere indirizzato nel file passato come argomento.</p>
+<p><a href="/static/coding/shell/bash/elenca_file.sh" title="Elenca file">elenca_file.sh</a>.</p>
+<h2 id="quadrato">Quadrato</h2>
+<p>Si realizzi uno script <code>drawsquare.sh</code> che prende come parametro un numero <code>n</code> e disegni un quadrato di lato <code>n</code>, gli angoli li disegni col segno più <code>+</code>, i lati col trattino e il contenuto con degli asterischi <code>*</code>.</p>
+<p><a href="/static/coding/shell/bash/drawsquare.sh" title="Quadrato">drawsquare.sh</a>.</p>
+<h2 id="numero-file-in-sotto-directory">Numero file in sotto-directory</h2>
+<p>Si realizzi uno script <code>num_subdir.sh</code> che calcola il numero di file delle sotto-directory di una certa directory <code>ambiente</code>, e stampa a video per ogni directory il messaggio &ldquo;La sotto-directory NomeDir contiene N file&rdquo; (è molto importante riuscire a comporre esattamente questo messaggio).</p>
+<p>Gli eventuali file contenuti nella directory NomeDir devono essere saltati.</p>
+<p>Lo script <code>num_subdir_prepare.sh</code> servirà a preparare la cartella <code>ambiente</code>:</p>
+<ul>
+<li><a href="/static/coding/shell/bash/num_subdir_prepare.sh" title="Preparazione numero file in sotto-directory">num_subdir_prepare.sh</a>.</li>
+<li><a href="/static/coding/shell/bash/num_subdir.sh" title="Numero file in sotto-directory">num_subdir.sh</a>.</li>
+</ul>
+<h2 id="seleziona-righe">Seleziona righe</h2>
+<p>Si realizzi uno script <code>seleziona_righe.sh</code> che, dato un file di testo esistente <code>elenco.txt</code>, visualizza la riga di tale file che viene lessicograficamente per seconda.</p>
+<p>Ad esempio se il contenuto di un file elenco è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>valeria
+</span></span><span style="display:flex;"><span>aldo
+</span></span><span style="display:flex;"><span>roberta
+</span></span><span style="display:flex;"><span>bruno
+</span></span><span style="display:flex;"><span>sandro
+</span></span><span style="display:flex;"><span>paola
+</span></span></code></pre></div><p>il comando deve creare il file nominativo con il seguente contenuto:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>bruno
+</span></span></code></pre></div><p>Tale script dovrà inoltre prendere come argomento di input il nome di un file non esistente, e creare questo file che deve essere formato dalle prime 3 righe del file <code>elenco.txt</code> e dalle ultime 2 righe del file <code>lista.txt</code>. Non devono essere usati file temporanei.</p>
+<ul>
+<li><a href="/static/coding/shell/bash/seleziona_righe.sh" title="Seleziona righe">seleziona_righe.sh</a>.</li>
+<li><a href="/static/coding/shell/bash/seleziona_righe_elenco.txt" title="Seleziona righe - elenco">seleziona_righe_elenco.txt</a>.</li>
+<li><a href="/static/coding/shell/bash/seleziona_righe_lista.txt" title="Seleziona righe - lista">seleziona_righe_lista.txt</a>.</li>
+</ul>
+<h2 id="stringa-da-cellulare">Stringa da cellulare</h2>
+<p>Si realizzi uno script <code>stringa_da_cellulare.sh</code> che prenda come parametri una sequenza di caratteri, separati tra loro da uno spazio, e li trasformi in numeri tramite la seguente regola (simile a quella dei cellulari):</p>
+<p>0=ABC, 1=DEF, 2=GHI, 3=JKL, 4=MNO, 5=PQR, 6=STU, 7=VWX, 8=YZ</p>
+<p>E&rsquo; OBBLIGATORIO usare la struttura di controllo case (e NON l’if).
+L&rsquo;output deve essere stampato sia su più righe, che su un&rsquo;unica riga.</p>
+<p>Esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>$ ./stringa_da_cellulare.sh A S T N O B
+</span></span></code></pre></div><p>L&rsquo;output deve essere:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>output: 0 6 6 4 4 0
+</span></span></code></pre></div><ul>
+<li><a href="/static/coding/shell/bash/stringa_da_cellulare.sh" title="Stringa da cellulare">stringa_da_cellulare.sh</a>.</li>
+</ul>
+<h2 id="tipo-di-tasto">Tipo di tasto</h2>
+<p>Si realizzi uno script <code>tipo_tasto.sh</code> che prenda come argomento di input un carattere ed indichi se si tratta di una lettera minuscola, lettera maiuscola, cifra numerica o altro.</p>
+<ul>
+<li><a href="/static/coding/shell/bash/tipo_tasto.sh" title="Tipo di tasto">tipo_tasto.sh</a>.</li>
+</ul>
+<h2 id="controlla-utente">Controlla utente</h2>
+<p>Si realizzi uno script <code>controlla_utenti_loggati.sh</code> che prenda come parametro <code>n</code> (gli ultimi n accessi al sistema) ed <code>UserName</code> (l’utente), controlli se l’utente <code>UserName</code> esiste (quindi il suo UserName è contenuto all’interno del file <code>/etc/passwd</code>) e, nel caso esista, controlli se risulta tra gli ultimi <code>n</code> utenti collegati al sistema (<code>who | tail --lines=$n</code> visualizza gli ultimi).</p>
+<p>Esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>$ ./controlla.sh 5 io
+</span></span></code></pre></div><p>L&rsquo;output deve essere:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>L’utente UserName esiste ed è collegato al sistema.
+</span></span></code></pre></div><ul>
+<li><a href="/static/coding/shell/bash/controlla_utenti_loggati.sh" title="Controlla utente loggato">controlla_utenti_loggati.sh</a>.</li>
+</ul>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

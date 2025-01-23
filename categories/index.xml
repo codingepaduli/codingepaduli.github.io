@@ -6,13 +6,13 @@
     <description>Recent content in Categories on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 16 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Interesting</title>
-      <link>http://codingepaduli.github.io/categories/interesting/</link>
+      <title>Bash</title>
+      <link>http://codingepaduli.github.io/categories/bash/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/interesting/</guid>
+      <guid>http://codingepaduli.github.io/categories/bash/</guid>
       <description></description>
     </item>
     <item>
@@ -20,6 +20,20 @@
       <link>http://codingepaduli.github.io/categories/coding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>http://codingepaduli.github.io/categories/shell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interesting</title>
+      <link>http://codingepaduli.github.io/categories/interesting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/interesting/</guid>
       <description></description>
     </item>
     <item>
@@ -118,13 +132,6 @@
       <link>http://codingepaduli.github.io/categories/powershell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/powershell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Shell</title>
-      <link>http://codingepaduli.github.io/categories/shell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/shell/</guid>
       <description></description>
     </item>
     <item>

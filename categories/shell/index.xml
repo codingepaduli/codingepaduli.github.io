@@ -6,8 +6,22 @@
     <description>Recent content in Shell on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 15 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Esercizi in bash</title>
+      <link>http://codingepaduli.github.io/coding/shell/bash/intro/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/shell/bash/intro/</guid>
+      <description>Esercizi in bash</description>
+    </item>
+    <item>
+      <title>Esercizi sulla programmazione di script in Bash</title>
+      <link>http://codingepaduli.github.io/coding/shell/bash/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/shell/bash/</guid>
+      <description>Esercizi sulla programmazione di script in Bash</description>
+    </item>
     <item>
       <title>05 - Filesystem - Gestione file e cartelle</title>
       <link>http://codingepaduli.github.io/coding/shell/powershell/cmdlet-filesystem-filecartelle/</link>

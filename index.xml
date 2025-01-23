@@ -6,7 +6,7 @@
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 16 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>L&#39;evoluzione delle comunicazioni</title>
@@ -364,6 +364,20 @@
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</guid>
       <description>Esercizi sui diagrammi a blocchi e sul coding</description>
+    </item>
+    <item>
+      <title>Esercizi Bash</title>
+      <link>http://codingepaduli.github.io/coding/shell/linkbash/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/shell/linkbash/</guid>
+      <description>Esercizi sulla programmazione di script in Bash nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/bash&#39;&gt;Bash&lt;/a&gt;</description>
+    </item>
+    <item>
+      <title>Esercizi in bash</title>
+      <link>http://codingepaduli.github.io/coding/shell/bash/intro/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/shell/bash/intro/</guid>
+      <description>Esercizi in bash</description>
     </item>
     <item>
       <title>alohomora</title>

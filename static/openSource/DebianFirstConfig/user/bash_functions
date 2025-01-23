@@ -18,6 +18,13 @@ ll() {
 }
 export -f ll
 
+# Show the rows -rw------- 1 io casa 1 2023-08-17 14:35 28DA-CAD7 -> ../../sda1
+# Usage: lsDisksUUID
+lsDisksUUID() {
+  ll -l /dev/disk/by-uuid "$@"
+}
+export -f lsDisksUUID
+
 #alias la='ls -A' # show hidden files BUT NOT "." and ".."
 #alias lc='ls -C' # show quoted file name (between aphostrophe)
 #alias lh='ls --human' # bytes measured as human readable
@@ -890,6 +897,32 @@ convertAllFlvVideoToMp3Audio() {
   done
 }
 export -f convertAllFlvVideoToMp3Audio
+
+# Run: tagAllMp3File
+tagAllMp3File()  {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.m4a, *.M4a, *.m4A etc
+  shopt -s nullglob nocaseglob
+  
+  # eyeD3 --remove-all *.mp3
+
+  for file in *.mp3
+  do
+    #  \( is an escapes for (
+    #  \) is an escapes for ) 
+    # () is a match (may need to be escaped \(\), it will be stored
+    # The first (.*) is the artist, it will be stored as \1
+    # The second (.*) is the title, it will be stored as \2
+    # The "\...." is the extension, it will be ignored
+    Artist=$(echo "$file" | sed 's/\(.*\) - \(.*\)\..../\1/g')
+    Title=$(echo "$file" | sed 's/\(.*\) - \(.*\)\..../\2/g')
+    echo "Setting tag ID3 $file: $Artist - $Title"
+    # eyeD3 -a "$Artist" -t "$Title" "$file"
+  done
+
+}
+# export -f tagAllMp3File
 
 ########################
 # Check files to burn  #
