@@ -823,6 +823,21 @@ convertAllSvgToPng() {
 #   see https://trac.ffmpeg.org/wiki/Encode/HighQualityAudio 
 
 # Test: 
+# Run: convertAllWmaToMp3
+convertAllWmaToMp3() {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.wav, *.Wav, *.WaV etc
+  shopt -s nullglob nocaseglob
+
+  for file in *.wma
+  do
+    ffmpeg -i "${file}" -vn -ar 44100 -ac 2 -q:a 2 "new-${file}.mp3";
+  done
+}
+export -f convertAllWmaToMp3
+
+# Test: 
 # Run: convertAllM4aToMp3
 convertAllM4aToMp3() {
 

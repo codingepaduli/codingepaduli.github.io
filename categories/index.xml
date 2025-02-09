@@ -6,20 +6,27 @@
     <description>Recent content in Categories on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Bash</title>
-      <link>http://codingepaduli.github.io/categories/bash/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/bash/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Coding</title>
       <link>http://codingepaduli.github.io/categories/coding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SistemiReti</title>
+      <link>http://codingepaduli.github.io/categories/sistemireti/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/sistemireti/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bash</title>
+      <link>http://codingepaduli.github.io/categories/bash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/bash/</guid>
       <description></description>
     </item>
     <item>

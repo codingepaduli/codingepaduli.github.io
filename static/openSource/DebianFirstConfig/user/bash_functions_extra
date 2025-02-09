@@ -204,14 +204,14 @@ export -f flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeGnome
 flatpakUpdateAppBasedOnCurrentRuntimeGnome() {
-    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/47')
+    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/46')
     flatpak update $app
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeGnome
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeKde
 flatpakUpdateAppBasedOnCurrentRuntimeKde() {
-    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/5.15-23.08')
+    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/6.8') # 5.15-23.08
     flatpak update $app
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeKde

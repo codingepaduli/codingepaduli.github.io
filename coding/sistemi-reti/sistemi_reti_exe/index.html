@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Esercizi di sistemi e reti - Lab. informatica</title>
+
+    <meta name="description" content="Esercizi di sistemi e reti">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/sistemi-reti/sistemi_reti_exe/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="Esercizi di sistemi e reti">
+  <meta property="og:description" content="Esercizi di sistemi e reti">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2025-02-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-05T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="Esercizi di sistemi e reti">
+  <meta name="twitter:description" content="Esercizi di sistemi e reti">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-02-05T00:00:00Z">05-02-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/sistemireti/" rel="category">SistemiReti</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 2 minuti 
+        ( 303 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="esercizi-di-sistemi-e-reti">Esercizi di sistemi e reti</h1>
+<h2 id="planimetria-e-rete">Planimetria e rete</h2>
+<p>Disegnare la planimetria del laboratorio secondo le tracce indicate di seguito,indicando tutti gli elementi necessari (scrivanie, sedie, porte, finestre, &hellip;) tenendo conto della distanza tra postazioni di un metro.</p>
+<p>Progettare nella planimetria realizzata la rete LAN del laboratorio, posizionando i dispositivi necessari (pc fissi e portatili, stampanti, tablet wifi, access point, patch panel, switch e router) e collegandoli adeguatamente.</p>
+<p>Consegnare la planimetria del laboratorio, la legenda  di ogni simbolo (porte, finestre, quota, sedie, pc, tablet, access point, &hellip;) ed il particolare costruttivo dei collegamenti tra patch panel e switch.</p>
+<p>Consegnare la lista dei componenti da acquistare:</p>
+<ul>
+<li>numero, categoria e lunghezza dei cavi (lunghezza inferiore a 50 cm, lunghezza inferiore a 2 metri, lunghezza di 5m, di 10m, 15m, 20m, 25m, 30m, 35m, &hellip; ).</li>
+<li>numero e tipologia dei dispositivi (pc, tablet, smartphone,) &hellip;</li>
+<li>numero e tipologia dei componenti di rete (patch panel, access point, hub, switch, router).</li>
+</ul>
+<p>Traccia 1 pc1, pc5, pc9, pc13:
+Laboratorio di 8m x 12m, progettare con 20pc + 1server + 1 stampante +
+25 posti con tablet;</p>
+<p>Traccia 2 pc2, pc6, pc10, pc14:
+Laboratorio di 12m x 9m, progettare con 30pc + 1server + 1
+stampante + 22 posti con tablet;</p>
+<p>Traccia 3 pc3, pc7, pc11, pc15:
+Laboratorio di 13m x 7m, progettare con 25pc + 1server + 2 stampanti + 20 posti con tablet;</p>
+<p>Traccia 4 pc4, pc8, pc12, pc16:
+Laboratorio di 9m x 14m, progettare con 25pc + 1server + 2 stampanti + 25 posti con tablet;</p>
+<p><strong>Valutazione</strong>:</p>
+<p>2 punti, pulizia e proporzioni del disegno, quote inserite, chiarezza e comprensione della planimetria;
+2 punti: simbologia e legenda completa e correttamente realizzata;
+2 punti: uso corretto dei dispositivi di rete ed identificazione chiara dei dispositivi;
+2 punti: uso dei dettagli progettuali quando necessario;
+2 punti: lista dei materiali correttamente compilata.</p>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -231,13 +231,95 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 3 minuti 
-        ( 574 parole)
+        Tempo di lettura 4 minuti 
+        ( 778 parole)
     </span>
 </div></div>
     </header>
 <div class="content post__content clearfix">
       <h1 id="esercizi-in-bash">Esercizi in bash</h1>
+<h2 id="script-colorati">Script colorati</h2>
+<p>Lo schema per usare i colori è:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\033[STYLE;COLORE_TXT;COLORE_BACKm Qui va inserito il testo. &#34;</span>
+</span></span></code></pre></div><p>Per compatibilita, <code>\033</code> in <code>sh</code> corrisponde a <code>\E</code> di <code>bash</code>.</p>
+<p>I valori applicabili per la variabile<code>STYLE</code> sono:</p>
+<ul>
+<li><code>0</code> ripristina il testo semplice;</li>
+<li><code>1</code> imposta il grassetto;</li>
+<li><code>2</code> imposta la bassa luminosita;</li>
+<li><code>4</code> imposta il testo sottolineato;</li>
+<li><code>5</code> imposta il testo lampeggiante;</li>
+<li><code>6</code> imposta il testo lampeggiante;</li>
+<li><code>7</code> imposta i colori invertiti;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Colore</th>
+<th>Colore se grassetto</th>
+<th>Codice testo</th>
+<th>Codice sfondo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nero</td>
+<td>grigio scuro</td>
+<td>30</td>
+<td>40</td>
+</tr>
+<tr>
+<td>rosso</td>
+<td>rosso chiaro</td>
+<td>31</td>
+<td>41</td>
+</tr>
+<tr>
+<td>verde</td>
+<td>verde chiaro</td>
+<td>32</td>
+<td>42</td>
+</tr>
+<tr>
+<td>marrone</td>
+<td>giallo</td>
+<td>33</td>
+<td>43</td>
+</tr>
+<tr>
+<td>blu</td>
+<td>blu chiaro</td>
+<td>34</td>
+<td>44</td>
+</tr>
+<tr>
+<td>viola</td>
+<td>viola chiaro</td>
+<td>35</td>
+<td>45</td>
+</tr>
+<tr>
+<td>cyan</td>
+<td>ciano chiaro</td>
+<td>36</td>
+<td>46</td>
+</tr>
+<tr>
+<td>grigio chiaro</td>
+<td>bianco</td>
+<td>37</td>
+<td>47</td>
+</tr>
+</tbody>
+</table>
+<p>Se al termine si vuole ripristinare lo stile predefinito allora
+è necessario specificarlo applicando un secondo stile <code>\033[0m</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\033[STYLE;COLORE_TXT;COLORE_BACKm Testo colorato \033[0m Testo normale&#34;</span>
+</span></span></code></pre></div><p>Per impostare il terminale i maniera predefinita si può impostare la variabile <code>PS1</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PS1=<span style="color:#009c00">&#39;\033[0;33;45m prompt_voluto \033[0m &gt;]&#39;</span>
+</span></span><span style="display:flex;"><span>export PS1
+</span></span></code></pre></div><p>Esempio di script per l&rsquo;uso dei colori nel terminale:</p>
+<p><a href="/static/coding/shell/bash/script_colorati.sh" title="Script colorati">script_colorati.sh</a>.</p>
 <h2 id="controllo-esistenza-file">Controllo esistenza file</h2>
 <p>Si realizzi uno script <code>controlla_esistenza_file.sh</code> che prende come parametro il nome di un file ed, ad intervalli di 20 secondi, controlli che il file sia stato creato, restando in attesa fino alla creazione.</p>
 <p><a href="/static/coding/shell/bash/controlla_esistenza_file.sh" title="Controllo esistenza file">controlla_esistenza_file.sh</a>.</p>
@@ -309,6 +391,11 @@ L&rsquo;output deve essere stampato sia su più righe, che su un&rsquo;unica rig
 </span></span></code></pre></div><ul>
 <li><a href="/static/coding/shell/bash/controlla_utenti_loggati.sh" title="Controlla utente loggato">controlla_utenti_loggati.sh</a>.</li>
 </ul>
+<h2 id="conta-presenza-carattere">Conta presenza carattere</h2>
+<p>Si realizzi uno script <code>contaPresenzaCarattere.sh</code> che prenda due parametri, una lettera e una frase, e conti il numero di volte in cui la lettera è presente nella frase passata.</p>
+<ul>
+<li><a href="/static/coding/shell/bash/contaPresenzaCarattere.sh" title="Conta presenza carattere">contaPresenzaCarattere.sh</a>.</li>
+</ul>
 
     </div>
   </article>
@@ -318,6 +405,14 @@ L&rsquo;output deve essere stampato sia su più righe, che su un&rsquo;unica rig
 
 
 
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/shell/bash/commandline/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">Command line examples</p>
+		</a>
+	</div>
+</nav>
 <div class="article-content">
 
   
