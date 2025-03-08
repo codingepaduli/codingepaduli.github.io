@@ -150,9 +150,8 @@ flatpakListAllInstalledRuntimes() {
 }
 export -f flatpakListAllInstalledRuntimes
 
-# Display only the specified apps and the bounded runtime
+# Display only the installed apps and the bounded runtimes
 # Usage: flatpakFilterRemoteRuntimeOfInstalledApps
-# Usage: flatpakFilterRemoteRuntimeOfInstalledApps 'org.gnome.Platform/x86_64/40'
 flatpakFilterRemoteRuntimeOfInstalledApps() {
     # Creo la MAPPA di voci (app -> runtime) dal repository remoto
     declare -A remoteAppArray
@@ -164,7 +163,7 @@ flatpakFilterRemoteRuntimeOfInstalledApps() {
     declare -A installedAppArray
     while read -r appId runtime; do
         declare -A installedAppArray+="([$appId]=$runtime)"
-    done < <(flatpakListAllInstalledApp "application,runtime" "$1" )
+    done < <(flatpakListAllInstalledApp "application,runtime")
 
     # Stampo le informazioni "appId runtimeLocale runtimeRemoto"
     for appId in "${!installedAppArray[@]}"; do
@@ -173,17 +172,29 @@ flatpakFilterRemoteRuntimeOfInstalledApps() {
 }
 export -f flatpakFilterRemoteRuntimeOfInstalledApps
 
-# Show updatable apps based on specified runtime
+# Show updatable apps that use a runtime in the list (passed as parameter)
 # Usage: flatpakFilterUpdatableApps
-# Usage: flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/45'
+# Usage: flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/40' 'org.gnome.Platform/x86_64/41' ...
 flatpakFilterUpdatableApps() {
     # Leggo le informazioni sul runtime corrente e remoto di ogni app
     updatableAppIdArray=()
+
     while read -r appId usedRuntime remoteRuntime; do
-        if [ "$usedRuntime" = "$remoteRuntime" ]; then
+        if [[ -n "$1" ]]; then
+            # If $1 is defined
+            for runtime in "$@"; do
+                if [[ "$remoteRuntime" == "$runtime" ]]; then
+                    # TO DEBUG printf "%-40s %-40s %-40s %-4s \n\n" "$appId" "$usedRuntime" "$remoteRuntime" "EQUALS"
+                    # If $1 matches any runtime in the array
+                    updatableAppIdArray+=("$appId")
+                    break
+                fi
+            done
+        elif [[ -z "$1" ]]; then
+            # If $1 is not defined, add $appId to updatableAppIdArray
             updatableAppIdArray+=("$appId")
         fi
-    done < <(flatpakFilterRemoteRuntimeOfInstalledApps "$1" )
+    done < <(flatpakFilterRemoteRuntimeOfInstalledApps)
 
     for appId in "${updatableAppIdArray[@]}"
     do
@@ -204,14 +215,14 @@ export -f flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeGnome
 flatpakUpdateAppBasedOnCurrentRuntimeGnome() {
-    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/46')
+    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/46' 'org.gnome.Platform/x86_64/47')
     flatpak update $app
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeGnome
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeKde
 flatpakUpdateAppBasedOnCurrentRuntimeKde() {
-    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/6.8') # 5.15-23.08
+    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/5.15-23.08' 'org.kde.Platform/x86_64/6.8')
     flatpak update $app
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeKde

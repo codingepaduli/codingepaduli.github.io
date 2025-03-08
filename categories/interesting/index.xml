@@ -6,8 +6,22 @@
     <description>Recent content in Interesting on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sun, 10 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/interesting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Corsi e guide - istruzione di base</title>
+      <link>http://codingepaduli.github.io/interesting/educational/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
+      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+    </item>
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
     <item>
       <title>alohomora</title>
       <link>http://codingepaduli.github.io/interesting/alohomora/</link>
@@ -28,20 +42,6 @@
       <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/linkshower/</guid>
       <description>link shower</description>
-    </item>
-    <item>
-      <title>Corsi e guide - istruzione di base</title>
-      <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
-      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
-    </item>
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
     </item>
     <item>
       <title>Google Moduli checker</title>
