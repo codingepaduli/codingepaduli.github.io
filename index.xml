@@ -6,7 +6,7 @@
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>L&#39;evoluzione delle comunicazioni</title>
@@ -338,18 +338,11 @@
       <description>HTML Lez. 06 - Sistemi numerici</description>
     </item>
     <item>
-      <title>HTML Lez. 06 - Validazione del codice HTML</title>
-      <link>http://codingepaduli.github.io/coding/web/html/validazione/</link>
-      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/html/validazione/</guid>
-      <description>HTML Lez. 06 - Validazione del codice HTML</description>
-    </item>
-    <item>
-      <title>HTML Lez. 05 - Struttura e layout</title>
+      <title>HTML Lez. 05 - Struttura, metadati e validazione</title>
       <link>http://codingepaduli.github.io/coding/web/html/metadati/</link>
       <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/html/metadati/</guid>
-      <description>HTML Lez. 05 - Struttura e layout di una pagina web</description>
+      <description>HTML Lez. 05 - Struttura, metadati e validazione di una pagina web</description>
     </item>
     <item>
       <title>HTML Lez. 03 - Etichette principali</title>

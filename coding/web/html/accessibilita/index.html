@@ -231,8 +231,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 16 minuti 
-        ( 3369 parole)
+        Tempo di lettura 18 minuti 
+        ( 3738 parole)
     </span>
 </div></div>
     </header>
@@ -344,8 +344,6 @@
 <h2 id="wai-aria">WAI-ARIA</h2>
 <p>La WAI fornisce le linee guida conosciute come &ldquo;Accessible Rich Internet Applications&rdquo; (ARIA), che definiscono le informazioni semantiche da inserire nelle etichette degli ipertesti, in particolare nelle pagine HTML e negli elementi SVG, al fine di poter essere accessibili attraverso tecnologie assistive.</p>
 <p>Per informazioni semantiche si intendono quelle che indicano il ruolo di una determinata etichetta, lo stato o le relazioni con le altre etichette. Ad esempio un menu di navigazione può essere strutturato come una lista a due o tre livelli, ed una determinata voce può essere visibile all&rsquo;utente, mentre le altre no. Queste informazioni possono essere molto utili per indirizzare il &ldquo;comportamento&rdquo; delle tecnologie assistive, ma non è possibile fornirle utilizzando il solo codice HTML. Le linee guida vanno proprio a standardizzare queste informazioni e a definire in che modo devono essere inserite nel codice HTML.</p>
-<p>Molte etichette del linguaggio HTML hanno già un informazione semantica, ad esempio l&rsquo;etichetta del titolo <code>h1</code> indica l&rsquo;inizio e la fine del titolo, l&rsquo;etichetta dei collegamenti <code>a</code> indica l&rsquo;inizio e la fine del collegamento, e come queste molte altre. Per inserire un titolo o un collegamento nella pagina non è necessario indicare che il ruolo dell&rsquo;elemento è &ldquo;titolo&rdquo; o &ldquo;collegamento&rdquo;, è la stessa etichetta a sottintendere questo ruolo.</p>
-<p>In molti altri casi, invece, si usano le etichette per creare elementi più complessi, come una sezione per la ricerca (filtri compresi) o una visualizzazione dei contenuti basata su schede (come le schede di navigazione di un browser). In questo caso, dobbiamo associare all&rsquo;etichetta il ruolo, in modo da indicare alle tecnologie assistive il ruolo svolto dall&rsquo;etichetta, quindi associamo il ruolo &ldquo;sezione per la ricerca&rdquo; o il ruolo &ldquo;lista di schede&rdquo;;</p>
 <p>Le linee guida inoltre indicano per ogni ruolo un elenco di attributi (o proprietà) che il ruolo possiede. Ad esempio un menù può essere disabilitato, una sezione per la ricerca può essere nascosta, un banner pubblicitario può essere legato ad un popup (finestra a comparsa).</p>
 <h3 id="ruoli">Ruoli</h3>
 <p>Le linee guida riportano una lunga serie di ruoli che si possono associare alle etichette, tra le tante troviamo &ldquo;menubar&rdquo; (barra dei menu), &ldquo;menu&rdquo;, &ldquo;menuitem&rdquo; (voce del menù), &ldquo;search&rdquo; (una sezione per la ricerca, filtri compresi) , &ldquo;tree&rdquo; (struttura ad albero), &ldquo;treeitem&rdquo; (voce della struttura ad albero), &ldquo;tab&rdquo; (schede), &ldquo;banner&rdquo; e tanti altri.</p>
@@ -374,8 +372,35 @@
 <p>Un altro comportamento su cui porre attenzione è la scelta del componente su cui interagire. In genere l&rsquo;utente clicca su un componente e questo riceve il focus. Quando un componente riceve il focus, da la possibilità all&rsquo;utente di interagirvi. Ad esempio quando si clicca su un campo di input, questo riceve il focus e quindi l&rsquo;utente può inserire un valore.</p>
 <p>Agli utenti che non utilizzano il mouse viene fornita in alternativa la possibilità di selezionare i componenti uno per volta utilizzando l&rsquo;apposito pulsante della tastiera (in genere il tasto &ldquo;TAB&rdquo;).</p>
 <p>Lo sviluppatore può indicare quali componenti vuole che ricevano il focus, aggiungendo nel codice HTML di questi componenti l&rsquo;attributo HTML <code>tabindex=&quot;0&quot;</code>.</p>
-<h3 id="esempio-di-applicazione-delle-linee-guida-aria">Esempio di applicazione delle linee guida ARIA</h3>
-<p>Supponendo che lo sviluppatore crei un componente con tre schede (tab) in modo tale che quando si clicca su una viene visualizzato uno dei tre pannelli. Supponiamo che il codice HTML usato per sviluppare tale componente sia il seguente:</p>
+<h3 id="applicazione-delle-linee-guida-aria">Applicazione delle linee guida ARIA</h3>
+<p>La prima applicazione corretta delle linee guida ARIA per le pagine web consiste nell&rsquo;utilizzare correttamente le etichette HTML, perché già hanno associata una informazione semantica.</p>
+<p>Ad esempio il ruolo di &ldquo;titolo della pagina&rdquo; è indicato con <code>role=&quot;heading&quot;</code> ed il ruolo di &ldquo;testo evidenziato&rdquo; è indicato con <code>role=&quot;mark&quot;</code>, ma questi ruoli non sono quasi mai indicati, se non in casi eccezionali, perché esistono già delle etichette HTML adatte a descrivere il titolo della pagina ed il testo evidenziato e sono rispettivamente l&rsquo;etichetta del titolo <code>h1</code> e l&rsquo;etichetta del testo evidenziato <code>mark</code>.</p>
+<p>Molte etichette del linguaggio HTML hanno già un informazione semantica, ad esempio l&rsquo;etichetta del titolo <code>h1</code> indica l&rsquo;inizio e la fine del titolo, l&rsquo;etichetta dei collegamenti <code>a</code> indica l&rsquo;inizio e la fine del collegamento, e come queste molte altre. Per inserire un titolo o un collegamento nella pagina non è necessario indicare che il ruolo dell&rsquo;elemento è &ldquo;titolo&rdquo; o &ldquo;collegamento&rdquo;, è la stessa etichetta a sottintendere questo ruolo.</p>
+<p>E&rsquo; corretto quindi utilizzare:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;h1&gt;Titolo della pagina&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>&lt;p&gt;Il testo &lt;mark&gt;evidenziato&lt;/mark&gt; ...&lt;/p&gt;
+</span></span></code></pre></div><p>Nel caso appena descritto, non è corretto utilizzare delle etichette inappropriate e poi applicare il ruolo, l&rsquo;esempio seguente mostra un uso improprio ed errato dei ruoli:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;div role=<span style="color:#009c00">&#34;heading&#34;</span>&gt;Titolo della pagina&lt;/div&gt;
+</span></span><span style="display:flex;"><span>&lt;p&gt;Il testo &lt;span role=<span style="color:#009c00">&#34;mark&#34;</span>&gt;evidenziato&lt;/span&gt; ...&lt;/p&gt;
+</span></span></code></pre></div><p>Ad esempio, le etichette di strutturazione della pagina hanno associati i seguenti ruoli:</p>
+<ul>
+<li><code>header</code>: ruolo di intestazione (il ruolo ARIA corrispondente è <code>role=”banner”</code>);</li>
+<li><code>nav</code>: ruolo di navigazione dei contenuti (il ruolo ARIA corrispondente è <code>role=”contentinfo”</code>);</li>
+<li><code>search</code>: ruolo di ricerca (il ruolo ARIA corrispondente è <code>role=”main”</code>);</li>
+<li><code>main</code>: ruolo di contenuto principale (il ruolo ARIA corrispondente è <code>role=”main”</code>);</li>
+<li><code>aside</code>: ruolo di contenuti complementari (il ruolo ARIA corrispondente è <code>role=”complementary”</code>);</li>
+<li><code>footer</code>: ruolo di piè di pagina (il ruolo ARIA corrispondente è <code>role=”contentinfo”</code>);</li>
+</ul>
+<p>Un&rsquo;altra applicazione delle linee guida ARIA consiste nell&rsquo;avere un collegamento che porta l&rsquo;utente al contenuto principale della pagina. Questo collegamento deve essere il primo (o il secondo) collegamento presente nella navigazione ed utilizzabile usando la tastiera.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;a href=<span style="color:#009c00">&#34;#main-content&#34;</span>&gt;Vai al contenuto principale&lt;/a&gt;
+</span></span></code></pre></div><p>In questo modo, gli utenti che fanno uso di tecnologie assistive non sono costretti ad ascoltare tutti i collegamenti presenti nella barra di navigazione, ma possono velocemente spostarsi sul contenuto che gli interessa.</p>
+<p>Anche l&rsquo;etichetta di data/ora permette di migliorare l&rsquo;esperienza utente, dato permette alle tecnologie assistive di comprendere che si tratta di una data o un orario e leggerlo di conseguenza.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p&gt;Appuntamento per il giorno:
+</span></span><span style="display:flex;"><span>&lt;time datetime=<span style="color:#009c00">&#34;2021-08-22&#34;</span>&gt;August 22&lt;/time&gt;&lt;/p&gt;
+</span></span></code></pre></div><h3 id="esempio-di-applicazione-delle-linee-guida-aria-per-la-visualizzazione-dei-contenuti-basata-su-schede">Esempio di applicazione delle linee guida ARIA per la visualizzazione dei contenuti basata su schede</h3>
+<p>In questo esempio vediamo la creazione di un elemento complesso per la visualizzazione dei contenuti basata su schede (come le schede di navigazione di un browser).</p>
+<p>Questo esempio può risultare complesso ed il codice HTML poco chiaro, ma può essere utile a dare un&rsquo;idea allo sviluppatore di come si progetta un componente che sia maggiormente accessibile. E&rsquo; chiaro che per uno studente alle prime armi è necessaria una maggiore esperienza e delle lezioni più specifiche per imparare, lo scopo è di questo esempio è stimolare la curiosità-</p>
+<p>Supponiamo che lo sviluppatore vuole creare un componente con tre schede (dette &ldquo;tab&rdquo;) in modo tale che quando si clicca su una viene visualizzato uno dei tre pannelli. Supponiamo che il codice HTML usato per sviluppare tale componente sia il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;ul&gt;
 </span></span><span style="display:flex;"><span>  &lt;li class=<span style="color:#009c00">&#34;active&#34;</span>&gt;Tab 1&lt;/li&gt;
 </span></span><span style="display:flex;"><span>  &lt;li&gt;Tab 2&lt;/li&gt;
@@ -386,7 +411,8 @@
 </span></span><span style="display:flex;"><span>  &lt;article&gt; … &lt;/article&gt;
 </span></span><span style="display:flex;"><span>  &lt;article&gt; … &lt;/article&gt;
 </span></span><span style="display:flex;"><span>&lt;/div&gt;
-</span></span></code></pre></div><p>Le tecnologie assistive non hanno modo di interpretare il codice HTML e estrapolare che la lista indica delle schede e che i pannelli siano legati alle schede. Per fornire queste informazioni alle tecnologie assistive, è necessario che sia lo sviluppatore a fornirle indicandole opportunamente come di seguito:</p>
+</span></span></code></pre></div><p>Le tecnologie assistive non hanno modo di interpretare il codice HTML e estrapolare che la lista indica delle schede e che i pannelli siano legati alle schede. Per fornire queste informazioni alle tecnologie assistive, è necessario che sia lo sviluppatore a specificare per ogni etichetta il ruolo, in modo da aggiungere informazioni su come gestire il contenuto.</p>
+<p>I ruoli e le proprietà da aggiungere integrano il codice come di seguito:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;ul role=<span style="color:#009c00">&#34;tablist&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;li role=<span style="color:#009c00">&#34;tab&#34;</span> aria-selected=<span style="color:#009c00">&#34;true&#34;</span> aria-posinset=<span style="color:#009c00">&#34;1&#34;</span> class=<span style="color:#009c00">&#34;active&#34;</span>&gt;Tab 1&lt;/li&gt;
 </span></span><span style="display:flex;"><span>  &lt;li role=<span style="color:#009c00">&#34;tab&#34;</span> aria-selected=<span style="color:#009c00">&#34;false&#34;</span> aria-posinset=<span style="color:#009c00">&#34;2&#34;</span>&gt;Tab 2&lt;/li&gt;
@@ -409,7 +435,7 @@
 </span></span><span style="display:flex;"><span>  &lt;article role=<span style="color:#009c00">&#34;tabpanel&#34;</span> aria-hidden=<span style="color:#009c00">&#34;true&#34;</span>&gt; … &lt;/article&gt;
 </span></span><span style="display:flex;"><span>  &lt;article role=<span style="color:#009c00">&#34;tabpanel&#34;</span> aria-hidden=<span style="color:#009c00">&#34;true&#34;</span>&gt; … &lt;/article&gt;
 </span></span><span style="display:flex;"><span>&lt;/div&gt;
-</span></span></code></pre></div><p>In questo modo, è possibile navigare sugli elementi della lista (ogni elemento rappresenta un pulsante per visualizzare la scheda corrispondente) attraverso la tastiera e selezionare una scheda da leggere.</p>
+</span></span></code></pre></div><p>In questo modo, è possibile navigare sugli elementi della lista attraverso la tastiera e selezionare una scheda da leggere.</p>
 <!-- TODO 
 
 , quindi l utente si deve avvalere della tastiera per navigare e di uno strumento di screen reader che possa leggere ad alta voce gli elementi sui quali naviga.
@@ -418,6 +444,7 @@ la percezione di una pagina web per un utente non vedente è completamente diver
 
 -->
 <h3 id="framework-css-e-per-app">Framework CSS e per app</h3>
+<!-- TODO Unifica come si crea una pagina web -->
 <p>I siti web e le app difficilmente utilizzano dei componenti dell&rsquo;interfaccia costruiti da zero, piuttosto si basano sempre più su dei framework che forniscono linee guida, componenti precostruiti e strumenti che permettono il disegno di interfacce grafiche secondo le &ldquo;best practice&rdquo; internazionali.</p>
 <p>Il vantaggio nell&rsquo;usare questi framework consiste appunto nel poter costruire un interfaccia grafica che supporti diversi temi di colore, che si adatti dinamicamente alle caratteristiche del dispositivo utilizzato, sia esso desktop, tablet o telefono cellulare, che fornisca allo sviluppatore una vasta gamma di componenti grafici precostruiti che seguono gli standard e linee guida per l&rsquo;accessibilità, che tengono conto delle preferenze utente, come le indicazione di un maggiore contrasto dei colori o di una minimizzazione delle animazioni e degli effetti di movimento utilizzati dal sito web o dall&rsquo;applicazione o le indicazioni e tanti altri vantaggi ancora;</p>
 <p>Tra i framework più utilizzati riportiamo <a href="https://getbootstrap.com/">Bootstrap</a>, progettato inizialmente da Twitter nel 2011 per la costruzione di pagine web, <a href="https://material.io/">Material Design</a> sviluppato da Google nel 2014 per la costruzione di app per android e per la costruzione di pagine web, <a href="https://developer.apple.com/design/">Human Interface</a> per la costruzione di app per iOS, macOS e tutti gli altri dispositivi Apple.</p>
