@@ -231,8 +231,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 17 minuti 
-        ( 3491 parole)
+        Tempo di lettura 18 minuti 
+        ( 3778 parole)
     </span>
 </div></div>
     </header>
@@ -354,7 +354,25 @@ vale 27.
 <p>Un esempio di dichiarazione di variabile con valore ancora non definito è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> variabileIndefinita;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> variabileIndefinita2 = <span style="color:#00f">undefined</span>;
-</span></span></code></pre></div><h2 id="operatori-basilari">Operatori basilari</h2>
+</span></span></code></pre></div><h3 id="operatore-di-assegnazione">Operatore di assegnazione</h3>
+<p>L&rsquo;operatore di assegnazione è utilizzata per impostare il valore di una variabile, copiandolo nella relativa locazione di memoria. E&rsquo; rappresentato dal simbolo <code>=</code> ed ha una regola di sintassi precisa:</p>
+<ul>
+<li>a <strong>sinistra</strong> dell&rsquo;operatore deve essere presente <strong>una variabile già dichiarata</strong>;</li>
+<li>a <strong>destra</strong> dell&rsquo;operatore deve essere presente un valore o un&rsquo;espressione matematica (senza variabili o con variabili già dichiarate).</li>
+</ul>
+<p>Un esempio di assegnazione è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> y = 5;
+</span></span></code></pre></div><p>In questo esempio, a sinistra troviamo la variabile <code>y</code>, a destra troviamo il valore <code>5</code> che sarà copiato nella locazione di memoria della variabile.</p>
+<p>Un secondo esempio di assegnazione è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 5 * (6 + y);
+</span></span></code></pre></div><p>In questo esempio, a sinistra troviamo la variabile <code>x</code>, a destra troviamo l&rsquo;espressione <code>5 * (6 + y)</code> in cui è presente la variabile <code>x</code>, alla quale è stato assegnato il valore <code>5</code> nell&rsquo;esempio precedente. L&rsquo;espressione ha quindi risultato <code>55</code> che sarà copiato nella locazione di memoria della variabile <code>x</code>.</p>
+<p>L&rsquo;operatore di assegnazione, rappresentato dal simbolo <code>=</code>, non deve essere confuso con l&rsquo;operatore di uguaglianza, che nei linguaggi di programmazione è rappresentato dal simbolo <code>==</code>, questi due concetti sono distinti ed indicano al calcolatore di effettuare due azioni differenti:</p>
+<ul>
+<li>il primo indica al calcolatore di copiare nella locazione di memoria della variabile il valore assegnato, come nel caso dell&rsquo;assegnazione <code>x = 5</code>;</li>
+<li>il secondo è utilizzato per verificare che due espressioni siano uguali, come nel caso dell&rsquo;espressione <code>x + 3 == y - 2</code>.</li>
+</ul>
+<p>In ambito matematico non vi è questa distinzione, il simbolo <code>=</code> è usato sia come assegnazione che come uguaglianza. L&rsquo;espressione <code>x = 5</code> indica al tempo stesso che i due valori sono uguali e che la variabile <code>x</code> assume valore <code>5</code>.</p>
+<h2 id="operatori-basilari">Operatori basilari</h2>
 <p>Una volta dichiarata una variabile, è possibile inizializzarne il valore iniziale e, successivamente, modificarne il valore utilizzando l&rsquo;operatore di assegnazione <code>=</code>. Ad esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 3;
 </span></span><span style="display:flex;"><span>x = 5;
@@ -628,9 +646,9 @@ vale 27.
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/web/javascript/conversioni/" rel="next">
+		<a class="pager__link" href="/coding/web/javascript/math/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">JavaScript Lez. 04 - I metodi e gli operatori</p>
+			<p class="pager__title">Espressioni matematiche</p>
 		</a>
 	</div>
 </nav>

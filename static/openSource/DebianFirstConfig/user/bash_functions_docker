@@ -263,7 +263,7 @@ export -f convertAllImages
 export convertPdfOptionPageA4White=' -background white -page a4 '
 export convertPdfOptionDensity300=' -density 300 -alpha background -alpha off '
 export convertOption40x100=' -resize 40% '
-export convertOptionGreyscale=' -set colorspace Gray -separate -average -resize 40% '
+export convertOptionGreyscale40x100=' -set colorspace Gray -separate -average -resize 40% '
 export convertOptionIncreaseBrightness=' -alpha discrete -channel rgb -evaluate add 5% +channel '
 export convertOptionIncreaseContrast=' -contrast '
 

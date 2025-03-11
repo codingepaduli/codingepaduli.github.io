@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Le stringhe - Lab. informatica</title>
+
+    <meta name="description" content="Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/stringhe/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="Le stringhe">
+  <meta property="og:description" content="Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2025-03-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-10T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="Le stringhe">
+  <meta name="twitter:description" content="Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-03-10T00:00:00Z">10-03-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">P5.js</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 11 minuti 
+        ( 2247 parole)
+    </span>
+</div></div>
+    </header>
+<details class="post__toc toc">
+    <summary class="toc__title">Indice</summary>
+    <div class="toc__menu">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#operatori-di-concatenazione-e-relazionali">Operatori di concatenazione e relazionali</a></li>
+    <li><a href="#proprietà-e-metodi-delle-stringhe">Proprietà e metodi delle stringhe</a>
+      <ul>
+        <li><a href="#funzioni-di-estrazione">Funzioni di estrazione</a></li>
+        <li><a href="#funzioni-di-ricerca-della-posizione">Funzioni di ricerca della posizione</a></li>
+        <li><a href="#funzioni-di-ricerca-della-presenza">Funzioni di ricerca della presenza</a></li>
+        <li><a href="#funzioni-di-sostituzione">Funzioni di sostituzione</a></li>
+      </ul>
+    </li>
+    <li><a href="#conversione-da-numero-a-stringa">Conversione da numero a stringa</a></li>
+  </ul>
+</nav>
+    </div>
+</details>
+<div class="content post__content clearfix">
+      <h1 id="le-stringhe">Le stringhe</h1>
+<p>Il termine &ldquo;stringa&rdquo; deriva dall&rsquo;inglese &ldquo;string&rdquo;, che significa &ldquo;filo&rdquo; o &ldquo;corda&rdquo;, ed è utilizzato in ambito informatico per descrivere una sequenza di caratteri che sono &ldquo;legati&rdquo; insieme, proprio come i nodi di un filo o di una corda.</p>
+<p>Le stringa sono sequenze di caratteri comunemente utilizzate per rappresentare dati testuali, come parole, frasi e testi. Questa natura sequenziale le rende adatte per gestire e manipolare il testo. Una stringa può contenere:</p>
+<ul>
+<li>lettere di qualsiasi lingua (dall&rsquo;alfabeto latino a quello cinese, indiano, arabo, &hellip;);</li>
+<li>numeri;</li>
+<li>simboli di qualsiasi tipo, accenti, punteggiatura, simboli di controllo (l&rsquo;invio a capo, l&rsquo;invio a nuova pagina, la tabulazione, &hellip;), spazi;</li>
+<li>emoji.</li>
+</ul>
+<p>La gestione e manipolazione del testo prevede le seguenti operazioni:</p>
+<ul>
+<li>Creazione di una nuova stringa, prevede l&rsquo;allocazione dello spazio di memoria necessario a contenere la sequenza di caratteri;</li>
+<li>Concatenazione, ovvero unione di due o più stringhe in una sola;</li>
+<li>Slicing, ovvero estrazione di una parte della stringa;</li>
+<li>Ricerca <strong>della posizione</strong> di un carattere o di un&rsquo;altra stringa all&rsquo;interno della stringa;</li>
+<li>Ricerca <strong>della presenza</strong> di un carattere o di un&rsquo;altra stringa all&rsquo;interno della stringa;</li>
+<li>Separazione (o divisione) della stringa in più stringhe (tipicamente utilizzando un carattere per suddividerle, come uno spazio per suddividere le singole parole o un punto per suddividere le diverse frasi);</li>
+<li>Calcolo della lunghezza, per determinare il numero di caratteri presenti in una stringa;</li>
+<li>Sostituzione una parte di una stringa con un&rsquo;altra. In particolare vi è:
+<ol>
+<li>Formattazione, ovvero la sostituzione dei segnaposto presenti nella stringa con i valori specificati;</li>
+<li>Trimming ovvero rimozione degli spazi bianchi presenti esclusivamente all&rsquo;inizio e/o alla fine di una stringa.</li>
+<li>Conversione del formato, ad esempio sostituendo i caratteri maiuscoli con quelli minuscoli o viceversa, la sostituzione dei caratteri non permessi in un determinato contesto con i corrispondenti caratteri permessi;</li>
+</ol>
+</li>
+</ul>
+<p>Una stringa viene creata quando viene definita una sequenza di caratteri racchiusa obbligatoriamente tra singoli apici <code>'</code> o doppi apici <code>&quot;</code>. Quando ad una variabile si assegna una sequenza di caratteri, automaticamente a questa variabile viene assegnato il tipo &ldquo;stringa&rdquo;.</p>
+<p>Di seguito un esempio di dichiarazione di variabili inizializzate con una sequenza di caratteri:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable = <span style="color:#009c00">&#39;Una stringa&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable2 = <span style="color:#009c00">&#39;Seconda stringa&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable3 = <span style="color:#009c00">&#34;Stringa tra doppi apici&#34;</span>;
+</span></span></code></pre></div><p>La <strong>stringa vuota</strong> (in inglese &ldquo;empty string&rdquo;) è un particolare caso di stringa che non contiene caratteri. E&rsquo; definita dagli apici aperti e poi subito chiusi, sia come nel caso dei singoli apici <code>''</code>, sia nel caso dei doppi apici <code>&quot;&quot;</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringEmpty = <span style="color:#009c00">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringEmpty2 = <span style="color:#009c00">&#34;&#34;</span>;
+</span></span></code></pre></div><p>Per definire una sequenza di caratteri che occupi più righe, si può racchiudere tra apici inversi <code>`</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable = <span style="color:#009c00">`Una
+</span></span></span><span style="display:flex;"><span><span style="color:#009c00">stringa`</span>;
+</span></span></code></pre></div><p>Questo tipo di definizione è utilizzato anche per concatenare variabili o il risultato di un&rsquo;espressione all&rsquo;interno della stringa. Le variabili e le espressioni devono essere racchiuse tra simboli <code>${</code> e <code>}</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> num1 = 9;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> num2 = 18;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> messaggio = <span style="color:#009c00">`La somma dei
+</span></span></span><span style="display:flex;"><span><span style="color:#009c00">numeri </span><span style="color:#009c00">${</span>num1<span style="color:#009c00">}</span><span style="color:#009c00"> e </span><span style="color:#009c00">${</span>num2<span style="color:#009c00">}</span><span style="color:#009c00">
+</span></span></span><span style="display:flex;"><span><span style="color:#009c00">vale </span><span style="color:#009c00">${</span>num1 + num2<span style="color:#009c00">}</span><span style="color:#009c00">.`</span>;
+</span></span></code></pre></div><p>L&rsquo;esempio precedente produce il seguente output (su più righe):</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">La somma dei
+numeri 9 e 18
+vale 27.
+</code></pre><h2 id="operatori-di-concatenazione-e-relazionali">Operatori di concatenazione e relazionali</h2>
+<p>Gli operatori utilizzati per svolgere le operazioni sulle stringhe sono i seguenti:</p>
+<ul>
+<li>L&rsquo;operatore di concatenazione <code>+</code> unisce due o più stringhe in una sola;</li>
+<li>L&rsquo;operatore relazionale di eguaglianza (<code>==</code>) verifica se due stringhe sono uguali;</li>
+<li>L&rsquo;operatore relazionale di maggioranza (<code>&gt;</code>) controlla se la prima stringa è &ldquo;maggiore&rdquo; della seconda in base all&rsquo;ordinamento naturale;</li>
+<li>L&rsquo;operatore relazionale di maggioranza o uguaglianza (<code>&gt;=</code>) verifica se la prima stringa è &ldquo;maggiore o uguale&rdquo; alla seconda in base all&rsquo;ordinamento naturale;</li>
+<li>L&rsquo;operatore relazionale di minoranza <code>&lt;</code> controlla se la prima stringa è &ldquo;minore&rdquo; della seconda in base all&rsquo;ordinamento naturale;</li>
+<li>L&rsquo;operatore relazionale di minoranza o uguaglianza (<code>&gt;=</code>) verifica se la prima stringa è &ldquo;minore o uguale&rdquo; alla seconda in base all&rsquo;ordinamento naturale;</li>
+</ul>
+<p>Un esempio d&rsquo;uso degli operatori relazionali è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = <span style="color:#009c00">&#34;una &#34;</span> + <span style="color:#009c00">&#34;stringa.&#34;</span>;
+</span></span><span style="display:flex;"><span>console.info(x); <span style="color:#f00;font-style:italic">// Output: una stringa.
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> == <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: false
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &gt; <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: false
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &gt;= <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: false
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &lt; <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: true
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &lt;= <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: true
+</span></span></span></code></pre></div><p>Questi operatori sono fondamentali per confrontare e concatenare le stringhe.</p>
+<h2 id="proprietà-e-metodi-delle-stringhe">Proprietà e metodi delle stringhe</h2>
+<p>Tutte le stringhe sono istanze dell&rsquo;oggetto <code>String</code> (come le istanze di una classe nella programmazione OOP), e quindi le proprietà ed i metodi di questo oggetto <code>String</code> sono disponibili alle istanze.</p>
+<p>L&rsquo;unica proprietà disponibile nelle stringhe è <code>length</code>, è una proprietà di sola lettura che indica il numero di caratteri presenti in una stringa.</p>
+<table>
+<thead>
+<tr>
+<th>Proprietà</th>
+<th>Operazione</th>
+<th>Esempio d&rsquo;uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>length</code></td>
+<td>lunghezza della stringa</td>
+<td><code>&quot;Questa è una stringa&quot;.length</code></td>
+</tr>
+</tbody>
+</table>
+<p>Un esempio d&rsquo;uso è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = <span style="color:#009c00">&#34;una stringa.&#34;</span>;
+</span></span><span style="display:flex;"><span>console.info(x.length); <span style="color:#f00;font-style:italic">// 11 caratteri
+</span></span></span></code></pre></div><p>Sono presenti numerosissime operazioni sulle stringhe, per un elenco completo si rimanda alla documentazione, mentre di seguito verranno trattate le funzioni più comuni.</p>
+<h3 id="funzioni-di-estrazione">Funzioni di estrazione</h3>
+<p>La funzione progettata per eseguire l&rsquo;estrazione di una parte della stringa è <code>substring(inizio, fine)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.substring(inizio, fine)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    inizio    Number: the starting index
+</span></span><span style="display:flex;"><span>    fine      Number: the ending index (exclusive)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    String: the substring between the specified start and end positions
+</span></span></code></pre></div><p>Il parametro formale <code>inizio</code> rappresenta la posizione di partenza della sottostringa, mentre <code>fine</code> rappresenta la posizione finale (non inclusa).</p>
+<p>Il valore restituito è la sottostringa inclusa tra le posizioni di inizio e fine. Può essere salvato in una variabile.</p>
+<p>Per ottenere la sottostringa tra le posizioni 1 e 4 della stringa &ldquo;Questa è una stringa&rdquo;, sostituiamo al parametro formale <code>inizio</code> il valore <code>1</code> e al parametro formale <code>fine</code> il valore <code>4</code>. Salviamo in una variabile <code>sottostringa</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sottostringa = <span style="color:#009c00">&#34;Questa è una stringa&#34;</span>.substring(1, 4);
+</span></span></code></pre></div><p>La funzione progettata per <strong>cercare il carattere presente alla posizione</strong> indicata dal parametro <code>index</code> è la funzione <code>charAt(index)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.charAt(index)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    index    Number: the position of the character
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    String: the character at the specified position
+</span></span></code></pre></div><p>Il parametro formale <code>index</code> rappresenta la posizione del carattere nella stringa.</p>
+<p>Il valore restituito è il carattere alla posizione specificata. Può essere salvato in una variabile.</p>
+<p>Per ottenere il carattere alla posizione 0 della stringa &ldquo;Questa è una stringa&rdquo;, sostituiamo al parametro formale <code>index</code> il valore <code>0</code>. Salviamo in una variabile <code>c</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> c = <span style="color:#009c00">&#34;Questa è una stringa&#34;</span>.charAt(0);
+</span></span></code></pre></div><h3 id="funzioni-di-ricerca-della-posizione">Funzioni di ricerca della posizione</h3>
+<p>La funzione progettata per la <strong>ricerca della posizione della prima occorrenza</strong> di un carattere o di un’altra stringa <code>stringa</code> all’interno della stringa è <code>indexOf(stringa)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.indexOf(stringa)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    stringa    String: the string to search for
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Number: the index of the first occurrence of the specified string, or -1 if not found
+</span></span></code></pre></div><p>Il parametro formale <code>stringa</code> rappresenta la stringa da cercare.</p>
+<p>Il valore restituito è l&rsquo;indice in cui appare la stringa specificata. Può essere salvato in una variabile.</p>
+<p>Per ottenere l&rsquo;indice in cui appare la stringa &ldquo;inga&rdquo; nella stringa &ldquo;Questa è una stringa&rdquo;, sostituiamo al parametro formale <code>stringa</code> il valore <code>&quot;inga&quot;</code>. Salviamo in una variabile <code>indice</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> indice = <span style="color:#009c00">&#34;Questa è una stringa&#34;</span>.indexOf(<span style="color:#009c00">&#34;inga&#34;</span>);
+</span></span></code></pre></div><p>La funzione progettata la <strong>ricerca della posizione dell&rsquo;ultima occorrenza</strong> di un carattere o di un’altra stringa <code>stringa</code> all’interno della stringa è <code>lastIndexOf(stringa)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.lastIndexOf(stringa)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    stringa    String: the string to search for
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Number: the index of the last occurrence of the specified string, or -1 if not found
+</span></span></code></pre></div><p>Il parametro formale <code>stringa</code> rappresenta la stringa da cercare.</p>
+<p>Il valore restituito è l&rsquo;ultimo indice in cui appare la stringa specificata. Può essere salvato in una variabile.</p>
+<p>Per ottenere l&rsquo;ultimo indice in cui appare la stringa &ldquo;ga&rdquo; nella stringa &ldquo;Questa è una stringa&rdquo;, sostituiamo al parametro formale <code>stringa</code> il valore <code>&quot;ga&quot;</code>. Salviamo in una variabile <code>ultimoIndice</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> ultimoIndice = <span style="color:#009c00">&#34;Questa è una stringa&#34;</span>.lastIndexOf(<span style="color:#009c00">&#34;ga&#34;</span>);
+</span></span></code></pre></div><h3 id="funzioni-di-ricerca-della-presenza">Funzioni di ricerca della presenza</h3>
+<p>La funzione progettata per <strong>verificare se una stringa inizia</strong> con un carattere o un’altra stringa <code>stringa</code> all’interno della stringa è <code>startsWith(stringa)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.startsWith(stringa)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    stringa    String: the string to search for at the start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Boolean: true if the string starts with the specified string, otherwise false
+</span></span></code></pre></div><p>Il parametro formale <code>stringa</code> rappresenta la stringa da verificare all&rsquo;inizio.</p>
+<p>Il valore restituito è un valore booleano che indica se la stringa inizia con la stringa specificata. Può essere salvato in una variabile.</p>
+<p>Per verificare se la stringa &ldquo;Questa è una stringa&rdquo; inizia con &ldquo;inga&rdquo;, sostituiamo al parametro formale <code>stringa</code> il valore <code>&quot;inga&quot;</code>. Salviamo in una variabile <code>risultato</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> risultato = <span style="color:#009c00">&#34;Questa è una stringa&#34;</span>.startsWith(<span style="color:#009c00">&#34;inga&#34;</span>);
+</span></span></code></pre></div><p>La funzione progettata per <strong>verificare se una stringa termina</strong> con un carattere o un’altra stringa <code>stringa</code> all’interno della stringa è <code>endsWith(stringa)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.endsWith(stringa)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    stringa    String: the string to search for
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Boolean: true if the string ends with the specified string, otherwise false
+</span></span></code></pre></div><p>Il parametro formale <code>stringa</code> rappresenta la stringa da verificare.</p>
+<p>Il valore restituito è un valore booleano che indica se la stringa termina con la stringa specificata. Può essere salvato in una variabile.</p>
+<p>Per verificare se la stringa &ldquo;Questa è una stringa&rdquo; termina con &ldquo;inga&rdquo;, sostituiamo al parametro formale <code>stringa</code> il valore <code>&quot;inga&quot;</code>. Salviamo in una variabile <code>risultato</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> risultato = <span style="color:#009c00">&#34;Questa è una stringa&#34;</span>.endsWith(<span style="color:#009c00">&#34;inga&#34;</span>);
+</span></span></code></pre></div><h3 id="funzioni-di-sostituzione">Funzioni di sostituzione</h3>
+<p>La funzione progettata per eseguire la <strong>sostituzione di una parte della stringa</strong> con un’altra stringa è <code>replace(stringa1, stringa2)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.replace(stringa1, stringa2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    stringa1    String: the substring to be replaced
+</span></span><span style="display:flex;"><span>    stringa2    String: the substring to replace with
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    String: a new string with the specified substring replaced
+</span></span></code></pre></div><p>Il parametro formale <code>stringa1</code> rappresenta la prima stringa da sostituire, mentre <code>stringa2</code> rappresenta la seconda stringa con cui sostituire.</p>
+<p>Il valore restituito è una nuova stringa con tutte le occorrenze della prima stringa sostituite dalla seconda. Può essere salvato in una variabile.</p>
+<p>Per sostituire tutte le occorrenze della stringa &ldquo;a&rdquo; con &ldquo;altra stringa&rdquo; nella stringa &ldquo;Questa è una stringa&rdquo;, sostituiamo al parametro formale <code>stringa1</code> il valore <code>&quot;a&quot;</code> e al parametro formale <code>stringa2</code> il valore <code>&quot;altra stringa&quot;</code>. Salviamo in una variabile <code>nuovaStringa</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> nuovaStringa = <span style="color:#009c00">&#34;Questa è una stringa&#34;</span>.replace(<span style="color:#009c00">&#34;a&#34;</span>, <span style="color:#009c00">&#34;altra stringa&#34;</span>);
+</span></span></code></pre></div><p>La funzione progettata per eseguire la <strong>rimozione degli spazi bianchi</strong> presenti esclusivamente all’inizio e/o alla fine di una stringa è <code>trim()</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.trim()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    String: the string with whitespace removed from both ends
+</span></span></code></pre></div><p>Non ci sono parametri formali per questa funzione.</p>
+<p>Il valore restituito è la stringa con tutti gli spazi iniziali e finali rimossi. Può essere salvato in una variabile.</p>
+<p>Per rimuovere gli spazi iniziali e finali dalla stringa &quot;   Questa è una stringa   &ldquo;, possiamo invocare la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringaTrimmed = <span style="color:#009c00">&#34;   Questa è una stringa   &#34;</span>.trim();
+</span></span></code></pre></div><p>La funzione progettata per <strong>convertire i caratteri maiuscoli in minuscolo</strong> è <code>toLowerCase()</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.toLowerCase()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    String: the string with all characters converted to lowercase
+</span></span></code></pre></div><p>Non ci sono parametri formali per questa funzione.</p>
+<p>Il valore restituito è la stringa con tutti i caratteri convertiti in minuscolo. Può essere salvato in una variabile.</p>
+<p>Per convertire la stringa &ldquo;Questa è una stringa&rdquo; in minuscolo, possiamo invocare la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> minuscolo = <span style="color:#009c00">&#34;Questa è una stringa&#34;</span>.toLowerCase();
+</span></span></code></pre></div><p>La funzione progettata per <strong>convertire i caratteri minuscoli in maiuscolo</strong> è <code>toUpperCase()</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: String.toUpperCase()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    String: the string with all characters converted to uppercase
+</span></span></code></pre></div><p>Non ci sono parametri formali per questa funzione.</p>
+<p>Il valore restituito è la stringa con tutti i caratteri convertiti in maiuscolo. Può essere salvato in una variabile.</p>
+<p>Per convertire la stringa &ldquo;Questa è una stringa&rdquo; in maiuscolo, possiamo invocare la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> maiuscolo = <span style="color:#009c00">&#34;Questa è una stringa&#34;</span>.toUpperCase();
+</span></span></code></pre></div><h2 id="conversione-da-numero-a-stringa">Conversione da numero a stringa</h2>
+<p>Per quanto concerne la conversione di un numero in formato stringa, è possibile utilizzare il metodo <code>toString()</code> dei tipi numerici, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 1;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringX = x.toString();
+</span></span></code></pre></div><p>E&rsquo; possibile convertire il numero in una base specificata passando come argomento al metodo <code>toString()</code> la base in cui si vuole convertire il numero.</p>
+<p>Ad esempio, per la conversione in binario, ottale ed esadecimale si usa il seguente codice:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 10;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x2 = (10).toString(2);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x8 = x.toString(8);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x16 = x.toString(16);
+</span></span></code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">x2 = &#34;1010&#34;
+x8 = &#34;12&#34;
+x16 = &#34;a&#34;
+</code></pre><p>Nel caso di numeri negativi, si può effettuare una conversione in complemento a 2, utilizzando il seguente codice:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = -1;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> xC2 = (x &gt;&gt;&gt; 0).toString()
+</span></span></code></pre></div><p>Il numero è convertito in una stringa rappresentata da 32 bit:</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">xC2 = &#34;11111111111111111111111111111111&#34;
+</code></pre><p>Per la conversione in formato esponenziale si utilizza il metodo <code>toExponential()</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 1;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 1.4;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> w = 14;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> z = 123456789.123456;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringX = x.toExponential();
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringY = y.toExponential();
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringW = w.toExponential();
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringZ = z.toExponential();
+</span></span></code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">&#34;1e+0&#34;
+&#34;1.4e+0&#34;
+&#34;1.4e+1&#34;
+&#34;1.2346e+8&#34;
+</code></pre><p>Si può passare al metodo il parametro opzionale indicante il numero di cifre decimali da utilizzare per la mantissa, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> z = 123456789.123456;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringZ = z.toExponential(2);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringZ = z.toExponential(8);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringZ = z.toExponential(16);
+</span></span></code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
+<pre tabindex="0"><code class="language-output" data-lang="output">&#34;1.23e+8&#34;
+&#34;1.23456789e+8&#34;
+&#34;1.2345678912345600e+8&#34;
+</code></pre>
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/javascript/math/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">Espressioni matematiche</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

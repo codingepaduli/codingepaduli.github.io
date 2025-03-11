@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JavaScript - Operatori ed operazioni matematiche - Lab. informatica</title>
+    <title>Espressioni matematiche - Lab. informatica</title>
 
     <meta name="description" content="Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche">
         <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/math/">
   <meta property="og:site_name" content="Lab. informatica">
-  <meta property="og:title" content="JavaScript - Operatori ed operazioni matematiche">
+  <meta property="og:title" content="Espressioni matematiche">
   <meta property="og:description" content="Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche">
   <meta property="og:locale" content="it_IT">
   <meta property="og:type" content="article">
     <meta property="article:section" content="coding">
     <meta property="article:published_time" content="2021-08-26T00:00:00+00:00">
-    <meta property="article:modified_time" content="2021-08-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-10T00:00:00+00:00">
     <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
 
         
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
-  <meta name="twitter:title" content="JavaScript - Operatori ed operazioni matematiche">
+  <meta name="twitter:title" content="Espressioni matematiche">
   <meta name="twitter:description" content="Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche">
 
 
@@ -226,51 +226,19 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-08-26T00:00:00Z">26-08-2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">P5.js</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-08-26T00:00:00Z">26-08-2021</time>
+	<time class="meta__text" datetime="2025-03-10T00:00:00Z">(Ultima modifica: 10-03-2025)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">P5.js</a>
 	</span>
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 20 minuti 
-        ( 4064 parole)
+        Tempo di lettura 21 minuti 
+        ( 4281 parole)
     </span>
 </div></div>
     </header>
-<details class="post__toc toc">
-    <summary class="toc__title">Indice</summary>
-    <div class="toc__menu">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#espressioni-matematiche">Espressioni matematiche</a>
-      <ul>
-        <li><a href="#assegnazione-ed-uguaglianza">Assegnazione ed uguaglianza</a></li>
-        <li><a href="#operatori-aritmetici">Operatori aritmetici</a></li>
-        <li><a href="#operatori-relazionali">Operatori relazionali</a></li>
-        <li><a href="#operatori-logici">Operatori logici</a></li>
-        <li><a href="#operatori-binari">Operatori binari</a></li>
-        <li><a href="#operatori-di-assegnazione">Operatori di assegnazione</a></li>
-      </ul>
-    </li>
-    <li><a href="#libreria-matematica-math">Libreria matematica <code>Math</code></a>
-      <ul>
-        <li><a href="#funzioni-di-arrotondamento">Funzioni di arrotondamento</a></li>
-        <li><a href="#funzioni-per-la-generazione-di-un-numero-casuale">Funzioni per la generazione di un numero casuale</a>
-          <ul>
-            <li><a href="#numero-casuale-con-limite-superiore">Numero casuale con limite superiore</a></li>
-            <li><a href="#numero-casuale-con-limite-inferiore-e-superiore">Numero casuale con limite inferiore e superiore</a></li>
-          </ul>
-        </li>
-        <li><a href="#funzioni-per-il-calcolo-di-potenze-e-radici">Funzioni per il calcolo di potenze e radici</a></li>
-        <li><a href="#funzioni-per-il-calcolo-di-esponenziali-e-logaritmi">Funzioni per il calcolo di esponenziali e logaritmi</a></li>
-        <li><a href="#funzioni-trigonometriche">Funzioni trigonometriche</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </div>
-</details>
 <div class="content post__content clearfix">
-      <h1 id="javascript---operatori-ed-espressioni-matematiche">JavaScript - Operatori ed espressioni matematiche</h1>
+      <h1 id="espressioni-matematiche">Espressioni matematiche</h1>
 <p>I moderni sistemi informatici sono notoriamente chiamati sistemi <strong>digitali</strong>, in quanto i numeri sono rappresentati utilizzando il sistema numerico binario, che fa uso di due soli simboli (0 e 1), e non il sistema numerico decimale, che ne utilizza dieci (da 0 a 9).</p>
 <p>Questi sistemi computerizzati sono gestiti da un microprocessore dotato di diverse unità per l&rsquo;esecuzione delle operazioni matematiche e logiche. Si tratta di più unità perché i microprocessori odierni sono multi-core, per cui, un dual-core ha il doppio, un quad-core ha il quadruplo, un exa-core ha il sestuplo delle unità rispetto ai microprocessori single-core di un tempo.</p>
 <!-- introdurre il concetto di core ?? -->
@@ -285,7 +253,7 @@
 </ul>
 <p>Il programmatore può riferirsi alle regole ed agli standard sopra citati per comprendere i dettagli matematici alla base di alcuni risultati.</p>
 <p>Ad esempio, il risultato di <code>0.1 + 0.2</code> non fa <code>0.3</code> come ci si potrebbe aspettare, ma fa <code>0.30000000000000004</code>, e questo avviene con qualsiasi linguaggio di programmazione, dato che <code>0.3</code> non può essere rappresentato precisamente utilizzando il sistema binario.</p>
-<h2 id="espressioni-matematiche">Espressioni matematiche</h2>
+<h2 id="espressioni-matematiche-1">Espressioni matematiche</h2>
 <p>Le espressioni sono sequenze di operazioni da eseguire su più numeri o variabili. Le operazioni da eseguire sono indicate dagli operatori matematici. Ad esempio, l&rsquo;espressione <code>3 + 4 * 5</code> indica la somma dei numeri <code>3</code> e <code>4</code> e la successiva moltiplicazione del risultato con il numero <code>5</code>.</p>
 <p>L&rsquo;operazione di calcolo del risultato di un&rsquo;espressione è detta <strong>valutazione</strong>, pertanto le espressioni sono <strong>valutate</strong> calcolando le operazioni da sinistra verso destra, applicando passo dopo passo gli operatori ai dati o alle variabili indicate.</p>
 <p>Ad esempio, nell&rsquo;espressione <code>5 + 4 - 7</code> si procede prima al calcolo della somma <code>5 + 4</code>, che ha come risultato <code>9</code>, e poi si prosegue al calcolo della differenza <code>9 - 7</code>, che restituisce <code>2</code>. Nel complesso, la valutazione dell&rsquo;espressione menzionata ha come risultato <code>2</code>.</p>
@@ -297,21 +265,6 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <p>Nonostante la gestione delle precedenze possa sembrare semplice, quando si valutano espressioni con un vasto numero di operatori differenti si può incorrere in errori di valutazione, proprio perchè non è scontato ricordare la precedenza dei vari operatori matematici.</p>
 <p>L&rsquo;ordine delle operazioni da svolgere può essere chiarito o modificato utilizzando le parentesi tonde <code>(</code> e <code>)</code>. Queste hanno precedenza maggiore rispetto agli altri operatori, per cui si procede prima al calcolo del contenuto delle parentesi e poi della restante espressione. E&rsquo; da notare che le parentesi possono essere annidate l&rsquo;una dentro l&rsquo;altra.</p>
 <p>Ad esempio, data l&rsquo;espressione <code>((3 + 4) - 5) * 6</code>, le parentesi tonde hanno la precedenza, per cui viene prima valutato il risultato della somma tra <code>3</code> e <code>4</code>, restituendo <code>7</code>. Vi è ancora una parentesi tonda che ha precedenza, quindi viene valutato il risultato della sottrazione tra <code>7</code> e <code>5</code>, restituendo <code>2</code>. Quindi viene svolta la moltiplicazione tra <code>2</code> e <code>6</code>, restituendo <code>12</code>. Per cui, la valutazione dell&rsquo;espressione restituisce il risultato <code>12</code>.</p>
-<h3 id="assegnazione-ed-uguaglianza">Assegnazione ed uguaglianza</h3>
-<p>Nelle espressioni matematiche il simbolo di uguaglianza <code>=</code> è usato anche come assegnazione. L&rsquo;espressione <code>x = 5</code> indica al tempo stesso che i due valori sono uguali e che la variabile <code>x</code> assume valore <code>5</code>.</p>
-<p>Nei linguaggi di programmazione, questi due concetti sono distinti, in modo tale da permettere al calcolatore di effettuare due azioni differenti.</p>
-<p>Tipicamente, il simbolo di uguaglianza è rappresentato dal simbolo <code>==</code>, ed è utilizzato per verificare che due espressioni siano uguali, come nel caso dell&rsquo;espressione <code>x + 3 == y - 2</code>.</p>
-<p>L&rsquo;assegnazione è utilizzata per impostare il valore di una variabile, copiando nella relativa locazione di memoria il valore assegnato. In questo caso si parla di operatore di assegnazione, rappresentato dal simbolo <code>=</code>, ed ha una regola di sintassi precisa:</p>
-<ul>
-<li>a sinistra dell&rsquo;operatore deve essere presente una variabile già dichiarata;</li>
-<li>a destra dell&rsquo;operatore deve essere presente un valore o un&rsquo;espressione matematica.</li>
-</ul>
-<p>Due esempi di assegnazione sono i seguenti:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> y = 5;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x = 5 * (6 + y);
-</span></span><span style="display:flex;"><span>console.info(y);
-</span></span><span style="display:flex;"><span>console.info(x);
-</span></span></code></pre></div><p>Esistono molteplici operatori di assegnazione, che saranno trattati in dettaglio nei successivi paragrafi.</p>
 <h3 id="operatori-aritmetici">Operatori aritmetici</h3>
 <p>Gli operatori aritmetici, utilizzati per svolgere le operazioni aritmetiche di base, sono i seguenti:</p>
 <ul>
@@ -681,11 +634,49 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 <p>Il valore restituito è il coseno di <code>x</code>, sempre ricordando che è calcolato sulla circonferenza unitaria, quindi con raggio <code>uno</code>.</p>
 <p>Per calcolare il coseno dell&rsquo;angolo che misura <code>3</code> radianti, sostituiamo al parametro formale <code>x</code> il valore <code>3</code> ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.cos(3);
+</span></span></code></pre></div><h3 id="funzione-di-valore-assoluto">Funzione di valore assoluto</h3>
+<p>La funzione progettata per il calcolo del valore assoluto di un numero <code>x</code> è <code>abs(x)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.abs(x)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    x    Number: the number
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Number: the absolute value of the number x.
+</span></span></code></pre></div><p>Il parametro formale <code>x</code> il numero.</p>
+<p>Il valore restituito è il valore assoluto del numero <code>x</code>.</p>
+<p>Per calcolare il valore assoluto del numero <code>-3</code>, sostituiamo al parametro formale <code>x</code> il valore <code>-3</code> ed opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.abs(-3);
+</span></span></code></pre></div><h3 id="funzioni-di-massimo-e-minimo">Funzioni di massimo e minimo</h3>
+<p>La funzione progettata per restituire il maggiore dei valori passati come argomento è <code>max(x, y, w, ...)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.max(x, y, w, ...)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    x, y, w, ...  Numbers: the numbers to compare
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>  Number: the greatest value of the numbers x, v, w, ... .
+</span></span></code></pre></div><p>I parametri formali <code>x</code>, <code>y</code>, <code>w</code> e gli altri indicati dai puntini sospensivi sono i numeri da confrontare.</p>
+<p>Il valore restituito è il valore più alto tra i numeri passati come argomento <code>x</code>.</p>
+<p>Per calcolare il valore maggiore tra i numeri <code>-3</code>, <code>-23</code>, <code>33</code>,<code>-60</code> e <code>13</code> sostituiamo al parametro formale <code>x</code> il valore <code>-3</code>,  al parametro formale <code>y</code> il valore <code>-23</code>, al parametro formale <code>w</code> il valore <code>33</code>, agli altri parametri indicati con i puntini sospensivi i valori <code>-60</code> e <code>13</code>, opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.max(-3, -23, 33, -60, 13)
+</span></span></code></pre></div><p>La funzione progettata per restituire il minore dei valori passati come argomento è <code>min(x, y, w, ...)</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Math.min(x, y, w, ...)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    x, y, w, ...  Numbers: the numbers to compare
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>  Number: the lowest value of the numbers x, v, w, ... .
+</span></span></code></pre></div><p>I parametri formali <code>x</code>, <code>y</code>, <code>w</code> e gli altri indicati dai puntini sospensivi sono i numeri da confrontare.</p>
+<p>Il valore restituito è il valore più basso tra i numeri passati come argomento <code>x</code>.</p>
+<p>Per calcolare il valore minore tra i numeri <code>-3</code>, <code>-23</code>, <code>33</code>,<code>-60</code> e <code>13</code> sostituiamo al parametro formale <code>x</code> il valore <code>-3</code>,  al parametro formale <code>y</code> il valore <code>-23</code>, al parametro formale <code>w</code> il valore <code>33</code>, agli altri parametri indicati con i puntini sospensivi i valori <code>-60</code> e <code>13</code>, opzionalmente salviamo in una variabile <code>i</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> i = Math.min(-3, -23, 33, -60, 13)
 </span></span></code></pre></div>
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="https://it.m.wikipedia.org/wiki/Algebra_di_Boole" style="font-weight: 700; color: #e22d30;">Algebra di Boole</a>: Algebra di Boole</p><p><a href="https://it.m.wikipedia.org/wiki/IEEE_754" style="font-weight: 700; color: #e22d30;">Standard IEEE 754</a>: Standard per l&#39;aritmetica a virgola mobile in base binaria per i sistemi basati su microprocessore</p><p><a href="https://0.30000000000000004.com/" style="font-weight: 700; color: #e22d30;">Floating Point Math</a>: Aritmetica a virgola mobile per i vari linguaggi di programmazione</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" style="font-weight: 700; color: #e22d30;">Libreria matematica Math</a>: Firma e descrizione delle varie funzioni matematiche</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" style="font-weight: 700; color: #e22d30;">Libreria matematica Number</a>: Firma e descrizione delle varie funzioni sui numeri</p>
+      <p><a href="https://it.m.wikipedia.org/wiki/Algebra_di_Boole" style="font-weight: 700; color: #e22d30;">Algebra di Boole</a>: Algebra di Boole</p><p><a href="https://it.m.wikipedia.org/wiki/IEEE_754" style="font-weight: 700; color: #e22d30;">Standard IEEE 754</a>: Standard per l&#39;aritmetica a virgola mobile in base binaria per i sistemi basati su microprocessore</p><p><a href="https://0.30000000000000004.com/" style="font-weight: 700; color: #e22d30;">Floating Point Math</a>: Aritmetica a virgola mobile per i vari linguaggi di programmazione</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" style="font-weight: 700; color: #e22d30;">Libreria matematica Math</a>: Firma e descrizione delle varie funzioni matematiche</p>
   </article>
 </main>
 
@@ -695,9 +686,15 @@ A questo punto deve essere calcolata l&rsquo;espressione ancora l&rsquo;espressi
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/javascript/dom/" rel="prev">
+		<a class="pager__link" href="/coding/web/javascript/variabili/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">JavaScript Lez. 09 - Document Object Model</p>
+			<p class="pager__title">JavaScript Lez. 03 - Costanti, variabili e tipi di dato</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/javascript/stringhe/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">Le stringhe</p>
 		</a>
 	</div>
 </nav>

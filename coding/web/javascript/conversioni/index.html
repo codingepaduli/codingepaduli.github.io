@@ -231,8 +231,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 9 minuti 
-        ( 1860 parole)
+        Tempo di lettura 7 minuti 
+        ( 1439 parole)
     </span>
 </div></div>
     </header>
@@ -271,49 +271,7 @@
 </ul>
 <p>Come si può notare, sia la variabile oggetto, sia le variabili con valore <code>null</code>, sia la variabile sia tutte le variabili &ldquo;wrapper&rdquo; sono di tipo oggetto.</p>
 <p>Una precisazione però è da fare sulla variabile inizializzata a <code>null</code>: la specifica di ECMAScript prevede che, nonostante la variabile sia da considerare come tipo &ldquo;null&rdquo;, l&rsquo;operazione <code>typeof null</code> restituisca <code>object</code>.</p>
-<h2 id="conversione-da-numero-a-stringa">Conversione da numero a stringa</h2>
-<p>Per quanto concerne la conversione di un numero in formato stringa, è possibile utilizzare il metodo <code>toString()</code> dei tipi numerici, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 1;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringX = x.toString();
-</span></span></code></pre></div><p>E&rsquo; possibile convertire il numero in una base specificata passando come argomento al metodo <code>toString()</code> la base in cui si vuole convertire il numero.</p>
-<p>Ad esempio, per la conversione in binario, ottale ed esadecimale si usa il seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 10;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x2 = (10).toString(2);
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x8 = x.toString(8);
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> x16 = x.toString(16);
-</span></span></code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
-<pre tabindex="0"><code class="language-output" data-lang="output">x2 = &#34;1010&#34;
-x8 = &#34;12&#34;
-x16 = &#34;a&#34;
-</code></pre><p>Nel caso di numeri negativi, si può effettuare una conversione in complemento a 2, utilizzando il seguente codice:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = -1;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> xC2 = (x &gt;&gt;&gt; 0).toString()
-</span></span></code></pre></div><p>Il numero è convertito in una stringa rappresentata da 32 bit:</p>
-<pre tabindex="0"><code class="language-output" data-lang="output">xC2 = &#34;11111111111111111111111111111111&#34;
-</code></pre><p>Per la conversione in formato esponenziale si utilizza il metodo <code>toExponential()</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 1;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 1.4;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> w = 14;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> z = 123456789.123456;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringX = x.toExponential();
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringY = y.toExponential();
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringW = w.toExponential();
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringZ = z.toExponential();
-</span></span></code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
-<pre tabindex="0"><code class="language-output" data-lang="output">&#34;1e+0&#34;
-&#34;1.4e+0&#34;
-&#34;1.4e+1&#34;
-&#34;1.2346e+8&#34;
-</code></pre><p>Si può passare al metodo il parametro opzionale indicante il numero di cifre decimali da utilizzare per la mantissa, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> z = 123456789.123456;
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringZ = z.toExponential(2);
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringZ = z.toExponential(8);
-</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> stringZ = z.toExponential(16);
-</span></span></code></pre></div><p>Il codice converte il numero nelle seguenti stringhe:</p>
-<pre tabindex="0"><code class="language-output" data-lang="output">&#34;1.23e+8&#34;
-&#34;1.23456789e+8&#34;
-&#34;1.2345678912345600e+8&#34;
-</code></pre><h2 id="operazioni-ed-operatori-per-le-stringhe">Operazioni ed operatori per le stringhe</h2>
+<h2 id="operazioni-ed-operatori-per-le-stringhe">Operazioni ed operatori per le stringhe</h2>
 <p>Diversi operatori possono lavorare sulle stringhe:</p>
 <table>
 <thead>
@@ -327,7 +285,7 @@ x16 = &#34;a&#34;
 <tr>
 <td><code>+</code></td>
 <td>concatenazione tra due stringhe</td>
-<td><code>x = &quot;una &quot; + &quot;stringa.&quot;</code></td>
+<td><code>x = &quot;una &quot; + &quot;stringa&quot;</code></td>
 </tr>
 <tr>
 <td><code>==</code></td>
@@ -356,7 +314,8 @@ x16 = &#34;a&#34;
 </tr>
 </tbody>
 </table>
-<p>Per tutte le altre operazioni sulle stringhe si utilizzano le proprietà ed i metodi dell&rsquo;oggetto <code>String</code>. Tutte le stringhe sono istanze di questo oggetto (come le istanze di una classe nella programmazione OOP), e quindi le proprietà ed i metodi di questo oggetto <code>String</code> sono disponibili alle istanze.</p>
+<h2 id="proprietà-e-funzioni-su-stringhe">Proprietà e funzioni su stringhe</h2>
+<p>Riepilogo delle proprietà e dei metodi più utilizzati degli oggetti di tipo <code>String</code>. Per un elenco completo si rimanda alla documentazione ufficiale.</p>
 <p>L&rsquo;unica proprietà disponibile nelle stringhe è <code>length</code>, ed è di sola lettura.</p>
 <table>
 <thead>
@@ -368,13 +327,12 @@ x16 = &#34;a&#34;
 </thead>
 <tbody>
 <tr>
-<td><code>lenghth</code></td>
+<td><code>length</code></td>
 <td>lunghezza della stringa</td>
-<td><code>&quot;Questa è una stringa&quot;.length</code></td>
+<td><code>&quot;una stringa&quot;.length</code></td>
 </tr>
 </tbody>
 </table>
-<p>I metodi disponibili sono numerosissimi, per un elenco completo si rimanda alla documentazione della classe <code>String</code>. Di seguito un elenco dei metodi più utilizzati:</p>
 <table>
 <thead>
 <tr>
@@ -386,82 +344,81 @@ x16 = &#34;a&#34;
 <tbody>
 <tr>
 <td><code>charAt(index)</code></td>
-<td>restituisce il carattere alla posizione passata come argomento</td>
-<td><code>&quot;Questa è una stringa&quot;.charAt(0)</code></td>
+<td>restituisce il carattere alla posizione indicata</td>
+<td><code>&quot;una stringa&quot;.charAt(0)</code></td>
 </tr>
 <tr>
 <td><code>endsWith(stringa)</code></td>
-<td>indica se termina con la stringa passata come argomento</td>
-<td><code>&quot;Questa è una stringa&quot;.endsWith(&quot;inga&quot;)</code></td>
+<td>indica se termina con la stringa indicata</td>
+<td><code>&quot;una stringa&quot;.endsWith(&quot;inga&quot;)</code></td>
 </tr>
 <tr>
 <td><code>indexOf(stringa)</code></td>
-<td>restituisce l&rsquo;indice in cui appare la stringa passata come argomento</td>
-<td><code>&quot;Questa è una stringa&quot;.indexOf(&quot;inga&quot;)</code></td>
+<td>restituisce l&rsquo;indice in cui appare la stringa indicata</td>
+<td><code>&quot;una stringa&quot;.indexOf(&quot;inga&quot;)</code></td>
 </tr>
 <tr>
 <td><code>lastIndexOf(stringa)</code></td>
-<td>restituisce l&rsquo;ultimo indice in cui appare la stringa passata come argomento</td>
-<td><code>&quot;Questa è una stringa&quot;.lastIndexOf(&quot;ga&quot;)</code></td>
+<td>restituisce l&rsquo;ultimo indice in cui appare la stringa indicata</td>
+<td><code>&quot;una stringa&quot;.lastIndexOf(&quot;ga&quot;)</code></td>
 </tr>
 <tr>
 <td><code>replace(stringa1, stringa2)</code></td>
-<td>sostituisce tutte le occorrenze della prima stringa passata come argomento con la seconda stringa passata come argomento</td>
-<td><code>&quot;Questa è una stringa&quot;.replace(&quot;a&quot;, &quot;altra stringa&quot;)</code></td>
+<td>sostituisce tutte le occorrenze della prima stringa con la seconda stringa</td>
+<td><code>&quot;una stringa&quot;.replace(&quot;a&quot;, &quot;altra stringa&quot;)</code></td>
 </tr>
 <tr>
 <td><code>startsWith(stringa)</code></td>
-<td>indica se inizia con la stringa passata come argomento</td>
-<td><code>&quot;Questa è una stringa&quot;.startsWith(&quot;inga&quot;)</code></td>
+<td>indica se inizia con la stringa indicata</td>
+<td><code>&quot;una stringa&quot;.startsWith(&quot;inga&quot;)</code></td>
 </tr>
 <tr>
 <td><code>substring(inizio, fine)</code></td>
 <td>restituisce la stringa inclusa tra le posizioni di inizio e fine</td>
-<td><code>&quot;Questa è una stringa&quot;.substring(1,4)</code></td>
+<td><code>&quot;una stringa&quot;.substring(1,4)</code></td>
 </tr>
 <tr>
 <td><code>toLowerCase()</code></td>
 <td>restituisce la stringa con tutti i caratteri in minuscolo</td>
-<td><code>&quot;Questa è una stringa&quot;.toLowerCase()</code></td>
+<td><code>&quot;una stringa&quot;.toLowerCase()</code></td>
 </tr>
 <tr>
 <td><code>toUpperCase()</code></td>
 <td>restituisce la stringa con tutti i caratteri in maiuscolo</td>
-<td><code>&quot;Questa è una stringa&quot;.toUpperCase()</code></td>
+<td><code>&quot;una stringa&quot;.toUpperCase()</code></td>
 </tr>
 <tr>
 <td><code>trim()</code></td>
 <td>rimuove tutti gli spazi iniziali e finali</td>
-<td><code>&quot;Questa è una stringa&quot;.trim()</code></td>
+<td><code>&quot;una stringa&quot;.trim()</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="costanti-e-funzioni-matematiche">Costanti e funzioni matematiche</h2>
-<p>Per tutte le altre operazioni sui numeri si utilizzano le proprietà ed i metodi della libreria <code>Math</code> e dell&rsquo;oggetto <code>Number</code>.</p>
-<p>Le costanti ed i metodi resi disponibili dalla libreria <code>Math</code> sono numerosissimi, per un elenco completo si rimanda alla documentazione della libreria. Di seguito un elenco delle costanti e dei metodi più utilizzati:</p>
+<p>Riepilogo delle proprietà e dei metodi più utilizzati della libreria <code>Math</code>. Per un elenco completo si rimanda alla documentazione della libreria.</p>
 <table>
 <thead>
 <tr>
 <th>Costante</th>
 <th>Operazione</th>
-<th>Esempio d&rsquo;uso</th>
+<th>Valore</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Math.E</code></td>
 <td>Costante e di Eulero / Nepero</td>
-<td><code>&quot;La costante E vale&quot; + Math.E</code></td>
+<td><code>2.718281828459045</code></td>
 </tr>
 <tr>
 <td><code>Math.PI</code></td>
-<td>Costante Π (pi greco) / Costante di Archimede</td>
-<td><code>&quot;La costante &amp;Pi; vale&quot; + Math.PI</code></td>
+<td>Costante di Archimede Π (pi greco)</td>
+<td><code>3.141592653589793</code></td>
 </tr>
 <tr>
 <td><code>Math.SQRT2</code></td>
 <td>Valore della radice quadrata di 2</td>
-<td><code>&quot;La costante SQRT2 vale&quot; + Math.SQRT2</code></td>
+<td><code>1.414213562373095</code></td>
 </tr>
 </tbody>
 </table>
@@ -476,83 +433,82 @@ x16 = &#34;a&#34;
 <tbody>
 <tr>
 <td><code>abs(x)</code></td>
-<td>restituisce il valore assoluto del numero x</td>
+<td>Valore assoluto</td>
 <td><code>Math.abs(-2)</code></td>
 </tr>
 <tr>
 <td><code>cbrt(x)</code></td>
-<td>restituisce la radice cubica del numero x</td>
+<td>Radice cubica</td>
 <td><code>Math.cbrt(-2)</code></td>
 </tr>
 <tr>
 <td><code>ceil(x)</code></td>
-<td>restituisce l&rsquo;arrotondamento di x al numero intero più grande</td>
+<td>Arrotondamento per eccesso</td>
 <td><code>Math.ceil(-2.12)</code></td>
 </tr>
 <tr>
 <td><code>cos(x)</code></td>
-<td>restituisce il coseno dell&rsquo;angolo x (espresso in radianti)</td>
+<td>Coseno dell&rsquo;angolo(in radianti)</td>
 <td><code>Math.cos(-2)</code></td>
 </tr>
 <tr>
 <td><code>exp(x)</code></td>
-<td>restituisce l&rsquo;esponenziale in base E del numero x</td>
+<td>Esponenziale in base E</td>
 <td><code>Math.exp(2)</code></td>
 </tr>
 <tr>
 <td><code>floor(x)</code></td>
-<td>restituisce l&rsquo;arrotondamento di x al numero intero più piccolo</td>
+<td>Arrotondamento per difetto</td>
 <td><code>Math.floor(-2)</code></td>
 </tr>
 <tr>
 <td><code>log(x)</code></td>
-<td>restituisce il logaritmo in base E del numero x</td>
+<td>Logaritmo in base E</td>
 <td><code>Math.log(2)</code></td>
 </tr>
 <tr>
 <td><code>max(x, y, w, ...)</code></td>
-<td>restituisce il maggiore dei valori passati come argomento</td>
+<td>Maggiore dei valori passati</td>
 <td><code>Math.max(-2, 3, 4, -8)</code></td>
 </tr>
 <tr>
 <td><code>min(x, y, w, ...)</code></td>
-<td>restituisce il minore dei valori passati come argomento</td>
+<td>Minore dei valori passati</td>
 <td><code>Math.min(-2, 3, 4, -8)</code></td>
 </tr>
 <tr>
 <td><code>pow(x, y)</code></td>
-<td>restituisce il valore di x elevato ad y</td>
+<td>x elevato a y</td>
 <td><code>Math.pow(2, 3)</code></td>
 </tr>
 <tr>
 <td><code>random()</code></td>
-<td>restituisce un valore casuale tra zero ed uno</td>
+<td>Valore casuale tra zero ed uno</td>
 <td><code>Math.random()</code></td>
 </tr>
 <tr>
 <td><code>round(x)</code></td>
-<td>restituisce l&rsquo;arrotondamento di x al numero intero più vicino</td>
+<td>Arrotondamento all&rsquo;intero più vicino</td>
 <td><code>Math.round(3.12)</code></td>
 </tr>
 <tr>
 <td><code>sin(x)</code></td>
-<td>restituisce il seno dell&rsquo;angolo x (espresso in radianti)</td>
+<td>Seno dell&rsquo;angolo (in radianti)</td>
 <td><code>Math.sin(2)</code></td>
 </tr>
 <tr>
 <td><code>sqrt(x)</code></td>
-<td>restituisce la radice quadrata di x</td>
+<td>Radice quadrata</td>
 <td><code>Math.sqrt(2)</code></td>
 </tr>
 <tr>
 <td><code>trunc(x)</code></td>
-<td>restituisce il valore di x senza la parte decimale</td>
+<td>Valore senza parte decimale</td>
 <td><code>Math.trunc(3.2)</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="le-costanti-e-i-metodi-numerici">Le costanti e i metodi numerici</h2>
-<p>Le costanti ed i metodi comunemente utilizzati dell&rsquo;oggetto <code>Number</code> sono di seguito descritti:</p>
+<p>Riepilogo delle proprietà e dei metodi dell&rsquo;oggetto <code>Number</code>. Per maggiori dettagli si rimanda alla documentazione dell&rsquo;oggetto Math'.</p>
 <table>
 <thead>
 <tr>
@@ -570,12 +526,12 @@ x16 = &#34;a&#34;
 <tr>
 <td><code>Number.NEGATIVE_INFINITY</code></td>
 <td>Valore speciale indicante &lsquo;Infinito negativo&rsquo;</td>
-<td><code>&quot; -Infinito &quot; + Number.NEGATIVE_INFINITY</code></td>
+<td><code>&quot; -Infinito: &quot; + Number.NEGATIVE_INFINITY</code></td>
 </tr>
 <tr>
 <td><code>Number.POSITIVE_INFINITY</code></td>
 <td>Valore speciale indicante &lsquo;Infinito positivo&rsquo;</td>
-<td><code>&quot; +Infinito &quot; + Number.POSITIVE_INFINITY</code></td>
+<td><code>&quot; +Infinito: &quot; + Number.POSITIVE_INFINITY</code></td>
 </tr>
 </tbody>
 </table>
@@ -594,7 +550,7 @@ x16 = &#34;a&#34;
 <td><code>Number.isNaN(-2)</code></td>
 </tr>
 <tr>
-<td><code>isFinite()()</code></td>
+<td><code>isFinite()</code></td>
 <td>indica se il valore è un numero finito</td>
 <td><code>Number.isFinite()</code></td>
 </tr>
@@ -612,6 +568,16 @@ x16 = &#34;a&#34;
 <td><code>parseInt(string)</code></td>
 <td>converte la stringa in un numero intero</td>
 <td><code>Number.parseInt(&quot;2.15&quot;)</code></td>
+</tr>
+<tr>
+<td><code>toString(base)</code></td>
+<td>converte il numero in stringa e specifica la base numerica nella quale rappresentare il numero</td>
+<td><code>x.toString(16)</code></td>
+</tr>
+<tr>
+<td><code>toExponential(digits)</code></td>
+<td>converte il numero in stringa con rappresentazione esponenziale (mantissa ed esponente), specificando opzionalmente il numero di cifre decimali da utilizzare per la mantissa</td>
+<td><code>z.toExponential(16)</code></td>
 </tr>
 </tbody>
 </table>
@@ -725,6 +691,9 @@ x16 = &#34;a&#34;
 </ol>
 
     </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" style="font-weight: 700; color: #e22d30;">Libreria matematica Math</a>: Firma e descrizione delle varie funzioni matematiche</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" style="font-weight: 700; color: #e22d30;">Libreria matematica Number</a>: Firma e descrizione delle varie funzioni sui numeri</p>
   </article>
 </main>
 
@@ -733,12 +702,6 @@ x16 = &#34;a&#34;
 
 
 <nav class="pager flex">
-	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/web/javascript/variabili/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">JavaScript Lez. 03 - Costanti, variabili e tipi di dato</p>
-		</a>
-	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/javascript/istruzioni_condizionali_iterative/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>

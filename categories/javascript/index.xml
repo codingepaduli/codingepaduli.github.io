@@ -9,6 +9,20 @@
     <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>JavaScript Lez. 03 - Costanti, variabili e tipi di dato</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/variabili/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/variabili/</guid>
+      <description>Dichiarazione di costanti e variabili per i vari tipi di dato</description>
+    </item>
+    <item>
+      <title>JavaScript Lez. 01 - JavaScript</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/intro/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/intro/</guid>
+      <description>JavaScript</description>
+    </item>
+    <item>
       <title>JavaScript Lez. 09 - Document Object Model</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/dom/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
@@ -35,20 +49,6 @@
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/javascript/conversioni/</guid>
       <description>I metodi e gli operatori</description>
-    </item>
-    <item>
-      <title>JavaScript Lez. 03 - Costanti, variabili e tipi di dato</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/variabili/</link>
-      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/variabili/</guid>
-      <description>Dichiarazione di costanti e variabili per i vari tipi di dato</description>
-    </item>
-    <item>
-      <title>JavaScript Lez. 01 - JavaScript</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/intro/</link>
-      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/intro/</guid>
-      <description>JavaScript</description>
     </item>
     <item>
       <title>Lezioni sul linguaggio JavaScript</title>
