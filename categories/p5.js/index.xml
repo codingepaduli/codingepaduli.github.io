@@ -6,7 +6,7 @@
     <description>Recent content in P5.js on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Aug 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/p5.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
@@ -170,25 +170,11 @@
       <description>Esercizi di grafica 2D</description>
     </item>
     <item>
-      <title>Le stringhe</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/stringhe/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/stringhe/</guid>
-      <description>Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico</description>
-    </item>
-    <item>
       <title>p5.js Lez. 02 - Primitive grafiche</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</guid>
       <description>Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari</description>
-    </item>
-    <item>
-      <title>Espressioni matematiche</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
-      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
-      <description>Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche</description>
     </item>
     <item>
       <title>p5.js Lez. 01 - Introduzione alla libreria grafica p5.js</title>

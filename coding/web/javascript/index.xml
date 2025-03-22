@@ -9,14 +9,21 @@
     <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/coding/web/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Le stringhe</title>
+      <title>JavaScript Lez. 06 - Approfondimento - Orari e date</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/datetime_temporal/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/datetime_temporal/</guid>
+      <description>Orari e date</description>
+    </item>
+    <item>
+      <title>JavaScript Lez. 05 - Approfondimento - Le stringhe</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/stringhe/</link>
       <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/javascript/stringhe/</guid>
       <description>Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico</description>
     </item>
     <item>
-      <title>Espressioni matematiche</title>
+      <title>JavaScript Lez. 04 - Approfondimento - Espressioni matematiche</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
       <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
@@ -56,13 +63,6 @@
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/javascript/istruzioni_condizionali_iterative/</guid>
       <description>Istruzioni condizionali ed iterative</description>
-    </item>
-    <item>
-      <title>JavaScript Lez. 04 - I metodi e gli operatori</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/conversioni/</link>
-      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/conversioni/</guid>
-      <description>I metodi e gli operatori</description>
     </item>
   </channel>
 </rss>

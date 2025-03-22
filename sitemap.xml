@@ -77,11 +77,14 @@
     <loc>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/javascript/stringhe/</loc>
-    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/javascript/datetime_temporal/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/javascript/stringhe/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/javascript/math/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
@@ -167,24 +170,27 @@
     <lastmod>2024-11-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/interesting/</loc>
+    <lastmod>2025-03-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/others/</loc>
+    <lastmod>2025-03-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
+    <lastmod>2025-03-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/coding/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
+    <loc>http://codingepaduli.github.io/categories/javascript/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/web/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/educational/</loc>
-    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/interesting/</loc>
-    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/sistemi-reti/</loc>
@@ -256,9 +262,6 @@
     <loc>http://codingepaduli.github.io/categories/software/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/interesting/others/</loc>
-    <lastmod>2024-03-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/coding/link-scheme/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -288,6 +291,9 @@
   </url><url>
     <loc>http://codingepaduli.github.io/opensource/debian12/</loc>
     <lastmod>2023-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/dab-coding/</loc>
     <lastmod>2024-11-16T00:00:00+00:00</lastmod>
@@ -358,9 +364,6 @@
     <loc>http://codingepaduli.github.io/coding/web/p5js/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/javascript/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/coding/web/javascript/dom/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -396,9 +399,6 @@
   </url><url>
     <loc>http://codingepaduli.github.io/coding/shell/linkpowershell/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/javascript/conversioni/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/linkjavascript/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>

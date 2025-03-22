@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Lez. 06 - Approfondimento - Orari e date - Lab. informatica</title>
+
+    <meta name="description" content="Descrizione degli orari, delle date, dell&#39;internazionalizzazione, delle operazioni possibili per la manipolazione">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/datetime_temporal/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="JavaScript Lez. 06 - Approfondimento - Orari e date">
+  <meta property="og:description" content="Descrizione degli orari, delle date, dell&#39;internazionalizzazione, delle operazioni possibili per la manipolazione">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2025-03-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-10T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="JavaScript Lez. 06 - Approfondimento - Orari e date">
+  <meta name="twitter:description" content="Descrizione degli orari, delle date, dell&#39;internazionalizzazione, delle operazioni possibili per la manipolazione">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-03-10T00:00:00Z">10-03-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">Javascript</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 14 minuti 
+        ( 2791 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="data-e-ora">Data e ora</h1>
+<p>Ogni data ed orario su internet deve essere rappresentato secondo le regole dello standard internazionale
+<a href="https://it.wikipedia.org/wiki/ISO_8601">ISO 8601 Information interchange - Representation of dates and times</a> del 2019, che su internet è specificato dalle RFC 3339 del 2004 e dall&rsquo;aggiornamento tramite RFC 9557 del 2024.</p>
+<p>Lo standard internazionale definisce il seguente formato in cui scrivere date e orari: <code>YYYY</code>-<code>MM</code>-<code>DD</code>T<code>hh</code>:<code>mm</code>:<code>ss</code>.<code>KKK</code> <code>timezone</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>2022-07-08T00:14:07Z[Europe/London]
+</span></span><span style="display:flex;"><span>2022-07-08T00:14:07+03.30[Europe/London]
+</span></span></code></pre></div><p>Per maggiori informazioni si rimanda al capitolo sulle etichette di HTML, alle specifiche del W3C ed agli standard sopra menzionati.</p>
+<p>Le date e gli orari in JavaScript sono implementati utilizzando fino a qualche anno fa l&rsquo;oggetto <code>Date</code>, mentre da qualche anno si utilizza l&rsquo;oggetto <code>Temporal</code>, entrambi gli oggetti rappresentano un singolo momento nel tempo in un formato indipendente dalla piattaforma.</p>
+<p>L&rsquo;oggetto <code>Date</code> basa su delle specifiche di più di 30 anni fa, per cui sono emersi alcuni problemi nell&rsquo;utilizzare questo oggetto:</p>
+<ul>
+<li>supporta solo l&rsquo;ora locale dell&rsquo;utente e l&rsquo;orario UTC;</li>
+<li>non supporta il fuso orario;</li>
+<li>la conversione da stringa a data/ora è inaffidabile e può portare a degli errori difficili da rintracciare;</li>
+<li>i calcoli in cui è coinvolta l&rsquo;ora legale (DST) e i cambiamenti del calendario storico non sono calcoli affidabili.</li>
+</ul>
+<p>L&rsquo;oggetto <code>Temporal</code> modernizza e semplifica la gestione delle date, degli orari, dei fusi orari e delle nonostante le quasi 300 pagine di documentazione che stanno ad indicare quanto il concetto della data e dell&rsquo;ora sia importante nella nostra società. Prevede oggetti differenti per poter:</p>
+<ul>
+<li>rappresentare un&rsquo;ora senza informazioni sulla data e sul fuso orario, utilizzando l&rsquo;oggetto <code>Temporal.PlainDate</code>;</li>
+<li>rappresentare una data senza informazioni sull&rsquo;ora e sul fuso orario, utilizzando l&rsquo;oggetto <code>Temporal.PlainTime</code>;</li>
+<li>rappresentare data e ora senza informazioni sul fuso orario, utilizzando l&rsquo;oggetto <code>Temporal.PlainDateTime</code>;</li>
+<li>rappresentare un mese dell&rsquo;anno, senza informazioni sul giorno, sull&rsquo;ora e sul fuso orario, utilizzando l&rsquo;oggetto <code>Temporal.PlainYearMonth</code>;</li>
+<li>rappresentare un giorno del mese, senza informazioni sull&rsquo;anno, sull&rsquo;ora e sul fuso orario, utilizzando l&rsquo;oggetto <code>Temporal.PlainMonthDay</code>;</li>
+<li>rappresentare data e ora con informazioni sul fuso orario, utilizzando l&rsquo;oggetto <code>Temporal.ZonedDateTime</code>;</li>
+<li>rappresentare una durata di tempo (ad esempio, giorni, ore, minuti), utilizzando l&rsquo;oggetto <code>Temporal.Duration</code>;</li>
+<li>rappresentare un punto specifico nel tempo, espresso in millisecondi dall&rsquo;epoca Unix (1 gennaio 1970) utilizzando l&rsquo;oggetto <code>Temporal.Instant</code>.</li>
+</ul>
+<p>Ecco un esempio sull&rsquo;uso di <code>Date</code> e <code>Temporal</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> date1 = <span style="color:#00f">new</span> Date(<span style="color:#009c00">&#39;1995-12-17T03:24:00&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> dateNow = Temporal.PlainDate.now();
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> date = Temporal.PlainDate.from(<span style="color:#009c00">&#39;2023-10-01&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> time = Temporal.PlainTime.from(<span style="color:#009c00">&#39;14:30:00&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> dateTime = Temporal.PlainDateTime.from(<span style="color:#009c00">&#39;2023-10-01T14:30:00&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> yearMonth = Temporal.PlainYearMonth.from(<span style="color:#009c00">&#39;2023-10&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> monthDay = Temporal.PlainMonthDay.from(<span style="color:#009c00">&#39;02-29&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> zonedDateTime = Temporal.ZonedDateTime.from(<span style="color:#009c00">&#39;2023-10-01T14:30:00[Europe/Rome]&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> duration = Temporal.Duration.from( {days: 2, hours: 3, minutes: 15} );
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> instantNow = Temporal.Instant.from(<span style="color:#009c00">&#39;2023-10-01T14:30:00Z&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> dateTime2 = date.add({ months: 3 }); <span style="color:#f00;font-style:italic">// 2024-01-01
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>dateTime.equals(dateTime2); <span style="color:#f00;font-style:italic">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>monthDay.toPlainDate(2023); <span style="color:#f00;font-style:italic">// undefined
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>monthDay.toPlainDate(2024); <span style="color:#f00;font-style:italic">// 2024-02-29
+</span></span></span></code></pre></div><h2 id="utilizzo-delloggetto-date">Utilizzo dell&rsquo;oggetto <code>Date</code></h2>
+<p>E&rsquo; possibile creare una variabile a cui assegnare un momento temporale utilizzando l&rsquo;oggetto <code>Date</code>. Possiamo indicare in formato stringa il momento temporale desiderato, se non indichiamo nulla viene assegnata la data, l&rsquo;ora  ed il fuso orario attuale:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> date2 = <span style="color:#00f">new</span> Date();
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> date1 = <span style="color:#00f">new</span> Date(<span style="color:#009c00">&#39;1995-12-17T03:24:00+01:00&#39;</span>);
+</span></span></code></pre></div><h3 id="conversione-in-una-rappresentazione-testuale-localizzata">Conversione in una rappresentazione testuale localizzata</h3>
+<p>La funzione progettata per convertire la data in una rappresentazione testuale localizzata è <code>toLocaleString</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Date.toLocaleString([locales[, options]])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    locales    String | Array: a string with a BCP 47 language tag or an array of such strings
+</span></span><span style="display:flex;"><span>    options    Object (optional): an object that can specify formatting options
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    String: the locale-specific string representation of the date
+</span></span></code></pre></div><p>Il parametro formale <code>locales</code> è opzionale e rappresenta il codice IETF (il codice di lingua ed il codice del paese) da utilizzare per indicare le usanze locali di scrittura delle date.
+Il parametro formale <code>options</code> è opzionale e rappresenta le opzioni di formattazione.</p>
+<p>Il valore restituito è la rappresentazione in stringa specifica per le usanze locali di scrittura delle data. Può essere salvato in una variabile.</p>
+<p>Di seguito alcuni esempi che, utilizzando il parametro <code>locales</code>, convertono la data in una stringa secondo le usanze Americane e secondo quelle della Gran Bretagna, :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> date = <span style="color:#00f">new</span> Date(<span style="color:#009c00">&#39;2022-11-02T13:02:00+00:00&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> orario1 = date.toLocaleString(<span style="color:#009c00">&#39;en-US&#39;</span>); <span style="color:#f00;font-style:italic">// 02/11/2022,  1:02:00 PM
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> orario2 = date.toLocaleString(<span style="color:#009c00">&#39;en-GB&#39;</span>); <span style="color:#f00;font-style:italic">// 11/02/2022, 13:02:00
+</span></span></span></code></pre></div><p>Le proprietà <code>dateStyle</code> e <code>timeStyle</code> del parametro <code>options</code> indicano rispettivamente il formato della data e dell&rsquo;ora, non necessariamente devono essere inserite entrambe, possono assumere uno dei seguenti valori:</p>
+<ul>
+<li><code>full</code> indica tutti i dati in formato testuale completo, ad esempio <code>giovedì 11 aprile 2024 alle ore 19:20:42 Tempo coordinato universale</code>;</li>
+<li><code>long</code> indica tutti i dati in formato testuale abbreviato, ad esempio <code>11 aprile 2024 alle ore 19:21:18 UTC</code>;</li>
+<li><code>medium</code> indica tutti i dati in formato numerico, ad esempio <code>11 apr 2024, 19:21:18</code>;</li>
+<li><code>short</code> indica tutti i dati in formato numerico ridotto, ad esempio <code>11/04/24, 19:21</code>.</li>
+</ul>
+<p>Un esempio è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> date = <span style="color:#00f">new</span> Date(<span style="color:#009c00">&#39;2022-11-02T13:02:00+00:00&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> orario1 = date.toLocaleString(<span style="color:#009c00">&#39;en-US&#39;</span>); <span style="color:#f00;font-style:italic">// 02/11/2022,  1:02:00 PM
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> orario2 = date.toLocaleString(<span style="color:#009c00">&#39;it-IT&#39;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;dateStyle&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;timeStyle&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>
+</span></span><span style="display:flex;"><span>}); <span style="color:#f00;font-style:italic">// 11 novembre 2024 alle ore 13:02:00 UTC
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> orario3 = <span style="color:#00f">new</span> Date().toLocaleString(<span style="color:#009c00">&#39;it-IT&#39;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;dateStyle&#39;</span>: <span style="color:#009c00">&#39;full&#39;</span>, 
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;timeStyle&#39;</span>: <span style="color:#009c00">&#39;full&#39;</span>
+</span></span><span style="display:flex;"><span>}); <span style="color:#f00;font-style:italic">// giovedì 13 marzo 2025 alle ore 08:32:58 Ora del meridiano di Greenwich
+</span></span></span></code></pre></div><p>Se si vuole specificare il formato per una specifica parte della data e dell&rsquo;orario, si possono utilizzare le seguenti proprietà del parametro <code>options</code>:</p>
+<ul>
+<li>
+<p><code>day</code>, <code>month</code>, <code>year</code>, <code>hour</code>, <code>minute</code>, <code>second</code> permettono di visualizzare il campo numerico nel formato seguente:</p>
+<ul>
+<li><code>numeric</code> a una o due cifre;</li>
+<li><code>2-digit</code> sempre a due cifre (ad esempio <code>03</code>).</li>
+</ul>
+</li>
+<li>
+<p><code>fractionalSecondDigits</code> permette di visualizzare il numero di millisecondi nei seguenti formati:</p>
+<ul>
+<li><code>1</code>: una sola cifra;</li>
+<li><code>2</code>: due cifre;</li>
+<li><code>3</code>: tre cifre;</li>
+</ul>
+</li>
+<li>
+<p><code>hour12</code> visualizza l&rsquo;ora nel formato a 12 o 24 ore:</p>
+<ul>
+<li><code>true</code>: con 12 ore e indicatori AM e PM;</li>
+<li><code>false</code>: con 24 cifre;</li>
+</ul>
+</li>
+<li>
+<p><code>weekday</code>, <code>era</code>, <code>month</code>, <code>dayPeriod</code> e <code>timeZoneName</code> permettono di visualizzare il nome del campo in uno dei seguenti formati:</p>
+<ul>
+<li><code>long</code> nome completo del campo;</li>
+<li><code>short</code> nome abbreviato del campo;</li>
+<li><code>narrow</code> iniziale del nome del campo;</li>
+</ul>
+</li>
+</ul>
+<p>Ad esempio, per specificare data e ora con le informazioni <code>aprile 2024 dopo Cristo sabato alle ore 14:35:50,777</code> è necessario specificare le seguenti proprietà:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>console.log(<span style="color:#00f">new</span> Date().toLocaleString(<span style="color:#009c00">&#39;it-IT&#39;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;era&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;year&#39;</span>: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;month&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;weekday&#39;</span>: <span style="color:#009c00">&#39;long&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;hour&#39;</span>: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;minute&#39;</span>: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;second&#39;</span>: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;fractionalSecondDigits&#39;</span>: <span style="color:#009c00">&#39;3&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#39;hour12&#39;</span>: <span style="color:#00f">false</span>
+</span></span><span style="display:flex;"><span>}));
+</span></span></code></pre></div><h3 id="accesso-e-modifica-dei-campi">Accesso e modifica dei campi</h3>
+<p>I metodi che permettono di accedere ad uno specifico campo della data sono:</p>
+<ol>
+<li><code>getFullYear()</code>: Restituisce l&rsquo;anno della data;</li>
+<li><code>getMonth()</code>: Restituisce il mese della data (0-11);</li>
+<li><code>getDate()</code>: Restituisce il giorno del mese della data (1-31);</li>
+<li><code>getDay()</code>: Restituisce il giorno della settimana della data (0-6, dove 0 è Domenica e 6 è Sabato);</li>
+<li><code>getHours()</code>: Restituisce l&rsquo;ora della data (0-23);</li>
+<li><code>getMinutes()</code>: Restituisce i minuti della data (0-59);</li>
+<li><code>getSeconds()</code>: Restituisce i secondi della data (0-59);</li>
+<li><code>getMilliseconds()</code>: Restituisce i millisecondi della data (0-999);</li>
+<li><code>getTimezoneOffset()</code>: Restituisce il fuso orario in minuti.</li>
+</ol>
+<p>Un esempio d&rsquo;uso è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> date = <span style="color:#00f">new</span> Date(<span style="color:#009c00">&#39;2023-03-15T10:30:45.000+01:00&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// Utilizziamo i metodi getter per ottenere informazioni sulla data
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> year = date.getFullYear();   <span style="color:#f00;font-style:italic">// Ottiene l&#39;anno (2023)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> month = date.getMonth();     <span style="color:#f00;font-style:italic">// Ottiene il mese (2 per marzo, 0-based)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> day = date.getDate();        <span style="color:#f00;font-style:italic">// Ottiene il giorno del mese (15)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> dayOfWeek = date.getDay();   <span style="color:#f00;font-style:italic">// Ottiene il giorno della settimana (3 per mercoledì, 0-based)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> hours = date.getHours();     <span style="color:#f00;font-style:italic">// Ottiene le ore (10)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> minutes = date.getMinutes(); <span style="color:#f00;font-style:italic">// Ottiene i minuti (30)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> seconds = date.getSeconds(); <span style="color:#f00;font-style:italic">// Ottiene i secondi (45)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> milliseconds = date.getMilliseconds(); <span style="color:#f00;font-style:italic">// Ottiene i millisecondi (0)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> timezoneOffset = date.getTimezoneOffset(); <span style="color:#f00;font-style:italic">// Ottiene il fuso orario in minuti (60)
+</span></span></span></code></pre></div><p>I metodi che permettono di impostare uno specifico campo della data sono:</p>
+<ol>
+<li><code>setFullYear(year)</code>: Imposta l&rsquo;anno della data;</li>
+<li><code>setMonth(month)</code>: Imposta il mese della data (0 per gennaio, 1 per febbraio, ecc.);</li>
+<li><code>setDate(day)</code>: Imposta il giorno del mese della data;</li>
+<li><code>setHours(hours)</code>: Imposta le ore della data (0-23);</li>
+<li><code>setMinutes(minutes)</code>: Imposta i minuti della data (0-59);</li>
+<li><code>setSeconds(seconds)</code>: Imposta i secondi della data (0-59);</li>
+<li><code>setMilliseconds(milliseconds)</code>: Imposta i millisecondi della data (0-999).</li>
+</ol>
+<p>Un esempio d&rsquo;uso è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>date.setFullYear(2024);    <span style="color:#f00;font-style:italic">// Imposta l&#39;anno a 2024
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>date.setMonth(5);          <span style="color:#f00;font-style:italic">// Imposta il mese a giugno (5, 0-based)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>date.setDate(20);          <span style="color:#f00;font-style:italic">// Imposta il giorno del mese a 20
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>date.setHours(15);         <span style="color:#f00;font-style:italic">// Imposta le ore a 15 (3 PM)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>date.setMinutes(45);       <span style="color:#f00;font-style:italic">// Imposta i minuti a 45
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>date.setSeconds(30);       <span style="color:#f00;font-style:italic">// Imposta i secondi a 30
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>date.setMilliseconds(500); <span style="color:#f00;font-style:italic">// Imposta i millisecondi a 500
+</span></span></span></code></pre></div><h3 id="sommare-o-sottrarre-periodi-di-tempo">Sommare o sottrarre periodi di tempo</h3>
+<p>La classe <code>Date</code> non fornisce metodi specifici per sommare o sottrarre periodi di tempo direttamente, ma la modifica di una proprietà comporta l&rsquo;aggiornando a cascata di tutte le altre proprietà, permettendo quindi la somma o la sottrazione di periodi da una data. Ad esempio:</p>
+<ul>
+<li>quando si sommano o si sottraggono mesi, è gestito automaticamente il passaggio tra gli anni. Ad esempio, se si somma un mese a dicembre, il mese diventerà gennaio dell&rsquo;anno successivo, e viceversa;</li>
+<li>quando si sommano o si sottraggono giorni, è gestito automaticamente il passaggio tra i mesi e gli anni;</li>
+</ul>
+<p>Un esempio di somma e sottrazione dei periodi di tempo è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> date = <span style="color:#00f">new</span> Date(<span style="color:#009c00">&#39;2023-03-15T10:30:45.000+01:00&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// sommo 12 ore, 20 giorni, 11 mesi ed 1 anno 
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>date.setHours(date.getHours() + 12);
+</span></span><span style="display:flex;"><span>date.setDate(date.getDate() + 20);
+</span></span><span style="display:flex;"><span>date.setMonth(date.getMonth() + 11);
+</span></span><span style="display:flex;"><span>date.setFullYear(date.getFullYear() + 1);
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// output 04/03/2025, 21:30:45
+</span></span></span></code></pre></div><h2 id="utilizzo-delloggetto-temporal">Utilizzo dell&rsquo;oggetto <code>Temporal</code></h2>
+<p>E&rsquo; possibile creare una variabile a cui assegnare un momento temporale utilizzando le varie specializzazioni dell&rsquo;oggetto <code>Temporal</code>, che sono:</p>
+<ul>
+<li><code>Temporal.PlainDate</code>: rappresenta un&rsquo;ora senza informazioni sulla data e sul fuso orario;</li>
+<li><code>Temporal.PlainTime</code>: rappresenta una data senza informazioni sull&rsquo;ora e sul fuso orario;</li>
+<li><code>Temporal.PlainDateTime</code>: rappresenta data e ora senza informazioni sul fuso orario;</li>
+<li><code>Temporal.PlainYearMonth</code>: rappresenta un mese dell&rsquo;anno, senza informazioni sul giorno, sull&rsquo;ora e sul fuso orario;</li>
+<li><code>Temporal.PlainMonthDay</code>: rappresenta un giorno del mese, senza informazioni sull&rsquo;anno, sull&rsquo;ora e sul fuso orario;</li>
+<li><code>Temporal.ZonedDateTime</code>: rappresenta data e ora con informazioni sul fuso orario;</li>
+<li><code>Temporal.Duration</code>: rappresenta una durata di tempo (ad esempio, giorni, ore, minuti);</li>
+<li><code>Temporal.Instant</code>: rappresenta un punto specifico nel tempo, espresso in millisecondi dall&rsquo;epoca Unix (1 gennaio 1970);</li>
+</ul>
+<h3 id="metodi-degli-oggetti-temporal">Metodi degli oggetti Temporal</h3>
+<p>Tutti gli oggetti <code>Temporal</code> ereditano gli stessi metodi:</p>
+<ul>
+<li><code>now()</code>: Crea un&rsquo;istanza di Temporal con la data e l&rsquo;ora odierna;</li>
+<li><code>from()</code>: Crea un&rsquo;istanza di Temporal da una stringa o un oggetto;</li>
+<li><code>add()</code>: Aggiunge un periodo di tempo;</li>
+<li><code>subtract()</code>: Sottrae un periodo di tempo;</li>
+<li><code>toString()</code>: Restituisce una rappresentazione in stringa;</li>
+<li><code>equals()</code>: Confronta due date e ore per verificare se sono uguali.</li>
+</ul>
+<p>Per creare un&rsquo;istanza di <code>Temporal</code> dobbiamo innanzitutto indicare quale specializzazione vogliamo. Come abbiamo gia descritto, ogni specializzazione ha la sua informazione:</p>
+<ul>
+<li><code>PlainTime</code> ha l&rsquo;informazione solo della data;</li>
+<li><code>PlainDate</code>ha l&rsquo;informazione solo dell&rsquo;ora;</li>
+<li>e cosi via;</li>
+</ul>
+<p>Una volta scelta la specializzazione dell&rsquo;oggetto <code>Temporal</code>, possiamo invocare i metodi, come nell&rsquo;esempio successivo:</p>
+<ul>
+<li><code>Temporal.PlainTime.now()</code></li>
+<li><code>Temporal.PlainTime.from()</code></li>
+<li><code>Temporal.PlainDate.add()</code></li>
+<li><code>Temporal.PlainDateTime.subtract()</code></li>
+<li><code>Temporal.ZonedDateTime.toString()</code></li>
+<li><code>Temporal.Duration.equals()</code></li>
+</ul>
+<p>Andiamo a vedere nel dettaglio i metodi disponibili.</p>
+<h4 id="creazione-di-un-momento-temporale">Creazione di un momento temporale</h4>
+<p>La funzione progettata per eseguire la creazione di una qualsiasi istanza di <code>Temporal</code> contenente data ed ora attuali è <code>now()</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Temporal.now()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Temporal: an instance of Temporal representing the specified date and time
+</span></span></code></pre></div><p>Non sono previsti parametri formali</p>
+<p>Il valore restituito è un&rsquo;istanza di <code>Temporal</code> che rappresenta la data e/o l&rsquo;ora attuali. Può essere salvato in una variabile.</p>
+<p>Scegliamo la specializzazione di <code>Temporal</code> ed invochiamo il metodo come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> dataOra = Temporal.PlainDateTime.now();
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> data = Temporal.PlainDate.now();
+</span></span></code></pre></div><p>La funzione progettata per eseguire la creazione di una qualsiasi istanza di <code>Temporal</code> a partire da una data o un ora indicata è <code>from()</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Temporal.from(item)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    item    String | Object: a string representation of a date and time or an object with date and time properties
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Temporal: an instance of Temporal representing the specified date and time
+</span></span></code></pre></div><p>Il parametro formale <code>item</code> rappresenta una stringa che rappresenta una data e un&rsquo;ora, oppure un oggetto con proprietà che definiscono la data e l&rsquo;ora (come <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code>, e <code>millisecond</code>).</p>
+<p>Il valore restituito è un&rsquo;istanza di <code>Temporal</code> che rappresenta l&rsquo;oggetto&rsquo; specificate. Può essere salvato in una variabile.</p>
+<p>Al parametro formale <code>item</code> dobbiamo quindi sostituire la stringa che rappresenta l&rsquo;informazione desiderata, ovvero quella solo con la data o quella solo con l&rsquo;ora, ad esempio.</p>
+<p>Scegliamo la specializzazione di <code>Temporal</code> ed invochiamo il metodo passando i parametri, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> dataOra = Temporal.PlainDateTime.from(<span style="color:#009c00">&#34;2023-03-15T10:30:45&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> data = Temporal.PlainDate.from(<span style="color:#009c00">&#34;2023-03-15&#34;</span>);
+</span></span></code></pre></div><p>In alternativa, per creare un&rsquo;istanza di <code>PlainDateTime</code> utilizzando un oggetto, possiamo sostituire al parametro formale <code>item</code> un oggetto come <code>{ year: 2023, month: 3, day: 15, hour: 10, minute: 30, second: 45 }</code>. Salviamo in una variabile <code>dataOraOggetto</code> il risultato, invocando la funzione nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> dataOraOggetto = Temporal.PlainDateTime.from({ year: 2023, month: 3, day: 15, hour: 10, minute: 30, second: 45 });
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> dataOggetto = Temporal.PlainDate.from({ year: 2023, month: 3, day: 15 });
+</span></span></code></pre></div><p>Di seguito un esempio per ogni specializzazione:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> date1 = <span style="color:#00f">new</span> Date(<span style="color:#009c00">&#39;1995-12-17T03:24:00&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> dateNow = Temporal.PlainDate.now();
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> date = Temporal.PlainDate.from(<span style="color:#009c00">&#39;2023-10-01&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> time = Temporal.PlainTime.from(<span style="color:#009c00">&#39;14:30:00&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> dateTime = Temporal.PlainDateTime.from(<span style="color:#009c00">&#39;2023-10-01T14:30:00&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> yearMonth = Temporal.PlainYearMonth.from(<span style="color:#009c00">&#39;2023-10&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> monthDay = Temporal.PlainMonthDay.from(<span style="color:#009c00">&#39;02-29&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> zonedDateTime = Temporal.ZonedDateTime.from(<span style="color:#009c00">&#39;2023-10-01T14:30:00[Europe/Rome]&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> duration = Temporal.Duration.from( {days: 2, hours: 3, minutes: 15} );
+</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> instantNow = Temporal.Instant.from(<span style="color:#009c00">&#39;2023-10-01T14:30:00Z&#39;</span>);
+</span></span></code></pre></div><h4 id="aggiunta-o-sottrazione-di-un-momento-temporale">Aggiunta o sottrazione di un momento temporale</h4>
+<p>La funzione progettata per eseguire l&rsquo;aggiunta di un periodo di tempo a un&rsquo;istanza di <code>Temporal</code> è <code>add()</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Temporal.add(temporalDuration)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    temporalDuration    Temporal.Duration: un&#39;istanza di Duration che rappresenta il periodo di tempo da aggiungere
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Temporal: un&#39;istanza di Temporal che rappresenta il momento temporale risultante
+</span></span></code></pre></div><p>Il parametro formale <code>temporalDuration</code> rappresenta un&rsquo;istanza di <code>Temporal.Duration</code> che specifica il periodo di tempo da aggiungere, come giorni, mesi, anni, ore, minuti, secondi, e millisecondi.</p>
+<p>Il valore restituito è un&rsquo;istanza di <code>Temporal</code> che rappresenta il momento temporale risultante dopo l&rsquo;aggiunta del periodo specificato. Può essere salvato in una variabile.</p>
+<p>Per aggiungere un periodo di tempo a un&rsquo;istanza di <code>Temporal</code>, dobbiamo quindi sostituire il parametro formale <code>temporalDuration</code> con un&rsquo;istanza di <code>Temporal.Duration</code>, ad esempio <code>Temporal.Duration.from({ days: 5, hours: 2 })</code> per aggiungere 5 giorni e 2 ore.</p>
+<p>Ecco un esempio di utilizzo del metodo <code>add()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> dataOra = Temporal.PlainDateTime.from(<span style="color:#009c00">&#34;2023-03-15T10:30:45&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> nuovaDataOra = dataOra.add(Temporal.Duration.from({ days: 5, hours: 2 }));
+</span></span><span style="display:flex;"><span>console.log(nuovaDataOra.toString()); <span style="color:#f00;font-style:italic">// Output: &#34;2023-03-20T12:30:45&#34;
+</span></span></span></code></pre></div><p>La funzione progettata per eseguire la sottrazione di un periodo di tempo da un&rsquo;istanza di <code>Temporal</code> è <code>subtract()</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Temporal.subtract(temporalDuration)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    temporalDuration    Temporal.Duration: un&#39;istanza di Duration che rappresenta il periodo di tempo da sottrarre
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Temporal.PlainDateTime: un&#39;istanza di Temporal che rappresenta il momento temporale risultante dopo la sottrazione
+</span></span></code></pre></div><p>Il parametro formale <code>temporalDuration</code> rappresenta un&rsquo;istanza di <code>Temporal.Duration</code> che specifica il periodo di tempo da sottrarre, come giorni, mesi, anni, ore, minuti, secondi, e millisecondi.</p>
+<p>Il valore restituito è un&rsquo;istanza di <code>Temporal</code> che rappresenta il momento temporale risultante dopo la sottrazione del periodo specificato. Può essere salvato in una variabile.</p>
+<p>Per sottrarre un periodo di tempo da un&rsquo;istanza di <code>Temporal</code>, dobbiamo quindi sostituire il parametro formale <code>temporalDuration</code> con un&rsquo;istanza di <code>Temporal.Duration</code>, ad esempio <code>Temporal.Duration.from({ days: 3, hours: 1 })</code> per sottrarre 3 giorni e 1 ora.</p>
+<p>Ecco un esempio di utilizzo del metodo <code>subtract()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> dataOra = Temporal.PlainDateTime.from(<span style="color:#009c00">&#34;2023-03-15T10:30:45&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> nuovaDataOra = dataOra.subtract(Temporal.Duration.from({ days: 3, hours: 1 }));
+</span></span><span style="display:flex;"><span>console.log(nuovaDataOra.toString()); <span style="color:#f00;font-style:italic">// Output: &#34;2023-03-12T09:30:45&#34;
+</span></span></span></code></pre></div><p>dateTime.equals(dateTime2); // false
+monthDay.toPlainDate(2023); // undefined
+monthDay.toPlainDate(2024); // 2024-02-29</p>
+<h4 id="confronto-tra-date">Confronto tra date</h4>
+<p>La funzione progettata per eseguire il confronto di uguaglianza tra due istanze di <code>Temporal</code> è <code>equals()</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Temporal.equals(other)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    other    Temporal: un&#39;altra istanza di Temporal da confrontare
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    Boolean: true se le due date e ore sono uguali, false altrimenti
+</span></span></code></pre></div><p>Il parametro formale <code>other</code> rappresenta un&rsquo;altra istanza di <code>Temporal</code> con cui confrontare l&rsquo;istanza corrente.</p>
+<p>Il valore restituito è un valore booleano che indica se le due istanze di <code>Temporal</code> rappresentano la stessa data e ora. Può essere salvato in una variabile.</p>
+<p>Per confrontare due istanze di <code>Temporal</code> per verificare se sono uguali, dobbiamo quindi sostituire il parametro formale <code>other</code> con un&rsquo;altra istanza di <code>Temporal</code>, ad esempio <code>Temporal.PlainDateTime.from(&quot;2023-03-15T10:30:45&quot;)</code>.</p>
+<p>Ecco un esempio di utilizzo del metodo <code>equals()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> dataOra1 = Temporal.PlainDateTime.from(<span style="color:#009c00">&#34;2023-03-15T10:30:45&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> dataOra2 = Temporal.PlainDateTime.from(<span style="color:#009c00">&#34;2023-03-15T10:30:45&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> dataOra3 = Temporal.PlainDateTime.from(<span style="color:#009c00">&#34;2023-03-16T10:30:45&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> sonoUguali1 = dataOra1.equals(dataOra2); <span style="color:#f00;font-style:italic">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> sonoUguali2 = dataOra1.equals(dataOra3); <span style="color:#f00;font-style:italic">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>console.log(sonoUguali1); <span style="color:#f00;font-style:italic">// Output: true
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.log(sonoUguali2); <span style="color:#f00;font-style:italic">// Output: false
+</span></span></span></code></pre></div><p>In questo esempio, la prima comparazione restituisce <code>true</code> perché <code>dataOra1</code> e <code>dataOra2</code> rappresentano la stessa data e ora, mentre la seconda comparazione restituisce <code>false</code> perché <code>dataOra1</code> e <code>dataOra3</code> rappresentano date diverse.</p>
+<h4 id="conversione-in-una-rappresentazione-testuale-localizzata-1">Conversione in una rappresentazione testuale localizzata</h4>
+<p>La funzione progettata per eseguire la conversione di un&rsquo;istanza di <code>Temporal</code> in una stringa formattata secondo le convenzioni locali è <code>toLocaleString()</code>, la cui firma è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: Temporal.toLocaleString([locales[, options]])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>    locales    String | Array: a string with a BCP 47 language tag or an array of such strings
+</span></span><span style="display:flex;"><span>    options    Object (optional): an object that can specify formatting options
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Returns:
+</span></span><span style="display:flex;"><span>    String: the locale-specific string representation of the date
+</span></span></code></pre></div><p>Poichè la firma ed il comportamento sono praticamente identici al metodo <code>toLocaleString</code> della classe <code>Date</code>, si rimanda a questa per le specifiche tecniche.</p>
+<p>Ecco un esempio di come utilizzare il metodo <code>toLocaleString</code> con un&rsquo;istanza di <code>Temporal.PlainDateTime</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> dataOra = Temporal.PlainDateTime.from(<span style="color:#009c00">&#34;2023-03-15T10:30:00&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> dataLocale = dataOra.toLocaleString();
+</span></span><span style="display:flex;"><span>console.log(dataLocale); <span style="color:#f00;font-style:italic">// Output: &#34;2023-03-15T10:30:00&#34; (formato predefinito)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> dataLocaleIt = dataOra.toLocaleString(<span style="color:#009c00">&#39;it-IT&#39;</span>, {
+</span></span><span style="display:flex;"><span>  year: <span style="color:#009c00">&#39;numeric&#39;</span>, month: <span style="color:#009c00">&#39;long&#39;</span>, day: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  hour: <span style="color:#009c00">&#39;2-digit&#39;</span>, minute: <span style="color:#009c00">&#39;2-digit&#39;</span> 
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>console.log(dataLocaleIt); <span style="color:#f00;font-style:italic">// Output: &#34;15 marzo 2023, 10:30&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> dataLocaleUS = dataOra.toLocaleString(<span style="color:#009c00">&#39;en-US&#39;</span>, { 
+</span></span><span style="display:flex;"><span>  year: <span style="color:#009c00">&#39;numeric&#39;</span>, month: <span style="color:#009c00">&#39;long&#39;</span>, day: <span style="color:#009c00">&#39;numeric&#39;</span>,
+</span></span><span style="display:flex;"><span>  hour: <span style="color:#009c00">&#39;2-digit&#39;</span>, minute: <span style="color:#009c00">&#39;2-digit&#39;</span>
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>console.log(dataLocaleUS); <span style="color:#f00;font-style:italic">// Output: &#34;March 15, 2023, 10:30 AM&#34;
+</span></span></span></code></pre></div>
+    </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" style="font-weight: 700; color: #e22d30;">L&#39;oggetto Date</a>: Documentazione dell&#39;oggetto Date, che rappresenta un singolo momento nel tempo in un formato indipendente dalla piattaforma. Proprietà e metodi disponibili</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal" style="font-weight: 700; color: #e22d30;">L&#39;oggetto Temporal</a>: Documentazione dell&#39;oggetto Temporal, che semplifica, corregge e modernizza la gestione delle date e dell&#39;ora. Proprietà e metodi disponibili</p>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/javascript/stringhe/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">JavaScript Lez. 05 - Approfondimento - Le stringhe</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

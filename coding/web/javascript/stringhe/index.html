@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Le stringhe - Lab. informatica</title>
+    <title>JavaScript Lez. 05 - Approfondimento - Le stringhe - Lab. informatica</title>
 
     <meta name="description" content="Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico">
         <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/stringhe/">
   <meta property="og:site_name" content="Lab. informatica">
-  <meta property="og:title" content="Le stringhe">
+  <meta property="og:title" content="JavaScript Lez. 05 - Approfondimento - Le stringhe">
   <meta property="og:description" content="Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico">
   <meta property="og:locale" content="it_IT">
   <meta property="og:type" content="article">
@@ -21,7 +21,7 @@
         
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
-  <meta name="twitter:title" content="Le stringhe">
+  <meta name="twitter:title" content="JavaScript Lez. 05 - Approfondimento - Le stringhe">
   <meta name="twitter:description" content="Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico">
 
 
@@ -226,35 +226,16 @@
       
       <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-03-10T00:00:00Z">10-03-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/p5.js/" rel="category">P5.js</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-03-10T00:00:00Z">10-03-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">Javascript</a>
 	</span>
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 11 minuti 
-        ( 2247 parole)
+        Tempo di lettura 12 minuti 
+        ( 2362 parole)
     </span>
 </div></div>
     </header>
-<details class="post__toc toc">
-    <summary class="toc__title">Indice</summary>
-    <div class="toc__menu">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#operatori-di-concatenazione-e-relazionali">Operatori di concatenazione e relazionali</a></li>
-    <li><a href="#proprietà-e-metodi-delle-stringhe">Proprietà e metodi delle stringhe</a>
-      <ul>
-        <li><a href="#funzioni-di-estrazione">Funzioni di estrazione</a></li>
-        <li><a href="#funzioni-di-ricerca-della-posizione">Funzioni di ricerca della posizione</a></li>
-        <li><a href="#funzioni-di-ricerca-della-presenza">Funzioni di ricerca della presenza</a></li>
-        <li><a href="#funzioni-di-sostituzione">Funzioni di sostituzione</a></li>
-      </ul>
-    </li>
-    <li><a href="#conversione-da-numero-a-stringa">Conversione da numero a stringa</a></li>
-  </ul>
-</nav>
-    </div>
-</details>
 <div class="content post__content clearfix">
       <h1 id="le-stringhe">Le stringhe</h1>
 <p>Il termine &ldquo;stringa&rdquo; deriva dall&rsquo;inglese &ldquo;string&rdquo;, che significa &ldquo;filo&rdquo; o &ldquo;corda&rdquo;, ed è utilizzato in ambito informatico per descrivere una sequenza di caratteri che sono &ldquo;legati&rdquo; insieme, proprio come i nodi di un filo o di una corda.</p>
@@ -293,33 +274,40 @@
 </span></span></code></pre></div><p>Per definire una sequenza di caratteri che occupi più righe, si può racchiudere tra apici inversi <code>`</code>, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> stringVariable = <span style="color:#009c00">`Una
 </span></span></span><span style="display:flex;"><span><span style="color:#009c00">stringa`</span>;
-</span></span></code></pre></div><p>Questo tipo di definizione è utilizzato anche per concatenare variabili o il risultato di un&rsquo;espressione all&rsquo;interno della stringa. Le variabili e le espressioni devono essere racchiuse tra simboli <code>${</code> e <code>}</code>, come nel seguente esempio:</p>
+</span></span></code></pre></div><p>Questo tipo di definizione è utilizzato anche per concatenare variabili o il risultato di un&rsquo;espressione all&rsquo;interno della stringa. Svolge una operazione simile alla formattazione, ovvero la sostituzione dei segnaposto presenti nella stringa con i valori specificati nelle variabili.</p>
+<p>I simboli <code>${</code> e <code>}</code> possono racchiudere variabili ed espressioni, nella stringa risultante questi simboli saranno sostituiti con il valore della variabile indicata o dal risultato dell&rsquo;espressione, come nel seguente esempio:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> num1 = 9;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> num2 = 18;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> messaggio = <span style="color:#009c00">`La somma dei
 </span></span></span><span style="display:flex;"><span><span style="color:#009c00">numeri </span><span style="color:#009c00">${</span>num1<span style="color:#009c00">}</span><span style="color:#009c00"> e </span><span style="color:#009c00">${</span>num2<span style="color:#009c00">}</span><span style="color:#009c00">
 </span></span></span><span style="display:flex;"><span><span style="color:#009c00">vale </span><span style="color:#009c00">${</span>num1 + num2<span style="color:#009c00">}</span><span style="color:#009c00">.`</span>;
-</span></span></code></pre></div><p>L&rsquo;esempio precedente produce il seguente output (su più righe):</p>
+</span></span></code></pre></div><p>La variabile <code>messaggio</code> contiene la seguente sequenza di caratteri (su più righe):</p>
 <pre tabindex="0"><code class="language-output" data-lang="output">La somma dei
 numeri 9 e 18
 vale 27.
 </code></pre><h2 id="operatori-di-concatenazione-e-relazionali">Operatori di concatenazione e relazionali</h2>
-<p>Gli operatori utilizzati per svolgere le operazioni sulle stringhe sono i seguenti:</p>
+<p>Per svolgere le operazioni sulle stringhe sono utilizzati i seguenti operatori:</p>
 <ul>
-<li>L&rsquo;operatore di concatenazione <code>+</code> unisce due o più stringhe in una sola;</li>
-<li>L&rsquo;operatore relazionale di eguaglianza (<code>==</code>) verifica se due stringhe sono uguali;</li>
-<li>L&rsquo;operatore relazionale di maggioranza (<code>&gt;</code>) controlla se la prima stringa è &ldquo;maggiore&rdquo; della seconda in base all&rsquo;ordinamento naturale;</li>
-<li>L&rsquo;operatore relazionale di maggioranza o uguaglianza (<code>&gt;=</code>) verifica se la prima stringa è &ldquo;maggiore o uguale&rdquo; alla seconda in base all&rsquo;ordinamento naturale;</li>
-<li>L&rsquo;operatore relazionale di minoranza <code>&lt;</code> controlla se la prima stringa è &ldquo;minore&rdquo; della seconda in base all&rsquo;ordinamento naturale;</li>
-<li>L&rsquo;operatore relazionale di minoranza o uguaglianza (<code>&gt;=</code>) verifica se la prima stringa è &ldquo;minore o uguale&rdquo; alla seconda in base all&rsquo;ordinamento naturale;</li>
+<li>di concatenazione <code>+</code> unisce due o più stringhe in una sola;</li>
+<li>relazionale di eguaglianza (<code>==</code>) verifica se due stringhe sono uguali;</li>
+<li>relazionale di maggioranza (<code>&gt;</code>) controlla se la prima stringa è &ldquo;maggiore&rdquo; della seconda in base all&rsquo;ordinamento naturale;</li>
+<li>relazionale di maggioranza o uguaglianza (<code>&gt;=</code>) verifica se la prima stringa è &ldquo;maggiore o uguale&rdquo; alla seconda in base all&rsquo;ordinamento naturale;</li>
+<li>relazionale di minoranza <code>&lt;</code> controlla se la prima stringa è &ldquo;minore&rdquo; della seconda in base all&rsquo;ordinamento naturale;</li>
+<li>relazionale di minoranza o uguaglianza (<code>&gt;=</code>) verifica se la prima stringa è &ldquo;minore o uguale&rdquo; alla seconda in base all&rsquo;ordinamento naturale.</li>
+</ul>
+<p>L&rsquo;ordinamento naturale delle stringhe avviene sulla base all&rsquo;ordine lessicografico. Ad esempio la lettera <code>a</code> viene prima della lettera <code>b</code> e quindi è vera l&rsquo;affermazione la lettera <code>a</code> è più piccola della lettera <code>b</code> (l&rsquo;affermazione <code>a &lt; b</code> è vera). In generale:</p>
+<ul>
+<li>i numeri (0-9) vengono prima delle lettere (A-Z, a-z).</li>
+<li>le lettere maiuscole (A-Z) vengono prima delle minuscole (a-z);</li>
+<li>caratteri speciali come spazi, punteggiatura e simboli vengono ordinati in base ai loro valori Unicode. Per maggiori informazioni si rimanda al capitolo dedicato alla codifica Unicode.</li>
 </ul>
 <p>Un esempio d&rsquo;uso degli operatori relazionali è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = <span style="color:#009c00">&#34;una &#34;</span> + <span style="color:#009c00">&#34;stringa.&#34;</span>;
 </span></span><span style="display:flex;"><span>console.info(x); <span style="color:#f00;font-style:italic">// Output: una stringa.
 </span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> == <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: false
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &gt; <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: false
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &gt; <span style="color:#009c00">&#34;stringa&#34;</span>);  <span style="color:#f00;font-style:italic">// Output: false
 </span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &gt;= <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: false
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &lt; <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: true
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &lt; <span style="color:#009c00">&#34;stringa&#34;</span>);  <span style="color:#f00;font-style:italic">// Output: true
 </span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.info(<span style="color:#009c00">&#34;una &#34;</span> &lt;= <span style="color:#009c00">&#34;stringa&#34;</span>); <span style="color:#f00;font-style:italic">// Output: true
 </span></span></span></code></pre></div><p>Questi operatori sono fondamentali per confrontare e concatenare le stringhe.</p>
 <h2 id="proprietà-e-metodi-delle-stringhe">Proprietà e metodi delle stringhe</h2>
@@ -526,7 +514,13 @@ x16 = &#34;a&#34;
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/coding/web/javascript/math/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
-			<p class="pager__title">Espressioni matematiche</p>
+			<p class="pager__title">JavaScript Lez. 04 - Approfondimento - Espressioni matematiche</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/javascript/datetime_temporal/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">JavaScript Lez. 06 - Approfondimento - Orari e date</p>
 		</a>
 	</div>
 </nav>

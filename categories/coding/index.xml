@@ -184,13 +184,6 @@
       <description>Esercizi di grafica 2D</description>
     </item>
     <item>
-      <title>Le stringhe</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/stringhe/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/stringhe/</guid>
-      <description>Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico</description>
-    </item>
-    <item>
       <title>p5.js Lez. 02 - Primitive grafiche</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
@@ -198,7 +191,21 @@
       <description>Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari</description>
     </item>
     <item>
-      <title>Espressioni matematiche</title>
+      <title>JavaScript Lez. 06 - Approfondimento - Orari e date</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/datetime_temporal/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/datetime_temporal/</guid>
+      <description>Orari e date</description>
+    </item>
+    <item>
+      <title>JavaScript Lez. 05 - Approfondimento - Le stringhe</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/stringhe/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/stringhe/</guid>
+      <description>Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico</description>
+    </item>
+    <item>
+      <title>JavaScript Lez. 04 - Approfondimento - Espressioni matematiche</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
       <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
@@ -602,13 +609,6 @@
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/shell/powershell/intro/</guid>
       <description>Introduzione a PowerShell</description>
-    </item>
-    <item>
-      <title>JavaScript Lez. 04 - I metodi e gli operatori</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/conversioni/</link>
-      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/conversioni/</guid>
-      <description>I metodi e gli operatori</description>
     </item>
     <item>
       <title>Lezioni sul linguaggio JavaScript</title>

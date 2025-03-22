@@ -231,8 +231,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 18 minuti 
-        ( 3778 parole)
+        Tempo di lettura 19 minuti 
+        ( 3981 parole)
     </span>
 </div></div>
     </header>
@@ -404,7 +404,40 @@ vale 27.
 </span></span><span style="display:flex;"><span>alert(<span style="color:#009c00">&#34;perimetro = base * altezza = &#34;</span> + base + <span style="color:#009c00">&#34; * &#34;</span> + altezza + <span style="color:#009c00">&#34; = &#34;</span> + perimetro);
 </span></span></code></pre></div><p>In questo caso il messaggio è unito alle variabili <code>base</code> ed <code>altezza</code> ed infine alla variabile <code>perimetro</code>, formando la stringa risultate:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>perimetro = base * altezza = 2 * 4 = 8
-</span></span></code></pre></div><h2 id="istruzioni-di-input">Istruzioni di input</h2>
+</span></span></code></pre></div><h2 id="parola-chiave-typeof-per-lidentificazione-del-tipo-di-dato">Parola chiave <code>typeof</code> per l&rsquo;identificazione del tipo di dato</h2>
+<p>E&rsquo; possibile identificare il tipo di una variabile utilizzando la parola chiave <code>typeof</code>.</p>
+<p>Supponendo di aver dichiarato le seguenti variabili:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#009c00">&#39;use strict&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// variabili primitive
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> naturalNumber = 10;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> realNumber = 10.5;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> toBeOrNotToBe = <span style="color:#00f">true</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> word = <span style="color:#009c00">&#34;paragraph&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">var</span> undefinedThing = <span style="color:#00f">undefined</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> thing = <span style="color:#00f">null</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// variabili wrapper
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">var</span> naturalNumberObj = <span style="color:#00f">new</span> Number(10);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> realNumberObj = <span style="color:#00f">new</span> Number(10.5);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> toBeOrNotToBeObj = <span style="color:#00f">new</span> Boolean(<span style="color:#00f">true</span>);
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> wordObj = <span style="color:#00f">new</span> String(<span style="color:#009c00">&#34;paragraph&#34;</span>);
+</span></span></code></pre></div><p>Il codice necessario ad individuare i tipi di dato delle variabili dichiarate è il seguente:</p>
+<ul>
+<li><code>typeof naturalNumber;</code>     // restituisce <code>number</code></li>
+<li><code>typeof realNumber;</code>        // restituisce <code>number</code></li>
+<li><code>typeof toBeOrNotToBe;</code>     // restituisce <code>boolean</code></li>
+<li><code>typeof word;</code>              // restituisce <code>string</code></li>
+<li><code>typeof undefinedThing;</code>    // restituisce <code>undefined</code></li>
+<li><code>typeof thing;</code>             // restituisce <code>object</code></li>
+<li><code>typeof naturalNumberObj;</code>  // restituisce <code>object</code></li>
+<li><code>typeof realNumberObj;</code>     // restituisce <code>object</code></li>
+<li><code>typeof toBeOrNotToBeObj;</code>  // restituisce <code>object</code></li>
+<li><code>typeof wordObj;</code>           // restituisce <code>object</code></li>
+</ul>
+<p>Come si può notare, sia la variabile oggetto, sia le variabili con valore <code>null</code>, sia la variabile sia tutte le variabili &ldquo;wrapper&rdquo; sono di tipo oggetto.</p>
+<p>Una precisazione però è da fare sulla variabile inizializzata a <code>null</code>: la specifica di ECMAScript prevede che, nonostante la variabile sia da considerare come tipo &ldquo;null&rdquo;, l&rsquo;operazione <code>typeof null</code> restituisca <code>object</code>.</p>
+<h2 id="istruzioni-di-input">Istruzioni di input</h2>
 <p>In programmazione, le funzioni di input sono quelle funzioni che permettono ad un programma di ricevere dati dall&rsquo;esterno. Le funzioni di input permettono all&rsquo;utente di inserire in input i dati che il programma utilizza per effettuare calcoli.</p>
 <h3 id="istruzione-di-input-prompt">Istruzione di input <code>prompt</code></h3>
 <p>La funzione JavaScript progettata per inserire in input un valore è <code>prompt</code>, la cui firma è la seguente:</p>
@@ -648,7 +681,7 @@ vale 27.
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/coding/web/javascript/math/" rel="next">
 			<span class="pager__subtitle">Prossimo&thinsp;»</span>
-			<p class="pager__title">Espressioni matematiche</p>
+			<p class="pager__title">JavaScript Lez. 04 - Approfondimento - Espressioni matematiche</p>
 		</a>
 	</div>
 </nav>

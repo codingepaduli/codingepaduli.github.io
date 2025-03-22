@@ -57,6 +57,28 @@ dockerContainer() {
 }
 export -f dockerContainer
 
+# Running GUI applications directly in containers.
+# See: https://github.com/hemashushu/docker-archlinux-gui
+dockerContainerGUI() {
+  # Running GUI applications directly in containers.
+  # Requirements:
+  # - A display server using the Wayland protocol; The Wayland socket file is located in
+  #     the user's runtime directory, the filename is ${WAYLAND_DISPLAY}, the full path
+  #     is similar to /run/user/1000/wayland-0, where "1000" is the user ID
+  # - The PipeWire multimedia framework; the PipeWire socket file is also located in the
+  #     user's runtime directory, and the file name is pipewire-0.
+  # Graphical related parameters
+  #   -e WAYLAND_DISPLAY=${WAYLAND_DISPLAY} : Set the environment variable WAYLAND_DISPLAY in the container 
+  #   -e XDG_RUNTIME_DIR=/tmp : Set the XDG_RUNTIME_DIR in the container
+  #   --device /dev/dri : allows applications running inside the container to use the host's GPU for hardware acceleration
+  #   --mount type=bind,source="${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}",target="/tmp/${WAYLAND_DISPLAY}" : Map the host's Wayland socket file in the container
+  # Sound related parameters
+  #   --device /dev/snd : This options grants the container direct access to the host's sound devices
+  #   --mount type=bind,source="${XDG_RUNTIME_DIR}/pipewire-0",target="/tmp/pipewire-0" : Map the host's PipeWire socket file (e.g. /run/user/1000/pipewire-0) to /tmp/pipewire-0 in the container
+  dockerContainer -e WAYLAND_DISPLAY=${WAYLAND_DISPLAY} -e XDG_RUNTIME_DIR=/tmp --device /dev/dri --mount type=bind,source="${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}",target="/tmp/${WAYLAND_DISPLAY}" --device /dev/snd --mount type=bind,source="${XDG_RUNTIME_DIR}/pipewire-0",target="/tmp/pipewire-0" "$@"
+}
+export -f dockerContainerGUI
+
 # The gcc compiler
 # TEST: dockerGcc --version
 # RUN:  dockerGcc -o myapp myapp.c
@@ -246,7 +268,7 @@ convert() {
 export -f convert
 
 # Test: 
-# Run: convertAllImages $convertOption40x100
+# Run: convertAllImages $convertOption40x100 $convertOptionGreyscale
 convertAllImages() {
 
   # nullglob: if there is no file, don't output anything
@@ -263,7 +285,7 @@ export -f convertAllImages
 export convertPdfOptionPageA4White=' -background white -page a4 '
 export convertPdfOptionDensity300=' -density 300 -alpha background -alpha off '
 export convertOption40x100=' -resize 40% '
-export convertOptionGreyscale40x100=' -set colorspace Gray -separate -average -resize 40% '
+export convertOptionGreyscale=' -set colorspace Gray -separate -average '
 export convertOptionIncreaseBrightness=' -alpha discrete -channel rgb -evaluate add 5% +channel '
 export convertOptionIncreaseContrast=' -contrast '
 

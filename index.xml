@@ -6,7 +6,7 @@
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>L&#39;evoluzione delle comunicazioni</title>
@@ -184,13 +184,6 @@
       <description>Esercizi di grafica 2D</description>
     </item>
     <item>
-      <title>Le stringhe</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/stringhe/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/stringhe/</guid>
-      <description>Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico</description>
-    </item>
-    <item>
       <title>p5.js Lez. 02 - Primitive grafiche</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
@@ -198,7 +191,21 @@
       <description>Le primitive grafiche, ovvero le funzioni che realizzano le figure geometriche più elementari</description>
     </item>
     <item>
-      <title>Espressioni matematiche</title>
+      <title>JavaScript Lez. 06 - Approfondimento - Orari e date</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/datetime_temporal/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/datetime_temporal/</guid>
+      <description>Orari e date</description>
+    </item>
+    <item>
+      <title>JavaScript Lez. 05 - Approfondimento - Le stringhe</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/stringhe/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/stringhe/</guid>
+      <description>Descrizione delle stringhe, degli operatori e delle operazioni sulle stringhe per il calcolo automatico</description>
+    </item>
+    <item>
+      <title>JavaScript Lez. 04 - Approfondimento - Espressioni matematiche</title>
       <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
       <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
@@ -394,18 +401,25 @@
       <description>Esercizi sui diagrammi a blocchi e sul coding</description>
     </item>
     <item>
+      <title>Link interessanti</title>
+      <link>http://codingepaduli.github.io/interesting/others/</link>
+      <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/others/</guid>
+      <description>Set di link interessanti</description>
+    </item>
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
+    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
-    </item>
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
     </item>
     <item>
       <title>SistemiReti</title>
@@ -497,13 +511,6 @@
       <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/opensource/fail2ban/</guid>
       <description>Fail2ban, un servizio di protezione da tentativi di intrusione ripetuti.</description>
-    </item>
-    <item>
-      <title>Link interessanti</title>
-      <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/others/</guid>
-      <description>Set di link interessanti</description>
     </item>
     <item>
       <title>Scheme</title>
@@ -735,13 +742,6 @@
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/shell/linkpowershell/</guid>
       <description>Lezioni sulla programmazione di script in PowerShell nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/shell/powershell&#39;&gt;PowerShell&lt;/a&gt;</description>
-    </item>
-    <item>
-      <title>JavaScript Lez. 04 - I metodi e gli operatori</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/conversioni/</link>
-      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/conversioni/</guid>
-      <description>I metodi e gli operatori</description>
     </item>
     <item>
       <title>JavaScript</title>
