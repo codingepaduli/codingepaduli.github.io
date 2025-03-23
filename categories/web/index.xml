@@ -6,7 +6,7 @@
     <description>Recent content in Web on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
@@ -371,6 +371,13 @@
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/html/etichette/</guid>
       <description>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
+    </item>
+    <item>
+      <title>Siti web </title>
+      <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
+      <description>Il World Wide Web, i siti web, i cookies, i browser</description>
     </item>
     <item>
       <title>I selettori CSS </title>

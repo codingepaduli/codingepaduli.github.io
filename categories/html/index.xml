@@ -6,7 +6,7 @@
     <description>Recent content in HTML on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 08 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML Lez. 09.5 - Esercizi sui moduli di invio dati</title>
@@ -126,6 +126,13 @@
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/html/etichette/</guid>
       <description>HTML Lez. 02 - Il linguaggio HTML e le etichette (tag) - Creazione di una prima pagina web e spiegazione dei primi tag</description>
+    </item>
+    <item>
+      <title>Siti web </title>
+      <link>http://codingepaduli.github.io/coding/web/html/intro/</link>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
+      <description>Il World Wide Web, i siti web, i cookies, i browser</description>
     </item>
     <item>
       <title>Tecnologie Web</title>

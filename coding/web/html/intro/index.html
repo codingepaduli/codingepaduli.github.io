@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Siti web  - Lab. informatica</title>
+
+    <meta name="description" content="Il World Wide Web, i siti web, i cookies, i browser">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/intro/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="Siti web ">
+  <meta property="og:description" content="Il World Wide Web, i siti web, i cookies, i browser">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2025-03-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-22T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="Siti web ">
+  <meta name="twitter:description" content="Il World Wide Web, i siti web, i cookies, i browser">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-03-22T00:00:00Z">22-03-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/html/" rel="category">HTML</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 16 minuti 
+        ( 3203 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="il-world-wide-web-ed-i-siti-web">Il World Wide Web ed i siti web</h1>
+<p>I siti web sono una delle componenti fondamentali di Internet, permettono all&rsquo;utente di navigare tra le informazioni contenute nelle pagine web in maniera semplice ed intuitiva.</p>
+<p>Insieme alle app per smartphone (e a quelle dei dispositivi smart, come gli assistenti vocali, ad esempio Alexa), i siti web rappresentano una delle vie principali per accedere ai contenuti online.</p>
+<p>L&rsquo;insieme di collegamenti tra i vari siti web creano il <strong>World Wide Web</strong> (dall&rsquo;inglese “Rete di Ampiezza Globale”), una rete di estensione mondiale.</p>
+<h2 id="architettura-client-server-del-www">Architettura client server del WWW</h2>
+<p>Il World Wide Web si basa su un&rsquo;architettura client-server, in cui il client invia le richieste al server, il server le elabora e fornisce una risposta al client.</p>
+<p>Il <strong>server</strong> è generalmente un computer con una grande capacità di elaborazione, che gli permette di gestire allo stesso tempo le richieste di milioni di client.</p>
+<p>I <strong>client</strong> sono dispositivi con una capacità di elaborazione non elevata, inviano le richieste di elaborazione al server e attendono la risposta.</p>
+<p>Il <strong>protocollo</strong> di comunicazione definisce un insieme di regole che client e server seguono per poter comunicare.</p>
+<p>I client, per poter navigare, devono utilizzare un software, chiamato <strong>browser</strong>.</p>
+<p>Per permettere ai client la navigazione delle risorse, sul server deve essere installato il <strong>web server</strong>, ovvero il software che offre il servizio di navigazione.</p>
+<p>Il protocollo <strong>HTTP</strong> (HyperText Transfer Protocol) regola la navigazione, intesa come scambio di ipertesti, tra client e server.</p>
+<p>Purtroppo, quando si utilizza il protocollo HTTP, è possibile leggere i messaggi che client e server si scambiano, installando un software adatto su un qualsiasi dispositivo posto tra client e server (ad esempio sul router di casa o su un ripetitore wireless).</p>
+<p>Il protocollo <strong>HTTPS</strong> (HTTP Secure) è nato per aggiungere al protocollo HTTP uno strato ulteriore che consenta di evitare il problema descritto in precedenza e garantisca la comunicazione client-server in sicurezza.</p>
+<h2 id="i-nomi-di-dominio">I nomi di dominio</h2>
+<p>I dispositivi connessi ad internet sono identificati da un indirizzo IP (ad esempio 192.107.122.156) che è difficile da memorizzare. Il servizio Domain Name System (DNS) nasce proprio per rendere più semplice accedere ad un dispositivo associando all&rsquo;indirizzo IP un nome, detto <strong>nome di dominio</strong>.</p>
+<p>La struttura gerarchica dei nomi di dominio è organizzata in livelli, con i domini di primo livello in cima, seguiti dai dominio di secondo livello e dai sottodomini di terzo livello. Questa struttura consente una gestione flessibile e organizzata dei nomi di dominio su Internet.</p>
+<p>La forma di un nome di dominio può essere ad esempio <code>wikipedia.org</code> oppure <code>italia.gov</code> oppure <code>wiki.italia.com</code>. Il carattere &ldquo;punto&rdquo; presente nel nome di dominio separa i livelli:</p>
+<ul>
+<li>il primo livello è indicato a destra, ad esempio <code>.com</code> o <code>.it</code>;</li>
+<li>il secondo livello è indicato alla sinistra del primo livello, ad esempio <code>wikipedia</code> o <code>.italia</code>;</li>
+<li>il terzo livello è opzionale ed è indicato, se presente, alla sinistra del secondo livello, ad esempio <code>blog</code> o <code>wiki</code>;</li>
+</ul>
+<p>L&rsquo;<strong>ICANN</strong> (Internet Corporation for Assigned Names and Numbers) è l&rsquo;organizzazione responsabile delle politiche di gestione e delle linee guida che regolamentano il sistema dei nomi di dominio a livello globale. Ha il ruolo di arbitro e supervisore, ma non gestisce direttamente nessun dominio.</p>
+<p>La sintassi di un nome di dominio permette le lettere (a-z), i numeri (0-9) ed i trattini (-), non permette caratteri speciali come spazi, simboli (come @, #, $, %, ecc.) o punteggiatura (eccetto il trattino, ma non all&rsquo;inizio o alla fine). La lunghezza non deve superare i 63 caratteri. I nomi di dominio sono insensibili al maiuscolo e al minuscolo, ad esempio &ldquo;Example.com&rdquo;, &ldquo;example.com&rdquo; e &ldquo;EXAMPLE.COM&rdquo; sono considerati equivalenti. Il carattere &ldquo;punto&rdquo; separa i livelli dei domini.</p>
+<h3 id="dominio-di-primo-livello">Dominio di primo livello</h3>
+<p>I domini di primo livello, detti Top Level Domain (TLD), identificano il tipo di organizzazione o la provenienza geografica di un sito web. Si dividono in differenti categorie:</p>
+<ul>
+<li>generici (gTLD): non sono legati a un paese specifico e possono essere registrati da chiunque. Tra questi menzioniamo i domini <code>.com</code>, <code>.net</code>, ecc&hellip;</li>
+<li>geografici (ccTLD): sono specifici per un paese o una regione. Tra questi menzioniamo i domini <code>.it</code>, <code>.fr</code>, ecc&hellip;</li>
+<li>sponsorizzati (sTLD): sono gestiti da organizzazioni specifiche e sono destinati a comunità particolari. Tra questi menzioniamo i domini <code>.edu</code>, <code>.gov</code>, ecc&hellip;</li>
+</ul>
+<p>Ogni dominio di primo livello è gestito da un&rsquo;organizzazione chiamata <strong>registry</strong>. Di seguito elenchiamo i <strong>registry</strong> dei nomi di dominio di primo livello più popolari:</p>
+<ol>
+<li><strong>.com</strong> gestito dal Registry &ldquo;VeriSign, Inc.&rdquo;, originariamente progettato per le attività commerciali.</li>
+<li><strong>.org</strong> gestito dal Registry &ldquo;Public Interest Registry (PIR)&rdquo;, originariamente utilizzato da organizzazioni non profit.</li>
+<li><strong>.net</strong> gestito dal Registry &ldquo;VeriSign, Inc.&rdquo;, originariamente destinato a fornitori di servizi di rete.</li>
+<li><strong>.gov</strong> gestito dal Registry &ldquo;U.S. General Services Administration (GSA)&rdquo;, originariamente riservato a enti governativi degli Stati Uniti.</li>
+<li><strong>.edu</strong> gestito dal Registry &ldquo;Educause&rdquo;, originariamente riservato a istituzioni educative accreditate negli Stati Uniti.</li>
+<li><strong>.mil</strong> gestito dal Registry &ldquo;U.S. Department of Defense&rdquo;, originariamente riservato a enti militari degli Stati Uniti.</li>
+<li><strong>.de</strong> gestito dal Registry &ldquo;DENIC eG&rdquo;, il ccTLD per la Germania, utilizzato da aziende e utenti tedeschi.</li>
+<li><strong>.uk</strong> gestito dal Registry &ldquo;Nominet&rdquo;, il ccTLD per il Regno Unito, utilizzato da aziende e utenti inglesi, offre diverse opzioni di registrazione come <strong>.co.uk</strong>, <strong>.org.uk</strong>, ecc&hellip;</li>
+<li><strong>.fr</strong> gestito dal Registry &ldquo;AFNIC (Association Française pour le Nommage Internet en Coopération)&rdquo;, il ccTLD per la Francia, utilizzato da aziende e utenti francesi.</li>
+<li><strong>.it</strong> gestito dal Registry &ldquo;Registro.it&rdquo;, il ccTLD per l&rsquo;Italia, utilizzato da aziende e utenti italiani.</li>
+</ol>
+<h3 id="domini-di-secondo-livello-e-nomi-di-dominio">Domini di secondo livello e nomi di dominio</h3>
+<p>I domini di secondo livello (SLD, Second-Level Domain) possono rappresentare aziende, marchi, persone, progetti o qualsiasi altro tipo di contenuto online.</p>
+<p>Un <strong>nome di dominio</strong> è un indirizzo formato da un dominio di secondo livello ed uno di primo livello separati da un punto, ad esempio <code>wikipedia.org</code> e <code>unicef.org</code>.</p>
+<p>I <strong>registrar</strong> sono le aziende accreditate e autorizzate a vendere nomi di dominio agli utenti finali. I registrar operano come intermediari tra gli utenti e i registry. Quando un utente desidera registrare un nome di dominio, lo fa tramite un registrar, che invia la richiesta al registry che gestisce il dominio di primo livello corrispondente.</p>
+<p>I registry di primo livello sono responsabili della registrazione e della gestione dei nomi di dominio all&rsquo;interno di un determinato dominio di primo livello.</p>
+<h3 id="esempio-di-processo-di-registrazione">Esempio di processo di registrazione</h3>
+<p>Il processo di registrazione di un nome di dominio per un sito web è composto dai seguenti passi:</p>
+<ol>
+<li>Scelta del nome: L&rsquo;utente sceglie la parte iniziale del nome del sito web, ad esempio <code>esempio</code> oppure <code>miosito</code>, e sceglie la parte finale, ad esempio <code>.com</code> oppure <code>.it</code>. Il nome del suo sito web (e quindi il nome del suo dominio) sarà <code>example.com</code> o <code>miosito.it</code>.</li>
+<li>Verifica della disponibilità: L&rsquo;utente utilizza un registrar per verificare se il nome di dominio (<code>example.com</code> o <code>miosito.it</code>) scelto è disponibile.</li>
+<li>Registrazione: Se il nome è disponibile, l&rsquo;utente completa il processo di registrazione attraverso il registrar, che invia la richiesta al registry indicante le informazioni di contatto, gli indirizzi IP, ecc&hellip;</li>
+<li>Gestione: Una volta registrato il nome di dominio, questo (<code>example.com</code> o <code>miosito.it</code>) è gestito dal registry.</li>
+</ol>
+<h3 id="domini-di-terzo-livello">Domini di terzo livello</h3>
+<p>I domini di terzo livello sono utilizzati per organizzare e gestire contenuti o servizi specifici all&rsquo;interno di un dominio di secondo livello. Sono creati e gestiti direttamente dal proprietario del dominio di secondo livello, per cui il processo di registrazione di un nome di dominio di terzo livello segue le regole dettate dal gestore di dominio di secondo livello.</p>
+<p>Se un&rsquo;azienda possiede <code>example.com</code>, può creare i nomi di dominio <code>blog.example.com</code> o <code>shop.example.com</code> senza dover registrare separatamente questi domini di terzo livello.</p>
+<h2 id="i-siti-web">I siti web</h2>
+<h3 id="tecnologie-e-software-per-la-creazione-di-siti-web">Tecnologie e software per la creazione di siti web</h3>
+<p>I siti web possono essere costruiti in mille modi.</p>
+<p>Esistono software che permettono, anche con poche conoscenze tecniche, di disegnare, configurare ed amministrare un sito web mediante interfacce grafiche che guidano l&rsquo;utente nei vari passi. Questi software sono chiamati genericamente
+<a href="https://it.wikipedia.org/wiki/Content_management_system" title="Collegamento all'articolo sui CMS su wikipedia.it">CMS</a>. Tra i CMS più noti troviamo
+<a href="https://wordpress.org/" title="Collegamento al sito web di WordPress">WordPress</a> e
+<a href="https://www.joomla.org/" title="Collegamento al sito web di Joomla">Joomla</a>, ma la scelta è ampia.</p>
+<p>E&rsquo; possibile creare dei siti web &ldquo;statici&rdquo;, cioè scritti con software che trasformano un insieme di articoli e contenuti in un sito web. Questi strumenti prendono il nome di &ldquo;static site generator&rdquo; (generatori di siti web statici).</p>
+<p>E&rsquo; comunque possibile creare siti web partendo da un semplice editor di testi. Tra gli editor consigliati spuntano <a href="https://notepad-plus-plus.org/" title="Collegamento all'editor Notepad++">Notepad++</a>, <a href="https://vscodium.com/" title="Collegamento all'editor VSCodium">VSCodium</a> e Visual Studio Code. Tra gli editor non adatti si elencano l&rsquo;editor Word di Office e &ldquo;Blocco Note&rdquo; (Notepad) di Windows.</p>
+<p>Una volta costruito, il sito web deve essere <strong>pubblicato</strong> sul web, scegliendo le caratteristiche del servizio di hosting o di cloud, i certificati di sicurezza e gli strumenti adatti per il trasferimento e la sincronizzazione delle pagine sul dominio.</p>
+<h3 id="caratteristiche-di-un-sito-web">Caratteristiche di un sito web</h3>
+<p>Dal punto di vista tecnico, un sito web deve rispondere ad una serie di requisiti molto richiesti, seppur non obbligatori, che elenchiamo di seguito:</p>
+<ul>
+<li><strong>validità</strong>: caratteristica che indica l&rsquo;assenza di errori. L&rsquo;attività di validazione è necessaria ad individuare e correggere gli errori prima che siano pubblicati sul sito web. Per svolgere questi compiti, troviamo strumenti per la correzione grammaticale, validatori delle pagine web, validatori dei collegamenti (per evitare che possano riferirsi a risorse rimosse o spostate). Uno strumento di controllo dei collegamenti è il <a href="https://validator.w3.org/checklink" title="Collegamento al validatore dei link">W3C Link Checker</a>. Per validare il codice HTML si può utilizzare il validatore <a href="https://validator.w3.org/" title="Collegamento al validatore HTML">W3C Validator</a>;</li>
+<li><strong>accessibilità</strong>: caratteristica che permette l&rsquo;utilizzo del sito web anche persone con ridotta o impedita capacità sensoriale, motoria o psichica;</li>
+<li><strong>&ldquo;responsività&rdquo;</strong>: caratteristica indicante che il sito web è fruibile su schermi con differenti risoluzioni e formati, sia quelli piccoli dei cellulari e palmari, sia quelli classici dei computer e tablet, sia quelli extra-large delle smart-TV. Uno strumento per verificare che un sito web sia &ldquo;responsive&rdquo; è <a href="https://responsively.app/" title="App open source per simulare in un'unica schermata la visualizzazione del sito su più dispositivi">Responsively.App</a>;</li>
+<li><strong>rapidità</strong>: Indica i tempi di caricamento della pagina e i tempi di risposta alle azioni dell&rsquo;utente. L&rsquo;attività fa si che i gli utenti possano interagire rapidamente col sito web, anche su connessioni lente, usando strumenti quali
+<a href="https://developers.google.com/web/tools/lighthouse/" title="Collegamento al sito web di lighthouse">lighthouse</a>;
+opzionalmente si può rendere il sito capace di funzionare anche senza connessione internet
+(<a href="https://it.m.wikipedia.org/wiki/Progressive_Web_App" title="Collegamento all'articolo su PWA su wikipedia.it">PWA</a>);</li>
+<li><strong>ottimizzazione per i motori di ricerca (<a href="https://it.m.wikipedia.org/wiki/Ottimizzazione_(motori_di_ricerca)" title="Collegamento all'articolo su SEO su wikipedia.it">SEO</a>)</strong>: permette al sito web di posizionarsi piú in alto possibile in un motore di ricerca.</li>
+</ul>
+<p>Opzionalmente si può adattare al semantic web <a href="https://it.m.wikipedia.org/wiki/Web_semantico" title="Collegamento all'articolo sul Web semantico su wikipedia.it">semantic-web</a>.</p>
+<h3 id="organizzazioni-chiave-e-nuove-funzionalità">Organizzazioni chiave e nuove funzionalità</h3>
+<p>Il W3C (World Wide Web Consortium) è l&rsquo;organizzazione principale che stabilisce gli standard globali per il web. Si occupa di definire le specifiche per linguaggi come HTML e CSS, oltre a promuovere pratiche di accessibilità per garantire che il web sia fruibile da tutti, inclusi gli utenti con disabilità.</p>
+<p>Il WHATWG (Web Hypertext Application Technology Working Group) è un gruppo di lavoro che si concentra sulla modernizzazione delle specifiche di HTML e del Document Object Model (DOM). Si è formato per rispondere alla necessità di un&rsquo;evoluzione continua di HTML, in particolare per supportare le nuove tecnologie e le pratiche di sviluppo web.</p>
+<p>Il TC39 (Technical Committee 39) è il comitato tecnico responsabile della definizione degli standard per JavaScript. Questo include l&rsquo;evoluzione del linguaggio attraverso versioni come ES6 (ECMAScript 2015) e le versioni successive (ESNext), che introducono nuove funzionalità e miglioramenti.</p>
+<p>Il processo per la realizzazione di una nuova funzionalità per il web è il seguente:</p>
+<p>Proposal Stage: In questa fase iniziale, sviluppatori e fornitori di browser propongono nuove funzionalità. Queste proposte possono derivare da esigenze emergenti nel campo dello sviluppo web o da innovazioni tecnologiche.</p>
+<p>Experimental Implementation: Una volta che una proposta è stata accettata, un browser (come Chrome o FireFox) implementa la funzionalità in modo sperimentale. Questo consente agli sviluppatori di testare la nuova funzionalità senza influenzare gli utenti finali.</p>
+<p>Cross-Browser Adoption: Se la funzionalità si dimostra utile e stabile, altri browser iniziano a implementarla. Questo passaggio è cruciale per garantire che la nuova funzionalità venga adottata in modo ampio e non rimanga limitata a un solo browser.</p>
+<p>Standardization by W3C/WHATWG: Una volta che la funzionalità è stata adottata da più browser e ha dimostrato di essere utile, viene formalmente standardizzata dal W3C o dal WHATWG. Questo processo implica la revisione e l&rsquo;approvazione delle specifiche tecniche.</p>
+<p>Full Browser Support: La funzionalità viene abilitata per impostazione predefinita in tutti i principali browser. Questo significa che gli utenti possono utilizzare la nuova funzionalità senza dover attivare manualmente alcuna impostazione.</p>
+<p>L&rsquo;obiettivo di questo processo è garantire che ogni browser implementi la nuova funzionalità in modo coerente, in modo che gli sviluppatori possano contare su un comportamento uniforme attraverso diverse piattaforme.</p>
+<h2 id="i-cookies">I cookies</h2>
+<p>I siti web utilizzano i cookie per l&rsquo;autenticazione dell&rsquo;utente e per la memorizzazione di alcune informazioni. Quando un utente visita un sito web che utilizza cookie, spesso si imbatte in un messaggio o un banner informativo che lo informa che il sito web utilizza cookie per migliorare l&rsquo;esperienza dell&rsquo;utente e per personalizzare i contenuti in base alle preferenze dell&rsquo;utente. Presentano anche importanti problemi di privacy.</p>
+<p>Il termine &ldquo;cookie&rdquo; è spesso associato a &ldquo;magic cookie&rdquo;, in ambito informatico si riferisce a un pezzo di informazione che viene scambiato tra due parti.</p>
+<p>In origine servivano per memorizzare la sessione di navigazione, ovvero impedivano al browser di dover chiedere all&rsquo;utente di autenticarsi (di effettuare il login) ogni volta che l&rsquo;utente visitava una nuova pagina. Col tempo permettevano al browser di ricordare anche le preferenze dell&rsquo;utente: la lingua, il tema. Ogni volta che l&rsquo;utente clicca su un collegamento per navigare su una nuova pagina del sito web, i cookie di quel sito vengono inviati al server, che riconosce l&rsquo;utente, la lingua, il tema e restituisce la pagina web con queste impostazioni (e non richiede di effettuare il login all&rsquo;utente).</p>
+<p>Esploriamo cosa sono i cookie, come funzionano e perché sono importanti.</p>
+<h3 id="tipi-di-cookie">Tipi di cookie</h3>
+<p>Le tipologie di cookie sono descritte di seguito.</p>
+<ul>
+<li>cookie di sessione: sono cookie temporanei che scompaiono una volta chiuso il browser. Identificano la singola sessione di navigazione dell&rsquo;utente e garantiscono una navigazione fluida.</li>
+<li>cookie persistenti: rimangono sul dispositivo fino alla loro scadenza o finché l&rsquo;utente non li elimina. Aiutano i siti web a ricordare le impostazioni per le visite future.</li>
+<li>cookie di prima parte: sono impostati dal sito web che stai visitando. Gestiscono la personalizzazione e qualsiasi altra preferenza impostata su quel sito.</li>
+<li>cookie di terze parti: sono stabiliti da entità esterne al sito web come gli inserzionisti pubblicitari. Tracciano le abitudini di navigazione degli utenti sui diversi siti che questi visitano, costruendo un profilo degli interessi degli utenti. Possono essere utili, ma sollevano anche preoccupazioni sulla privacy.</li>
+<li>cookie sicuri: funzionano solo su connessioni crittografate (HTTPS), rendendole essenziali per proteggere le informazioni sensibili come password o dettagli bancari durante le transazioni.</li>
+</ul>
+<h3 id="la-privacy-ed-il-marketing">La privacy ed il marketing</h3>
+<p>I cookie oggi sono principalmente utilizzati per ottimizzare le strategie di marketing delle piattaforme web e per presentare contenuti e pubblicità adatti alle preferenze dell&rsquo;utente.</p>
+<p>I grandi inserzionisti pubblicitari prendono accordi con i siti web per effettuare il tracciamento e l’analisi delle abitudini degli utenti. Quando l&rsquo;utente naviga su un sito web, i cookie vengono inviati al sito. Se si conoscono le preferenze e i gusti dell&rsquo;utente, gli vengono mostrate le pubblicità adatte ai suoi gusti. Quando l&rsquo;utente naviga su un secondo sito web che usa gli stessi cookie, le preferenze e i gusti espressi sul primo sito vengono aggiunte alle preferenze ed ai gusti espressi sul secondo sito. A lungo andare si crea una profilazione dell&rsquo;utente: cosa gli piace, quali generi legge, che film guarda, quale squadra tifa.</p>
+<p>Ad esempio, se un utente visita un sito di e-commerce e guarda un prodotto senza acquistarlo, i cookie possono essere utilizzati per mostrare annunci di quel prodotto su altri siti web che l&rsquo;utente visita in seguito.</p>
+<p>Da un lato le pubblicità mostrate all&rsquo;utente permettono ai siti web di finanziarsi e di vendere. Dall&rsquo;altro la profilazione dell&rsquo;utente solleva anche diverse preoccupazioni legate alla privacy.</p>
+<p>I cookie, in particolare i cookie di terze parti, possono essere utilizzati per tracciare gli utenti attraverso diversi siti web. Questo significa che le aziende possono raccogliere informazioni dettagliate sulle abitudini di navigazione degli utenti, creando profili comportamentali. Questo tipo di tracciamento può avvenire senza il consenso esplicito degli utenti e può portare a una sensazione di invasione della privacy.</p>
+<p>Le informazioni raccolte tramite i cookie possono essere utilizzate per creare profili dettagliati degli utenti, che possono includere dati su interessi, comportamenti e preferenze. Questi profili possono essere utilizzati per pubblicità mirata, ma possono anche sollevare preoccupazioni etiche riguardo alla manipolazione delle scelte degli utenti e alla mancanza di trasparenza su come vengono utilizzati i dati.</p>
+<p>Molti utenti non sono consapevoli di come i cookie vengono utilizzati o di quali dati vengono raccolti. Anche se le normative come il GDPR richiedono che i siti informino gli utenti sull&rsquo;uso dei cookie e ottengano il loro consenso, non tutti i siti rispettano queste normative in modo adeguato. Questo porta a una mancanza di trasparenza e a una scarsa comprensione da parte degli utenti.</p>
+<h2 id="la-guerra-dei-browser">La guerra dei browser</h2>
+<p>Per navigare su internet serve un browser. Un browser è composto principalmente da un motore per la visualizzazione delle pagine web e l&rsquo;esecuzione dei programmi contenuti. Con l&rsquo;evoluzione del web, i motori continuano a svilupparsi per supportare le nuove tecnologie.</p>
+<p>Il browser Mozilla Firefox, sviluppato dalla Mozilla Foundation, è nato con l&rsquo;obiettivo di rispettare la privacy degli utenti e che permettesse la personalizzazione. Utilizza il motore Gecko per la visualizzazione delle pagine web.</p>
+<p>Il browser Safari, sviluppato dalla Apple, è nato con l&rsquo;obiettivo di garantire un&rsquo;esperienza utente coerente su tutti i dispositivi Apple. Utilizza il motore WebKit per la visualizzazione delle pagine web.</p>
+<p>Quasi tutti gli altri browser attualmente esistenti utilizzano il motore Blink di Google:</p>
+<ul>
+<li>il browser Microsoft Edge si basa su Blink;</li>
+<li>il browser Opera si basa su Blink;</li>
+<li>il browser Opera GX si basa su Blink;</li>
+<li>il browser Vivaldi si basa su Blink;</li>
+<li>il browser Brave si basa su Blink;</li>
+<li>il browser Google Chrome si basa su Blink;</li>
+<li>il browser Samsung Internet si basa su Blink;</li>
+<li>il browser Amazon Silk si basa su Blink;</li>
+<li>il browser Arc si basa su Blink;</li>
+<li>il browser Yandex si basa su Blink.</li>
+</ul>
+<p>Blink di Google è anche il motore che alimenta Electron e Chromium Embedded Framework (CEF), strumenti molto diffusi che sono utilizzati per creare applicazioni desktop come Discord, VS Code, Figma, Obsidian, Signal, Slack, Steam, Spotify, ecc&hellip;</p>
+<p>Non c&rsquo;è scelta nel mercato dei browser. Il motore che li alimenta è quasi sempre Blink, e Blink è sviluppato da Google. Unita questa tecnologia con il motore di ricerca più popolare al mondo significa che Google ha un controllo quasi completo e assoluto della navigazione sul web, creando preoccupazioni relative alla libertà di navigazione e alla sorveglianza. Google è una società che realizza la maggior parte delle sue entrate attraverso la pubblicità e la raccolta di dati.</p>
+<p>Il Web Design System degli Stati Uniti impone il supporto ufficiale ai browser che superano l’utilizzo del 2% sui siti web gestiti dal governo degli Stati Uniti. Un requisito simile è fissato dal governo britannico. Firefox sta scendendo sotto questa soglia, una volta sotto significa che non sarà più supportato e che si perderà ancor di più libertà di scelta.</p>
+<p>Poiché il futuro del web dipende dalla diversità nei motori dei browser, si può invitare gli utenti a considerare l&rsquo;utilizzo di browser alternativi maturi e consolidati, come FireFox o Safari, e di supportare lo sviluppo e la crescita di browser poco diffusi e non basati su Blink, come Servo e Ladybird, ancora non maturi per una navigazione fluida e priva di errori.</p>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/web/html/etichette/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">HTML Lez. 02 - Il linguaggio HTML e le etichette (tag)</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
