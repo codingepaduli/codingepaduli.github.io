@@ -6,8 +6,15 @@
     <description>Recent content in HTML on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shoelace - Libreria di componenti web personalizzati</title>
+      <link>http://codingepaduli.github.io/coding/web/html/webcomponents-shoelace/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/html/webcomponents-shoelace/</guid>
+      <description>Shoelace, una libreria di componenti web personalizzati che fornisce molti componenti fondamentali per la realizzazione di interfacce utenti moderne</description>
+    </item>
     <item>
       <title>HTML Lez. 09.5 - Esercizi sui moduli di invio dati</title>
       <link>http://codingepaduli.github.io/coding/web/html/form_exe/</link>

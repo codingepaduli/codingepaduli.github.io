@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- metadati obbligatori, in questo ordine -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esempio di struttura</title>
+    
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Esempio uso shoelace</h1>
+    </header>
+
+    <main>
+      <article>
+        <h2>Titolo dell'articolo</h2>
+        <p>Contenuto dell'articolo...</p>
+        <sl-badge variant="success" pill>Success</sl-badge>
+        <sl-badge variant="danger">Danger</sl-badge>
+
+        <sl-format-number type="percent" value="0.50"></sl-format-number><br />
+        <sl-spinner style="font-size: 50px; --track-width: 10px;"></sl-spinner>
+      </article>
+    </main>
+
+    <footer>
+      <p>informazioni di chiusura</p>
+    </footer>
+  </body>
+</html>

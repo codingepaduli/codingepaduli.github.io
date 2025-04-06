@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shoelace - Libreria di componenti web personalizzati - Lab. informatica</title>
+
+    <meta name="description" content="Shoelace, una libreria di componenti web personalizzati che fornisce molti componenti fondamentali per la realizzazione di interfacce utenti moderne">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/web/html/webcomponents-shoelace/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="Shoelace - Libreria di componenti web personalizzati">
+  <meta property="og:description" content="Shoelace, una libreria di componenti web personalizzati che fornisce molti componenti fondamentali per la realizzazione di interfacce utenti moderne">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2025-03-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-27T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="Shoelace - Libreria di componenti web personalizzati">
+  <meta name="twitter:description" content="Shoelace, una libreria di componenti web personalizzati che fornisce molti componenti fondamentali per la realizzazione di interfacce utenti moderne">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-03-27T00:00:00Z">27-03-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/html/" rel="category">HTML</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 3 minuti 
+        ( 587 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="shoelace---libreria-di-componenti-web-personalizzati">Shoelace - Libreria di componenti web personalizzati</h1>
+<p>I componenti web (Web Components) personalizzati sono delle etichette HTML non standard che ci consentono di costruire interfacce utente flessibili, moderne e modulari, facilitando lo sviluppo e la manutenzione delle applicazioni web.</p>
+<p>Sono basati su standard riconosciuti e sono supportati da tutti i principali browser moderni, per cui garantiscono una buona compatibilità.</p>
+<p>Estendono le funzionalità degli elementi HTML standard, aggiungendo proprietà e stili grafici specifici, comportamenti personalizzati e riutilizzabili che li rendono in termini di progettazione e sviluppo degli ottimi componenti su cui sviluppare i siti web, evitando la necessità di soluzioni proprietarie e framework specifici.</p>
+<p>Una delle librerie di componenti web oggi in circolazione è <strong>Shoelace</strong>, che fornisce una collezione di componenti UI progettati professionalmente e altamente personalizzabili, costruiti sulla tecnologia dei Web Component così da essere indipendente dal framework e dal linguaggio utilizzato. Questa libreria fornisce molti componenti fondamentali dell&rsquo;interfaccia utente, pronti per essere personalizzati e adattati alle esigenze, è un ottimo punto di partenza dal quale progettazione l&rsquo;interfaccia utente.</p>
+<h2 id="utilizzare-shoelace-nelle-pagine-web">Utilizzare Shoelace nelle pagine web</h2>
+<p>L&rsquo;uso dei componenti nelle pagine web prevede l&rsquo;aggiunta degli script della libreria nella pagina web:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script type=<span style="color:#009c00">&#34;module&#34;</span> src=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js&#34;</span>&gt;&lt;/script&gt;
+</span></span></code></pre></div><p>E&rsquo; possibile scegliere il tema &ldquo;light&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;stylesheet&#34;</span> href=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css&#34;</span> /&gt;
+</span></span></code></pre></div><p>In alternativa si può utilizzare il tema &ldquo;dark&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;stylesheet&#34;</span> href=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css&#34;</span> /&gt;
+</span></span></code></pre></div><h2 id="utilizzo-dei-componenti">Utilizzo dei componenti</h2>
+<p>Nel menu è possibile visualizzare i componenti web utilizzabili:</p>
+<p><img src="/static/coding/web/html/webComponents-shoelace-menu.png" alt="Lista componenti"></p>
+<p>Tra i componenti utilizzabili ne troviamo molti che estendono i componenti web esistenti. A titolo di esempio elenchiamo i componenti:</p>
+<ul>
+<li><strong>Alert</strong>: Un messaggio informativo che comunica agli utenti un avviso o una notifica. Può essere di diversi tipi, come successo, errore, avviso, ecc.</li>
+<li><strong>Card</strong>: Un contenitore flessibile che può contenere contenuti come testo, immagini e pulsanti. Utilizzato per presentare informazioni in modo visivamente accattivante.</li>
+<li><strong>Dialog</strong>: Una finestra modale che appare sopra il contenuto principale per richiedere l&rsquo;attenzione dell&rsquo;utente. Può contenere messaggi, moduli o altre interazioni.</li>
+<li><strong>Dropdown</strong>: Un menu a discesa che consente agli utenti di selezionare un&rsquo;opzione da un elenco. Può contenere elementi di menu e sotto-categorie.</li>
+<li><strong>Slider</strong>: Un controllo che consente agli utenti di selezionare un valore da un intervallo continuo. Può essere utilizzato per regolare impostazioni come volume o luminosità.</li>
+<li><strong>Tab</strong>: Un elemento di navigazione che consente agli utenti di passare tra diverse sezioni di contenuto. Ogni tab rappresenta una sezione distinta.</li>
+<li><strong>Tooltip</strong>: Un piccolo messaggio informativo che appare quando l&rsquo;utente passa il mouse su un elemento. Utilizzato per fornire ulteriori dettagli senza occupare spazio visivo.</li>
+<li><strong>Progress Bar</strong>: Un indicatore visivo che mostra il progresso di un&rsquo;operazione in corso, come il caricamento di un file o il completamento di un&rsquo;attività.</li>
+<li><strong>Toast</strong>: Un messaggio temporaneo che appare in un angolo dello schermo per informare l&rsquo;utente su un&rsquo;azione completata o un evento. Scompare automaticamente dopo un breve periodo.</li>
+<li><strong>Menu</strong>: Un elenco di opzioni o azioni che gli utenti possono selezionare. Può essere utilizzato per la navigazione o per azioni contestuali.</li>
+<li><strong>Badge</strong>: Un piccolo elemento visivo che fornisce informazioni aggiuntive, come un conteggio o uno stato, spesso utilizzato per notifiche o avvisi.</li>
+</ul>
+<p>Una volta scelto un componente dal menù, si possono visualizzare i dettagli, come la sintassi da utilizzare, la descrizione dell&rsquo;etichetta, le proprietà, gli eventi, gli esempi di come utilizzarlo. Di seguito un esempio di documentazione:</p>
+<p><img src="/static/coding/web/html/webComponents-shoelace-details.png" alt="Dettaglio componenti"></p>
+<p>Dalla documentazione del componente e dagli esempi riportati è possibile dedurre l&rsquo;utilizzo del componente, come dagli esempi riportati e di seguito riproposti:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;sl-carousel pagination navigation mouse-dragging loop&gt;
+</span></span><span style="display:flex;"><span>  &lt;sl-carousel-item&gt;
+</span></span><span style="display:flex;"><span>    &lt;img src=<span style="color:#009c00">&#34;mountains.jpg&#34;</span> alt=<span style="color:#009c00">&#34;The sun shines&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/sl-carousel-item&gt;
+</span></span><span style="display:flex;"><span>  &lt;sl-carousel-item&gt;
+</span></span><span style="display:flex;"><span>    &lt;img src=<span style="color:#009c00">&#34;waterfall.jpg&#34;</span> alt=<span style="color:#009c00">&#34;A waterfall&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/sl-carousel-item&gt;
+</span></span><span style="display:flex;"><span>  &lt;sl-carousel-item&gt;
+</span></span><span style="display:flex;"><span>    &lt;img src=<span style="color:#009c00">&#34;sunset.jpg&#34;</span> alt=<span style="color:#009c00">&#34;The sun&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/sl-carousel-item&gt;
+</span></span><span style="display:flex;"><span>&lt;/sl-carousel&gt;
+</span></span></code></pre></div><p><a href="/static/coding/web/html/webComponents-shoelace-example.html">esempio di componenti di shoelace</a></p>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/html/form_exe/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">HTML Lez. 09.5 - Esercizi sui moduli di invio dati</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

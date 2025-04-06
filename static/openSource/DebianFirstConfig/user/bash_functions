@@ -299,6 +299,35 @@ b3check() {
 }
 export -f b3check
 
+
+# Make .md5 .sha256 .b3 files from file
+# Usage: hashFile file.txt
+hashFile() {
+  if [ -f "$1.md5" ]; then
+    echo "    Md5 hash exists: $1.md5"
+  else
+    echo "    $(date) - Hashing (MD5) $1"
+    touch "$1.md5"
+    md5sum "$1" > "$1.md5"
+  fi
+    if [ -f "$1.sha256" ]; then
+    echo "    sha256 hash exists: $1.sha256"
+  else
+    echo "    $(date) - Hashing (sha256) $1"
+    touch "$1.sha256"
+    sha256sum "$1" > "$1.sha256"
+  fi
+  if [ -f "$1.b3" ]; then
+    echo "    Blake3 hash exists: $1.b3"
+  else
+    echo "    $(date) - Hashing (Blake3) $1"
+    touch "$1.b3"
+    b3sum "$1" > "$1.b3"
+  fi
+}
+export -f hashFile
+
+
 # Make .iso.md5 files from .iso files
 # Usage: md5HashingAllIsoFiles
 md5HashingAllIsoFiles() {

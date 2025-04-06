@@ -232,3 +232,34 @@ flatpakShowRemoteCommitOfApp() {
   flatpak remote-info --log flathub "$@"
 }
 export -f flatpakShowRemoteCommitOfApp
+
+# converts all Excels files to CSV files
+# Usage: convertAllXslxToCsv
+convertAllXslxToCsv() {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.wav, *.Wav, *.WaV etc
+  shopt -s nullglob nocaseglob
+
+  for file in *.xlsx
+  do
+    flatpak run org.libreoffice.LibreOffice --headless --convert-to csv --outdir . "${file}";
+  done
+}
+export -f convertAllXslxToCsv
+
+
+# converts all CSV files to Excel files
+# Usage: convertAllCsvToXslx
+convertAllCsvToXslx() {
+
+  # nullglob: if there is no file, don't output anything
+  # nocaseglob: will match *.wav, *.Wav, *.WaV etc
+  shopt -s nullglob nocaseglob
+
+  for file in *.csv
+  do
+    flatpak run org.libreoffice.LibreOffice --headless  --convert-to xlsx --outdir . "${file}";
+  done
+}
+export -f convertAllCsvToXslx

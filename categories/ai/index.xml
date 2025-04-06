@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on Lab. informatica</title>
+    <link>http://codingepaduli.github.io/categories/ai/</link>
+    <description>Recent content in Ai on Lab. informatica</description>
+    <generator>Hugo</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Mon, 28 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI e Teachable Machine</title>
+      <link>http://codingepaduli.github.io/coding/web/mediapipe/intro/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/mediapipe/intro/</guid>
+      <description>Introduzione all&amp;rsquo;intelligenza artificiale e a Teachable Machine</description>
+    </item>
+  </channel>
+</rss>
