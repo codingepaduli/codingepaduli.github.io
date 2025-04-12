@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <!-- keep the line below for OpenProcessing compatibility -->
+  <!-- script src="https://openprocessing.org/openprocessing_sketch.js"></script -->
+
+  <!-- https://github.com/q5js/q5.js 
+    A performant alternative API compatible with p5.js -->
+  <script src="/static/js/q5.js"></script>
+  
+  <!-- https://github.com/processing/p5.sound.js Sound Library -->
+  <script src="/static/js/p5.sound.js"></script>
+
+  <!-- https://github.com/piqnt/planck.js/ 
+    Planck.js is JS/TS rewrite of Box2D physics engine for 
+    cross-platform HTML5 game development -->
+  <script src="/static/js/planck.js"></script>
+
+  <!-- https://github.com/quinton-ashley/p5play/
+    JavaScript game engine that uses q5.js/p5.js for graphics
+    and Planck.js for physics -->
+  <script src="/static/js/p5play.js"></script>
+  
+  <!-- ml5.js AI Library  -->
+  <!-- <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script> -->
+  
+  <script>
+    let ball, levaSxGiu, levaDxGiu;
+    let muroSu, muroSx, muroDx, rampaSx, rampaDx;
+    let ping1, ping2, ping3, ping4;
+    let trSxA, trSxB, trSxC, triangleSx;
+    let trDxA, trDxB, trDxC, triangleDx;
+    let pentagon, septagon;
+    let dogSound, horseSound;
+
+    function preload() {
+      dogSound = loadSound("/static/coding/web/p5js/progettoParcoZoologico_dog1.mp3");
+      horseSound = loadSound("/static/coding/web/p5js/progettoParcoZoologico_horse1.mp3");
+      
+      // Imposta un callback per quando il suono termina
+      dogSound.onended(() => {
+        dogSound.stop();
+        console.log(`dogSound stop`);
+      });
+      // Imposta un callback per quando il suono termina
+      horseSound.onended(() => {
+        dogSound.stop();
+        console.log(`horseSound play`);
+      });
+    }
+
+    function setup() {
+      createCanvas();
+      background(0.7);
+
+      world.gravity.y = +30;
+
+      ball = new Sprite(200, 130, 50);
+      ball.color = 'red';
+      ball.vel.x = -5;
+      ball.bounciness = 0.2;
+      ball.mass = 100;
+
+      muroSu = new Sprite(40, -255, 2480, 5, 'static');
+      muroSu.color = 'yellow';
+      muroSu.bounciness = 0;
+
+      muroSx = new Sprite(40, -855, 2480, 5, 'static');
+      muroSx.color = 'yellow';
+      muroSx.rotation = -90;
+      muroSx.bounciness = 1;
+
+      muroDx = new Sprite(640, -855, 2480, 5, 'static');
+      muroDx.color = 'red';
+      muroDx.rotation = -90;
+      muroDx.bounciness = 1;
+
+      rampaSx = new Sprite(150, 355, 200, 5, 'static');
+      rampaSx.color = 'pink';
+      rampaSx.rotation = 30;
+
+      rampaDx = new Sprite(540, 355, 200, 5, 'static');
+      rampaDx.color = 'green';
+      rampaDx.rotation = -30;
+
+      ping1 = new Sprite(200, 255, 30, 'static');
+      ping1.bounciness = 1.3;
+      
+      ping2 = new Sprite(300, 255, 30, 'static');
+      ping2.bounciness = 1.3;
+      
+      ping3 = new Sprite(400, 255, 30, 'static');
+      ping3.bounciness = 1.3;
+
+      ping4 = new Sprite(500, 255, 30, 'static');
+      ping4.bounciness = 1.3;
+
+      pentagon = new Sprite(250, 150, 30, 'pentagon', 'kinematic');
+      pentagon.rotationSpeed = 2;
+      pentagon.bounciness = 0.2;
+      septagon = new Sprite(450, 150, 30, 'septagon', 'kinematic');
+      septagon.rotationSpeed = 3;
+      septagon.bounciness = 0.2;
+
+      trSxA = [100, 500];
+      trSxB = [100, 450];
+      trSxC = [300, 500];
+      triangleSx = [trSxA, trSxB, trSxC, trSxA];
+      levaSxGiu = new Sprite(triangleSx);
+      levaSxGiu.offset.x = 45;
+      levaSxGiu.collider = 'kinematic';
+      levaSxGiu.rotation = 0;
+      levaSxGiu.bounciness = 0.5;
+      levaSxGiu.mass = 1;
+      // levaSxGiu.debug = true;
+
+      trSxA = [600, 500];
+      trSxB = [600, 450];
+      trSxC = [400, 500];
+      triangleDx = [trSxA, trSxB, trSxC, trSxA];
+      levaDxGiu = new Sprite(triangleDx);
+      levaDxGiu.offset.x = -45;
+      levaDxGiu.collider = 'kinematic';
+      levaDxGiu.rotation = 0; // 45
+      levaDxGiu.bounciness = 0.5;
+      levaDxGiu.mass = 1;
+      //levaDxGiu.debug = true;
+    }
+
+    function draw() {
+
+    }
+
+    function update() {
+      clear();
+      
+      if (keyboard.pressing('f')) {
+        levaSxGiu.rotateTo(-45, -7); // angle and speed
+      } else {
+        levaSxGiu.rotateMinTo(0, 5); // angle and speed
+      }
+      if (keyboard.pressing('j')) {
+        levaDxGiu.rotateTo(45, 7); // angle and speed
+      } else {
+        levaDxGiu.rotateMinTo(0, 5); // angle and speed
+      }
+
+      if (ball.collides(ping1)) {
+        if (! (horseSound.isPlaying() || dogSound.isPlaying())) {
+          horseSound.play();
+          console.log(`horseSound play`);
+        }
+        console.log(`collisione ping1 h:${horseSound.isPlaying()} d:${dogSound.isPlaying()}`);
+      }
+      if (ball.collides(ping4)) {
+        if (! (horseSound.isPlaying() || dogSound.isPlaying())) {
+          dogSound.play();
+          console.log(`dogSound play`);
+        }
+        console.log(`collisione ping4 h:${horseSound.isPlaying()} d:${dogSound.isPlaying()}`);
+      }
+    }
+  </script>
+</head>
+<body>   
+  
+</body>
+</html>
