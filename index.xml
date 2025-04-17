@@ -6,7 +6,7 @@
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>L&#39;evoluzione delle comunicazioni</title>
@@ -182,6 +182,13 @@
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</guid>
       <description>Esercizi di grafica 2D</description>
+    </item>
+    <item>
+      <title>JavaScript Lez. 07 - Approfondimento - Oggetti</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/objects/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/objects/</guid>
+      <description>Oggetti</description>
     </item>
     <item>
       <title>p5.js Lez. 02 - Primitive grafiche</title>
@@ -415,6 +422,13 @@
       <description>Il World Wide Web, i siti web, i cookies, i browser</description>
     </item>
     <item>
+      <title>La linea di comando di MySQL</title>
+      <link>http://codingepaduli.github.io/coding/sql/sql_cli/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/sql/sql_cli/</guid>
+      <description>La linea di comando di MySQL</description>
+    </item>
+    <item>
       <title>DAB e coding</title>
       <link>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</link>
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
@@ -422,25 +436,32 @@
       <description>Esercizi sui diagrammi a blocchi e sul coding</description>
     </item>
     <item>
+      <title>Corsi e guide - istruzione di base</title>
+      <link>http://codingepaduli.github.io/interesting/educational/</link>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
+      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+    </item>
+    <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
     </item>
     <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
     </item>
     <item>
-      <title>Corsi e guide - istruzione di base</title>
-      <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/educational/</guid>
-      <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
+      <title>sql</title>
+      <link>http://codingepaduli.github.io/coding/link-sql/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/link-sql/</guid>
+      <description>Lezioni su SQL nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/sql&#39;&gt;SQL&lt;/a&gt;</description>
     </item>
     <item>
       <title>SistemiReti</title>

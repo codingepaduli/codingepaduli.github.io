@@ -6,7 +6,7 @@
     <description>Recent content in Web on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
@@ -168,6 +168,13 @@
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/p5js/graphicsprimitives_exe/</guid>
       <description>Esercizi di grafica 2D</description>
+    </item>
+    <item>
+      <title>JavaScript Lez. 07 - Approfondimento - Oggetti</title>
+      <link>http://codingepaduli.github.io/coding/web/javascript/objects/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/objects/</guid>
+      <description>Oggetti</description>
     </item>
     <item>
       <title>p5.js Lez. 02 - Primitive grafiche</title>

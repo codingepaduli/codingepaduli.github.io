@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lezioni su SQL on Lab. informatica</title>
+    <link>http://codingepaduli.github.io/coding/sql/</link>
+    <description>Recent content in Lezioni su SQL on Lab. informatica</description>
+    <generator>Hugo</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Tue, 15 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/coding/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La linea di comando di MySQL</title>
+      <link>http://codingepaduli.github.io/coding/sql/sql_cli/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/sql/sql_cli/</guid>
+      <description>La linea di comando di MySQL</description>
+    </item>
+  </channel>
+</rss>

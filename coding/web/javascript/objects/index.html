@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Lez. 07 - Approfondimento - Oggetti - Lab. informatica</title>
+
+    <meta name="description" content="Descrizione degli oggetti e dell&#39;accesso a proprietà e funzioni">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/web/javascript/objects/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="JavaScript Lez. 07 - Approfondimento - Oggetti">
+  <meta property="og:description" content="Descrizione degli oggetti e dell&#39;accesso a proprietà e funzioni">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2025-04-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-13T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="JavaScript Lez. 07 - Approfondimento - Oggetti">
+  <meta name="twitter:description" content="Descrizione degli oggetti e dell&#39;accesso a proprietà e funzioni">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-04-13T00:00:00Z">13-04-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/javascript/" rel="category">Javascript</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 2 minuti 
+        ( 276 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="oggetti">Oggetti</h1>
+<p>Un oggetto in ambito informatico è un dato complesso, a sua volta composto da proprietà e metodi. E&rsquo; un concetto che appartiene alla programmazione ad oggetti (OOP, dall&rsquo;inglese Object Oriented Programming).</p>
+<p>Un esempio di oggetto può essere una persona, che contiene proprietà quali nome, cognome, data di nascita, ecc&hellip;</p>
+<p>Nel seguente esempio osserviamo la dichiarazione di una variabile a cui viene assegnato un oggetto persona:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> persona = {
+</span></span><span style="display:flex;"><span>    firstname: <span style="color:#009c00">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>    lastname: <span style="color:#009c00">&#34;Doe&#34;</span>,
+</span></span><span style="display:flex;"><span>    id: 5566
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Si può procedere anche dichiarando prima le proprietà e poi procedendo alla dichiarazione dell&rsquo;oggetto, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> firstname: <span style="color:#009c00">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> lastname: <span style="color:#009c00">&#34;Doe&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> id: 5566
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> persona = {firstname, lastname, id};
+</span></span></code></pre></div><h2 id="dot-notation">Dot notation</h2>
+<p>L&rsquo;accesso alle proprietà di un oggetto avviene attraverso la &ldquo;notazione punto&rdquo;, ovvero si deve indicare la variabile, si utilizza il carattere &ldquo;punto&rdquo; per indicare l&rsquo;accesso ad una proprietà, poi si deve indicare il nome della proprietà, utilizzando la sintassi <code>oggetto.proprietà</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>persona.firstname = <span style="color:#009c00">&#34;Dan&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> msg = <span style="color:#009c00">&#39;il nome della persona è &#39;</span> + persona.firstname;
+</span></span></code></pre></div><!--
+Destrutturazione: 
+{firstname, lastname, id} = persona; 
+-->
+<h2 id="optional-chaining-e-nullish-coalescing">Optional chaining e Nullish Coalescing</h2>
+<p>Una proprietà può non esistere o avere un valore nullo o indefinito, per questo motivo si preferisce effettuare l&rsquo;accesso con l&rsquo;operatore <code>?.</code> che indica un accesso a condizione che la proprietà esista, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> email = user?.contact?.email;
+</span></span></code></pre></div><p>In questo modo, in qualsiasi punto si tenti l&rsquo;accesso ad una proprietà inesistente, il valore restituito sarà <code>undefined</code>.</p>
+<p>Per rafforzare ulteriormente l&rsquo;accesso, nel caso il valore restituito sia <code>undefined</code>, si può assegnare un valore predefinito con</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> email = user?.contact?.email ?? <span style="color:#009c00">&#39;email non definita&#39;</span>;
+</span></span></code></pre></div><p>Questo accesso &ldquo;sicuro&rdquo; si può applicare anche ai metodi:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> email = user?.getContact()?.getEmail() ?? <span style="color:#009c00">&#39;email non definita&#39;</span>;
+</span></span></code></pre></div>
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/coding/web/javascript/datetime_temporal/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">JavaScript Lez. 06 - Approfondimento - Orari e date</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

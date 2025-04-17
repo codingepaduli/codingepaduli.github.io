@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interesting</title>
+      <link>http://codingepaduli.github.io/categories/interesting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/interesting/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Coding</title>
       <link>http://codingepaduli.github.io/categories/coding/</link>
@@ -16,10 +23,17 @@
       <description></description>
     </item>
     <item>
-      <title>HTML</title>
-      <link>http://codingepaduli.github.io/categories/html/</link>
+      <title>Sql</title>
+      <link>http://codingepaduli.github.io/categories/sql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/html/</guid>
+      <guid>http://codingepaduli.github.io/categories/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Javascript</title>
+      <link>http://codingepaduli.github.io/categories/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/javascript/</guid>
       <description></description>
     </item>
     <item>
@@ -30,17 +44,10 @@
       <description></description>
     </item>
     <item>
-      <title>Interesting</title>
-      <link>http://codingepaduli.github.io/categories/interesting/</link>
+      <title>HTML</title>
+      <link>http://codingepaduli.github.io/categories/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/interesting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Javascript</title>
-      <link>http://codingepaduli.github.io/categories/javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/javascript/</guid>
+      <guid>http://codingepaduli.github.io/categories/html/</guid>
       <description></description>
     </item>
     <item>

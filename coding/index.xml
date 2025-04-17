@@ -6,7 +6,7 @@
     <description>Recent content in Coding on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>L&#39;evoluzione delle comunicazioni</title>
@@ -14,6 +14,13 @@
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/storia/</guid>
       <description>L&amp;rsquo;evoluzione delle comunicazioni</description>
+    </item>
+    <item>
+      <title>sql</title>
+      <link>http://codingepaduli.github.io/coding/link-sql/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/link-sql/</guid>
+      <description>Lezioni su SQL nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/sql&#39;&gt;SQL&lt;/a&gt;</description>
     </item>
     <item>
       <title>SistemiReti</title>
