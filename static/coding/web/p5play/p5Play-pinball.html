@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <!-- keep the line below for OpenProcessing compatibility -->
-  <!-- script src="https://openprocessing.org/openprocessing_sketch.js"></script -->
+  <!-- script type="application/javascript" src="https://openprocessing.org/openprocessing_sketch.js"></script -->
 
   <!-- https://github.com/q5js/q5.js 
     A performant alternative API compatible with p5.js -->
-  <script src="/static/js/q5.js"></script>
+  <script type="application/javascript" src="/static/js/q5.js"></script>
   
   <!-- https://github.com/processing/p5.sound.js Sound Library -->
-  <script src="/static/js/p5.sound.js"></script>
+  <script type="application/javascript" src="/static/js/p5.sound.js"></script>
 
   <!-- https://github.com/piqnt/planck.js/ 
     Planck.js is JS/TS rewrite of Box2D physics engine for 
     cross-platform HTML5 game development -->
-  <script src="/static/js/planck.js"></script>
+  <script type="application/javascript" src="/static/js/planck.js"></script>
 
   <!-- https://github.com/quinton-ashley/p5play/
     JavaScript game engine that uses q5.js/p5.js for graphics
     and Planck.js for physics -->
-  <script src="/static/js/p5play.js"></script>
+  <script type="application/javascript" src="/static/js/p5play.js"></script>
   
   <!-- ml5.js AI Library  -->
   <!-- <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script> -->
@@ -32,6 +32,8 @@
     let trSxA, trSxB, trSxC, triangleSx;
     let trDxA, trDxB, trDxC, triangleDx;
     let pentagon, septagon;
+    let hexagon2, ball2, distB2Hex2;
+    let hexagon3, ball3, distB3Hex3;
     let dogSound, horseSound;
 
     function preload() {
@@ -56,7 +58,7 @@
 
       world.gravity.y = +30;
 
-      ball = new Sprite(200, 130, 50);
+      ball = new Sprite(200, 130, 40);
       ball.color = 'red';
       ball.vel.x = -5;
       ball.bounciness = 0.2;
@@ -87,11 +89,13 @@
       ping1 = new Sprite(200, 255, 30, 'static');
       ping1.bounciness = 1.3;
       
+      /*
       ping2 = new Sprite(300, 255, 30, 'static');
       ping2.bounciness = 1.3;
       
       ping3 = new Sprite(400, 255, 30, 'static');
       ping3.bounciness = 1.3;
+      */
 
       ping4 = new Sprite(500, 255, 30, 'static');
       ping4.bounciness = 1.3;
@@ -103,6 +107,28 @@
       septagon.rotationSpeed = 3;
       septagon.bounciness = 0.2;
 
+      hexagon2 = new Sprite(500, 50, 20, 'hexagon', 'kinematic');
+      hexagon2.rotationSpeed = 3;
+      hexagon2.mass = 500;
+      hexagon2.color = 'cyan';
+
+      ball2 = new Sprite(530, 50, 40);
+      ball2.color = 'red';
+      ball2.vel.x = -5;
+      ball2.bounciness = 0.2;
+      ball2.mass = 50;
+
+      hexagon3 = new Sprite(150, 50, 20, 'hexagon', 'kinematic');
+      hexagon3.rotationSpeed = -3;
+      hexagon3.mass = 500;
+      hexagon3.color = 'cyan';
+
+      ball3 = new Sprite(70, 50, 40);
+      ball3.color = 'red';
+      ball3.vel.x = 5;
+      ball3.bounciness = 0.2;
+      ball3.mass = 50;
+      
       trSxA = [100, 500];
       trSxB = [100, 450];
       trSxC = [300, 500];
@@ -146,6 +172,15 @@
         levaDxGiu.rotateMinTo(0, 5); // angle and speed
       }
 
+      distB2Hex2 = dist(ball2.x, ball2.y, hexagon2.x, hexagon2.y);
+      if (distB2Hex2 < 100) {
+        ball2.attractTo(hexagon2, 2050);
+      }
+      distB3Hex3 = dist(ball3.x, ball3.y, hexagon3.x, hexagon3.y);
+      if (distB3Hex3 < 100) {
+        ball3.attractTo(hexagon3, 2550);
+      }
+      
       if (ball.collides(ping1)) {
         if (! (horseSound.isPlaying() || dogSound.isPlaying())) {
           horseSound.play();
