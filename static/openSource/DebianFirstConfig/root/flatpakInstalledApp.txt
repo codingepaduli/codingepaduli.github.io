@@ -58,5 +58,6 @@ org.processing.processingide
 # org.remmina.Remmina
 # org.stellarium.Stellarium
 org.videolan.VLC
+# rs.ruffle.Ruffle ## open source Flash Player emulator
 tv.kodi.Kodi
 
