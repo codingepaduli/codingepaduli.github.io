@@ -231,8 +231,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 5 minuti 
-        ( 984 parole)
+        Tempo di lettura 6 minuti 
+        ( 1133 parole)
     </span>
 </div></div>
     </header>
@@ -241,13 +241,29 @@
 <p>I componenti web (Web Components) personalizzati sono delle etichette HTML non standard che ci consentono di costruire interfacce utente flessibili, moderne e modulari, facilitando lo sviluppo e la manutenzione delle applicazioni web.</p>
 <p>Sono basati su standard riconosciuti e sono supportati da tutti i principali browser moderni, per cui garantiscono una buona compatibilità.</p>
 <p>Estendono le funzionalità degli elementi HTML standard, aggiungendo proprietà e stili grafici specifici, comportamenti personalizzati e riutilizzabili che li rendono degli ottimi componenti su cui progettare e sviluppare i siti web, evitando la necessità di soluzioni proprietarie e framework specifici.</p>
+<p>Il vantaggio principale di utilizzo dei Web Components è che consente agli sviluppatori di definire e di utilizzare nuove etichette HTML con funzionalità e comportamenti specifici, che non fanno parte delle etichette HTML standard.</p>
+<p>Con i web components è possibile estendere le etichette HTML esistenti, aggiungendo nuove funzionalità e stili, oppure è possibile creare etichette HTML del tutto nuove. Tra gli elementi dell&rsquo;interfaccia utente mancanti nello standard HTML in particolare abbiamo:</p>
+<ul>
+<li><strong>Alert</strong>: Etichetta HTML per realizzare un messaggio informativo che comunica agli utenti un avviso o una notifica. Può essere di diversi tipi, come successo, errore, avviso, ecc.</li>
+<li><strong>Card</strong>: Etichetta HTML per realizzare un contenitore flessibile che può contenere contenuti come testo, immagini e pulsanti. Utilizzato per presentare informazioni in modo visivamente accattivante.</li>
+<li><strong>Dialog</strong>: Etichetta HTML per realizzare una finestra modale che appare sopra il contenuto principale per richiedere l&rsquo;attenzione dell&rsquo;utente. Può contenere messaggi, moduli o altre interazioni.</li>
+<li><strong>Dropdown</strong>: Etichetta HTML per realizzare un menu a discesa che consente agli utenti di selezionare un&rsquo;opzione da un elenco. Può contenere elementi di menu e sotto-categorie.</li>
+<li><strong>Slider</strong>: Etichetta HTML per realizzare un controllo che consente agli utenti di selezionare un valore da un intervallo continuo. Può essere utilizzato per regolare impostazioni come volume o luminosità.</li>
+<li><strong>Tab</strong>: Etichetta HTML per realizzare un elemento di navigazione che consente agli utenti di passare tra diverse sezioni di contenuto. Ogni tab rappresenta una sezione distinta.</li>
+<li><strong>Tooltip</strong>: Etichetta HTML per realizzare un piccolo messaggio informativo che appare quando l&rsquo;utente passa il mouse su un elemento. Utilizzato per fornire ulteriori dettagli senza occupare spazio visivo.</li>
+<li><strong>Progress Bar</strong>: Etichetta HTML per realizzare un indicatore visivo che mostra il progresso di un&rsquo;operazione in corso, come il caricamento di un file o il completamento di un&rsquo;attività.</li>
+<li><strong>Toast</strong>: Etichetta HTML per realizzare un messaggio temporaneo che appare in un angolo dello schermo per informare l&rsquo;utente su un&rsquo;azione completata o un evento. Scompare automaticamente dopo un breve periodo.</li>
+<li><strong>Menu</strong>: Etichetta HTML per realizzare un elenco di opzioni o azioni che gli utenti possono selezionare. Può essere un menù laterale, un menù a scorrimento dall&rsquo;alto, è principalmente utilizzato per la navigazione o per azioni contestuali.</li>
+<li><strong>Badge</strong>: Etichetta HTML per realizzare un piccolo elemento visivo che fornisce informazioni aggiuntive, come un conteggio o uno stato, spesso utilizzato per notifiche o avvisi.</li>
+</ul>
+<p>Poiché la tecnologia per la creazione di componenti è uno standard, tutti possono creare le proprie etichette HTML personalizzate per qualsiasi scopo. Ad esempio, Google ha creato il proprio componente, chiamato <code>model-viewer</code> per visualizzare interattivamente modelli 3D sia via web, sia utilizzando gli occhiali AR.</p>
 <h2 id="librerie-di-web-components">Librerie di Web Components</h2>
 <p>Esistono diverse librerie di Web Components che offrono elementi già pronti per l&rsquo;uso, facilitando lo sviluppo di interfacce utente senza doverli creare da zero. Ecco alcune delle più note:</p>
 <p><strong>Shoelace</strong>: Shoelace è una libreria di componenti UI basati su Web Components che include una serie di elementi pronti all&rsquo;uso, come bottoni, modali, schede e altro. È progettata per essere facilmente personalizzabile e integrabile in qualsiasi progetto.</p>
-<p><strong>Material Web Components</strong>: Questa libreria fornisce componenti basati sulle linee guida di Material Design di Google. Include elementi come bottoni, schede, menu e altro, tutti progettati per seguire le best practice di design. <strong>Purtroppo Google non la sta più sviluppando.</strong> Material Web Components attualmente è in <a href="https://github.com/material-components/material-web/discussions/5642">maintenance mode</a>#5642</p>
+<p><strong>Material Web Components</strong>: Questa libreria fornisce componenti basati sulle linee guida di Material Design di Google. Include elementi come bottoni, schede, menu e altro, tutti progettati per seguire le best practice di design. <strong>Purtroppo Google non la sta più sviluppando.</strong> Material Web Components attualmente è in <a href="https://github.com/material-components/material-web/discussions/5642">maintenance mode</a>.</p>
 <p><strong>Ionic Web Components</strong>: Ionic offre una serie di componenti UI per applicazioni web e mobili, molti dei quali sono basati su Web Components. Include elementi come barre di navigazione, schede, moduli e altro, ed è particolarmente utile per lo sviluppo di applicazioni ibride.</p>
-<p><strong>Wokwi Web Components</strong>: Componenti Web per Arduino e per vari componenti elettroniche.</p>
-<p><strong>Wired Elements</strong>: una serie di Componenti Web con un aspetto disegnato a mano, che possono essere utilizzati per wireframe, mockup o solo per dare un look disegnato a mano.</p>
+<p><strong>Wokwi Web Components</strong>: Componenti Web per Arduino e per i circuiti elettronici.</p>
+<p><strong>Wired Elements</strong>: Componenti Web con un aspetto disegnato a mano, che possono essere utilizzati per disegnare mockup o solo per dare un look disegnato a mano.</p>
 <h2 id="libreria-shoelace">Libreria Shoelace</h2>
 <p>Una delle librerie di componenti web oggi in circolazione è <strong>Shoelace</strong>, che fornisce una collezione di componenti UI progettati professionalmente e altamente personalizzabili, costruiti sulla tecnologia dei Web Component così da essere indipendente dal framework e dal linguaggio utilizzato. Questa libreria fornisce molti componenti fondamentali dell&rsquo;interfaccia utente, pronti per essere personalizzati e adattati alle esigenze, è un ottimo punto di partenza dal quale progettazione l&rsquo;interfaccia utente.</p>
 <h3 id="utilizzare-shoelace-nelle-pagine-web">Utilizzare Shoelace nelle pagine web</h3>
@@ -260,20 +276,6 @@
 </span></span></code></pre></div><h3 id="utilizzo-dei-componenti">Utilizzo dei componenti</h3>
 <p>Nel menu è possibile visualizzare i componenti web utilizzabili:</p>
 <p><img src="/static/coding/web/html/webComponents-shoelace-menu.png" alt="Lista componenti"></p>
-<p>Tra i componenti utilizzabili ne troviamo molti che estendono i componenti web esistenti. A titolo di esempio elenchiamo i componenti:</p>
-<ul>
-<li><strong>Alert</strong>: Un messaggio informativo che comunica agli utenti un avviso o una notifica. Può essere di diversi tipi, come successo, errore, avviso, ecc.</li>
-<li><strong>Card</strong>: Un contenitore flessibile che può contenere contenuti come testo, immagini e pulsanti. Utilizzato per presentare informazioni in modo visivamente accattivante.</li>
-<li><strong>Dialog</strong>: Una finestra modale che appare sopra il contenuto principale per richiedere l&rsquo;attenzione dell&rsquo;utente. Può contenere messaggi, moduli o altre interazioni.</li>
-<li><strong>Dropdown</strong>: Un menu a discesa che consente agli utenti di selezionare un&rsquo;opzione da un elenco. Può contenere elementi di menu e sotto-categorie.</li>
-<li><strong>Slider</strong>: Un controllo che consente agli utenti di selezionare un valore da un intervallo continuo. Può essere utilizzato per regolare impostazioni come volume o luminosità.</li>
-<li><strong>Tab</strong>: Un elemento di navigazione che consente agli utenti di passare tra diverse sezioni di contenuto. Ogni tab rappresenta una sezione distinta.</li>
-<li><strong>Tooltip</strong>: Un piccolo messaggio informativo che appare quando l&rsquo;utente passa il mouse su un elemento. Utilizzato per fornire ulteriori dettagli senza occupare spazio visivo.</li>
-<li><strong>Progress Bar</strong>: Un indicatore visivo che mostra il progresso di un&rsquo;operazione in corso, come il caricamento di un file o il completamento di un&rsquo;attività.</li>
-<li><strong>Toast</strong>: Un messaggio temporaneo che appare in un angolo dello schermo per informare l&rsquo;utente su un&rsquo;azione completata o un evento. Scompare automaticamente dopo un breve periodo.</li>
-<li><strong>Menu</strong>: Un elenco di opzioni o azioni che gli utenti possono selezionare. Può essere utilizzato per la navigazione o per azioni contestuali.</li>
-<li><strong>Badge</strong>: Un piccolo elemento visivo che fornisce informazioni aggiuntive, come un conteggio o uno stato, spesso utilizzato per notifiche o avvisi.</li>
-</ul>
 <p>Una volta scelto un componente dal menù, si possono visualizzare i dettagli, come la sintassi da utilizzare, la descrizione dell&rsquo;etichetta, le proprietà, gli eventi, gli esempi di come utilizzarlo. Di seguito un esempio di documentazione:</p>
 <p><img src="/static/coding/web/html/webComponents-shoelace-details.png" alt="Dettaglio componenti"></p>
 <p>Dalla documentazione del componente e dagli esempi riportati è possibile dedurre l&rsquo;utilizzo del componente, come dagli esempi riportati e di seguito riproposti:</p>
@@ -290,7 +292,7 @@
 </span></span><span style="display:flex;"><span>&lt;/sl-carousel&gt;
 </span></span></code></pre></div><p><a href="/static/coding/web/html/webComponents-shoelace-example.html">esempio di componenti di shoelace</a></p>
 <h2 id="libreria-ionic-web-components">Libreria Ionic Web Components</h2>
-<p>Una delle librerie di componenti web oggi in circolazione è <strong>Ionic Web Components</strong>, che fornisce una collezione di componenti UI progettati professionalmente e altamente personalizzabili, costruiti sulla tecnologia dei Web Component così da essere indipendente dal framework e dal linguaggio utilizzato. Questa libreria fornisce molti componenti fondamentali dell&rsquo;interfaccia utente, pronti per essere personalizzati e adattati alle esigenze, è un ottimo punto di partenza dal quale progettazione l&rsquo;interfaccia utente.</p>
+<p>La libreria <strong>Ionic Web Components</strong> è un altra collezione di componenti web oggi in circolazione, che fornisce una raccolta di componenti UI progettati professionalmente e altamente personalizzabili, costruiti sulla tecnologia dei Web Component così da essere indipendente dal framework e dal linguaggio utilizzato. Questa libreria fornisce molti componenti fondamentali dell&rsquo;interfaccia utente, pronti per essere personalizzati e adattati alle esigenze, è un ottimo punto di partenza dal quale progettazione l&rsquo;interfaccia utente.</p>
 <h3 id="utilizzare-ionic-nelle-pagine-web">Utilizzare Ionic nelle pagine web</h3>
 <p>L&rsquo;uso dei componenti nelle pagine web prevede l&rsquo;aggiunta degli script della libreria nella pagina web:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script type=<span style="color:#009c00">&#34;module&#34;</span> src=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js&#34;</span>&gt;&lt;/script&gt;
@@ -305,7 +307,7 @@
 <p><img src="/static/coding/web/html/webComponents-ionic-menu.png" alt="Lista componenti"></p>
 <p>Tra i componenti utilizzabili ne troviamo molti che estendono i componenti web esistenti.</p>
 <p>Una volta scelto un componente dal menù, si possono visualizzare i dettagli, come la sintassi da utilizzare, la descrizione dell&rsquo;etichetta, le proprietà, gli eventi, gli esempi di come utilizzarlo. Di seguito un esempio di documentazione:</p>
-<p><img src="/static/coding/web/html/webComponents-ionic-details.png" alt="Dettaglio componenti"></p>
+<p><img src="/static/coding/web/html/webComponents-ionic-progressbar-details.png" alt="Dettaglio componenti"></p>
 <p>Dalla documentazione del componente e dagli esempi riportati è possibile dedurre l&rsquo;utilizzo del componente, come dagli esempi riportati e di seguito riproposti:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;ion-progress-bar type=<span style="color:#009c00">&#34;indeterminate&#34;</span>&gt;&lt;/ion-progress-bar&gt;
 </span></span></code></pre></div><p><a href="/static/coding/web/html/webComponents-ionic-example.html">esempio di componenti di Ionic</a></p>
@@ -313,7 +315,7 @@
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="https://shoelace.style/" style="font-weight: 700; color: #e22d30;">Shoelace</a>: Libreria di Web Components</p><p><a href="https://github.com/github/github-elements" style="font-weight: 700; color: #e22d30;">GitHub Web Components</a>: Sviluppata da GitHub</p><p><a href="https://ionicframework.com/docs/components" style="font-weight: 700; color: #e22d30;">Ionic</a>: Libreria di Web Components sviluppata da Ionic</p>
+      <p><a href="https://shoelace.style/" style="font-weight: 700; color: #e22d30;">Shoelace</a>: Libreria di Web Components</p><p><a href="https://github.com/github/github-elements" style="font-weight: 700; color: #e22d30;">GitHub Web Components</a>: Sviluppata da GitHub</p><p><a href="https://ionicframework.com/docs/components" style="font-weight: 700; color: #e22d30;">Ionic</a>: Libreria di Web Components sviluppata da Ionic</p><p><a href="https://modelviewer.dev/" style="font-weight: 700; color: #e22d30;">3d Model Viewer</a>: Web Component per visualizzare interattivamente modelli 3D sul web e con gli AR</p><p><a href="https://github.com/web-padawan/awesome-web-components?tab=readme-ov-file#component-libraries" style="font-weight: 700; color: #e22d30;">awesome web components - Libraries</a>: Elenco di librerie di web components</p>
   </article>
 </main>
 
