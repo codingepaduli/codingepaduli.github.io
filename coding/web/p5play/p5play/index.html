@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>p5play Lez. 01 - Introduzione al motore di gioco p5play - Lab. informatica</title>
+
+    <meta name="description" content="Introduzione al motore di gioco p5play">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/web/p5play/p5play/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="p5play Lez. 01 - Introduzione al motore di gioco p5play">
+  <meta property="og:description" content="Introduzione al motore di gioco p5play">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2023-03-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-08T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="p5play Lez. 01 - Introduzione al motore di gioco p5play">
+  <meta name="twitter:description" content="Introduzione al motore di gioco p5play">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-03-21T00:00:00Z">21-03-2023</time>
+	<time class="meta__text" datetime="2025-04-08T00:00:00Z">(Ultima modifica: 08-04-2025)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/web/" rel="category">Web</a>, <a class="meta__link" href="/categories/p5play/" rel="category">P5play</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 19 minuti 
+        ( 4039 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="p5play">p5play</h1>
+<p>p5play è un motore di giochi 2D. E&rsquo; un progetto, supportato dalla Processing Foundation, che ha lo scopo di introdurre gli utenti alla programmazione di videogiochi ed al paradigma ad oggetti.</p>
+<p>p5play usa la libreria <strong>p5.js</strong> (o l&rsquo;alternativa <strong>q5.js</strong>) per il rendering delle scene grafiche e <strong>plank.js</strong> (una riscrittura di *<em>Box2D</em> in JavaScript) come motore di fisica per tener traccia delle posizioni, delle velocità e delle forze applicate sugli oggetti e per rilevare le collisioni tra oggetti.</p>
+<p>La struttura basilare del progetto rimane la stessa di <code>p5.js</code>, una pagina web contenente le seguenti librerie JS:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;q5.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;p5.sound.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;planck.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;p5play.js&#34;</span>&gt;&lt;/script&gt;
+</span></span></code></pre></div><p>Anche lo script è molto simile, utilizza un oggetto <code>Canvas</code> per creare l&rsquo;area del disegno:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>  <span style="color:#00f">new</span> Canvas(250, 100);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">function</span> draw() {
+</span></span><span style="display:flex;"><span>  background(<span style="color:#009c00">&#39;blue&#39;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Un esempio completo di pagina web è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>&lt;html&gt;
+</span></span><span style="display:flex;"><span>  &lt;head&gt;
+</span></span><span style="display:flex;"><span>    &lt;title&gt;p5play Example&lt;/title&gt;
+</span></span><span style="display:flex;"><span>  &lt;/head&gt;
+</span></span><span style="display:flex;"><span>  &lt;body&gt;
+</span></span><span style="display:flex;"><span>    &lt;script src=<span style="color:#009c00">&#34;https://q5js.org/q5.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>    &lt;script src=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/p5.sound@0.2.0/dist/p5.sound.js&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;script src=<span style="color:#009c00">&#34;https://p5play.org/v3/planck.min.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>    &lt;script src=<span style="color:#009c00">&#34;https://p5play.org/v3/p5play.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span style="display:flex;"><span>    &lt;script&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#00f">let</span> ball, floor;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>        createCanvas(400, 400);
+</span></span><span style="display:flex;"><span>        background(0.7);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        world.gravity.y = 10;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        ball = <span style="color:#00f">new</span> Sprite(200, 30, 50);
+</span></span><span style="display:flex;"><span>        ball.color = <span style="color:#009c00">&#39;red&#39;</span>;
+</span></span><span style="display:flex;"><span>        ball.vel.x = -5;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        floor = <span style="color:#00f">new</span> Sprite(40, 155, 480, 5, <span style="color:#009c00">&#39;static&#39;</span>);
+</span></span><span style="display:flex;"><span>        floor.color = <span style="color:#009c00">&#39;yellow&#39;</span>;
+</span></span><span style="display:flex;"><span>        floor.rotation = 30;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00f">function</span> draw() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00f">function</span> update() {
+</span></span><span style="display:flex;"><span>        clear();
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    &lt;/script&gt;
+</span></span><span style="display:flex;"><span>  &lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div><p>E&rsquo; possibile provare questo progetto sia copiando questo esempio in un file di testo HTML per poi aprire il file nel browser, sia avviando <a href="/static/coding/web/p5play/p5PlaySample.zip">il progetto</a> su un server locale.</p>
+<h2 id="oggetti-principali">Oggetti principali</h2>
+<p>Nel mondo dei videogiochi si riferisce alla parola <strong>Sprite</strong> per indicare qualsiasi personaggio, cosa o oggetto si muove sopra lo sfondo.</p>
+<p>Nei videogiochi come Mario Bros, Sonic, Arknoid i vari livelli sono composti dai mattoncini da rompere o su cui saltare. Questi mattoncini prendono il nome di <strong>tiles</strong>, dall&rsquo;inglese &ldquo;piastrelle&rdquo;, e possono essere creati a partire da una rappresentazione testuale (anche di più righe). Ogni carattere di questo testo sarà poi trasformato in una mattonella o monetina o elemento del videogioco.</p>
+<p>La parola <strong>world</strong>, dall&rsquo;inglese &ldquo;mondo&rdquo;, rappresenta tutti gli oggetti sui quali il motore fisico calcola gli spostamenti, le collisioni e sui quali applica la forza di gravità per ogni frame da disegnare. Questo calcolo avviene anche per gli oggetti fuori dallo schermo, a patto che la loro posizione nel piano non superi un certo limite. Quando un qualsiasi oggetto supera questo limite, avviene l&rsquo;operazione di <strong>cull</strong>, dall&rsquo;inglese &ldquo;abbattimento selettivo&rdquo;, con la quale si mette l&rsquo;oggetto in uno stato di riposo e considerato &ldquo;fuori&rdquo; dal mondo escluso dai calcoli del motore fisico.</p>
+<!-- Todo Concetti di programmazione a oggetti ? No, li aggiungo alle lezioni di JS, in particolare negli approfondimenti -->
+<h2 id="sprite">Sprite</h2>
+<p>Nel mondo dei videogiochi la parola Sprite è usata per indicare qualsiasi personaggio, cosa o oggetto si muove sopra lo sfondo. In pratica è un contenitore che può avere una componente visuale (grafica) e/o un corpo fisico (cioè che interagisce con il motore di fisica).</p>
+<h3 id="proprietà-relative-alla-posizione">Proprietà relative alla posizione</h3>
+<p>Si può creare uno Sprite rotondo o rettangolare utilizzando le proprietà di posizione.</p>
+<p><img src="/static/coding/web/p5play/p5play-sprite-position-properties.png" alt="proprietà fisiche"></p>
+<p>Ad esempio per creare un cerchio si può impostare le coordinate del centro (x, y) ed il diametro, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> ball = <span style="color:#00f">new</span> Sprite();
+</span></span><span style="display:flex;"><span>ball.x = 60;
+</span></span><span style="display:flex;"><span>ball.y = 80;
+</span></span><span style="display:flex;"><span>ball.diameter = 60;
+</span></span></code></pre></div><p>Per creare un rettangolo, si può impostare le coordinate (x, y) della posizione, larghezza ed altezza, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> rectangle = <span style="color:#00f">new</span> Sprite();
+</span></span><span style="display:flex;"><span>rectangle.x = 60;
+</span></span><span style="display:flex;"><span>rectangle.y = 80;
+</span></span><span style="display:flex;"><span>rectangle.width = 60;
+</span></span><span style="display:flex;"><span>rectangle.height = 80;
+</span></span></code></pre></div><p>Per le altre proprietà posizionali, si può far riferimento al seguente codice per utilizzarle:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite = <span style="color:#00f">new</span> Sprite();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sprite.x = 150;
+</span></span><span style="display:flex;"><span>sprite.y = 30;
+</span></span><span style="display:flex;"><span>sprite.w = 60;              <span style="color:#f00;font-style:italic">// width
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.h = 80;              <span style="color:#f00;font-style:italic">// height
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.width = 60;          <span style="color:#f00;font-style:italic">// alias di sprite.w
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.height = 80;         <span style="color:#f00;font-style:italic">// alias di sprite.h
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.r = 40;              <span style="color:#f00;font-style:italic">// radius
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.d = 40;              <span style="color:#f00;font-style:italic">// diameter
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.radius = 60;         <span style="color:#f00;font-style:italic">// alias di sprite.r
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.diameter = 60;       <span style="color:#f00;font-style:italic">// alias di sprite.d
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>sprite.pos.x = 150;         <span style="color:#f00;font-style:italic">// alias di sprite.x
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.pos.y = 80;          <span style="color:#f00;font-style:italic">// alias di sprite.y
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.position.x = 150;    <span style="color:#f00;font-style:italic">// alias di sprite.x
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.position.y = 80;     <span style="color:#f00;font-style:italic">// alias di sprite.y
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>sprite.scale.x = 2;         <span style="color:#f00;font-style:italic">// scala la dimensione x
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.scale.y = 2;         <span style="color:#f00;font-style:italic">// scala la dimensione y
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>sprite.rotation = 45;       <span style="color:#f00;font-style:italic">// rotazione rispetto all&#39;asse X
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>sprite.color = <span style="color:#009c00">&#39;pink&#39;</span>;
+</span></span><span style="display:flex;"><span>sprite.fill = <span style="color:#009c00">&#39;pink&#39;</span>;       <span style="color:#f00;font-style:italic">// alias di sprite.color
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.fillColor = <span style="color:#009c00">&#39;pink&#39;</span>;  <span style="color:#f00;font-style:italic">// alias di sprite.color
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.stroke = <span style="color:#009c00">&#39;red&#39;</span>;
+</span></span><span style="display:flex;"><span>sprite.strokeColor = <span style="color:#009c00">&#39;pink&#39;</span>;<span style="color:#f00;font-style:italic">// alias di sprite.stroke
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>sprite.textColor = <span style="color:#009c00">&#39;blue&#39;</span>;
+</span></span><span style="display:flex;"><span>sprite.textSize = 40;
+</span></span><span style="display:flex;"><span>sprite.text = <span style="color:#009c00">&#34;Hello!&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sprite.img = <span style="color:#009c00">&#39;immagi.jpg&#39;</span>;  <span style="color:#f00;font-style:italic">// immagine dello sprite
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.image = <span style="color:#009c00">&#39;img.jpg&#39;</span>;   <span style="color:#f00;font-style:italic">// alias di sprite.img
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.image.scale = 2;     <span style="color:#f00;font-style:italic">// scala l&#39;immagine
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>sprite.visible = <span style="color:#00f">false</span>;
+</span></span></code></pre></div><h3 id="proprietà-relative-al-movimento">Proprietà relative al movimento</h3>
+<p>Uno Sprite può avere una velocità di movimento lungo gli assi X e Y, misurate in pixel al secondo, una direzione di movimento, una velocità di rotazione rispetto all&rsquo;asse X, misurata in gradi al secondo. Queste velocità possono essere modificate dalla forza di gravità, dalle forze applicate e dalle collisioni dovute all&rsquo;ambiente circostante.</p>
+<p>Per utilizzarle, si può far riferimento al codice sottostante:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite = <span style="color:#00f">new</span> Sprite();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sprite.direction = 145;     <span style="color:#f00;font-style:italic">// direzione di movimento (angolo)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>sprite.vel.x = 1;           <span style="color:#f00;font-style:italic">// velocity (pixel / seconds)
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.vel.y = 2;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sprite.rotationSpeed = 45;  <span style="color:#f00;font-style:italic">// rotazione continua rispetto all&#39;asse X
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.offset.x = 20;       <span style="color:#f00;font-style:italic">// sposta le coordinate x
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>sprite.offset.y = 20;       <span style="color:#f00;font-style:italic">// sposta le coordinate y
+</span></span></span></code></pre></div><p>La proprietà <code>sprite.direction</code> specifica una direzione di movimento dello sprite. Il valore può essere numerico, quindi l&rsquo;angolo della direzione, oppure una stringa (e quindi deve essere indicata tra apici singoli o doppi) che indica la direzione e può assumere solo uno dei seguenti valori:</p>
+<ul>
+<li><code>up</code>: -90 gradi;</li>
+<li><code>down</code>: 90 gradi;</li>
+<li><code>left</code>: 180 gradi;</li>
+<li><code>right</code>: 0 gradi;</li>
+<li><code>upright</code>: -45 gradi;</li>
+<li><code>rightup</code>: -45 gradi;</li>
+<li><code>upleft</code>: -135 gradi;</li>
+<li><code>leftup</code>: -135 gradi;</li>
+<li><code>downright</code>: 45 gradi;</li>
+<li><code>rightdown</code>: 45 gradi;</li>
+<li><code>downleft</code>: 135 gradi;</li>
+<li><code>leftdown</code>: 135 gradi;</li>
+<li><code>forward</code>: this.rotation;</li>
+<li><code>backward</code>: this.rotation + 180 gradi;</li>
+</ul>
+<h3 id="proprietà-legate-al-motore-di-fisica">Proprietà legate al motore di fisica</h3>
+<p><img src="/static/coding/web/p5play/p5play-sprite-physical-properties.png" alt="proprietà fisiche"></p>
+<p>Un <strong>collisore</strong> (dall&rsquo;inglese collider) è un&rsquo;area invisibile intorno ad un oggetto che viene utilizzata per rilevare collisioni con altri oggetti.</p>
+<p>Uno Sprite si relaziona con gli altri Sprite a seconda del tipo di collisore specificato:</p>
+<ul>
+<li><code>none</code>: lo Sprite non subisce collisioni, viene completamente attraversato dagl```
+i altri Sprite;</li>
+<li><code>static</code>: lo Sprite subisce collisioni, ma non può essere spostato o ruotato ne attraverso istruzioni di programmazione, ne dalle collisioni con altri Sprite;</li>
+<li><code>kinematic</code>: lo Sprite subisce collisioni, può essere spostato solo attraverso istruzioni di programmazione, non viene spostato o ruotato dalle collisioni con altri Sprite;</li>
+<li><code>dynamic</code>: lo Sprite subisce collisioni, può essere spostato o ruotato attraverso istruzioni di programmazione e dalle collisioni con altri Sprite.</li>
+</ul>
+<p>Una volta creato lo Sprite, può essere specificato il collisore attraverso la proprietà <code>collider</code>.</p>
+<p>Uno Sprite può avere una <strong>massa</strong> che determina la sua resistenza alle forze applicate e alle collisioni con altri oggetti. Maggiore è la massa, maggiore sarà l&rsquo;effetto di una forza applicata. Si può assegnare ad uno Sprite una massa attraverso la proprietà <code>mass</code>.</p>
+<p>Uno Sprite può avere una <strong>frizione di strofinamento</strong> che rappresenta il coefficiente di attrito quando lo Sprite si muove su una superficie. Non si applica se lo Sprite rotola su questa superficie. Il coefficiente di attrito si imposta attraverso la proprietà <code>friction</code>.</p>
+<p>Per indicare una <strong>frizione di rotolamento</strong> nelle situazioni in cui lo Sprite rotola su una superficie bisogna impostare la proprietà <code>rotationDrag</code>.</p>
+<p>Uno Sprite può avere un coefficiente di <strong>rimbalzo</strong>, che determina quanto lontano rimbalzerà dopo una collisione con un altro oggetto. Per indicare una coefficiente di rimbalzo, bisogna impostare la proprietà <code>bounciness</code>.</p>
+<p>Uno Sprite può essere bloccato rispetto alle rotazioni utilizzando la proprietà <code>rotationLock</code>.</p>
+<p>Le proprietà sopra citate si possono applicare ad uno Sprite come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> circle = <span style="color:#00f">new</span> Sprite();
+</span></span><span style="display:flex;"><span>circle.x = 100;             <span style="color:#f00;font-style:italic">// posizione
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>circle.y = 100;
+</span></span><span style="display:flex;"><span>circle.d = 100;             <span style="color:#f00;font-style:italic">// diametro
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>circle.collider = <span style="color:#009c00">&#39;dynamic&#39;</span>;<span style="color:#f00;font-style:italic">// collisore
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>circle.mass = 2;            <span style="color:#f00;font-style:italic">// massa
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>circle.friction = 10;       <span style="color:#f00;font-style:italic">// frizione di trascinamento
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>circle.rotationDrag = 8;    <span style="color:#f00;font-style:italic">// frizione di rotolamento
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>circle.bounciness = 3;      <span style="color:#f00;font-style:italic">// 300 %
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>circle.rotationLock = <span style="color:#00f">true</span>; <span style="color:#f00;font-style:italic">// blocca il rotolamento
+</span></span></span></code></pre></div><h2 id="costruttori">Costruttori</h2>
+<p>Nella programmazione ad oggetti, un oggetto può essere costruito attraverso i costruttori, che si occupano di allocare in memoria l&rsquo;oggetto e di inizializzare le sue proprietà. La classe Sprite definisce molti costruttori, ognuno adatto ad un particolare scopo.</p>
+<h3 id="costruttore-per-oggetti-di-forma-rettangolare">Costruttore per oggetti di forma rettangolare</h3>
+<p>Il costruttore per oggetti di forma rettangolare ha la firma seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: new Sprite(x, y, width, height, colliderType)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  x             Number: the x-coordinate
+</span></span><span style="display:flex;"><span>  y             Number: the y-coordinate
+</span></span><span style="display:flex;"><span>  width         Number: width of the Sprite
+</span></span><span style="display:flex;"><span>  height        Number: height of the Sprite
+</span></span><span style="display:flex;"><span>  colliderType  String: the collider type
+</span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto in alto a sinistra dal quale disegnare lo Sprite, i parametri formali <code>width</code> ed <code>height</code> rappresentano la larghezza e l&rsquo;altezza dello Sprite. Il parametro formale <code>colliderType</code> indica il tipo di collisore.</p>
+<p>Per creare uno Sprite con collisore dinamico a coordinate x=20 ed y=30, con larghezza 15 ed altezza 35 punti, sostituiamo al parametro formale <code>x</code> il valore <code>20</code>, al parametro formale <code>y</code> il valore <code>30</code>, al parametro formale <code>width</code> il valore <code>15</code>, al parametro formale <code>height</code> il valore <code>35</code> ed infine al parametro formale <code>colliderType</code> il valore <code>dynamic</code> (è di tipo <code>String</code>, quindi deve essere indicato tra apici singoli o doppi), invocando il costruttore nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite = <span style="color:#00f">new</span> Sprite(20, 30, 15, 35, <span style="color:#009c00">&#39;dynamic&#39;</span>);
+</span></span></code></pre></div><h3 id="costruttore-per-oggetti-di-forma-rotonda">Costruttore per oggetti di forma rotonda</h3>
+<p>Il costruttore per oggetti di forma rotonda ha la firma seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: new Sprite(x, y, diameter, colliderType)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  x             Number: the x-coordinate
+</span></span><span style="display:flex;"><span>  y             Number: the y-coordinate
+</span></span><span style="display:flex;"><span>  diameter      Number: diameter of the Sprite
+</span></span><span style="display:flex;"><span>  colliderType  String: the collider type
+</span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto in alto a sinistra dal quale disegnare lo Sprite, il parametro formale <code>diameter</code> rappresenta il diametro del cerchio. Il parametro formale <code>colliderType</code> indica il tipo di collisore.</p>
+<p>Per creare uno Sprite con collisore statico a coordinate x=50 ed y=30, con diametro 35, sostituiamo al parametro formale <code>x</code> il valore <code>50</code>, al parametro formale <code>y</code> il valore <code>30</code>, al parametro formale <code>diameter</code> il valore <code>35</code> ed infine al parametro formale <code>colliderType</code> il valore <code>static</code> (è di tipo <code>String</code>, quindi deve essere indicato tra apici singoli o doppi), invocando il costruttore nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite = <span style="color:#00f">new</span> Sprite(50, 30, 35, <span style="color:#009c00">&#39;static&#39;</span>);
+</span></span></code></pre></div><h3 id="costruttore-per-oggetti-linea">Costruttore per oggetti linea</h3>
+<p>Il costruttore degli oggetti di tipo linea ha la firma seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: new Sprite(x, y, vector[], colliderType)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  x             Number: the x-coordinate
+</span></span><span style="display:flex;"><span>  y             Number: the y-coordinate
+</span></span><span style="display:flex;"><span>  vector        Array:  the length and the angle of the Sprite
+</span></span><span style="display:flex;"><span>  colliderType  String: the collider type
+</span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto in alto a sinistra dal quale disegnare lo Sprite, i parametro formale <code>vector</code> è un array che contiene lunghezza ed angolo della linea, il parametro formale <code>colliderType</code> indica il tipo di collisore.</p>
+<p>Per creare uno Sprite senza collisore a coordinate x=80 ed y=30, con lunghezza 35 ed angolo 45 gradi, sostituiamo al parametro formale <code>x</code> il valore <code>80</code>, al parametro formale <code>y</code> il valore <code>30</code>, al parametro formale <code>vector</code> un array contenente due valori, la lunghezza <code>35</code> e l&rsquo;angolo <code>45</code>. L&rsquo;ultimo parametro formale <code>colliderType</code> assegniamo il valore <code>none</code> (è di tipo <code>String</code>, quindi deve essere indicato tra apici singoli o doppi), invocando il costruttore nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite = <span style="color:#00f">new</span> Sprite(80, 30, [35, 45], <span style="color:#009c00">&#39;static&#39;</span>);
+</span></span></code></pre></div><h3 id="costruttore-di-poligoni-regolari-per-nome">Costruttore di poligoni regolari per nome</h3>
+<p>Costruttore di poligoni regolari permette la costruzione di poligoni a partire dal nome del poligono. Ha la seguente firma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: new Sprite(x, y, sideLength, polygonName, colliderType)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  x             Number: the x-coordinate
+</span></span><span style="display:flex;"><span>  y             Number: the y-coordinate
+</span></span><span style="display:flex;"><span>  sideLength    Number: the length of the polygon side
+</span></span><span style="display:flex;"><span>  polygonName   String: the polygon name
+</span></span><span style="display:flex;"><span>  colliderType  String: the collider type
+</span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto in alto a sinistra dal quale disegnare lo Sprite, il parametro formale <code>sideLength</code> rappresenta la lunghezza del lato del poligono, il parametro formale <code>polygonName</code> rappresenta il nome (in inglese) del poligono ed infine il parametro formale <code>colliderType</code> indica il tipo di collisore.</p>
+<p>Il parametro formale polygonName può assumere solo uno dei seguenti valori: <code>triangle</code> (triangolo), <code>square</code> (quadrato), <code>pentagon</code> (pentagono), <code>hexagon</code> (esagono), <code>septagon</code> (ettagono), <code>octagon</code> (ottagono), <code>enneagon</code> (ennagono), <code>decagon</code> (decagono), <code>hendecagon</code> (endecagono) ed infine <code>dodecagon</code> (dodecagono).</p>
+<p>Per creare uno Sprite con collisore cinematico a coordinate x=120 ed y=30 di forma esagonale con lato 40, sostituiamo al parametro formale <code>x</code> il valore <code>120</code>, al parametro formale <code>y</code> il valore <code>30</code>, al parametro formale <code>length</code> il valore <code>40</code>, al parametro formale <code>polygonName</code> il valore <code>hexagon</code> (è di tipo <code>String</code>, quindi deve essere indicato tra apici singoli o doppi). L&rsquo;ultimo parametro formale <code>colliderType</code> assegniamo il valore <code>kinematic</code> (è di tipo <code>String</code>, quindi deve essere indicato tra apici singoli o doppi), invocando il costruttore nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite = <span style="color:#00f">new</span> Sprite(120, 30, 40, <span style="color:#009c00">&#39;hexagon&#39;</span>, <span style="color:#009c00">&#39;kinematic&#39;</span>);
+</span></span></code></pre></div><h3 id="costruttore-di-poligoni-per-punti">Costruttore di poligoni per punti</h3>
+<p>Costruttore di poligoni per punti permette la costruzione di poligoni irregolari a partire dai punti. Ha la seguente firma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: new Sprite(punti[][], colliderType)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  puntiArray[][]   array: the points
+</span></span><span style="display:flex;"><span>  colliderType     String: the collider type
+</span></span></code></pre></div><p>Il parametro formale <code>punti</code> è una lista di punti. Il parametro formale <code>colliderType</code> indica il tipo di collisore.</p>
+<p>Per prima cosa è necessario creare tutti i punti, ad esempio tre punti per creare un triangolo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> A = [100, 500];
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> B = [100, 450];
+</span></span><span style="display:flex;"><span><span style="color:#00f">let</span> C = [300, 500];
+</span></span></code></pre></div><p>Poi è necessario creare la figura, avendo cura che il primo e l&rsquo;ultimo punto siano lo stesso punto, in modo da creare una figura chiusa:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> triangleSp = [A, B, C, A];
+</span></span></code></pre></div><p>Per creare lo Sprite con collisore cinematico, sostituiamo al parametro formale <code>punti</code> la lista <code>triangleSp</code> e al parametro formale <code>colliderType</code> il valore <code>kinematic</code> (è di tipo <code>String</code>, quindi deve essere indicato tra apici singoli o doppi), invocando il costruttore nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite = <span style="color:#00f">new</span> Sprite(triangleSp, <span style="color:#009c00">&#39;kinematic&#39;</span>);
+</span></span></code></pre></div><h3 id="costruttore-per-ripetizione">Costruttore per ripetizione</h3>
+<p>Il costruttore per ripetizione permette di costruire uno Sprite ripetendo due semplici passi:</p>
+<ol>
+<li>costruisce un lato di lunghezza indicata;</li>
+<li>applica un certo angolo a partire dal quale costruire il lato successivo;</li>
+<li>se il numero di ripetizioni indicato non è stato raggiunto, esegue un&rsquo;altra esecuzione dei punti 1. 2. e 3.</li>
+</ol>
+<p>Questo costruttore permette di disegnare tutti gli altri poligoni regolari, quali il tridecagono, tetradecagono, pentadecagono, esadecagono, ettadecagono, ottadecagono, ennadecagono, icosagono, e qualsiasi altro poligono (n-agono).</p>
+<p>Per disegnare un poligono regolare di n lati, basta applicare un angolo pari a 360/n ed il numero di ripetizioni pari a n. Ad esempio, per disegnare l&rsquo;esadecagono, basta applicare un angolo pari a 360/16 ed il numero di ripetizioni pari a 16.</p>
+<p>La firma di questo costruttore è la seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: new Sprite(x, y, vector[], colliderType)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  x             Number: the x-coordinate
+</span></span><span style="display:flex;"><span>  y             Number: the y-coordinate
+</span></span><span style="display:flex;"><span>  vector        Array:  sideLength, angle and number of repetition
+</span></span><span style="display:flex;"><span>  colliderType  String: the collider type
+</span></span></code></pre></div><p>I parametri formali <code>x</code> ed <code>y</code> sono le coordinate del punto in alto a sinistra dal quale disegnare lo Sprite, il parametro formale <code>vector</code> è un array contenente tre valori, la lunghezza del lato, l&rsquo;angolo da utilizzare per disegnare il lato successivo ed il numero di ripetizioni da raggiungere. Infine il parametro formale <code>colliderType</code> indica il tipo di collisore.</p>
+<p>Per creare uno Sprite dell&rsquo;esadecagono con collisore cinematico a coordinate x=170 ed y=30 con lato 25, sostituiamo al parametro formale <code>x</code> il valore <code>170</code>, al parametro formale <code>y</code> il valore <code>30</code>, al parametro formale <code>vector</code> un array contenente tre valori, la lunghezza del lato<code>25</code>, l&rsquo;angolo <code>360/16</code> (possiamo lasciare l&rsquo;espressione matematica) ed il numero di ripetizioni <code>16</code>. L&rsquo;ultimo parametro formale <code>colliderType</code> assegniamo il valore <code>kinematic</code> (è di tipo <code>String</code>, quindi deve essere indicato tra apici singoli o doppi). Invochiamo il costruttore nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite = <span style="color:#00f">new</span> Sprite(20, 30, [25, 360/16, 16], <span style="color:#009c00">&#39;kinematic&#39;</span>);
+</span></span></code></pre></div><h2 id="movimento-e-rotazione">Movimento e rotazione</h2>
+<p>Esistono molte modalità di movimento e di rotazione di uno Sprite.</p>
+<p>Si può modificare la posizione di uno Sprite cambiando i valori delle sue proprietà, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>player.x = player.x + 1;
+</span></span><span style="display:flex;"><span>player.y = player.y + 2;
+</span></span></code></pre></div><p>Si può modificare la velocità di uno Sprite come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>player.vel.x = -2;
+</span></span><span style="display:flex;"><span>player.vel.y = 0.1;
+</span></span></code></pre></div><p>Si può modificare la sua direzione e velocità, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>player.direction = 187;
+</span></span><span style="display:flex;"><span>player.speed = 3;
+</span></span></code></pre></div><p>Si può modificare l&rsquo;inclinazione, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.rotation = sprite.rotation + 20;
+</span></span></code></pre></div><p>Si può modificare la velocità di rotazione, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.rotationSpeed = 5;
+</span></span></code></pre></div><p>Esistono poi i metodi di movimento e di rotazione, che non tengono conto dell&rsquo;ambiente fisico in cui si trova uno Sprite, vengono applicati senza condizioni.</p>
+<p>I metodi di movimento e di rotazione permettono di muovere uno Sprite in una certa direzione o verso un determinato oggetto in maniera accurata.</p>
+<h3 id="metodo-movedistance-direction-speed">Metodo <code>move(distance, direction, speed)</code></h3>
+<p>Per muovere uno Sprite in una direzione specificata per una certa distanza, si utilizza il metodo <code>move</code>, che ha la seguente firma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: move(distance, direction, speed)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  distance      Number: the distance
+</span></span><span style="display:flex;"><span>  direction     Number | String: the direction
+</span></span><span style="display:flex;"><span>  speed         Number: the speed
+</span></span></code></pre></div><p>Il parametro formale <code>distance</code> indica la distanza, il parametro formale <code>direction</code> indica la direzione ed il parametro formale <code>speed</code> indica la velocità del movimento dello Sprite.</p>
+<p>Per muovere uno Sprite di 50 pixel verso destra con velocità di 5 frame / secondo, sostituiamo al parametro formale <code>distance</code> il valore <code>50</code>, al parametro formale <code>direction</code> il valore <code>right</code> (quando utilizziamo un valore di tipo <code>String</code>, il valore deve essere indicato tra apici singoli o doppi) ed al parametro formale <code>speed</code> il valore <code>5</code>. Invochiamo il metodo nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.move(50, <span style="color:#009c00">&#39;right&#39;</span>, 5);
+</span></span></code></pre></div><h3 id="metodo-movetowardsposition-tracking">Metodo <code>moveTowards(position, tracking)</code></h3>
+<p>Per muovere uno Sprite verso un secondo oggetto con una certa percentuale di distanza da coprire per ogni frame, si utilizza il metodo <code>moveTowards</code>, che ha la seguente firma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: moveTowards(position, tracking)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  position      Object: the target position
+</span></span><span style="display:flex;"><span>  tracking      Number: the tracking speed
+</span></span></code></pre></div><p>Il parametro formale <code>position</code> indica la posizione dell&rsquo;oggetto, mentre il parametro formale <code>tracking</code> indica la percentuale di distanza da coprire per ogni frame.</p>
+<p>Per muovere uno Sprite verso il mouse con una percentuale di distanza da coprire per ogni frame del 10%, sostituiamo al parametro formale <code>position</code> l&rsquo;oggetto <code>mouse</code>, al parametro formale <code>tracking</code> il valore ``0.10`. Invochiamo il metodo nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.moveTowards(mouse, 0.10);
+</span></span></code></pre></div><h3 id="metodo-moveawayposition-repel">Metodo <code>moveAway(position, repel)</code></h3>
+<p>Per muovere uno Sprite allontanandolo da un secondo oggetto con una certa percentuale di distanza da coprire per ogni frame, si utilizza il metodo <code>moveAway</code>, che ha la seguente firma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: moveAway(position, repel)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  position      Object: the target position
+</span></span><span style="display:flex;"><span>  repel         Number: the repel speed
+</span></span></code></pre></div><p>Il parametro formale <code>position</code> indica la posizione dell&rsquo;oggetto, mentre il parametro formale <code>repel</code> indica la percentuale di distanza da coprire per l&rsquo;allontanamento ad ogni frame.</p>
+<p>Per muovere uno Sprite allontanandolo dal mouse con una percentuale di distanza da coprire per ogni frame del 5%, sostituiamo al parametro formale <code>position</code> l&rsquo;oggetto <code>mouse</code>, al parametro formale <code>repel</code> il valore ``0.05`. Invochiamo il metodo nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.moveAway(mouse, 0.05);
+</span></span></code></pre></div><h3 id="metodo-movetoposition-speed">Metodo <code>moveTo(position, speed)</code></h3>
+<p>Per dare ad uno Sprite un impulso di movimento verso un secondo oggetto con una certa velocità costante, si utilizza il metodo <code>moveTo</code>, che ha la seguente firma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: moveTo(position, speed)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  position      Object: the target position
+</span></span><span style="display:flex;"><span>  speed         Number: the speed
+</span></span></code></pre></div><p>Il parametro formale <code>position</code> indica la posizione dell&rsquo;oggetto, mentre il parametro formale <code>speed</code> indica la velocità di movimento.</p>
+<p>Per muovere uno Sprite verso il mouse con una velocità di movimento di un frame per secondo, sostituiamo al parametro formale <code>position</code> l&rsquo;oggetto <code>mouse</code>, al parametro formale <code>speed</code> il valore ``1`. Invochiamo il metodo nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.moveTo(mouse, 1);
+</span></span></code></pre></div><h3 id="metodo-rotateangle-rotationspeed">Metodo <code>rotate(angle, rotationSpeed)</code></h3>
+<p>Per ruotare uno Sprite di un angolo specificato e con una certa velocità, si utilizza il metodo <code>rotate</code>, che ha la seguente firma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: rotate(angle, rotationSpeed)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  angle         Number: the angle
+</span></span><span style="display:flex;"><span>  rotationSpeed Number: the rotation speed
+</span></span></code></pre></div><p>Il parametro formale <code>angle</code> indica l&rsquo;angolo dell&rsquo;oggetto, mentre il parametro formale <code>rotationSpeed</code> indica la velocità di rotazione (espressa in frame al secondo).</p>
+<p>Per ruotare uno Sprite di 15 gradi con una velocità di rotazione di 5 fps, sostituiamo al parametro formale <code>angle</code> il valore <code>15</code>, al parametro formale <code>rotationSpeed</code> il valore <code>5</code>. Invochiamo il metodo nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.rotate(15, 5);
+</span></span></code></pre></div><h3 id="metodo-rotatetoposition-speed-facing">Metodo <code>rotateTo(position, speed, [facing])</code></h3>
+<p>Per ruotare uno Sprite verso un oggetto specificato, con una certa velocità e posizionandolo con uno specifico angolo rispetto all&rsquo;oggetto, si utilizza il metodo <code>rotateTo</code>, che ha la seguente firma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: rotateTo(position, speed, [facing])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  position      Number | Object: the angle or the target position
+</span></span><span style="display:flex;"><span>  speed         Number: the rotation speed
+</span></span><span style="display:flex;"><span>  facing        Number: the angle that the Sprite should be at when facing the target position (Optional)
+</span></span></code></pre></div><p>Il parametro formale <code>position</code> indica l&rsquo;angolo o la posizione dell&rsquo;oggetto, il parametro formale <code>speed</code> indica la velocità di rotazione (espressa in frame al secondo), il parametro formale <code>facing</code> indica l&rsquo;angolo al quale lo Sprite si deve posizionare quando la posizione finale è stata raggiunta.</p>
+<p>Per ruotare uno Sprite a 15 gradi con una velocità di rotazione di 3 fps, sostituiamo al parametro formale <code>position</code> il valore <code>3</code>, al parametro formale <code>speed</code> il valore <code>5</code>. Invochiamo il metodo nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.rotateTo(15, 3);
+</span></span></code></pre></div><p>Per ruotare uno Sprite verso il mouse con una velocità di rotazione di 4 fps, facendo sì che lo Sprite si trovi sempre a 30 gradi rispetto al mouse, sostituiamo al parametro formale <code>position</code> l&rsquo;oggetto <code>mouse</code>, al parametro formale <code>speed</code> il valore <code>4</code> ed al parametro formale <code>facing</code> il valore 30. Invochiamo il metodo nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.rotateTo(mouse, 4, 30);
+</span></span></code></pre></div><h3 id="metodo-rotatetowardsposition-tracking-facing">Metodo <code>rotateTowards(position, tracking, [facing])</code></h3>
+<p>Per ruotare uno Sprite verso un oggetto specificato, con una certa percentuale della distanza angolare da coprire per ogni frame e posizionandolo con uno specifico angolo rispetto all&rsquo;oggetto, si utilizza il metodo <code>rotateTowards</code>, che ha la seguente firma:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: rotateTowards(position, tracking, [facing])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Parameters:
+</span></span><span style="display:flex;"><span>  position      Number | Object: the angle or the target position
+</span></span><span style="display:flex;"><span>  tracking      Number: the tracking speed
+</span></span><span style="display:flex;"><span>  facing        Number: the angle that the Sprite should be at when facing the target position (Optional)
+</span></span></code></pre></div><p>Il parametro formale <code>position</code> indica l&rsquo;angolo o la posizione dell&rsquo;oggetto, il parametro formale <code>tracking</code> indica la percentuale della distanza angolare da coprire per ogni frame, il parametro formale <code>facing</code> indica l&rsquo;angolo al quale lo Sprite si deve posizionare quando la posizione finale è stata raggiunta.</p>
+<p>Per ruotare uno Sprite verso il mouse con una percentuale della distanza angolare da coprire per ogni frame del 3%, facendo sì che lo Sprite si trovi sempre a 90 gradi rispetto al mouse, sostituiamo al parametro formale <code>position</code> l&rsquo;oggetto <code>mouse</code>, al parametro formale <code>tracking</code> il valore <code>0.03</code> ed al parametro formale <code>facing</code> il valore 90. Invochiamo il metodo nel seguente modo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>sprite.rotateTo(mouse, 0.03, 90);
+</span></span></code></pre></div><h3 id="metodi-per-movimenti-in-serie">Metodi per movimenti in serie</h3>
+<p>E&rsquo; possibile definire una sequenza di movimenti ed invocarla una volta o ripetutamente. Per creare una sequenza di movimenti, semplicemente si dichiara una funzione ed in questa funzione si inseriscono tutte le istruzioni di movimento desiderate.</p>
+<p>Sono però necessarie due accortezze:</p>
+<ol>
+<li>
+<p>La prima è che questa funzione deve essere dichiarata con la parola <code>async</code> che in JavaScript sta ad indicare che l&rsquo;esecuzione avviene in parallelo (in contemporanea) rispetto al flusso di esecuzione principale.</p>
+</li>
+<li>
+<p>La seconda è che tutte le funzioni di movimento invocate all&rsquo;interno devono essere precedute dalla parola chiave <code>await</code>, che in JavaScript sta ad indicare che si deve attendere il completamento di un&rsquo;istruzione prima di passare alla successiva.</p>
+</li>
+</ol>
+<p>Ad esempio, per muovere uno Sprite di 100 punti in una direzione, poi ruotare di 90 gradi e muovere di altri 100 punti, possiamo realizzare la seguente funzione:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">async</span> <span style="color:#00f">function</span> movimentoConAngolo() {
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">await</span> sprite.move(100);
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">await</span> sprite.rotate(90);
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">await</span> sprite.move(100);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>La funzione creata deve poi essere invocata nella funzione <code>setup</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">new</span> Canvas(160, 160);
+</span></span><span style="display:flex;"><span>    sprite = <span style="color:#00f">new</span> Sprite(30, 50, 30);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    movimentoConAngolo();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>E&rsquo; possibile creare un ciclo continuo di movimenti in serie, semplicemente  invocando la funzione creata al termine dei movimenti, e quindi eseguire i movimenti nella funzione <code>setup</code>, come nel seguente esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> sprite;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">new</span> Canvas(160, 160);
+</span></span><span style="display:flex;"><span>    sprite = <span style="color:#00f">new</span> Sprite(30, 50, 30);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    movimentoConAngolo();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">async</span> <span style="color:#00f">function</span> movimentoConAngolo() {
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">await</span> sprite.move(100);
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">await</span> sprite.rotate(90);
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">await</span> sprite.move(100);
+</span></span><span style="display:flex;"><span>    movimentoConAngolo();    <span style="color:#f00;font-style:italic">// ciclo continuo
+</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>}
+</span></span></code></pre></div><h2 id="applicare-forze-per-il-movimento">Applicare forze per il movimento</h2>
+<p>I metodi per applicare una forze tengono conto dell&rsquo;ambiente fisico, come la gravità applicata, la massa dei corpi, gli attriti e le resistenze intrinseche dei corpi rispetto alla rotazione, al rimbalzo, ecc&hellip; L&rsquo;insieme delle forze modifica infine la direzione e la velocità di movimento dello Sprite.</p>
+<p>La proprietà <code>bearing</code> di uno Sprite indica la direzione (o angolo di movimento) di una forza.</p>
+<p>I metodi <code>applyForce()</code> e <code>applyForceScaled()</code> applicano una forza in direzione <code>x</code> ed <code>y</code> sullo Sprite, il primo metodo non tiene conto della massa, il secondo tiene conto della massa dell&rsquo;oggetto.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">if</span> (mouse.pressing()) {
+</span></span><span style="display:flex;"><span>  sprite.mass = 10;
+</span></span><span style="display:flex;"><span>  sprite.bearing = -90;
+</span></span><span style="display:flex;"><span>  sprite.applyForce(6, 5);
+</span></span><span style="display:flex;"><span>  sprite.applyForceScaled(0, 10);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Il metodo <code>attractTo()</code> attrae uno sprite verso un altro o verso una posizione (x, y) con una certa forza:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">if</span> (mouse.pressing()) {
+</span></span><span style="display:flex;"><span>  sprite1.attractTo(sprite2, 5);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+    </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="https://piqnt.com/planck.js/" style="font-weight: 700; color: #e22d30;">Planck.js</a>: Motore di fisica 2D in Javascript</p><p><a href="https://github.com/piqnt/planck.js/" style="font-weight: 700; color: #e22d30;">Planck.js - Sito GitHub</a>: Motore di fisica 2D in Javascript - Sito GitHub</p><p><a href="https://p5play.org/" style="font-weight: 700; color: #e22d30;">p5play.js</a>: p5play is a JavaScript game engine that uses p5.js for rendering and Planck.js for simulating physics.</p><p><a href="https://github.com/quinton-ashley/p5play/" style="font-weight: 700; color: #e22d30;">p5play.js - Sito GitHub</a>: p5play is a JavaScript game engine that uses p5.js for rendering and Planck.js for simulating physics - Sito GitHub</p><p><a href="https://github.com/molleindustria/p5.play" style="font-weight: 700; color: #e22d30;">p5play.js - Sito GitHub</a>: p5play is a JavaScript game engine that uses p5.js for rendering and Planck.js for simulating physics - Sito GitHub</p><p><a href="https://github.com/molleindustria/p5.play" style="font-weight: 700; color: #e22d30;">p5play.js - Sito GitHub</a>: p5play is a JavaScript game engine that uses p5.js for rendering and Planck.js for simulating physics - Sito GitHub</p>
+  </article>
+</main>
+
+
+
+
+
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

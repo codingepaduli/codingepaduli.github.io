@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>P5play on Lab. informatica</title>
+    <link>http://codingepaduli.github.io/categories/p5play/</link>
+    <description>Recent content in P5play on Lab. informatica</description>
+    <generator>Hugo</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Tue, 08 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://codingepaduli.github.io/categories/p5play/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>p5play Lez. 01 - Introduzione al motore di gioco p5play</title>
+      <link>http://codingepaduli.github.io/coding/web/p5play/p5play/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5play/p5play/</guid>
+      <description>Introduzione al motore di gioco p5play</description>
+    </item>
+  </channel>
+</rss>
