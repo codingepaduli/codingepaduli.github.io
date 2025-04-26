@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- metadati obbligatori, in questo ordine -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esempio di struttura</title>
+    
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Esempio uso Ionic Web Components</h1>
+    </header>
+
+    <main>
+      <article>
+        <h2>Titolo dell'articolo</h2>
+        <p>Contenuto dell'articolo...</p>
+        
+        <ion-badge slot="start" color="danger">Danger Badge</ion-badge>
+        <ion-badge slot="end" color="warning">Warning Badge</ion-badge>
+        
+        <ion-button id="click-trigger">Left-Click Me</ion-button>
+        <ion-popover trigger="click-trigger" trigger-action="click">
+          <ion-content class="ion-padding">Hello World!</ion-content>
+        </ion-popover>
+
+        <ion-progress-bar type="indeterminate"></ion-progress-bar>
+      </article>
+    </main>
+
+    <footer>
+      <p>informazioni di chiusura</p>
+    </footer>
+  </body>
+</html>
