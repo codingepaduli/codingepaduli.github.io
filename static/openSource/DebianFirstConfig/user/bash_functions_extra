@@ -208,22 +208,34 @@ export -f flatpakFilterUpdatableApps
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop() {
-    app=$(flatpakFilterUpdatableApps 'org.freedesktop.Platform/x86_64/23.08')
-    flatpak update $app
+    app=$(flatpakFilterUpdatableApps 'org.freedesktop.Platform/x86_64/24.08' 'org.freedesktop.Sdk/x86_64/24.08')
+    if [ -z "$app" ]; then
+      echo "Nessuna applicazione da aggiornare."
+    else
+      flatpak update $app
+    fi
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeGnome
 flatpakUpdateAppBasedOnCurrentRuntimeGnome() {
-    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/46' 'org.gnome.Platform/x86_64/47')
-    flatpak update $app
+    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/47')
+    if [ -z "$app" ]; then
+      echo "Nessuna applicazione da aggiornare."
+    else
+      flatpak update $app
+    fi
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeGnome
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeKde
 flatpakUpdateAppBasedOnCurrentRuntimeKde() {
-    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/5.15-23.08' 'org.kde.Platform/x86_64/6.8')
-    flatpak update $app
+    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/5.15-24.08' 'org.kde.Platform/x86_64/6.8')
+    if [ -z "$app" ]; then
+      echo "Nessuna applicazione da aggiornare."
+    else
+      flatpak update $app
+    fi
 }
 export -f flatpakUpdateAppBasedOnCurrentRuntimeKde
 

@@ -814,6 +814,16 @@ convertAllSvgToPng() {
 }
 # export -f convertAllSvgToPng
 
+# Convert a PDF to a PPM image
+#
+# Test: pdftoppm -v 
+# Run: convertPdfToPpmImage file.pdf
+convertPdfToPpmImage() {
+  echo "$1"
+  pdftoppm -jpeg "$1" "$1.ppm"
+}
+export -f convertPdfToPpmImage
+
 ############################
 #          FFmpeg          #
 ############################

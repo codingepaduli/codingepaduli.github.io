@@ -285,30 +285,30 @@
 <p>I tast di anacron giornalieri, settimanali, mensili ed annuali sono programmati per essere eseguiti secondo la sintassi:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>period (days)  delay (minutes)  job-id  job
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>period</code></td>
-<td>il numero di giorni dopo il quale ripetere il job, oppure <code>@weekly</code></td>
-</tr>
-<tr>
-<td><code>delay</code></td>
-<td>il numero di minuti che devono passare dall&rsquo;avvio per eseguire il job, in modo da evitare che si accavallino;</td>
-</tr>
-<tr>
-<td><code>job-id</code></td>
-<td>l&rsquo;identificatore del job (solo i caratteri <code>[a-zA-Z0-9]</code> e &ldquo;underscore&rdquo; <code>_</code>)</td>
-</tr>
-<tr>
-<td><code>job</code></td>
-<td>il comando da eseguire</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>period</code></td>
+          <td>il numero di giorni dopo il quale ripetere il job, oppure <code>@weekly</code></td>
+      </tr>
+      <tr>
+          <td><code>delay</code></td>
+          <td>il numero di minuti che devono passare dall&rsquo;avvio per eseguire il job, in modo da evitare che si accavallino;</td>
+      </tr>
+      <tr>
+          <td><code>job-id</code></td>
+          <td>l&rsquo;identificatore del job (solo i caratteri <code>[a-zA-Z0-9]</code> e &ldquo;underscore&rdquo; <code>_</code>)</td>
+      </tr>
+      <tr>
+          <td><code>job</code></td>
+          <td>il comando da eseguire</td>
+      </tr>
+  </tbody>
 </table>
 <p>Un esempio di job schedulato è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>1    1    log-job    /bin/date &#34;+\%F-\%T - anacron executed&#34; &gt;&gt; $HOME/login.txt

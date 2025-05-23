@@ -293,107 +293,107 @@
 <p>La sintassi standard di una regola di cron è:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>minuto ora giornoMese mese giornoSettimana  job
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>minuto</code></td>
-<td>da 0 a 59 oppure <code>*</code> per indicare ogni minuto</td>
-</tr>
-<tr>
-<td><code>ora</code></td>
-<td>da 0 a 23 oppure <code>*</code> per indicare ogni ora</td>
-</tr>
-<tr>
-<td><code>giornoMese</code></td>
-<td>da 1 a 31 oppure <code>*</code> per indicare ogni giorno</td>
-</tr>
-<tr>
-<td><code>mese</code></td>
-<td>da 1 a 12 oppure <code>*</code> per indicare ogni mese</td>
-</tr>
-<tr>
-<td><code>giornoSettimana</code></td>
-<td>da 0 (Domenica) a 6 (Sabato) oppure * per indicare ogni giorno della settimana</td>
-</tr>
-<tr>
-<td><code>job</code></td>
-<td>il comando da eseguire</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>minuto</code></td>
+          <td>da 0 a 59 oppure <code>*</code> per indicare ogni minuto</td>
+      </tr>
+      <tr>
+          <td><code>ora</code></td>
+          <td>da 0 a 23 oppure <code>*</code> per indicare ogni ora</td>
+      </tr>
+      <tr>
+          <td><code>giornoMese</code></td>
+          <td>da 1 a 31 oppure <code>*</code> per indicare ogni giorno</td>
+      </tr>
+      <tr>
+          <td><code>mese</code></td>
+          <td>da 1 a 12 oppure <code>*</code> per indicare ogni mese</td>
+      </tr>
+      <tr>
+          <td><code>giornoSettimana</code></td>
+          <td>da 0 (Domenica) a 6 (Sabato) oppure * per indicare ogni giorno della settimana</td>
+      </tr>
+      <tr>
+          <td><code>job</code></td>
+          <td>il comando da eseguire</td>
+      </tr>
+  </tbody>
 </table>
 <p>Il campo <code>giornoSettimana</code> va in OR logico con il campo <code>giornoMese</code>, per cui il task viene eseguito sia nei giorni indicati dal campo <code>giornoMese</code>, sia nei giorni indicati nel campo <code>giornoSettimana</code>.</p>
 <p>Se il task deve essere eseguito il giorno 30 di ogni mese, allora il task non sarà eseguito a Febbraio (non ha 30 giorni).
 Se l&rsquo;orario di esecuzione è alle 2:30 di notte, allora il task non sarà eseguito nel giorno del passaggio dall&rsquo;ora solare a quella legale (gli orologi avanzano di un&rsquo;ora, dalle 2:00 alle 3:00).</p>
 <p>In ogni campo si possono usare i seguenti modelli:</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>*</code></td>
-<td>qualsiasi valore per il campo</td>
-</tr>
-<tr>
-<td><code>A,B</code></td>
-<td>esecuzione del task quando ha valore A oppure B (non aggiungere il carattere spazio)</td>
-</tr>
-<tr>
-<td><code>A-B</code></td>
-<td>esecuzione del task quando ha valore tra A e B (estremi compresi, senza spazio)</td>
-</tr>
-<tr>
-<td><code>A/B</code></td>
-<td>esecuzione del task quando la divisione ha resto zero</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>*</code></td>
+          <td>qualsiasi valore per il campo</td>
+      </tr>
+      <tr>
+          <td><code>A,B</code></td>
+          <td>esecuzione del task quando ha valore A oppure B (non aggiungere il carattere spazio)</td>
+      </tr>
+      <tr>
+          <td><code>A-B</code></td>
+          <td>esecuzione del task quando ha valore tra A e B (estremi compresi, senza spazio)</td>
+      </tr>
+      <tr>
+          <td><code>A/B</code></td>
+          <td>esecuzione del task quando la divisione ha resto zero</td>
+      </tr>
+  </tbody>
 </table>
 <p>Invece di specificare i singoli campi, si possono utilizzare le seguenti espressioni non standard:</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>@yearly</code></td>
-<td>esecuzione del task annuale (non-standard)</td>
-</tr>
-<tr>
-<td><code>@annually</code></td>
-<td>esecuzione del task annuale (non-standard)</td>
-</tr>
-<tr>
-<td><code>@monthly</code></td>
-<td>esecuzione del task mensile (non-standard)</td>
-</tr>
-<tr>
-<td><code>@weekly</code></td>
-<td>esecuzione del task settimanale (non-standard)</td>
-</tr>
-<tr>
-<td><code>@daily</code></td>
-<td>esecuzione del task giornaliera (non-standard)</td>
-</tr>
-<tr>
-<td><code>@hourly</code></td>
-<td>esecuzione del task oraria (non-standard)</td>
-</tr>
-<tr>
-<td><code>@reboot</code></td>
-<td>esecuzione del task ad ogni riavvio (non-standard)</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>@yearly</code></td>
+          <td>esecuzione del task annuale (non-standard)</td>
+      </tr>
+      <tr>
+          <td><code>@annually</code></td>
+          <td>esecuzione del task annuale (non-standard)</td>
+      </tr>
+      <tr>
+          <td><code>@monthly</code></td>
+          <td>esecuzione del task mensile (non-standard)</td>
+      </tr>
+      <tr>
+          <td><code>@weekly</code></td>
+          <td>esecuzione del task settimanale (non-standard)</td>
+      </tr>
+      <tr>
+          <td><code>@daily</code></td>
+          <td>esecuzione del task giornaliera (non-standard)</td>
+      </tr>
+      <tr>
+          <td><code>@hourly</code></td>
+          <td>esecuzione del task oraria (non-standard)</td>
+      </tr>
+      <tr>
+          <td><code>@reboot</code></td>
+          <td>esecuzione del task ad ogni riavvio (non-standard)</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="esempi-di-schedulazione">Esempi di schedulazione</h3>
 <p>Per lanciare il comando ogni giorno:</p>

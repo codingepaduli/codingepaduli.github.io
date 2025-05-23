@@ -6,7 +6,7 @@
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>L&#39;evoluzione delle comunicazioni</title>
@@ -373,18 +373,18 @@
       <description>HTML Lez. 07.2 - Alfabeto Russo</description>
     </item>
     <item>
+      <title>HTML Lez. 07 A - Combinazioni Unicode</title>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_appendice_combinazioni/</link>
+      <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_appendice_combinazioni/</guid>
+      <description>HTML Lez. 07 A - Combinazioni Unicode</description>
+    </item>
+    <item>
       <title>HTML Lez. 07.1 - Alfabeto Greco</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</guid>
       <description>HTML Lez. 07.1 - Alfabeto Greco</description>
-    </item>
-    <item>
-      <title>HTML Lez. 07 A - Combinazioni Unicode</title>
-      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_appendice_combinazioni/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_appendice_combinazioni/</guid>
-      <description>HTML Lez. 07 A - Combinazioni Unicode</description>
     </item>
     <item>
       <title>HTML Lez. 07 - Codifica Unicode, HTML entities, emoji</title>
@@ -443,25 +443,25 @@
       <description>Esercizi sui diagrammi a blocchi e sul coding</description>
     </item>
     <item>
+      <title>Link interessanti</title>
+      <link>http://codingepaduli.github.io/interesting/others/</link>
+      <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/others/</guid>
+      <description>Set di link interessanti</description>
+    </item>
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
+    </item>
+    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
-    </item>
-    <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
-    </item>
-    <item>
-      <title>Link interessanti</title>
-      <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/others/</guid>
-      <description>Set di link interessanti</description>
     </item>
     <item>
       <title>sql</title>
