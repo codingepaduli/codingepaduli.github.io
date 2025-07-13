@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Android SDK e ADB - Lab. informatica</title>
+
+    <meta name="description" content="Android SDK e ADB - installare gli strumenti di sviluppo e debug di Android">
+        <meta property="og:url" content="http://codingepaduli.github.io/tools/android/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="Android SDK e ADB">
+  <meta property="og:description" content="Android SDK e ADB - installare gli strumenti di sviluppo e debug di Android">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tools">
+    <meta property="article:published_time" content="2025-06-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-15T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="Android SDK e ADB">
+  <meta name="twitter:description" content="Android SDK e ADB - installare gli strumenti di sviluppo e debug di Android">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-06-15T00:00:00Z">15-06-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">Tools</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 4 minuti 
+        ( 768 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="android-sdk-e-adb">Android SDK e ADB</h1>
+<p>Gli ambienti di sviluppo Android possono essere scaricati come unico pacchetto con Android Studio oppure singolarmente con gli strumenti a linea di comando Android.</p>
+<p><img src="/static/coding/tools/Android-CLI-tools.png" alt="Android SDK - CLI" title="Android SDK - CLI"></p>
+<h2 id="installazione-android-sdk---cli-tools">Installazione Android SDK - CLI Tools</h2>
+<p>Supponiamo di voler installare gli SDK Android nella cartella <code>$HOME/Sviluppo/AndroidSDK</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p <span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK/cmdline-tools/latest&#34;</span>
+</span></span></code></pre></div><p>Al momento lo script di installazione richiede che gli strumenti a linea di comando siano posizionati nella cartella <code>cmdline-tools/latest</code> quindi procediamo nel crearle.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p <span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK/cmdline-tools/latest&#34;</span>
+</span></span></code></pre></div><p>Scaricato il pacchetto dal sito ufficiale, è necessario estrarlo e spostare <strong>tutti</strong> i file estratti nella cartella <code>latest</code>.</p>
+<p>Dalla cartella <code>cmdline-tools/latest/bin</code> è possibile eseguire il comando per visualizzare i pacchetti da installare:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./sdkmanager --list
+</span></span></code></pre></div><p>Questo comando da in output la seguente tabella:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Available Packages:
+</span></span><span style="display:flex;"><span>  Path                 | Version    | Description
+</span></span><span style="display:flex;"><span>  build-tools;30.0.3   | 30.0.3     | Android SDK Build-Tools 30.0.3
+</span></span><span style="display:flex;"><span>  platforms;android-30 | 2          | Android SDK Platform 30
+</span></span><span style="display:flex;"><span>  platform-tools       | 34.0.0     | Android SDK Platform-Tools
+</span></span><span style="display:flex;"><span>  emulator             | 32.1.11    | Android Emulator
+</span></span></code></pre></div><p>I pacchetti da installare sono i seguenti:</p>
+<ul>
+<li>Il software di emulazione <code>emulator</code></li>
+<li>Le immagini di sistema <code>system-images</code> da eseguire negli emulatori; si differenziano per varianti come <code>system-images;android-32;google_apis;x86_64</code> che supporta le API di Google e <code>system-images;android-32;google_apis;aosp_atd;x86_64</code> del progetto Android Open Source Project (AOSP);</li>
+<li>Gli strumenti di compilazione <code>build-tools</code> necessari a creare un file APK;</li>
+<li>Gli strumenti <code>platform-tools</code> per gestire la piattaforma Android (indipendente dalla versione Android e dalla versione API utilizzata);</li>
+<li>Le API e le implementazioni <code>platforms;android-32</code> specifiche per la versione Android;</li>
+</ul>
+<p>Per la scelta della versione dei pacchetti da installare si deve seguire la corrispondenza in tabella:</p>
+<table>
+  <thead>
+      <tr>
+          <th>versione</th>
+          <th>SDK e API level</th>
+          <th>Build Tools</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Android 11</td>
+          <td>SDK Platform 30</td>
+          <td>30.x</td>
+      </tr>
+      <tr>
+          <td>Android 12</td>
+          <td>SDK Platform 31</td>
+          <td>31.x</td>
+      </tr>
+      <tr>
+          <td>Android 12L</td>
+          <td>SDK Platform 32</td>
+          <td>32.x</td>
+      </tr>
+      <tr>
+          <td>Android 13</td>
+          <td>SDK Platform 33</td>
+          <td>33.x</td>
+      </tr>
+      <tr>
+          <td>Android 14</td>
+          <td>SDK Platform 34</td>
+          <td>34.x</td>
+      </tr>
+  </tbody>
+</table>
+<p>Dalla cartella <code>latest/bin</code> è possibile lanciare i seguenti comandi per installare i componenti scelti:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;platform-tools&#34;</span>
+</span></span><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;platforms;android-33&#34;</span>
+</span></span><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;build-tools;33.0.0&#34;</span>
+</span></span><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;emulator&#34;</span>
+</span></span><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;system-images;android-33;aosp_atd;x86_64&#34;</span>
+</span></span></code></pre></div><p>E&rsquo; possibile verificare i pacchetti istallati con il comando:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./sdkmanager --list_installed
+</span></span></code></pre></div><p>L&rsquo;output indica i pacchetti installati ed il relativo percorso:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Path</th>
+          <th>Version</th>
+          <th>Description</th>
+          <th>Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>build-tools;30.0.3</td>
+          <td>30.0.3</td>
+          <td>SDK Build-Tools 30.0.3</td>
+          <td>build-tools/30.0.3</td>
+      </tr>
+      <tr>
+          <td>emulator</td>
+          <td>32.1.11</td>
+          <td>Android Emulator</td>
+          <td>emulator</td>
+      </tr>
+      <tr>
+          <td>patcher;v4</td>
+          <td>1</td>
+          <td>SDK Patch Applier v4</td>
+          <td>patcher/v4</td>
+      </tr>
+      <tr>
+          <td>platform-tools</td>
+          <td>34.0.0</td>
+          <td>Android SDK Platform-Tools</td>
+          <td>platform-tools</td>
+      </tr>
+      <tr>
+          <td>platforms;android-30</td>
+          <td>2</td>
+          <td>Android SDK Platform 30</td>
+          <td>platforms/android-30</td>
+      </tr>
+  </tbody>
+</table>
+<p>Installati i pacchetti desiderati, si procede a salvare nel file <code>.bashrc</code> i percorsi appena creati:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export ANDROID_HOME=<span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK&#34;</span>
+</span></span><span style="display:flex;"><span>export ANDROID_SDK_ROOT=<span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+</span></span><span style="display:flex;"><span>export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+</span></span><span style="display:flex;"><span>export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+</span></span><span style="display:flex;"><span>export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools
+</span></span></code></pre></div><h2 id="creazione-dispositivo-virtuale-android-adv">Creazione dispositivo virtuale Android (adv)</h2>
+<p>Per creare un dispositivo virtuale Android (avd), assicurarsi di aver installato una <code>system-images</code> con la stessa versione del pacchetto <code>platforms;android</code> installato.</p>
+<p>Per visualizzare le specifiche hardware dei dispositivi disponibili, si usa il comando:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager list device
+</span></span></code></pre></div><p>Per visualizzare i dispositivi virtuali creati:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager list avd
+</span></span></code></pre></div><p>Si può creare un nuovo dispositivo virtuale <code>myTablet</code> basato sull&rsquo;immagine <code>system-images</code> installata, specificando opzionalmente:</p>
+<ul>
+<li>la cartella in cui salvare lo stato e la configurazione con il parametro <code>--path FOLDER</code>;</li>
+<li>il dispositivo di riferimento (scelto tra quelli disponibili) con il parametro <code>--device NAME</code>.</li>
+</ul>
+<p>Il comando completo è il seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager create avd --name myTablet --package <span style="color:#009c00">&#34;system-images;android-35;aosp_atd;x86_64&#34;</span> --path <span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK/avd/myTablet&#34;</span> --device <span style="color:#009c00">&#34;medium_tablet&#34;</span>
+</span></span></code></pre></div><p>Per avviare un dispositivo virtuale:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emulator -avd <span style="color:#009c00">&#34;Pixel2&#34;</span>
+</span></span></code></pre></div><p>In caso di errore &ldquo;ERROR | Unable to connect to adb daemon on port: 5037&rdquo;, stoppare e riavviare il server e verificare la porta:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb kill-server
+</span></span><span style="display:flex;"><span>adb start-server
+</span></span><span style="display:flex;"><span>netstat -aon | grep 5037
+</span></span></code></pre></div><p>Per accelerazione grafica simulata:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emulator -avd <span style="color:#009c00">&#34;Pixel2&#34;</span> -gpu swiftshader_indirect
+</span></span></code></pre></div><p>Per cancellare un dispositivo virtuale:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager delete avd --name myTablet
+</span></span></code></pre></div><h2 id="comandi-adb">Comandi adb</h2>
+<p>Adb ha una shell che si può utilizzare per inviare comandi al telefono.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>daemon not running; starting now at tcp:5037
+</span></span><span style="display:flex;"><span>daemon started successfully
+</span></span></code></pre></div><p>Dalla shell si può utilizzare il seguente comando che permette di gestire tante caratteristiche del sistema:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd package
+</span></span></code></pre></div><p>Si può anche lanciare un comanda nella shell in maniera non interattiva:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package&#39;</span>
+</span></span></code></pre></div><p>Per visualizzare gli utenti: <code>pm list users</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Users:
+</span></span><span style="display:flex;"><span>UserInfo{0::c13} running
+</span></span><span style="display:flex;"><span>UserInfo{97:dual:1010} running
+</span></span></code></pre></div><p>In questo caso si vede l&rsquo;utente con ID 0 e l&rsquo;utente con ID 97 per le app installate il &ldquo;dual mode&rdquo;.</p>
+<p>Per installare un app per un utente: il comando:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb install  --user 97  app.apk
+</span></span></code></pre></div><p>Per trovare il path di un file APK:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell
+</span></span><span style="display:flex;"><span>cmd package path com.android.chrome
+</span></span></code></pre></div><p>Per copiare e incollare da e verso il dispositivo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb pull path_from_android path_to_local
+</span></span><span style="display:flex;"><span>adb push path_to_android path_from_local
+</span></span></code></pre></div><p>Per rimuovere un app per un utente: il comando:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd package clear --user 97 com.android.chrome
+</span></span><span style="display:flex;"><span>cmd package uninstall  --user 97  com.android.chrome
+</span></span></code></pre></div><p>Esempio di rimozione di una app:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package path com.google.android.apps.subscriptions.red&#39;</span>
+</span></span><span style="display:flex;"><span>adb pull system/priv-app/GoogleOne/GoogleOne.apk /home/io/SyncV3/Varie/apk/
+</span></span><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package clear --user 97 com.google.android.apps.subscriptions.red&#39;</span>
+</span></span><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package clear --user 0 com.google.android.apps.subscriptions.red&#39;</span>
+</span></span><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package uninstall  --user 97  com.google.android.apps.subscriptions.red&#39;</span>
+</span></span><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package uninstall  --user 0  com.google.android.apps.subscriptions.red&#39;</span>
+</span></span></code></pre></div>
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/tools/docker/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">Docker Engine e Podman</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

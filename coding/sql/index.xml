@@ -6,7 +6,7 @@
     <description>Recent content in Lezioni su SQL on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 15 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/coding/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>La linea di comando di MySQL</title>
@@ -14,6 +14,20 @@
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/sql/sql_cli/</guid>
       <description>La linea di comando di MySQL</description>
+    </item>
+    <item>
+      <title>Esercizi su SQL</title>
+      <link>http://codingepaduli.github.io/coding/sql/esercizisql/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/sql/esercizisql/</guid>
+      <description>Esercizi su SQL</description>
+    </item>
+    <item>
+      <title>Soluzioni esercizi su SQL</title>
+      <link>http://codingepaduli.github.io/coding/sql/esercizisql-soluzioni/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/sql/esercizisql-soluzioni/</guid>
+      <description>Soluzioni esercizi su SQL</description>
     </item>
   </channel>
 </rss>

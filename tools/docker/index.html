@@ -233,7 +233,7 @@
     
 	<span class="meta__text">
         Tempo di lettura 12 minuti 
-        ( 2355 parole)
+        ( 2441 parole)
     </span>
 </div></div>
     </header>
@@ -330,6 +330,19 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run --name npm  --entrypoint <span style="color:#009c00">&#34;/usr/local/bin/npm&#34;</span> node
 </span></span><span style="display:flex;"><span>docker container run --name hugo --entrypoint <span style="color:#009c00">&#34;&#34;</span> node bash -l -c <span style="color:#009c00">&#34;/usr/bin/pandoc-default --version&#34;</span>
 </span></span><span style="display:flex;"><span>docker container run --name hugo --entrypoint <span style="color:#009c00">&#34;&#34;</span> node bash
+</span></span></code></pre></div><h3 id="livello-di-informazioni-di-logging">Livello di informazioni di logging</h3>
+<p>Le informazioni in output di podman e docker sono selezionate dai seguenti livelli:</p>
+<ul>
+<li><strong>debug</strong>: Fornisce informazioni dettagliate, utili per il debug delle operazioni;</li>
+<li><strong>info</strong>: Fornisce informazioni generali, è il livello predefinito;</li>
+<li><strong>warn</strong>: Mostra avvisi riguardanti situazioni che non sono errori, ma che potrebbero richiedere attenzione;</li>
+<li><strong>error</strong>: Registra errori che si sono verificati durante l&rsquo;esecuzione delle operazioni;</li>
+<li><strong>fatal</strong>: Indica errori critici che causano l&rsquo;interruzione dell&rsquo;operazione.</li>
+</ul>
+<p>E&rsquo; possibile selezionare un livello con l&rsquo;opzione seguente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>--log-level debug
+</span></span></code></pre></div><p>ad esempio:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker --log-level debug image ls
 </span></span></code></pre></div><h2 id="container-inspection">Container inspection</h2>
 <p>Per poter ispezionare un container, guardando i processi in esecuzione, la configurazione e le statistiche in tempo reale, si usano i comandi:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container top     httpd-container
@@ -488,6 +501,12 @@ docker build -t my-app:1.0 .
 		<a class="pager__link" href="/tools/ssh/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Precedente</span>
 			<p class="pager__title">SSH</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/tools/android/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">Android SDK e ADB</p>
 		</a>
 	</div>
 </nav>

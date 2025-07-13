@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DAB e coding - Domande - Lab. informatica</title>
+
+    <meta name="description" content="Domande sui diagrammi a blocchi e sul coding">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/dab-coding/dabecoding-domande/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="DAB e coding - Domande">
+  <meta property="og:description" content="Domande sui diagrammi a blocchi e sul coding">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2025-06-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-01T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="DAB e coding - Domande">
+  <meta name="twitter:description" content="Domande sui diagrammi a blocchi e sul coding">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-06-01T00:00:00Z">01-06-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/dab-coding/" rel="category">Dab-Coding</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 5 minuti 
+        ( 926 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="domande-sui-diagrammi-a-blocchi-e-sul-coding">Domande sui diagrammi a blocchi e sul coding</h1>
+<h2 id="teoriche-e-diagrammi-a-blocchi">Teoriche e diagrammi a blocchi</h2>
+<p>Quale delle seguenti affermazioni descrive correttamente un algoritmo?</p>
+<ul>
+<li>Un algoritmo è una sequenza finita di istruzioni necessarie a risolvere un problema. (Corretta)</li>
+<li>Un algoritmo è un programma già compilato e pronto per l&rsquo;esecuzione.</li>
+<li>Un algoritmo è un programma già eseguito che produce un risultato.</li>
+<li>Un algoritmo è una sequenza di istruzioni scritte in linguaggio naturale senza alcuna struttura.</li>
+</ul>
+<p>Quale simbolo viene utilizzato in un diagramma a blocchi per rappresentare un&rsquo;operazione di input/output?</p>
+<ul>
+<li>Rettangolo</li>
+<li>Parallelogramma (Corretta)</li>
+<li>Cerchio</li>
+<li>Rombo</li>
+</ul>
+<p>Cosa rappresenta una variabile in un linguaggio di programmazione?</p>
+<ul>
+<li>Un&rsquo;area di memoria che può contenere un valore di un certo tipo (numerico, testuale, &hellip;)  che può essere modificato solo dall&rsquo;utente.</li>
+<li>Un&rsquo;area di memoria che può contenere un valore di un certo tipo (numerico, testuale, &hellip;)  che può essere modificato solo attraverso operazioni matematiche.</li>
+<li>Un&rsquo;area di memoria che può contenere un valore di un certo tipo (numerico, testuale, &hellip;)  che può essere modificato solo dal sistema operativo.</li>
+<li>Nessuna delle precedenti. (Corretta)</li>
+</ul>
+<p>Quale delle seguenti affermazioni descrive correttamente la dichiarazione di una variabile in un linguaggio di programmazione?</p>
+<ul>
+<li>La dichiarazione di una variabile alloca in memoria lo spazio per la variabile, non assegna un valore alla variabile, non assegna un nome.</li>
+<li>La dichiarazione di una variabile alloca in memoria lo spazio per la variabile, assegna un valore modificabile alla variabile, non assegna un nome.</li>
+<li>La dichiarazione di una variabile alloca in memoria lo spazio per la variabile, assegna un nome alla variabile ed un valore non modificabile.</li>
+<li>La dichiarazione di una variabile alloca in memoria lo spazio per la variabile, assegna un nome alla variabile ma non un valore. (Corretta)</li>
+</ul>
+<p>Qual è il significato di &ldquo;inizializzazione di una variabile&rdquo; in programmazione?</p>
+<ul>
+<li>Allocare memoria per la variabile ed assegnare un nome;</li>
+<li>Assegnare un nome alla variabile allocata in memoria;</li>
+<li>Assegnare un valore a una variabile al momento della sua dichiarazione; (Corretta)</li>
+<li>Assegnare un tipo di dato (numerico intero, numerico decimale, carattere, &hellip;) ad una variabile</li>
+</ul>
+<p>Qual è la funzione principale dell&rsquo;operatore di assegnazione in programmazione?</p>
+<ul>
+<li>Confrontare due valori per determinare se sono uguali;</li>
+<li>Assegnare un valore a una variabile; (Corretta)</li>
+<li>Calcolare il risultato delle operazioni matematiche tra le variabili;</li>
+<li>Assegnare la memoria ad una variabile;</li>
+</ul>
+<p>Qual è la funzione dell&rsquo;operatore di modulo in programmazione (Ad esempio 100 MOD 10)?</p>
+<ul>
+<li>Restituire il risultato della divisione tra due numeri;</li>
+<li>Eseguire una moltiplicazione tra due numeri;</li>
+<li>Calcolare la percentuale di un numero;</li>
+<li>Calcolare il resto della divisione tra due numeri; (Corretta)</li>
+</ul>
+<h2 id="condizionali-e-iterative">Condizionali e iterative</h2>
+<p>Il simbolo del rombo in un diagramma a blocchi prevede:</p>
+<ul>
+<li>una condizione che deve essere valutata, nel caso sia vera viene eseguito il blocco di istruzioni presente nel ramo &ldquo;vero&rdquo;, nel caso sia falsa viene eseguito il blocco di istruzioni presente nel ramo &ldquo;falso&rdquo;, i rami &ldquo;vero&rdquo; e &ldquo;falso&rdquo; si incontrano nello stesso punto e l&rsquo;algoritmo continua con altre istruzioni. (Corretta)</li>
+<li>una condizione che deve essere valutata, nel caso sia vera viene eseguito il blocco di istruzioni presente nel ramo &ldquo;vero&rdquo;, nel caso sia falsa l&rsquo;algoritmo termina.</li>
+<li>una condizione che deve essere valutata, nel caso sia vera viene eseguito il blocco di istruzioni presente nel ramo &ldquo;vero&rdquo;, nel caso sia falsa viene eseguito il blocco di istruzioni presente nel ramo &ldquo;falso&rdquo;, al termine dei rami l&rsquo;algoritmo termina.</li>
+<li>una condizione che deve essere valutata, nel caso sia vera viene eseguito il blocco di istruzioni presente nel ramo &ldquo;vero&rdquo;, non è previsto un ramo &ldquo;falso&rdquo;, al termine del ramo &ldquo;vero&rdquo; l&rsquo;algoritmo termina.</li>
+</ul>
+<p>Quale espressione viene comunemente utilizzata in programmazione per determinare se un numero intero è pari?</p>
+<ul>
+<li>Il resto della divisione del numero per due è uguale a uno.</li>
+<li>Il resto della divisione del numero per due è uguale a zero. (Corretta)</li>
+<li>La divisione del numero per due è uguale a zero.</li>
+<li>Il numero moltiplicato per due è uguale al numero stesso.</li>
+</ul>
+<p>Data un&rsquo;istruzione condizionale in cui sono presenti due condizioni congiunte da un operatore logico AND, quale delle seguenti affermazioni è vera?</p>
+<ul>
+<li>(corretta) se tutte le condizioni sono vere allora sono eseguite le istruzioni contenute nel ramo &ldquo;vero&rdquo; dell&rsquo;istruzione condizionale.</li>
+<li>se tutte le condizioni sono vere allora sono eseguite le istruzioni contenute nel ramo &ldquo;falso&rdquo; dell&rsquo;istruzione condizionale.</li>
+<li>se almeno una condizione è vera allora sono eseguite le istruzioni contenute nel ramo &ldquo;vero&rdquo; dell&rsquo;istruzione condizionale.</li>
+<li>indipendentemente dalle condizioni, sono eseguite le istruzioni contenute nel ramo &ldquo;vero&rdquo; dell&rsquo;istruzione condizionale.</li>
+</ul>
+<p>Quale delle seguenti affermazioni riguardanti l&rsquo;operatore logico OR è vera?</p>
+<ul>
+<li>L&rsquo;operatore logico OR restituisce vero solo se entrambe le condizioni sono vere.</li>
+<li>(corretta) L&rsquo;operatore logico OR restituisce falso solo se entrambe le condizioni sono false.</li>
+<li>L&rsquo;operatore logico OR restituisce falso se una delle due condizioni è falsa.</li>
+<li>L&rsquo;operatore logico OR non può essere utilizzato in una condizione.</li>
+</ul>
+<p>Le istruzioni iterative possono essere utilizzate per:</p>
+<ul>
+<li>(corretta) ripetere le operazioni un certo numero di volte;</li>
+<li>verificare il risultato di più condizioni;</li>
+<li>verificare le istruzioni condizionali annidate;</li>
+<li>gestire l&rsquo;interazione del programma con l&rsquo;utente.</li>
+</ul>
+<p>Quale delle seguenti affermazioni riguardanti l&rsquo;istruzione iterativa &ldquo;for&rdquo; è vera?</p>
+<ul>
+<li>(corretta) Consente di effettuare un numero definito N di iterazioni;</li>
+<li>Consente di effettuare un numero non definito di iterazioni;</li>
+<li>Consente di verificare le istruzioni condizionali annidate;</li>
+<li>E&rsquo; un operatore matematico.</li>
+</ul>
+<h2 id="funzioni-e-parametri">Funzioni e parametri</h2>
+<p>Quale delle seguenti affermazioni riguardanti le funzioni matematiche è falsa?</p>
+<ul>
+<li>Le funzioni matematiche possono accettare parametri e restituiscono il risultato dell&rsquo;operazione.</li>
+<li>Le funzioni matematiche possono essere utilizzate per eseguire operazioni complesse come il calcolo di radici quadrate e funzioni trigonometriche.</li>
+<li>(Corretta) Le funzioni matematiche non accettano parametri, restituiscono solo il risultato dell&rsquo;operazione.</li>
+<li>Le funzioni matematiche possono essere definite in librerie apposite che devono essere incluse o importate nel programma.</li>
+</ul>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/dab-coding/dabecoding/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">DAB e coding</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

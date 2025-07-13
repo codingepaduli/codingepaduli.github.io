@@ -6,8 +6,15 @@
     <description>Recent content in Coding on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 15 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android SDK e ADB</title>
+      <link>http://codingepaduli.github.io/tools/android/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/tools/android/</guid>
+      <description>Android SDK e ADB - installare gli strumenti di sviluppo e debug di Android</description>
+    </item>
     <item>
       <title>L&#39;evoluzione delle comunicazioni</title>
       <link>http://codingepaduli.github.io/coding/storia/</link>
@@ -436,11 +443,32 @@
       <description>La linea di comando di MySQL</description>
     </item>
     <item>
+      <title>Esercizi su SQL</title>
+      <link>http://codingepaduli.github.io/coding/sql/esercizisql/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/sql/esercizisql/</guid>
+      <description>Esercizi su SQL</description>
+    </item>
+    <item>
+      <title>Soluzioni esercizi su SQL</title>
+      <link>http://codingepaduli.github.io/coding/sql/esercizisql-soluzioni/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/sql/esercizisql-soluzioni/</guid>
+      <description>Soluzioni esercizi su SQL</description>
+    </item>
+    <item>
       <title>DAB e coding</title>
       <link>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</link>
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</guid>
       <description>Esercizi sui diagrammi a blocchi e sul coding</description>
+    </item>
+    <item>
+      <title>DAB e coding - Domande</title>
+      <link>http://codingepaduli.github.io/coding/dab-coding/dabecoding-domande/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/dab-coding/dabecoding-domande/</guid>
+      <description>Domande sui diagrammi a blocchi e sul coding</description>
     </item>
     <item>
       <title>Lezioni su SQL</title>

@@ -152,37 +152,6 @@ powershell()  {
 }
 export -f powershell
 
-# node
-nodeRun() {
-  # Save the first and second parameters
-  declare -A headParams
-  headParams+=$1
-  headParams+=$2
-
-  # Remove the first and second parameters from the parameter list
-  shift 2
-  
-  # Save all other parameters except the first and second
-  declare -A tailParams
-  tailParams=$@
-
-  dockerContainer   $headParams  node:20.3.1-bookworm $tailParams
-}
-
-# node JS
-# TEST: node --version
-node() {
-  nodeRun " --name node "     " "     "$@"
-}
-export -f node
-
-# npm
-# TEST: npm --version
-npm() { 
-  nodeRun " --name npm "     " --entrypoint /usr/local/bin/npm "  "$@"
-}
-export -f npm
-
 # Run the hugo docker image
 # Test: hugoRun  " -p 1414:1414 " " -p 1515:1515 " "version"
 hugoRun() {
@@ -198,8 +167,8 @@ hugoRun() {
   declare -A tailParams
   tailParams=$@
 
-  dockerContainer --name hugo $headParams -p 1313:1313 hugomods/hugo:reg-base-0.127.0 hugo  --noBuildLock $tailParams
-}
+  dockerContainer --name hugo $headParams -p 1313:1313 hugomods/hugo:std-base-non-root-0.147.5 hugo  --noBuildLock $tailParams
+} 
 export -f hugoRun
 
 # Hugo server

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Soluzioni esercizi su SQL - Lab. informatica</title>
+
+    <meta name="description" content="Soluzioni esercizi su SQL">
+        <meta property="og:url" content="http://codingepaduli.github.io/coding/sql/esercizisql-soluzioni/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="Soluzioni esercizi su SQL">
+  <meta property="og:description" content="Soluzioni esercizi su SQL">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="coding">
+    <meta property="article:published_time" content="2025-05-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-05-26T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="Soluzioni esercizi su SQL">
+  <meta name="twitter:description" content="Soluzioni esercizi su SQL">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-05-26T00:00:00Z">26-05-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/sql/" rel="category">Sql</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 4 minuti 
+        ( 816 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="soluzioni-esercizi-su-sql">Soluzioni esercizi su SQL</h1>
+<h2 id="campionati-di-calcio">Campionati di calcio</h2>
+<ul>
+<li><a href="/static/coding/sql/campionatiCalcio.sql">Cognome-2025-05-26 CampionatiCalcio.sql</a>;</li>
+</ul>
+<h2 id="quiz-dbms">Quiz DBMS</h2>
+<p>Quale delle seguenti affermazioni descrive correttamente la differenza tra l&rsquo;aspetto intenzionale e l&rsquo;aspetto estensionale dei dati?</p>
+<p>A) L&rsquo;aspetto intenzionale si riferisce alla rappresentazione dei dati e alle loro proprietà, mentre l&rsquo;aspetto estensionale si riferisce ai valori specifici che i dati possono assumere. (Corretta)
+B) L&rsquo;aspetto intenzionale riguarda solo i dati numerici, mentre l&rsquo;aspetto estensionale riguarda solo i dati testuali.
+C) L&rsquo;aspetto intenzionale riguarda solo i dati testuali, mentre l&rsquo;aspetto estensionale riguarda solo i dati numerici.
+D) L&rsquo;aspetto intenzionale si occupa della quantità di dati, mentre l&rsquo;aspetto estensionale si occupa della qualità dei dati.</p>
+<p>Quale delle seguenti affermazioni descrive correttamente la relazione tra un DBMS e un database?</p>
+<p>A) Un database è un software utilizzato per gestire i dati, mentre un DBMS è un insieme di dati memorizzati.
+B) Un DBMS è un sistema software che consente di creare, gestire e manipolare un database, mentre un database è una raccolta organizzata di dati. (Corretta)
+C) Un DBMS e un database sono la stessa.
+D) Un database è un software utilizzato per gestire i dati, mentre il DBMS è un programma (matematico, gestionale, grafico, &hellip;) che elabora i dati del database.</p>
+<p>Quanti tipi di relazione esistono in un diagramma ER?</p>
+<p>A) Due: uno a uno e uno a molti.
+B) Tre: uno a uno, uno a molti e molti a molti. (Corretta)
+C) Quattro: uno a zero, uno a uno, uno a molti, molti a molti.
+D) Cinque: zero a zero, uno a zero, uno a uno, uno a molti, molti a molti.</p>
+<p>Cosa rappresenta un attributo in un diagramma ER?</p>
+<p>A) Un legame tra due entità.
+B) Una caratteristica o proprietà di un&rsquo;entità. (Corretta)
+C) Un tipo di relazione tra entità.
+D) Un&rsquo;operazione eseguita sui dati.</p>
+<p>Cosa si intende per &ldquo;istanza&rdquo; in un diagramma ER?</p>
+<p>A) Un modello generale di un&rsquo;entità che definisce le sue proprietà, attributi e relazioni con altre entità, senza riferirsi a dati specifici o valori concreti. Questo modello serve come schema per comprendere le caratteristiche di una entità.
+B) Un&rsquo;implementazione specifica di un&rsquo;entità, che rappresenta un singolo esempio con valori concreti per gli attributi. Ad esempio, se l&rsquo;entità è &ldquo;Studente&rdquo;, un&rsquo;istanza potrebbe essere un singolo studente con un nome, un numero di matricola e una data di nascita specifici. (Corretta)
+C) Un tipo di relazione tra due entità che descrive come queste entità interagiscono tra loro. Le relazioni possono essere di diversi tipi, come uno a uno, uno a molti o molti a molti, e definiscono il modo in cui le istanze delle entità sono collegate.
+D) un&rsquo;istanza è un tipo di operazione eseguita su una entità, ad esempio la trasformazione in maiuscolo o minuscolo del valore, una somma o moltiplicazione o calcolo della percentuale di un valore.</p>
+<h2 id="quiz-sql">Quiz SQL</h2>
+<ol>
+<li>
+<p>Quale delle seguenti affermazioni riguardanti l&rsquo;istruzione SELECT è vera?</p>
+<p>A) (corretta) L&rsquo;istruzione SELECT è utilizzata per effettuare un&rsquo;interrogazione sul database.
+B) L&rsquo;istruzione SELECT è utilizzata per creare una tabella del database.
+C) L&rsquo;istruzione SELECT è utilizzata per inserire i dati in una tabella.
+D) L&rsquo;istruzione SELECT è utilizzata per creare un database.</p>
+</li>
+<li>
+<p>Quale delle seguenti affermazioni riguardanti l&rsquo;istruzione SELECT è falsa?</p>
+<p>A) L&rsquo;istruzione SELECT prevede di specificare obbligatoriamente quale tabella utilizzare.
+B) L&rsquo;istruzione SELECT prevede di specificare obbligatoriamente quali colonne recuperare da una tabella.
+C) L&rsquo;istruzione SELECT permette di specificare una condizione per filtrare i dati.
+D) (corretta) L&rsquo;istruzione SELECT permette di inserire i dati nella tabella.</p>
+</li>
+<li>
+<p>Quale delle seguenti affermazioni riguardanti la chiave primaria è vera?</p>
+<p>A) Una chiave primaria di una tabella può essere comune a piu record.
+B) (corretta) Una chiave primaria di una tabella deve essere unica.
+C) Una chiave primaria di una tabella non può essere composta da piu campi.
+D) Una chiave primaria è composta da campi di tabelle differenti.</p>
+</li>
+<li>
+<p>Quale delle seguenti affermazioni riguardanti l&rsquo;istruzione &ldquo;INSERT INTO tabella&rdquo; è vera?</p>
+<p>A) permette l&rsquo;inserimento esclusivamente di un singolo record alla volta nella tabella;
+B) (corretta) permette l&rsquo;inserimento di più record alla volta nella tabella;
+C) permette l&rsquo;inserimento esclusivamente di un singolo record alla volta nel DBMS;
+D) permette l&rsquo;inserimento di più valori alla record nel DBMS;</p>
+</li>
+<li>
+<p>L&rsquo;istruzione &ldquo;SELECT * FROM tabella&rdquo;:</p>
+<p>A) Estrae tutti i dati contenuti nella tabella, cancellandoli;
+B) Estrae tutti gli attributi contenuti nella struttura della tabella, senza cancellarli;
+C) Estrae tutti i dati contenuti nella tabella, senza cancellarli.
+D) Estrae tutti gli attributi contenuti nella struttura della tabella, cancellandoli;</p>
+</li>
+<li>
+<p>La condizione relativa ad una interrogazione sulla tabella &lsquo;clienti&rsquo;, come ad esempio &ldquo;anni &gt; 18&rdquo; in quale parte dell&rsquo;istruzione &ldquo;SELECT&rdquo; va inserita?</p>
+<p>A) Dopo la clausola FROM, secondo la sintassi <code>SELECT FROM anni &gt; 18 AND tabella='clienti'</code>
+B) All&rsquo;inizio della query, secondo la sintassi <code>SELECT anni &gt; 18 FROM * WHERE tabella='clienti'</code>
+C) (corretta)
+D) Nella clausola WHERE, secondo la sintassi <code>SELECT FROM anni &gt; 18 WHERE tabella='clienti'</code>.
+E) Nella clausola WHERE, secondo la sintassi <code>SELECT * FROM clienti WHERE anni &gt; 18</code></p>
+</li>
+</ol>
+
+    </div>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/coding/sql/esercizisql/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">Esercizi su SQL</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

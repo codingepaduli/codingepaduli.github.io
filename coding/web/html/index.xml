@@ -141,5 +141,12 @@
       <guid>http://codingepaduli.github.io/coding/web/html/intro/</guid>
       <description>Il World Wide Web, i siti web, i cookies, i browser</description>
     </item>
+    <item>
+      <title></title>
+      <link>http://codingepaduli.github.io/coding/web/html/sistemanumericoegizio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/html/sistemanumericoegizio/</guid>
+      <description>&lt;h1 id=&#34;sistema-numerico-egizio&#34;&gt;Sistema numerico egizio&lt;/h1&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Simbolo Egizio&lt;/th&gt;&#xA;          &lt;th&gt;Codice Unicode&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓏺𓏺 (1)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307A&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓎆 (10)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307C&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓍢 (100)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307D&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓆼 (1.000)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307E&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+    </item>
   </channel>
 </rss>

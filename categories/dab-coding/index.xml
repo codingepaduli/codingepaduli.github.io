@@ -6,7 +6,7 @@
     <description>Recent content in Dab-Coding on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 16 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/dab-coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DAB e coding</title>
@@ -14,6 +14,13 @@
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</guid>
       <description>Esercizi sui diagrammi a blocchi e sul coding</description>
+    </item>
+    <item>
+      <title>DAB e coding - Domande</title>
+      <link>http://codingepaduli.github.io/coding/dab-coding/dabecoding-domande/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/dab-coding/dabecoding-domande/</guid>
+      <description>Domande sui diagrammi a blocchi e sul coding</description>
     </item>
     <item>
       <title>Esercizi sui diagrammi a blocchi e codifica</title>

@@ -2,53 +2,35 @@
 # flatpak list --app | sed "s/\/x86_64.*//g" > installedApp.txt
 # flatpak list --app --columns=application > installedApp.txt
 
+app.drey.EarTag
 cc.arduino.IDE2
 com.calibre_ebook.calibre
-com.github.dail8859.NotepadNext
 com.dosbox_x.DOSBox-X
-# com.github.johnfactotum.Foliate
-# com.github.marktext.marktext
-# com.github.optyfr.JRomManager
 com.github.jeromerobert.pdfarranger
-com.github.rajsolai.textsnatcher
+com.github.qarmin.czkawka
 com.github.tchx84.Flatseal
-com.github.xournalpp.xournalpp
-com.neatdecisions.Detwinner
 com.nextcloud.desktopclient.nextcloud
 # com.ozmartians.VidCutter
 com.ranfdev.Notify
-com.transmissionbt.Transmission
+# com.transmissionbt.Transmission
 com.vscodium.codium
-# com.zettlr.Zettlr
-# eu.scarpetta.PDFMixTool
-# im.pidgin.Pidgin
-# io.atom.Atom
 io.github.martchus.syncthingtray
-# io.github.peazip.PeaZip
-# io.dbeaver.DBeaverCommunity
-# io.mpv.Mpv
+io.dbeaver.DBeaverCommunity
 io.podman_desktop.PodmanDesktop
 me.kozec.syncthingtk  ## deprecated, use io.github.martchus.syncthingtray. For info see https://github.com/syncthing-gtk/syncthing-gtk/issues/90 AND https://github.com/flathub/me.kozec.syncthingtk/pull/193
 me.proton.Pass
 # net.sourceforge.Klavaro
-# org.audacityteam.Audacity
-# org.avidemux.Avidemux
-org.beeref.BeeRef
+net.puddletag.puddletag
 org.chromium.Chromium
-# org.filezillaproject.Filezilla
-org.gimp.GIMP
-# org.gnome.Evince
-# org.gnome.baobab
-# org.gnome.gedit
 # org.gnome.meld
-# org.gnome.seahorse.Application
-# org.goldendict.GoldenDict
-# org.gottcode.Tanglet
-# org.inkscape.Inkscape
-# org.kde.kdenlive
+org.inkscape.Inkscape
+org.kde.kdiff3
+org.gnome.Totem
+org.kde.kate
 org.kde.kolourpaint
 org.kde.krename
 org.kde.marble
+org.keepassxc.KeePassXC
 org.libreoffice.LibreOffice
 org.mozilla.firefox
 org.musicbrainz.Picard
@@ -56,8 +38,8 @@ org.musicbrainz.Picard
 # org.nomacs.ImageLounge
 org.processing.processingide
 # org.remmina.Remmina
-# org.stellarium.Stellarium
 org.videolan.VLC
 # rs.ruffle.Ruffle ## open source Flash Player emulator
 tv.kodi.Kodi
+org.virt_manager.virt-manager
 

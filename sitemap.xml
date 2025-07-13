@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://codingepaduli.github.io/tools/android/</loc>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://codingepaduli.github.io/coding/storia/</loc>
     <lastmod>2022-12-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -185,11 +188,32 @@
     <loc>http://codingepaduli.github.io/coding/sql/sql_cli/</loc>
     <lastmod>2025-04-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://codingepaduli.github.io/coding/sql/esercizisql/</loc>
+    <lastmod>2025-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/sql/esercizisql-soluzioni/</loc>
+    <lastmod>2025-05-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</loc>
     <lastmod>2024-11-16T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://codingepaduli.github.io/coding/dab-coding/dabecoding-domande/</loc>
+    <lastmod>2025-06-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/coding/</loc>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/tools/</loc>
+    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/dab-coding/</loc>
+    <lastmod>2025-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/sql/</loc>
+    <lastmod>2025-05-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/interesting/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
@@ -203,16 +227,10 @@
     <loc>http://codingepaduli.github.io/interesting/educational/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/coding/</loc>
-    <lastmod>2025-04-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/coding/sql/</loc>
     <lastmod>2025-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/link-sql/</loc>
-    <lastmod>2025-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/sql/</loc>
     <lastmod>2025-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/javascript/</loc>
@@ -323,9 +341,6 @@
     <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/dab-coding/</loc>
-    <lastmod>2024-11-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/interesting/fdroidapp/</loc>
     <lastmod>2023-06-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -370,9 +385,6 @@
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/linkmediapipe/</loc>
     <lastmod>2022-08-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/categories/tools/</loc>
-    <lastmod>2023-08-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/ai/</loc>
     <lastmod>2022-03-28T00:00:00+00:00</lastmod>
@@ -520,6 +532,8 @@
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/html/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/html/sistemanumericoegizio/</loc>
   </url><url>
     <loc>http://codingepaduli.github.io/tags/</loc>
   </url>

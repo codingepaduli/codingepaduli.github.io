@@ -6,8 +6,15 @@
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android SDK e ADB</title>
+      <link>http://codingepaduli.github.io/tools/android/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/tools/android/</guid>
+      <description>Android SDK e ADB - installare gli strumenti di sviluppo e debug di Android</description>
+    </item>
     <item>
       <title>L&#39;evoluzione delle comunicazioni</title>
       <link>http://codingepaduli.github.io/coding/storia/</link>
@@ -436,11 +443,32 @@
       <description>La linea di comando di MySQL</description>
     </item>
     <item>
+      <title>Esercizi su SQL</title>
+      <link>http://codingepaduli.github.io/coding/sql/esercizisql/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/sql/esercizisql/</guid>
+      <description>Esercizi su SQL</description>
+    </item>
+    <item>
+      <title>Soluzioni esercizi su SQL</title>
+      <link>http://codingepaduli.github.io/coding/sql/esercizisql-soluzioni/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/sql/esercizisql-soluzioni/</guid>
+      <description>Soluzioni esercizi su SQL</description>
+    </item>
+    <item>
       <title>DAB e coding</title>
       <link>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</link>
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/dab-coding/dabecoding/</guid>
       <description>Esercizi sui diagrammi a blocchi e sul coding</description>
+    </item>
+    <item>
+      <title>DAB e coding - Domande</title>
+      <link>http://codingepaduli.github.io/coding/dab-coding/dabecoding-domande/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/dab-coding/dabecoding-domande/</guid>
+      <description>Domande sui diagrammi a blocchi e sul coding</description>
     </item>
     <item>
       <title>Link interessanti</title>
@@ -910,6 +938,13 @@
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/tools/editorconfig/</guid>
       <description>EditorConfig, uno strumento per condividere le stesse impostazioni di stile e codifica tra gli sviluppatori che lavorano sullo stesso progetto con vari editors e IDEs</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://codingepaduli.github.io/coding/web/html/sistemanumericoegizio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/html/sistemanumericoegizio/</guid>
+      <description>&lt;h1 id=&#34;sistema-numerico-egizio&#34;&gt;Sistema numerico egizio&lt;/h1&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Simbolo Egizio&lt;/th&gt;&#xA;          &lt;th&gt;Codice Unicode&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓏺𓏺 (1)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307A&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓎆 (10)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307C&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓍢 (100)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307D&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓆼 (1.000)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307E&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
     </item>
   </channel>
 </rss>

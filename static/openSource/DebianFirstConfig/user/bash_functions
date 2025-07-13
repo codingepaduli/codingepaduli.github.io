@@ -8,7 +8,7 @@
 
 # In order to avoid a function calls itself, you can specify
 # to execute the original command. Example: to call the 'clear'
-# command insede a function "clear", you need to use:
+# command inside a function "clear", you need to use:
 #   command clear;
 
 # Show the rows -rw------- 1 io casa 15491 2023-08-17 14:35 file
@@ -81,13 +81,6 @@ wipe() {
   command wipe -friq "$@"
 }
 export -f wipe
-
-# TLDR
-# Usage: tldr ls
-tldr() {
-  tldr-py find "$@"
-}
-export -f tldr
 
 # cancella e salva (clear and write) la history dei comandi del terminale
 # Usage: clearhistory
@@ -242,12 +235,35 @@ export -f grepRecursiveSearch
 # Usa ripgrep per effettuare una sostituzione
 # Usage: command | grepRgReplace "testo1" "testo2"
 grepRgReplace() {
-  ## -N: ingnora i file nascosti
+  ## -N: non mostra il numero di linea
   ## --passthru: restituisce anche le righe che non corrispondono 
   ## -r: pattern di ricerca
   rg -N --passthru "$1" -r "$2" 
 }
 export -f grepRgReplace
+
+# Rimuove le lettere accentate e l'accento
+# Usage: echo "testo1àèéìòù" | grepRgReplaceAccentedCharacters
+grepRgReplaceAccentedCharacters() {
+  grepRgReplace 'à' 'a' | grepRgReplace 'è' 'e' | grepRgReplace 'é' 'e' | grepRgReplace 'ì' 'i' | grepRgReplace 'ò' 'o' | grepRgReplace 'ù' 'u' | grepRgReplace "'" ' '
+}
+export -f grepRgReplaceAccentedCharacters
+
+# Rimuove i caratteri non ammessi
+# Usage: command | grepRgReplaceAccenture "testo1" "testo2"
+grepRgRemoveForbiddenCharacters() {
+
+  # Necessita che sia definita la variabile ALLOWED_CHARS_IN_FILENAME
+  if [ -z "$ALLOWED_CHARS_IN_FILENAME" ]; then
+    echo "Variabile non definita: 'ALLOWED_CHARS_IN_FILENAME'" >&2
+    exit 1
+  fi
+
+  ## -c: complement the search pattern
+  ## -d: delete other char
+  tr -cd "[:alnum:][:cntrl:]$ALLOWED_CHARS_IN_FILENAME"
+}
+export -f grepRgRemoveForbiddenCharacters
 
 # Usa tr per effettuare una sostituzione
 # Usage: command | grepReplaceLowerWithUpper
@@ -262,6 +278,18 @@ grepReplaceUpperWithLower() {
   tr '[:upper:]' '[:lower:]'
 }
 export -f grepReplaceUpperWithLower
+
+# Rinomina un file eliminando caratteri proibiti e sostituendo accenti
+# Usage: renameFileRemovingForbiddenAndAccentedCharacters *.txt
+renameFileRemovingForbiddenAndAccentedCharacters() {
+  for file in "$@"; do
+    if [ -f "$file" ]; then
+      newFile=$( echo "$file" | grepRgReplaceAccentedCharacters | grepRgRemoveForbiddenCharacters )
+      mv "$file" "$newFile"
+    fi
+  done
+}
+export -f renameFileRemovingForbiddenAndAccentedCharacters
 
 ######################################################
 # Hashing functions (sha256, sha512, md5 and Blade3) #
@@ -299,7 +327,6 @@ b3check() {
 }
 export -f b3check
 
-
 # Make .md5 .sha256 .b3 files from file
 # Usage: hashFile file.txt
 hashFile() {
@@ -326,7 +353,6 @@ hashFile() {
   fi
 }
 export -f hashFile
-
 
 # Make .iso.md5 files from .iso files
 # Usage: md5HashingAllIsoFiles
@@ -977,6 +1003,47 @@ tagAllMp3File()  {
 
 }
 # export -f tagAllMp3File
+
+########################
+# Check files to burn  #
+########################
+
+# Check all variables are defined
+## Run: checkAllVarsDefined JAVA_HOME PROVA_MIA
+checkAllVarsDefined() {
+    # Controlla se sono stati passati parametri
+    if [ $# -eq 0 ]; then
+        return 1  # Errore: nessun parametro fornito
+    fi
+
+    for var in "$@"; do
+        if [[ ! -v $var ]]; then
+            echo "Errore: variabile '$var' non definita." >&2
+            return 2  # Errore: variabile non definita
+        fi
+    done
+}
+export -f checkAllVarsDefined
+
+# Check all variables are not empty
+## Run: checkAllVarsNotEmpty JAVA_HOME ID MY_TEST
+checkAllVarsNotEmpty() {
+    # Controlla se sono stati passati parametri
+    if [ $# -eq 0 ]; then
+        return 1  # Errore: nessun parametro fornito
+    fi
+
+    for var in "$@"; do
+        # Controlla se la variabile è non definita o vuota
+        if [[ ! -v $var || -z "${!var}" ]]; then
+            echo "Errore: variabile '$var' non definita o vuota." >&2
+            return 2  # Errore: variabile non definita o vuota
+        fi
+    done
+
+    return 0  # Tutte le variabili sono definite e non vuote
+}
+export -f checkAllVarsNotEmpty
 
 ########################
 # Check files to burn  #

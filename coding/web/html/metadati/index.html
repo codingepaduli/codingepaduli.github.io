@@ -232,8 +232,8 @@
 </div><div class="meta__item-reading meta__item">
     
 	<span class="meta__text">
-        Tempo di lettura 11 minuti 
-        ( 2327 parole)
+        Tempo di lettura 12 minuti 
+        ( 2354 parole)
     </span>
 </div></div>
     </header>
@@ -337,7 +337,6 @@
 <h2 id="metadati">Metadati</h2>
 <p>I <strong>metadati</strong> sono informazioni relative alla pagina web, come l&rsquo;autore, l&rsquo;icona, la descrizione e l&rsquo;immagine di anteprima. Questi <a href="https://it.wikipedia.org/wiki/Metadato" title="Link a Wikipedia sui metadati">metadati</a> non sono mostrati all&rsquo;utente, ma sono utilizzati dai motori di ricerca e dai social network per presentare e catalogare la pagina web.</p>
 <p>Ad esempio, quando si condivide agli amici un articolo sui social, questi visualizzano, oltre al collegamento, sia il titolo dell&rsquo;articolo, sia la descrizione, sia un&rsquo;immagine o un video di anteprima. Queste informazioni di anteprima i social le recuperano dai metadati allegati alla pagina web.</p>
-<p>Per un riferimento completo ai metadati si rimanda al link <a href="https://htmlhead.dev/" title="Link al sito di riferimento per i metadati">https://htmlhead.dev/</a> ed alle specifiche del linguaggio HTML.</p>
 <p>Tutti i metadati devono essere contenuti nell&rsquo;etichetta <code>head</code> della pagina web, ad eccezione dell&rsquo;icona principale del sito web: non è descritta da nessun etichetta, deve essere semplicemente salvata nel file <code>favicon.ico</code> nella cartella principale del sito per poter essere recuperata.</p>
 <p>Una volta inseriti tutti i metadata nelle pagine web, è possibile visualizzare le anteprime di condivisione sui social utilizzando gli strumenti indicati di seguito:</p>
 <ul>
@@ -345,6 +344,7 @@
 <li><a href="https://socialsharepreview.com/">Social Media Preview</a>;</li>
 <li><a href="https://metatags.io/">Meta Tags Toolkit</a>.</li>
 </ul>
+<p>Nelle sezioni successive sono spiegati i principali metadati utilizzati, per un riferimento completo si rimanda alle specifiche del linguaggio HTML.</p>
 <h3 id="metadati-obbligatori">Metadati obbligatori</h3>
 <p>I seguenti metadati sono obbligatori e devono essere inseriti rispettivamente in prima, seconda e terza posizione tra i metadati della pagina web:</p>
 <ol>
@@ -456,6 +456,7 @@
 </span></span></code></pre></div><!-- markdownlint-disable MD033 -->
 <p><strong>The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment</strong> Indica che non si possono mettere due trattini consecutivi all&rsquo;interno di un commento, quindi i due trattini vanno rimossi. Spesso si sbaglia a scrivere il commento, aggiungendo uno spazio di troppo, che deve essere rimosso, come nel seguente esempio, nel quale sono evidenziati gli spazi da rimuovere: <code>&lt;!</code><mark> </mark><code>−− commento −−</code><mark> </mark><code>&gt;</code>.</p>
 <p><strong>No <mark>p</mark> element in scope but a <mark>p end tag</mark> seen</strong> indica che l&rsquo;etichetta evidenziata è stata aperta (ad esempio <code>&lt;p&gt;</code>) e non è stata chiusa correttamente (con <code>&lt;/p&gt;</code>).</p>
+<p><strong>End tag for body seen, but there were unclosed elements</strong>: è stata aperta un&rsquo;etichetta ma non è stata chiusa prima della chiusura di body.</p>
 <!-- markdownlint-enable MD033 -->
 <p><strong>The center element is obsolete. Use CSS instead.</strong> indica che gli ultimi standard sconsigliano l&rsquo;uso dell&rsquo;etichetta evidenziata (in questo caso, l&rsquo;etichetta <code>&lt;center&gt;</code>). In questo caso si consiglia di sostituirla facendo uso dei CSS.</p>
 <p><strong>Bad character after <code>&lt;</code>. Probable cause: Unescaped. Try escaping it as <code>&amp;#xxxx;</code></strong> indica che il carattere evidenziato deve essere codificato come &ldquo;HTML entity&rdquo; oppure rappresentato con codifica Unicode decimale o esadecimale.</p>
@@ -463,7 +464,7 @@
     </div>
       <hr>
       <h2>Riferimenti</h2>
-      <p><a href="https://htmlhead.dev/" style="font-weight: 700; color: #e22d30;">Sito htmlhead.dev</a>: Guida (in inglese) all&#39;elemento &#39;head&#39; dell&#39;HTML;</p><p><a href="https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs" style="font-weight: 700; color: #e22d30;">Icone del sito web nel 2021</a>: Articolo (in inglese) sulla scelta e sulla creazione delle icone del sito web nel 2021</p><p><a href="https://www.matuzo.at/blog/html-boilerplate/" style="font-weight: 700; color: #e22d30;">My current HTML template</a>: Articolo (in inglese) sugli elementi basilari utilizzati per costruire un template di una pagina HTML</p><p><a href="https://developers.facebook.com/tools/debug" style="font-weight: 700; color: #e22d30;">Facebook Sharing Debugger</a>: Il debugger di condivisione di facebook consente di visualizzare l&#39;anteprima del contenuto che sarà pubblicato su Facebook</p><p><a href="https://socialsharepreview.com/" style="font-weight: 700; color: #e22d30;">Social Media Preview</a>: Social Media Preview consente di visualizzare l&#39;anteprima del contenuto che sarà pubblicato sui social</p><p><a href="https://metatags.io/" style="font-weight: 700; color: #e22d30;">Meta Tags Toolkit</a>: Meta Tags Toolkit consente di visualizzare l&#39;anteprima del contenuto che sarà pubblicato sui social</p><p><a href="http://validator.w3.org/nu/" style="font-weight: 700; color: #e22d30;">W3C Markup Validation Service</a>: A W3C Markup Validation Service for your web pages</p>
+      <p><a href="https://it.wikipedia.org/wiki/Metadato" style="font-weight: 700; color: #e22d30;">Metadati</a>: Guida ai metadati su Wikipedia</p><p><a href="https://htmlhead.dev/" style="font-weight: 700; color: #e22d30;">Sito htmlhead.dev</a>: Guida (in inglese) all&#39;elemento &#39;head&#39; dell&#39;HTML;</p><p><a href="https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs" style="font-weight: 700; color: #e22d30;">Icone del sito web nel 2021</a>: Articolo (in inglese) sulla scelta e sulla creazione delle icone del sito web nel 2021</p><p><a href="https://www.matuzo.at/blog/html-boilerplate/" style="font-weight: 700; color: #e22d30;">My current HTML template</a>: Articolo (in inglese) sugli elementi basilari utilizzati per costruire un template di una pagina HTML</p><p><a href="https://developers.facebook.com/tools/debug" style="font-weight: 700; color: #e22d30;">Facebook Sharing Debugger</a>: Il debugger di condivisione di facebook consente di visualizzare l&#39;anteprima del contenuto che sarà pubblicato su Facebook</p><p><a href="https://socialsharepreview.com/" style="font-weight: 700; color: #e22d30;">Social Media Preview</a>: Social Media Preview consente di visualizzare l&#39;anteprima del contenuto che sarà pubblicato sui social</p><p><a href="https://metatags.io/" style="font-weight: 700; color: #e22d30;">Meta Tags Toolkit</a>: Meta Tags Toolkit consente di visualizzare l&#39;anteprima del contenuto che sarà pubblicato sui social</p><p><a href="http://validator.w3.org/nu/" style="font-weight: 700; color: #e22d30;">W3C Markup Validation Service</a>: A W3C Markup Validation Service for your web pages</p>
   </article>
 </main>
 

@@ -219,7 +219,7 @@ export -f flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeGnome
 flatpakUpdateAppBasedOnCurrentRuntimeGnome() {
-    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/47')
+    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/47' 'org.gnome.Platform/x86_64/48')
     if [ -z "$app" ]; then
       echo "Nessuna applicazione da aggiornare."
     else

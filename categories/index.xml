@@ -6,27 +6,41 @@
     <description>Recent content in Categories on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Interesting</title>
-      <link>http://codingepaduli.github.io/categories/interesting/</link>
-      <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/interesting/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Coding</title>
       <link>http://codingepaduli.github.io/categories/coding/</link>
-      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>http://codingepaduli.github.io/categories/tools/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dab-Coding</title>
+      <link>http://codingepaduli.github.io/categories/dab-coding/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/dab-coding/</guid>
       <description></description>
     </item>
     <item>
       <title>Sql</title>
       <link>http://codingepaduli.github.io/categories/sql/</link>
-      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interesting</title>
+      <link>http://codingepaduli.github.io/categories/interesting/</link>
+      <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/categories/interesting/</guid>
       <description></description>
     </item>
     <item>
@@ -114,13 +128,6 @@
       <description></description>
     </item>
     <item>
-      <title>Dab-Coding</title>
-      <link>http://codingepaduli.github.io/categories/dab-coding/</link>
-      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/dab-coding/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>P5play</title>
       <link>http://codingepaduli.github.io/categories/p5play/</link>
       <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
@@ -139,13 +146,6 @@
       <link>http://codingepaduli.github.io/categories/webapp/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/categories/webapp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tools</title>
-      <link>http://codingepaduli.github.io/categories/tools/</link>
-      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/categories/tools/</guid>
       <description></description>
     </item>
     <item>
