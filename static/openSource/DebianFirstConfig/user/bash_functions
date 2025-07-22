@@ -89,6 +89,54 @@ clearhistory() {
 }
 export -f clearhistory
 
+# clear thumbnails cache (modification time older than 6 months)
+# Usage: clearThumbnailsCache
+clearThumbnailsCache() {
+  if [ -d "${XDG_CACHE_HOME}/thumbnails/" ]; then
+    # -mtime modification time
+    # -printf %TY - modification time
+    find "${XDG_CACHE_HOME}/thumbnails/" -type f -mtime +183 -delete # TEST WITH -printf "%p %TY-%Tm-%Td %TH:%TM:%TS %Tz\n"
+  fi
+  if [ -d "${HOME}/.thumbnails/" ]; then
+    find "${HOME}/.thumbnails/" -type f -mtime +183 -delete
+  fi
+}
+export -f clearThumbnailsCache
+
+# clear directories older than 6 months in cache folder
+# Usage: clearCache
+clearCache() {
+  if [ -d "${XDG_CACHE_HOME}/" ]; then
+    # -atime access time
+    # -printf %AY - access time
+    find "${XDG_CACHE_HOME}/" -type d -atime -maxdepth 2 +183 -delete # TEST WITH -printf "%AY-%Am-%Ad %AH:%AM:%AS %Az %p \n"
+  fi
+  if [ -d "${HOME}/.cache/" ]; then
+    find "${HOME}/.cache/" -type d -atime +183 -delete
+  fi
+}
+export -f clearCache
+
+# clear and regenerate onts
+# Usage: clearAndRegenerateFonts
+clearAndRegenerateFonts() {
+    # Pulisce e rigenera la cache dei fonts (i tipi di carattere)
+    fc-cache -f -v
+}
+export -f clearAndRegenerateFonts
+
+# clear maven and gradle repositories
+# Usage: clearJavaRepositories
+clearJavaRepositories() {
+    echo "TODO"
+    # Cancella il repository maven (java)
+    # rm -rf ~/.m2/repository
+
+    # Cancella i repository gradle (java)
+    # rm -rf ~/.gradle/caches/
+}
+export -f clearJavaRepositories
+
 # show all the services (use restart to restart all)
 # Usage: services
 services() {

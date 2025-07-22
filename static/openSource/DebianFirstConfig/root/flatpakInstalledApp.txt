@@ -14,6 +14,7 @@ com.nextcloud.desktopclient.nextcloud
 com.ranfdev.Notify
 # com.transmissionbt.Transmission
 com.vscodium.codium
+info.smplayer.SMPlayer
 io.github.martchus.syncthingtray
 io.dbeaver.DBeaverCommunity
 io.podman_desktop.PodmanDesktop

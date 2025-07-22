@@ -57,6 +57,11 @@ apt-get install $APT_OPTS mame-extra
 if [ $? -ne 0 ]; then
     exit 1
 fi
+
+# Microsoft TTF Fonts Times new Roman, Arial and Courier fonts 
+# NOTE: package fonts-liberation contains free variants of MS fonts
+# apt-get install $APT_OPTS ttf-mscorefonts-installer
+
 #
 # Check your firmware with:
 #  - sudo update-initramfs -u

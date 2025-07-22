@@ -32,6 +32,8 @@ myRepositories=(
     "fet-timetabling-compute"
     "gsuite_workspace_argo"
     "find-missing-hash"
+    "bitwarden-backup-from-CSV"
+    "my-notes"
 )
 
 if [ ! -d "$WORKING_DIR" ]; then

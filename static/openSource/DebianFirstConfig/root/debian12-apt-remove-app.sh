@@ -8,6 +8,25 @@
 ## --dry-run: only simulate the changes
 APT_OPTS=" -y --purge --quiet --quiet $1"
 
+# Cancella pacchetti obsoleti (visualizzati da aptitude search '~o' )
+# aptitude purge '~o' 
+
+# Cancella i pacchetti non più utilizzati
+# sudo apt-get autoremove --purge
+
+# Cancella configurazioni residue (visualizzati da aptitude search '~c' )
+# aptitude purge '~c'
+
+# Da verificare, cancella cartelle e file di configurazone non + necessari:
+# sudo dpkg --purge `COLUMNS=300 dpkg -l "*" | egrep "^rc" | cut -d\Â -f3`
+
+# Cancella i pacchetti scaricati dalla cache
+# sudo apt-get autoclean
+
+# controllare e risolvere eventuali errori o dipendenze rotte:
+# sudo apt-get check
+# sudo apt-get -f install
+
 ## Remove unused Firefox localizations
 apt-get remove $APT_OPTS  firefox-esr-l10n-ar firefox-esr-l10n-ast \
     firefox-esr-l10n-be firefox-esr-l10n-bg firefox-esr-l10n-bn \
@@ -168,3 +187,5 @@ apt-get remove $APT_OPTS task-amharic  task-arabic task-asturian task-basque \
     task-thai task-ukrainian task-welsh 
 
 apt-get autoremove $APT_OPTS
+
+
