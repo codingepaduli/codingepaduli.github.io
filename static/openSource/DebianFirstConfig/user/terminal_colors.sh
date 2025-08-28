@@ -523,7 +523,7 @@ applyStyleByCodes() {
 resetStyle() {
     # If $NO_COLOR not defined or empty
     if [[ ! -v "NO_COLOR" || -z "$NO_COLOR" ]]; then
-        echo -ne "\033[0m"
+        echo -n "\033[0m"
     fi
 }
 
@@ -542,7 +542,7 @@ applyStyleByName() {
         # formatting styles
         local formatting_names=("$@")
         local formatting_codes
-        formatting_codes=$(getFormattingCodeByNames "${formatting_names[@]}")
+        formatting_codes="$(getFormattingCodeByNames "${formatting_names[@]}")"  # FIXME, function not invoked
 
         local foreground_command=""
         local background_command=""
@@ -558,9 +558,11 @@ applyStyleByName() {
             local background_code
             foreground_code="$(get256ColorIndexByName "$foreground_name")"
             background_code="$(get256ColorIndexByName "$background_name")"
-            foreground_command="38;5;${background_code}m"
+            foreground_command="38;5;${foreground_code}m"
             background_command="48;5;${background_code}m" # 48;5;n (index n in a 256-colour palette)
-            echo -ne "\033[${foreground_command}\033[${background_command}\033[${formatting_codes}m"
+            # echo -e "${foreground_command} - ${background_command} - ${formatting_codes} FIXXX"
+
+            echo -n "\033[${foreground_command}\033[${background_command}" #\033[${formatting_codes}m" # FIXME
         elif [[ "$TERM" == *"color"* ]]; then
             # ANSI 8 colors
             local foreground_code
@@ -609,3 +611,25 @@ echo ""
 TERM="xterm-256color"
 
 '
+
+# Print a colored text, if the terminal allows it
+## Run: printColored CIAOOO :silver :aquamarine_087 bold dim
+printColored() {
+
+    #FIXME, doesn't work
+
+    local text="$1"
+    local foreground_color="$2"
+    local background_color="$3"
+
+    shift 3
+    local formatting_style_names="${@}"
+
+    local style
+    local reset_style
+
+    style="$(applyStyleByName "$foreground_color" "$background_color" "$formatting_style_names")"
+    reset_style="$(resetStyle "")"
+    # echo "style : $style$text$reset_style"
+    echo -e "$style$text$reset_style"
+}
