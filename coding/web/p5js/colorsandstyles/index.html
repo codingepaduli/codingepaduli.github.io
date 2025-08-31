@@ -233,7 +233,7 @@
     
 	<span class="meta__text">
         Tempo di lettura 19 minuti 
-        ( 3835 parole)
+        ( 3960 parole)
     </span>
 </div></div>
     </header>
@@ -290,14 +290,14 @@ In chimica si utilizza una tecnica di analisi detta test della fiamma (o saggio 
 <p>Per risolvere il problema di come indicare i colori in maniera indipendente da qualsiasi dispositivo o formato digitale, Microsoft and Hewlett-Packard si allearono e svilupparono lo <strong>spazio di colori sRGB</strong> (standard Red Green Blue). La riproduzione dei colori era coerente su monitor, stampanti, fotocamere digitali e sul web, ogni colore era individuato da tre componenti primarie, il Rosso, il Verde ed Blu.</p>
 <p>Da allora la tecnologia di realizzazione dei dispositivi digitali è migliorata ed i moderni schermi riproducono uno spazio di colori molto piu grande ed accurato. L&rsquo;industria cinematografica oggi usa lo spazio dei colori DCI-P3, mentre i consumatori utilizzano schermi con spazio colori Display P3.</p>
 <p>Un gradiente è una transizione graduale e progressiva tra due o più valori, come due colori o due intensità di colore. Gli spazi di colore non sempre permettono gradienti uniformi, quindi i passaggi da un colore ad un altro risultano con intermezzi piu o meno saturi o piu o meno luminosi rispetto all&rsquo;intero gradiente. Inoltre, oltre ai salti di luminosità presenti in uno spazio di colore, anche l&rsquo;occhio umano è significativamente più sensibile alle variazioni di luminosità rispetto ai cambiamenti di tonalità (hue) o saturazione.</p>
-<p>Gli <strong>spazi di colore percettivamente uniformi</strong> nascono con l&rsquo;obiettivo di ridurre al minimo i salti di luminosità nella realizzazione dei gradienti. Gia nel 1976 la CIE (Commission Internationale de l&rsquo;Éclairage) crea lo spazio di colori percettivamente uniforme <strong>CIE LAB</strong>, ma non risulta completamente corretto. Gli spazi di colore <strong>oklab</strong> e <strong>oklch</strong>, basati proprio sul CIE LAB, nascono nel 2020 proprio per correggere questi errori, compensando anche la differenza di sensibilità dovuta al funzionamento dell&rsquo;occhio umano.</p>
+<p>Gli <strong>spazi di colore percettivamente uniformi</strong> nascono per far si che alle differenze di quantità delle componenti di un colore corrispondano effettivamente delle differenze visivamente percepite, riducendo al minimo le differenze di luminosità percepite tra due eguali differenze di quantità. Gia nel 1976 la CIE (Commission Internationale de l&rsquo;Éclairage) crea lo spazio di colori percettivamente uniforme <strong>CIE LAB</strong>, ma non risulta completamente corretto. Gli spazi di colore <strong>oklab</strong> e <strong>oklch</strong>, basati proprio sul CIE LAB, nascono nel 2020 proprio per correggere questi errori, compensando anche la differenza di sensibilità dovuta al funzionamento dell&rsquo;occhio umano.</p>
 <h2 id="modelli-di-colore">Modelli di colore</h2>
 <p>Un <strong>modello di colore</strong> è un modello matematico astratto che descrive un modo per rappresentare i colori come combinazioni di <strong>componenti di colore</strong>, tipicamente tre o quattro valori numerici; Ogni modello ha una forma e delle caratteristiche particolari, come i gradienti risultanti.</p>
 <p>Una volta definito un colore come combinazione delle <strong>componenti di colore</strong> utilizzando uno specifico modello di colori, il software sottostante si occupa di identificare il colore nello spazio di colori utilizzato.</p>
 <p>Un modello ha una forma caratteristica, come un cubo, un cilindro o un cono, che rende più o meno intuitiva la scelta dei colori ed i passaggi (i gradienti) da un colore all&rsquo;altro. Il percorso da un colore all&rsquo;altro è vincolato o reso più agevole dalla forma del modello, ad esempio tracciando una linea retta lungo una diagonale del cubo oppure seguendo la linea curva della base del cilindro.</p>
 <h3 id="modelli-di-colori-rgb-e-rgb-hdr">Modelli di colori RGB e RGB-HDR</h3>
 <p>Il modello <strong>RGB</strong> è un modello di colori <strong>additivo</strong>, esprime i colori come somma di colori &ldquo;primari&rdquo;, che in questo modello sono il Rosso, il Verde ed il Blu. Ogni altro colore è definito come una somma delle quantità dei tre colori elencati.</p>
-<p>Il modello <strong>RGB-HDR</strong> è una versione del modello RGB ad intervallo ampio, cioè usa lo spazio di colori <strong>Display P3</strong> (e non sRGB) per mostrare una gamma di colori piu ampia;</p>
+<p>Il modello <strong>RGBHDR</strong> è una versione del modello RGB ad intervallo ampio, cioè usa lo spazio di colori <strong>Display P3</strong> (e non sRGB) per mostrare una gamma di colori piu ampia;</p>
 <p>La forma caratteristica di questi modelli è il <strong>cubo</strong>, di seguito vediamo le due angolazioni, una che mostra lo spigolo &ldquo;bianco&rdquo;, l&rsquo;altra che mostra lo spigolo &ldquo;nero&rdquo;.</p>
 <p><img src="/static/coding/web/p5js/colors_and_styles_color_model_rgb_cube_A_B.png" alt="p5.js - Forma dei modelli di colore RGB e RGB-HDR" title="p5.js - Forma dei modelli di colore RGB e RGB-HDR"></p>
 <p>La quantità applicabile per ogni colore primario va da 0 (zero) a 255, quindi un colore lo si può esprimere come una terna di quantità (<strong>r</strong>, <strong>g</strong>, <strong>b</strong>), in cui <strong>r</strong> è la quantità di rosso, <strong>g</strong> è la quantità di verde e <strong>b</strong> è la quantità di blu.</p>
@@ -322,7 +322,7 @@ In chimica si utilizza una tecnica di analisi detta test della fiamma (o saggio 
 <p>Anche per questo modello, il problema principale consiste nel fatto che non è intuitivo indicare le quantità dei colori primari necessari per ottenere un qualsiasi altro colore, come il viola, il marrone o il celeste. I gradienti fanno enormi sbalzi di luminosità.</p>
 <p>In p5.js non è possibile indicare i modelli di colori CMY e CMYK, ma si pu facilmente implementare a partire dal modello RGB.</p>
 <h3 id="modelli-di-colori-hsb-hsv-hsl-hsi-e-hbl">Modelli di colori HSB (HSV), HSL (HSI) e HBL</h3>
-<p>Il modello <strong>Hue-Saturation-Brightness</strong>, conosciuto anche come <strong>Hue-Saturation-Value</strong>, è un modello computerizzato basato su trasformazioni matematiche, ed è utilizzato al fine di rendere più intuitivo la definizione di un colore. Questo modello e le sue varianti hanno forma cilindrica.</p>
+<p>Il modello di colori <strong>HSB</strong> Hue-Saturation-Brightness, conosciuto anche come <strong>HSV</strong> Hue-Saturation-Value, è un modello computerizzato basato su trasformazioni matematiche, ed è utilizzato al fine di rendere più intuitivo la definizione di un colore. Questo modello e le sue varianti hanno forma cilindrica.</p>
 <p><img src="/static/coding/web/p5js/colors_and_styles_color_models_hsb_hsl_hwb.png" alt="p5.js - Modello di colori HSB" title="p5.js - Modello di colori HSB"></p>
 <p>L&rsquo;angolo definisce la tonalità del colore, detta anche tinta. Quindi troviamo la tonalità rossa a 0 gradi, la tonalità verde a 120 gradi e la tonalità blu a 240 gradi, e nel mezzo tutte le altre sfumature di tonalità di colori.</p>
 <p>La saturazione indica quanto forte o, al contrario, pallida si vuole la tonalità di colore. Saturazioni forti rendono la tonalità di colore molto accesa, saturazioni deboli la rendono spenta, quindi tra il bianco ed il nero passando per il grigio a seconda della brillantezza.</p>
@@ -338,26 +338,28 @@ In chimica si utilizza una tecnica di analisi detta test della fiamma (o saggio 
 <li>il colore grigio si esprime impostando una qualsiasi tonalità, saturazione a zero e valore medio di brillantezza: (47, 0, 50);</li>
 </ul>
 <p>La facilità d&rsquo;uso di questo modello è dovuta al fatto che, una volta scelta la tonalità, ad esempio il rosso, è facile ottenere un rosso forte e carico impostando valori alti di saturazione e brillantezza; viceversa, è altrettanto intuitivo ottenere un colore rosa scuro (che è un rosso pallido) impostando valori bassi di saturazione e brillantezza.</p>
-<p>Il modello <strong>Hue-Saturation-Lightness</strong>, conosciuto anche come <strong>Hue-Saturation-Intensity</strong> è un modello computerizzato molto simile al modello HSB, ha la stessa forma e le stesse componenti <strong>H</strong> per la tinta del colore ed <strong>S</strong> per la saturazione. Cambia l&rsquo;ultima componente, sostituita dal valore di luminosità <strong>L</strong>, che ha la precedenza sulla saturazione S. Se L è un valore alto, il colore risultante è bianco, non importa la saturazione espressa.</p>
-<p>Il modello <strong>Hue-Whiteness-Blackness</strong> è un modello computerizzato molto simile ai due precedenti, ha la stessa forma, conserva la componente <strong>H</strong> per la tinta del colore ed utilizza i valori di &ldquo;chiarezza&rdquo; e &ldquo;oscurità&rdquo;. Una volta espressa la tonalità di colore, il colore è mescolato con bianco e nero. Valori alti di oscurità portano al nero, valori alti di chiarezza portano al bianco, entrambi alti portando ad un grigio intenso.</p>
-<h3 id="impostare-il-modello-di-colori">Impostare il modello di colori</h3>
-<p>Solo i modelli <code>RGB</code> ed <code>HSB</code> sono implementati dalla libreria p5.js in versione <code>1.0</code>.</p>
-<p>Dalla versione <code>2.0</code> abbiamo:</p>
+<p>Il modello <strong>HSL</strong> Hue-Saturation-Lightness, conosciuto anche come <strong>HSI</strong> Hue-Saturation-Intensity è un modello computerizzato molto simile al modello HSB, ha la stessa forma e le stesse componenti <strong>H</strong> per la tinta del colore ed <strong>S</strong> per la saturazione. Cambia l&rsquo;ultima componente, sostituita dal valore di luminosità <strong>L</strong>, che ha la precedenza sulla saturazione S. Se L è un valore alto, il colore risultante è bianco, non importa la saturazione espressa.</p>
+<p>Il modello <strong>HWB</strong> Hue-Whiteness-Blackness è un modello computerizzato molto simile ai due precedenti, ha la stessa forma, conserva la componente <strong>H</strong> per la tinta del colore ed utilizza i valori di &ldquo;chiarezza&rdquo; e &ldquo;oscurità&rdquo;. Una volta espressa la tonalità di colore, il colore è mescolato con bianco e nero. Valori alti di oscurità portano al nero, valori alti di chiarezza portano al bianco, entrambi alti portando ad un grigio intenso.</p>
+<h3 id="modelli-di-colori-lab-cie-lab-lch-oklab-ed-oklch">Modelli di colori LAB (CIE LAB), LCH, OKLAB ed OKLCH</h3>
+<p>Il modello di colori <strong>LAB</strong> è un modello computerizzato basato sullo spazio di colori CIE LAB per identificare i colori. I componenti di colore di questo modello sono:</p>
 <ul>
-<li><code>RGBHDR</code>, cioè RGB ad ampio intervallo, implementato per fare uso dello spazio di colori definito da <strong>Display P3</strong>;</li>
-<li><code>HWB</code> è una variante di <code>HSB</code>;</li>
-<li><code>LAB</code> ed <code>LCH</code> per lo spazio di colori <strong>quasi</strong> percettivamente uniforme <strong>CIE LAB</strong>, gli errori sono presenti;</li>
-<li><code>OKLAB</code> ed <code>OKLCH</code> che si basano sullo spazio di colore <strong>CIE LAB</strong> e ne correggono gli errori, rendendoli realmente spazi di colore percettivamente uniformi, senza errori.</li>
+<li>L (Luminosità): da 0 (nero) a 100 (bianco);</li>
+<li>a (&ldquo;verde-rosso&rdquo;): rappresenta le componenti di verde a rosso (negativo per verde, positivo per rosso);</li>
+<li>b (&ldquo;blu-giallo&rdquo;): rappresenta le componenti di blu a giallo (negativo per blu, positivo per giallo);</li>
 </ul>
-<p>Per impostare un modello di colori, è necessario utilizzare la funzione <code>colorMode</code>, che prende come parametro una costante rappresentativa del modello da utilizzare. Le costanti sono le seguenti:</p>
+<p>Il modello di colori <strong>LCH</strong> è la versione di forma cilindrica del modello LAB. I componenti di colore di questo modello sono:</p>
 <ul>
-<li><code>RGB</code>, costante che indica di utilizzare il modello RGB;</li>
-<li><code>HSB</code>, costante che indica di utilizzare il modello HSB.</li>
+<li>L (Luminosità): da 0 (nero) a 100 (bianco);</li>
+<li>C (Cromaticità): indica quanto un colore è saturo o vivace;</li>
+<li>H (Hue): la grandezza angolare (da 0° a 360°) che rappresenta il colore (rosso, giallo, verde, blu, ecc.).</li>
 </ul>
-<p>Un esempio d&rsquo;uso per impostare il modello di colori da utilizzare è il seguente:</p>
+<p>I modelli <strong>OKLAB</strong> e <strong>OKLCH</strong> sono modelli percettivamente uniformi e vanno a correggere gli errori di progettazione dei modelli LAB e LCH. Utilizzano le stesse componenti di colore dei modelli LAB e LCH, ma i colori risultanti sono ovviamente differenti.</p>
+<h2 id="utilizzare-i-colori-ed-i-modelli-di-colore-in-p5js">Utilizzare i colori ed i modelli di colore in p5.js</h2>
+<h3 id="impostare-il-modello-di-colori-in-p5js">Impostare il modello di colori in p5.js</h3>
+<p>Solo i modelli <code>RGB</code> ed <code>HSB</code> sono implementati dalla libreria p5.js in versione <code>1.0</code>. Dalla versione <code>2.0</code> sono stati implementati gli altri spazi di colore sopra descritti, tranne CYM e CYMK.</p>
+<p>Per impostare un modello di colori, è necessario utilizzare la funzione <code>colorMode</code>, che prende come parametro una costante rappresentativa del nome del modello di colori da utilizzare.Un esempio d&rsquo;uso è il seguente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>colorMode(RGB);
-</span></span></code></pre></div><h2 id="disegnare-testi-e-figure-colorati">Disegnare testi e figure colorati</h2>
-<h3 id="usare-un-colore-di-sfondo">Usare un colore di sfondo</h3>
+</span></span></code></pre></div><h3 id="usare-un-colore-di-sfondo">Usare un colore di sfondo</h3>
 <p>Fin&rsquo;ora abbiamo utilizzato la funzione <code>background</code> per impostare lo sfondo. Questa funzione prevede differenti modalità per indicare il colore di sfondo. La modalità tipica è di utilizzare tre parametri per indicare il colore nel modello di colori utilizzato.</p>
 <p>Ad esempio, per impostare uno sfondo rosso &ldquo;acceso&rdquo;, usando il modello di colori <strong>HSB</strong>, si utilizza il seguente codice:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>colorMode(HSB);
