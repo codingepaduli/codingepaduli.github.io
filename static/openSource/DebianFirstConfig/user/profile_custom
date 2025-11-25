@@ -172,8 +172,8 @@ fi
 
 if [[ -n "$GAM_HOME" && -d "$GAM_HOME" ]]; then
     # Aggiungo Google Admin Manager al PATH
-    export PATH="$PATH:$GAM_HOME/gam7/bin"
-    alias gam="$GAM_HOME/gam7/gam"
+    export PATH="$PATH:$GAM_HOME/gam7"
+    alias gam="$GAM_HOME/gam"
 fi
 
 # NODE 
