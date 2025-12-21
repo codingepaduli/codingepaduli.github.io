@@ -6,7 +6,7 @@
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Mon, 21 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android SDK e ADB</title>
@@ -345,39 +345,25 @@
       <description>Esercizi di sistemi e reti</description>
     </item>
     <item>
-      <title>HTML Lez. 07.6 - Conversioni numeriche</title>
+      <title>HTML Lez. 07.5 - Esercizi sulle conversioni numeriche e Unicode</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_conversioninumeriche/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_conversioninumeriche/</guid>
-      <description>HTML Lez. 07.6 - Conversioni numeriche</description>
+      <description>HTML Lez. 07.5 - Esercizi sulle conversioni numeriche e Unicode</description>
     </item>
     <item>
-      <title>HTML Lez. 07.5 - Sistema Numerico Egizio</title>
-      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sistemanumericoegizio/</link>
-      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sistemanumericoegizio/</guid>
-      <description>HTML Lez. 07.5 - Sistema Numerico Egizio</description>
-    </item>
-    <item>
-      <title>HTML Lez. 07.4 - Sistemi numerici</title>
+      <title>HTML Lez. 07.4 Appendice - Codici unicode dei Sistemi numerici</title>
       <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sisteminumerici/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_sisteminumerici/</guid>
-      <description>HTML Lez. 07.4 - Sistemi numerici</description>
+      <description>HTML Lez. 07.4 Appendice - Codici unicode dei Sistemi numerici</description>
     </item>
     <item>
-      <title>HTML Lez. 07.3 - Alfabeto Ucraino</title>
-      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetoucraino/</link>
+      <title>HTML Lez. 07 Appendice - Alfabeti</title>
+      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabeti/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetoucraino/</guid>
-      <description>HTML Lez. 07.3 - Alfabeto Ucraino</description>
-    </item>
-    <item>
-      <title>HTML Lez. 07.2 - Alfabeto Russo</title>
-      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetorusso/</link>
-      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetorusso/</guid>
-      <description>HTML Lez. 07.2 - Alfabeto Russo</description>
+      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabeti/</guid>
+      <description>HTML Lez. 07 Appendice - Alfabeti</description>
     </item>
     <item>
       <title>HTML Lez. 07 A - Combinazioni Unicode</title>
@@ -385,13 +371,6 @@
       <pubDate>Sat, 16 Mar 2024 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_appendice_combinazioni/</guid>
       <description>HTML Lez. 07 A - Combinazioni Unicode</description>
-    </item>
-    <item>
-      <title>HTML Lez. 07.1 - Alfabeto Greco</title>
-      <link>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</link>
-      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/html/codificaunicode_exe_alfabetogreco/</guid>
-      <description>HTML Lez. 07.1 - Alfabeto Greco</description>
     </item>
     <item>
       <title>HTML Lez. 07 - Codifica Unicode, HTML entities, emoji</title>
@@ -473,23 +452,23 @@
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
     </item>
     <item>
-      <title>Link interessanti</title>
-      <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/others/</guid>
-      <description>Set di link interessanti</description>
-    </item>
-    <item>
       <title>Link relativi al coding</title>
       <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/developing/</guid>
       <description>Set di link relativi al coding</description>
+    </item>
+    <item>
+      <title>Link interessanti</title>
+      <link>http://codingepaduli.github.io/interesting/others/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/others/</guid>
+      <description>Set di link interessanti</description>
     </item>
     <item>
       <title>sql</title>
@@ -941,10 +920,10 @@
     </item>
     <item>
       <title></title>
-      <link>http://codingepaduli.github.io/coding/web/html/sistemanumericoegizio/</link>
+      <link>http://codingepaduli.github.io/coding/java/swing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/html/sistemanumericoegizio/</guid>
-      <description>&lt;h1 id=&#34;sistema-numerico-egizio&#34;&gt;Sistema numerico egizio&lt;/h1&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Simbolo Egizio&lt;/th&gt;&#xA;          &lt;th&gt;Codice Unicode&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓏺𓏺 (1)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307A&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓎆 (10)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307C&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓍢 (100)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307D&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;𓆼 (1.000)&lt;/td&gt;&#xA;          &lt;td&gt;U+1307E&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+      <guid>http://codingepaduli.github.io/coding/java/swing/</guid>
+      <description>&lt;h1 id=&#34;componenti-di-swing-in-java&#34;&gt;Componenti di Swing in Java&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;JFrame&lt;/strong&gt;: Finestra principale dell&amp;rsquo;applicazione.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JPanel&lt;/strong&gt;: Contenitore generico per organizzare altri componenti.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JButton&lt;/strong&gt;: Pulsante che può eseguire un&amp;rsquo;azione quando viene cliccato.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JLabel&lt;/strong&gt;: Etichetta per visualizzare testo o immagini.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JTextField&lt;/strong&gt;: Campo di testo a singola riga per l&amp;rsquo;input dell&amp;rsquo;utente.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JTextArea&lt;/strong&gt;: Area di testo multi-riga per l&amp;rsquo;input o la visualizzazione di testo.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JCheckBox&lt;/strong&gt;: Casella di controllo per le selezioni boolean.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ButtonGroup&lt;/strong&gt;: Raggruppa i pulsanti radio per assicurare che solo uno sia&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JRadioButton&lt;/strong&gt;: Pulsanti per scegliere una sola opzione da un gruppo.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JList&lt;/strong&gt;: Componente per visualizzare un elenco di elementi selezionabili.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JScrollPane&lt;/strong&gt;: Contenitore che fornisce barre di scorrimento per altri componenti.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JMenuBar&lt;/strong&gt;: Barra dei menu per le opzioni dell&amp;rsquo;applicazione.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JMenu&lt;/strong&gt;: Crea il singolo menu nella barra, come &amp;ldquo;File&amp;rdquo; e &amp;ldquo;Impostazioni&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JMenuItem&lt;/strong&gt;: Voci di menu.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JCheckBoxMenuItem&lt;/strong&gt;: Campo selezione multipla&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JRadioButtonMenuItem&lt;/strong&gt;: Campo selezione singola.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;costruttori-e-composizione&#34;&gt;Costruttori e composizione&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// costruttori&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JFrame frame = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JFrame(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Esempio di Swing&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuBar menuBar = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuBar();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenu fileMenu = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenu(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;File&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuItem newItem = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuItem(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Nuovo&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuItem openItem = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuItem(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Apri&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuItem exitItem = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuItem(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Esci&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JPanel panel = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JPanel();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JLayout layout = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; FlowLayout();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JLabel label = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JLabel(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Inserisci il tuo nome:&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JTextField textField = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JTextField(20);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JButton button = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JButton(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Saluta&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JTextArea textArea = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JTextArea(5, 30);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JPanel scrollpanel = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JScrollPane(textArea);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ButtonGroup buttonGroup = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; ButtonGroup();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JRadioButton option1 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JRadioButton(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Modalita light&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JRadioButton option2 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JRadioButton(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Modalita dark&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JCheckBox check1 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JCheckBox(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Opzione A&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JCheckBox check2 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JCheckBox(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Opzione B&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// composizione menu&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.add(menuBar);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.add(newItem);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.add(openItem);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.addSeparator(); &lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// Aggiungere un separatore&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.add(exitItem);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// composizione pannello&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.add(panel);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.setLayout(layout);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(label);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(textField);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(scrollpanel);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(button);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(buttonGroup);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;buttonGroup.add(option1);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;buttonGroup.add(option2);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(check1);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(check2);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// Creare una JList&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String[] names = {&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Alice&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Bob&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Charlie&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Diana&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Eva&amp;#34;&lt;/span&gt;};&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JList&amp;lt;String&amp;gt; jList = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JList&amp;lt;&amp;gt;(names);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;jList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JScrollPane scrollPaneList = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JScrollPane(jList);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(scrollPaneList);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// Rendi il frame visibile&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.setSize(400, 300);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.setVisible(&lt;span style=&#34;color:#00f&#34;&gt;true&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>
