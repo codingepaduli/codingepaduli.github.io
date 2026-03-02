@@ -11,8 +11,17 @@
     <loc>http://codingepaduli.github.io/tools/docker/</loc>
     <lastmod>2023-04-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/p5play/p5play_exe_pinball/</loc>
+    <lastmod>2025-04-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5play/p5play/</loc>
     <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato_exe_soluzione/</loc>
+    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato/</loc>
+    <lastmod>2023-11-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</loc>
     <lastmod>2022-05-21T00:00:00+00:00</lastmod>
@@ -95,7 +104,7 @@
     <loc>http://codingepaduli.github.io/coding/web/javascript/stringhe/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/coding/web/javascript/math/</loc>
+    <loc>http://codingepaduli.github.io/coding/web/javascript/expression/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/web/javascript/variabili/</loc>
@@ -191,23 +200,35 @@
     <loc>http://codingepaduli.github.io/coding/dab-coding/dabecoding-domande/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/</loc>
-    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/interesting/bookmarklets/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/interesting/educational/</loc>
-    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/categories/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/interesting/</loc>
-    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
-    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/interesting/naples/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/educational/</loc>
+    <lastmod>2026-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/interesting/others/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/interesting/developing/</loc>
+    <lastmod>2026-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/coding/</loc>
-    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
+    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/web/</loc>
+    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/tools/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
@@ -227,8 +248,8 @@
     <loc>http://codingepaduli.github.io/categories/javascript/</loc>
     <lastmod>2025-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/web/</loc>
-    <lastmod>2025-04-13T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/categories/p5play/</loc>
+    <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/categories/html/</loc>
     <lastmod>2025-03-27T00:00:00+00:00</lastmod>
@@ -259,18 +280,6 @@
   </url><url>
     <loc>http://codingepaduli.github.io/coding/shell/bash/</loc>
     <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/alohomora/</loc>
-    <lastmod>2024-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/frameremover/</loc>
-    <lastmod>2024-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/linkshower/</loc>
-    <lastmod>2024-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://codingepaduli.github.io/interesting/googlemodulichecker/</loc>
-    <lastmod>2024-10-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/gappsscript/</loc>
     <lastmod>2024-10-20T00:00:00+00:00</lastmod>
@@ -329,14 +338,11 @@
     <loc>http://codingepaduli.github.io/opensource/debian12/</loc>
     <lastmod>2023-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/p5.js/</loc>
-    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/interesting/fdroidapp/</loc>
     <lastmod>2023-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/p5play/</loc>
-    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+    <loc>http://codingepaduli.github.io/coding/web/linkp5playjs/</loc>
+    <lastmod>2023-03-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/opensource/debian/</loc>
     <lastmod>2023-02-17T00:00:00+00:00</lastmod>
@@ -515,9 +521,6 @@
     <loc>http://codingepaduli.github.io/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://codingepaduli.github.io/categories/home/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://codingepaduli.github.io/coding/web/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -525,6 +528,8 @@
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://codingepaduli.github.io/coding/java/swing/</loc>
+  </url><url>
+    <loc>http://codingepaduli.github.io/categories/home/</loc>
   </url><url>
     <loc>http://codingepaduli.github.io/tags/</loc>
   </url>

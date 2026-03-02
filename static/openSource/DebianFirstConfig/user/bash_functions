@@ -385,7 +385,7 @@ hashFile() {
     touch "$1.md5"
     md5sum "$1" > "$1.md5"
   fi
-    if [ -f "$1.sha256" ]; then
+  if [ -f "$1.sha256" ]; then
     echo "    sha256 hash exists: $1.sha256"
   else
     echo "    $(date) - Hashing (sha256) $1"
@@ -1053,7 +1053,73 @@ tagAllMp3File()  {
 # export -f tagAllMp3File
 
 ########################
-# Check files to burn  #
+# Mencoder             #
+########################
+
+# Download streamed file from mms and rtsp protocol
+## Run: downloadRstpStreaming file.ra rtsp://site/music.ra'
+downloadRstpStreaming() {
+  raFile="$1"
+  rtspURL="$2"
+  mencoder -dumpstream -dumpfile "$raFile" "$rtspURL"
+}
+
+# Convert mp4 file to avi file
+## Run: mencoderConvertMp4ToAvi file.mp4 file.avi
+mencoderConvertMp4ToAvi() {
+  mp4File="$1"
+  aviFile="$2"
+  mencoder -oac copy -ovc copy "$mp4File" -o "$aviFile"
+}
+
+# Add subtitles to file avi
+## Run: mencoderAddSubtitlesToAvi subtitles.srt fileInput.avi fileOutput.avi
+mencoderAddSubtitlesToAvi() {
+  subtitlesFile="$1"
+  aviFileInput="$2"
+  aviFileOutput="$3"
+  mencoder -oac copy -ovc xvid -xvidencopts fixed_quant=5 -sub "$subtitlesFile" -sub-bg-alpha 0 -subfont-text-scale 4 -utf8 -o "$aviFileOutput" "$aviFileInput"
+}
+
+# Mix multiple avi file in a lone avi file
+## Run: mencoderMixAviFileListInALoneAviFile fileOutput.avi part1.avi part2.avi ...
+mencoderMixAviFileListInALoneAviFile() {
+  aviFileOutput="$1"
+  shift 1
+  parts=$@
+  mencoder -oac copy -ovc copy "$parts" -o "$aviFileOutput"
+}
+
+########################
+# Screen               #
+########################
+
+screenSessionStart() {
+  screenSessionName="${1:-myScreenSession}"
+  screen -S "$screenSessionName"
+}
+
+screenSessionLs() {
+  screen -ls
+}
+
+screenSessionDetach() {
+  screenSessionName="${1:-myScreenSession}"
+  screen -S "$screenSessionName" -X detach
+}
+
+screenSessionReattach() {
+  screenSessionName="${1:-myScreenSession}"
+  screen -r "$screenSessionName"
+}
+
+screenSessionClose() {
+  screenSessionName="${1:-myScreenSession}"
+  screen -X -S "$screenSessionName" quit
+}
+
+########################
+# Check variables      #
 ########################
 
 # Check all variables are defined
@@ -1188,3 +1254,64 @@ cmatrix() {
     cls
 }
 export -f cmatrix
+
+########################
+# crontab - anacrontab #
+########################
+
+# Edit the task
+alias crontab-e='crontab -e'
+alias anacrontab-e='micro /home/io/.anacron/anacrontab'
+alias goto-anacrontab-folder='cd /home/io/.anacron'
+
+# Check the schedule configured
+alias crontab-configured-schedule-cron='cat /etc/crontab'
+alias crontab-configured-schedule-anacron='cat /etc/anacrontab'
+
+# Check the service status
+alias crontab-check-service-status-cron='systemctl status cron.service | head -n 12'
+alias crontab-check-service-status-anacron='systemctl status anacron.service | head -n 10'
+
+# Show the scheduled task that will be executed
+alias crontab-scheduled-task-hourly='run-parts -v --test /etc/cron.hourly/'
+alias crontab-scheduled-task-daily='run-parts -v --test /etc/cron.daily/'
+alias crontab-scheduled-task-weekly='run-parts -v --test /etc/cron.weekly/'
+alias crontab-scheduled-task-monthly='run-parts -v --test /etc/cron.monthly/'
+
+# Show the reference site for cron syntax
+alias help-crontab-syntax-site='echo "syntax available to https://crontab.guru/"'
+
+# Show log for cron tasks
+alias crontab-log='cat /var/log/syslog /var/log/messages | grep "cron"'
+
+########################
+#       gocryptfs      #
+########################
+
+alias montaDocumenti='/usr/bin/gocryptfs -reverse -passfile .gocryptfs_password  $HOME/goCryptFS-InChiaro $HOME/Nextcloud/Documenti'
+
+alias montaDocumentiInCondivisione='/usr/bin/gocryptfs -reverse -sharedstorage -passfile .gocryptfs_password  $HOME/goCryptFS-InChiaro $HOME/Nextcloud/Documenti'
+
+alias smontaDocumenti='fusermount -u $HOME/Nextcloud/Documenti'
+
+alias infoDocumenti='gocryptfs -info $HOME/Nextcloud/Documenti'
+
+alias montaDocumentiCriptati='gocryptfs -sharedstorage -passfile gocryptfs_password $HOME/Nextcloud/Documenti $HOME/goCryptFS-InChiaro'
+
+# Per condividere la stessa directory su due macchine:
+# Use -sharedstorage for sharing between real and remote machine
+# See https://github.com/rfjakob/gocryptfs/issues/525
+
+# Per condividere la stessa directory su macchina virtuale e far
+# si che l'utente vi possa accedere:
+# https://askubuntu.com/questions/481559/how-to-automatically-mount-a-folder-and-change-ownership-from-root-in-virtualbox
+# 1a. Avvia la macchina virtuale ed esegui il comando:
+#     sudo mount -t vboxsf -o uid=1000,gid=1000 /vbox/folder /home/user/dir
+# 1b. Aggiungi la cartella condivisa alla macchina virtuale con l'opzione automount.
+# 2b. Avvia la macchina virtuale ed esegui il comando: 
+#       cat /etc/mtab | grep /home/user/dir
+#     che restituisce una linea simile:
+#       /home/user/dir /media/userdir vboxsf rw,nodev,relatime 0 0
+# 3b. Aggiungi la linea restituita dal comando nel file /etc/fstab avendo cura di aggiungere le seguenti opzioni: uid=<UID>,gid=<GID>,dmode=0770,fmode=0770 come nel seguente esempio:
+#       /home/user/dir /media/userdir vboxsf rw,nodev,relatime,uid=<UID>,gid=<GID>,dmode=0770,fmode=0770 0 0
+# 4b Spegnere la VM e togliere l'automount

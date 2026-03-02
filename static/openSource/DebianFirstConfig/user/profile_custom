@@ -71,6 +71,8 @@ export MY_SVN_REPO_FOLDER="$HOME/Sviluppo/SVN2"
 
 export NTFY_UUID="aa30e17e-591f-4256-b749-4b9ae0739f85"
 
+export RIPGREP_CONFIG_PATH="${XDG_CONFIG_HOME:="$HOME/.config"}/ripgreprc"
+
 # BLADE3 hashing - Set the number of threads
 export RAYON_NUM_THREADS=4
 

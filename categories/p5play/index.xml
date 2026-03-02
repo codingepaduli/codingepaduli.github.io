@@ -6,8 +6,15 @@
     <description>Recent content in P5play on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Tue, 08 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/p5play/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>p5play - Esercizio pinball</title>
+      <link>http://codingepaduli.github.io/coding/web/p5play/p5play_exe_pinball/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5play/p5play_exe_pinball/</guid>
+      <description>Esercizio pinball</description>
+    </item>
     <item>
       <title>p5play Lez. 01 - Introduzione al motore di gioco p5play</title>
       <link>http://codingepaduli.github.io/coding/web/p5play/p5play/</link>

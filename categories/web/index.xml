@@ -6,14 +6,35 @@
     <description>Recent content in Web on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>p5play - Esercizio pinball</title>
+      <link>http://codingepaduli.github.io/coding/web/p5play/p5play_exe_pinball/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5play/p5play_exe_pinball/</guid>
+      <description>Esercizio pinball</description>
+    </item>
     <item>
       <title>p5play Lez. 01 - Introduzione al motore di gioco p5play</title>
       <link>http://codingepaduli.github.io/coding/web/p5play/p5play/</link>
       <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/p5play/p5play/</guid>
       <description>Introduzione al motore di gioco p5play</description>
+    </item>
+    <item>
+      <title>p5.js Lez. 07.10 - Soluzione progetto Impiccato</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato_exe_soluzione/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato_exe_soluzione/</guid>
+      <description>Implementazione di un videogioco in stile &amp;lsquo;Impiccato&amp;rsquo;</description>
+    </item>
+    <item>
+      <title>p5.js Lez. 07.9 - Progetto &#34;Impiccato&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato/</guid>
+      <description>Requisiti del progetto &amp;ldquo;Impiccato&amp;rdquo;</description>
     </item>
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
@@ -206,9 +227,9 @@
     </item>
     <item>
       <title>JavaScript Lez. 04 - Approfondimento - Espressioni matematiche</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
+      <link>http://codingepaduli.github.io/coding/web/javascript/expression/</link>
       <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/expression/</guid>
       <description>Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche</description>
     </item>
     <item>

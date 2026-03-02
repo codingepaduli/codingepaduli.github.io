@@ -263,14 +263,14 @@ sia Chrome, sia Safari, per citare i browser più conosciuti, garantiscono nel t
 <li><strong>sloppy</strong>: una modalità che permette che alcuni errori non vengano segnalati, ma ignorati silenziosamente, portando a malfunzionamenti non semplici da individuare; Questa modalità è quella applicata in maniera predefinita;</li>
 <li><strong>strict</strong>: una modalità che segnala tutti gli errori e che rende più rigida e chiara l&rsquo;esecuzione degli script. Per attivarla, è necessario inserire, all&rsquo;inizio di ogni script e di ogni funzione, la seguente istruzione:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#009c00">&#34;use strict&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#009c00">&#34;use strict&#34;</span>;
 </span></span></code></pre></div><p>Come per la scrittura di pagine web, anche per la stesura di programmi JavaScript si consiglia di configurare correttamente il proprio editor di testo o il proprio strumento di sviluppo, oppure, di utilizzare soluzioni a più ampio raggio come
 <a href="/tools/editorconfig/" title="Link ad EditorConfig su Wikipedia">EditorConfig</a> <!-- TODO: impostare il link a Wikipedia -->,
 in modo da poter condividere le impostazioni di codifica (e di scrittura dei documenti di testo) con l&rsquo;intero gruppo di lavoro o nell&rsquo;intera azienda.</p>
 <p>Ancor di più, si consiglia l&rsquo;uso di strumenti per la verifica del codice sorgente, in modo da individuare e correggere eventuali errori non rilevati dal programmatore.</p>
 <h3 id="istruzione-alert-per-messaggi-allutente">Istruzione <code>alert()</code> per messaggi all&rsquo;utente</h3>
 <p>L&rsquo;istruzione più conosciuta di JavaScript è <code>alert()</code>, che permette di mostrare un messaggio all&rsquo;utente, come nell&rsquo;esempio di seguito:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#009c00">&#34;use strict&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#009c00">&#34;use strict&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>alert(<span style="color:#009c00">&#34;Hello World!!&#34;</span>);
 </span></span></code></pre></div><p>Come si può notare, il messaggio &ldquo;Hello World!!&rdquo; è racchiuso tra doppi apici. Sono poi presenti delle parentesi tonde che racchiudono il tutto.</p>
@@ -287,11 +287,11 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 <li>i commenti che occupano più righe, si inseriscono tra le sequenze di caratteri <code>/*</code> e <code>*/</code>. È importante porre attenzione a non inserire spazi tra le sequenze di caratteri indicati. Una volta inserita la sequenza di inizio commento <code>/*</code>, tutti i caratteri seguenti, anche sulle righe successive, saranno parte del commento, per cui è obbligatorio chiudere il commento inserendo la sequenza di fine commento <code>*/</code>.</li>
 </ul>
 <p>Un esempio di script che fa uso di commenti è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#009c00">&#39;use strict&#39;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// commento su una rigida
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">/*
 </span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">  commento su
 </span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">  più righe
@@ -307,37 +307,37 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 <h3 id="script-inline">Script inline</h3>
 <p>Per inserire uno script <strong>inline</strong>, lo si può allegare nelle etichette HTML, ove previsto dalle specifiche;</p>
 <p>Si supponga, ad esempio, di voler associare al <code>click</code> su un pulsante, realizzato tramite l&rsquo;etichetta <code>button</code>, uno script (composto da una sola istruzione) <code>alert('Script contenuto inline');</code>. Il codice risultante sarà il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;button onclick=<span style="color:#009c00">&#34;alert(&#39;Script contenuto inline&#39;);&#34;</span>&gt;Clicca&lt;/button&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;button onclick=<span style="color:#009c00">&#34;alert(&#39;Script contenuto inline&#39;);&#34;</span>&gt;Clicca&lt;/button&gt;
 </span></span></code></pre></div><p>Si nota che nella stessa riga di codice è presente sia il codice HTML sia il codice JavaScript (inline).</p>
 <h3 id="script-nella-pagina-html">Script nella pagina HTML</h3>
 <p>Può essere difficoltoso e inopportuno, per questioni di leggibilità del codice, inserire script complessi in modalità <strong>inline</strong>. L&rsquo;etichetta <code>script</code> è ideata proprio allo scopo di contenere codice JavaScript. Di seguito un esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>&lt;script&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>&lt;script&gt;
 </span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;use strict&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">// messaggio all&#39;utente
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>  alert(<span style="color:#009c00">&#34;script contenuto nella pagina web&#34;</span>);
+</span></span></span><span style="display:flex;"><span>  alert(<span style="color:#009c00">&#34;script contenuto nella pagina web&#34;</span>);
 </span></span><span style="display:flex;"><span>&lt;/script&gt;
 </span></span></code></pre></div><h3 id="script-in-file-esterno">Script in file esterno</h3>
 <p>Generalmente è consigliato separare il codice HTML dal codice JavaScript, per cui, rispetto alla pagina web, il codice JavaScript è contenuto in un file esterno, tipicamente con estensione <code>.js</code>.  Per includere nella pagina web uno script contenuto in un file esterno, si utilizza l&rsquo;etichetta <code>script</code>, specificando nell&rsquo;attributo <code>src</code> il percorso o l&rsquo;indirizzo del file esterno. È possibile indicare due tipi di riferimenti:</p>
 <ul>
 <li><strong>Riferimenti assoluti</strong>: La pagina web individua i file JavaScript utilizzando un percorso completo, indicando il sito web, il percorso ed il file. Un esempio è il seguente:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://sitoweb.com/libs/script.js&#34;</span>&gt;&lt;/script&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://sitoweb.com/libs/script.js&#34;</span>&gt;&lt;/script&gt;
 </span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://sitoweb.com/libs/altroScript.js&#34;</span>&gt;&lt;/script&gt;
 </span></span></code></pre></div><ul>
 <li><strong>Riferimenti relativi</strong>: La pagina web individua i file JavaScript utilizzando un percorso relativo alla posizione della pagina stessa. Un esempio è il seguente:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;script.js&#34;</span>&gt;&lt;/script&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;script.js&#34;</span>&gt;&lt;/script&gt;
 </span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;./libs/altroScript.js&#34;</span>&gt;&lt;/script&gt;
 </span></span></code></pre></div><p>I file esterni ovviamente conterranno gli script, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#009c00">&#34;use strict&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#009c00">&#34;use strict&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>alert(<span style="color:#009c00">&#34;script contenuto in un file esterno&#34;</span>);
 </span></span></code></pre></div><h3 id="progetto-in-una-cartella-locale">Progetto in una cartella locale</h3>
 <p>È possibile creare un semplice progetto locale in una cartella.</p>
 <p><img src="/static/coding/web/javascript/javascript-progetto.png" alt="JavaScript - Progetto locale" title="JavaScript - Progetto locale"></p>
 <p>La pagina web contiene i riferimenti agli script:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;html lang=<span style="color:#009c00">&#34;it&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;head&gt;
 </span></span><span style="display:flex;"><span>    &lt;meta charset=<span style="color:#009c00">&#34;utf-8&#34;</span> /&gt;
@@ -355,9 +355,9 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 </span></span></code></pre></div><h2 id="deno---uno-strumento-per-lo-sviluppo">Deno - uno strumento per lo sviluppo</h2>
 <p><a href="https://deno.com/">Deno</a> è un ambiente di esecuzione per JavaScript, TypeScript, and WebAssembly che permette la compilazione, ovvero la creazione di programmi eseguibili a partire dai file sorgenti. Oltre alla compilazione, permette il controllo della qualità del codice, segnalando pratiche scorrette o potenziali errori, permette la generazione della documentazione a partire dai file sorgenti, permette la formattazione del codice secondo le linee guida consigliate ed adottate dalla comunità di sviluppo.</p>
 <p>La compilazione di uno script <code>script.js</code> (attenzione all&rsquo;estensione <code>.js</code>) in un programma eseguibile chiamato <code>programma.exe</code> avviene eseguendo il comando:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno compile --output programma.exe script.js
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno compile --output programma.exe script.js
 </span></span></code></pre></div><p>L&rsquo;output del programma è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Compile file:///home/user/script.js to programma.exe
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Compile file:///home/user/script.js to programma.exe
 </span></span></code></pre></div><p>Per utilizzare alcune funzionalità è necessario specificare in fase di compilazione i permessi da richiedere, in particolare:</p>
 <ul>
 <li><code>--allow-read</code> permette la lettura del file-system;</li>
@@ -367,19 +367,19 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 <li><code>--allow-sys</code> permette l&rsquo;accesso alle informazioni del sistema operativo;</li>
 </ul>
 <p>Il comando per compilare uno script specificando la lista di permessi sopra indicata diventa quindi il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno compile --allow-read --allow-write --allow-net --allow-sys --allow-env --output programma.exe script.js
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno compile --allow-read --allow-write --allow-net --allow-sys --allow-env --output programma.exe script.js
 </span></span></code></pre></div><p>La formattazione di uno script <code>script.js</code> (attenzione all&rsquo;estensione <code>.js</code>) secondo le linee guida consigliate ed adottate dalla comunità di sviluppo avviene eseguendo il comando:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno fmt script.js
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno fmt script.js
 </span></span></code></pre></div><p>Il controllo della qualità del codice e la segnalazione di pratiche scorrette e potenziali errori presenti di uno script <code>script.js</code> (attenzione all&rsquo;estensione <code>.js</code>) avviene eseguendo il comando:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno lint script.js
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno lint script.js
 </span></span></code></pre></div><p>Questo strumento segnala eventuali errori e pratiche scorrette, specificando cosa deve essere corretto, il file in cui deve avvenire la correzione ed indicativamente (cioè non precisamente) la riga e la colonna del file. Ad esempio, i seguenti messaggi segnalano un primo errore alla riga 1, colonna 4 ed un secondo errore alla riga 5, colonna 6:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>`var` keyword is not allowed
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>`var` keyword is not allowed
 </span></span><span style="display:flex;"><span>at file:///home/user/hello.js:1:4
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>`a` is never used
 </span></span><span style="display:flex;"><span>at file:///home/user/hello.js:5:6
 </span></span></code></pre></div><p>La generazione della documentazione in formato HTML a partire da uno script <code>script.js</code> (attenzione all&rsquo;estensione <code>.js</code>) avviene eseguendo il comando:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno doc --html --name=<span style="color:#009c00">&#34;Il mio programma&#34;</span> script.js
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deno doc --html --name=<span style="color:#009c00">&#34;Il mio programma&#34;</span> script.js
 </span></span></code></pre></div><p>Questo comando genera una cartella <code>docs</code> contenente il file HTML <code>index.html</code> che è l&rsquo;indice della documentazione generata.</p>
 
     </div>
@@ -421,7 +421,7 @@ in modo da poter condividere le impostazioni di codifica (e di scrittura dei doc
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

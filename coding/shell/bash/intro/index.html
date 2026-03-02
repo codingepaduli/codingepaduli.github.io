@@ -241,7 +241,7 @@
       <h1 id="esercizi-in-bash">Esercizi in bash</h1>
 <h2 id="script-colorati">Script colorati</h2>
 <p>Lo schema per usare i colori è:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\033[STYLE;COLORE_TXT;COLORE_BACKm Qui va inserito il testo. &#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\033[STYLE;COLORE_TXT;COLORE_BACKm Qui va inserito il testo. &#34;</span>
 </span></span></code></pre></div><p>Per compatibilita, <code>\033</code> in <code>sh</code> corrisponde a <code>\E</code> di <code>bash</code>.</p>
 <p>I valori applicabili per la variabile<code>STYLE</code> sono:</p>
 <ul>
@@ -315,9 +315,9 @@
 </table>
 <p>Se al termine si vuole ripristinare lo stile predefinito allora
 è necessario specificarlo applicando un secondo stile <code>\033[0m</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\033[STYLE;COLORE_TXT;COLORE_BACKm Testo colorato \033[0m Testo normale&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\033[STYLE;COLORE_TXT;COLORE_BACKm Testo colorato \033[0m Testo normale&#34;</span>
 </span></span></code></pre></div><p>Per impostare il terminale i maniera predefinita si può impostare la variabile <code>PS1</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PS1=<span style="color:#009c00">&#39;\033[0;33;45m prompt_voluto \033[0m &gt;]&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PS1=<span style="color:#009c00">&#39;\033[0;33;45m prompt_voluto \033[0m &gt;]&#39;</span>
 </span></span><span style="display:flex;"><span>export PS1
 </span></span></code></pre></div><p>Esempio di script per l&rsquo;uso dei colori nel terminale:</p>
 <p><a href="/static/coding/shell/bash/script_colorati.sh" title="Script colorati">script_colorati.sh</a>.</p>
@@ -352,14 +352,14 @@
 <h2 id="seleziona-righe">Seleziona righe</h2>
 <p>Si realizzi uno script <code>seleziona_righe.sh</code> che, dato un file di testo esistente <code>elenco.txt</code>, visualizza la riga di tale file che viene lessicograficamente per seconda.</p>
 <p>Ad esempio se il contenuto di un file elenco è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>valeria
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>valeria
 </span></span><span style="display:flex;"><span>aldo
 </span></span><span style="display:flex;"><span>roberta
 </span></span><span style="display:flex;"><span>bruno
 </span></span><span style="display:flex;"><span>sandro
 </span></span><span style="display:flex;"><span>paola
 </span></span></code></pre></div><p>il comando deve creare il file nominativo con il seguente contenuto:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>bruno
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>bruno
 </span></span></code></pre></div><p>Tale script dovrà inoltre prendere come argomento di input il nome di un file non esistente, e creare questo file che deve essere formato dalle prime 3 righe del file <code>elenco.txt</code> e dalle ultime 2 righe del file <code>lista.txt</code>. Non devono essere usati file temporanei.</p>
 <ul>
 <li><a href="/static/coding/shell/bash/seleziona_righe.sh" title="Seleziona righe">seleziona_righe.sh</a>.</li>
@@ -372,9 +372,9 @@
 <p>E&rsquo; OBBLIGATORIO usare la struttura di controllo case (e NON l’if).
 L&rsquo;output deve essere stampato sia su più righe, che su un&rsquo;unica riga.</p>
 <p>Esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>$ ./stringa_da_cellulare.sh A S T N O B
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>$ ./stringa_da_cellulare.sh A S T N O B
 </span></span></code></pre></div><p>L&rsquo;output deve essere:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>output: 0 6 6 4 4 0
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>output: 0 6 6 4 4 0
 </span></span></code></pre></div><ul>
 <li><a href="/static/coding/shell/bash/stringa_da_cellulare.sh" title="Stringa da cellulare">stringa_da_cellulare.sh</a>.</li>
 </ul>
@@ -386,9 +386,9 @@ L&rsquo;output deve essere stampato sia su più righe, che su un&rsquo;unica rig
 <h2 id="controlla-utente">Controlla utente</h2>
 <p>Si realizzi uno script <code>controlla_utenti_loggati.sh</code> che prenda come parametro <code>n</code> (gli ultimi n accessi al sistema) ed <code>UserName</code> (l’utente), controlli se l’utente <code>UserName</code> esiste (quindi il suo UserName è contenuto all’interno del file <code>/etc/passwd</code>) e, nel caso esista, controlli se risulta tra gli ultimi <code>n</code> utenti collegati al sistema (<code>who | tail --lines=$n</code> visualizza gli ultimi).</p>
 <p>Esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>$ ./controlla.sh 5 io
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>$ ./controlla.sh 5 io
 </span></span></code></pre></div><p>L&rsquo;output deve essere:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>L’utente UserName esiste ed è collegato al sistema.
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>L’utente UserName esiste ed è collegato al sistema.
 </span></span></code></pre></div><ul>
 <li><a href="/static/coding/shell/bash/controlla_utenti_loggati.sh" title="Controlla utente loggato">controlla_utenti_loggati.sh</a>.</li>
 </ul>
@@ -428,7 +428,7 @@ L&rsquo;output deve essere stampato sia su più righe, che su un&rsquo;unica rig
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

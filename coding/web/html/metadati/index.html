@@ -251,10 +251,10 @@
 </ul>
 <p>Gli elementi &ldquo;in linea&rdquo; sono pochi, tra questi troviamo l&rsquo;etichetta della data e dell&rsquo;ora, tutte le etichette di formattazione del carattere, e poche altre.</p>
 <p>L&rsquo;etichetta <code>span</code> è la classica etichetta &ldquo;in linea&rdquo;. Definisce un contenitore generico utilizzato per raggruppare tipicamente porzioni di testo senza andare a capo ed occupa solo lo spazio necessario per il suo contenuto. La si utilizza molto per stilizzare la pagina o per identificare una porzione di testo. Un esempio d&rsquo;uso è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p&gt;Questo prodotto arriverà tra &lt;span class=<span style="color:#009c00">&#34;seleziona&#34;</span>&gt;12 giorni&lt;/span&gt;.&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p&gt;Questo prodotto arriverà tra &lt;span class=<span style="color:#009c00">&#34;seleziona&#34;</span>&gt;12 giorni&lt;/span&gt;.&lt;/p&gt;
 </span></span></code></pre></div><p>Gli elementi &ldquo;di blocco&rdquo; sono tutte le etichette di formattazione del paragrafo, le etichette multimediali, quelle di struttura, quelle dei moduli di invio dati.</p>
 <p>L&rsquo;etichetta <code>div</code> è la classica etichetta &ldquo;di blocco&rdquo;. Definisce un contenitore generico utilizzato per raggruppare altri elementi. Lo si utilizza molto per stilizzare meglio la pagina. Un esempio d&rsquo;uso è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;div&gt;La descrizione del prodotto è ...&lt;/div&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;div&gt;La descrizione del prodotto è ...&lt;/div&gt;
 </span></span></code></pre></div><p>Il flusso di layout è modificabile attraverso i CSS, che permettono di specificare se e quando andare a capo, se occupare solo lo spazio necessario o in che percentuale, ecc..</p>
 <h2 id="struttura-basilare">Struttura basilare</h2>
 <p>La struttura basilare di una pagina web è definita dalle seguenti etichette HTML:</p>
@@ -272,7 +272,7 @@
 <p>Un esempio di struttura di una pagina web che utilizza queste etichette è la seguente:</p>
 <p><img src="/static/coding/web/html/webPageFullStructure.png" alt="Esempio di struttura di una pagina web" title="Esempio di struttura di una pagina web"></p>
 <p>La struttura mostrata nell&rsquo;esempio precedente viene realizzata attraverso il codice HTML seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;html&gt;
 </span></span><span style="display:flex;"><span>  &lt;head&gt;
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- metadati obbligatori, in questo ordine --&gt;</span>
@@ -354,7 +354,7 @@
 <li>il titolo del documento.</li>
 </ol>
 <p>Il seguente codice, contenente i metadati obbligatori e comprensivo dell&rsquo;etichetta <code>head</code>, è da includere in tutte le pagine web:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;head&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;head&gt;
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- metadati obbligatori, vanno nelle prime posizioni --&gt;</span>
 </span></span><span style="display:flex;"><span>    &lt;meta charset=<span style="color:#009c00">&#34;UTF-8&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;meta name=<span style="color:#009c00">&#34;viewport&#34;</span> content=<span style="color:#009c00">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
@@ -364,14 +364,14 @@
 <p>Tra le varie informazioni facoltative che si possono aggiungere sulla pagina abbiamo: autore, descrizione, argomento trattato, ecc&hellip;</p>
 <p>Queste informazioni sono descritte dall&rsquo;etichetta <code>meta</code> che ha come attributi <code>name</code> e <code>content</code>. In pratica ogni etichetta <code>meta</code> permette di aggiungere una coppia chiave-valore, in cui la chiave (definite con l&rsquo;attributo <code>name</code>) indica la proprietà del documento (autore, descrizione, &hellip;) alla quale è assegnato il valore (definito per mezzo dell&rsquo;attributo <code>content</code>).</p>
 <p>Di seguito un esempio di metadati facoltativi, da includere nell&rsquo;etichetta <code>head</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- altri metadati della pagina html --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- altri metadati della pagina html --&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;meta name=<span style="color:#009c00">&#34;author&#34;</span> content=<span style="color:#009c00">&#34;Bill Gates&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;meta name=<span style="color:#009c00">&#34;description&#34;</span> content=<span style="color:#009c00">&#34;Pagina con spiegazione sui metadati&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;meta name=<span style="color:#009c00">&#34;subject&#34;</span> content=<span style="color:#009c00">&#34;Linguaggio HTML&#34;</span>&gt;
 </span></span></code></pre></div><h3 id="informazioni-per-i-social">Informazioni per i social</h3>
 <p>Le informazioni per i social network sono descritte attraverso l&rsquo;Open Graph protocol, a cui si rimanda per approfondimenti.</p>
 <p>I social estraggono le informazioni di una pagina web dalle seguenti chiavi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!--indica il contenuto che si condivide, scegliendo tra:
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!--indica il contenuto che si condivide, scegliendo tra:
 </span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">    website, article o video.movie --&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;og:type&#34;</span> content=<span style="color:#009c00">&#34;website&#34;</span>&gt;
 </span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!--indica il linguaggio utilizzato --&gt;</span>
@@ -384,7 +384,7 @@
 </span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;og:image:alt&#34;</span> content=<span style="color:#009c00">&#34;Descrizione immagine&#34;</span>&gt;
 </span></span></code></pre></div><p>Twitter fa eccezione, perché usa le Twitter Card, una tecnologia proprietaria, a cui si rimanda per approfondimenti.</p>
 <p>Twitter estrae le informazioni di una pagina web dalle seguenti chiavi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;meta name=<span style="color:#009c00">&#34;twitter:creator&#34;</span> content=<span style="color:#009c00">&#34;@account_twitter&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;meta name=<span style="color:#009c00">&#34;twitter:creator&#34;</span> content=<span style="color:#009c00">&#34;@account_twitter&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;twitter:title&#34;</span> content=<span style="color:#009c00">&#34;Page Title&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;twitter:image&#34;</span> content=<span style="color:#009c00">&#34;https://example.com/image.jpg&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#009c00">&#34;twitter:description&#34;</span> content=<span style="color:#009c00">&#34;Descrizione pagina&#34;</span>&gt;
@@ -393,7 +393,7 @@
 <p>Altre informazioni sulla pagina web sono invece le risorse collegate, come ad esempio la pagina web della licenza dei contenuti (copyright), la pagina web relativa agli autori del documento, le pagine web collegate nella serie di articoli (se la pagina web fa parte di una serie di articoli, si possono indicare il primo e l&rsquo;ultimo articolo della serie, l&rsquo;articolo precedente e successivo nella serie), la pagina web collegate nella struttura gerarchica (se si ha una struttura ad albero, si può indicare la pagina web &ldquo;radice&rdquo; dell&rsquo;albero), si può indicare l&rsquo;icona ad alta risoluzione.</p>
 <p>Queste risorse sono indicate nell&rsquo;etichetta <code>link</code> che ha come attributi <code>rel</code> e <code>href</code>. In pratica ogni etichetta <code>link</code> permette di aggiungere una coppia chiave-valore, in cui la chiave (definita con l&rsquo;attributo <code>rel</code>) indica quale risorsa si vuole collegare ed i valore (definito con l&rsquo;attributo <code>href</code>) indica il collegamento alla risorsa da collegare.</p>
 <p>Di seguito un esempio di metadati relativi alle risorse collegate, da includere nell&rsquo;etichetta <code>head</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Provides information about an author or another person --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Provides information about an author or another person --&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;me&#34;</span> href=<span style="color:#009c00">&#34;https://google.com/profiles/name&#34;</span> type=<span style="color:#009c00">&#34;text/html&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;me&#34;</span> href=<span style="color:#009c00">&#34;mailto:name@example.com&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;me&#34;</span> href=<span style="color:#009c00">&#34;sms:+15035550125&#34;</span>&gt;
@@ -422,7 +422,7 @@
 <p>Le icone moderne sono, invece, in formato <strong>SVG</strong>, un formato vettoriale che permette di ingrandirle o ridurle senza perdere qualità.</p>
 <p>Il formato <strong>SVG</strong> non è supportato da tutti i dispositivi, quindi alcune icone sono ancora in formato <code>PNG</code>.</p>
 <p>Alcune icone possono essere descritte nel file <code>manifest.webmanifest</code>, un file che configura il sito web come una <strong>PWA</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- 32×32 px for legacy browsers --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- 32×32 px for legacy browsers --&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;icon&#34;</span> href=<span style="color:#009c00">&#34;/favicon.ico&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Icone standard --&gt;</span>
@@ -432,7 +432,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Icona per dispositivi Apple 180×180 px --&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;link rel=<span style="color:#009c00">&#34;apple-touch-icon&#34;</span> href=<span style="color:#009c00">&#34;apple-touch-icon.png&#34;</span>&gt;
 </span></span></code></pre></div><p>Il file <code>manifest.webmanifest</code> descrive le icone da utilizzare attraverso le seguenti proprietà:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;icons&#34;</span>: [
 </span></span><span style="display:flex;"><span>    { <span style="color:#009c00">&#34;src&#34;</span>: <span style="color:#009c00">&#34;/192.png&#34;</span>, <span style="color:#009c00">&#34;type&#34;</span>: <span style="color:#009c00">&#34;image/png&#34;</span>, <span style="color:#009c00">&#34;sizes&#34;</span>: <span style="color:#009c00">&#34;192x192&#34;</span> },
 </span></span><span style="display:flex;"><span>    { <span style="color:#009c00">&#34;src&#34;</span>: <span style="color:#009c00">&#34;/512.png&#34;</span>, <span style="color:#009c00">&#34;type&#34;</span>: <span style="color:#009c00">&#34;image/png&#34;</span>, <span style="color:#009c00">&#34;sizes&#34;</span>: <span style="color:#009c00">&#34;512x512&#34;</span> }
@@ -451,7 +451,7 @@
 <p><strong>Consider adding a lang attribute to the HTML start tag to declare the language of this document</strong>: È un messaggio di avviso per indicare che l&rsquo;etichetta <code>html</code> manca dell&rsquo;attributo che indica la lingua in cui è scritta la pagina, quindi bisogna correggere con: <code>&lt;html lang=&quot;it&quot;&gt;</code>.</p>
 <p><strong>Non-space characters found without seeing a doctype first. Expected <code>&lt;!DOCTYPE html&gt;</code></strong>: Manca la prima riga di intestazione, che indica che il documento è un HTML. Deve essere aggiunta come prima riga.</p>
 <p><strong>Element head is missing a required instance of child element title</strong>: Indica che nella pagina web deve essere presente l&rsquo;etichetta <code>head</code> che a sua volta deve contenere l&rsquo;etichetta <code>title</code> come di seguito:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;head&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;head&gt;
 </span></span><span style="display:flex;"><span>    &lt;title&gt;Titolo pagina web &lt;/title&gt;
 </span></span><span style="display:flex;"><span>&lt;/head&gt;
 </span></span></code></pre></div><!-- markdownlint-disable MD033 -->
@@ -501,7 +501,7 @@
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

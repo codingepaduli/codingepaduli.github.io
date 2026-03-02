@@ -250,14 +250,14 @@
 <li><code>method</code>: indica quale metodo utilizzare per l&rsquo;invio dei dati.</li>
 </ul>
 <p>Un esempio di modulo (vuoto) è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form action=<span style="color:#009c00">&#34;www.server.com/login&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form action=<span style="color:#009c00">&#34;www.server.com/login&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;/form&gt;
 </span></span></code></pre></div><p>Il modulo realizzato nell&rsquo;esempio è un modulo vuoto, dato che non sono presenti campi di input, e non permette all&rsquo;utente l&rsquo;invio dei dati perché manca del pulsante di invio.</p>
 <h2 id="pulsanti">Pulsanti</h2>
 <p>I pulsanti sono realizzati utilizzando l&rsquo;etichetta <code>button</code> che contiene il testo da mostrare all&rsquo;utente.</p>
 <p>Un esempio di codice HTML che genera un pulsante è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;button&gt;Cliccami&lt;/button&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;button&gt;Cliccami&lt;/button&gt;
 </span></span></code></pre></div><p>Gli attributi principali previsti per questa etichetta sono:</p>
 <ul>
 <li>
@@ -276,7 +276,7 @@
 </li>
 </ul>
 <p>Ad esempio, se vogliamo realizzare un modulo che invii i dati ad uno dei motori di ricerca conosciuti, allora possiamo creare più pulsanti, ognuno con l&rsquo;azione di invi dati verso uno specifico motore di ricerca, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form&gt;
 </span></span><span style="display:flex;"><span>    &lt;button type=<span style="color:#009c00">&#34;submit&#34;</span> formaction=<span style="color:#009c00">&#34;www.google.com/search?q=HTML&#34;</span>&gt;Invia a Google&lt;/button&gt;
 </span></span><span style="display:flex;"><span>    &lt;button type=<span style="color:#009c00">&#34;submit&#34;</span> formaction=<span style="color:#009c00">&#34;www.duckduckgo.com/search?q=HTML&#34;</span>&gt;Invia a DuckDuckGo&lt;/button&gt;
 </span></span><span style="display:flex;"><span>    &lt;button type=<span style="color:#009c00">&#34;submit&#34;</span> formaction=<span style="color:#009c00">&#34;www.bing.com/search?q=HTML&#34;</span>&gt;Invia a Bing&lt;/button&gt;
@@ -285,10 +285,10 @@
 <p><img src="/static/coding/web/html/form-buttons.png" alt="Pulsanti del form" title="Pulsanti del form"></p>
 <h2 id="descrizione-dei-campi">Descrizione dei campi</h2>
 <p>Ogni campo in cui l&rsquo;utente inserisce i dati deve essere corredato da una descrizione, realizzata attraverso l&rsquo;etichetta <code>label</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label&gt;Inserisci il nome utente:&lt;/label&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label&gt;Inserisci il nome utente:&lt;/label&gt;
 </span></span></code></pre></div><p>Per rafforzare il legame tra la descrizione ed il campo di input, è buona regola la creazione di un identificativo per il campo di input e l&rsquo;inserimento di questo identificativo nell&rsquo;attributo <code>for</code> dell&rsquo;etichetta citata.</p>
 <p>Ad esempio, supponendo che l&rsquo;identificativo del campo sia <code>nome</code>, allora l&rsquo;etichetta sarà la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;nome&#34;</span>&gt;Inserisci il nome utente:&lt;/label&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;nome&#34;</span>&gt;Inserisci il nome utente:&lt;/label&gt;
 </span></span></code></pre></div><h2 id="campi-di-input">Campi di input</h2>
 <p>I campi di input permettono all&rsquo;utente di inserire i dati e di interagire con il modulo di invio.</p>
 <p>Tutti i campi di input devono essere inclusi in un modulo di invio dati, e quindi vanno racchiusi all&rsquo;interno delle etichette di creazione del modulo (un <code>form</code>), in modo da indicare che appartengono a quello specifico modulo.</p>
@@ -307,13 +307,13 @@
 <li><code>disabled</code>: indica che il campo è disabilitato, quindi non sarà inviato al server.</li>
 </ul>
 <p>Un campo di input nel quale l&rsquo;utente deve inserire il proprio nome, preceduto dalla descrizione del campo, può essere creato attraverso l&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;nome&#34;</span>&gt;nome utente:&lt;/label&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;nome&#34;</span>&gt;nome utente:&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;nome&#34;</span> name=<span style="color:#009c00">&#34;nomeUtente&#34;</span> placeholder=<span style="color:#009c00">&#34;Inserisci il nome qui&#34;</span>&gt;
 </span></span></code></pre></div><p>Alcuni attributi descrivono le caratteristiche del campo e non prevedono un valore. Tra questi, la presenza dell&rsquo;attributo <code>required</code> implica l&rsquo;obbligatorietà del campo. Se l&rsquo;utente non inserisce questo dato, non è possibile inviare la richiesta al server attraverso la pagina web.</p>
 <p>Allo stesso modo, la sola presenza degli attributi <code>readonly</code> e <code>hidden</code> implica, rispettivamente, che il campo sia di sola lettura oppure nascosto, i dati saranno comunque inviati al server.</p>
 <p>La presenza dell&rsquo;attributo <code>disabled</code> indica che il campo è disabilitato, non sarà inviato al server e non sarà possibile all&rsquo;utente modificarlo o cliccarci sopra.</p>
 <p>Un esempio dei vari campi di input con descrizione ed attributi è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;nome&#34;</span>&gt;nome utente:&lt;/label&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;nome&#34;</span>&gt;nome utente:&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;nome&#34;</span> name=<span style="color:#009c00">&#34;nomeUtente&#34;</span> required placeholder=<span style="color:#009c00">&#34;Inserisci il nome qui (obbligatorio)&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;input name=<span style="color:#009c00">&#34;identificativo&#34;</span> hidden &gt;
@@ -336,13 +336,13 @@
 <li>un pulsante che permetta all&rsquo;utente di cancellare tutti i dati inseriti nel modulo, ripristinando i valori iniziali.</li>
 </ul>
 <p>Realizziamo quindi un modulo con le due descrizioni:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form&gt;
 </span></span><span style="display:flex;"><span>    &lt;label&gt;username&lt;/label&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    &lt;label&gt;password&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;/form&gt;
 </span></span></code></pre></div><p>Aggiungiamo i campi di testo e leghiamo la descrizione ai campi (il valore dell&rsquo;attributo <code>for</code> nella descrizione del campo deve essere uguale al valore dell&rsquo;attributo <code>id</code> presente nel campo):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form&gt;
 </span></span><span style="display:flex;"><span>    &lt;label for=<span style="color:#009c00">&#34;nome&#34;</span>&gt;username&lt;/label&gt;
 </span></span><span style="display:flex;"><span>    &lt;input placeholder=<span style="color:#009c00">&#34;inserisci il tuo username&#34;</span> name=<span style="color:#009c00">&#34;username&#34;</span> id=<span style="color:#009c00">&#34;nome&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
@@ -350,7 +350,7 @@
 </span></span><span style="display:flex;"><span>    &lt;input placeholder=<span style="color:#009c00">&#34;inserisci la password&#34;</span> name=<span style="color:#009c00">&#34;password&#34;</span> id=<span style="color:#009c00">&#34;pwd&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/form&gt;
 </span></span></code></pre></div><p>Aggiungiamo il pulsante di invio (l&rsquo;attributo <code>type</code> ha valore <code>submit</code>) ed il pulsante di cancellazione dati (l&rsquo;attributo <code>type</code> ha valore <code>reset</code>)</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;form&gt;
 </span></span><span style="display:flex;"><span>    &lt;label for=<span style="color:#009c00">&#34;nome&#34;</span>&gt;username&lt;/label&gt;
 </span></span><span style="display:flex;"><span>    &lt;input placeholder=<span style="color:#009c00">&#34;inserisci il tuo username&#34;</span> name=<span style="color:#009c00">&#34;username&#34;</span> id=<span style="color:#009c00">&#34;nome&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
@@ -382,7 +382,7 @@
 </ul>
 <p>È consigliato inserire anche la direzione del testo, soprattutto se vi è la possibilità che un utente inserisca i dati in una lingua che prevede la direzione del testo da sinistra a destra, come l&rsquo;arabo o l&rsquo;ebraico. L&rsquo;attributo <code>dir=&quot;auto&quot;</code> permette al browser di scegliere la direzione del testo per il campo.</p>
 <p>Un esempio di campo di testo con i vincoli e gli attributi descritti è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;text&#34;</span> name=<span style="color:#009c00">&#34;descrizione&#34;</span> minlenght=<span style="color:#009c00">&#34;10&#34;</span> maxlenght=<span style="color:#009c00">&#34;150&#34;</span> autocomplete=<span style="color:#009c00">&#34;on&#34;</span> dir=<span style="color:#009c00">&#34;auto&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;text&#34;</span> name=<span style="color:#009c00">&#34;descrizione&#34;</span> minlenght=<span style="color:#009c00">&#34;10&#34;</span> maxlenght=<span style="color:#009c00">&#34;150&#34;</span> autocomplete=<span style="color:#009c00">&#34;on&#34;</span> dir=<span style="color:#009c00">&#34;auto&#34;</span>&gt;
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/html/inputTesto.png" alt="Input di testo" title="Input di testo"></p>
 <h2 id="input-di-una-password">Input di una password</h2>
@@ -394,21 +394,21 @@
 <li><code>autocomplete=&quot;one-time-code&quot;</code> per suggerirgli un codice OTP (One Time Password).</li>
 </ul>
 <p>Un esempio di campo di inserimento password è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;password&#34;</span> name=<span style="color:#009c00">&#34;password&#34;</span> autocomplete=<span style="color:#009c00">&#34;current-password&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;password&#34;</span> name=<span style="color:#009c00">&#34;password&#34;</span> autocomplete=<span style="color:#009c00">&#34;current-password&#34;</span>&gt;
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/html/inputPassword.png" alt="Input di tipo password" title="Input di tipo password"></p>
 <h2 id="input-di-una-email">Input di una email</h2>
 <p>Per creare un campo di input che contenga una email è necessario indicare l&rsquo;attributo <code>type=&quot;email&quot;</code>. Si consiglia inoltre di utilizzare l&rsquo;attributo <code>inputmode=&quot;email&quot;</code> per indicare la scelta della tastiera virtuale appropriata per l&rsquo;inserimento dei dati sui dispositivi mobile e l&rsquo;attributo <code>autocomplete=&quot;email&quot;</code> per suggerimenti all&rsquo;utente nell&rsquo;inserimento della email.</p>
 <p>Un esempio di campo di inserimento per una email è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;email&#34;</span> name=<span style="color:#009c00">&#34;email&#34;</span> inputmode=<span style="color:#009c00">&#34;email&#34;</span> autocomplete=<span style="color:#009c00">&#34;email&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;email&#34;</span> name=<span style="color:#009c00">&#34;email&#34;</span> inputmode=<span style="color:#009c00">&#34;email&#34;</span> autocomplete=<span style="color:#009c00">&#34;email&#34;</span>&gt;
 </span></span></code></pre></div><h2 id="input-di-un-indirizzo-web">Input di un indirizzo web</h2>
 <p>Per creare un campo di input che contenga un indirizzo web è necessario indicare l&rsquo;attributo <code>type=&quot;url&quot;</code>. Si consiglia inoltre di utilizzare l&rsquo;attributo <code>inputmode=&quot;url&quot;</code> per indicare la scelta della tastiera virtuale appropriata (con i caratteri &ldquo;://&rdquo; e &ldquo;.&rdquo;) per l&rsquo;inserimento dei dati sui dispositivi mobile e per suggerimenti all&rsquo;utente nell&rsquo;inserimento dell&rsquo;indirizzo web utilizzando l&rsquo;attributo <code>autocomplete=&quot;url&quot;</code>.</p>
 <p>Un esempio di campo di inserimento per un indirizzo web è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;url&#34;</span> name=<span style="color:#009c00">&#34;url&#34;</span> inputmode=<span style="color:#009c00">&#34;url&#34;</span> autocomplete=<span style="color:#009c00">&#34;url&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;url&#34;</span> name=<span style="color:#009c00">&#34;url&#34;</span> inputmode=<span style="color:#009c00">&#34;url&#34;</span> autocomplete=<span style="color:#009c00">&#34;url&#34;</span>&gt;
 </span></span></code></pre></div><h2 id="input-di-un-numero-di-telefono">Input di un numero di telefono</h2>
 <p>Per creare un campo di input che contenga un numero di telefono è necessario indicare l&rsquo;attributo <code>type=&quot;tel&quot;</code>. Si consiglia inoltre di utilizzare l&rsquo;attributo <code>inputmode=&quot;tel&quot;</code> per indicare la scelta del tastierino numerico virtuale appropriato (con i caratteri &ldquo;#&rdquo;, &ldquo;*&rdquo; e &ldquo;.&rdquo;) per l&rsquo;inserimento dei dati sui dispositivi mobile e l&rsquo;attributo <code>autocomplete=&quot;tel&quot;</code> per suggerimenti all&rsquo;utente nell&rsquo;inserimento del numero di telefono.</p>
 <p>Un esempio di campo di inserimento per un numero di telefono è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;tel&#34;</span> name=<span style="color:#009c00">&#34;telephone&#34;</span> inputmode=<span style="color:#009c00">&#34;tel&#34;</span> autocomplete=<span style="color:#009c00">&#34;tel&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;tel&#34;</span> name=<span style="color:#009c00">&#34;telephone&#34;</span> inputmode=<span style="color:#009c00">&#34;tel&#34;</span> autocomplete=<span style="color:#009c00">&#34;tel&#34;</span>&gt;
 </span></span></code></pre></div><h2 id="input-numerico">Input numerico</h2>
 <p>Per creare un campo di input che contenga un numero è necessario indicare l&rsquo;attributo <code>type=&quot;number&quot;</code>.  Si consiglia inoltre di utilizzare l&rsquo;attributo <code>inputmode=&quot;numeric&quot;</code> o <code>inputmode=&quot;decimal&quot;</code> per indicare la scelta del tastierino numerico virtuale appropriato (con o senza il carattere di separazione dei decimali) per l&rsquo;inserimento dei dati sui dispositivi mobile.</p>
 <p>Un campo di input numerico può avere dei vincoli legati al numero minimo o massimo da inserire. Questi vincoli si specificano attraverso gli attributi:</p>
@@ -426,7 +426,7 @@
 <li><code>autocomplete=&quot;cc-exp&quot;</code> per suggerirgli la scadenza della carta del conto corrente.</li>
 </ul>
 <p>Un esempio di campo di inserimento numerico è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;number&#34;</span> name=<span style="color:#009c00">&#34;valore&#34;</span> min=<span style="color:#009c00">&#34;20&#34;</span> max=<span style="color:#009c00">&#34;50&#34;</span> step=<span style="color:#009c00">&#34;0.2&#34;</span> inputmode=<span style="color:#009c00">&#34;decimal&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;number&#34;</span> name=<span style="color:#009c00">&#34;valore&#34;</span> min=<span style="color:#009c00">&#34;20&#34;</span> max=<span style="color:#009c00">&#34;50&#34;</span> step=<span style="color:#009c00">&#34;0.2&#34;</span> inputmode=<span style="color:#009c00">&#34;decimal&#34;</span>&gt;
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/html/inputNumerico.png" alt="Input di tipo numerico" title="Input di tipo numerico"></p>
 <h2 id="input-di-una-data">Input di una data</h2>
@@ -448,7 +448,7 @@ Si consiglia inoltre di fornire assistenza all'utente nell'inserimento del campo
 - ``autocomplete="cc-exp"`` per suggerirgli la data di scadenza del conto corrente.
 -->
 <p>Un esempio di campo di inserimento numerico è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;date&#34;</span> name=<span style="color:#009c00">&#34;valore&#34;</span> min=<span style="color:#009c00">&#34;2020-03-05&#34;</span> max=<span style="color:#009c00">&#34;2020-06-05&#34;</span> step=<span style="color:#009c00">&#34;7&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;date&#34;</span> name=<span style="color:#009c00">&#34;valore&#34;</span> min=<span style="color:#009c00">&#34;2020-03-05&#34;</span> max=<span style="color:#009c00">&#34;2020-06-05&#34;</span> step=<span style="color:#009c00">&#34;7&#34;</span>&gt;
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/html/inputData.png" alt="Input di tipo data" title="Input di tipo data"></p>
 <h2 id="input-di-un-orario">Input di un orario</h2>
@@ -461,18 +461,18 @@ Si consiglia inoltre di fornire assistenza all'utente nell'inserimento del campo
 </ul>
 <p>L&rsquo;attributo <code>step</code> indica principalmente che in input è richiesto l&rsquo;inserimento anche dei secondi. Inoltre, indica il numero di secondi da incrementare o decrementare per i browser che visualizzano il campo di input con i due pulsanti laterali, anche se la maggior parte dei browser mostra un orologio dal quale selezionare ore, minuti e secondi.</p>
 <p>Un esempio di campo di inserimento di un orario è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;time&#34;</span> name=<span style="color:#009c00">&#34;valore&#34;</span> min=<span style="color:#009c00">&#34;20:03:05&#34;</span> max=<span style="color:#009c00">&#34;20:36:35&#34;</span> step=<span style="color:#009c00">&#34;1&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;time&#34;</span> name=<span style="color:#009c00">&#34;valore&#34;</span> min=<span style="color:#009c00">&#34;20:03:05&#34;</span> max=<span style="color:#009c00">&#34;20:36:35&#34;</span> step=<span style="color:#009c00">&#34;1&#34;</span>&gt;
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/html/inputOrario.png" alt="Input di tipo orario" title="Input di tipo orario"></p>
 <h2 id="input-di-selezione-multipla-checkbox">Input di selezione multipla &ldquo;checkbox&rdquo;</h2>
 <p>Per creare un campo di selezione multipla, contenente più voci selezionabili, è necessario creare più campi di input, tutti con l&rsquo;attributo <code>type=&quot;checkbox&quot;</code>.</p>
 <p>L&rsquo;attributo <code>checked</code> indica che la voce è pre-selezionata. L&rsquo;attributo <code>value</code> indica il valore da trasmettere se il campo è selezionato.</p>
 <p>Un esempio di campo di voce da selezionare è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;checkbox&#34;</span> id=<span style="color:#009c00">&#34;coding&#34;</span> name=<span style="color:#009c00">&#34;interest&#34;</span> value=<span style="color:#009c00">&#34;coding&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;checkbox&#34;</span> id=<span style="color:#009c00">&#34;coding&#34;</span> name=<span style="color:#009c00">&#34;interest&#34;</span> value=<span style="color:#009c00">&#34;coding&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;coding&#34;</span>&gt;Coding&lt;/label&gt;
 </span></span></code></pre></div><p>Come si può notare, la descrizione è inserita successivamente alla voce selezionabile, in modo che possa comparire a sinistra del campo;</p>
 <p>Per i campi di selezione multipla, tipicamente si sceglie che tutti i campi di input dello stesso gruppo abbiano lo stesso nome. Ad esempio, per la scelta degli interessi si ha:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;checkbox&#34;</span> id=<span style="color:#009c00">&#34;coding&#34;</span> name=<span style="color:#009c00">&#34;interest&#34;</span> value=<span style="color:#009c00">&#34;programmazione&#34;</span> checked&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;checkbox&#34;</span> id=<span style="color:#009c00">&#34;coding&#34;</span> name=<span style="color:#009c00">&#34;interest&#34;</span> value=<span style="color:#009c00">&#34;programmazione&#34;</span> checked&gt;
 </span></span><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;coding&#34;</span>&gt;Coding&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;checkbox&#34;</span> id=<span style="color:#009c00">&#34;soccer&#34;</span> name=<span style="color:#009c00">&#34;interest&#34;</span> value=<span style="color:#009c00">&#34;calcio&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;soccer&#34;</span>&gt;Calcio&lt;/label&gt;
@@ -482,7 +482,7 @@ Si consiglia inoltre di fornire assistenza all'utente nell'inserimento del campo
 <p>Per creare una selezione singola, è necessario creare più campi di input, tutti con lo stesso nome, utilizzando l&rsquo;attributo <code>type=&quot;radio&quot;</code>.</p>
 <p>Avendo tutti lo stesso nome ed essendo tutti del tipo &ldquo;radio&rdquo;, solo una voce sarà selezionabile.</p>
 <p>L&rsquo;attributo <code>checked</code> indica che la voce è pre-selezionata. L&rsquo;attributo <code>value</code> indica il valore da trasmettere per la voce scelta.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;radio&#34;</span> id=<span style="color:#009c00">&#34;voce1&#34;</span> name=<span style="color:#009c00">&#34;contatto&#34;</span> value=<span style="color:#009c00">&#34;email&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;radio&#34;</span> id=<span style="color:#009c00">&#34;voce1&#34;</span> name=<span style="color:#009c00">&#34;contatto&#34;</span> value=<span style="color:#009c00">&#34;email&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;voce1&#34;</span>&gt;email&lt;/label&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;radio&#34;</span> id=<span style="color:#009c00">&#34;voce2&#34;</span> name=<span style="color:#009c00">&#34;contatto&#34;</span> value=<span style="color:#009c00">&#34;telefono&#34;</span>&gt;
@@ -500,7 +500,7 @@ Si consiglia inoltre di fornire assistenza all'utente nell'inserimento del campo
 <p>La lista di suggerimenti è un elemento HTML separato rispetto al campo di input. L&rsquo;etichetta utilizzata per creare una lista di suggerimenti è <code>datalist</code> e deve avere l&rsquo;attributo <code>id</code> necessario ad identificarla.</p>
 <p>Il campo di input e poi legato alla lista di suggerimenti attraverso l&rsquo;attributo <code>list</code>, che deve avere lo stesso valore inserito nell&rsquo;attributo <code>id</code> della lista.</p>
 <p>Ad esempio, nell&rsquo;esempio seguente si realizza una lista di suggerimenti per la scelta del gusto di un gelato. La lista di suggerimenti ha l&rsquo;identificativo <code>gelati-suggeriti</code>. Il campo di input è legato a questi suggerimenti attraverso l&rsquo;attributo <code>list</code> che ha per valore <code>gelati-suggeriti</code> (l&rsquo;identificativo della lista di suggerimenti).</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;scelta-gelati&#34;</span>&gt;Scegli un gusto:&lt;/label&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;scelta-gelati&#34;</span>&gt;Scegli un gusto:&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;input list=<span style="color:#009c00">&#34;gelati-suggeriti&#34;</span> id=<span style="color:#009c00">&#34;scelta-gelati&#34;</span> name=<span style="color:#009c00">&#34;gusto-scelto&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;datalist id=<span style="color:#009c00">&#34;gelati-suggeriti&#34;</span>&gt;
@@ -519,7 +519,7 @@ Si consiglia inoltre di fornire assistenza all'utente nell'inserimento del campo
 <p>Gli attributi <code>name</code>, <code>required</code>, <code>readonly</code>, <code>hidden</code> e <code>disabled</code> ricoprono le stesse funzionalità  viste per i campi di input.</p>
 <p>Le voci da mostrare nel menù a tendina devono essere inserite nell&rsquo;etichetta <code>option</code>, che prevede l&rsquo;attributo <code>value</code>, il cui valore viene inviato al server.</p>
 <p>Un esempio di campo di selezione è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;auto&#34;</span>&gt;auto&lt;/label&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;auto&#34;</span>&gt;auto&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;select name=<span style="color:#009c00">&#34;car&#34;</span> id=<span style="color:#009c00">&#34;auto&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;option value=<span style="color:#009c00">&#34;volvo&#34;</span>&gt;Volvo&lt;/option&gt;
 </span></span><span style="display:flex;"><span>      &lt;option value=<span style="color:#009c00">&#34;mercedes&#34;</span>&gt;Mercedes&lt;/option&gt;
@@ -528,7 +528,7 @@ Si consiglia inoltre di fornire assistenza all'utente nell'inserimento del campo
 </span></span></code></pre></div><p>Il risultato è il seguente:</p>
 <p><img src="/static/coding/web/html/inputSelect.png" alt="Input di tipo selezione singola" title="Input di tipo selezione singola"></p>
 <p>Le varie opzioni possono essere raggruppate per categoria, dimensione o altro criterio, inserendo le varie voci nell&rsquo;etichetta <code>optgroup</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;auto&#34;</span>&gt;auto&lt;/label&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;auto&#34;</span>&gt;auto&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;select name=<span style="color:#009c00">&#34;car&#34;</span> id=<span style="color:#009c00">&#34;auto&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;optgroup label=<span style="color:#009c00">&#34;auto svedesi&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;option value=<span style="color:#009c00">&#34;volvo&#34;</span>&gt;
@@ -617,7 +617,7 @@ Si consiglia inoltre di fornire assistenza all'utente nell'inserimento del campo
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

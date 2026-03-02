@@ -6,7 +6,7 @@
     <description>Recent content in Coding e Paduli on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android SDK e ADB</title>
@@ -30,11 +30,32 @@
       <description>Docker Engine e Podman - Strumenti per gestire i container</description>
     </item>
     <item>
+      <title>p5play - Esercizio pinball</title>
+      <link>http://codingepaduli.github.io/coding/web/p5play/p5play_exe_pinball/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5play/p5play_exe_pinball/</guid>
+      <description>Esercizio pinball</description>
+    </item>
+    <item>
       <title>p5play Lez. 01 - Introduzione al motore di gioco p5play</title>
       <link>http://codingepaduli.github.io/coding/web/p5play/p5play/</link>
       <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/web/p5play/p5play/</guid>
       <description>Introduzione al motore di gioco p5play</description>
+    </item>
+    <item>
+      <title>p5.js Lez. 07.10 - Soluzione progetto Impiccato</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato_exe_soluzione/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato_exe_soluzione/</guid>
+      <description>Implementazione di un videogioco in stile &amp;lsquo;Impiccato&amp;rsquo;</description>
+    </item>
+    <item>
+      <title>p5.js Lez. 07.9 - Progetto &#34;Impiccato&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato/</guid>
+      <description>Requisiti del progetto &amp;ldquo;Impiccato&amp;rdquo;</description>
     </item>
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
@@ -227,9 +248,9 @@
     </item>
     <item>
       <title>JavaScript Lez. 04 - Approfondimento - Espressioni matematiche</title>
-      <link>http://codingepaduli.github.io/coding/web/javascript/math/</link>
+      <link>http://codingepaduli.github.io/coding/web/javascript/expression/</link>
       <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/coding/web/javascript/math/</guid>
+      <guid>http://codingepaduli.github.io/coding/web/javascript/expression/</guid>
       <description>Descrizione degli standard, degli operatori e delle operazioni matematiche per il calcolo automatico, descrizione delle precedenze degli operatori nelle espressioni matematiche</description>
     </item>
     <item>
@@ -450,25 +471,39 @@
       <description>Domande sui diagrammi a blocchi e sul coding</description>
     </item>
     <item>
+      <title>Bookmarklets</title>
+      <link>http://codingepaduli.github.io/interesting/bookmarklets/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/bookmarklets/</guid>
+      <description>Bookmarklets</description>
+    </item>
+    <item>
+      <title>Naples</title>
+      <link>http://codingepaduli.github.io/interesting/naples/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/naples/</guid>
+      <description>Naples</description>
+    </item>
+    <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
     </item>
     <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
-    </item>
-    <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
+    </item>
+    <item>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
     </item>
     <item>
       <title>sql</title>
@@ -504,34 +539,6 @@
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/shell/bash/intro/</guid>
       <description>Esercizi in bash</description>
-    </item>
-    <item>
-      <title>alohomora</title>
-      <link>http://codingepaduli.github.io/interesting/alohomora/</link>
-      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/alohomora/</guid>
-      <description>alohomora</description>
-    </item>
-    <item>
-      <title>iframe Remover</title>
-      <link>http://codingepaduli.github.io/interesting/frameremover/</link>
-      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/frameremover/</guid>
-      <description>iframe Remover</description>
-    </item>
-    <item>
-      <title>link shower</title>
-      <link>http://codingepaduli.github.io/interesting/linkshower/</link>
-      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/linkshower/</guid>
-      <description>link shower</description>
-    </item>
-    <item>
-      <title>Google Moduli checker</title>
-      <link>http://codingepaduli.github.io/interesting/googlemodulichecker/</link>
-      <pubDate>Wed, 30 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/googlemodulichecker/</guid>
-      <description>Google Moduli checker</description>
     </item>
     <item>
       <title>Google App Script</title>
@@ -616,6 +623,13 @@
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/fdroidapp/</guid>
       <description>Set di link relativi alle app su F-Droid</description>
+    </item>
+    <item>
+      <title>p5play</title>
+      <link>http://codingepaduli.github.io/coding/web/linkp5playjs/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/linkp5playjs/</guid>
+      <description>Lezioni su p5play, un motore di gioco basato su &lt;a href=&#39;http://codingepaduli.github.io/coding/web/p5js&#39;&gt;p5.js&lt;/a&gt; per il rendering grafico e su &lt;a href=&#39;https://piqnt.com/planck.js/&#39;&gt;planck.js (Box2D)&lt;/a&gt; per la fisica, nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/p5play&#39;&gt;p5play&lt;/a&gt;</description>
     </item>
     <item>
       <title>Debian GNU/Linux</title>
@@ -923,7 +937,7 @@
       <link>http://codingepaduli.github.io/coding/java/swing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/coding/java/swing/</guid>
-      <description>&lt;h1 id=&#34;componenti-di-swing-in-java&#34;&gt;Componenti di Swing in Java&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;JFrame&lt;/strong&gt;: Finestra principale dell&amp;rsquo;applicazione.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JPanel&lt;/strong&gt;: Contenitore generico per organizzare altri componenti.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JButton&lt;/strong&gt;: Pulsante che può eseguire un&amp;rsquo;azione quando viene cliccato.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JLabel&lt;/strong&gt;: Etichetta per visualizzare testo o immagini.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JTextField&lt;/strong&gt;: Campo di testo a singola riga per l&amp;rsquo;input dell&amp;rsquo;utente.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JTextArea&lt;/strong&gt;: Area di testo multi-riga per l&amp;rsquo;input o la visualizzazione di testo.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JCheckBox&lt;/strong&gt;: Casella di controllo per le selezioni boolean.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ButtonGroup&lt;/strong&gt;: Raggruppa i pulsanti radio per assicurare che solo uno sia&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JRadioButton&lt;/strong&gt;: Pulsanti per scegliere una sola opzione da un gruppo.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JList&lt;/strong&gt;: Componente per visualizzare un elenco di elementi selezionabili.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JScrollPane&lt;/strong&gt;: Contenitore che fornisce barre di scorrimento per altri componenti.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JMenuBar&lt;/strong&gt;: Barra dei menu per le opzioni dell&amp;rsquo;applicazione.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JMenu&lt;/strong&gt;: Crea il singolo menu nella barra, come &amp;ldquo;File&amp;rdquo; e &amp;ldquo;Impostazioni&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JMenuItem&lt;/strong&gt;: Voci di menu.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JCheckBoxMenuItem&lt;/strong&gt;: Campo selezione multipla&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JRadioButtonMenuItem&lt;/strong&gt;: Campo selezione singola.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;costruttori-e-composizione&#34;&gt;Costruttori e composizione&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// costruttori&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JFrame frame = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JFrame(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Esempio di Swing&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuBar menuBar = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuBar();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenu fileMenu = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenu(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;File&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuItem newItem = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuItem(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Nuovo&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuItem openItem = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuItem(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Apri&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuItem exitItem = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuItem(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Esci&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JPanel panel = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JPanel();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JLayout layout = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; FlowLayout();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JLabel label = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JLabel(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Inserisci il tuo nome:&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JTextField textField = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JTextField(20);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JButton button = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JButton(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Saluta&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JTextArea textArea = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JTextArea(5, 30);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JPanel scrollpanel = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JScrollPane(textArea);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ButtonGroup buttonGroup = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; ButtonGroup();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JRadioButton option1 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JRadioButton(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Modalita light&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JRadioButton option2 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JRadioButton(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Modalita dark&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JCheckBox check1 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JCheckBox(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Opzione A&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JCheckBox check2 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JCheckBox(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Opzione B&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// composizione menu&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.add(menuBar);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.add(newItem);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.add(openItem);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.addSeparator(); &lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// Aggiungere un separatore&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.add(exitItem);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// composizione pannello&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.add(panel);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.setLayout(layout);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(label);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(textField);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(scrollpanel);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(button);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(buttonGroup);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;buttonGroup.add(option1);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;buttonGroup.add(option2);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(check1);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(check2);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// Creare una JList&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String[] names = {&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Alice&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Bob&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Charlie&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Diana&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Eva&amp;#34;&lt;/span&gt;};&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JList&amp;lt;String&amp;gt; jList = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JList&amp;lt;&amp;gt;(names);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;jList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JScrollPane scrollPaneList = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JScrollPane(jList);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(scrollPaneList);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// Rendi il frame visibile&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.setSize(400, 300);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.setVisible(&lt;span style=&#34;color:#00f&#34;&gt;true&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;h1 id=&#34;componenti-di-swing-in-java&#34;&gt;Componenti di Swing in Java&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;JFrame&lt;/strong&gt;: Finestra principale dell&amp;rsquo;applicazione.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JPanel&lt;/strong&gt;: Contenitore generico per organizzare altri componenti.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JButton&lt;/strong&gt;: Pulsante che può eseguire un&amp;rsquo;azione quando viene cliccato.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JLabel&lt;/strong&gt;: Etichetta per visualizzare testo o immagini.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JTextField&lt;/strong&gt;: Campo di testo a singola riga per l&amp;rsquo;input dell&amp;rsquo;utente.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JTextArea&lt;/strong&gt;: Area di testo multi-riga per l&amp;rsquo;input o la visualizzazione di testo.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JCheckBox&lt;/strong&gt;: Casella di controllo per le selezioni boolean.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;ButtonGroup&lt;/strong&gt;: Raggruppa i pulsanti radio per assicurare che solo uno sia&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JRadioButton&lt;/strong&gt;: Pulsanti per scegliere una sola opzione da un gruppo.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JList&lt;/strong&gt;: Componente per visualizzare un elenco di elementi selezionabili.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JScrollPane&lt;/strong&gt;: Contenitore che fornisce barre di scorrimento per altri componenti.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JMenuBar&lt;/strong&gt;: Barra dei menu per le opzioni dell&amp;rsquo;applicazione.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JMenu&lt;/strong&gt;: Crea il singolo menu nella barra, come &amp;ldquo;File&amp;rdquo; e &amp;ldquo;Impostazioni&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JMenuItem&lt;/strong&gt;: Voci di menu.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JCheckBoxMenuItem&lt;/strong&gt;: Campo selezione multipla&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JRadioButtonMenuItem&lt;/strong&gt;: Campo selezione singola.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;costruttori-e-composizione&#34;&gt;Costruttori e composizione&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// costruttori&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JFrame frame = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JFrame(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Esempio di Swing&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuBar menuBar = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuBar();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenu fileMenu = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenu(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;File&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuItem newItem = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuItem(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Nuovo&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuItem openItem = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuItem(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Apri&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JMenuItem exitItem = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JMenuItem(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Esci&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JPanel panel = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JPanel();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JLayout layout = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; FlowLayout();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JLabel label = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JLabel(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Inserisci il tuo nome:&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JTextField textField = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JTextField(20);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JButton button = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JButton(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Saluta&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JTextArea textArea = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JTextArea(5, 30);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JPanel scrollpanel = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JScrollPane(textArea);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ButtonGroup buttonGroup = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; ButtonGroup();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JRadioButton option1 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JRadioButton(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Modalita light&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JRadioButton option2 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JRadioButton(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Modalita dark&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JCheckBox check1 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JCheckBox(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Opzione A&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JCheckBox check2 = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JCheckBox(&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Opzione B&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// composizione menu&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.add(menuBar);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.add(newItem);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.add(openItem);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.addSeparator(); &lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// Aggiungere un separatore&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fileMenu.add(exitItem);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// composizione pannello&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.add(panel);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.setLayout(layout);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(label);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(textField);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(scrollpanel);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(button);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(buttonGroup);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;buttonGroup.add(option1);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;buttonGroup.add(option2);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(check1);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(check2);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// Creare una JList&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String[] names = {&lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Alice&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Bob&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Charlie&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Diana&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#009c00&#34;&gt;&amp;#34;Eva&amp;#34;&lt;/span&gt;};&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JList&amp;lt;String&amp;gt; jList = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JList&amp;lt;&amp;gt;(names);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;jList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;JScrollPane scrollPaneList = &lt;span style=&#34;color:#00f&#34;&gt;new&lt;/span&gt; JScrollPane(jList);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;panel.add(scrollPaneList);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f00;font-style:italic&#34;&gt;// Rendi il frame visibile&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.setSize(400, 300);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;frame.setVisible(&lt;span style=&#34;color:#00f&#34;&gt;true&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

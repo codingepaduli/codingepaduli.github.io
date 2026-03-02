@@ -241,7 +241,7 @@
       <h1 id="variabili-in-processing-e-p5js">Variabili in processing e p5.js</h1>
 <p>I programmi di processing e di p5.js sono realizzati in JavaScript, quindi le costanti e le variabili si dichiarano secondo le regole del linguaggio JavaScript. Le regole di JavaScript valgono anche per le operazioni di inizializzazione, di assegnazione, per le operazioni matematiche e per qualsiasi altra regola.</p>
 <p>Tipicamente in processing e p5.js le costanti e le variabili sono dichiarate ad inizio del programma, ad esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 150;
 </span></span><span style="display:flex;"><span><span style="color:#00f">const</span> d = 50;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> frase = <span style="color:#009c00">&#34;Hello world!&#34;</span>;
@@ -257,7 +257,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>La funzione JavaScript <code>prompt</code>, che visualizza un messaggio alfanumerico all&rsquo;utente e permette di memorizzare all&rsquo;interno di una variabile il valore inserito in input dall&rsquo;utente, si utilizza con un&rsquo;accortezza:</p>
 <p>Dato che questa funzione blocca il programma in attesa di un input dell&rsquo;utente, deve essere utilizzata nella funzione <code>setup</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 150;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> d = 50;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> frase;
@@ -276,17 +276,17 @@
 </span></span></code></pre></div><h2 id="istruzione-di-output-text">Istruzione di output <code>text</code></h2>
 <p>In programmazione le funzioni di output sono quelle funzioni che producono un risultato visibile all&rsquo;utente o al sistema in cui viene eseguito il programma. Le funzioni di output determinano cosa viene stampato a schermo, mostrato su un&rsquo;interfaccia utente o salvato in un file.</p>
 <p>Le funzioni per l&rsquo;output nella console possono essere utilizzate come di consueto, ma in processing e in p5.js si preferisce utilizzare la funzione di output <code>text</code> che permette di visualizzare testo e/o variabili nell&rsquo;area da disegno. Questa funzione ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: text(value, x, y)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: text(value, x, y)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>  value    String: text to be displayed.
 </span></span><span style="display:flex;"><span>  x        Number: x-coordinate of the text
 </span></span><span style="display:flex;"><span>  y        Number: y-coordinate of the text
 </span></span></code></pre></div><p>Ad esempio, se si vuole visualizzare il valore della variabile <code>j</code> nell&rsquo;area da disegno, si può utilizzare la seguente istruzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>text(j, 10, 50);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>text(j, 10, 50);
 </span></span></code></pre></div><p>In questo caso, il primo parametro attuale è la variabile <code>j</code>, i successivi parametri attuali sono le coordinate <code>10</code> e <code>50</code>.</p>
 <p>Anche con la funzione <code>text</code> possiamo sfruttare l&rsquo;operatore di concatenazione <code>+</code> per formare messaggi complessi. Ad esempio, alle coordinate (100, 30) possiamo visualizzare il messaggio composto dalle variabili inserite dall&rsquo;utente / calcolate dal programma:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> base;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> base;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> altezza;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
@@ -303,7 +303,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="assegnazione-di-un-valore-casuale">Assegnazione di un valore casuale</h2>
 <p>E&rsquo; possibile assegnare ad una variabile un numero pseudo-casuale compreso in un certo range numerico. Per generare numeri casuali all&rsquo;interno di un range specifico, bisogna utilizzare la funzione <code>random()</code>, che ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: random([min], [max])
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: random([min], [max])
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>  min    Number: the lower bound (inclusive) (Optional)
@@ -314,14 +314,14 @@
 </span></span></code></pre></div><p>Il parametro <code>min</code> rappresenta il valore minimo da generare (incluso), il parametro <code>max</code> rappresenta il valore massimo da generare (escluso).</p>
 <p>Il valore generato dalla funzione può essere memorizzato all&rsquo;interno di una variabile.</p>
 <p>Un esempio d&rsquo;uso della funzione che genera un valore casuale, memorizzato nella variabile <code>x</code> (da dichiarare), è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = random(10, 20);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = random(10, 20);
 </span></span></code></pre></div><p>In questo caso, alla variabile <code>x</code> viene assegnato un numero casuale compreso tra <code>10,0000</code> (incluso) e <code>19,9999</code> (il valore <code>20</code> è escluso).</p>
 <h2 id="calcolo-della-distanza-tra-due-punti">Calcolo della distanza tra due punti</h2>
 <p>Il calcolo della distanza tra due punti del piano è un&rsquo;operazione fondamentale per verificare se due figure collidono.</p>
 <p>Il teorema di Pitagora permette una visualizzazione grafica molto intuitiva della formula utilizzata per calcolare la distanza tra due punti (x1, y1) ed (x2, y2). Sul famoso triangolo rettangolo, la base è calcolata dalla differenza tra le ascisse dei due punti, quindi (x2-x1), mentre l&rsquo;altezza è calcolata come differenza tra le ordinate dei due punti, quindi (y2-y1). L&rsquo;ipotenusa è quindi calcolata con la nota formula: &ldquo;radice quadrata della somma tra il quadrato della base e il quadrato dell&rsquo;altezza&rdquo;.</p>
 <p><img src="/static/coding/web/p5js/distanzaPunti.png" alt="p5.js - Distanza tra due punti" title="p5.js - Distanza tra due punti"></p>
 <p>La funzione <code>dist</code> calcola la distanza tra due punti, ha la seguente sintassi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: dist(x1, y1, x2, y2)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Syntax: dist(x1, y1, x2, y2)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Parameters:
 </span></span><span style="display:flex;"><span>  x1    Number: x-coordinate of the first point
@@ -334,7 +334,7 @@
 </span></span></code></pre></div><p>I parametri <code>x1</code> e <code>y1</code> rappresentano le coordinate x ed y del primo punto, i parametri <code>x1</code> e <code>y1</code> rappresentano le coordinate x ed y del secondo punto.</p>
 <p>La distanza calcolata dalla funzione può essere memorizzata all&rsquo;interno di una variabile.</p>
 <p>Un esempio d&rsquo;uso della funzione che calcola la distanza, memorizzata nella variabile <code>distance</code> (da dichiarare), è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>distance = dist(100, 300, 500, 100);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>distance = dist(100, 300, 500, 100);
 </span></span></code></pre></div><h2 id="variabili-dello-stato-del-mouse">Variabili dello stato del mouse</h2>
 <p>L&rsquo;input del mouse è gestito in maniera completamente trasparente per il programmatore. Lo stato del dispositivo, rappresentato dalle coordinate X ed Y del cursore e dall&rsquo;ultimo pulsante del mouse cliccato, è memorizzato nelle variabili <code>mouseX</code>, <code>mouseY</code> e <code>mouseButton</code>. Queste variabili sono dichiarate automaticamente, quindi non necessitano di una dichiarazione da parte del programmatore, e sono continuamente aggiornate ad ogni ridisegno dell&rsquo;area.</p>
 <p>Allo stesso modo, nella variabile <code>mouseIsPressed</code> è automaticamente memorizzato il fatto che un (qualsiasi) pulsante del mouse sia stato cliccato o meno, per cui questa variabile può assumere valore <code>true</code> o <code>false</code>. Si deve prestare particolare attenzione a questa variabile, dato che al click assume valore <code>true</code>, ma appena il click termina, assume immediatamente valore <code>false</code>.</p>
@@ -351,7 +351,7 @@
 <p>Inoltre è necessario ricordare che le coordinate del mouse sono continuamente memorizzate nelle variabili <code>mouseX</code> e <code>mouseY</code> e che non è necessario dichiararle.</p>
 <p>Al click del mouse quindi andremo a salvare nelle variabili <code>clickX</code> e <code>clickY</code> i valori delle variabili <code>mouseX</code> e <code>mouseY</code>.</p>
 <p>Di seguito un esempio completo in cui vengono visualizzate le coordinate dell&rsquo;ultimo click del mouse.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> clickX = 0;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> clickX = 0;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> clickY = 0;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
@@ -384,15 +384,15 @@
 <p>Una volta memorizzato lo stato dell&rsquo;oggetto in una o più variabili, si può realizzare il movimento cambiando il valore di queste variabili.</p>
 <h3 id="esempio-di-movimento-di-un-cerchio">Esempio di movimento di un cerchio</h3>
 <p>Partiamo dal disegno di un cerchio, realizzato attraverso il codice seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(100, 150, 50);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(100, 150, 50);
 </span></span></code></pre></div><p>Per far muovere il cerchio verso destra (quindi lungo l&rsquo;asse X), è necessario memorizzare in una variabile, che chiameremo <code>x</code>, la posizione iniziale della coordinata X del cerchio.</p>
 <p>La dichiarazione della variabile può avvenire prima delle due funzioni <code>setup</code> e <code>draw</code>, mediante la classica dichiarazione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
 </span></span></code></pre></div><p>Per realizzare il movimento del cerchio verso destra, è necessario incrementare il valore della variabile <code>x</code> ad ogni operazione di ridisegno dell&rsquo;area di lavoro. Ricordando che l&rsquo;aggiornamento dell&rsquo;area di lavoro avviene nella funzione <code>draw</code>, allora si intuisce facilmente che sia il disegno del cerchio, sia l&rsquo;operazione di incremento della variabile <code>x</code> devono essere inserite all&rsquo;interno di questa funzione.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(x, 150, 50);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(x, 150, 50);
 </span></span><span style="display:flex;"><span>x = x+1;
 </span></span></code></pre></div><p>L&rsquo;esempio completo è di seguito riportato:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 100;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
 </span></span><span style="display:flex;"><span>  createCanvas(400, 400);
@@ -408,16 +408,16 @@
 <p><img src="/static/coding/web/p5js/interactivity01.png" alt="p5.js - Esempio dell&rsquo;animazione senza il disegno dello sfondo" title="p5.js - Esempio dell'animazione senza il disegno dello sfondo"></p>
 <h3 id="esempio-di-movimento-del-cerchio-con-il-mouse">Esempio di movimento del cerchio con il mouse</h3>
 <p>Partiamo dal disegno di un cerchio, realizzato attraverso il codice seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(100, 150, 50);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(100, 150, 50);
 </span></span></code></pre></div><p>Per poter muovere il cerchio attraverso il mouse (quindi lungo l&rsquo;asse X ed Y), è necessario memorizzare in una variabile, che chiameremo <code>x</code>, la posizione della coordinata X del cerchio ed in una seconda variabile, che chiameremo <code>y</code>, la posizione della coordinata Y del cerchio. Dato che non sappiamo ancora la posizione del mouse, possiamo inizializzare le due variabili con il valore zero, mediante la classica dichiarazione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 0;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 0;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 0;
 </span></span></code></pre></div><p>Per poter muovere il cerchio attraverso il mouse, è necessario assegnare alla variabile <code>x</code> la posizione X del mouse, che è memorizzata a sua volta nella variabile mouseX; Allo stesso modo, è necessario assegnare alla variabile <code>y</code> la posizione Y del mouse, che è memorizzata nella variabile mouseY;</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = mouseX;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = mouseX;
 </span></span><span style="display:flex;"><span>y = mouseY;
 </span></span><span style="display:flex;"><span>circle(x, y, 50);
 </span></span></code></pre></div><p>L&rsquo;esempio completo è di seguito riportato:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 0;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> x = 0;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> y = 0;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
@@ -442,8 +442,8 @@
 <p>Di questa tecnica esiste la variante dell&rsquo;incremento anticipato, in cui il contatore viene incrementato di 1 <strong>prima</strong> che venga eseguita l&rsquo;azione o che si verifichi l&rsquo;evento.</p>
 <h3 id="esempio-di-conteggio-delle-figure">Esempio di conteggio delle figure</h3>
 <p>Di seguito, un esempio completo d&rsquo;applicazione della variabile contatore per numerare i cerchi disegnati.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// dichiaro la variabile contatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> contatore;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// dichiaro la variabile contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#00f">let</span> contatore;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
 </span></span><span style="display:flex;"><span>    createCanvas(400, 400);
@@ -453,11 +453,11 @@
 </span></span><span style="display:flex;"><span>    background(220);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// inizializzo la variabile contatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    contatore = 0;
+</span></span></span><span style="display:flex;"><span>    contatore = 0;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// ogni volta che disegno un cerchio
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#f00;font-style:italic">// incremento la variabile contatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    circle(100, 150, 50);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// incremento la variabile contatore
+</span></span></span><span style="display:flex;"><span>    circle(100, 150, 50);
 </span></span><span style="display:flex;"><span>    text(contatore, 100, 150)
 </span></span><span style="display:flex;"><span>    contatore = contatore + 1;
 </span></span><span style="display:flex;"><span>
@@ -476,8 +476,8 @@
 </span></span></code></pre></div><p><img src="/static/coding/web/p5js/variables_counter_post.png" alt="p5.js - Esempio di applicazione della variabile contatore" title="p5.js - Esempio di applicazione della variabile contatore"></p>
 <h3 id="esempio-di-conteggio-pre-incrementato-delle-figure">Esempio di conteggio pre-incrementato delle figure</h3>
 <p>Di seguito, un esempio completo d&rsquo;applicazione della variabile contatore con incremento anticipato per numerare i cerchi disegnati.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// dichiaro la variabile contatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> contatore;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// dichiaro la variabile contatore
+</span></span></span><span style="display:flex;"><span><span style="color:#00f">let</span> contatore;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
 </span></span><span style="display:flex;"><span>    createCanvas(400, 400);
@@ -487,11 +487,11 @@
 </span></span><span style="display:flex;"><span>    background(220);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// inizializzo la variabile contatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    contatore = 0;
+</span></span></span><span style="display:flex;"><span>    contatore = 0;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// incremento la variabile contatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#f00;font-style:italic">// prima di disegnare i cerchi
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    contatore = contatore + 1;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// prima di disegnare i cerchi
+</span></span></span><span style="display:flex;"><span>    contatore = contatore + 1;
 </span></span><span style="display:flex;"><span>    circle(100, 150, 50);
 </span></span><span style="display:flex;"><span>    text(contatore, 100, 150);
 </span></span><span style="display:flex;"><span>
@@ -510,11 +510,11 @@
 </span></span></code></pre></div><p><img src="/static/coding/web/p5js/variables_counter_pre.png" alt="p5.js - Esempio di applicazione della variabile contatore" title="p5.js - Esempio di applicazione della variabile contatore"></p>
 <h3 id="esempio-del-conteggio-dei-click-del-mouse">Esempio del conteggio dei click del mouse</h3>
 <p>Di seguito, un esempio completo d&rsquo;applicazione della variabile contatore  per contare il numero di click del mouse.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> clickX, clickY;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> clickX, clickY;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// Dichiaro ed inizializzo
 </span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// la variabile contatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> contatore = 0;
+</span></span></span><span style="display:flex;"><span><span style="color:#00f">let</span> contatore = 0;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
 </span></span><span style="display:flex;"><span>    createCanvas(400, 400);
@@ -530,12 +530,12 @@
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// gestisco il click del mouse
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">function</span> mousePressed() {
+</span></span></span><span style="display:flex;"><span><span style="color:#00f">function</span> mousePressed() {
 </span></span><span style="display:flex;"><span>    clickX = mouseX;
 </span></span><span style="display:flex;"><span>    clickY = mouseY;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// ad ogni click, incremento il contatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    contatore = contatore + 1;
+</span></span></span><span style="display:flex;"><span>    contatore = contatore + 1;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>In questo esempio si rileva il click del mouse e ad ogni click si incrementa il conteggio. Si ricorda che, come spiegato nei paragrafi precedenti, al click del mouse vengono eseguite le istruzioni presenti all&rsquo;interno della funzione <code>mousePressed</code>.</p>
 <p>Per poter contare il numero di click è quindi necessario che l&rsquo;incremento del contatore sia inserito all&rsquo;interno di questa funzione.</p>
@@ -550,19 +550,19 @@
 </ol>
 <h3 id="esempio-di-somma-di-4-numeri-casuali">Esempio di somma di 4 numeri casuali</h3>
 <p>Di seguito, un esempio completo d&rsquo;applicazione della variabile accumulatore per sommare i numeri generati casualmente dal computer.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// dichiaro la variabile accumulatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> accumulatore;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// dichiaro la variabile accumulatore
+</span></span></span><span style="display:flex;"><span><span style="color:#00f">let</span> accumulatore;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> num1, num2, num3, num4;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
 </span></span><span style="display:flex;"><span>    createCanvas(400, 400);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// inizializzo la variabile accumulatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    accumulatore = 0;
+</span></span></span><span style="display:flex;"><span>    accumulatore = 0;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// ogni volta che viene generato un numero casuale
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#f00;font-style:italic">// lo accumulo nella variabile accumulatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    num1 = random(10, 20);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// lo accumulo nella variabile accumulatore
+</span></span></span><span style="display:flex;"><span>    num1 = random(10, 20);
 </span></span><span style="display:flex;"><span>    accumulatore = accumulatore + num1;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    num2 = random(10, 20);
@@ -585,20 +585,20 @@
 <p><img src="/static/coding/web/p5js/variables_accumulator_random.png" alt="p5.js - Esempio di applicazione della variabile accumulatore" title="p5.js - Esempio di applicazione della variabile accumulatore"></p>
 <h3 id="esempio-di-somma-di-4-numeri-in-input">Esempio di somma di 4 numeri in input</h3>
 <p>Di seguito, un esempio completo d&rsquo;applicazione della variabile accumulatore per sommare i numeri inseriti dall&rsquo;utente.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// dichiaro la variabile accumulatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">let</span> accumulatore;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">// dichiaro la variabile accumulatore
+</span></span></span><span style="display:flex;"><span><span style="color:#00f">let</span> accumulatore;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> num1, num2, num3, num4;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
 </span></span><span style="display:flex;"><span>    createCanvas(400, 400);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// inizializzo la variabile accumulatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    accumulatore = 0;
+</span></span></span><span style="display:flex;"><span>    accumulatore = 0;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// ogni volta che l&#39;utente inserisce un input
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#f00;font-style:italic">// lo si converte in numerico decimale
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#f00;font-style:italic">// e accumulato nella variabile accumulatore
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    num1 = prompt(<span style="color:#009c00">&#34;Inserisci un valore:&#34;</span>);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// lo si converte in numerico decimale
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// e accumulato nella variabile accumulatore
+</span></span></span><span style="display:flex;"><span>    num1 = prompt(<span style="color:#009c00">&#34;Inserisci un valore:&#34;</span>);
 </span></span><span style="display:flex;"><span>    num1 = parseFloat(num1);
 </span></span><span style="display:flex;"><span>    accumulatore = accumulatore + num1;
 </span></span><span style="display:flex;"><span>
@@ -660,7 +660,7 @@
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

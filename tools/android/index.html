@@ -243,14 +243,14 @@
 <p><img src="/static/coding/tools/Android-CLI-tools.png" alt="Android SDK - CLI" title="Android SDK - CLI"></p>
 <h2 id="installazione-android-sdk---cli-tools">Installazione Android SDK - CLI Tools</h2>
 <p>Supponiamo di voler installare gli SDK Android nella cartella <code>$HOME/Sviluppo/AndroidSDK</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p <span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK/cmdline-tools/latest&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p <span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK/cmdline-tools/latest&#34;</span>
 </span></span></code></pre></div><p>Al momento lo script di installazione richiede che gli strumenti a linea di comando siano posizionati nella cartella <code>cmdline-tools/latest</code> quindi procediamo nel crearle.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p <span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK/cmdline-tools/latest&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p <span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK/cmdline-tools/latest&#34;</span>
 </span></span></code></pre></div><p>Scaricato il pacchetto dal sito ufficiale, è necessario estrarlo e spostare <strong>tutti</strong> i file estratti nella cartella <code>latest</code>.</p>
 <p>Dalla cartella <code>cmdline-tools/latest/bin</code> è possibile eseguire il comando per visualizzare i pacchetti da installare:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./sdkmanager --list
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./sdkmanager --list
 </span></span></code></pre></div><p>Questo comando da in output la seguente tabella:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Available Packages:
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Available Packages:
 </span></span><span style="display:flex;"><span>  Path                 | Version    | Description
 </span></span><span style="display:flex;"><span>  build-tools;30.0.3   | 30.0.3     | Android SDK Build-Tools 30.0.3
 </span></span><span style="display:flex;"><span>  platforms;android-30 | 2          | Android SDK Platform 30
@@ -302,13 +302,13 @@
   </tbody>
 </table>
 <p>Dalla cartella <code>latest/bin</code> è possibile lanciare i seguenti comandi per installare i componenti scelti:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;platform-tools&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;platform-tools&#34;</span>
 </span></span><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;platforms;android-33&#34;</span>
 </span></span><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;build-tools;33.0.0&#34;</span>
 </span></span><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;emulator&#34;</span>
 </span></span><span style="display:flex;"><span>./sdkmanager <span style="color:#009c00">&#34;system-images;android-33;aosp_atd;x86_64&#34;</span>
 </span></span></code></pre></div><p>E&rsquo; possibile verificare i pacchetti istallati con il comando:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./sdkmanager --list_installed
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./sdkmanager --list_installed
 </span></span></code></pre></div><p>L&rsquo;output indica i pacchetti installati ed il relativo percorso:</p>
 <table>
   <thead>
@@ -353,7 +353,7 @@
   </tbody>
 </table>
 <p>Installati i pacchetti desiderati, si procede a salvare nel file <code>.bashrc</code> i percorsi appena creati:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export ANDROID_HOME=<span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export ANDROID_HOME=<span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK&#34;</span>
 </span></span><span style="display:flex;"><span>export ANDROID_SDK_ROOT=<span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
@@ -363,53 +363,53 @@
 </span></span></code></pre></div><h2 id="creazione-dispositivo-virtuale-android-adv">Creazione dispositivo virtuale Android (adv)</h2>
 <p>Per creare un dispositivo virtuale Android (avd), assicurarsi di aver installato una <code>system-images</code> con la stessa versione del pacchetto <code>platforms;android</code> installato.</p>
 <p>Per visualizzare le specifiche hardware dei dispositivi disponibili, si usa il comando:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager list device
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager list device
 </span></span></code></pre></div><p>Per visualizzare i dispositivi virtuali creati:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager list avd
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager list avd
 </span></span></code></pre></div><p>Si può creare un nuovo dispositivo virtuale <code>myTablet</code> basato sull&rsquo;immagine <code>system-images</code> installata, specificando opzionalmente:</p>
 <ul>
 <li>la cartella in cui salvare lo stato e la configurazione con il parametro <code>--path FOLDER</code>;</li>
 <li>il dispositivo di riferimento (scelto tra quelli disponibili) con il parametro <code>--device NAME</code>.</li>
 </ul>
 <p>Il comando completo è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager create avd --name myTablet --package <span style="color:#009c00">&#34;system-images;android-35;aosp_atd;x86_64&#34;</span> --path <span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK/avd/myTablet&#34;</span> --device <span style="color:#009c00">&#34;medium_tablet&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager create avd --name myTablet --package <span style="color:#009c00">&#34;system-images;android-35;aosp_atd;x86_64&#34;</span> --path <span style="color:#009c00">&#34;</span>$HOME<span style="color:#009c00">/Sviluppo/AndroidSDK/avd/myTablet&#34;</span> --device <span style="color:#009c00">&#34;medium_tablet&#34;</span>
 </span></span></code></pre></div><p>Per avviare un dispositivo virtuale:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emulator -avd <span style="color:#009c00">&#34;Pixel2&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emulator -avd <span style="color:#009c00">&#34;Pixel2&#34;</span>
 </span></span></code></pre></div><p>In caso di errore &ldquo;ERROR | Unable to connect to adb daemon on port: 5037&rdquo;, stoppare e riavviare il server e verificare la porta:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb kill-server
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb kill-server
 </span></span><span style="display:flex;"><span>adb start-server
 </span></span><span style="display:flex;"><span>netstat -aon | grep 5037
 </span></span></code></pre></div><p>Per accelerazione grafica simulata:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emulator -avd <span style="color:#009c00">&#34;Pixel2&#34;</span> -gpu swiftshader_indirect
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emulator -avd <span style="color:#009c00">&#34;Pixel2&#34;</span> -gpu swiftshader_indirect
 </span></span></code></pre></div><p>Per cancellare un dispositivo virtuale:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager delete avd --name myTablet
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>avdmanager delete avd --name myTablet
 </span></span></code></pre></div><h2 id="comandi-adb">Comandi adb</h2>
 <p>Adb ha una shell che si può utilizzare per inviare comandi al telefono.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>daemon not running; starting now at tcp:5037
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>daemon not running; starting now at tcp:5037
 </span></span><span style="display:flex;"><span>daemon started successfully
 </span></span></code></pre></div><p>Dalla shell si può utilizzare il seguente comando che permette di gestire tante caratteristiche del sistema:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd package
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd package
 </span></span></code></pre></div><p>Si può anche lanciare un comanda nella shell in maniera non interattiva:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package&#39;</span>
 </span></span></code></pre></div><p>Per visualizzare gli utenti: <code>pm list users</code></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Users:
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Users:
 </span></span><span style="display:flex;"><span>UserInfo{0::c13} running
 </span></span><span style="display:flex;"><span>UserInfo{97:dual:1010} running
 </span></span></code></pre></div><p>In questo caso si vede l&rsquo;utente con ID 0 e l&rsquo;utente con ID 97 per le app installate il &ldquo;dual mode&rdquo;.</p>
 <p>Per installare un app per un utente: il comando:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb install  --user 97  app.apk
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb install  --user 97  app.apk
 </span></span></code></pre></div><p>Per trovare il path di un file APK:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell
 </span></span><span style="display:flex;"><span>cmd package path com.android.chrome
 </span></span></code></pre></div><p>Per copiare e incollare da e verso il dispositivo:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb pull path_from_android path_to_local
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb pull path_from_android path_to_local
 </span></span><span style="display:flex;"><span>adb push path_to_android path_from_local
 </span></span></code></pre></div><p>Per rimuovere un app per un utente: il comando:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd package clear --user 97 com.android.chrome
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd package clear --user 97 com.android.chrome
 </span></span><span style="display:flex;"><span>cmd package uninstall  --user 97  com.android.chrome
 </span></span></code></pre></div><p>Esempio di rimozione di una app:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package path com.google.android.apps.subscriptions.red&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package path com.google.android.apps.subscriptions.red&#39;</span>
 </span></span><span style="display:flex;"><span>adb pull system/priv-app/GoogleOne/GoogleOne.apk /home/io/SyncV3/Varie/apk/
 </span></span><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package clear --user 97 com.google.android.apps.subscriptions.red&#39;</span>
 </span></span><span style="display:flex;"><span>adb shell <span style="color:#009c00">&#39;cmd package clear --user 0 com.google.android.apps.subscriptions.red&#39;</span>
@@ -446,7 +446,7 @@
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

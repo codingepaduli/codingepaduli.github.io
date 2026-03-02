@@ -256,22 +256,22 @@
 <h2 id="fasi-di-realizzazione">Fasi di realizzazione</h2>
 <p>Le fasi di realizzazione da seguire per sviluppare il progetto sono le seguenti:</p>
 <p><strong>Fase 1:</strong> inserire nella funzione <code>setup()</code> l&rsquo;impostazione d&rsquo;uso degli angoli sessagesimali:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
 </span></span><span style="display:flex;"><span>    createCanvas(...);
 </span></span><span style="display:flex;"><span>    angleMode(DEGREES);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><strong>Fase 2:</strong> Dichiarare le variabili per il Sole e disegnarlo utilizzando tali variabili; Dichiarare le variabili per il pianeta Terra;</p>
 <p><strong>Fase 3:</strong> Per calcolare le coordinate (x, y) del pianeta è necessario ricordare alcune nozioni di trigonometria; Dato che il pianeta ha un angolo ed una distanza rispetto al Sole, allora è necessario ricordare che le coordinate (x, y) sono espresse secondo queste formule:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = distanza * cos(angolo);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = distanza * cos(angolo);
 </span></span><span style="display:flex;"><span>y = distanza * sin(angolo);
 </span></span></code></pre></div><p>Inoltre bisogna tener presente che queste formule valgono quando il riferimento è l&rsquo;origine degli assi di coordinate (0, 0); Nel nostro caso, il riferimento è il Sole (attorno al quale ruota il pianeta) con coordinate (xSole, ySole), quindi è necessario esprimere le coordinate del pianeta relativamente a quelle del Sole:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = xSole + distanza * cos(angolo);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>x = xSole + distanza * cos(angolo);
 </span></span><span style="display:flex;"><span>y = ySole + distanza * sin(angolo);
 </span></span></code></pre></div><p>Procedere quindi a disegnare il pianeta Terra.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(x, y, diametro)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>circle(x, y, diametro)
 </span></span></code></pre></div><p><strong>Fase 4:</strong> Verificare che il pianeta sia visibile, altrimenti modificare la distanza, il diametro e verificare le coordinate appena calcolate (magari disegnandole con la funzione <code>text</code>).</p>
 <p><strong>Fase 5:</strong> Incrementare l&rsquo;angolo e verificare la rotazione del pianeta:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>angolo = angolo + ;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>angolo = angolo + ;
 </span></span></code></pre></div><p><strong>Fase 6:</strong> Seguendo le fasi dalla 2 alla 5, disegnare gli altri pianeti del Sistema Solare;</p>
 <p><strong>Fase 7:</strong> Seguendo le fasi dalla 2 alla 5, disegnare la Luna che ruota intorno alla Terra.</p>
 <h2 id="criteri-di-valutazione">Criteri di valutazione</h2>
@@ -368,7 +368,7 @@ Data __________</p>
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

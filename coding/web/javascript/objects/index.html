@@ -242,19 +242,19 @@
 <p>Un oggetto in ambito informatico è un dato complesso, a sua volta composto da proprietà e metodi. E&rsquo; un concetto che appartiene alla programmazione ad oggetti (OOP, dall&rsquo;inglese Object Oriented Programming).</p>
 <p>Un esempio di oggetto può essere una persona, che contiene proprietà quali nome, cognome, data di nascita, ecc&hellip;</p>
 <p>Nel seguente esempio osserviamo la dichiarazione di una variabile a cui viene assegnato un oggetto persona:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> persona = {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> persona = {
 </span></span><span style="display:flex;"><span>    firstname: <span style="color:#009c00">&#34;John&#34;</span>,
 </span></span><span style="display:flex;"><span>    lastname: <span style="color:#009c00">&#34;Doe&#34;</span>,
 </span></span><span style="display:flex;"><span>    id: 5566
 </span></span><span style="display:flex;"><span>};
 </span></span></code></pre></div><p>Si può procedere anche dichiarando prima le proprietà e poi procedendo alla dichiarazione dell&rsquo;oggetto, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> firstname: <span style="color:#009c00">&#34;John&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> firstname: <span style="color:#009c00">&#34;John&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> lastname: <span style="color:#009c00">&#34;Doe&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> id: 5566
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> persona = {firstname, lastname, id};
 </span></span></code></pre></div><h2 id="dot-notation">Dot notation</h2>
 <p>L&rsquo;accesso alle proprietà di un oggetto avviene attraverso la &ldquo;notazione punto&rdquo;, ovvero si deve indicare la variabile, si utilizza il carattere &ldquo;punto&rdquo; per indicare l&rsquo;accesso ad una proprietà, poi si deve indicare il nome della proprietà, utilizzando la sintassi <code>oggetto.proprietà</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>persona.firstname = <span style="color:#009c00">&#34;Dan&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>persona.firstname = <span style="color:#009c00">&#34;Dan&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> msg = <span style="color:#009c00">&#39;il nome della persona è &#39;</span> + persona.firstname;
 </span></span></code></pre></div><!--
 Destrutturazione: 
@@ -262,12 +262,12 @@ Destrutturazione:
 -->
 <h2 id="optional-chaining-e-nullish-coalescing">Optional chaining e Nullish Coalescing</h2>
 <p>Una proprietà può non esistere o avere un valore nullo o indefinito, per questo motivo si preferisce effettuare l&rsquo;accesso con l&rsquo;operatore <code>?.</code> che indica un accesso a condizione che la proprietà esista, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> email = user?.contact?.email;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> email = user?.contact?.email;
 </span></span></code></pre></div><p>In questo modo, in qualsiasi punto si tenti l&rsquo;accesso ad una proprietà inesistente, il valore restituito sarà <code>undefined</code>.</p>
 <p>Per rafforzare ulteriormente l&rsquo;accesso, nel caso il valore restituito sia <code>undefined</code>, si può assegnare un valore predefinito con</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> email = user?.contact?.email ?? <span style="color:#009c00">&#39;email non definita&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> email = user?.contact?.email ?? <span style="color:#009c00">&#39;email non definita&#39;</span>;
 </span></span></code></pre></div><p>Questo accesso &ldquo;sicuro&rdquo; si può applicare anche ai metodi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> email = user?.getContact()?.getEmail() ?? <span style="color:#009c00">&#39;email non definita&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> email = user?.getContact()?.getEmail() ?? <span style="color:#009c00">&#39;email non definita&#39;</span>;
 </span></span></code></pre></div>
     </div>
   </article>
@@ -299,7 +299,7 @@ Destrutturazione:
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

@@ -11,99 +11,6 @@
 # command insede a function "clear", you need to use:
 #   command clear;
 
-: '
-helpPandocHtmlToCommonmark() {
-  echo "pandoc --standalone --from html --to commonmark file.html --output file.md"
-}
-export -f helpPandocHtmlToCommonmark
-
-helpPandocMdAndYmlToPdf() {
-  echo "pandoc --standalone --from=markdown+yaml_metadata_block --to=latex --pdf-engine=xelatex file.md --output file.pdf -V geometry:margin=1cm --highlight-style=tango" # check pandoc --to html5+smart
-}
-export -f helpPandocMdAndYmlToPdf
-'
-
-#########################
-# mencoder - anacrontab #
-#########################
-
-# You can download streamed file from mms and rtsp protocol with mencoder :
-alias downloadRstpStreaming='mencoder -dumpstream -dumpfile music.ra rtsp://site/music.ra'
-
-# Convertire da mp4 ad avi:
-alias convertMp4ToAvi='mencoder -oac copy -ovc copy file.mp4 -o file.avi'
-	
-# Aggiungere i sottotitoli da un file separato ad un video avi: 
-alias convertSubtitlesToAvi='mencoder -oac copy -ovc xvid -xvidencopts fixed_quant=5 -sub file_sottotitoli.srt -sub-bg-alpha 0 -subfont-text-scale 4 -utf8 -o file_output.avi file_input.avi'
-
-# Copiare piu parti video in un unico file :
-alias convertAviFileListInALoneAviFile='mencoder -oac copy -ovc copy parte1.avi parte2.avi -o finale.avi'
-
-########################
-# crontab - anacrontab #
-########################
-
-# Edit the task
-alias crontab-e='crontab -e'
-alias anacrontab-e='micro /home/io/.anacron/anacrontab'
-alias goto-anacrontab-folder='cd /home/io/.anacron'
-
-# Check the schedule configured
-alias crontab-configured-schedule-cron='cat /etc/crontab'
-alias crontab-configured-schedule-anacron='cat /etc/anacrontab'
-
-# Check the service status
-alias crontab-check-service-status-cron='systemctl status cron.service | head -n 12'
-alias crontab-check-service-status-anacron='systemctl status anacron.service | head -n 10'
-
-# Show the scheduled task that will be executed
-alias crontab-scheduled-task-hourly='run-parts -v --test /etc/cron.hourly/'
-alias crontab-scheduled-task-daily='run-parts -v --test /etc/cron.daily/'
-alias crontab-scheduled-task-weekly='run-parts -v --test /etc/cron.weekly/'
-alias crontab-scheduled-task-monthly='run-parts -v --test /etc/cron.monthly/'
-
-# Show the reference site for cron syntax
-alias help-crontab-syntax-site='echo "syntax available to https://crontab.guru/"'
-
-# Show log for cron tasks
-alias crontab-log='cat /var/log/syslog /var/log/messages | grep "cron"'
-
-########################
-#       gocryptfs      #
-########################
-
-alias montaDocumenti='/usr/bin/gocryptfs -reverse -passfile .gocryptfs_password  $HOME/goCryptFS-InChiaro $HOME/Nextcloud/Documenti'
-
-alias montaDocumentiInCondivisione='/usr/bin/gocryptfs -reverse -sharedstorage -passfile .gocryptfs_password  $HOME/goCryptFS-InChiaro $HOME/Nextcloud/Documenti'
-
-alias smontaDocumenti='fusermount -u $HOME/Nextcloud/Documenti'
-
-alias infoDocumenti='gocryptfs -info $HOME/Nextcloud/Documenti'
-
-alias montaDocumentiCriptati='gocryptfs -sharedstorage -passfile gocryptfs_password $HOME/Nextcloud/Documenti $HOME/goCryptFS-InChiaro'
-
-# Per condividere la stessa directory su due macchine:
-# Use -sharedstorage for sharing between real and remote machine
-# See https://github.com/rfjakob/gocryptfs/issues/525
-
-# Per condividere la stessa directory su macchina virtuale e far
-# si che l'utente vi possa accedere:
-# https://askubuntu.com/questions/481559/how-to-automatically-mount-a-folder-and-change-ownership-from-root-in-virtualbox
-# 1a. Avvia la macchina virtuale ed esegui il comando:
-#     sudo mount -t vboxsf -o uid=1000,gid=1000 /vbox/folder /home/user/dir
-# 1b. Aggiungi la cartella condivisa alla macchina virtuale con l'opzione automount.
-# 2b. Avvia la macchina virtuale ed esegui il comando: 
-#       cat /etc/mtab | grep /home/user/dir
-#     che restituisce una linea simile:
-#       /home/user/dir /media/userdir vboxsf rw,nodev,relatime 0 0
-# 3b. Aggiungi la linea restituita dal comando nel file /etc/fstab avendo cura di aggiungere le seguenti opzioni: uid=<UID>,gid=<GID>,dmode=0770,fmode=0770 come nel seguente esempio:
-#       /home/user/dir /media/userdir vboxsf rw,nodev,relatime,uid=<UID>,gid=<GID>,dmode=0770,fmode=0770 0 0
-# 4b Spegnere la VM e togliere l'automount
-
-########################
-# Flatpak command line #
-########################
-
 # Solves the bug https://github.com/flathub/org.gnome.Evince/issues/33
 flatpakClearFontsCache() {
     flatpak run --command=fc-cache org.gnome.Evince -f -v
@@ -208,7 +115,7 @@ export -f flatpakFilterUpdatableApps
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop() {
-    app=$(flatpakFilterUpdatableApps 'org.freedesktop.Platform/x86_64/24.08' 'org.freedesktop.Platform/x86_64/25.08' 'org.freedesktop.Sdk/x86_64/24.08' 'org.freedesktop.Sdk/x86_64/25.08')
+    app=$(flatpakFilterUpdatableApps 'org.freedesktop.Platform/x86_64/24.08' 'org.freedesktop.Platform/x86_64/25.08' 'org.freedesktop.Sdk/x86_64/25.08')
     if [ -z "$app" ]; then
       echo "Nessuna applicazione da aggiornare."
     else
@@ -219,7 +126,7 @@ export -f flatpakUpdateAppBasedOnCurrentRuntimeFreedesktop
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeGnome
 flatpakUpdateAppBasedOnCurrentRuntimeGnome() {
-    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/47' 'org.gnome.Platform/x86_64/49')
+    app=$(flatpakFilterUpdatableApps 'org.gnome.Platform/x86_64/48' 'org.gnome.Platform/x86_64/49')
     if [ -z "$app" ]; then
       echo "Nessuna applicazione da aggiornare."
     else
@@ -230,7 +137,7 @@ export -f flatpakUpdateAppBasedOnCurrentRuntimeGnome
 
 # Usage: flatpakUpdateAppBasedOnCurrentRuntimeKde
 flatpakUpdateAppBasedOnCurrentRuntimeKde() {
-    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/5.15-24.08' 'org.kde.Platform/x86_64/6.10')
+    app=$(flatpakFilterUpdatableApps 'org.kde.Platform/x86_64/5.15-24.08' 'org.kde.Platform/x86_64/5.15-25.08' 'org.kde.Platform/x86_64/6.10')
     if [ -z "$app" ]; then
       echo "Nessuna applicazione da aggiornare."
     else

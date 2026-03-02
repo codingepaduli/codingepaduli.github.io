@@ -253,13 +253,13 @@
 <h2 id="fasi-di-realizzazione">Fasi di realizzazione</h2>
 <p>Le fasi di realizzazione da seguire per sviluppare il progetto sono le seguenti:</p>
 <p><strong>Fase 1:</strong> inserire nella funzione <code>setup()</code> l&rsquo;impostazione d&rsquo;uso degli angoli sessagesimali:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> setup() {
 </span></span><span style="display:flex;"><span>    createCanvas(...);
 </span></span><span style="display:flex;"><span>    angleMode(DEGREES);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><strong>Fase 2:</strong> Disegnare il quadrante dell&rsquo;orologio ed i numeri delle ore e dei minuti sul quadrante;</p>
 <p><strong>Fase 3:</strong> dichiarare le variabili che contengano le ore, i minuti ed i secondi ed inizializzarle a zero; nella funzione <code>draw()</code> assegnare il valore delle ore, minuti e secondi alle variabili corrispondenti, come di seguito indicato:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>h = hour();
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>h = hour();
 </span></span><span style="display:flex;"><span>m = minute();
 </span></span><span style="display:flex;"><span>s = second();
 </span></span></code></pre></div><p>Visualizzare nell&rsquo;area da disegno l&rsquo;orario (il contenuto delle variabili);</p>
@@ -270,7 +270,7 @@
 <p>E&rsquo; necessario infine ricordare che le lancette partono dalle ore <code>12</code> e procedono in senso orario, mentre gli angoli in <code>p5.js</code> si misurano prendendo come riferimento l&rsquo;angolo <code>0°</code> (che si trova quando la lancetta si posa sul numero <code>3</code> del quadrante) ed effettuando una rotazione in senso orario. Per creare la corrispondenza tra le ore e gli angoli, è necessario effettuare una correzione di un angolo retto, sottraendo alle variabili <code>hGradi</code>, <code>mGradi</code> e <code>sGradi</code> il valore di <code>90°</code> (come a dire la lancetta delle <code>3</code> si riporta indietro di <code>90°</code> e quindi si trova sulle ore <code>12</code> e da questa lancetta si inizia a misurare l&rsquo;angolo);</p>
 <p><strong>Fase 5:</strong> dichiarare tre variabili <code>rh</code>, <code>rm</code> e <code>rs</code>, che rappresentano la lunghezza della lancetta delle ore, dei minuti e dei secondi. Per ognuna scegliere un valore tale che <code>rh &lt; rm &lt; rs</code>;</p>
 <p><strong>Fase 6:</strong> disegnare la lancetta delle ore che ha il punto di origine nel centro del quadrante <code>x, y</code> ed il punto di fine in posizione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>pXFineLancettaOre = x + rh * cos(hGradi)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>pXFineLancettaOre = x + rh * cos(hGradi)
 </span></span><span style="display:flex;"><span>pYFineLancettaOre = y + rh * sin(hGradi)
 </span></span></code></pre></div><p><strong>Fase 7:</strong> disegnare la lancetta dei minuti e dei secondi seguendo lo stesso ragionamento fatto per disegnare quella delle ore.</p>
 <h2 id="criteri-di-valutazione">Criteri di valutazione</h2>
@@ -359,7 +359,7 @@ Data __________</p>
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

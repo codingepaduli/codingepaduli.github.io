@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mappa con Leaflet Web components</title>
+
+  <!-- Content Security Policy che permette gli script "unsafe" inline e che abilita gli script da localhost (self), unpkg.com e cdn.jsdelivr.net-->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net ;">
+  
+  <!-- script type="module" src="https://unpkg.com/@webcomponents/webcomponentsjs@2.8.0/webcomponents-bundle.js"></script -->
+
+  <!-- load the element -->
+  <script src="https://unpkg.com/@nfreear/my-map@1" type="module"></script>
+</head>
+<body>
+  <h1>Mappa di Napoli</h1>
+  
+  <my-map latlng="40.8363100,14.2464100" zoom="12.5">
+    <marker latlng="40.8363100, 14.2464100" hidden>Napoli</marker>
+  </my-map>
+  
+  <!--
+  Download immagini dei marker da: 
+  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png'
+  -->
+  
+  <a href="https://www.gps-longitudine-latitudine.it/">
+    Servizio di latitudine - longitudine
+  </a>
+</body>
+</html>
+

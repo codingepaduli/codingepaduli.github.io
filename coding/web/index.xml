@@ -23,6 +23,13 @@
       <description>Lezioni sul linguaggio CSS nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/css&#39;&gt;CSS&lt;/a&gt;</description>
     </item>
     <item>
+      <title>p5play</title>
+      <link>http://codingepaduli.github.io/coding/web/linkp5playjs/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/linkp5playjs/</guid>
+      <description>Lezioni su p5play, un motore di gioco basato su &lt;a href=&#39;http://codingepaduli.github.io/coding/web/p5js&#39;&gt;p5.js&lt;/a&gt; per il rendering grafico e su &lt;a href=&#39;https://piqnt.com/planck.js/&#39;&gt;planck.js (Box2D)&lt;/a&gt; per la fisica, nella sezione &lt;a href=&#39;http://codingepaduli.github.io/coding/web/p5play&#39;&gt;p5play&lt;/a&gt;</description>
+    </item>
+    <item>
       <title>mediapipe</title>
       <link>http://codingepaduli.github.io/coding/web/linkmediapipe/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>

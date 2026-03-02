@@ -248,7 +248,7 @@
 <p>Le foglie dell&rsquo;albero sono le etichette che non posseggono contenuti.</p>
 <p>Data la struttura gerarchica, è possibile stabilire delle relazioni tra gli elementi. Un elemento che contiene altri elementi è detto elemento padre, e di conseguenza gli elementi contenuti in quel nodo sono detti figli. Gli elementi che si trovano nello stesso livello si dicono fratelli, e così via con le altre relazioni.</p>
 <p>Un esempio di rappresentazione della pagina web come struttura ad albero, secondo il modello DOM, è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>html
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>html
 </span></span><span style="display:flex;"><span>└ body
 </span></span><span style="display:flex;"><span> ├ h1
 </span></span><span style="display:flex;"><span> | └ testo titolo
@@ -290,27 +290,27 @@
 <p>Il <strong>selettore per identificativo</strong> permette di selezionare la singola etichetta individuata da un certo identificativo. La sintassi di questo selettore prevede il carattere &ldquo;cancelletto&rdquo; <code>#</code> seguito dall&rsquo;identificativo.</p>
 <!-- fine testo copiato -->
 <p>Supponiamo di avere la seguente porzione di documento HTML:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p class=<span style="color:#009c00">&#34;paragrafo&#34;</span> id=<span style="color:#009c00">&#34;paragrafo1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p class=<span style="color:#009c00">&#34;paragrafo&#34;</span> id=<span style="color:#009c00">&#34;paragrafo1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
 </span></span><span style="display:flex;"><span>&lt;p class=<span style="color:#009c00">&#34;paragrafo&#34;</span>&gt;paragrafo 2&lt;/p&gt;
 </span></span></code></pre></div><p>Il primo paragrafo ha identificativo <code>paragrafo1</code>, quindi il selettore CSS per identificativo si costruisce col carattere &ldquo;cancelletto&rdquo; <code>#</code> seguito dall&rsquo;identificativo <code>paragrafo1</code>.</p>
 <p>Questo selettore CSS seleziona un solo elemento ed è quindi utilizzabile con la funzione <code>document.querySelector</code>.</p>
 <p>Invocando la funzione <code>document.querySelector</code> con parametro il selettore CSS <code>#paragrafo1</code> ci permette di selezionare il singolo nodo del DOM che rappresenta il paragrafo, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> element = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> element = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
 </span></span></code></pre></div><h3 id="selezione-per-classe">Selezione per classe</h3>
 <!-- testo copiato e risistemato dalle lezioni introduttive di CSS - I selettori CSS -->
 <p>Il <strong>selettore per classe</strong> permette di selezionare tutte le etichette che hanno la stessa classe. La sintassi di questo selettore prevede il carattere &ldquo;punto&rdquo; <code>.</code> seguito dal nome della classe.</p>
 <!-- fine testo copiato -->
 <p>Supponiamo di avere la seguente porzione di documento HTML:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p class=<span style="color:#009c00">&#34;paragrafo&#34;</span> id=<span style="color:#009c00">&#34;paragrafo1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p class=<span style="color:#009c00">&#34;paragrafo&#34;</span> id=<span style="color:#009c00">&#34;paragrafo1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
 </span></span><span style="display:flex;"><span>&lt;p class=<span style="color:#009c00">&#34;paragrafo&#34;</span>&gt;paragrafo 2&lt;/p&gt;
 </span></span></code></pre></div><p>I due paragrafi hanno la classe <code>paragrafo</code>, quindi il selettore CSS per classe si costruisce col carattere &ldquo;punto&rdquo; <code>.</code> seguito dall&rsquo;identificativo <code>paragrafo</code>.</p>
 <p>Questo selettore CSS seleziona più elementi ed è quindi utilizzabile con la funzione <code>document.querySelectorAll</code>.</p>
 <p>Invocando la funzione <code>document.querySelectorAll</code> con parametro il selettore CSS <code>.paragrafo</code> ci permette di selezionare la lista di nodi del DOM che rappresentano i due paragrafi, come nell&rsquo;esempio seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elementList = document.querySelectorAll(<span style="color:#009c00">&#39;.paragrafo&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elementList = document.querySelectorAll(<span style="color:#009c00">&#39;.paragrafo&#39;</span>);
 </span></span></code></pre></div><h2 id="gestione-attributi-html">Gestione attributi HTML</h2>
 <p>Gli attributi sono coppie chiave-valore (nome-valore) appartenenti agli elementi HTML, quindi indicati nelle etichette. Il nome di un attributo HTML è alfanumerico, ma con tutte le lettere minuscole, non sono ammesse lettere maiuscole.</p>
 <p>Per gestire gli attributi è necessario selezionare un nodo, ad esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> node = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> node = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
 </span></span></code></pre></div><p>Le funzioni per la gestione degli attributi devono quindi essere invocate sull&rsquo;oggetto <code>node</code> selezionato e sono le seguenti:</p>
 <ul>
 <li><code>hasAttributes()</code> indica se un nodo ha attributi o meno;</li>
@@ -322,39 +322,39 @@
 <li><code>toggleAttribute(name)</code> crea l&rsquo;attributo se non è presente, altrimenti lo rimuove dal nodo;</li>
 </ul>
 <p>Supponiamo di avere la seguente porzione di documento HTML:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
 </span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si modificano gli attributi del nodo.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
 </span></span><span style="display:flex;"><span>elemento.removeAttribute(<span style="color:#009c00">&#34;proprieta-esistente&#34;</span>);
 </span></span><span style="display:flex;"><span>elemento.setAttribute(<span style="color:#009c00">&#34;proprieta-nuova&#34;</span>, <span style="color:#009c00">&#34;valoreProprieta2&#34;</span>);
 </span></span></code></pre></div><p>Il paragrafo selezionato sarà quindi modificato nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;div id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-nuova=<span style="color:#009c00">&#34;valoreProprieta2&#34;</span>&gt;Hello World!&lt;/div&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;div id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-nuova=<span style="color:#009c00">&#34;valoreProprieta2&#34;</span>&gt;Hello World!&lt;/div&gt;
 </span></span></code></pre></div><h2 id="proprietà-dei-nodi-del-dom">Proprietà dei nodi del DOM</h2>
 <p>Le proprietà di un nodo sono coppie chiave-valore (nome-valore). La sintassi <code>nodo.nomeProprieta</code> è utilizzata per accedere ad una proprietà di un nodo (in maniera molto simile all&rsquo;uso delle variabili). Se la proprietà a cui si accede esiste, viene modificata, se non esiste viene creata.</p>
 <p>Come per le variabili, il valore associato ad una proprietà può essere di qualsiasi tipo, un numero, un oggetto o qualsiasi altro tipo consentito.</p>
 <p>Come per le variabili, le proprietà possono avere il nome composto con caratteri alfanumerici (maiuscoli o minuscoli).</p>
 <p>Supponiamo di avere la seguente porzione di documento HTML:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprietaEsistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprietaEsistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
 </span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si accede alle proprietà del nodo.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
 </span></span><span style="display:flex;"><span>elemento.proprietaEsistente = <span style="color:#009c00">&#34;p2&#34;</span>;
 </span></span><span style="display:flex;"><span>elemento.proprietaNuova = <span style="color:#009c00">&#34;valoreProprieta2&#34;</span>;
 </span></span><span style="display:flex;"><span>elemento.proprietaOggetto = { p1 : <span style="color:#009c00">&#34;v1&#34;</span>, p2: 1 };
 </span></span></code></pre></div><p>La creazione o la modifica di queste proprietà non comporta la creazione o la modifica degli attributi HTML del nodo selezionato. Il paragrafo non viene alterato, resta identico:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprietaEsistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprietaEsistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
 </span></span></code></pre></div><p>Esiste una sintassi alternativa per accedere ad una proprietà di un nodo, consiste nell&rsquo;indicare la proprietà tra parentesi quadre: <code>nodo[nomeProprieta]</code>, è utilizzata quando il nome della proprietà non rispetta le convenzioni suggerite per il nome della proprietà.</p>
 <h2 id="proprietà-che-si-riflettono-sugli-attributi">Proprietà che si riflettono sugli attributi</h2>
 <p>Le proprietà possono riflettersi su un attributo, ma solo nei casi in cui è previsto e documentato (cioè se l&rsquo;interfaccia dello specifico elemento DOM prevede la proprietà e la trasforma automaticamente in un attributo);</p>
 <p>Ad esempio è sempre possibile accedere all&rsquo;attributo <code>id</code> utilizzando la sintassi <code>elemento.id</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> element = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> element = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
 </span></span><span style="display:flex;"><span>element.id =<span style="color:#009c00">&#34;p1&#34;</span>
 </span></span></code></pre></div><p>Questo esempio mostra la selezione di un nodo del documento, su questo nodo selezionato si modifica la proprietà <code>id</code>, questa modifica si riflette poi automaticamente sull&rsquo;attributo <code>id</code> del paragrafo HTML.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
 </span></span></code></pre></div><p>Un esempio simile non funziona con la proprietà <code>boh</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> element = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> element = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
 </span></span><span style="display:flex;"><span>element.boh =<span style="color:#009c00">&#34;p1&#34;</span>
 </span></span></code></pre></div><p>Questo esempio mostra la selezione di un nodo del documento, su questo nodo selezionato si accede alla proprietà <code>boh</code> che non esiste e viene creta, ma questa modifica non si riflette in un attributo del paragrafo HTML. Il paragrafo HTML rimane quindi il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
 </span></span></code></pre></div><p>Alcune volte la riflessione avviene attraverso una proprietà che ha un nome differente, ad esempio per la proprietà <code>ariaLabel</code> che si riflette sull&rsquo;attributo <code>aria-label</code> (e non sull&rsquo;attributo <code>ariaLabel</code>) della corrispondente etichetta;</p>
 <p>Altre volte, l&rsquo;accesso alla proprietà restituisce un valore di default se il valore dell&rsquo;attributo non è valido oppure modifica l&rsquo;attributo inserendo un valore di default.</p>
 <p>Ancora, l&rsquo;accesso alla proprietà restituisce il valore dell&rsquo;attributo finché non viene modificata una seconda proprietà.</p>
@@ -368,27 +368,27 @@
 </ul>
 <p>Alcuni caratteri possono essere convertiti in &ldquo;HTML entities&rdquo; per essere correttamente rappresentati.</p>
 <p>Supponiamo di avere la seguente porzione di documento HTML:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;paragrafo 1&lt;/p&gt;
 </span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si modifica il contenuto del nodo e poi si scrive l&rsquo;intera etichetta nella console.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#paragrafo1&#39;</span>);
 </span></span><span style="display:flex;"><span>elemento.innerHTML = <span style="color:#009c00">&#34;nuovo paragrafo&#34;</span>;
 </span></span><span style="display:flex;"><span>console.log(ele.textContent);
 </span></span><span style="display:flex;"><span>console.log(elemento.outerHTML);
 </span></span></code></pre></div><p>Il paragrafo selezionato sarà quindi modificato nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;nuovo paragrafo&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> proprieta-esistente=<span style="color:#009c00">&#34;p1&#34;</span>&gt;nuovo paragrafo&lt;/p&gt;
 </span></span></code></pre></div><p>La proprietà <code>ele.textContent</code> visualizzerà il testo <code>nuovo paragrafo</code>, mentre la proprietà <code>elemento.outerHTML</code> visualizzerà il testo <code>&lt;p id=&quot;paragrafo1&quot; proprieta-esistente=&quot;p1&quot;&gt;nuovo paragrafo&lt;/p&gt;</code>.</p>
 <p>Una nota importante per il recupero del testo: per questioni di performance, quando si aggiungono più elementi testuali ad un nodo, questi rimangono separati perché inseriti in due nodi testuali differenti. Accedendo al testo di un nodo con la proprietà <code>ele.textContent</code>, si ottiene solo una parte del testo. Per poter unificare i nodi è necessario invocare la funzione <code>el.normalize();</code> prima di accedere al testo con <code>ele.textContent</code>.</p>
 <h3 id="proprietà-defaultvalue">Proprietà <code>defaultValue</code></h3>
 <p>Tutti i campi di input sono dotati della proprietà <code>defaultValue</code>che restituisce sempre il valore dell&rsquo;attributo HTML <code>value</code> del campo di input. Dato che il linguaggio HTML è un linguaggio testuale, il valore è sempre una stringa.</p>
 <p>Supponiamo di avere la seguente porzione di documento HTML:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;default&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;default&#34;</span>&gt;
 </span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si accede alle proprietà del nodo.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#input&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#input&#39;</span>);
 </span></span><span style="display:flex;"><span>console.log(input.defaultValue); <span style="color:#f00;font-style:italic">// &#39;default&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>input.defaultValue = <span style="color:#009c00">&#34;new default&#34;</span>
+</span></span></span><span style="display:flex;"><span>input.defaultValue = <span style="color:#009c00">&#34;new default&#34;</span>
 </span></span><span style="display:flex;"><span>console.log(input.defaultValue); <span style="color:#f00;font-style:italic">// &#39;new default&#39;
 </span></span></span></code></pre></div><p>La modifica di questa proprietà comporta di riflesso la modifica dell&rsquo;attributo HTML <code>value</code> del nodo selezionato. Il campo di input viene alterato come di seguito:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;new default&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;new default&#34;</span>&gt;
 </span></span></code></pre></div><h3 id="proprietà-value">Proprietà <code>value</code></h3>
 <p>Tutti i campi di input sono dotati della proprietà <code>value</code>, che non deve essere confusa ne con la proprietà <code>defaultValue</code> ne con il valore dell&rsquo;attributo HTML <code>value</code> dei campi di input. Dato che il linguaggio HTML è un linguaggio testuale, il valore è sempre una stringa.</p>
 <p>La proprietà <code>value</code> si comporta in modo particolare:</p>
@@ -398,15 +398,15 @@
 </ul>
 <p>La modifica di questa proprietà non si riflette in una modifica all&rsquo;attributo HTML del campo di input.</p>
 <p>Supponiamo di avere la seguente porzione di documento HTML:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;default&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;default&#34;</span>&gt;
 </span></span></code></pre></div><p>Nel seguente esempio si seleziona il nodo e quindi si accede alle proprietà del nodo.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#input&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> elemento = document.querySelector(<span style="color:#009c00">&#39;#input&#39;</span>);
 </span></span><span style="display:flex;"><span>console.log(input.value); <span style="color:#f00;font-style:italic">// &#39;default&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>input.value = <span style="color:#009c00">&#34;new default&#34;</span>
+</span></span></span><span style="display:flex;"><span>input.value = <span style="color:#009c00">&#34;new default&#34;</span>
 </span></span><span style="display:flex;"><span>console.log(input.value); <span style="color:#f00;font-style:italic">// &#39;new default&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>console.log(input.defaultValue); <span style="color:#f00;font-style:italic">// &#39;default&#39;
+</span></span></span><span style="display:flex;"><span>console.log(input.defaultValue); <span style="color:#f00;font-style:italic">// &#39;default&#39;
 </span></span></span></code></pre></div><p>La modifica della proprietà <code>value</code> non comporta di riflesso la modifica dell&rsquo;attributo HTML <code>value</code> del nodo selezionato. Il campo di input rimane inalterato come di seguito:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;default&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;input&#34;</span> type=<span style="color:#009c00">&#34;text&#34;</span> value=<span style="color:#009c00">&#34;default&#34;</span>&gt;
 </span></span></code></pre></div><h2 id="eventi-dom-ed-html">Eventi DOM ed HTML</h2>
 <p>Il DOM permette di notificare gli <strong>eventi</strong>, detti tecnicamente <strong>eventi DOM</strong>, che avvengono in una pagina HTML, come il completamento della lettura della pagina web o il click da parte dell&rsquo;utente su un pulsante.</p>
 <p>Al verificarsi di un evento relativo al documento o ad uno specifico elemento si può programmare un&rsquo;azione da eseguire.</p>
@@ -426,10 +426,10 @@
 </ul>
 <p>La presenza di uno di questi attributi indica che si ha interesse a ricevere notifiche dell&rsquo;evento associato, e che una volta notificato l&rsquo;evento si deve eseguire una funzione indicata come valore dell&rsquo;attributo, ad esempio la funzione JavaScript <code>alert</code> che mostra un messaggio all&rsquo;utente.</p>
 <p>Un esempio completo che mostra come alla notifica dell&rsquo;azione del click si può eseguire l&rsquo;azione di mostrare un messaggio all&rsquo;utente è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;button&#34;</span> value=<span style="color:#009c00">&#34;clicca&#34;</span> onclick=<span style="color:#009c00">&#34;alert(&#39;cliccato&#39;)&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;button&#34;</span> value=<span style="color:#009c00">&#34;clicca&#34;</span> onclick=<span style="color:#009c00">&#34;alert(&#39;cliccato&#39;)&#34;</span>&gt;
 </span></span></code></pre></div><p>Nell&rsquo;esempio appena visto, l&rsquo;attributo <code>onclick</code> permette di ricevere la notifica dell&rsquo;evento di &ldquo;click&rdquo; sull&rsquo;elemento <code>input</code>, l&rsquo;azione da eseguire è la funzione <code>alert('cliccato')</code> che mostra un messaggio all&rsquo;utente.</p>
 <p>Ovviamente le azioni da eseguire possono essere definire in funzioni JavaScript, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script&gt;
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">function</span> definitaDaUtente() {
 </span></span><span style="display:flex;"><span>    alert(<span style="color:#009c00">&#39;questa è una funzione definita dal programmatore&#39;</span>);
 </span></span><span style="display:flex;"><span>  }
@@ -437,7 +437,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;input type=<span style="color:#009c00">&#34;button&#34;</span> value=<span style="color:#009c00">&#34;clicca&#34;</span> id=<span style="color:#009c00">&#34;myButton&#34;</span> onclick=<span style="color:#009c00">&#34;definitaDaUtente()&#34;</span>&gt;
 </span></span></code></pre></div><p>In alternativa agli attributi, si può legare un elemento ad un azione con il seguente codice JavaScript:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;button id=<span style="color:#009c00">&#34;myButton&#34;</span>&gt;clicca&lt;button&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;button id=<span style="color:#009c00">&#34;myButton&#34;</span>&gt;clicca&lt;button&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;script&gt;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> button = document.getElementById(<span style="color:#009c00">&#34;#myButton&#34;</span>);
@@ -454,7 +454,7 @@
 </ul>
 <p>Dobbiamo inoltre legare l&rsquo;evento di click sul pulsante ad una funzione di somma, utilizzando l&rsquo;attributo HTML <code>onclick</code> del pulsante e definendo una nuova funzione <code>somma</code>.</p>
 <p>La porzione di codice HTML necessaria è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Primo numero (input)--&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!-- Primo numero (input)--&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;label for=<span style="color:#009c00">&#34;num1&#34;</span>&gt;Num1:&lt;/label&gt;
 </span></span><span style="display:flex;"><span>&lt;input id=<span style="color:#009c00">&#34;num1&#34;</span> type=<span style="color:#009c00">&#34;number&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
@@ -482,24 +482,24 @@
 <li>il selettori CSS del campo di output è <code>#ris</code>.</li>
 </ul>
 <p>La proprietà che dobbiamo utilizzare per accedere e modificare il valore di un campo di input è <code>value</code> ed è un valore testuale. Dato che bisogna fare la somma tra numeri, dobbiamo convertire il valore in numerico utilizzando la funzione <code>parseInt()</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;script&gt;
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">function</span> somma() {
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// seleziono i nodi di input
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#00f">let</span> input1 = document.querySelector(<span style="color:#009c00">&#34;#num1&#34;</span>);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#00f">let</span> input1 = document.querySelector(<span style="color:#009c00">&#34;#num1&#34;</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#00f">let</span> input2 = document.querySelector(<span style="color:#009c00">&#34;#num2&#34;</span>);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// seleziono il nodo di output 
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#00f">let</span> output = document.querySelector(<span style="color:#009c00">&#34;#ris&#34;</span>);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#00f">let</span> output = document.querySelector(<span style="color:#009c00">&#34;#ris&#34;</span>);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// accedo al valore di input e lo converto in numero
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    <span style="color:#00f">let</span> num1 = parseInt(input1.value);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#00f">let</span> num1 = parseInt(input1.value);
 </span></span><span style="display:flex;"><span>    <span style="color:#00f">let</span> num2 = parseInt(input2.value);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// faccio la somma dei numeri
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    s = num1 + num2;
+</span></span></span><span style="display:flex;"><span>    s = num1 + num2;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">// scrivo il risultato
-</span></span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"></span>    output.value = s;
+</span></span></span><span style="display:flex;"><span>    output.value = s;
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>&lt;/script&gt;
 </span></span></code></pre></div><h2 id="operazioni-sul-dom">Operazioni sul DOM</h2>
@@ -507,44 +507,44 @@
 <p>E&rsquo; possibile sfruttare le relazioni tra i nodi, come quella di &ldquo;padre/figlio&rdquo; o di &ldquo;nodo fratello&rdquo; per poter inserire i nodi nella posizione desiderata.</p>
 <h3 id="gestione-dei-nodi">Gestione dei nodi</h3>
 <p>Per creare un elemento di testo, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> ele = document.createTextNode(<span style="color:#009c00">&#39;Hello World!&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> ele = document.createTextNode(<span style="color:#009c00">&#39;Hello World!&#39;</span>);
 </span></span></code></pre></div><p>Come gia descritto in precedenza, quando si aggiungono più elementi testuali ad un nodo, questi rimangono separati (per questioni di performance) perché inseriti in due nodi testuali differenti. Accedendo al testo di un nodo con la proprietà <code>ele.textContent</code>, si ottiene solo una parte del testo. Per poter unificare i nodi è necessario invocare la funzione <code>ele.normalize();</code> prima di accedere al testo con <code>ele.textContent</code>.</p>
 <p>Per creare un elemento che fa da contenitore, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> ele = document.createElement(<span style="color:#009c00">&#39;div&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> ele = document.createElement(<span style="color:#009c00">&#39;div&#39;</span>);
 </span></span></code></pre></div><p>Per aggiungere un elemento all&rsquo;interno di un secondo elemento, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>target.appendChild(ele);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>target.appendChild(ele);
 </span></span></code></pre></div><p>Si può scegliere di aggiungere un elemento in fondo alla pagina web, sebbene ciò sia sconsigliato per via del footer della pagina, utilizzando il riferimento:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>document.body.appendChild(elemento);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>document.body.appendChild(elemento);
 </span></span></code></pre></div><p>Per rimuovere un elemento dall&rsquo;interno di un secondo elemento, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>target.removeChild(ele);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>target.removeChild(ele);
 </span></span></code></pre></div><p>Per rimuovere un elemento dalla pagina, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.remove();
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.remove();
 </span></span></code></pre></div><p>Per aggiungere un elemento prima di un secondo elemento, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;beforebegin&#39;</span>, ele);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;beforebegin&#39;</span>, ele);
 </span></span></code></pre></div><p>Per aggiungere un elemento dopo un secondo elemento, si utilizza la seguente funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;afterend&#39;</span>, ele);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>refEle.insertAdjacentElement(<span style="color:#009c00">&#39;afterend&#39;</span>, ele);
 </span></span></code></pre></div><h3 id="gestione-dello-stile-di-un-elemento">Gestione dello stile di un elemento</h3>
 <p>Per aggiungere una proprietà di stile ad un elemento, si utilizza la funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.style[<span style="color:#009c00">&#39;backgroundColor&#39;</span>] = <span style="color:#009c00">&#39;red&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.style[<span style="color:#009c00">&#39;backgroundColor&#39;</span>] = <span style="color:#009c00">&#39;red&#39;</span>;
 </span></span></code></pre></div><p>Per rimuovere una proprietà di stile da un elemento, si utilizza la funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.style.removeProperty(<span style="color:#009c00">&#39;background-color&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.style.removeProperty(<span style="color:#009c00">&#39;background-color&#39;</span>);
 </span></span></code></pre></div><p>Per ottenere il valore di una proprietà di stile da un elemento, si utilizza la funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> attr = ele.style[<span style="color:#009c00">&#39;backgroundColor&#39;</span>];
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> attr = ele.style[<span style="color:#009c00">&#39;backgroundColor&#39;</span>];
 </span></span></code></pre></div><h3 id="gestione-delle-classi-di-un-elemento">Gestione delle classi di un elemento</h3>
 <p>Per aggiungere delle classi ad un elemento, si utilizza la funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.add(<span style="color:#009c00">&#39;another&#39;</span>, <span style="color:#009c00">&#39;class&#39;</span>, <span style="color:#009c00">&#39;name&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.add(<span style="color:#009c00">&#39;another&#39;</span>, <span style="color:#009c00">&#39;class&#39;</span>, <span style="color:#009c00">&#39;name&#39;</span>);
 </span></span></code></pre></div><p>Per rimuovere delle classi ad un elemento, si utilizza la funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.remove(<span style="color:#009c00">&#39;another&#39;</span>, <span style="color:#009c00">&#39;class&#39;</span>, <span style="color:#009c00">&#39;name&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.remove(<span style="color:#009c00">&#39;another&#39;</span>, <span style="color:#009c00">&#39;class&#39;</span>, <span style="color:#009c00">&#39;name&#39;</span>);
 </span></span></code></pre></div><p>Per effettuare il &ldquo;toggle&rdquo; di una classe di un elemento, si utilizza la funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.toggle(<span style="color:#009c00">&#39;class-name&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.toggle(<span style="color:#009c00">&#39;class-name&#39;</span>);
 </span></span></code></pre></div><p>Si può condizionare la presenza di una classe ad una specifica condizione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.toggle(<span style="color:#009c00">&#39;class-name&#39;</span>, i&lt;10);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.toggle(<span style="color:#009c00">&#39;class-name&#39;</span>, i&lt;10);
 </span></span></code></pre></div><p>Per sostituire una classe di un elemento con un&rsquo;altra, si utilizza la funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.replace(<span style="color:#009c00">&#39;class1&#39;</span>, <span style="color:#009c00">&#39;class2&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.replace(<span style="color:#009c00">&#39;class1&#39;</span>, <span style="color:#009c00">&#39;class2&#39;</span>);
 </span></span></code></pre></div><p>Per verificare se una classe è presente per un elemento, si utilizza la funzione:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.contains(<span style="color:#009c00">&#39;class1&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>ele.classList.contains(<span style="color:#009c00">&#39;class1&#39;</span>);
 </span></span></code></pre></div><p>La &ldquo;spread syntax&rdquo; permette di aggiungere o togliere liste di classi:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> <span style="color:#00f">class</span> = [<span style="color:#009c00">&#39;class1&#39;</span>, <span style="color:#009c00">&#39;class2&#39;</span>];
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> <span style="color:#00f">class</span> = [<span style="color:#009c00">&#39;class1&#39;</span>, <span style="color:#009c00">&#39;class2&#39;</span>];
 </span></span><span style="display:flex;"><span>ele.classList.add(...<span style="color:#00f">class</span>);
 </span></span><span style="display:flex;"><span>ele.classList.remove(...<span style="color:#00f">class</span>);
 </span></span></code></pre></div><h2 id="template-html-e-gestione-nodi">Template HTML e gestione nodi</h2>
@@ -552,10 +552,10 @@
 <p>Il vantaggio di utilizzare un template consiste nella separazione della struttura HTML dai dati, tipicamente inseriti utilizzando JavaScript.</p>
 <p>Il template è generato dall&rsquo;etichetta <code>template</code> che ha il simbolo di apertura <code>&lt;template&gt;</code> ed il simbolo di chiusura <code>&lt;/template&gt;</code>. In questo elemento è possibile inserire qualsiasi altro elemento senza dover rispettare le regole di relazione &ldquo;padre-figlio&rdquo; del linguaggio HTML, proprio perché questo contenitore serve da modello. Ad esempio è possibile inserire  nell&rsquo;etichetta <code>template</code> un&rsquo;etichetta <code>&lt;li&gt;</code> senza che sia presente un&rsquo;etichetta <code>&lt;ul&gt;</code> .</p>
 <p>Un template deve essere identificato per <code>id</code> per poi clonare il contenuto, per poterlo poi utilizzare:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> template = document.querySelector(templateID);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">const</span> template = document.querySelector(templateID);
 </span></span><span style="display:flex;"><span>templateContent = template.content.cloneNode(<span style="color:#00f">true</span>);
 </span></span></code></pre></div><p>Per poter inserire il contenuto di un template in un nodo &ldquo;target&rdquo; possiamo utilizzare la seguente funzione, che controlla se gli identificativi sono stringhe, seleziona gli elementi e se entrambi trovati inserisce il template nel nodo &ldquo;target&rdquo;:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> addTemplate(targetId, templateID) {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> addTemplate(targetId, templateID) {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (<span style="color:#00f">typeof</span> targetId !== <span style="color:#009c00">&#39;string&#39;</span> &amp;&amp; ! (targetId <span style="color:#00f">instanceof</span> String) ) {
 </span></span><span style="display:flex;"><span>    <span style="color:#00f">throw</span> <span style="color:#00f">new</span> Error(<span style="color:#009c00">&#34;param &#39;targetId&#39; is not a string&#34;</span>);
 </span></span><span style="display:flex;"><span>  }
@@ -571,7 +571,7 @@
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Nel template possiamo inserire i segnaposto nei quali inserire i dati nella forma <code>${nome}</code>, come nel seguente esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;template id=<span style="color:#009c00">&#34;tableDataRowTemplate&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;template id=<span style="color:#009c00">&#34;tableDataRowTemplate&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;tr id=<span style="color:#009c00">&#34;tableDataRow&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;th class=<span style="color:#009c00">&#34;replaceData&#34;</span>&gt;${Extra}&lt;/th&gt;
 </span></span><span style="display:flex;"><span>    &lt;th class=<span style="color:#009c00">&#34;replaceData&#34;</span>&gt;${Giorno}&lt;/th&gt;
@@ -582,7 +582,7 @@
 </span></span><span style="display:flex;"><span>  &lt;/tr&gt;
 </span></span><span style="display:flex;"><span>&lt;/template&gt;
 </span></span></code></pre></div><p>I dati da inserire possono poi essere contenuti in un oggetto in cui il nome delle proprietà corrisponde con il nome inserito nel segnaposto dei dati da sostituire. Un esempio di oggetto è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Extra&#34;</span>: <span style="color:#009c00">&#34;SI&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Giorno&#34;</span>: <span style="color:#009c00">&#34;LUNEDI&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Ora&#34;</span>: <span style="color:#009c00">&#34;1°&#34;</span>,
@@ -599,7 +599,7 @@
 <li>selezionare tutti i nodi contenenti i segnaposti da sostituire con i dati;</li>
 <li>sostituire tutti i segnaposti.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> replaceTemplateData(dataNodesID, dataToReplace={}) {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> replaceTemplateData(dataNodesID, dataToReplace={}) {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (<span style="color:#00f">typeof</span> dataNodesID !== <span style="color:#009c00">&#39;string&#39;</span> &amp;&amp; ! (dataNodesID <span style="color:#00f">instanceof</span> String) ) {
 </span></span><span style="display:flex;"><span>    <span style="color:#00f">throw</span> <span style="color:#00f">new</span> Error(<span style="color:#009c00">&#34;param &#39;targetId&#39; is not a string&#34;</span>);
 </span></span><span style="display:flex;"><span>  }
@@ -618,7 +618,7 @@
 </span></span><span style="display:flex;"><span>  });
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Creato l&rsquo;oggetto contenente i dati da sostituire, si può invocare la funzione nel seguente modo:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> oggetto = {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> oggetto = {
 </span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Extra&#34;</span>: <span style="color:#009c00">&#34;SI&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Giorno&#34;</span>: <span style="color:#009c00">&#34;LUNEDI&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#009c00">&#34;Ora&#34;</span>: <span style="color:#009c00">&#34;1°&#34;</span>,
@@ -665,7 +665,7 @@
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

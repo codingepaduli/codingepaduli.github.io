@@ -6,8 +6,22 @@
     <description>Recent content in P5.js on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 02 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/categories/p5.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>p5.js Lez. 07.10 - Soluzione progetto Impiccato</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato_exe_soluzione/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato_exe_soluzione/</guid>
+      <description>Implementazione di un videogioco in stile &amp;lsquo;Impiccato&amp;rsquo;</description>
+    </item>
+    <item>
+      <title>p5.js Lez. 07.9 - Progetto &#34;Impiccato&#34;</title>
+      <link>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/coding/web/p5js/progettoimpiccato/</guid>
+      <description>Requisiti del progetto &amp;ldquo;Impiccato&amp;rdquo;</description>
+    </item>
     <item>
       <title>p5.js Lez. 07.8 - Soluzione progetto Snake</title>
       <link>http://codingepaduli.github.io/coding/web/p5js/progettosnake_exe_soluzione/</link>

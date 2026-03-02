@@ -135,6 +135,26 @@ denoDoc() {
 }
 export -f denoDoc
 
+dockerFirefox() {
+  echo "============================="
+  echo "WARNING: running as ROOT user"
+  echo "=============================" 
+
+  dockerFirefox="/home/io/.config/docker-firefox"
+
+  mkdir -p "$dockerFirefox"
+
+  docker container run --rm -it --name=docker-firefox \
+  -e LC_ALL=it_IT.UTF-8 \
+  -e TZ=Etc/UTC \
+  -e FIREFOX_CLI=https://www.linuxserver.io/ \
+  -p 3000:3000 \
+  -p 3001:3001 \
+  -v $dockerFirefox:/config \
+  --shm-size="1gb" \
+  lscr.io/linuxserver/firefox:1146.0.1
+}
+
 # Python
 # TEST: dockerPython3 --version
 # RUN:  dockerPython3 your-daemon-or-script.py
@@ -167,7 +187,7 @@ hugoRun() {
   declare -A tailParams
   tailParams=$@
 
-  dockerContainer --name hugo $headParams -p 1313:1313 hugomods/hugo:std-base-non-root-0.147.5 hugo  --noBuildLock $tailParams
+  dockerContainer --name hugo $headParams -p 1313:1313 hugomods/hugo:std-base-non-root-0.156.0 hugo  --noBuildLock $tailParams
 } 
 export -f hugoRun
 

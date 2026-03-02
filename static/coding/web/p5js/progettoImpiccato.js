@@ -3,7 +3,7 @@ let tentativi=6;
 
 let lunghezza=6;
 let parolaSegreta=['a','l','b','e','r','o'];
-let parolaIndovinata = ['*', '*', '*', '*', '*', '*'];
+let parolaIndovinata = ['_', '_', '_', '_', '_', '_'];
 
 function setup() {
   createCanvas(700,500);
@@ -15,7 +15,7 @@ function setup() {
 function draw() {
   background(250,250,255);
 
-  text(tasto, 20, 20);
+  text(`Tasto premuto: ${tasto}`, 20, 20);
   if (tasto == '>') {
     menu();
   }
@@ -37,13 +37,11 @@ function keyPressed() {
 function menu(){
   textSize(25);
   strokeWeight(4);
-  text("L'impiccato",250,20);
-  text('Menù di Gioco',250,65);
 
   // istruzioni laterali
-  text('Premi (-) per giocare',340,200);
-  text('Premi (.) per la classifica',340,240);
-  text('Esci dal gioco',340,280);
+  text('Tasto > per il menu',340,160);
+  text('Tasto - per giocare',340,200);
+  text('Tasto . per la classifica',340,240);
   
   ghigliottina0();
   
@@ -75,13 +73,13 @@ function gioco(){
 
   textSize(25);
   strokeWeight(4);
-  text('Parola da indovinare='+parolaIndovinata,320,370,380,370);
+  text('Indovina: '+parolaIndovinata.join(' '),320,370,380,370);
 
   tasto = '-';
   fill(0,0,0);
   text('Tentativi: ' + tentativi, 500,20);
   
-  if(!parolaIndovinata.includes('*')){
+  if(!parolaIndovinata.includes('_')){
     fill(240,20,10);
     textSize(40);
     text("Hai Vinto",120,120);

@@ -241,7 +241,7 @@
       <h1 id="i-selettori-css">I selettori CSS</h1>
 <p>I selettori CSS servono a selezionare le etichette della pagina web alle quali vanno applicate le proprietà grafiche (descritte nel precedente capitolo).</p>
 <p>Il <strong>selettore universale</strong> <code>*</code> permette di selezionare tutte le etichette della pagina web. Ad esempio, per applicare il colore blu a tutte le etichette si può usare la seguente regola CSS:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>* {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>* {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Le etichette sono tipicamente composte dal nome e da una lista di attributi. Tra questi attributi ce ne sono due che ci permettono di identificare in maniera più specifica le etichette:</p>
@@ -250,21 +250,21 @@
 <li><code>class</code>: l&rsquo;insieme a cui appartiene</li>
 </ul>
 <p>Ad esempio, tre paragrafi ed un collegamento, ognuno con un proprio identificativo, due paragrafi appartenenti allo stesso insieme <code>insieme1</code>, un terzo paragrafo ed il collegamento appartenenti ad un insieme differente <code>insieme3</code>, sono realizzati dal seguente codice HTML:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> class=<span style="color:#009c00">&#34;insieme1&#34;</span>&gt;Questo il primo paragrafo.&lt;/p&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo1&#34;</span> class=<span style="color:#009c00">&#34;insieme1&#34;</span>&gt;Questo il primo paragrafo.&lt;/p&gt;
 </span></span><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo2&#34;</span> class=<span style="color:#009c00">&#34;insieme1&#34;</span>&gt;Questo il secondo paragrafo.&lt;/p&gt;
 </span></span><span style="display:flex;"><span>&lt;p id=<span style="color:#009c00">&#34;paragrafo2&#34;</span> class=<span style="color:#009c00">&#34;insieme3&#34;</span>&gt;Questo il terzo paragrafo.&lt;/p&gt;
 </span></span><span style="display:flex;"><span>&lt;a id=<span style="color:#009c00">&#34;link&#34;</span> class=<span style="color:#009c00">&#34;insieme3&#34;</span> href=<span style="color:#009c00">&#34;www.google.it&#34;</span>&gt;collegamento&lt;/a&gt;
 </span></span></code></pre></div><p>Questo esempio di codice HTML sarà utilizzato nel corso di questi paragrafi successivi per mostrare quali elementi saranno selezionati con i selettori CSS descritti, per cui si consiglia di annotarlo o di aggiungere un segnalibro.</p>
 <p>Il <strong>selettore per etichetta</strong> permette di selezionare tutte le etichette con lo stesso nome. Ad esempio, per selezionare tutte le etichette di paragrafo viste nell&rsquo;esempio HTML precedente si può utilizzare il seguente codice CSS:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Il <strong>selettore per classe</strong> permette di selezionare tutte le etichette che appartengono allo stesso insieme. La sintassi di questo selettore prevede il carattere &ldquo;punto&rdquo; <code>.</code> seguito dal nome dell&rsquo;insieme. Ad esempio, considerato l&rsquo;esempio HTML precedente, per selezionare l&rsquo;etichetta di paragrafo e l&rsquo;etichetta di collegamento appartenenti all&rsquo;insieme <code>insieme3</code> si può utilizzare il seguente codice CSS:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#007575">insieme1</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#007575">insieme1</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Il <strong>selettore per identificativo</strong> permette di selezionare la singola etichetta individuata da un certo identificativo. La sintassi di questo selettore prevede il carattere &ldquo;cancelletto&rdquo; <code>#</code> seguito dall&rsquo;identificativo. Ad esempio, considerato l&rsquo;esempio HTML precedente, per selezionare il paragrafo individuato dall&rsquo;identificativo <code>paragrafo1</code> si può utilizzare il seguente codice CSS:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#paragrafo1 {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#paragrafo1 {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Il <strong>selettore per attributo</strong> permette di selezionare le etichette che possiedono l&rsquo;attributo indicato. Dato che gli attributi hanno <strong>una chiave associata ad un valore</strong>, è possibile specificare le etichette che possiedono l&rsquo;attributo con il valore indicato. La sintassi di questo selettore prevede le seguenti opzioni:</p>
@@ -279,42 +279,42 @@
 <ul>
 <li>per selezionare il collegamento che ha l&rsquo;attributo <code>href</code>, si può utilizzare il seguente codice CSS:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a[href] {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a[href] {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
 <li>per selezionare il collegamento che ha l&rsquo;attributo <code>href</code> con valore <code>www.google.it</code>, si può utilizzare il seguente codice CSS:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a[href=<span style="color:#009c00">&#39;www.google.it&#39;</span>] {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a[href=<span style="color:#009c00">&#39;www.google.it&#39;</span>] {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
 <li>per selezionare il collegamento che ha l&rsquo;attributo <code>href</code> con valore che inizia con<code>www.go</code>, si può utilizzare il seguente codice CSS:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a[href^=<span style="color:#009c00">&#39;www.go&#39;</span>] {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a[href^=<span style="color:#009c00">&#39;www.go&#39;</span>] {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
 <li>per selezionare il collegamento che ha l&rsquo;attributo <code>href</code> con valore che finisce con<code>.it</code>, si può utilizzare il seguente codice CSS:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a[href$=<span style="color:#009c00">&#39;.it&#39;</span>] {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a[href$=<span style="color:#009c00">&#39;.it&#39;</span>] {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>È possibile combinare i selettori per nome, per classe, per identificativo e per attributo in un&rsquo;unica espressione, la cui sintassi è <code>nome[val=attr]#identificativo.classe</code>. Le quattro componenti non sono obbligatorie, quindi possono essere omesse.</p>
 <p>Omettendo l&rsquo;identificativo e l&rsquo;attributo, la sintassi diventa <code>nome.classe</code>. Questa espressione permette di selezionare tutte le etichette con il nome indicato ed appartenenti ad un certo insieme. Ad esempio, per identificare tutti i collegamenti appartenenti all&rsquo;insieme <code>film</code> si utilizza il selettore seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a.<span style="color:#007575">film</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>a.<span style="color:#007575">film</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Omettendo la classe e l&rsquo;attributo, la sintassi diventa <code>nome#identificativo</code>. Dato che la regola HTML prevede che l&rsquo;identificativo sia univoco, questa espressione è identica all&rsquo;espressione <code>#identificativo</code> e quindi permette di selezionare la singola etichetta con (il nome e) l&rsquo;identificativo indicato. Ad esempio, per identificare il paragrafo con identificativo <code>paragrafo1</code> si utilizza il selettore seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p#paragrafo1 {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p#paragrafo1 {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Omettendo il nome dell&rsquo;etichetta e l&rsquo;attributo, la sintassi diventa <code>#identificativo.classe</code>. Dato che la regola HTML prevede che l&rsquo;identificativo sia univoco, questa espressione è identica all&rsquo;espressione <code>#identificativo</code> e quindi permette di selezionare la singola etichetta con (l&rsquo;insieme e) l&rsquo;identificativo indicato. Ad esempio, per identificare l&rsquo;etichetta appartenente all&rsquo;insieme <code>insieme3</code> e con identificativo <code>paragrafo1</code> si utilizza il selettore seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#paragrafo1.<span style="color:#007575">insieme3</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#paragrafo1.<span style="color:#007575">insieme3</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Omettendo l&rsquo;attributo, allora l&rsquo;espressione <code>nome#identificativo.classe</code> è identica all&rsquo;espressione <code>#identificativo</code> e quindi permette di selezionare la singola etichetta con (l&rsquo;insieme, il nome e) l&rsquo;identificativo indicato. Ad esempio, per identificare l&rsquo;etichetta appartenente all&rsquo;insieme <code>insieme3</code> e con identificativo <code>paragrafo1</code> si utilizza il selettore seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p#paragrafo1.<span style="color:#007575">insieme3</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>p#paragrafo1.<span style="color:#007575">insieme3</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="selettori-gerarchici">Selettori gerarchici</h2>
@@ -327,7 +327,7 @@
 <li>Le etichette adiacenti, cioè che sono direttamente contenute dalla stessa etichetta sono dette etichette <strong>sorelle</strong> (si trovano sullo stesso livello dell&rsquo;albero DOM);</li>
 </ul>
 <p>Consideriamo ad esempio la pagina HTML seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!doctype html&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!doctype html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;html lang=<span style="color:#009c00">&#34;it&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;body&gt;
 </span></span><span style="display:flex;"><span>    <span style="color:#f00;font-style:italic">&lt;!-- contenuti della pagina html --&gt;</span>
@@ -340,7 +340,7 @@ L&rsquo;etichetta <strong>body</strong> è figlia dell&rsquo;etichetta radice <c
 Le <strong>foglie</strong> sono le etichette <code>h1</code> e <code>p</code>, perché non contengono altre etichette. Queste due etichette sono anche <strong>sorelle</strong>, perché si trovano nello stesso livello.
 Potremmo dire anche che l&rsquo;etichetta <code>html</code> e l&rsquo;etichetta <code>h1</code> sono parenti, perché la prima contiene la seconda, non direttamente ma nei livelli successivi.</p>
 <p>Una rappresentazione ad albero, nella quale sono chiari i livelli, è la seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>html
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>html
 </span></span><span style="display:flex;"><span>└── body
 </span></span><span style="display:flex;"><span>    ├── h1
 </span></span><span style="display:flex;"><span>    └── p
@@ -354,15 +354,15 @@ Potremmo dire anche che l&rsquo;etichetta <code>html</code> e l&rsquo;etichetta 
 <h2 id="selettori-posizionali">Selettori posizionali</h2>
 <p>I <strong>selettori posizionali</strong> permettono di selezionare gli elementi in base alla posizione. Sono utilizzati in genere con le liste, le tabelle per selezionare il primo elemento, l&rsquo;ultimo, gli elementi pari o dispari, l&rsquo;elemento che si trova in una determinata posizione &ldquo;N&rdquo; o tutti gli elementi prima o dopo la posizione &ldquo;N&rdquo;, nulla vieta di utilizzare questi selettori ad una sezione della pagina o all&rsquo;intera pagina.</p>
 <p>Il selettore posizionale <code>:first-child</code> permette di selezionare il primo elemento. Ad esempio, per selezionare il primo elemento di una lista indicata dall&rsquo;identificativo <code>lista</code> si utilizza il selettore seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#lista li:<span style="color:#cc00a3">first-child</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#lista li:<span style="color:#cc00a3">first-child</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Il selettore posizionale <code>:last-child</code> permette di selezionare l&rsquo;ultimo elemento. Ad esempio, per selezionare l&rsquo;ultimo elemento di una lista indicata dall&rsquo;identificativo <code>lista</code> si utilizza il selettore seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#lista li:<span style="color:#cc00a3">last-child</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#lista li:<span style="color:#cc00a3">last-child</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Il selettore posizionale <code>:only-child</code> permette di selezionare le etichette che sono &ldquo;figlia unica&rdquo;, ovvero non hanno sorelle. Ad esempio, per selezionare le liste che hanno un solo elemento si utilizza il selettore seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>ul:<span style="color:#cc00a3">only-child</span> {
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>ul:<span style="color:#cc00a3">only-child</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #0000FF;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Il selettore posizionale <code>nth-child(Xn+Y)</code> permette di selezionare le etichette che si trovano in posizione indicata dalla formula racchiusa tra parentesi, in cui <code>X</code> è il passo e <code>Y</code> lo spiazzamento. Ad esempio, <code>li:nth-child(3n+1)</code> seleziona le etichette partendo dalla prima (lo spiazzamento <code>Y</code> ha valore <code>1</code>) e che si susseguono di tre in tre (il passo <code>X</code> ha valore <code>3</code>), quindi la prima, la quarta, la settima, la decima e cosi via&hellip;. Questo selettore ha molte casistiche, ad esempio:</p>
@@ -374,7 +374,7 @@ Potremmo dire anche che l&rsquo;etichetta <code>html</code> e l&rsquo;etichetta 
 <li>per selezionare tutti gli elementi in posizione minore o uguale ad <code>n</code>, ad esempio <code>6</code>, si può utilizzare un passo negativo <code>X=-1</code>, quindi il selettore risultante è <code>nth-child(-1n+6)</code>;</li>
 </ul>
 <p>Facciamo un esempio di tre liste. Nella prima lista applichiamo il colore blu agli elementi in posizione minore di tre e agli elementi in posizione maggiore di sei, poi al primo e all&rsquo;ultimo elemento sovrascriviamo il colore applicando il verde ed infine all&rsquo;elemento in posizione cinque elemento applichiamo un testo più grande. Nella seconda lista applichiamo il colore blu agli elementi pari ed il verde sottolineato agli elementi in posizione dispari. Nell&rsquo;ultima lista applichiamo evidenziamo e sottolineiamo l&rsquo;unico elemento presente. Lo stile risultante è il seguente:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;style&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;style&gt;
 </span></span><span style="display:flex;"><span>#list1 li:<span style="color:#cc00a3">nth-child</span>(-1n+3), #list1 li:<span style="color:#cc00a3">nth-child</span>(1n+6) {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: <span style="color:#00f">blue</span>;
 </span></span><span style="display:flex;"><span>}
@@ -506,7 +506,7 @@ Potremmo dire anche che l&rsquo;etichetta <code>html</code> e l&rsquo;etichetta 
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

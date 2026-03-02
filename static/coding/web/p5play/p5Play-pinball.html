@@ -32,9 +32,12 @@
     let trSxA, trSxB, trSxC, triangleSx;
     let trDxA, trDxB, trDxC, triangleDx;
     let pentagon, septagon;
+    let bar1, bar2;
     let hexagon2, ball2, distB2Hex2;
     let hexagon3, ball3, distB3Hex3;
     let dogSound, horseSound;
+    let piattaformaScorrevole;
+    let puntiLuminosiCasuali = [];
 
     function preload() {
       dogSound = loadSound("/static/coding/web/p5js/progettoParcoZoologico_dog1.mp3");
@@ -53,7 +56,7 @@
     }
 
     function setup() {
-      createCanvas();
+      createCanvas(700, 600);
       background(0.7);
 
       world.gravity.y = +30;
@@ -128,7 +131,34 @@
       ball3.vel.x = 5;
       ball3.bounciness = 0.2;
       ball3.mass = 50;
+
+      // barra rotante
+      bar1 = new Sprite(90, 230, 10, 80, 'kinetic');
+      bar1.rotationSpeed=3;
+      bar1.bounciness=1.5;
+
+      // barra rotante
+      bar2 = new Sprite(430, 230, 10, 80, 'kinetic');
+      bar2.rotationSpeed=-3;
+      bar2.bounciness=1.5;
       
+      // barre laterali alle levette
+      line1= new Sprite(30, 450, 10, 100, 'static');
+      line2= new Sprite(50, 450, 10, 80, 'static');
+      line3= new Sprite(70, 450, 10, 60, 'static');      
+      line4= new Sprite(610, 450, 10, 60, 'static');
+      line5= new Sprite(630, 450, 10, 80, 'static');
+      line6= new Sprite(650, 450, 10, 100, 'static');
+      line3.bounciness=2;
+      line4.bounciness=2;
+
+      // piattaforma scorrevole
+      piattaformaScorrevole = new Sprite(250, 510, 120, 3, 'kinematic');
+      piattaformaScorrevole.color = color(255, 100, 255);
+      piattaformaScorrevole.vel.x = 3;
+      piattaformaScorrevole.bounciness = 3.5;
+
+      // levette laterali
       trSxA = [100, 500];
       trSxB = [100, 450];
       trSxC = [300, 500];
@@ -152,10 +182,26 @@
       levaDxGiu.bounciness = 0.5;
       levaDxGiu.mass = 1;
       //levaDxGiu.debug = true;
+
+      // creo un insieme di punti casuali
+      for (let i = 0; i < 100; i++) {
+        puntiLuminosiCasuali.push({
+          x: random(width),
+          y: random(height),
+          colore: color(random(150, 255), random(150, 255), random(150, 255), 150)
+        });
+      }
     }
 
     function draw() {
-
+      // aggiorno i punti luminosi
+      for (let i = 0; i < puntiLuminosiCasuali.length; i++) {
+        let p = puntiLuminosiCasuali[i];
+        stroke(p.colore);
+        strokeWeight(random(1, 3));
+        point(p.x, p.y);
+      }
+      strokeWeight(1);
     }
 
     function update() {
@@ -195,6 +241,11 @@
         }
         console.log(`collisione ping4 h:${horseSound.isPlaying()} d:${dogSound.isPlaying()}`);
       }
+
+      if (piattaformaScorrevole.x < 140 || piattaformaScorrevole.x > width - 140) {
+        piattaformaScorrevole.vel.x *= -1;
+      }
+
     }
   </script>
 </head>

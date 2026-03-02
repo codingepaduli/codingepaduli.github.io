@@ -257,7 +257,7 @@
 <li><code>sudo journalctl -u fail2ban.service -b</code></li>
 </ul>
 <p>Esiste anche il file di log del servizio, configurato nel percorso ricavabile dal comando:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fail2ban-client get logtarget
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fail2ban-client get logtarget
 </span></span></code></pre></div><h2 id="configurazione">Configurazione</h2>
 <p>La cartella <code>/etc/fail2ban/</code> contiene i file di configurazione principali:</p>
 <ul>
@@ -275,7 +275,7 @@
 <h2 id="jail-sshd">Jail SSHD</h2>
 <p>Questa <strong>Jail</strong> è utilizzata per configurare il blocco degli IP per il servizio SSH. Eredita tutti i parametri dalla jail <strong>DEFAULT</strong>, quindi in questo file è necessario solo sovrascrivere quelli differenti.</p>
 <p>Supponiamo che il file di configurazione sia <code>jail.d//defaults-debian.conf</code>. Questo file deve indicare il servizio, il backend, la porta e l&rsquo;azione da effettuare:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#00f">[sshd]</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#00f">[sshd]</span>
 </span></span><span style="display:flex;"><span>enabled = <span style="color:#009c00">true</span>
 </span></span><span style="display:flex;"><span>port = <span style="color:#009c00">10022</span>
 </span></span><span style="display:flex;"><span>backend = <span style="color:#009c00">systemd</span>
@@ -285,7 +285,7 @@
 <li><code>bantime</code>: il periodo da utilizzare per contare il numero di tentativi;</li>
 <li><code>findtime</code>: il periodo di blocco di un IP;</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span>bantime  = <span style="color:#009c00">1w</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span>bantime  = <span style="color:#009c00">1w</span>
 </span></span><span style="display:flex;"><span>findtime = <span style="color:#009c00">1d</span>
 </span></span></code></pre></div><!-- 
 ![Bitwarden - Resoconto nessuna violazione](/static/openSource/Bitwarden-Resoconti-no-violazione.png "Bitwarden - Resoconto nessuna violazione")
@@ -323,7 +323,7 @@ Installa l'app da [F-Droid](/opensource/fdroid/ "F-Droid").
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

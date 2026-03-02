@@ -240,7 +240,7 @@
 <div class="content post__content clearfix">
       <h1 id="command-line-examples">Command line examples</h1>
 <h2 id="ls"><code>ls</code></h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\t ricerca file regolari: &#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\t ricerca file regolari: &#34;</span>
 </span></span><span style="display:flex;"><span>ls -l | grep <span style="color:#009c00">&#34;^-&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\n\t ricerca directory con permesso r-x per altri utenti: &#34;</span>
@@ -252,7 +252,7 @@
 </span></span><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\t visualizza la data dei file&#34;</span>
 </span></span><span style="display:flex;"><span>ls -lA --time-style=long-iso
 </span></span></code></pre></div><h2 id="grep"><code>grep</code></h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\tvisualizza le righe contenenti la parola &#34;&#34;Dimensione&#34;&#34; &#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\tvisualizza le righe contenenti la parola &#34;&#34;Dimensione&#34;&#34; &#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"># l&#39;opzione -h indica di non stampare il nome del file</span>
 </span></span><span style="display:flex;"><span>grep -h -e <span style="color:#009c00">&#39;Dimensione&#39;</span> *
 </span></span><span style="display:flex;"><span>
@@ -275,7 +275,7 @@
 </span></span><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\n\t dal carattere &#39;:&#39;, stampiamo i campi 1,3,4&#34;</span>
 </span></span><span style="display:flex;"><span>grep <span style="color:#009c00">&#34;bash&#34;</span> /etc/passwd | cut -d:  -f1,3,4
 </span></span></code></pre></div><h2 id="find"><code>find</code></h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\n\t file regolari con più di un link&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\n\t file regolari con più di un link&#34;</span>
 </span></span><span style="display:flex;"><span>find ./  -links +1 -type f
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\n\t directory con nome che inizia per maiuscola&#34;</span>
@@ -323,7 +323,7 @@
 </span></span><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\n\t file non nascosti (non iniziano col punto) che hanno per 2° carattere &#39;i&#39; mostrati elencati tra doppi apici.&#34;</span>
 </span></span><span style="display:flex;"><span>find ./ -regextype posix-egrep -maxdepth 1 -regex <span style="color:#009c00">&#34;./[^.]i.*</span>$<span style="color:#009c00">&#34;</span> | ls -Q
 </span></span></code></pre></div><h2 id="chmod"><code>chmod</code></h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f00;font-style:italic"># inizializzo il file con i permessi</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f00;font-style:italic"># inizializzo il file con i permessi</span>
 </span></span><span style="display:flex;"><span>chmod 0440 regular_file1
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>echo <span style="color:#009c00">&#34;Il comando chmod gestisce i permessi degli utenti (destinatari) sui vari file (e directory).&#34;</span>
@@ -404,14 +404,14 @@
 </span></span></code></pre></div><h2 id="xargs"><code>xargs</code></h2>
 <p><code>xargs</code>: prende l&rsquo;output di un comando e lo passa come argomento ad un altro comando.</p>
 <p>Esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#009c00">&#34;file1.txt file2.txt file3.txt&#34;</span> | xargs cat
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#009c00">&#34;file1.txt file2.txt file3.txt&#34;</span> | xargs cat
 </span></span></code></pre></div><p>Equivale a:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat file1.txt &amp;&amp; cat file2.txt &amp;&amp; cat file3.txt
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat file1.txt &amp;&amp; cat file2.txt &amp;&amp; cat file3.txt
 </span></span></code></pre></div><p>Secondo esempio:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#009c00">&#39;-name &#34;*.sh&#34;&#39;</span> | xargs find .
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#009c00">&#39;-name &#34;*.sh&#34;&#39;</span> | xargs find .
 </span></span></code></pre></div><p>Equivale a:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find . -name <span style="color:#009c00">&#34;*.sh&#34;</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f00;font-style:italic"># Visualizzare solo il nome del file che contiene la stringa &#34;Enter&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find . -name <span style="color:#009c00">&#34;*.sh&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f00;font-style:italic"># Visualizzare solo il nome del file che contiene la stringa &#34;Enter&#34;</span>
 </span></span><span style="display:flex;"><span>find ./ -name <span style="color:#009c00">&#39;*&#39;</span> -print | xargs   grep -l Enter
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f00;font-style:italic"># Visualizzare il nome del file ed anche il contenuto che contiene la stringa &#34;Enter&#34;</span>
@@ -451,7 +451,7 @@
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2025 Lab. informatica.
+			&copy; 2026 Lab. informatica.
 			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>

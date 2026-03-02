@@ -6,56 +6,42 @@
     <description>Recent content in Link interessanti on Lab. informatica</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://codingepaduli.github.io/interesting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bookmarklets</title>
+      <link>http://codingepaduli.github.io/interesting/bookmarklets/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/bookmarklets/</guid>
+      <description>Bookmarklets</description>
+    </item>
+    <item>
+      <title>Naples</title>
+      <link>http://codingepaduli.github.io/interesting/naples/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/naples/</guid>
+      <description>Naples</description>
+    </item>
     <item>
       <title>Corsi e guide - istruzione di base</title>
       <link>http://codingepaduli.github.io/interesting/educational/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/educational/</guid>
       <description>Set di link relativi all&amp;rsquo;istruzione di base</description>
     </item>
     <item>
-      <title>Link relativi al coding</title>
-      <link>http://codingepaduli.github.io/interesting/developing/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
-      <description>Set di link relativi al coding</description>
-    </item>
-    <item>
       <title>Link interessanti</title>
       <link>http://codingepaduli.github.io/interesting/others/</link>
-      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://codingepaduli.github.io/interesting/others/</guid>
       <description>Set di link interessanti</description>
     </item>
     <item>
-      <title>alohomora</title>
-      <link>http://codingepaduli.github.io/interesting/alohomora/</link>
-      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/alohomora/</guid>
-      <description>alohomora</description>
-    </item>
-    <item>
-      <title>iframe Remover</title>
-      <link>http://codingepaduli.github.io/interesting/frameremover/</link>
-      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/frameremover/</guid>
-      <description>iframe Remover</description>
-    </item>
-    <item>
-      <title>link shower</title>
-      <link>http://codingepaduli.github.io/interesting/linkshower/</link>
-      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/linkshower/</guid>
-      <description>link shower</description>
-    </item>
-    <item>
-      <title>Google Moduli checker</title>
-      <link>http://codingepaduli.github.io/interesting/googlemodulichecker/</link>
-      <pubDate>Wed, 30 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://codingepaduli.github.io/interesting/googlemodulichecker/</guid>
-      <description>Google Moduli checker</description>
+      <title>Link relativi al coding</title>
+      <link>http://codingepaduli.github.io/interesting/developing/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://codingepaduli.github.io/interesting/developing/</guid>
+      <description>Set di link relativi al coding</description>
     </item>
     <item>
       <title>Brand</title>
