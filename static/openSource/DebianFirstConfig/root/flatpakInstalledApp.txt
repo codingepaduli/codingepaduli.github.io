@@ -11,14 +11,15 @@ com.github.qarmin.czkawka
 com.github.tchx84.Flatseal
 com.nextcloud.desktopclient.nextcloud
 # com.ozmartians.VidCutter
-com.ranfdev.Notify
+# com.ranfdev.Notify
 # com.transmissionbt.Transmission
 com.vscodium.codium
 info.smplayer.SMPlayer
-io.github.martchus.syncthingtray
 io.dbeaver.DBeaverCommunity
+io.github.martchus.syncthingtray
+io.github.peazip.PeaZip
 io.podman_desktop.PodmanDesktop
-me.kozec.syncthingtk  ## deprecated, use io.github.martchus.syncthingtray. For info see https://github.com/syncthing-gtk/syncthing-gtk/issues/90 AND https://github.com/flathub/me.kozec.syncthingtk/pull/193
+# me.kozec.syncthingtk  ## deprecated, use io.github.martchus.syncthingtray. For info see https://github.com/syncthing-gtk/syncthing-gtk/issues/90 AND https://github.com/flathub/me.kozec.syncthingtk/pull/193
 me.proton.Pass
 # net.sourceforge.Klavaro
 net.puddletag.puddletag
@@ -26,13 +27,14 @@ org.chromium.Chromium
 # org.gnome.meld
 org.inkscape.Inkscape
 org.kde.kdiff3
-org.gnome.Totem
-org.kde.kate
+# org.gnome.Totem
+# org.kde.kate
 org.kde.kolourpaint
 org.kde.krename
 org.kde.marble
 org.keepassxc.KeePassXC
 org.libreoffice.LibreOffice
+org.mozilla.Thunderbird
 org.mozilla.firefox
 org.musicbrainz.Picard
 # org.nextcloud.Nextcloud ## deprecated name
@@ -42,5 +44,6 @@ org.processing.processingide
 org.videolan.VLC
 # rs.ruffle.Ruffle ## open source Flash Player emulator
 tv.kodi.Kodi
-org.virt_manager.virt-manager
+# org.virt_manager.virt-manager
+xyz.rescribe.rescribe
 

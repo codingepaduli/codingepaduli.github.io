@@ -44,7 +44,7 @@ docker pull python:3.3.13-rc-bookworm
 # docker pull gradle:8.0.0-jdk17
 
 # Hugo
-docker pull hugomods/hugo:reg-base-0.127.0
+docker pull hugomods/hugo:std-base-non-root-0.156.0
 
 docker pull pandoc/extra:3.5
 
