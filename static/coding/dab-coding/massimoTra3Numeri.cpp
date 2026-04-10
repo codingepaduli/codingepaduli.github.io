@@ -45,5 +45,5 @@ int main()
 
   // Output del massimo
   cout<<"il numero max dei tre numeri e':"<<max;
-  return 0;	
+  return 0;  
 }

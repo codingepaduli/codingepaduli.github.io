@@ -26,11 +26,12 @@ lsDisksUUID() {
 export -f lsDisksUUID
 
 #alias la='ls -A' # show hidden files BUT NOT "." and ".."
-#alias lc='ls -C' # show quoted file name (between aphostrophe)
+#alias lc='ls -C' # show quoted file name (between apostrophes)
 #alias lh='ls --human' # bytes measured as human readable
 #alias lt='ls -t' # sort by last modification
 #alias lx='ls -X' # sort by extension
-#alias lx='ls -R' # list recursively
+#alias lr='ls -R' # list recursively
+#alias lv='ls -v' # list ordered (1, 2, 10 instead of 1, 10, 2)  
 
 # Use stat file for file information (instead of ls file)
 # Options:
@@ -590,7 +591,8 @@ export -f traceroute
 
 # display the ports # (TU=TPC/UDP, L=show LISTEN state, PN=Process id/process Name)
 ports() {
-  netstat -tulpn
+  # netstat -tulpn
+  ss -tulnp
 }
 export -f ports
 
@@ -1091,7 +1093,7 @@ mencoderMixAviFileListInALoneAviFile() {
 }
 
 ########################
-# Screen               #
+# Screen e Tmux        #
 ########################
 
 screenSessionStart() {
@@ -1116,6 +1118,30 @@ screenSessionReattach() {
 screenSessionClose() {
   screenSessionName="${1:-myScreenSession}"
   screen -X -S "$screenSessionName" quit
+}
+
+tmuxSessionStart() {
+  tmuxSessionName="${1:-myTmuxSession}"
+  tmux new -s "$tmuxSessionName"
+}
+
+tmuxSessionLs() {
+  tmux ls
+}
+
+tmuxSessionDetach() {
+  tmuxSessionName="${1:-myTmuxSession}"
+  tmux detach-client -t "$tmuxSessionName" 2>/dev/null || tmux detach -s "$tmuxSessionName" 2>/dev/null
+}
+
+tmuxSessionReattach() {
+  tmuxSessionName="${1:-myTmuxSession}"
+  tmux attach -t "$tmuxSessionName"
+}
+
+tmuxSessionClose() {
+  tmuxSessionName="${1:-myTmuxSession}"
+  tmux kill-session -t "$tmuxSessionName"
 }
 
 ########################

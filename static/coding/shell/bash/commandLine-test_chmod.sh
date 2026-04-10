@@ -58,11 +58,11 @@ ls -l regular_file1
 
 echo -e "\n ESEMPIO D'USO - FORMA NUMERICA:"
 echo -e "\n assegno i permessi rwx (4+2+1=7) ad utente, gruppo ed altri"
-chmod 777 regular_file1		# r=4, w=2, x=1 => 7=r+w+x=4+2+1
+chmod 777 regular_file1    # r=4, w=2, x=1 => 7=r+w+x=4+2+1
 ls -l regular_file1
 
 echo -e "\n assegno il permesso di lettura r (r=4) ad utente, nessun permesso al gruppo e ad altri utenti"
-chmod 400 regular_file1		# r=4
+chmod 400 regular_file1    # r=4
 ls -l regular_file1
 
 echo -e "\n ESEMPIO D'USO - PERMESSI SPECIALI E DIRECTORY "

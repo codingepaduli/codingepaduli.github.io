@@ -253,6 +253,7 @@
 <li><code>6</code> imposta il testo lampeggiante;</li>
 <li><code>7</code> imposta i colori invertiti;</li>
 </ul>
+<!-- markdownlint-disable MD060  -->
 <table>
   <thead>
       <tr>
@@ -313,6 +314,7 @@
       </tr>
   </tbody>
 </table>
+<!-- markdownlint-enable MD060  -->
 <p>Se al termine si vuole ripristinare lo stile predefinito allora
 è necessario specificarlo applicando un secondo stile <code>\033[0m</code>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo -e <span style="color:#009c00">&#34;\033[STYLE;COLORE_TXT;COLORE_BACKm Testo colorato \033[0m Testo normale&#34;</span>

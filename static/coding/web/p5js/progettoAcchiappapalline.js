@@ -20,9 +20,9 @@ function draw() {
   // se la pallina raggiunge il fondo dell'area da disegno
   // la riporto su, altrimenti continua a scendere di 10
   if (y1 > 400) {
-	  y1=0;
+    y1=0;
   } else {
-	  y1 = y1+5;
+    y1 = y1+5;
   }
   
   circle(x1, y1, d1);
@@ -32,11 +32,11 @@ function draw() {
   
   // la pallina tocca il rettangolo
   if (distanza < 35) {
-	  punteggio = punteggio + 1;
+    punteggio = punteggio + 1;
 
-	  // riporto la pallina su in posizione casuale
+    // riporto la pallina su in posizione casuale
     x1 = random(20, width - 20);
-	  y1 = 0;
+    y1 = 0;
   }
   
   drawFullScreenRect();

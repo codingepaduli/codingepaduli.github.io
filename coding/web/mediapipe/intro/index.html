@@ -499,14 +499,14 @@
 <h2 id="aggiungere-p5js-e-teachable-machine">Aggiungere P5JS e Teachable Machine</h2>
 <p>Tenendo presente la struttura del codice descritta precedentemente, per aggiungere un controller per P5JS dobbiamo modificare il file <code>mk.js</code> creando:</p>
 <ol>
-<li>un opzione nel metodo <code>start</code> per <strong>creare</strong> un controller:</li>
-</ol>
+<li>
+<p>un opzione nel metodo <code>start</code> per <strong>creare</strong> un controller:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">case</span> <span style="color:#009c00">&#39;p5js&#39;</span>:
 </span></span><span style="display:flex;"><span>  mk.game = <span style="color:#00f">new</span> mk.controllers.P5JS(options);
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">break</span>;
-</span></span></code></pre></div><ol start="2">
-<li>il controller <code>P5JS</code>, conservando la stessa struttura degli altri controller di gioco:</li>
-</ol>
+</span></span></code></pre></div></li>
+<li>
+<p>il controller <code>P5JS</code>, conservando la stessa struttura degli altri controller di gioco:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>mk.controllers.P5JS = <span style="color:#00f">function</span> (options) {
 </span></span><span style="display:flex;"><span>  mk.controllers.Basic.call(<span style="color:#00f">this</span>, options);
 </span></span><span style="display:flex;"><span>  mk.classifier = options.classifier;
@@ -519,9 +519,9 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">this</span>._callbacks.setMK(mk);
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">this</span>._callbacks.setP5JS(<span style="color:#00f">this</span>);
 </span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><ol start="3">
-<li>il metodo per selezionare la mossa tra le mosse indicate precedentemente, selezionare il combattente dall&rsquo;array indicato precedentemente ed applicare il movimento al combattente:</li>
-</ol>
+</span></span></code></pre></div></li>
+<li>
+<p>il metodo per selezionare la mossa tra le mosse indicate precedentemente, selezionare il combattente dall&rsquo;array indicato precedentemente ed applicare il movimento al combattente:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>mk.controllers.P5JS.prototype.movimento = <span style="color:#00f">function</span> (categoriaAI) {
 </span></span><span style="display:flex;"><span>  <span style="color:#f00;font-style:italic">// per ora non fa nulla
 </span></span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> mossa = mk.moves.types.STAND;
@@ -533,15 +533,15 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (categoriaAI == <span style="color:#009c00">&#39;calcio&#39;</span>) {
 </span></span><span style="display:flex;"><span>    mossa = mk.moves.types.HIGH_KICK;
 </span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">var</span> self = <span style="color:#00f">this</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> f = <span style="color:#00f">this</span>.fighters[0];
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">this</span>._moveFighter(f, mossa);
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">return</span> mossa;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ol start="4">
-<li>Creato il controller, dobbiamo modificare il file <code>index.html</code> per aggiungere sia il progetto di <code>p5.js</code> sia quello di <code>Teachable Machine</code>.</li>
-</ol>
+</span></span></code></pre></div></li>
+<li>
+<p>Creato il controller, dobbiamo modificare il file <code>index.html</code> per aggiungere sia il progetto di <code>p5.js</code> sia quello di <code>Teachable Machine</code>.</p>
 <p>Aggiungiamo le librerie di p5.js e di AI per farle convivere con <code>mk</code>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#f00;font-style:italic">&lt;!--  FIX VERSION FOR ALL PATH  --&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;script src=<span style="color:#009c00">&#34;https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js&#34;</span>&gt;&lt;/script&gt;
@@ -583,19 +583,21 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#00f">function</span> draw() {
 </span></span><span style="display:flex;"><span>  background(0);
-</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  circle(200, 200, 20);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Verifichiamo che funzioni aggiungendo l&rsquo;istruzione <code>p5js.movimento(key)</code></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">function</span> draw() {
 </span></span><span style="display:flex;"><span>  background(0);
-</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  circle(200, 200, 20);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>A questo punto è necessario aggiungere il riconoscimento dei movimenti con <code>Teachable Machine</code>, incollando il codice necessario ed utilizzando il metodo <code>gotResult(error, results)</code> per recuperare il movimento:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00f">let</span> categoriaAI = results[0].label;
 </span></span><span style="display:flex;"><span><span style="color:#00f">let</span> movimentoMK = p5js.movimento(categoriaAI);
-</span></span></code></pre></div><p>Un esempio di progetto è in allegato.</p>
+</span></span></code></pre></div></li>
+</ol>
+<p>Un esempio di progetto è in allegato.</p>
 
     </div>
   </article>

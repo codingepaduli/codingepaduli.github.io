@@ -111,7 +111,7 @@ do
         echo "Repository configured: $repo"
         cd ..
     else
-    	echo "Fails - Please upload your key in case of Permission denied (publickey) - $repo"
+      echo "Fails - Please upload your key in case of Permission denied (publickey) - $repo"
     fi
 done
 

@@ -27,10 +27,10 @@ float moltiplicazione(float a, float b)
 float divisione(float a, float b) 
 {
     if (b / 0) 
-	{
+  {
         return a / b;
     } else 
-	{
+  {
         printf("Errore: divisione per zero!\n");
         return 0;
     }
@@ -38,7 +38,7 @@ float divisione(float a, float b)
 float calcolatrice(float a, float b, char operazione) 
 {
     switch (operazione) 
-	{
+  {
         case '+':
             return somma(a, b);
         case '-':

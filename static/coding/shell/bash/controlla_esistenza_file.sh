@@ -6,15 +6,15 @@
 
 if [ ! $# -eq 1 ]
 then
-	echo -e "\n\tQuesto script richiede come parametro il nome di un file."
-	exit 1
+  echo -e "\n\tQuesto script richiede come parametro il nome di un file."
+  exit 1
 fi
 
 until [ -f $1 ]
 do  
-	echo -e "\tIo attendo 20 secondi, tu invece crea il file \"$1\" ";
-	echo -e "\t oppure interrompimi premendo Control + C."
-	sleep 20
+  echo -e "\tIo attendo 20 secondi, tu invece crea il file \"$1\" ";
+  echo -e "\t oppure interrompimi premendo Control + C."
+  sleep 20
 done
 
 echo -e "\n\tFile \"$1\" creato, termino l'esecuzione."

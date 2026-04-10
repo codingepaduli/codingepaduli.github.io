@@ -13,7 +13,7 @@
 # Per installare un'alternativa JAVA nuova:
 ## Download openjdk-17-x64.tar.gz file
 ## Create as root the folders:
-## 	mkdir -p /usr/lib/jvm/
+##   mkdir -p /usr/lib/jvm/
 ## Extract in folder /usr/lib/jvm/java-17-openjdk-amd64/
 ## Install the alternative (aggiorna il file /var/lib/dpkg/alternatives/java): 
 ##    sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-11-openjdk-amd64/bin/java 1111
@@ -24,7 +24,7 @@
 # Per installare un'alternativa NODE nuova:
 ## Download node-v22.16.0-linux-x64.tar.xz (prebuilt file)
 ## Create as root the folders:
-## 	mkdir -p /usr/lib/node/
+##   mkdir -p /usr/lib/node/
 ## Extract in folder /usr/lib/node/node-22-x64/
 ## Install the alternative (aggiorna il file /var/lib/dpkg/alternatives/node):
 ##    sudo update-alternatives --install /usr/bin/node node /usr/lib/node/node-24-x64/bin/node 2411

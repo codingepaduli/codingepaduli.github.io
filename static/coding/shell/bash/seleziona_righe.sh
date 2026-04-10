@@ -2,26 +2,26 @@
 
 if [[ ! $# -eq 1 ]]
 then
-	echo "Devi specificare un file da creare."
-	exit 1
+  echo "Devi specificare un file da creare."
+  exit 1
 fi
 
 if [[ ! -f seleziona_righe_elenco.txt ]] 
 then
-	echo "Il file \"seleziona_righe_elenco.txt\" non esiste."
-	exit 1
+  echo "Il file \"seleziona_righe_elenco.txt\" non esiste."
+  exit 1
 fi
 
 if [[ ! -f seleziona_righe_lista.txt ]]
 then
-	echo "Il file \"seleziona_righe_lista.txt\" non esiste."
-	exit 1
+  echo "Il file \"seleziona_righe_lista.txt\" non esiste."
+  exit 1
 fi
 
 if [[ -f $1 ]]
 then
-	echo "Il file $1 esiste già".
-	exit 1
+  echo "Il file $1 esiste già".
+  exit 1
 fi
 
 

@@ -3,18 +3,18 @@
     let questions = {};
     let index = 0;
 
-		// see dashboard https://jsonbox.io/dashboard.html?box=box_638e0bc908f98bdbc087
-		// delete a row by ID: https://jsonbox.io/box_638e0bc908f98bdbc087/ID
+    // see dashboard https://jsonbox.io/dashboard.html?box=box_638e0bc908f98bdbc087
+    // delete a row by ID: https://jsonbox.io/box_638e0bc908f98bdbc087/ID
 
     console.time("AJAX call");
-		// get data from json database  -  ?q=sezione:01&#58;Costituzione
-		let url = "https://jsonbox.io/box_638e0bc908f98bdbc087?q=sezione:*Costituzione";
-		let record = {};
-		fetch(url, {
-			method: 'GET',
-			cache: 'no-cache',
-			headers: { 'Content-Type': 'application/json' }
-		}).then(x => x.json())
+    // get data from json database  -  ?q=sezione:01&#58;Costituzione
+    let url = "https://jsonbox.io/box_638e0bc908f98bdbc087?q=sezione:*Costituzione";
+    let record = {};
+    fetch(url, {
+      method: 'GET',
+      cache: 'no-cache',
+      headers: { 'Content-Type': 'application/json' }
+    }).then(x => x.json())
     .then((myJson) => questions = myJson)
     .then(() => console.timeEnd("AJAX call"))
     //.then(() => console.table(questions))
