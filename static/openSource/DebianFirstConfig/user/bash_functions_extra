@@ -167,7 +167,6 @@ convertAllXslxToCsv() {
 }
 export -f convertAllXslxToCsv
 
-
 # converts all CSV files to Excel files
 # Usage: convertAllCsvToXslx
 convertAllCsvToXslx() {
@@ -182,3 +181,9 @@ convertAllCsvToXslx() {
   done
 }
 export -f convertAllCsvToXslx
+
+## play a video and exit
+flatpakVlcPlayAndExit() {
+  flatpak run org.videolan.VLC --play-and-exit "$@"
+}
+export -f flatpakVlcPlayAndExit

@@ -185,9 +185,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# GNOME 3 PIN or pass-phrase entry dialog for GnuPG
-# apt-get install $APT_OPTS pinentry-gnome3
-
+## pinentry-gnome3 GNOME 3 PIN or pass-phrase entry dialog for GnuPG
+## libpam-cracklib: controlla che le password non siano troppo deboli
+## (lunghezza minima, maiuscole minuscole numeri e simboli, ecc..)
+# apt-get install $APT_OPTS pinentry-gnome3 libpam-cracklib
 if [ $? -ne 0 ]; then
     exit 1
 fi
@@ -250,6 +251,7 @@ fi
 
 ## tealdeer : gestisce le pagine TLDR
 ## screen: gestisce le sessioni di terminale, quando la connessione cade o si chiude
+##         involontariamente un terminale, ci si può ricollegare e riprendere.
 ## tmux:   gestisce le sessioni di terminale, quando la connessione cade o si chiude
 ##         involontariamente un terminale, ci si può ricollegare e riprendere.
 apt-get install $APT_OPTS bash bash-completion curl dash diffutils tealdeer screen tmux

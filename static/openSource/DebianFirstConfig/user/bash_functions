@@ -11,6 +11,24 @@
 # command inside a function "clear", you need to use:
 #   command clear;
 
+chown() {
+  # A recursive -R chown without -h can do random damage to owners and
+  # groups because when it encounter a symlink, chown will change the 
+  # ownership of the file that those symlinks point to.
+  # "chown ./symlinkToEtcFile" change the owner of /etc/file
+  chown -h "$@"
+}
+export -f chown
+
+chgrp() {
+  # A recursive -R chgrp without -h can do random damage to owners and
+  # groups because when it encounter a symlink, chgrp will change the 
+  # group of the file that those symlinks point to.
+  # "chgrp ./symlinkToEtc" change the group of /etc directory
+  chgrp -h "$@"
+}
+export -f chgrp
+
 # Show the rows -rw------- 1 io casa 15491 2023-08-17 14:35 file
 # Usage: ll
 ll() {
@@ -24,6 +42,11 @@ lsDisksUUID() {
   ll -l /dev/disk/by-uuid "$@"
 }
 export -f lsDisksUUID
+
+# shutdown the pc
+poweroff() {
+  systemctl poweroff
+}
 
 #alias la='ls -A' # show hidden files BUT NOT "." and ".."
 #alias lc='ls -C' # show quoted file name (between apostrophes)
@@ -118,7 +141,7 @@ clearCache() {
 }
 export -f clearCache
 
-# clear and regenerate onts
+# clear and regenerate fonts
 # Usage: clearAndRegenerateFonts
 clearAndRegenerateFonts() {
     # Pulisce e rigenera la cache dei fonts (i tipi di carattere)
@@ -202,9 +225,26 @@ biggestDir() {
 }
 export -f biggestDir
 
+### Jobs
+# job        : visualizza background Jobs
+# sleep 60 & : manda in background un job
+# fg %1      : manda in foreground un job
+# bg %1      : manda in background un job
+
+### Jobs priority
+# Range: [ -20 (Massima priorità) - 19 (Minima priorità) ]
+# nice -n 10 ./prog.sh : avvia ./prog con priorità 10 (bassa)
+# renice -n 5 -p 1234  : cambia la priorità a 5 (bassa)
+
 ####################################
 # VLC - Metadata Extraction Tool   #
 ####################################
+
+## play a video and exit
+vlcPlayAndExit() {
+  vlc --play-and-exit "$@"
+}
+export -f vlcPlayAndExit
 
 # Auto reconnect to the server when connection drops
 # Usage: vlcStreamingWithAutoReconnection file.m3u
@@ -488,6 +528,127 @@ md5Report() {
 export -f md5Report
 
 ########################
+#       alarm          #
+########################
+
+# Play an alarm
+function alarmPlay() {
+  local ALARM_FILE="/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga"
+  paplay "$ALARM_FILE" || echo -e "\a" # \a is ASCII BEL
+}
+export -f alarmPlay
+
+# Check the alarm time is set
+function alarmCheck() {
+  local ALARM_FILE="/tmp/sveglia_time"
+
+  local now
+  local alarmTime
+  local remainingMins
+  local remainingSecs
+  local human
+
+  while true; do
+    # il file NON esiste o non è regolare
+    if [[ ! -f $ALARM_FILE ]]; then
+      echo "Sveglia non impostata"
+      return 1
+    fi
+
+    now=$(date +%s)
+    alarmTime=$(cat "$ALARM_FILE")
+    human=$(date -d "@$alarmTime" '+%Y-%m-%d %H:%M:%S')
+
+    remaining=$(( alarmTime - now ))
+    remainingMins=$(( remaining / 60 ))
+    remainingSecs=$(( remaining % 60 ))
+
+    echo "Sveglia impostata alle $human: Mancano ${remainingMins}m e ${remainingSecs}s"
+    
+    if (( alarmTime > now )); then
+      sleep $(( remaining > 30 ? 30 : (remaining / 2) )) # $(( alarmTime - now ))
+    else
+      # tempo scaduto: esegui comando allarme e rimuovi file
+      rm -f "$ALARM_FILE"
+      echo "DRIIIIINNNNNN"
+      return 0
+    fi
+  done
+  return 0
+}
+export -f alarmCheck
+
+# Imposta la sveglia dopo un certo numero di minuti
+function alarmSetMin() {
+  # Il parametro $1 e' vuoto oppure contiene caratteri non numerici
+  if [[ -z $1 || ! $1 =~ ^[0-9]+$ ]]; then
+    echo "Sveglia non impostata. Inserisci i minuti in formato numerico."
+    return 1
+  fi
+
+  local ALARM_FILE="/tmp/sveglia_time"
+  local alarmTime
+
+  # Se esiste il file della sveglia, recupero l'orario (suppongo corretto),
+  # altrimenti imposto l'orario attuale 
+  if [[ -f $ALARM_FILE ]]; then
+    alarmTime=$(cat "$ALARM_FILE")
+  else
+    alarmTime=$(date +%s)
+  fi
+
+  # All'orario di partenza aggiungo i minuti
+  alarmTime=$(( alarmTime + $1 * 60 ))
+
+  # Salvo nel file
+  echo "$alarmTime" > "$ALARM_FILE"
+
+  # Visualizzo il messaggio e esco
+  echo "Sveglia impostata alle: " "$(date -d "@$alarmTime" '+%Y-%m-%d %H:%M:%S')"
+  return 0
+}
+export -f alarmSetMin
+
+# Rimuove la sveglia
+function alarmRemove() {
+  local ALARM_FILE="/tmp/sveglia_time"
+
+  if [[ -f $ALARM_FILE ]]; then
+    rm -f "$ALARM_FILE"
+    echo "Sveglia cancellata."
+  else
+    echo "Nessuna sveglia presente"
+  fi
+}
+export -f alarmRemove
+
+# Visualizza la sveglia impostata
+function alarmStatus() {
+  local ALARM_FILE="/tmp/sveglia_time"
+  local alarmTime
+
+  # Se esiste il file della sveglia, recupero l'orario (suppongo corretto),
+  # altrimenti restituisco errore 
+  if [[ -f $ALARM_FILE ]]; then
+    alarmTime=$(cat "$ALARM_FILE")
+  else
+    echo "Sveglia non impostata"
+    return 1
+  fi
+
+  local now
+  local human
+  
+  now=$(date +%s)
+  human=$(date -d "@$alarmTime" '+%Y-%m-%d %H:%M:%S')
+
+  local remainingMins=$(( (alarmTime - now)/60 ))
+  local remainingSecs=$(( (alarmTime - now)%60 ))
+  echo "Sveglia impostata alle $human: Mancano ${remainingMins}m e ${remainingSecs}s"
+}
+export -f alarmStatus
+
+########################
 #        ntfy          #
 ########################
 
@@ -648,6 +809,7 @@ export -f interfaceEthDown
 
 interfaceLoAddAddress() {
   ip address add 127.0.0.2/16 dev lo
+  # ip address add 192.168.0.100 dev eth0
 }
 export -f interfaceLoAddAddress
 
@@ -655,6 +817,11 @@ interfaceLoRemoveAddress() {
   ip address delete 127.0.0.2/16 dev lo
 }
 export -f interfaceLoRemoveAddress
+
+ipShowArpTable() {
+  ip neigh show
+}
+export -f ipShowArpTable
 
 interfaceEthArpOn() {
   ip link set dev eth0 arp on
@@ -666,10 +833,20 @@ interfaceEthArpOff() {
 }
 export -f interfaceEthArpOff
 
-ipRoutingTable() {
+ipShowRoutingTable() {
   ip route
 }
-export -f ipRoutingTable
+export -f ipShowRoutingTable
+
+ipAddRouteToRoutingTable() {
+  ip route add 169.254.0.0/24 dev eth0 proto static
+}
+export -f ipAddRouteToRoutingTable
+
+ipRemoveRouteFromRoutingTable() {
+  ip route del 169.254.0.0/24 dev eth0
+}
+export -f ipRemoveRouteFromRoutingTable
 
 # Indica IP di un nome di dominio
 ## Usa: host -t a nomeDominio.com
@@ -1053,6 +1230,28 @@ tagAllMp3File()  {
 
 }
 # export -f tagAllMp3File
+
+# Estrae le informazioni di codifica video e audio di un file
+## -show_format mostra informazioni del contenitore: filename, 
+##    durata, numero di stream audio/video, bitrate complessivo
+## -show_streams mostra informazioni di ogni stream: indice, 
+##    codec, risoluzione (w, h), frame_rate, bitrate, colorspace
+ffprobeMediaInfoAsPlainText() {
+  ffprobe -v error -show_format -show_streams -print_format flat "$@"
+}
+export -f ffprobeMediaInfoAsPlainText
+
+# Estrae le informazioni del contenitore del file
+ffprobeMediaContainerInfoAsCSV() {
+  ffprobe -v error -show_format -print_format csv "$@"
+}
+export -f ffprobeMediaContainerInfoAsCSV
+
+# Estrae le informazioni degli stream audio/video del file
+ffprobeMediaStreamsInfoAsCSV() {
+  ffprobe -v error -show_streams -print_format csv "$@"
+}
+export -f ffprobeMediaStreamsInfoAsCSV
 
 ########################
 # Mencoder             #
