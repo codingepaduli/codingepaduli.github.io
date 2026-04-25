@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="no-js" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ffmpeg - Lab. informatica</title>
+
+    <meta name="description" content="ffmpeg">
+        <meta property="og:url" content="http://codingepaduli.github.io/tools/ffmpeg/">
+  <meta property="og:site_name" content="Lab. informatica">
+  <meta property="og:title" content="ffmpeg">
+  <meta property="og:description" content="ffmpeg">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tools">
+    <meta property="article:published_time" content="2026-04-17T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-17T00:00:00+00:00">
+    <meta property="og:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+
+        
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://codingepaduli.github.io/static/wifi-5.svg">
+  <meta name="twitter:title" content="ffmpeg">
+  <meta name="twitter:description" content="ffmpeg">
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/static/css/customTypography.css">
+    
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/static/wifi-5.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/manifest.webmanifest">
+
+    
+        <meta name="keywords" content="coding  programmazione  open-source  sviluppo  web  ">
+</head>
+<body class="body">
+    <div class="container container--outer">
+        <header class="header">
+	<div class="container header__container">
+		
+	
+	<div class="logo">
+
+    
+    <div id="my_logo">
+
+      
+      <div>
+        <a class="logo__link" href="/" title="Lab. informatica" rel="home">
+      		</a>
+      </div>
+
+      
+      <div class="logo__item">
+        <div class="logo__title">
+          <a href="/" style="color: #e22d30">
+            Lab. informatica
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div>
+        
+
+  <div class="menu_button">
+    
+    <label for="my_menu">
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+      </div>
+    </div>
+    
+
+    <style>
+       
+      #my_logo {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;  
+      }
+    </style>
+
+    
+    <div class="logo__item logo__text" style="display: block; text-align: center;">
+			<div class="logo__tagline" style="color: inherit;">Sito web del laboratorio di informatica</div>
+		</div>
+  </div>
+
+  
+
+  
+  <input type="checkbox" id="my_menu">
+
+
+		
+
+  <nav class="my_navbar">
+    <ul>
+
+      <li><a href="/coding/">Coding</a></li>
+
+      <li><a href="/tools/">Tools</a></li>
+
+      <li><a href="/opensource/">Software open source</a></li>
+
+      <li><a href="/webapp/">Web-App</a></li>
+
+      <li><a href="/interesting/">Link interessanti</a></li>
+    </ul>
+  </nav>
+
+	</div>
+</header>
+
+
+
+  <style>
+     
+    .my_navbar ul {
+      display: flex;  
+      background-color: black;
+      color: white;
+    }
+    .my_navbar li {
+      padding: 0.8rem 1.5rem;
+      list-style: none;
+      text-transform: uppercase;
+      justify-content: center;
+    }
+    .my_navbar a {
+      color: white;
+      font-weight: 700;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .my_navbar ul {
+         flex-direction: column;
+         display: none;  
+      }
+
+       
+       
+      #my_menu:checked + .my_navbar ul {
+         display: flex;
+         text-align: center;
+      }
+    }
+  </style>
+
+
+
+  <style>
+     
+    .menu_button {
+      display: none;
+    }
+    .menu_button label {
+      background-color: white;
+      color: black;
+      border: 2px solid white;
+      height: 70px;
+      width: 70px;
+      display: flex;  
+      justify-content: center;
+      align-items: center;  
+      flex-direction: column;
+      font-size: 1.0rem;
+    }
+     
+    .menu_button label span {
+      background-color: black;
+      color: white;
+      height: 3px;
+      width: 80%;
+      margin: 5px 0px;
+    }
+
+     
+    @media screen and (max-width: 767px) {
+      .menu_button {
+        display: flex;  
+        justify-content: flex-end;  
+      }
+    }
+  </style>
+
+
+
+  
+  <style>
+    #my_menu {
+      display: none;  
+    }
+  </style>
+
+
+        <div class="wrapper flex">
+            <div class="primary">
+            
+<style>
+    :fullscreen {
+        overflow-x :hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      
+      <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-04-17T00:00:00Z">17-04-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>, <a class="meta__link" href="/categories/tools/" rel="category">Tools</a>
+	</span>
+</div><div class="meta__item-reading meta__item">
+    
+	<span class="meta__text">
+        Tempo di lettura 14 minuti 
+        ( 2970 parole)
+    </span>
+</div></div>
+    </header>
+<div class="content post__content clearfix">
+      <h1 id="ffmpeg">FFmpeg</h1>
+<p>FFmpeg è uno software open‑source completo ed utilissimo per lavorare con file audio e video. FFmpeg è anche il nome del progetto.</p>
+<h2 id="file-multimediali">File multimediali</h2>
+<!-- Inizio copia di immagini.md -->
+<p>Un&rsquo;<strong>immagine digitale</strong> è una rappresentazione &ldquo;visiva&rdquo; (in realtà è numerica) delle informazioni di luminosità e colore su una griglia discreta di punti chiamati <strong>pixel</strong>.</p>
+<p>Un <strong>video digitale</strong> è una sequenza di immagini digitali, dette <strong>frame</strong>.</p>
+<p>Un <strong>audio digitale</strong> è una sequenza di valori nel tempo, detti <strong>campioni</strong> (samples).</p>
+<p>Un&rsquo;immagine digitale ha proprietà come:</p>
+<ul>
+<li>la <strong>risoluzione</strong>, ovvero la grandezza e l&rsquo;altezza delle immagini riprodotte, la dimensione è espressa in pixel; Lo standard cinematografico DCI 4K è 4096×2160 pixel. Lo standard 4K Ultra HD (o UHD) è 3840×2160 pixel. Il Full HD (o &ldquo;FHD&rdquo; o &ldquo;1K&rdquo; o &ldquo;1080p&rdquo;) è 1920×1080 pixel. Etichettare un dispositivo &ldquo;4K&rdquo; senza specificare altro genera solo confusione.</li>
+<li>lo <strong>spazio di colori</strong> indica quanti colori si possono rappresentare, attualmente lo si suddivide impropriamente in tre &ldquo;canali&rdquo; (RGB, HSB, LAB, LCH, si rimanda al capitolo sui colori per i dettagli) più un eventuale canale &ldquo;alfa&rdquo; per indicare la trasparenza dei singoli punti;</li>
+<li>la <strong>profondità di colore</strong>, determinano la brillantezza dei colori, la vivacità. Una profondità ridotta comporta poche sfumature (ad esempio poche sfumature dal rosa al rosso); Attualmente è indicato con &ldquo;8bit&rdquo; ad intendere 16 milioni di colori, oppure con &ldquo;10bit&rdquo; ad intendere un miliardo di colori differenti. Per approfondimento sugli spazi di colore e la profondità di colore si rimanda al capitolo sui colori.</li>
+</ul>
+<p>Un video digitale ha proprietà come:</p>
+<ul>
+<li>la <strong>risoluzione</strong>, lo  <strong>spazio di colori</strong> e la <strong>profondità di colore</strong>, che derivano dai frame che lo compongono;</li>
+<li>il <strong>numero di frame per secondo</strong> indica la fluidità visiva; Per il cinema lo standard è 24 fps, nelle TV lo standard è 25 fps. Quando il video lo supporta, si può arrivare a 60 fps per dispositivi &ldquo;Full HD&rdquo; e proiezioni &ldquo;DCI 4K&rdquo; ed a 120 fps su dispositivi &ldquo;4K UHD&rdquo;.</li>
+</ul>
+<p>Un audio digitale ha proprietà come:</p>
+<ul>
+<li>la <strong>frequenza di campionamento</strong>, ovvero il numero di campioni riprodotti al secondo; Cinema e TV usano 48 kHz. Gli esseri umani percepiscono circa 20kHz.</li>
+<li>la <strong>profondità del suono</strong>, indica quando può essere ampio l&rsquo;intervallo sonoro da riprodurre.</li>
+<li>il <strong>numero di canali</strong> indica quanti canali di riproduzione sono presenti.</li>
+</ul>
+<p>Le configurazioni del numero di canali audio sono le seguenti:</p>
+<ul>
+<li>mono: un solo canale, lo stesso segnale è riprodotto su tutti gli speaker;</li>
+<li>stereo: due canali separati, il canale destro riprodotto sugli speaker a destra, quello sinistro riprodotto sugli speaker a sinistra;</li>
+<li>5.1 (6 canali): sei canali separati per la configurazione &ldquo;surround&rdquo;, ovvero uno per la riproduzione fronte-sinistra, uno fronte-destra, uno retro-sinistra, uno retro-destra, uno centrale e uno &ldquo;subwoofer&rdquo; (informalmente la cassa del &ldquo;basso&rdquo;);</li>
+<li>7.1 (8 canali): estende il &ldquo;5.1&rdquo; aggiungendo due canali per i diffusori posteriori (altoparlanti &ldquo;surround&rdquo; per suono avvolgente).</li>
+</ul>
+<p>La <strong>dimensione</strong> del file (o del singolo flusso) dipende dalle proprietà sopra elencate. Supponiamo che ogni frame (immagine) è 5 megabyte. Con lo standard TV (25fps), per realizzare un secondo di trasmissione abbiamo bisogno di 25 frame, quindi moltiplicando 25 per 5 otteniamo 125 megabyte per un secondo. Se consideriamo un minuto, moltiplicando 125 megabyte per 60 secondi otteniamo 7,5 gigabyte. Un&rsquo;ora di trasmissione comporta 450 gigabyte di spazio.</p>
+<p>Se le immagini (i frame) fossero di 1 megabyte, un&rsquo;ora di trasmissione comporterebbe 90 gigabyte di spazio, risparmieremmo spazio, ma perderemmo qualità (perché le immagini passano da 5Mb ad 1Mb).</p>
+<h3 id="formati-ed-estensioni-dei-file-immagine">Formati ed estensioni dei file immagine</h3>
+<p>Il <strong>formato</strong> di un file immagine definisce la struttura interna con cui sono memorizzate le informazioni: spazio di colori, profondità, colori per ogni pixel dell&rsquo;immagine, e metadati. Ad esempio lo spazio dei colori e la profondità possono indicare che l&rsquo;immagine è monocromatica (bianco e nero) oppure in scala di grigi, mentre i metadati possono indicare l&rsquo;autore, il dispositivo, il rapporto d&rsquo;aspetto (4:3 oppure 16:9), la posizione GPS, &hellip;</p>
+<p>L&rsquo;<strong>estensione del file</strong> ci suggerisce il formato di memorizzazione dell&rsquo;immagine, ad esempio <code>.jpeg</code>, <code>.png</code>, <code>.tiff</code>, <code>.heif</code>, e cosi via&hellip;</p>
+<p>L&rsquo;uso commerciale di uno specifico formato oppure l’implementazione in software disponibili online e in dispositivi in commercio può richiedere il pagamento delle licenze collegate. La semplice creazione o riproduzione personale in genere non comporta nessun costo.</p>
+<h3 id="formati-ed-estensioni-dei-file-audio-e-video">Formati ed estensioni dei file audio e video</h3>
+<p>File audio e file video sono memorizzati in un <strong>formato contenitore</strong>. Il compito di un contenitore è memorizzare i flussi audio, i flussi video, i sottotitoli ed i metadati in un unico file in maniera standard in modo che i lettori audio (come i lettori mp3) ed i lettori video (come i lettori dvd) possano riprodurli.</p>
+<p>Parliamo di più flussi perché un video può essere suddiviso in capitoli, oppure perché possiamo avere più file audio, uno per ogni lingua, o più sottotitoli, sempre uno per ogni lingua.</p>
+<p>Inoltre il contenitore memorizza i metadati, come autore, regista, casa produttrice, anno, ecc&hellip; e memorizza gli indici per il posizionamento, ad esempio l&rsquo;indice del trailer, del primo e del secondo tempo, oppure degli episodi o delle parti del video.</p>
+<p>L&rsquo;<strong>estensione del file</strong> ci suggerisce il formato contenitore utilizzato per memorizzazione i vari flussi, i sottotitoli, i metadati e gli indici presenti all&rsquo;interno del file multimediale, ad esempio <code>.mp3</code> <code>.mp4</code>, <code>.mkv</code> e ne esistono molte altre, <code>.mov</code>, <code>.avi</code>, <code>.mpeg</code> e così via. Queste estensioni di file non rappresentano un audio o un video, ma rappresentano il formato <strong>contenitore</strong> che contiene i flussi audio e video.</p>
+<p>L&rsquo;uso commerciale di uno specifico formato oppure l’implementazione in software disponibili online e in dispositivi in commercio può richiedere il pagamento delle licenze collegate. La semplice creazione o riproduzione personale in genere non comporta nessun costo.</p>
+<p>I <strong>muxer</strong> si occupano di scrivere un flusso in un formato contenitore.</p>
+<p>I <strong>demuxer</strong> si occupano di leggere un flusso contenuto in un formato contenitore.</p>
+<p>L&rsquo;operazione di <strong>transmuxing</strong> è l&rsquo;operazione di convertire da un formato contenitore ad un altro formato contenitore, senza modificare i flussi audio e video presenti all&rsquo;interno.</p>
+<h3 id="codec-codificatori-e-decodificatori">Codec codificatori e decodificatori</h3>
+<p>I <strong>formati di codifica</strong> servono a memorizzare le proprietà ed i dati (i frame o i campioni) di ogni singolo flusso audio o video.</p>
+<p>Il formato di codifica memorizza tutte le proprietà del flusso, come la risoluzione video o la profondità di colore o del suono oppure ancora la frequenza di campionamento audio o il numero di canali audio.</p>
+<p>Il termine <strong>codec</strong> è l&rsquo;unione delle abbreviazioni di codifica (&ldquo;co&rdquo;) e decodifica (&ldquo;dec&rdquo;) e rappresenta gli algoritmi che trasformano il video nel formato di codifica e, viceversa, dal formato di codifica ricompongono il video per la riproduzione di ogni frame.</p>
+<p>I <strong>codificatori</strong> (encoder) sono algoritmi che trasformano l&rsquo;audio e/o il video nel formato di codifica.</p>
+<p>I <strong>decodificatori</strong> (decoder) sono algoritmi che dal formato di codifica ricompongono il video per la riproduzione di ogni frame.</p>
+<p>L&rsquo;operazione di <strong>transcoding</strong> è l&rsquo;operazione di convertire un flusso audio/video da un formato di codifica ad un altro formato di codifica.</p>
+<p>Il lavoro del codificatore consiste nel salvare quante più informazioni possibili cercando di ridurre il più possibile la dimensione del file, bilanciando quindi la qualità con la dimensione del flusso (e del file).</p>
+<p>I trucchi che i codec (gli encoder) sfruttano per avere alta qualità in dimensione ridotta sono molteplici, tra quelli maggiormente utilizzati abbiamo:</p>
+<ul>
+<li>la maggior parte dei fotogrammi in un video sono abbastanza simili, contengono solo piccole differenze (è il concetto di movimento, piccole differenze che ci inducono a pensare che il soggetto si stia muovendo). Memorizzano il primo frame e poi solo le differenze successive si riduce la dimensione del flusso. Questo processo è ripetuto ogni tot frame;</li>
+<li>l&rsquo;occhio umano è più sensibile ai cambiamenti di intensità della luce rispetto ai cambiamenti di colore, e quindi si salvano maggiori informazioni sull&rsquo;intensità e meno informazioni sul colore;</li>
+<li>l&rsquo;orecchio umano sente un intervallo frequenze limitato, tagliando via le frequenze che non possiamo percepire si riduce la dimensione del flusso.</li>
+</ul>
+<p>Il processo di decodifica deve poi tenere presente tutte queste accortezze per poter ricostruire il flusso.</p>
+<!-- Fine copia di immagini.md -->
+<h3 id="confronto-tra-formati-su-wikipedia">Confronto tra formati su Wikipedia</h3>
+<p>Per una lista dei formati grafici disponibili, si rimanda alla pagina di Wikipedia <a href="https://en.wikipedia.org/wiki/Image_file_format">Image file format</a>.
+Anche per un confronto tra i vari formati grafici, si rimanda alla pagina di Wikipedia <a href="https://en.wikipedia.org/wiki/Comparison_of_graphics_file_formats">Comparison of graphics file formats</a>.</p>
+<p>Per una lista dei formati contenitori video disponibili si rimanda alla pagina di Wikipedia <a href="https://en.wikipedia.org/wiki/Video_file_format">Video file format</a>; Anche per un confronto tra i vari formati video, si rimanda alla pagina di Wikipedia <a href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats">Comparison of video container formats</a>.</p>
+<p>Allo stesso modo, per una lista dei formati contenitori audio disponibili si rimanda alla pagina di Wikipedia <a href="https://en.wikipedia.org/wiki/Audio_file_format">Audio file format</a>; Anche per un confronto tra i vari formati audio, si rimanda alla pagina di Wikipedia <a href="https://en.wikipedia.org/wiki/Comparison_of_audio_coding_formats">Comparison of video container formats</a>.</p>
+<h2 id="concetti-di-ffmpeg">Concetti di ffmpeg</h2>
+<h3 id="input-e-output">Input e output</h3>
+<p>Input: i dati di input possono venire da qualsiasi sorgente, dalla rete, da un dispositivo hardware, da un file e così via.. FFmpeg può gestire <strong>più input contemporaneamente</strong> e li gestisce numerandoli partendo dall&rsquo;indice zero.</p>
+<p>Output: l&rsquo;output può essere un file, un socket di rete, un dispositivo hardware e così via. FFmpeg può gestire <strong>più output contemporaneamente</strong> e li gestisce numerandoli partendo dall&rsquo;indice zero..</p>
+<p>Input e output possono essere composti da più flussi audio/video, ogni flusso è numerato partendo dall&rsquo;indice zero.</p>
+<h3 id="filtri-e-catene">Filtri e catene</h3>
+<p>Filtri: rappresentano le operazioni di modifica dei frame. Le altre applicazioni li chiamano effetti. Tra i vari filtri abbiamo il filtro di dissolvenza (effetto dissolvenza) o il filtro di aumento del volume (effetto aumento volume).</p>
+<p>Catena: consiste nel connettere l&rsquo;output di un filtro con l&rsquo;input di un altro filtro, creando appunto una catena (o una pipe).</p>
+<p>I <strong>filtri semplici</strong> rappresentano una singola catena di filtri che coinvolgono un solo file di input ed un solo file di output.</p>
+<p>I <strong>filtri complessi</strong> rappresentano catene multiple di filtri che coinvolgono più file di input e più file di output.</p>
+<p>Ad esempio possiamo creare un filtro complesso con tre catene:</p>
+<ul>
+<li>prima catena che ridimensiona il primo flusso video del primo file in input e lo invia nel primo file in output;</li>
+<li>seconda catena che copia il flusso audio dal primo file in input e lo invia nel secondo file in output;</li>
+<li>terza catena che converte in MP3 il flusso audio del secondo file in input e lo invia al terzo file di output;</li>
+</ul>
+<h3 id="specificatori-dei-flussi-e-mappe">Specificatori dei flussi e mappe</h3>
+<p>Gli specificatori dei flussi servono a selezionare uno o piò flussi. La sintassi è la seguente:</p>
+<ul>
+<li>
+<p><code>#id</code> oppure <code>i:id</code>: indica lo stream utilizzando l&rsquo;ID dello stream contenuto nel formato container (partono da zero). Ad esempio <code>#1</code> indica il secondo stream nel container, <code>#4</code> indica il quinto);</p>
+</li>
+<li>
+<p><code>indice</code>: indica lo stream utilizzando l&rsquo;indice numerico rilevato, può essere diverso dall&rsquo;identificativo presente nel container; Ad esempio <code>1</code> indica il secondo stream nel container, <code>4</code> indica il quinto);</p>
+</li>
+<li>
+<p><code>m:key:value</code> seleziona i flussi che contengono la chiave <code>key</code>, eventualmente con valore <code>value</code>. Ad esempio <code>m:language:eng</code> seleziona i flussi che tra i metadati hanno la chiave <code>language</code> con valore <code>eng</code>;</p>
+</li>
+<li>
+<p><code>tipo:specificatore</code>: Indica gli stream per tipo e poi opzionalmente si può indicare un ulteriore specificatore per id o per indice. I tipi sono i seguenti:</p>
+<ul>
+<li><code>a</code>: tutti i flussi audio;</li>
+<li><code>v</code>: tutti i flussi video;</li>
+<li><code>s</code>: tutti i flussi di sottotitoli;</li>
+<li><code>d</code>: tutti i flussi data (including timecode tracks);</li>
+<li><code>t</code>: tutti i flussi attachment;</li>
+</ul>
+<p>Un esempio di specificatori per tipo è <code>v:0</code>, ovvero il primo flusso video, oppure <code>a:m:language:eng</code>, ovvero i flussi audio che tra i metadati hanno la chiave <code>language</code> con valore <code>eng</code>. Specificatori come <code>a:i:1</code> e <code>a:#1</code> non sono forme valide.</p>
+</li>
+</ul>
+<p>Le mappe rappresentano l&rsquo;indicazione di connettere i flussi di input con i flussi di output. Una mappa si riferisce sempre ad un file di output e indica da quale file di input selezionare i flussi che, una volta elaborati, saranno salvati nel file di output a cui si riferisce la mappa. La sintassi è la seguente:</p>
+<p>-<code>idFileInput:specificatoreFlusso</code>: Il file di input con id <code>idFileInput</code> sarà l&rsquo;origine da cui i flussi selezionati con <code>specificatoreFlusso</code> saranno elaborati e poi salvati nel file di output a cui si riferisce la mappa.</p>
+<p>Ad esempio, per indicare il secondo flusso del secondo file di input, la mappa sarà <code>1:1</code> (parte da zero, quindi il primo flusso è <code>0</code>, il secondo flusso è <code>1</code>). Il quarto flusso del primo file di input sarà indicato dalla mappa <code>0:3</code>. I flussi audio in lingua inglese del terzo file sono specificati con <code>2:a:m:language:eng</code>.</p>
+<h2 id="command-line-cli">Command line (CLI)</h2>
+<p>Il software nel suo complesso è composto dai seguenti programmi:</p>
+<ul>
+<li><code>ffplay</code>: un lettore (riproduttore) audio / video;</li>
+<li><code>ffprobe</code>: uno strumento per ottenere informazioni sui file multimediali;</li>
+<li><code>ffmpeg</code>: uno strumento per la gestione di file audio e video: Può registrare, convertire formati, codificare/decodificare, transcodificare, muxare/demuxare, filtrare, ridimensionare, trasmettere in streaming e molto altro.</li>
+</ul>
+<h3 id="opzioni-generali">Opzioni generali</h3>
+<p>I programmi <code>ffplay</code>,<code>ffprobe</code> e <code>ffmpeg</code> hanno lo stesso comportamento di default, ovvero ad ogni comando mostrano il &ldquo;banner&rdquo; della versione e della configurazione, che è lo stesso che si ottiene con l&rsquo;opzione:</p>
+<p><code>-version</code>: mostra la versione e la configurazione;</p>
+<p>Poiche ogni comando mostra il banner precedente, ad ogni comando possiamo nasconderlo con l&rsquo;opzione <code>-hide_banner</code>.</p>
+<p>I programmi <code>ffplay</code>,<code>ffprobe</code> e <code>ffmpeg</code> condividono le stesse opzioni di default, ovvero</p>
+<ul>
+<li><code>-hide_banner</code> nasconde il &ldquo;banner&rdquo;, ovvero versione e configurazione;</li>
+<li><code>-v quiet</code> / <code>-v error</code> / <code>-v warning</code>: <code>warning</code> mostra avvisi ed errori, <code>error</code> mostra solo errori critici, <code>quiet</code>: nessun messaggio;</li>
+<li><code>-devices</code>: mostra i dispositivi I/O supportati;</li>
+<li><code>-formats</code> Mostra i formati contenitore supportati da FFmpeg (es. mp4, mkv) in lettura (decoding input) e scrittura (encoding output), per sapere quali contenitori puoi solo leggere o anche creare;</li>
+<li><code>-demuxers</code>: elenca i demuxer disponibili;</li>
+<li><code>-muxers</code>: elenca i muxer disponibili;</li>
+<li><code>-codecs</code>: Unione di <code>-decoder</code> ed <code>-encoders</code>;</li>
+<li><code>-decoders</code>: elenca i decodificatori (decoder) disponibili;</li>
+<li><code>-encoders</code>: elenca i codificatori (encoder) disponibili;</li>
+<li><code>-protocols</code>: mostra i protocolli di I/O supportati (es. file, http, https, rtmp, udp, tcp, pipe);</li>
+<li><code>-filters</code>: elenca i filtri di libavfilter disponibili (es. scale, crop, drawtext, volume);</li>
+<li><code>-pix_fmts</code>: Mostra gli spazi di colore e la profondità di colore supportati (es. yuv420p, rgba);</li>
+<li><code>-sample_fmts</code>: elenca i formati dei campioni audio supportati (es. s16, fltp);</li>
+<li><code>-layouts</code>: mostra i nomi dei canali audio supportati ed il layout di riproduzione (es. stereo, 5.1) con canale 1 riprodotto su fronte-sinistra, canale 3 riprodotto su fronte-destra, ecc&hellip;);</li>
+<li><code>-colors</code>: elenca i nomi dei singoli colori ed il rispettivo valore (Red= #ff0000, Pink= #ffc0cb, RoyalBlue= #4169e1).</li>
+</ul>
+<h3 id="command-line-cli-di-ffprobe">Command line (CLI) di ffprobe</h3>
+<p>La regola generale per gestire la CLI di <code>ffprobe</code> è la seguente:</p>
+<ul>
+<li>prima vanno le opzioni globali;</li>
+<li>poi l&rsquo;input;</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffprobe [global_options] input.mp4
+</span></span></code></pre></div><p>Le opzioni principali sono:</p>
+<ul>
+<li><code>-unit</code>: inserisce l&rsquo;unità di misura (byte, secondi, &hellip;);</li>
+<li><code>-prefix</code>: inserisce i prefissi delle unità di misura (secondi, minuti, Kibibyte, Mebibyte, Gibibyte, ..);</li>
+<li><code>-byte_binary_prefix</code>: utilizza i prefissi delle unità di misura in binario  (Kilobyte, Megabyte, Gigabyte, ..);</li>
+<li><code>-sexagesimal</code>: Mostra intervalli di tempo in <code>hh:mm:ss.ms</code>;</li>
+<li><code>-pretty</code>: Seleziona le opzioni <code>-unit</code>, <code>-prefix</code> e <code>-pretty</code>;</li>
+<li><code>-select_streams</code>: Seleziona un singolo flusso per tipo e indice (v:0, a:2, &hellip;);</li>
+<li><code>-count_frames</code>: Conta il numero di frame per stream;</li>
+<li><code>-count_packets</code>: Conta il numero di pacchetti per stream;</li>
+<li><code>-show_format</code>: oppure <code>-show_entries format</code>: Informazioni sul formato contenitore;</li>
+<li><code>-show_chapters</code>: oppure <code>-show_entries chapter</code>: Informazioni sui capitoli presenti nel contenitore;</li>
+<li><code>-show_streams</code>: oppure <code>-show_entries stream</code>: Informazioni sui flussi;</li>
+<li><code>-show_packets</code>: oppure <code>-show_entries packet</code>: Informazioni sui singoli pacchetti;</li>
+<li><code>-show_frames</code>: oppure <code>-show_entries frame</code>: Informazioni sui singoli frames;</li>
+<li><code>-of</code>: sostituito da <code>print_format</code>;</li>
+<li><code>-print_format</code>: (alias moderno di <code>-of</code>): indica il formato dei dati in output;</li>
+<li><code>-read_intervals</code>: mette in output solo alcuni intervalli del file</li>
+</ul>
+<p>L&rsquo;opzione <code>-show_entries</code> permette di selezionare anche i singoli campi, ad esempio <code>-show_entries format=duration,size</code> oppure <code>-show_entries stream=index,codec</code>.</p>
+<p>Il formato dei dati di output specificato in <code>-print_format</code> può essere uno dei seguenti:</p>
+<ol>
+<li><code>default</code> visualizza i campi in formato &ldquo;sezione:chiave=valore, come ad esempio <code>DISPOSITION:comment=0</code>, <code>TAG:language=und</code> o <code>index=1</code>;</li>
+<li><code>flat</code> visualizza un campo per ogni riga, con notazione ad oggetti, ad esempio <code>streams.stream.1.disposition.comment=0</code>, <code>streams.stream.1.tags.language=&quot;und&quot;</code>;</li>
+<li><code>compact</code> visualizza i dati in forma tabellare, simile a csv, ma con campi in formato &ldquo;chiave=valore&rdquo; e non solo il valore nella riga;</li>
+<li><code>xml</code>, <code>json</code>, <code>ini</code>, <code>csv</code> che seguono i rispettivi standard.</li>
+</ol>
+<p>Non tutti i formati di output permettono di visualizzare contemporaneamente campi da oggetti differenti, ad esempio dal contenitore e dagli stream contemporaneamente.</p>
+<h4 id="informazioni-sul-contenitore-con-ffprobe">Informazioni sul contenitore con ffprobe</h4>
+<p>Per visualizzare informazioni sul contenitore:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffprobe -v error -pretty -print_format csv -show_entries format <span style="color:#009c00">&#34;file.mp4&#34;</span>
+</span></span></code></pre></div><p>L&rsquo;output, separato da virgole, indica &ldquo;format&rdquo; ovvero le informazioni sul contenitore, il nome &ldquo;file.mp4&rdquo;, contiene 2 flussi, il formato del contenitore è &ldquo;Quicktime MOV&rdquo;, la durata è di circa 6208 secondi, cioè 103 minuti.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>format,file.mp4,2 flussi,QuickTime / MOV,0.000000,6208.661000s
+</span></span></code></pre></div><h4 id="informazioni-sui-flussi-con-ffprobe">Informazioni sui flussi con ffprobe</h4>
+<p>Per visualizzare informazioni sui flussi:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffprobe -v error -pretty -print_format csv -show_entries stream <span style="color:#009c00">&#34;file.mp4&#34;</span>
+</span></span></code></pre></div><p>L&rsquo;output è su due righe che iniziano con &ldquo;stream&rdquo;, ad indicare che sono presenti due flussi. Subito dopo stream c&rsquo;è zero sulla prima riga e uno sulla seconda riga, indicano che si tratta del primo e del secondo flusso.</p>
+<p>La prima riga (stream 0) indica che si tratta di un flusso video con frame di dimensioni 1728 per 720 pixel, 24 frame al secondo (24000/1001) e durata del flusso di circa 6208 secondi, cioè 103 minuti.</p>
+<p>La seconda riga (stream 0) indica che si tratta di un flusso audio stereo con frequenza di campionamento a 48000 Hz (48MHz) e della durata di circa 6205 secondi, cioè 103 minuti.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>stream,0,h264, ... ,video, ... ,1728,720,24000/1001, ... ,6208.660792
+</span></span><span style="display:flex;"><span>stream,1,aac, ... ,audio, ... ,48000,2,stereo, ... ,6205.984000
+</span></span></code></pre></div><h4 id="conteggio-del-numero-di-frame-e-pacchetti-con-ffprobe">Conteggio del numero di frame e pacchetti con ffprobe</h4>
+<p>Per contare il numero di frame e di pacchetti in uno stream:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffprobe -v error -pretty -count_frames -count_packets -print_format flat -show_entries stream  <span style="color:#009c00">&#34;file.mp4&#34;</span>
+</span></span></code></pre></div><p>L&rsquo;output seguente riporta i campi <code>nb_read_frames=&quot;34525&quot;</code> e <code>nb_read_packets=&quot;34525&quot;</code> che rappresentano il numero totale di frame e di pacchetti presenti nel flusso, da non confondere col campo <code>nb_frames = &quot;67504&quot;</code> che rappresenta il numero totale di frame indicato nel formato container.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>streams.stream.0.nb_frames=&#34;34525&#34;
+</span></span><span style="display:flex;"><span>streams.stream.0.nb_read_frames=&#34;34525&#34;
+</span></span><span style="display:flex;"><span>streams.stream.0.nb_read_packets=&#34;34525&#34;
+</span></span></code></pre></div><h3 id="command-line-cli-di-ffmpeg">Command line (CLI) di ffmpeg</h3>
+<p>La regola generale per gestire la CLI di <code>ffmpeg</code> è la seguente:</p>
+<ul>
+<li>prima vanno le opzioni globali;</li>
+<li>poi vanno le opzioni di input seguite dall&rsquo;input;</li>
+<li>poi vanno le opzioni di output seguite dall&rsquo;output. Le mappe fanno parte delle opzioni di output.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg [global_options]
+</span></span><span style="display:flex;"><span>  [input1 options] -i input1.mp4
+</span></span><span style="display:flex;"><span>  [input2 options] -i input2.mp4
+</span></span><span style="display:flex;"><span>  [output1 options] output1.wav
+</span></span><span style="display:flex;"><span>  [output2 options] output2.mp3
+</span></span></code></pre></div>
+    </div>
+      <hr>
+      <h2>Riferimenti</h2>
+      <p><a href="http://codingepaduli.github.io/tools/editorconfig/" style="font-weight: 700; color: #e22d30;">EditorConfig</a>: Articolo per la configurazione di Editorconfig</p>
+  </article>
+</main>
+
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/tools/ssh/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Precedente</span>
+			<p class="pager__title">SSH</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/tools/docker/" rel="next">
+			<span class="pager__subtitle">Prossimo&thinsp;»</span>
+			<p class="pager__title">Docker Engine e Podman</p>
+		</a>
+	</div>
+</nav>
+<div class="article-content">
+
+  
+
+</div>
+
+
+            </div>
+            
+        </div>
+        <footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2026 Lab. informatica.
+			<span class="footer__copyright-credits">Generato con <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> e il tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+    </div>
+
+<script data-goatcounter="https://codingepaduli-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
