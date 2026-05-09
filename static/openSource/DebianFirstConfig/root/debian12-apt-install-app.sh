@@ -179,7 +179,8 @@ if [ $? -ne 0 ]; then
 fi
 
 # system management
-apt-get install $APT_OPTS aptitude aptitude-common # cockpit
+## debsecan : debian security analizer
+apt-get install $APT_OPTS aptitude aptitude-common debsecan # cockpit
 
 if [ $? -ne 0 ]; then
     exit 1
@@ -254,7 +255,8 @@ fi
 ##         involontariamente un terminale, ci si può ricollegare e riprendere.
 ## tmux:   gestisce le sessioni di terminale, quando la connessione cade o si chiude
 ##         involontariamente un terminale, ci si può ricollegare e riprendere.
-apt-get install $APT_OPTS bash bash-completion curl dash diffutils tealdeer screen tmux
+## parallel: esegue i comandi in parallelo
+apt-get install $APT_OPTS bash bash-completion curl dash diffutils tealdeer screen tmux parallel
 
 if [ $? -ne 0 ]; then
     exit 1

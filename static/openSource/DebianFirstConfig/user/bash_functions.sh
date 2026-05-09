@@ -229,6 +229,15 @@ biggestDir() {
 }
 export -f biggestDir
 
+#Debian Security Analyzer
+debSecurityAnalyzer() {
+  local distroName
+  distroName="$(distroReleaseName)"
+  echo "$distroName"
+  debsecan --suite "$distroName"
+}
+export -f debSecurityAnalyzer
+
 ### Jobs
 # job        : visualizza background Jobs
 # sleep 60 & : manda in background un job
@@ -905,7 +914,7 @@ export -f gitGrep
 
 # Check the status of all repository
 gitStatusOfAllRepo() {
-  endColor='\033[0m]'
+  endColor='\033[0m'
   foregroundColor='35' 
   backgroundColor='44'
   boldStyle='1'
@@ -921,7 +930,7 @@ gitStatusOfAllRepo() {
     # You can run commands in a subshell using parenthesis ( command )
     (
       cd "$repo" || exit
-      echo -e "${color} ${PWD} \033[0m"
+      echo -e "${color} ${PWD} ${endColor}"
 
       # Verifico se è un repo git
       if [ -d ".git" ]; then
@@ -935,7 +944,7 @@ export -f gitStatusOfAllRepo
 
 # Updates all repository
 gitUpdateAllRepo() {
-  endColor='\033[0m]'
+  endColor='\033[0m'
   foregroundColor='35' 
   backgroundColor='44'
   boldStyle='1'
@@ -953,7 +962,7 @@ gitUpdateAllRepo() {
       # You can run commands in a subshell using parenthesis ( command )
       (
         cd "$repo" || exit
-        echo -e "${color} ${PWD} \033[0m"
+        echo -e "${color} ${PWD} ${endColor}"
 
         # Verifico se è un repo git
         if [ -d ".git" ]; then
@@ -1287,7 +1296,7 @@ mencoderAddSubtitlesToAvi() {
 mencoderMixAviFileListInALoneAviFile() {
   aviFileOutput="$1"
   shift 1
-  parts=$@
+  parts="$*"
   mencoder -oac copy -ovc copy "$parts" -o "$aviFileOutput"
 }
 

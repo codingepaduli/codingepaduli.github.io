@@ -115,16 +115,16 @@ fi
 
 MY_DOT_FILES_FOLDER="$MY_SVN_REPO_FOLDER/codingepaduli/static/static/openSource/DebianFirstConfig/user"
 
-if [ -f "$MY_DOT_FILES_FOLDER/bash_functions" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions" ]; then
-  . "$MY_DOT_FILES_FOLDER/bash_functions"
+if [ -f "$MY_DOT_FILES_FOLDER/bash_functions.sh" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions.sh" ]; then
+  . "$MY_DOT_FILES_FOLDER/bash_functions.sh"
 fi
 
-if [ -f "$MY_DOT_FILES_FOLDER/bash_functions_extra" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions_extra" ]; then
-  . "$MY_DOT_FILES_FOLDER/bash_functions_extra"
+if [ -f "$MY_DOT_FILES_FOLDER/bash_functions_extra.sh" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions_extra.sh" ]; then
+  . "$MY_DOT_FILES_FOLDER/bash_functions_extra.sh"
 fi
 
-if [ -f "$MY_DOT_FILES_FOLDER/bash_functions_docker" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions_docker" ]; then
-  . "$MY_DOT_FILES_FOLDER/bash_functions_docker"
+if [ -f "$MY_DOT_FILES_FOLDER/bash_functions_docker.sh" ] && [ -r "$MY_DOT_FILES_FOLDER/bash_functions_docker.sh" ]; then
+  . "$MY_DOT_FILES_FOLDER/bash_functions_docker.sh"
 fi
 
 # Aggiungo JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
