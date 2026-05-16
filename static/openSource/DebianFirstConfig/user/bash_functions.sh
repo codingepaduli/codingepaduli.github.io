@@ -194,7 +194,7 @@ computer() {
   echo "kernel release: $(uname -r)"
   echo "kernel version: $(uname -v)"
   lsb_release -a
-  lscpu
+  lscpu  | grep -v '^Vulnerability' | grep -v '^Flags' 
   df -h
   free -h
 }
@@ -229,6 +229,74 @@ biggestDir() {
 }
 export -f biggestDir
 
+# findVideosRecursive "~/Video"
+findVideosRecursive() {
+  local workDir="${1:-$(pwd)}"
+  local videoExts=(mp4 mkv mov avi flv wmv webm mpeg mpg m4v 3gp 3g2 ts m2ts ogv)
+  local extRegex # crea la stringa "mp4\|mkv\|mov\|..."
+  extRegex="$(joinArrayBySeparator '\|' "${videoExts[@]}")"
+  # Debug printf '%s\n' "$extRegex" | sed -n '1,5p'
+  find "$workDir" -type f -iregex ".*\.\($extRegex\)$"  -print
+}
+export -f findVideosRecursive
+
+# findVideosRecursiveAndShowSize "~/Video"
+findVideosRecursiveAndShowSize() {
+  local workDir="${1:-$(pwd)}"
+  local videoExts=(mp4 mkv mov avi flv wmv webm mpeg mpg m4v 3gp 3g2 ts m2ts ogv)
+  local extRegex # crea la stringa "mp4\|mkv\|mov\|..."
+  extRegex="$(joinArrayBySeparator '\|' "${videoExts[@]}")"
+  # Debug printf '%s\n' "$extRegex" | sed -n '1,5p'
+  find "$workDir" -type f -iregex ".*\.\($extRegex\)$" -exec du -Sh {} +  |  sort -rh 
+}
+export -f findVideosRecursiveAndShowSize
+
+# findVideoAndFFprobeFormat "LABEL" "~/Video"
+findVideoAndFFprobeFormat() {
+  local label="${1:-LABEL}"
+  local workDir="${2:-$(pwd)}"
+  # Il separatore newline è indicato cosi: $'\n'
+  mapfile -d $'\n' -t files < <(findVideosRecursive "$workDir")
+  
+  # se nessun file, esci
+  [ ${#files[@]} -eq 0 ] && { echo "Nessun file trovato."; exit 0; }
+
+  # BUG ffprobe doesn't respect the order of entries to show
+  echo "label,type,filename,format_name,format_long_name,duration,size"
+  for f in "${files[@]}"; do
+    ffprobe -v error -pretty -print_format csv -show_entries format=format_name,format_long_name,duration,size "$f"  | sed "s|^format,|${label},format,${f},|"  # sed usa il delimitatore "|" invece di "/"
+  done
+}
+export -f findVideoAndFFprobeFormat
+
+# findVideoAndFFprobeStreams "~/Video"
+findVideoAndFFprobeStreams() {
+  local workDir="${1:-$(pwd)}"
+  # Il separatore newline è indicato cosi: $'\n'
+  mapfile -d $'\n' -t files < <(findVideosRecursive "$workDir")
+  
+  # se nessun file, esci
+  [ ${#files[@]} -eq 0 ] && { echo "Nessun file trovato."; exit 0; }
+
+  # BUG ffprobe doesn't respect the order of entries to show
+  echo "type,filename,index,codec_name,codec_long_name,codec_type,time_base,bit_rate,max_bit_rate"
+  for f in "${files[@]}"; do
+    ffprobe -v error -print_format csv -show_entries stream=index,codec_name,codec_long_name,codec_type,time_base,bit_rate,max_bit_rate "$f"  | sed "s|^stream,|stream,${f},|"  # sed usa il delimitatore "|" invece di "/"
+  done
+}
+export -f findVideoAndFFprobeStreams
+
+# findVideoInDvdAndGenerateCSV "DVD2" "DvdMountPath" "outputFolder"
+# test: findVideoInDvdAndGenerateCSV "DVD2" "/media/$USER/" "$HOME/Video"
+findVideoInDvdAndGenerateCSV() {
+  local label="${1:-"DVD"}"
+  local dvdMountPath="${2:-"/media/$USER/"}"
+  local outputFolder="${3:-"$HOME/Video"}"
+  findVideoAndFFprobeFormat "$label" "$dvdMountPath" > "${outputFolder}/Format${label}.csv"
+  findVideoAndFFprobeStreams "$dvdMountPath" > "${outputFolder}/Streams${label}.csv"
+}
+export -f findVideoInDvdAndGenerateCSV
+
 #Debian Security Analyzer
 debSecurityAnalyzer() {
   local distroName
@@ -248,6 +316,77 @@ export -f debSecurityAnalyzer
 # Range: [ -20 (Massima priorità) - 19 (Minima priorità) ]
 # nice -n 10 ./prog.sh : avvia ./prog con priorità 10 (bassa)
 # renice -n 5 -p 1234  : cambia la priorità a 5 (bassa)
+
+####################################
+# sqlite                           #
+####################################
+
+# sqliteImportCsvAndExecuteQuery "" *.csv
+# sqliteImportCsvAndExecuteQuery "SELECT 'OK';" *.csv
+# sqliteImportCsvAndExecuteQuery "SELECT * FROM t1 INNER JOIN t2 ON t1.a = t2.b;" *.csv
+
+sqliteImportCsvAndExecuteQuery() {
+  local query="${1:-SELECT 'OK';}"
+  shift
+
+  if [ $# -lt 1 ]; then
+    echo "Usage: sqliteImportCsvAndExecuteQuery \"SQL_QUERY\" file1.csv [file2.csv ...]" >&2
+    return 1
+  fi
+
+  query="${query%"${query##*[![:space:]]}"}"  # rimuove spazi finali
+  if [[ $query != *';' ]]; then
+    echo "Errore: la query non termina con ';'" >&2
+    return 1
+  fi
+
+  # Espandi percorsi assoluti
+  local imports
+  imports+=(".mode csv")
+
+  for file in "$@"; do
+    local filename="${file%.*}"   # doc.txt -> doc
+    imports+=(".import $(realpath "$file") $filename")
+  done
+
+  # imports+=( ".schema" )
+  # imports+=( ".tables" )
+  imports+=( ".headers ON") # header CSV
+  imports+=( " $query" )
+  imports+=( ".quit" )
+
+  local sqlCommands
+  sqlCommands="$(printf '%s\n' "${imports[@]}")"
+
+  printf '%s\n' "$sqlCommands"
+  
+  # Non rimuovere \n finale
+  printf '%s\n' "$sqlCommands" | sqlite3 :memory:
+}
+export -f sqliteImportCsvAndExecuteQuery
+
+####################################
+# String utils                     #
+####################################
+
+# Unisce array con stringhe tra elementi
+# Esempio: joinArrayBySeparator '__' 1 2 3 4 -> "1__2__3__4"
+joinArrayBySeparator() {
+  # Prendo il separatore
+  local sep="$1";
+  shift
+  
+  # Se non ho l'array, non stampo nulla
+  [ $# -eq 0 ] && { printf ''; return; }
+
+  local -a arr=( "$@" )
+  local lastIndex=$(( ${#arr[@]} - 1 ))
+
+  local join
+  join="$(printf "%s$sep" "${arr[@]:0:$lastIndex}")${arr[lastIndex]}"
+  echo "$join"
+}
+export -f joinArrayBySeparator
 
 ####################################
 # VLC - Metadata Extraction Tool   #

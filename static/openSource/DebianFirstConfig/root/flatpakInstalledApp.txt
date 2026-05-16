@@ -9,6 +9,7 @@ com.dosbox_x.DOSBox-X
 com.github.jeromerobert.pdfarranger
 com.github.qarmin.czkawka
 com.github.tchx84.Flatseal
+com.github.k4zmu2a.spacecadetpinball
 com.nextcloud.desktopclient.nextcloud
 # com.ozmartians.VidCutter
 # com.ranfdev.Notify
